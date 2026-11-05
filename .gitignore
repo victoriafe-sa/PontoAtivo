@@ -1,0 +1,91 @@
+# ============================================
+# PontoAtivo - .gitignore
+# ============================================
+
+# --------------------------------------------
+# Privacidade da pesquisa (NÃO versionar)
+# Nomes, contatos, áudios e termos assinados
+# ficam fora do git, em local privado da equipe.
+# --------------------------------------------
+pesquisa/privado/
+pesquisa/**/*assinado*
+pesquisa/**/*consentimento-preenchido*
+*.mp3
+*.m4a
+*.wav
+*.ogg
+*.mp4
+*.mov
+
+# --------------------------------------------
+# Segredos e configuração local
+# --------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials.json
+
+# --------------------------------------------
+# Dados grandes ou gerados
+# (mantenha versionados apenas dados pequenos
+#  e já validados, com fonte e data)
+# --------------------------------------------
+dados/brutos/
+dados/tmp/
+base-conhecimento/indice/
+*.sqlite
+*.db
+*.parquet
+
+# --------------------------------------------
+# Python (se o src/ usar Python)
+# --------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+dist/
+build/
+
+# --------------------------------------------
+# Node.js (se o src/ tiver front-end)
+# --------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.next/
+.nuxt/
+.cache/
+coverage/
+
+# --------------------------------------------
+# Editores e IDEs
+# --------------------------------------------
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# --------------------------------------------
+# Sistema operacional
+# --------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --------------------------------------------
+# Logs e temporários
+# --------------------------------------------
+*.log
+*.tmp
+~$*
