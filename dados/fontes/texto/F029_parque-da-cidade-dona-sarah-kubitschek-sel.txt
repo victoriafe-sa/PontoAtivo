@@ -1,13 +1,16 @@
-TÍTULO: Parque da Cidade Dona Sarah Kubitschek
-ÓRGÃO: SEL-DF
+TÍTULO: Parque da Cidade Dona Sarah Kubitschek (SEL)
+ÓRGÃO: Secretaria de Esporte e Lazer do DF (SEL-DF)
 LINK: https://www.esporte.df.gov.br/parque-da-cidade
-TEMA: Parques — pistas, quadras, ciclovia
-ABRANGÊNCIA: Plano Piloto
+TEMA: Parque da Cidade: contato, acessibilidade (banheiros acessíveis) e uso
+ABRANGÊNCIA: Plano Piloto (inferida: a página não cita a RA)
+TIPO DE EVIDÊNCIA: Informativo institucional do espaço
+COMPROVA FUNCIONAMENTO ATUAL?: Não (descreve a situação na data da publicação)
+DATA DE PUBLICAÇÃO: 17/02/2025 (atualizada em outra data; ver texto)
 DATA DE COLETA: 2026-11-05
-ID NO CATÁLOGO: F029
-SITUAÇÃO: Aprovada (revisão assistida; sem leitura integral por pessoa)
-RESSALVAS: nenhuma
-AVISO: texto extraído e limpo automaticamente da fonte original (arquivo guardado em fontes_originais/). Confira no link antes de usar como informação oficial.
+ID: F029
+ESTADO DE VALIDAÇÃO: Pendente de validação humana (texto extraído automaticamente; cabeçalho x conteúdo x link conferidos por script em 2026-11-07)
+RESSALVAS: A página afirma 'Acessibilidade: sim. Possui banheiros acessíveis.'; não detalha trajetos, pistas ou equipamentos. O 'Endereço' que consta (SBN, Quadra 2, Bloco K, Edifício Wagner) é o da administração, não o do parque. Página atualizada em 20/02/2026.
+AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.
 ==============================================================================
 
 ### Parque da Cidade Dona Sarah Kubitschek
@@ -31,8 +34,6 @@ Também orienta o cumprimento da Lei Federal n°. 2.140/2011 que dispõe sobre a
 
 Imagens
 
-#
-
 Contato Administração Parque da Cidade Dona Sarah Kubitschek:
 Fone: (61) 4042-1828
 Administrador: Todi Moreno
@@ -45,5 +46,3 @@ Endereço: Setor Bancário Norte – SBN, Quadra 2, Bloco K, Edifício Wagner, 1
 CEP: 70040-020
 
 Página desenvolvida por Bruno Leão | ASCOM – SELDF
-
-5496892

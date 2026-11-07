@@ -1,13 +1,16 @@
-TÍTULO: Estádio Popularmente Conhecido Como “bezerrão”
-ÓRGÃO: SEL-DF
+TÍTULO: Estádio Bezerrão
+ÓRGÃO: Secretaria de Esporte e Lazer do DF (SEL-DF)
 LINK: https://www.esporte.df.gov.br/estadio-bezerrao
-TEMA: Estádio — endereço e uso
+TEMA: Estádio: região, inauguração, capacidade e endereço
 ABRANGÊNCIA: Gama
+TIPO DE EVIDÊNCIA: Informativo institucional do espaço
+COMPROVA FUNCIONAMENTO ATUAL?: Não (descreve a situação na data da publicação)
+DATA DE PUBLICAÇÃO: 17/02/2025 (atualizada em outra data; ver texto)
 DATA DE COLETA: 2026-11-05
-ID NO CATÁLOGO: F059
-SITUAÇÃO: Aprovada com ressalvas (revisão assistida; sem leitura integral por pessoa)
-RESSALVAS: página curta de um espaço, com endereço oficial
-AVISO: texto extraído e limpo automaticamente da fonte original (arquivo guardado em fontes_originais/). Confira no link antes de usar como informação oficial.
+ID: F059
+ESTADO DE VALIDAÇÃO: Pendente de validação humana (texto extraído automaticamente; cabeçalho x conteúdo x link conferidos por script em 2026-11-07)
+RESSALVAS: Página curta (cerca de 500 caracteres); capacidade 'estimada' segundo a página.
+AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.
 ==============================================================================
 
 ### Estádio Popularmente Conhecido Como “bezerrão”
@@ -22,5 +25,3 @@ Inaugurado em 1977, o espaço passou por uma grande reforma há 15 anos para sed
 
 Endereço
 St. Central – Gama, Brasília – DF, 72405-610
-
-5497868

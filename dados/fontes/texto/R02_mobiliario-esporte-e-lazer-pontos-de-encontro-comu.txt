@@ -1,0 +1,453 @@
+TÍTULO: Mobiliário Esporte e Lazer: Pontos de Encontro Comunitário (cadastro oficial SEDUH-DF)
+ÓRGÃO: Secretaria de Desenvolvimento Urbano e Habitação do DF (SEDUH-DF); camada na IDE-DF
+LINK: https://metadados.seduh.df.gov.br/geonetwork/srv/por/catalog.search#/metadata/ba2bf94f-49fa-4700-ba79-5525433c7d1d
+TEMA: PECs (pontos de encontro comunitário) com endereço, região administrativa, conservação e data de implantação
+ABRANGÊNCIA: DF
+TIPO DE EVIDÊNCIA: Cadastro oficial georreferenciado (extrato: tipo PEC)
+COMPROVA FUNCIONAMENTO ATUAL?: Não (camada declarada 'obsoleta' no metadado oficial)
+DATA DE PUBLICAÇÃO: metadado atualizado em 2023-03-07
+DATA DE COLETA: 2026-11-07
+ID: R02
+ESTADO DE VALIDAÇÃO: Pendente de validação humana (texto extraído automaticamente; cabeçalho x conteúdo x link conferidos por script em 2026-11-07)
+RESSALVAS: O metadado oficial declara a camada como obsoleta (status 'obsolete'). Traz endereço em quase todos os registros, mas o estado de conservação está preenchido em poucos. Não prova que o PEC exista hoje.
+AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.
+==============================================================================
+
+MOBILIÁRIO ESPORTE E LAZER
+
+Registro de metadados oficial (SEDUH-DF): https://metadados.seduh.df.gov.br/geonetwork/srv/por/catalog.search#/metadata/ba2bf94f-49fa-4700-ba79-5525433c7d1d
+Camada consultada (serviço público da IDE-DF): https://www.geoservicos.ide.df.gov.br/arcgis/rest/services/Publico/EQUIPAMENTOS_URBANOS/MapServer/6
+Total de registros na camada na data da coleta: 2458
+Custódia: Antiga Diretoria de Infraestrutura e Equipamentos Público-DIEP
+Situação declarada do metadado: obsolete | Metadado atualizado em: 2023-03-07
+
+RESUMO (texto oficial do metadado):
+A legislação brasileira, por meio da Lei 10.098/2000, define o termo MOBILIÁRIO URBANO como “conjunto de objetos presentes nas vias e espaços públicos, superpostos ou adicionados aos elementos da urbanização ou da edificação”. Já a ABNT (Associação Brasileira de Normas Técnicas) considera mobiliário urbano “todos os objetos, elementos e pequenas construções integrantes da paisagem urbana de natureza utilitária, ou não, implantada mediante autorização do poder público em espaços públicos e privados” (ABNT, 1986, p.1). No Distrito Federal, onde as extensões de áreas públicas em meio urbano são bastante expressivas e, muitas vezes, desprovidas de urbanização, são constantes as demandas por parte da população para implantação de mobiliários, principalmente aqueles destinados as atividades de esporte e lazer. A presença de tais mobiliários urbanos tende a influenciar na rotina da comunidade, podendo estimular o uso social dos espaços abertos e favorecendo o processo de socialização entre os seus frequentadores. No entanto, a implantação desses mobiliários sem o devido planejamento acaba por interferir no espaço urbano de forma negativa, causando o efeito inverso pretendido. Base de dados sobre os mobiliários de esporte e lazer implantados no Distrito Federal, incluindo a sua localização georreferenciada, de forma a auxiliar os gestores responsáveis por atender demandas relacionadas ao tema.
+
+FINALIDADE (texto oficial):
+Fornecer aos usuários informações sobre os mobiliários de esporte e lazer implantados no Distrito Federal.
+
+LIMITAÇÃO DE USO (texto oficial):
+Informações sobre precisão cartográfica, linhagem e fonte não estão disponíveis.
+
+LINHAGEM (texto oficial):
+Não informado.
+
+ALERTA OFICIAL DA SEDUH: alguns locais do cadastro podem constar de projetos urbanísticos sem terem sido implantados. Estar listado neste cadastro NÃO comprova que o espaço exista, esteja aberto ou funcione. Antes de afirmar disponibilidade, é preciso preservar e consultar a situação física e operacional de cada registro.
+
+ATENÇÃO: o metadado oficial declara a situação desta camada como 'obsolete' (em português: obsoleta). Os dados abaixo são um retrato cadastral antigo, não uma lista de espaços em funcionamento.
+
+COMPLETUDE (calculada na coleta, sobre todos os registros da camada):
+- endereço: 2439 de 2458 (99%)
+- estado de conservação: 520 de 2458 (21%)
+- utilização: 1 de 2458 (0%)
+- data de implantação: 2422 de 2458 (99%)
+
+TIPOS DE MOBILIÁRIO NA CAMADA: PARQUE INFANTIL: 801, QUADRA POLIESPORTIVA: 726, PEC: 403, APARELHO DE GINASTICA: 192, QUADRA DE AREIA: 155, CAMPO SINTETICO: 70, CAMPO ILUMINADO: 59, SKATE PARK: 20, PARQUE_INFANTIL: 9, CAMPO TERRA BATIDA: 6, (vazio): 3, CAMPO_DE_TERRA_BATIDA: 2, CAMPO DE TERRA BATIDA : 2, QUADRA_POLIESPORTIVA: 1, EXCLUIR: 1, SKATE_PARQUE: 1, PARQUE INFANTIL : 1, CAMPO DE GRAMA SINTETICA : 1, QUADRA DE AREIA : 1, PARQUE_INFANTIL : 1, QUADRA DE TENIS: 1, ANFITEATRO: 1, CAMPO DE FUTEBOL: 1
+
+REGISTROS DO TIPO PEC (Ponto de Encontro Comunitário) DESTA CAMADA: 403
+Colunas: tipo | região administrativa (domínio oficial da camada) | endereço | condição | estado de conservação (quando preenchido) | conflito | implantação | atualização
+
+PEC | BRAZLÂNDIA | EQ 2/4 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | BRAZLÂNDIA | Q 03 SETOR TRADICIONAL | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | BRAZLÂNDIA | Q 04 SETOR SUL | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | BRAZLÂNDIA | Q 1 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | BRAZLÂNDIA | Q 38 VILA SAO JOSE | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | BRAZLÂNDIA | Q 45 CJ 17 VILA SAO JOSE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | BRAZLÂNDIA | Q 46 LOTE S/N VILA SAO JOSE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | BRAZLÂNDIA | QUADRA 12 SETOR TRADICIONAL | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | EQNM 1/3 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | EQNM 19/21 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | EQNM 22/24 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | EQNM 24/26 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | EQNM 3/5 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | EQNM 4/6 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | EQNM 4/6 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | EQNM 7/9 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | EQNN 17/19 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | EQNN 2/4 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | EQNN 2/4 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | EQNN 21/23 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | EQNN 22/24 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | EQNN 24/26 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | EQNN 8/10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | EQNO 11/13 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | EQNO 2/4 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | EQNP 23/25 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | QNM 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | QNM 12 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | QNM 12/14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | QNM 13 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | QNN 20/22 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | QNN 25 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | QNN 37 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | QNN 6 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | QNO 17 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | QNO 18 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | QNO 20 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | QNP 05 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | QNP 11 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | QNP 12 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | QNP 14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | QNP 15 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | QNP 18 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | QNP 22 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | QNP 24 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | QNP 28 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | QNQ 04 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | QNQ 05 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CEILÂNDIA | SH SOL NASCENTE 151 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | CRUZEIRO | SHCES Q 1307 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+PEC | CRUZEIRO | SHCES Q 605 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+PEC | CRUZEIRO | SHCES Q 805 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+PEC | CRUZEIRO | SHCES Q 913 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+PEC | CRUZEIRO | SHESC Q 913 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+PEC | CRUZEIRO | SRES CLUBE VIZINHANÇA | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+PEC | CRUZEIRO | SRES Q 12 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+PEC | CRUZEIRO | SRES Q 3 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+PEC | CRUZEIRO | SRES Q 7 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+PEC | CRUZEIRO | SRES Q 8 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+PEC | FERCAL | — | INTEGRADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+PEC | GAMA | SETOR CENTRAL PRACA 1 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR CENTRAL PRACA 2 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR CENTRAL Q 55/56 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR LESTE EQ 4/6 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR LESTE Q 12/14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR LESTE Q 16 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR LESTE Q 20 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR LESTE Q 26 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR LESTE Q 31 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR LESTE Q 34 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR LESTE Q 49 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR LESTE/ ITAMARACA Q 50 CJ B | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR NORTE EQ 1/2 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR NORTE Q 2 AE 2 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR NORTE Q 2 CJ H | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR OESTE EQ 12/16 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR OESTE EQ 13/17 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR OESTE EQ 13/17 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR OESTE EQ 17/27 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR OESTE EQ 2/4 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR OESTE EQ 26/29 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR OESTE Q 12 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR OESTE Q 22 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR OESTE Q 27 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR OESTE Q 31 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR OESTE Q 8 CL | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR SUL EQ 13/15 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR SUL EQ 2/6 AE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR SUL PRACA 4 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR SUL Q 12 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR SUL Q 2 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR SUL Q 4 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR SUL Q 5 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | SETOR SUL Q 6 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GAMA | VILA DVO TRAVESSA DO BURITI | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+PEC | GUARÁ | POLO DE MODA | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | GUARÁ | QELC QE1 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | GUARÁ | QELC QE4 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | GUARÁ | SRIA I QE1 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | GUARÁ | SRIA I QE10 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | GUARÁ | SRIA I QE3 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | GUARÁ | SRIA I QI1 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | GUARÁ | SRIA I QI12 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | GUARÁ | SRIA I QI18 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | GUARÁ | SRIA I QI2 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | GUARÁ | SRIA I QI22 | INTEGRADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | GUARÁ | SRIA I QI7 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | GUARÁ | SRIA I QI7 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | GUARÁ | SRIA II AE 2 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | GUARÁ | SRIA II EQ19/21 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | GUARÁ | SRIA II EQ34/36 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | GUARÁ | SRIA II QE23 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | GUARÁ | SRIA II QE26 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | GUARÁ | SRIA II QE30 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | GUARÁ | SRIA II QE40 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | GUARÁ | SRIA II QE44 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | GUARÁ | SRIA II QE46 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | LAGO NORTE | CA 5 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+PEC | LAGO NORTE | QI 03 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+PEC | LAGO NORTE | QI 10 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 20/07/2015
+PEC | LAGO NORTE | QI 4 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 20/07/2015
+PEC | LAGO NORTE | QL 02 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+PEC | LAGO NORTE | SHTQ Q1 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+PEC | LAGO SUL | SHIS QI 11 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 15/06/2015
+PEC | LAGO SUL | SHIS QI 17 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 15/06/2015
+PEC | LAGO SUL | SHIS QI 29 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 15/06/2015
+PEC | LAGO SUL | SHIS QI 3 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 15/06/2015
+PEC | LAGO SUL | SHIS QL 14 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 15/06/2015
+PEC | NÚCLEO BANDEIRANTE | 3A AV | INTEGRADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | NÚCLEO BANDEIRANTE | 3A AV | ISOLADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | NÚCLEO BANDEIRANTE | 3A AV | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | NÚCLEO BANDEIRANTE | AC 1 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | NÚCLEO BANDEIRANTE | AC 3 | ISOLADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | NÚCLEO BANDEIRANTE | AV CENTRAL | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | NÚCLEO BANDEIRANTE | BERNARDO SAYÃO | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | NÚCLEO BANDEIRANTE | EPNB | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | NÚCLEO BANDEIRANTE | EPNB | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | NÚCLEO BANDEIRANTE | METROPOLITANA | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | NÚCLEO BANDEIRANTE | PLACAMERCEDES | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | NÚCLEO BANDEIRANTE | QN 1 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | NÚCLEO BANDEIRANTE | QN 3 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | NÚCLEO BANDEIRANTE | QN 5 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | NÚCLEO BANDEIRANTE | QN 7 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | NÚCLEO BANDEIRANTE | QN 7 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | NÚCLEO BANDEIRANTE | QN 7 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | NÚCLEO BANDEIRANTE | QS 12 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | NÚCLEO BANDEIRANTE | QS 6 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | NÚCLEO BANDEIRANTE | VILA NOVA DIVINEIA | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | PARANOÁ | PRACA CENTRAL | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | PARANOÁ | Q 10 CJ B | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | PARANOÁ | Q 14 CJ D/E | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | PARANOÁ | Q 15 CJ F | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | PARANOÁ | Q 16 CJ E/I | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | PARANOÁ | Q 17 CJ F | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | PARANOÁ | Q 2  CJ I | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | PARANOÁ | Q 20 CJ J | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | PARANOÁ | Q 23 CJ J | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | PARANOÁ | Q 25 CJ J | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | PARANOÁ | Q 27 CJ C/D | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | PARANOÁ | Q 29 CJ M | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | PARANOÁ | Q 34 CJ E | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | PARANOÁ | Q 6 CJ G | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | PARANOÁ | Q 9 CJ D | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | PARK WAY | — | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/07/2015
+PEC | PARK WAY | — | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/07/2015
+PEC | PARK WAY | — | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/07/2015
+PEC | PARK WAY | — | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/07/2015
+PEC | PARK WAY | — | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/07/2015
+PEC | PARK WAY | — | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/07/2015
+PEC | PARK WAY | Q 06 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 09/07/2015
+PEC | PARK WAY | Q 27 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 09/07/2015
+PEC | PARK WAY | SMPW Q14 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/07/2015
+PEC | PARK WAY | SMPW Q14 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/07/2015
+PEC | PARK WAY | SMPW Q22 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/07/2015
+PEC | PARK WAY | SMPW Q25 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/07/2015
+PEC | PARK WAY | TR3 Q3 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 22/07/2015
+PEC | PARK WAY | TR3 Q4 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 22/07/2015
+PEC | PARK WAY | TR3 Q5 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 22/07/2015
+PEC | PARK WAY | TR3 Q5 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 22/07/2015
+PEC | PLANALTINA | BURITIS III | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+PEC | PLANALTINA | COND ESTACIA MESTRE DARMAS I | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 25/06/2015
+PEC | PLANALTINA | COND MESTRE D´ARMAS | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 25/06/2015
+PEC | PLANALTINA | RESIDENCIAL OESTE | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 25/06/2015
+PEC | PLANALTINA | SETOR TRADICIONAL | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+PEC | PLANALTINA | VALE AMANHECER  CR50 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+PEC | PLANALTINA | VILA BURITIS EQ 3/4 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+PEC | PLANALTINA | VILA VICENTINA EQ16/17 | INTEGRADO | RUIM | SIM | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+PEC | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+PEC | PLANO PILOTO | PARQUE DA CIDADE | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+PEC | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+PEC | PLANO PILOTO | SGAS 614 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+PEC | PLANO PILOTO | SQS 205 BL B | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+PEC | PLANO PILOTO | SQS 210 BL A | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+PEC | PLANO PILOTO | SQS 215 BL E | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+PEC | PLANO PILOTO | SQS 316 BL H | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+PEC | PLANO PILOTO | SQS 404 BL J | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+PEC | PLANO PILOTO | SQS 410 BL H | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+PEC | PLANO PILOTO | SQS 412 BL P | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+PEC | PLANO PILOTO | SQS 415 BL U | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+PEC | PLANO PILOTO | VILA PLANALTO | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/10/2015
+PEC | RECANTO DAS EMAS | AV RECANTO DAS EMAS Q 201 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 101 CJ 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 103 CJ 09/7A | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 104 CJ 10/12 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 105 CJ 7/11 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 106 CJ 6/4A | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 115 CJ 8 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 203 CJ 12 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 204 CJ 05/10 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 206 CJ 02 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 300 CJ  23 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 300 CJ  52 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 301 CJ 04 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 304 CJ 14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 307 CJ 11 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 309 CJ 3A | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 401 CJ 09 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 403 CJ 17/20 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 404 CJ 09/04 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 405 CJ 09 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 405 CJ 11/12 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 508 CJ 03 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 511 CJ 16 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 603 CJ 11 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 604 CJ 12/13 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 605 CJ 18 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 802 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RECANTO DAS EMAS | Q 805 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+PEC | RIACHO FUNDO | CAUB II AE AC2 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+PEC | RIACHO FUNDO | PRIMEIRA ETAPA | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+PEC | RIACHO FUNDO | PRIMEIRA ETAPA | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+PEC | RIACHO FUNDO | QC 2 CJ 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+PEC | RIACHO FUNDO | QC 4 CJ 16 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+PEC | RIACHO FUNDO | QC 6 CJ 16 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+PEC | RIACHO FUNDO | QN 12 D | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+PEC | RIACHO FUNDO | QN 14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+PEC | RIACHO FUNDO | QN 14 A | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+PEC | RIACHO FUNDO | QN 14 F | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+PEC | RIACHO FUNDO | QN 15 A | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+PEC | RIACHO FUNDO | QN 15 D | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+PEC | RIACHO FUNDO | QN 5 B | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+PEC | RIACHO FUNDO | QN 7 B | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+PEC | RIACHO FUNDO | QN 7 D | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+PEC | RIACHO FUNDO | QN 8 E | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+PEC | RIACHO FUNDO | QR 02/04 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | RIACHO FUNDO | QR 05 CJ B | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | RIACHO FUNDO | QR 1 A CJ R | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | RIACHO FUNDO | QR 1A CJ G | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | RIACHO FUNDO | QS 6 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+PEC | RIACHO FUNDO | TERCEIRA ETAPA QS 14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+PEC | RIACHO FUNDO | TERCEIRA ETAPA QS 16 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+PEC | SAMAMBAIA | QN 211/ QS411 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QN 406 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QN 421 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QN 512/QS 312 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QN221/QS 423 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QN_511_CJ_B | — | BOM | SIM | — | 04/10/2017
+PEC | SAMAMBAIA | QR 1029 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QR 1029 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QR 1031 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QR 120 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QR 202 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QR 203 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QR 204 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QR 221 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QR 313 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QR 316 CJ 10 A | — | BOM | NAO | — | 11/10/2017
+PEC | SAMAMBAIA | QR 504/ QR 506 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QR 507 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QR 508/510 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QR 827 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QR 829 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QR 833/633 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QR425/423 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QR431_CJ_20 | — | — | NAO | — | 02/10/2017
+PEC | SAMAMBAIA | QR_513_CJ_17 | — | BOM | NAO | — | 04/10/2017
+PEC | SAMAMBAIA | QR_514_CJ_5 | — | BOM | NAO | — | 05/10/2017
+PEC | SAMAMBAIA | QR_515_CJ_8 | — | BOM | NAO | — | 04/10/2017
+PEC | SAMAMBAIA | QR_517_CJ_12 | — | BOM | NAO | — | 04/10/2017
+PEC | SAMAMBAIA | QS 104/QN304 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QS 118 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QS 121/ QN 321 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QS 303/ QN 503 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QS 304/QN504 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QS 309/QN 509 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QS 501 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QS 502 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QS 601/QN 401 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QS 612/QN412 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QS 613/QN413 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QS 617/QN417 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QS406/QN206 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SAMAMBAIA | QS_518_CJ_1 | ISOLADO | BOM | NAO | — | 05/10/2017
+PEC | SAMAMBAIA | QS_625_CJ_A | INTEGRADO | — | NAO | — | 03/10/2017
+PEC | SAMAMBAIA | SMSE 3/9 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PEC | SANTA MARIA | CENTRO URBANO QC 1 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+PEC | SANTA MARIA | CL 106 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+PEC | SANTA MARIA | CL 307 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+PEC | SANTA MARIA | COND. RESI. SANTOS DUMONT PRACA ESQUADRAO PACAU | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+PEC | SANTA MARIA | EQ 103 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+PEC | SANTA MARIA | EQ 201/301 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+PEC | SANTA MARIA | EQ 201/301 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+PEC | SANTA MARIA | EQ 208/308 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+PEC | SANTA MARIA | EQ 209/309 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+PEC | SANTA MARIA | EQ 213/313 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+PEC | SANTA MARIA | EQ 216/316 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+PEC | SANTA MARIA | QR 100 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+PEC | SANTA MARIA | QR 117 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+PEC | SANTA MARIA | QR 121 CJ D | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+PEC | SANTA MARIA | QR 203 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+PEC | SANTA MARIA | QR 215 CJ B | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+PEC | SANTA MARIA | QR 218/318 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+PEC | SANTA MARIA | QR 304 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+PEC | SANTA MARIA | QR 403 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+PEC | SCIA | Q2 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | SCIA | SETORCENTRAL | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 11/08/2015
+PEC | SCIA | SETORLESTE Q5 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | SCIA | SETOROESTE Q1 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 11/08/2015
+PEC | SCIA | SETOROESTE Q7 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 11/08/2015
+PEC | SCIA | SETOROESTE Q8 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 11/08/2015
+PEC | SIA | FEIRA IMPORTADOS | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+PEC | SOBRADINHO | NOVACOLINA | INTEGRADO | RUIM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+PEC | SOBRADINHO | Q 2 CJ  A | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | SOBRADINHO | Q 2 CJ G | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | SOBRADINHO | QD 15 | INTEGRADO | RUIM | — | não informada (valor-padrão de 1900 no cadastro) | 18/06/2015
+PEC | SOBRADINHO II | AR12 | ISOLADO | RUIM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+PEC | SOBRADINHO II | AR13 | INTEGRADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+PEC | SOBRADINHO II | AR15 | INTEGRADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+PEC | SOBRADINHO II | AR17 | ISOLADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+PEC | SOBRADINHO II | AR19 | INTEGRADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+PEC | SOBRADINHO II | BASEVI | INTEGRADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+PEC | SOBRADINHO II | VALE DAS ACÁCIAS QD 12 | ISOLADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+PEC | SOBRADINHO II | VILA RABELO QD1 | INTEGRADO | RUIM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+PEC | SOL NASCENTE E POR DO SOL | Q 11 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+PEC | SOL NASCENTE E POR DO SOL | Q 2 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+PEC | SOL NASCENTE E POR DO SOL | Q 6 | ISOLADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+PEC | SOL NASCENTE E POR DO SOL | Q 9 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+PEC | SUDOESTE/OCTOGONAL | PARQUE BOSQUE DO SUDOESTE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+PEC | SUDOESTE/OCTOGONAL | SHCAO AE | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+PEC | SUDOESTE/OCTOGONAL | SHCAO AE 3/8 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+PEC | SUDOESTE/OCTOGONAL | SHCSW 105 BL A | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+PEC | SUDOESTE/OCTOGONAL | SHCSW 504 BL G | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+PEC | SUDOESTE/OCTOGONAL | SHCSW 7 BL B6 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+PEC | SÃO SEBASTIÃO | BAIRRO BELA VISTA RUA 1 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | SÃO SEBASTIÃO | BAIRRO BELA VISTA RUA DA CRUZ | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | SÃO SEBASTIÃO | BAIRRO RESIDENCIAL OESTE | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | SÃO SEBASTIÃO | BAIRRO SAO FRANCISCO RUA 22 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | SÃO SEBASTIÃO | CENTRO DE MULTIPLAS ATIVIDADES | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | SÃO SEBASTIÃO | JARDIM MANGUEIRAL | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | SÃO SEBASTIÃO | PARQUE ECOLOGICO SAO SEBASTIAO | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | SÃO SEBASTIÃO | Q 104 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | SÃO SEBASTIÃO | Q 204 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | SÃO SEBASTIÃO | Q 301 CJ 4 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | SÃO SEBASTIÃO | RUA CONTORNO DO PARQUE 23A/23B | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | SÃO SEBASTIÃO | SETOR HABITACIONAL JARDIM 3 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | TAGUATINGA | BAIRRO AGUAS CLARAS_PARQUE URBANO | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | CNF 1/3 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | EQNL 1/3 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | EQNL 10/12 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | EQNL 2/4 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | EQNL 6/8 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | EQNL 9/11 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | EQNM 38/40 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | PRACA DO BICALHO | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QND 60 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QNG 35/22 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QNG 5/ CNG 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QNG 7/CNG 1 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QNH 7/CNH 1 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QNJ 43/QNL 12 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QNJ AE 03 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QNL 23 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QNL 24 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QNL 28 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QNM 34/36 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QNM 36 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QNM 38 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QS 5 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QS 7 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QS 7 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QSA 3/4 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QSA 4/13 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QSC 1 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QSD 8/16 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QSE 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QSE 2 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QSE SETOR E | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QSF 10/QS 5 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | QSF AE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | SMT CJ 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | SMT CJ 20 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | TAGUAPARQUE | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+PEC | VICENTE PIRES | CH 25 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | VICENTE PIRES | RUA 9 Q IE | ISOLADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+PEC | ÁGUAS CLARAS | Q 202 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 03/08/2015
+PEC | ÁGUAS CLARAS | Q 301 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 03/08/2015
+PEC | ÁGUAS CLARAS | RUA 10 NORTE | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 03/08/2015
+PEC | ÁGUAS CLARAS | RUA 35 SUL | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 03/08/2015
+PEC | ÁGUAS CLARAS | RUA 37 SUL | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 03/08/2015
+PEC | ÁGUAS CLARAS | RUA 7 NORTE | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 03/08/2015

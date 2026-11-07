@@ -1,0 +1,1295 @@
+TÍTULO: Mobiliário Esporte e Lazer: quadras, campos, skate e ginástica (cadastro oficial SEDUH-DF)
+ÓRGÃO: Secretaria de Desenvolvimento Urbano e Habitação do DF (SEDUH-DF); camada na IDE-DF
+LINK: https://metadados.seduh.df.gov.br/geonetwork/srv/por/catalog.search#/metadata/ba2bf94f-49fa-4700-ba79-5525433c7d1d
+TEMA: Quadras poliesportivas, quadras de areia, campos, skate parks e aparelhos de ginástica, com endereço e região administrativa
+ABRANGÊNCIA: DF
+TIPO DE EVIDÊNCIA: Cadastro oficial georreferenciado (extrato: exclui PEC e parque infantil)
+COMPROVA FUNCIONAMENTO ATUAL?: Não (camada declarada 'obsoleta' no metadado oficial)
+DATA DE PUBLICAÇÃO: metadado atualizado em 2023-03-07
+DATA DE COLETA: 2026-11-07
+ID: R03
+ESTADO DE VALIDAÇÃO: Pendente de validação humana (texto extraído automaticamente; cabeçalho x conteúdo x link conferidos por script em 2026-11-07)
+RESSALVAS: Mesma camada e mesma ressalva do R02 (obsoleta). Endereços são texto livre do cadastro e podem não ser localizáveis.
+AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.
+==============================================================================
+
+MOBILIÁRIO ESPORTE E LAZER
+
+Registro de metadados oficial (SEDUH-DF): https://metadados.seduh.df.gov.br/geonetwork/srv/por/catalog.search#/metadata/ba2bf94f-49fa-4700-ba79-5525433c7d1d
+Camada consultada (serviço público da IDE-DF): https://www.geoservicos.ide.df.gov.br/arcgis/rest/services/Publico/EQUIPAMENTOS_URBANOS/MapServer/6
+Total de registros na camada na data da coleta: 2458
+Custódia: Antiga Diretoria de Infraestrutura e Equipamentos Público-DIEP
+Situação declarada do metadado: obsolete | Metadado atualizado em: 2023-03-07
+
+RESUMO (texto oficial do metadado):
+A legislação brasileira, por meio da Lei 10.098/2000, define o termo MOBILIÁRIO URBANO como “conjunto de objetos presentes nas vias e espaços públicos, superpostos ou adicionados aos elementos da urbanização ou da edificação”. Já a ABNT (Associação Brasileira de Normas Técnicas) considera mobiliário urbano “todos os objetos, elementos e pequenas construções integrantes da paisagem urbana de natureza utilitária, ou não, implantada mediante autorização do poder público em espaços públicos e privados” (ABNT, 1986, p.1). No Distrito Federal, onde as extensões de áreas públicas em meio urbano são bastante expressivas e, muitas vezes, desprovidas de urbanização, são constantes as demandas por parte da população para implantação de mobiliários, principalmente aqueles destinados as atividades de esporte e lazer. A presença de tais mobiliários urbanos tende a influenciar na rotina da comunidade, podendo estimular o uso social dos espaços abertos e favorecendo o processo de socialização entre os seus frequentadores. No entanto, a implantação desses mobiliários sem o devido planejamento acaba por interferir no espaço urbano de forma negativa, causando o efeito inverso pretendido. Base de dados sobre os mobiliários de esporte e lazer implantados no Distrito Federal, incluindo a sua localização georreferenciada, de forma a auxiliar os gestores responsáveis por atender demandas relacionadas ao tema.
+
+FINALIDADE (texto oficial):
+Fornecer aos usuários informações sobre os mobiliários de esporte e lazer implantados no Distrito Federal.
+
+LIMITAÇÃO DE USO (texto oficial):
+Informações sobre precisão cartográfica, linhagem e fonte não estão disponíveis.
+
+LINHAGEM (texto oficial):
+Não informado.
+
+ALERTA OFICIAL DA SEDUH: alguns locais do cadastro podem constar de projetos urbanísticos sem terem sido implantados. Estar listado neste cadastro NÃO comprova que o espaço exista, esteja aberto ou funcione. Antes de afirmar disponibilidade, é preciso preservar e consultar a situação física e operacional de cada registro.
+
+ATENÇÃO: o metadado oficial declara a situação desta camada como 'obsolete' (em português: obsoleta). Os dados abaixo são um retrato cadastral antigo, não uma lista de espaços em funcionamento.
+
+COMPLETUDE (calculada na coleta, sobre todos os registros da camada):
+- endereço: 2439 de 2458 (99%)
+- estado de conservação: 520 de 2458 (21%)
+- utilização: 1 de 2458 (0%)
+- data de implantação: 2422 de 2458 (99%)
+
+TIPOS DE MOBILIÁRIO NA CAMADA: PARQUE INFANTIL: 801, QUADRA POLIESPORTIVA: 726, PEC: 403, APARELHO DE GINASTICA: 192, QUADRA DE AREIA: 155, CAMPO SINTETICO: 70, CAMPO ILUMINADO: 59, SKATE PARK: 20, PARQUE_INFANTIL: 9, CAMPO TERRA BATIDA: 6, (vazio): 3, CAMPO_DE_TERRA_BATIDA: 2, CAMPO DE TERRA BATIDA : 2, QUADRA_POLIESPORTIVA: 1, EXCLUIR: 1, SKATE_PARQUE: 1, PARQUE INFANTIL : 1, CAMPO DE GRAMA SINTETICA : 1, QUADRA DE AREIA : 1, PARQUE_INFANTIL : 1, QUADRA DE TENIS: 1, ANFITEATRO: 1, CAMPO DE FUTEBOL: 1
+
+REGISTROS DE QUADRAS, CAMPOS, SKATE PARK E APARELHOS DE GINÁSTICA (exclui PEC e parque infantil): 1245
+Colunas: tipo | região administrativa (domínio oficial da camada) | endereço | condição | estado de conservação (quando preenchido) | conflito | implantação | atualização
+
+— | cód. None | — | — | — | — | — | —
+— | cód. None | — | — | — | — | — | 03/10/2017
+— | cód. None | — | — | — | — | — | —
+CAMPO SINTETICO | BRAZLÂNDIA | AREA ESPECIA 03 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | BRAZLÂNDIA | AREA ESPECIA 1 N | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | BRAZLÂNDIA | AREA ESPECIAL 1 N | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | BRAZLÂNDIA | AREA ESPECIAL 1 N | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | BRAZLÂNDIA | EQ 2/4 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | BRAZLÂNDIA | EQ 6/8 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+CAMPO ILUMINADO | BRAZLÂNDIA | EQ 6/8 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | BRAZLÂNDIA | INCRA 8 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | BRAZLÂNDIA | INCRA 8 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | BRAZLÂNDIA | Q 03 SETOR TRADICIONAL | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | BRAZLÂNDIA | Q 04 LOTE 02 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | BRAZLÂNDIA | Q 1 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | BRAZLÂNDIA | Q 36 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | BRAZLÂNDIA | Q 38 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | BRAZLÂNDIA | Q 38 CJ D | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | BRAZLÂNDIA | Q 45 CJ 17 VILA SAO JOSE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | BRAZLÂNDIA | Q 46 LOTE S/N VILA SAO JOSE | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | BRAZLÂNDIA | Q 47 CJ F VILA SAO JOSE | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | BRAZLÂNDIA | Q 47 VILA SAO JOSE | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | BRAZLÂNDIA | QUADRA 04 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | BRAZLÂNDIA | QUADRA 12 SETOR TRADICIONAL | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | BRAZLÂNDIA | QUADRA 12 SETOR TRADICIONAL | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNM 1/3 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+CAMPO ILUMINADO | CEILÂNDIA | EQNM 1/3 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNM 17/19 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNM 18/20 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNM 19/21 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | CEILÂNDIA | EQNM 19/21 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNM 2/4 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | CEILÂNDIA | EQNM 2/4 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNM 20/22 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNM 21/23 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNM 22/24 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNM 23/25 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNM 24/26 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | CEILÂNDIA | EQNM 24/26 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNM 3/5 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNM 3/5 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNM 4/6 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNM 6/8 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNM 7/9 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | CEILÂNDIA | EQNM 7/9 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNM 8/10 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+CAMPO SINTETICO | CEILÂNDIA | EQNN 1/3 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNN 1/3 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNN 17/19 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | CEILÂNDIA | EQNN 17/19 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNN 19/21 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | CEILÂNDIA | EQNN 2/4 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNN 2/4 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | CEILÂNDIA | EQNN 2/4 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNN 2/4 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | CEILÂNDIA | EQNN 21/23 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNN 21/23 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNN 22/24 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | CEILÂNDIA | EQNN 22/24 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | CEILÂNDIA | EQNN 24/26 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNN 7/9 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+CAMPO ILUMINADO | CEILÂNDIA | EQNN 8/10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNN 8/10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNO 1/3 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNO 11/13 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+CAMPO SINTETICO | CEILÂNDIA | EQNO 13/15 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNO 13/15 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNO 3/5 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | CEILÂNDIA | EQNO 4/6 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNO 4/6 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+CAMPO ILUMINADO | CEILÂNDIA | EQNO 5/7 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNO 9/11 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | EQNP 23/25 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+CAMPO ILUMINADO | CEILÂNDIA | PRIVE CEILANDIA | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | PRIVE CEILANDIA | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | CEILÂNDIA | QNM 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNM 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+CAMPO SINTETICO | CEILÂNDIA | QNM 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNM 12/14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+CAMPO SINTETICO | CEILÂNDIA | QNM 12/14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNM 12/14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | CEILÂNDIA | QNM 12/14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNM 13 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+CAMPO ILUMINADO | CEILÂNDIA | QNM 22/24 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | CEILÂNDIA | QNN 09 | NAO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNN 11 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+CAMPO ILUMINADO | CEILÂNDIA | QNN 12 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNN 16 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNN 18/20 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNN 20/22 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | CEILÂNDIA | QNN 39 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNN 40 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | CEILÂNDIA | QNN 6 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNN 6 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | CEILÂNDIA | QNN 6 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+CAMPO SINTETICO | CEILÂNDIA | QNO 17 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | CEILÂNDIA | QNO 17 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | CEILÂNDIA | QNO 17 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNO 18 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | CEILÂNDIA | QNO 18 CJ C | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNO 18 CJ C | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNO 20 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNO 5/7 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNP 05 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | CEILÂNDIA | QNP 09 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNP 09 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNP 09 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNP 09 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNP 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNP 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | CEILÂNDIA | QNP 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNP 11 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | CEILÂNDIA | QNP 12 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNP 13 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNP 14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | CEILÂNDIA | QNP 14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNP 14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | CEILÂNDIA | QNP 14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNP 14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNP 15 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+CAMPO SINTETICO | CEILÂNDIA | QNP 15 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | CEILÂNDIA | QNP 15 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNP 16 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | CEILÂNDIA | QNP 17 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNP 18 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNP 20 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNP 22 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | CEILÂNDIA | QNP 22 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | CEILÂNDIA | QNP 23 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | CEILÂNDIA | QNP 24 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNP 24 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | CEILÂNDIA | QNP 24 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+CAMPO SINTETICO | CEILÂNDIA | QNP 26 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNP 26 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | CEILÂNDIA | QNP 26 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNP 28 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNP 30 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNP 32 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+CAMPO SINTETICO | CEILÂNDIA | QNP 32 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNP 34 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNQ 01 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNQ 01 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNQ 03 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNQ 05 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | CEILÂNDIA | QNR 01 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNR 01 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | CEILÂNDIA | QNR 02 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNR 02 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CEILÂNDIA | QNR 04 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | CEILÂNDIA | QNR 04 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | CRUZEIRO | SHCES 1311 BL J | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+APARELHO DE GINASTICA | CRUZEIRO | SHCES 1409 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | CRUZEIRO | SHCES Q 101 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA DE AREIA | CRUZEIRO | SHCES Q 101 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA DE AREIA | CRUZEIRO | SHCES Q 1201 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | CRUZEIRO | SHCES Q 1205 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | CRUZEIRO | SHCES Q 1205 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | CRUZEIRO | SHCES Q 1205 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | CRUZEIRO | SHCES Q 505 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | CRUZEIRO | SHCES Q 801 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+APARELHO DE GINASTICA | CRUZEIRO | SHESC Q 101 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA DE AREIA | CRUZEIRO | SRES CLUBE VIZINHANÇA | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | CRUZEIRO | SRES Q 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | CRUZEIRO | SRES Q 12 BL U | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | CRUZEIRO | SRES Q 3 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+CAMPO SINTETICO | CRUZEIRO | SRES Q 3 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+APARELHO DE GINASTICA | CRUZEIRO | SRES Q 5 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA DE AREIA | CRUZEIRO | SRES Q 8 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA DE AREIA | CRUZEIRO | SRES Q 8 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | FERCAL | — | ISOLADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+QUADRA POLIESPORTIVA | FERCAL | — | ISOLADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+QUADRA POLIESPORTIVA | FERCAL | — | ISOLADO | RUIM | — | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | FERCAL | — | ISOLADO | RUIM | — | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+CAMPO ILUMINADO | FERCAL | — | ISOLADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+CAMPO SINTETICO | FERCAL | — | ISOLADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR CENTRAL Q 55/56 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+APARELHO DE GINASTICA | GAMA | SETOR CENTRAL Q 55/56 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+CAMPO SINTETICO | GAMA | SETOR LESTE EQ 11/13 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+APARELHO DE GINASTICA | GAMA | SETOR LESTE EQ 11/13 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR LESTE EQ 12/14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR LESTE EQ 4/6 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+APARELHO DE GINASTICA | GAMA | SETOR LESTE PRACA 3 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR LESTE PRACA 3 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR LESTE Q 16 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR LESTE Q 20 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR LESTE Q 26 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+APARELHO DE GINASTICA | GAMA | SETOR LESTE Q 27 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR LESTE Q 27 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR LESTE Q 31 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR LESTE Q 34 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR LESTE Q 46 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR LESTE Q 49 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+CAMPO SINTETICO | GAMA | SETOR LESTE/ ITAMARACA Q 50 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR LESTE/ ITAMARACA Q 50 CJ B | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR NORTE Q 1 CJ B | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+APARELHO DE GINASTICA | GAMA | SETOR NORTE Q 1 CJ H | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR NORTE Q 1 CJ H | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+SKATE PARK | GAMA | SETOR NORTE Q 2 AE 2 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR NORTE Q 2 CJ B | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+CAMPO ILUMINADO | GAMA | SETOR NORTE Q 2 CJ G | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+APARELHO DE GINASTICA | GAMA | SETOR NORTE Q 2 CJ G | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR NORTE Q 2 CJ G | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR NORTE Q 2 CJ H | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR OESTE EQ 12/16 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR OESTE EQ 13/17 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR OESTE EQ 17/27 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR OESTE EQ 2/4 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+APARELHO DE GINASTICA | GAMA | SETOR OESTE EQ 2/4 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR OESTE EQ 26/29 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+APARELHO DE GINASTICA | GAMA | SETOR OESTE EQ 26/29 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR OESTE EXPANSAO Q A | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+SKATE PARK | GAMA | SETOR OESTE PRACA 1 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR OESTE PRACA 1 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA DE AREIA | GAMA | SETOR OESTE PRACA 1 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR OESTE PRACA 1 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR OESTE Q 25 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR SUL EQ 13/15 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+APARELHO DE GINASTICA | GAMA | SETOR SUL EQ 13/15 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR SUL PRACA 3 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR SUL Q 1 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR SUL Q 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+APARELHO DE GINASTICA | GAMA | SETOR SUL Q 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR SUL Q 12 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA DE AREIA | GAMA | SETOR SUL Q 12 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA DE AREIA | GAMA | SETOR SUL Q 13 CJ G | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR SUL Q 4 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR SUL Q 5 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR SUL Q 6 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+APARELHO DE GINASTICA | GAMA | SETOR SUL Q 7 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR SUL Q 7 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR SUL Q 8 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | SETOR SUL Q 9 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+CAMPO SINTETICO | GAMA | VILA DVO TRAVESSA DO BURITI | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GAMA | VILA DVO TRAVESSA DO BURITI | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 06/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | CAVE | INTEGRADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+CAMPO ILUMINADO | GUARÁ | CAVE | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+SKATE PARK | GUARÁ | CAVE | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | CAVE | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA DE AREIA | GUARÁ | CAVE | INTEGRADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | CAVE | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | PARQUE GUARA | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | PARQUE GUARA | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | POLO DE MODA | ISOLADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA DE AREIA | GUARÁ | POLO DE MODA | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA DE AREIA | GUARÁ | POLO DE MODA | INTEGRADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | POLO DE MODA | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | QELC QE1 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | QELC QE1 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+APARELHO DE GINASTICA | GUARÁ | QELC QE2 | INTEGRADO | RUIM | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | QELC QE3 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+APARELHO DE GINASTICA | GUARÁ | QELC QE4 | INTEGRADO | RUIM | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+CAMPO SINTETICO | GUARÁ | SRIA I QE1 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QE1 | INTEGRADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QE10 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QE2 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+CAMPO SINTETICO | GUARÁ | SRIA I QE2 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QE2 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QE3 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA DE AREIA | GUARÁ | SRIA I QE3 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+CAMPO SINTETICO | GUARÁ | SRIA I QE3 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QE8 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+APARELHO DE GINASTICA | GUARÁ | SRIA I QE8 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QI1 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QI10 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QI11 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QI12 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QI14 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QI16 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+APARELHO DE GINASTICA | GUARÁ | SRIA I QI18 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QI18 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+CAMPO SINTETICO | GUARÁ | SRIA I QI18 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA DE AREIA | GUARÁ | SRIA I QI18 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QI18 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QI20 | INTEGRADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA DE AREIA | GUARÁ | SRIA I QI22 | INTEGRADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QI22 | INTEGRADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QI3 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QI4 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QI5 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QI6 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA DE AREIA | GUARÁ | SRIA I QI7 | INTEGRADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QI7 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA DE AREIA | GUARÁ | SRIA I QI7 | INTEGRADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QI8 | INTEGRADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA I QI9 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II AE 2 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II AE 2 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II EQ 19 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II EQ15/17 | ISOLADO | RUIM | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA DE AREIA | GUARÁ | SRIA II EQ17/19 | INTEGRADO | RUIM | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II EQ17/19 | INTEGRADO | RUIM | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II EQ17/19 | INTEGRADO | RUIM | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II EQ19/21 | INTEGRADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II EQ30/32 | ISOLADO | RUIM | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+APARELHO DE GINASTICA | GUARÁ | SRIA II EQ34/36 | ISOLADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+APARELHO DE GINASTICA | GUARÁ | SRIA II QE13 | ISOLADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II QE15 | INTEGRADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II QE17 | ISOLADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA DE AREIA | GUARÁ | SRIA II QE23 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+CAMPO ILUMINADO | GUARÁ | SRIA II QE23 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+CAMPO SINTETICO | GUARÁ | SRIA II QE23 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II QE24 | INTEGRADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+APARELHO DE GINASTICA | GUARÁ | SRIA II QE24 | INTEGRADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II QE26 | INTEGRADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II QE28 | ISOLADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II QE28 | ISOLADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II QE30 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II QE32 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II QE34 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA DE AREIA | GUARÁ | SRIA II QE36 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+APARELHO DE GINASTICA | GUARÁ | SRIA II QE36 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+CAMPO SINTETICO | GUARÁ | SRIA II QE36 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II QE38 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+APARELHO DE GINASTICA | GUARÁ | SRIA II QE38 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II QE38 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+CAMPO SINTETICO | GUARÁ | SRIA II QE38 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA DE AREIA | GUARÁ | SRIA II QE38 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+SKATE PARK | GUARÁ | SRIA II QE38 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II QE40 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA DE AREIA | GUARÁ | SRIA II QE40 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II QE42 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA DE AREIA | GUARÁ | SRIA II QE44 | INTEGRADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II QE44 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | GUARÁ | SRIA II QE46 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+APARELHO DE GINASTICA | LAGO NORTE | CA 5 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+APARELHO DE GINASTICA | LAGO NORTE | MI 07 | ISOLADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+APARELHO DE GINASTICA | LAGO NORTE | QI 03 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+QUADRA POLIESPORTIVA | LAGO NORTE | QI 05 | ISOLADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+APARELHO DE GINASTICA | LAGO NORTE | QI 16 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+SKATE PARK | LAGO NORTE | SHTQ Q1 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+QUADRA POLIESPORTIVA | LAGO NORTE | SHTQ Q1 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+APARELHO DE GINASTICA | LAGO SUL | SHIS QI 28 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 15/06/2015
+QUADRA DE AREIA | LAGO SUL | SHIS QI 28 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 15/06/2015
+APARELHO DE GINASTICA | LAGO SUL | SHIS QL 14 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 15/06/2015
+SKATE PARK | NÚCLEO BANDEIRANTE | AC 3 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+CAMPO SINTETICO | NÚCLEO BANDEIRANTE | BERNARDO SAYÃO | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | NÚCLEO BANDEIRANTE | EPNB | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | NÚCLEO BANDEIRANTE | EPNB | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | NÚCLEO BANDEIRANTE | EPNB | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | NÚCLEO BANDEIRANTE | EPNB | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | NÚCLEO BANDEIRANTE | EPNB | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | NÚCLEO BANDEIRANTE | METROPOLITANA | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | NÚCLEO BANDEIRANTE | METROPOLITANA | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | NÚCLEO BANDEIRANTE | PLACAMERCEDES | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+CAMPO SINTETICO | NÚCLEO BANDEIRANTE | PRAÇA CENTRAL | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | NÚCLEO BANDEIRANTE | PRAÇA CENTRAL | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | NÚCLEO BANDEIRANTE | QN 1 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | NÚCLEO BANDEIRANTE | QN 1 | INTEGRADO | RUIM | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+CAMPO SINTETICO | NÚCLEO BANDEIRANTE | QN 3 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | NÚCLEO BANDEIRANTE | QN 5 | ISOLADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | NÚCLEO BANDEIRANTE | QN 5 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | NÚCLEO BANDEIRANTE | QN 5 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | NÚCLEO BANDEIRANTE | QN 7 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+CAMPO SINTETICO | NÚCLEO BANDEIRANTE | QN 7 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | NÚCLEO BANDEIRANTE | QN 7 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | NÚCLEO BANDEIRANTE | QN 7 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | NÚCLEO BANDEIRANTE | QS 12 | INTEGRADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | NÚCLEO BANDEIRANTE | QS 14 | INTEGRADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+CAMPO SINTETICO | NÚCLEO BANDEIRANTE | QS 6 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | NÚCLEO BANDEIRANTE | QS 6 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA DE AREIA | NÚCLEO BANDEIRANTE | QS 6 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | NÚCLEO BANDEIRANTE | QS 6 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | NÚCLEO BANDEIRANTE | QS 8 | INTEGRADO | RUIM | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | NÚCLEO BANDEIRANTE | VILA CAUHY | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+CAMPO ILUMINADO | NÚCLEO BANDEIRANTE | VILA CAUHY | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | NÚCLEO BANDEIRANTE | VILA NOVA DIVINEIA | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA DE AREIA | NÚCLEO BANDEIRANTE | VILA NOVA DIVINEIA | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | NÚCLEO BANDEIRANTE | VILA NOVA DIVINEIA | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+CAMPO ILUMINADO | NÚCLEO BANDEIRANTE | VILA NOVA DIVINEIA | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA DE AREIA | PARANOÁ | AV. PARANOA CJ 15 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | PARANOÁ | AV. PARANOA CJ 15 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+CAMPO ILUMINADO | PARANOÁ | PARQUE ECOLOGICO CACHOEIRINHA | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+CAMPO ILUMINADO | PARANOÁ | PARQUE ECOLOGICO CACHOEIRINHA | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+CAMPO SINTETICO | PARANOÁ | PARQUE ECOLOGICO CACHOEIRINHA | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | PRACA CENTRAL | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+SKATE PARK | PARANOÁ | PRACA CENTRAL | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | PRACA CENTRAL | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | PARANOÁ | PRACA CENTRAL | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | Q 10 CJ B | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | Q 11 CJ C | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | Q 13 CJ E | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | PARANOÁ | Q 13 CJ E | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | Q 15 CJ I/J | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | Q 16 CJ E/I | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | Q 17 CJ D/E | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | Q 19 CJ F | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | Q 2 CJ F | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA DE AREIA | PARANOÁ | Q 20 CJ J | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | Q 20 CJ K/L | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | Q 21 CJ G/I | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | Q 23 CJ J | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | Q 24 CJ D | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | PARANOÁ | Q 25 CJ J | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA DE AREIA | PARANOÁ | Q 25 CJ J | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | Q 25 CJ J | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | Q 26 CJ D | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | PARANOÁ | Q 26 CJ D | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | PARANOÁ | Q 27 CJ C/D | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | Q 27 CJ C/D | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | Q 28 CJ C | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | PARANOÁ | Q 28 G/H | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA DE AREIA | PARANOÁ | Q 29 CJ E | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | Q 29 CJ M | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | PARANOÁ | Q 29 CJ M | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | Q 3/7 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | Q 30 CJ E | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | PARANOÁ | Q 30 CJ E | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | Q 32 CJ E | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | PARANOÁ | Q 32 CJ E | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | Q 6 CJ I/J | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | PARANOÁ | Q 8 CJ J | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARANOÁ | Q 8 CJ J | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PARK WAY | — | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/07/2015
+CAMPO SINTETICO | PARK WAY | Q 06 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 09/07/2015
+APARELHO DE GINASTICA | PARK WAY | Q 06 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 09/07/2015
+QUADRA POLIESPORTIVA | PARK WAY | Q 06 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 09/07/2015
+CAMPO ILUMINADO | PARK WAY | Q 06 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 09/07/2015
+QUADRA POLIESPORTIVA | PARK WAY | Q 06 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 09/07/2015
+CAMPO ILUMINADO | PARK WAY | Q 06 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 09/07/2015
+CAMPO ILUMINADO | PARK WAY | Q 06 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 09/07/2015
+QUADRA POLIESPORTIVA | PARK WAY | VARGEM BONITA | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/07/2015
+CAMPO SINTETICO | PARK WAY | VARGEM BONITA | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/07/2015
+CAMPO ILUMINADO | PARK WAY | VARGEM BONITA | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/07/2015
+QUADRA POLIESPORTIVA | PLANALTINA | BURITIS III QD12 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+CAMPO SINTETICO | PLANALTINA | BURITIS III QD12 | ISOLADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | BURITIS IV QD19 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | BURITIS IV QD19 | ISOLADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | BURITIS IV QD25 | ISOLADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+CAMPO ILUMINADO | PLANALTINA | BURITIS Q01 | ISOLADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+CAMPO SINTETICO | PLANALTINA | COND ARAPOANGA Q22 | ISOLADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | COND ESTACIA MESTRE DARMAS I | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 25/06/2015
+CAMPO ILUMINADO | PLANALTINA | COND ESTACIA MESTRE DARMAS III | ISOLADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 25/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | RESIDENCIAL NORTE 1 | ISOLADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | RESIDENCIAL NORTE A EQ2 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | RESIDENCIAL NORTE A EQ3 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | RESIDENCIAL NORTE A EQ5 | ISOLADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+CAMPO SINTETICO | PLANALTINA | RESIDENCIAL NORTE A EQ6 | ISOLADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+CAMPO ILUMINADO | PLANALTINA | RESIDENCIAL NORTE A QD2 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 25/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | RESIDENCIAL OESTE | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | SETOR ARAPOANGA COND FLAMBOYANT | ISOLADO | RUIM | SIM | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+CAMPO SINTETICO | PLANALTINA | SETOR DE EDUCAÇÃO | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | SETOR DE EDUCAÇÃO | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+CAMPO ILUMINADO | PLANALTINA | SETOR DE EDUCAÇÃO | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+APARELHO DE GINASTICA | PLANALTINA | SETOR DE EDUCAÇÃO | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | SETOR DE EDUCAÇÃO | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | SETOR DE EDUCAÇÃO | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | SETOR DE EDUCAÇÃO | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | SETOR DE EDUCAÇÃO | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+CAMPO ILUMINADO | PLANALTINA | SETOR RECREATIVO | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | SETOR TRADICIONAL | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | VALE AMANHECER  CR50 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | VALE AMANHECER  CR50 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA DE AREIA | PLANALTINA | VILA BURITIS EQ 1/2 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | VILA BURITIS EQ 1/2 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | VILA BURITIS EQ 3/4 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | VILA BURITIS EQ 5/6 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | VILA BURITIS EQ 5/6 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+CAMPO ILUMINADO | PLANALTINA | VILA VICENTINA | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA POLIESPORTIVA | PLANALTINA | VILA VICENTINA EQ16/17 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA DE AREIA | PLANALTINA | VILA VICENTINA EQ16/17 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 24/06/2015
+QUADRA DE AREIA | PLANO PILOTO | EQN 104/105 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | EQN 104/105 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | EQN 106/107 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | EQN 108/109 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | EQN 110/111 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | EQN 114/115 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+CAMPO ILUMINADO | PLANO PILOTO | EQN 307/308 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | EQN 309/310 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | EQS 102/103 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | EQS 102/103 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | EQS 104/105 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | EQS 104/105 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | EQS 104/105 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | EQS 106/107 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | EQS 106/107 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | EQS 106/107 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | EQS 106/107 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | EQS 110/111 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | EQS 110/111 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | EQS 110/111 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+CAMPO DE FUTEBOL | PLANO PILOTO | EQS 110/111 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | EQS 112/113 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | EQS 114/115 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | EQS 114/115 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | EQS 202/203 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | EQS 202/203 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+CAMPO ILUMINADO | PLANO PILOTO | EQS 202/203 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | EQS 206/207 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | EQS 206/207 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | EQS 208/209 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | EQS 212/213 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | EQS 214/215 LT B | INTEGRADO | BOM | SIM | — | 06/11/2017
+QUADRA DE AREIA | PLANO PILOTO | EQS 214_215 LT B | INTEGRADO | BOM | SIM | — | 06/11/2017
+CAMPO DE TERRA BATIDA | PLANO PILOTO | EQS 241/215 LT B | INTEGRADO | BOM | SIM | — | 06/11/2017
+QUADRA DE AREIA | PLANO PILOTO | PARQUE DA CIDADE | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+CAMPO ILUMINADO | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+CAMPO ILUMINADO | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+CAMPO ILUMINADO | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+CAMPO ILUMINADO | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+CAMPO ILUMINADO | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | PARQUE DA CIDADE | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+CAMPO ILUMINADO | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+CAMPO ILUMINADO | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+CAMPO ILUMINADO | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | PARQUE DA CIDADE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | PARQUE OLHOS DAGUA | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | SGAS 614 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SHCGN 703 JI | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SHCGN 710 BL A | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SHCGN 713 BL G | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA DE AREIA | PLANO PILOTO | SHCGN 716 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SHCN 416 BL F | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SHCS 703/704 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+PARQUE_INFANTIL | PLANO PILOTO | SHCS SQS 414 BL A | ISOLADO | — | NAO | — | 06/11/2017
+QUADRA POLIESPORTIVA | PLANO PILOTO | SHIGS 705/706 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+CAMPO ILUMINADO | PLANO PILOTO | SHIGS 705/706 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | SHIGS 705/706 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SHIGS 711 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN  316 BL I | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 102 BL B | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 102 BL G | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 102 BL G | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 102 BL G | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | SQN 103 BL C | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 103 BL F | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 103 BL F | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | SQN 106 BL E | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 110 BL K | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA DE AREIA | PLANO PILOTO | SQN 112 BL F | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA DE AREIA | PLANO PILOTO | SQN 113 BL C | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 113 BL C | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 113 BL E | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 202 BL E | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 203 BL C | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 204 BL G | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 206 BL E | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 208 BL D | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 209 BL D | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+CAMPO ILUMINADO | PLANO PILOTO | SQN 210 BL H | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA DE AREIA | PLANO PILOTO | SQN 211 BL C | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | SQN 215 BL J | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 302 BL I | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 303 BL C | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 305 BL D | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 306 BL B | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 306 BL J | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA DE AREIA | PLANO PILOTO | SQN 307 BL C | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA DE AREIA | PLANO PILOTO | SQN 308 BL C | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | SQN 308 BL C | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA DE AREIA | PLANO PILOTO | SQN 309 BL O | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 311 BL  A | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | SQN 311 BL  A | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | SQN 312 BL E | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 312 BL H | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 313 BL C | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 315 BL C | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA DE AREIA | PLANO PILOTO | SQN 403 BL E | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 403 BL E | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 405 BL E | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 408 BL C | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 411 BL D | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | SQN 411 EC | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 412 BL J | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 415 BL G | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQN 416 EC | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 21/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | SQS 104 BL H | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 104 BL H | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | SQS 105 BL B | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | SQS 106 BL D | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | SQS 109 BL C | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 110 BL J | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 111 BL D | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 113 BL  J | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 116 BL I | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | SQS 202 BL D | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 202 BL D | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | SQS 202 BL F | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | SQS 202 BL F | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 203 BL F | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 204 BL I | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 204 BL I | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | SQS 205 BL B | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 205 BL J | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | SQS 209 BL D | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 209 BL D | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 211 BL I | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 213 BL E | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 216 BL G | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 302 BL J | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | SQS 303 BL J | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 304 BL J | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+CAMPO ILUMINADO | PLANO PILOTO | SQS 307 BL F | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 307 BL K | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 309 BL H | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | SQS 310 BL B | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 310 BL E | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | SQS 311 BL B | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 311 BL H | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | SQS 312 BL G | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 312 BL G | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | SQS 314 BL I | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 316 BL J | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | SQS 402 BL L | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 402 BL L | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 403 BL H | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 405 BL C | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 405 BL F | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | SQS 405 BL O | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+CAMPO ILUMINADO | PLANO PILOTO | SQS 405 BL Q | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | SQS 406 BL B | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | SQS 406 BL L | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | SQS 406 BL Q | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | SQS 407 BL C | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | SQS 407 BL M | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 409 BL Q | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+CAMPO ILUMINADO | PLANO PILOTO | SQS 410 BL H | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 412 BL K | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+CAMPO ILUMINADO | PLANO PILOTO | SQS 412 BL M | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA DE AREIA | PLANO PILOTO | SQS 414 BL S | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+APARELHO DE GINASTICA | PLANO PILOTO | SQS 415 BL F | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+CAMPO ILUMINADO | PLANO PILOTO | SQS 415 BL J | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | SQS 416 BL C | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/08/2015
+QUADRA POLIESPORTIVA | PLANO PILOTO | VILA PLANALTO | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/10/2015
+APARELHO DE GINASTICA | PLANO PILOTO | VILA PLANALTO | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/10/2015
+QUADRA DE AREIA | PLANO PILOTO | VILA PLANALTO | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/10/2015
+QUADRA DE AREIA | PLANO PILOTO | VILA PLANALTO | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/10/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | AV CENTRAL Q 407 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+APARELHO DE GINASTICA | RECANTO DAS EMAS | AV RECANTO DAS EMAS  Q 110/305 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+CAMPO ILUMINADO | RECANTO DAS EMAS | AV RECANTO DAS EMAS  Q 111/306 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+CAMPO SINTETICO | RECANTO DAS EMAS | AV RECANTO DAS EMAS CENTRO URBANO AE 1 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+SKATE PARK | RECANTO DAS EMAS | AV RECANTO DAS EMAS CENTRO URBANO AE 1 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+APARELHO DE GINASTICA | RECANTO DAS EMAS | AV RECANTO DAS EMAS Q 104 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+APARELHO DE GINASTICA | RECANTO DAS EMAS | AV RECANTO DAS EMAS Q 116 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+CAMPO SINTETICO | RECANTO DAS EMAS | AV RECANTO DAS EMAS Q 310 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+APARELHO DE GINASTICA | RECANTO DAS EMAS | AV RECANTO DAS EMAS Q 311 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+CAMPO SINTETICO | RECANTO DAS EMAS | AV VARGEM DA BENCAO | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 101 CJ 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 102 CJ 3A | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 103 CJ 09/7A | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 104 CJ 10/12 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA DE AREIA | RECANTO DAS EMAS | Q 105 CJ 7/11 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 105 CJ 7/11 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 106 CJ  6/4A | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 107 CJ 06 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 108 CJ 08 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+CAMPO ILUMINADO | RECANTO DAS EMAS | Q 109 CJ 3/5 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 109 CJ 3/5 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 110 CJ 9A | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+CAMPO SINTETICO | RECANTO DAS EMAS | Q 111 CJ 03 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 112 CJ 03 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 113 CJ 3A | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 115 CJ 8 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 116 CJ 2/6 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 144 CJ 4A | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+CAMPO SINTETICO | RECANTO DAS EMAS | Q 201 CJ 13 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 202 CJ 06 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 202 CJ 16 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 203 CJ 12 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 204 CJ 05/10 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 205 CJ 16 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 206 CJ 02 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 300 CJ  23 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 301 CJ 04 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 302 CJ 02/07 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 303 CJ 02/05 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 304 CJ 14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 305 CJ 02 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 306 CJ 13 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+CAMPO SINTETICO | RECANTO DAS EMAS | Q 307 CJ 11 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 308 CJ 11 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 309 CJ 3A | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 310 CJ 09 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 311 CJ 10A | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 401 CJ 09 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 403 CJ 07/08 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+CAMPO SINTETICO | RECANTO DAS EMAS | Q 403 CJ 17/20 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 404 CJ 09/04 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 405 CJ 09 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 406 CJ O | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+CAMPO SINTETICO | RECANTO DAS EMAS | Q 508 CJ 03 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+APARELHO DE GINASTICA | RECANTO DAS EMAS | Q 508 CJ 03 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 508 CJ 08 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+APARELHO DE GINASTICA | RECANTO DAS EMAS | Q 508 CJ 12 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 510 CJ 09 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA DE AREIA | RECANTO DAS EMAS | Q 510 CJ 11 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 510 CJ 21 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+SKATE PARK | RECANTO DAS EMAS | Q 510 CJ 21 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+APARELHO DE GINASTICA | RECANTO DAS EMAS | Q 511 CJ 16 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 601 CJ 09 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 602 CJ 5B | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 603 CJ 11 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 604 CJ 12/13 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+CAMPO ILUMINADO | RECANTO DAS EMAS | Q 605 CJ 11 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 605 CJ 18 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 802 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 803 CJ 16 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 804 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | Q 805 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA POLIESPORTIVA | RECANTO DAS EMAS | SUBCENTRO 400/600 CJ A | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+CAMPO ILUMINADO | RECANTO DAS EMAS | SUBCENTRO 400/600 CJ A | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 10/08/2015
+QUADRA DE AREIA | RIACHO FUNDO | CAUB II AE AC1 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+CAMPO ILUMINADO | RIACHO FUNDO | CAUB II AE AC1 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+QUADRA POLIESPORTIVA | RIACHO FUNDO | CAUB II AE AC1 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+CAMPO SINTETICO | RIACHO FUNDO | CAUB II AE AC2 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+CAMPO ILUMINADO | RIACHO FUNDO | CAUB II AE AC2 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+QUADRA DE AREIA | RIACHO FUNDO | CAUB II AE AC2 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+QUADRA POLIESPORTIVA | RIACHO FUNDO | CAUB II AE AC2 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+QUADRA DE AREIA | RIACHO FUNDO | PRACA DO BOSQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | RIACHO FUNDO | PRACA DO BOSQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+CAMPO SINTETICO | RIACHO FUNDO | PRACA DO BOSQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+SKATE PARK | RIACHO FUNDO | PRACA DO BOSQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | RIACHO FUNDO | PRIMEIRA ETAPA | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+QUADRA DE AREIA | RIACHO FUNDO | PRIMEIRA ETAPA | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+QUADRA POLIESPORTIVA | RIACHO FUNDO | QC 2 CJ 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+QUADRA POLIESPORTIVA | RIACHO FUNDO | QC 4 CJ 16 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+QUADRA POLIESPORTIVA | RIACHO FUNDO | QC 5 CJ 04 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+QUADRA POLIESPORTIVA | RIACHO FUNDO | QC 6 CJ 16 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+QUADRA DE AREIA | RIACHO FUNDO | QN 12 B | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+QUADRA POLIESPORTIVA | RIACHO FUNDO | QN 12 C | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+CAMPO SINTETICO | RIACHO FUNDO | QN 14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+QUADRA POLIESPORTIVA | RIACHO FUNDO | QN 15 D | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+QUADRA POLIESPORTIVA | RIACHO FUNDO | QN 5 C | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+SKATE PARK | RIACHO FUNDO | QN 7 C | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+QUADRA POLIESPORTIVA | RIACHO FUNDO | QN 7 D | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+QUADRA POLIESPORTIVA | RIACHO FUNDO | QN 8 D | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+QUADRA DE AREIA | RIACHO FUNDO | QN 8 D | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+APARELHO DE GINASTICA | RIACHO FUNDO | QR 01 CJ RS | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | RIACHO FUNDO | QR 01 CJ RS | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+APARELHO DE GINASTICA | RIACHO FUNDO | QR 02 CJ B | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | RIACHO FUNDO | QR 02/04 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | RIACHO FUNDO | QR 02/04 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | RIACHO FUNDO | QR 04 CJ E | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | RIACHO FUNDO | QR 05 CJ B | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | RIACHO FUNDO | QR 07 CJ B | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+CAMPO SINTETICO | RIACHO FUNDO | QR 1A CJ G | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA DE AREIA | RIACHO FUNDO | QR 1A CJ J | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+CAMPO SINTETICO | RIACHO FUNDO | QS 20 CJ 1 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+QUADRA POLIESPORTIVA | RIACHO FUNDO | QS 6 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+QUADRA POLIESPORTIVA | RIACHO FUNDO | TERCEIRA ETAPA QS 14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015
+QUADRA DE AREIA | SAMAMBAIA | PARQUE TRES MENINAS | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | PARQUE TRES MENINAS | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QN 303 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QN 311 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+CAMPO SINTETICO | SAMAMBAIA | QN 311 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QN 319 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+CAMPO ILUMINADO | SAMAMBAIA | QN 319 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QN 401 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QN 403 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QN 409 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QN 410 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QN 413 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QN 417 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+CAMPO SINTETICO | SAMAMBAIA | QN 421 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QN 421 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QN 423 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+CAMPO ILUMINADO | SAMAMBAIA | QN 433 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QN 433 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA DE AREIA | SAMAMBAIA | QN 433 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA DE AREIA | SAMAMBAIA | QN 433 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QN 501 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QN 512/514 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QN 829 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 106 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+APARELHO DE GINASTICA | SAMAMBAIA | QR 107 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 109 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 113 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+APARELHO DE GINASTICA | SAMAMBAIA | QR 114 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+APARELHO DE GINASTICA | SAMAMBAIA | QR 120 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 122 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+CAMPO ILUMINADO | SAMAMBAIA | QR 125 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 202 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 203 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+APARELHO DE GINASTICA | SAMAMBAIA | QR 204 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 204 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA DE AREIA | SAMAMBAIA | QR 204 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 205 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 206 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+CAMPO SINTETICO | SAMAMBAIA | QR 206 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 22/06/2015
+QUADRA DE AREIA | SAMAMBAIA | QR 207 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 208 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 209 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 211 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 212 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+APARELHO DE GINASTICA | SAMAMBAIA | QR 212 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 221 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 225 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 303 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+CAMPO SINTETICO | SAMAMBAIA | QR 305 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 305 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 309 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 310 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+PARQUE INFANTIL | SAMAMBAIA | QR 316 CJ 10 A LOTE 1 | — | BOM | SIM | — | 11/10/2017
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 318 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 323 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 414 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 429 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 503 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 504/506 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 517 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 519 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+APARELHO DE GINASTICA | SAMAMBAIA | QR 521 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 521 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 523 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+CAMPO_DE_TERRA_BATIDA | SAMAMBAIA | QR 827 | — | — | NAO | — | 02/10/2017
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 827 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR 833/633 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QR508/510 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+CAMPO_DE_TERRA_BATIDA | SAMAMBAIA | QR_121_CJ_12 | — | — | NAO | — | 03/10/2017
+QUADRA_POLIESPORTIVA | SAMAMBAIA | QR_431_CJ_14 | ISOLADO | BOM | NAO | — | 02/10/2017
+APARELHO DE GINASTICA | SAMAMBAIA | QR_515_CJ_10 | — | BOM | NAO | — | 04/10/2017
+SKATE_PARQUE | SAMAMBAIA | QR_515_CJ_10 | — | BOM | NAO | — | 04/10/2017
+QUADRA POLIESPORTIVA | SAMAMBAIA | QS 108/110 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QS 115 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+CAMPO SINTETICO | SAMAMBAIA | QS 118 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA DE AREIA | SAMAMBAIA | QS 118 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QS 120 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QS 123 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QS 127 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QS 310 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+CAMPO SINTETICO | SAMAMBAIA | QS 310 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QS 406 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QS 408 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+APARELHO DE GINASTICA | SAMAMBAIA | QS 408/QN208 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QS 414 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QS 425 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+CAMPO SINTETICO | SAMAMBAIA | QS 427 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QS 427 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QS 433 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QS 501 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QS 502 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QS 604 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QS 605 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QS 607 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+CAMPO SINTETICO | SAMAMBAIA | QS 610 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QS 613 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QS 621 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SAMAMBAIA | QS 631 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+EXCLUIR | SAMAMBAIA | QS_625_CJ_D | — | — | — | — | 03/10/2017
+CAMPO DE TERRA BATIDA | SAMAMBAIA | QUADRA QS 603 CJ A LOTE 03 | ISOLADO | BOM | SIM | — | 16/10/2017
+CAMPO DE GRAMA SINTETICA | SAMAMBAIA | SETOR DE MANSÕES DUDESTE CJ 8 | — | BOM | NAO | — | 11/10/2017
+QUADRA POLIESPORTIVA | SAMAMBAIA | SMSE 3/9 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+CAMPO SINTETICO | SANTA MARIA | CENTRO URBANO QC 1 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+SKATE PARK | SANTA MARIA | CENTRO URBANO QC 1 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA DE AREIA | SANTA MARIA | CENTRO URBANO QC 1 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+APARELHO DE GINASTICA | SANTA MARIA | CENTRO URBANO QC 1 CJ H | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA DE AREIA | SANTA MARIA | CENTRO URBANO QC 1 CJ H | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA POLIESPORTIVA | SANTA MARIA | CL 202 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+CAMPO SINTETICO | SANTA MARIA | CL 409 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+CAMPO SINTETICO | SANTA MARIA | COND. RESI. SANTOS DUMONT PRACA ESQUADRAO PACAU | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA POLIESPORTIVA | SANTA MARIA | COND. RESI. SANTOS DUMONT QRC 1 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA POLIESPORTIVA | SANTA MARIA | EQ 208/308 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA POLIESPORTIVA | SANTA MARIA | EQ 209/309 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA POLIESPORTIVA | SANTA MARIA | EQ 210/310 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA POLIESPORTIVA | SANTA MARIA | EQ 213/313 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA POLIESPORTIVA | SANTA MARIA | EQ 216/316 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA POLIESPORTIVA | SANTA MARIA | EQ 418/518 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA POLIESPORTIVA | SANTA MARIA | QR 100 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA POLIESPORTIVA | SANTA MARIA | QR 116 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA POLIESPORTIVA | SANTA MARIA | QR 117 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA POLIESPORTIVA | SANTA MARIA | QR 118 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA DE AREIA | SANTA MARIA | QR 120 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+CAMPO SINTETICO | SANTA MARIA | QR 120 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+CAMPO ILUMINADO | SANTA MARIA | QR 120 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA POLIESPORTIVA | SANTA MARIA | QR 121 CJ E/C | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA POLIESPORTIVA | SANTA MARIA | QR 122 CJ H | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+APARELHO DE GINASTICA | SANTA MARIA | QR 122 CJ H | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA POLIESPORTIVA | SANTA MARIA | QR 207 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA POLIESPORTIVA | SANTA MARIA | QR 211 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA POLIESPORTIVA | SANTA MARIA | QR 218/318 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA DE AREIA | SANTA MARIA | QR 304 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA POLIESPORTIVA | SANTA MARIA | QR 403 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+CAMPO ILUMINADO | SANTA MARIA | QR 418/518 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+QUADRA POLIESPORTIVA | SANTA MARIA | QR 419 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 07/08/2015
+APARELHO DE GINASTICA | SCIA | PARQUEURBANO | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA DE AREIA | SCIA | PARQUEURBANO | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA DE AREIA | SCIA | PARQUEURBANO | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+CAMPO SINTETICO | SCIA | PARQUEURBANO | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | SCIA | SETORCENTRAL | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 11/08/2015
+QUADRA POLIESPORTIVA | SCIA | SETORLESTE Q5 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | SCIA | SETORNORTE Q4 | ISOLADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+CAMPO SINTETICO | SCIA | SETOROESTE Q1 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 11/08/2015
+APARELHO DE GINASTICA | SCIA | SETOROESTE Q1 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 11/08/2015
+CAMPO ILUMINADO | SCIA | SETOROESTE Q5 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 11/08/2015
+QUADRA POLIESPORTIVA | SCIA | SETOROESTE Q7 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 11/08/2015
+APARELHO DE GINASTICA | SCIA | SETOROESTE Q7 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 11/08/2015
+QUADRA POLIESPORTIVA | SCIA | SETOROESTE Q8 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 11/08/2015
+QUADRA POLIESPORTIVA | SIA | STRC CENTROVIVENCIA | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+APARELHO DE GINASTICA | SIA | STRC CENTROVIVENCIA | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 13/08/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | CHAC 6 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+CAMPO TERRA BATIDA | SOBRADINHO | DNOCS | ISOLADO | RUIM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | ETAPA 3 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | Q 1 CJ I | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA DE AREIA | SOBRADINHO | Q 1 CJ I | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | SOBRADINHO | Q 2 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+CAMPO SINTETICO | SOBRADINHO | Q 2 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | Q 2  CJ G | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | SOBRADINHO | Q 2 CJ  A | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | Q 2 CJ  A | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+SKATE PARK | SOBRADINHO | Q 2 CJ  A | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | Q 61 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | Q CENTRAL | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 18/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | Q01 | ISOLADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | Q01 | ISOLADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | Q01 | ISOLADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | Q02 | ISOLADO | RUIM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | QD 03 | INTEGRADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 18/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | QD 03 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 18/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | QD 03 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 18/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | QD 03 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 18/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | QD 03 | INTEGRADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 18/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | QD 10 | INTEGRADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 18/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | QD 10 | INTEGRADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 18/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | QD 10 | INTEGRADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 18/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | QD 10 | INTEGRADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 18/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | QD 14 | INTEGRADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 18/06/2015
+CAMPO SINTETICO | SOBRADINHO | QD 14 | ISOLADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+CAMPO TERRA BATIDA | SOBRADINHO | QD 15 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 18/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | QD 15 | INTEGRADO | RUIM | — | não informada (valor-padrão de 1900 no cadastro) | 18/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | QD 15 | INTEGRADO | RUIM | — | não informada (valor-padrão de 1900 no cadastro) | 18/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | QD 15 | INTEGRADO | RUIM | — | não informada (valor-padrão de 1900 no cadastro) | 18/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | QD02 | INTEGRADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 18/06/2015
+QUADRA DE AREIA | SOBRADINHO | QD02 | INTEGRADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 18/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | QD16 | ISOLADO | RUIM | — | não informada (valor-padrão de 1900 no cadastro) | 18/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO | SETOR EXP ECO | ISOLADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO II | AR10 | ISOLADO | RUIM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+APARELHO DE GINASTICA | SOBRADINHO II | AR11 | INTEGRADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO II | AR11 | ISOLADO | RUIM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+CAMPO TERRA BATIDA | SOBRADINHO II | AR12 | ISOLADO | RUIM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+CAMPO TERRA BATIDA | SOBRADINHO II | AR12 | ISOLADO | RUIM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+CAMPO TERRA BATIDA | SOBRADINHO II | AR13 | ISOLADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO II | AR15 | INTEGRADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO II | AR18 | ISOLADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO II | AR19 | INTEGRADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO II | AR23 | ISOLADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO II | AR24 | ISOLADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO II | AR3 | INTEGRADO | RUIM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+APARELHO DE GINASTICA | SOBRADINHO II | AR3 | INTEGRADO | RUIM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+CAMPO SINTETICO | SOBRADINHO II | AR3 | INTEGRADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO II | BASEVI | ISOLADO | BOM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+QUADRA POLIESPORTIVA | SOBRADINHO II | VALE DAS ACÁCIAS QD 15 | ISOLADO | RUIM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+CAMPO TERRA BATIDA | SOBRADINHO II | VALE DAS ACÁCIAS QD 15 | INTEGRADO | RUIM | — | não informada (valor-padrão de 1900 no cadastro) | 17/06/2015
+CAMPO SINTETICO | SOL NASCENTE E POR DO SOL | AE1 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+QUADRA POLIESPORTIVA | SOL NASCENTE E POR DO SOL | AE1 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+QUADRA POLIESPORTIVA | SOL NASCENTE E POR DO SOL | Q 10 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+APARELHO DE GINASTICA | SOL NASCENTE E POR DO SOL | Q 10 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+QUADRA POLIESPORTIVA | SOL NASCENTE E POR DO SOL | Q 2 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+QUADRA POLIESPORTIVA | SOL NASCENTE E POR DO SOL | Q 4 | ISOLADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+APARELHO DE GINASTICA | SOL NASCENTE E POR DO SOL | Q 5 | INTEGRADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+QUADRA POLIESPORTIVA | SOL NASCENTE E POR DO SOL | Q 5 | INTEGRADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+APARELHO DE GINASTICA | SOL NASCENTE E POR DO SOL | Q 5 | INTEGRADO | RUIM | SIM | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+APARELHO DE GINASTICA | SOL NASCENTE E POR DO SOL | Q 6 | ISOLADO | RUIM | NAO | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+QUADRA POLIESPORTIVA | SOL NASCENTE E POR DO SOL | Q 9 | ISOLADO | BOM | SIM | não informada (valor-padrão de 1900 no cadastro) | 26/06/2015
+APARELHO DE GINASTICA | SUDOESTE/OCTOGONAL | PARQUE BOSQUE DO SUDOESTE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA DE AREIA | SUDOESTE/OCTOGONAL | PARQUE BOSQUE DO SUDOESTE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | SUDOESTE/OCTOGONAL | PARQUE BOSQUE DO SUDOESTE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | SUDOESTE/OCTOGONAL | PARQUE BOSQUE DO SUDOESTE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | SUDOESTE/OCTOGONAL | SHCAO 1 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | SUDOESTE/OCTOGONAL | SHCAO 1 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA DE AREIA | SUDOESTE/OCTOGONAL | SHCAO 2 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA DE TENIS | SUDOESTE/OCTOGONAL | SHCAO 2 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | SUDOESTE/OCTOGONAL | SHCAO 2 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | SUDOESTE/OCTOGONAL | SHCAO 4 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+APARELHO DE GINASTICA | SUDOESTE/OCTOGONAL | SHCAO 6 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA DE AREIA | SUDOESTE/OCTOGONAL | SHCAO 6 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | SUDOESTE/OCTOGONAL | SHCAO 6 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | SUDOESTE/OCTOGONAL | SHCAO 7 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | SUDOESTE/OCTOGONAL | SHCAO 7 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+APARELHO DE GINASTICA | SUDOESTE/OCTOGONAL | SHCAO 7 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | SUDOESTE/OCTOGONAL | SHCAO 8 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | SUDOESTE/OCTOGONAL | SHCAO 8 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+APARELHO DE GINASTICA | SUDOESTE/OCTOGONAL | SHCAO AE 3/8 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+SKATE PARK | SUDOESTE/OCTOGONAL | SHCAO AE 3/8 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+APARELHO DE GINASTICA | SUDOESTE/OCTOGONAL | SHCSW 1 BL B8 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | SUDOESTE/OCTOGONAL | SHCSW 100 BL A | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | SUDOESTE/OCTOGONAL | SHCSW 101 BL D | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | SUDOESTE/OCTOGONAL | SHCSW 102 BL B | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | SUDOESTE/OCTOGONAL | SHCSW 102 BL C | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | SUDOESTE/OCTOGONAL | SHCSW 103 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | SUDOESTE/OCTOGONAL | SHCSW 104 BL G | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA DE AREIA | SUDOESTE/OCTOGONAL | SHCSW 105 BL  A | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA DE AREIA | SUDOESTE/OCTOGONAL | SHCSW 105 BL E | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | SUDOESTE/OCTOGONAL | SHCSW 1BL B8 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+APARELHO DE GINASTICA | SUDOESTE/OCTOGONAL | SHCSW 300 BL J | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA DE AREIA | SUDOESTE/OCTOGONAL | SHCSW 301 BL J | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | SUDOESTE/OCTOGONAL | SHCSW 303 BL D | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+APARELHO DE GINASTICA | SUDOESTE/OCTOGONAL | SHCSW 303 BL D | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | SUDOESTE/OCTOGONAL | SHCSW 304 BL E | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA DE AREIA | SUDOESTE/OCTOGONAL | SHCSW 305 BL M | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA DE AREIA | SUDOESTE/OCTOGONAL | SHCSW 306 BL D | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | SUDOESTE/OCTOGONAL | SHCSW 504 BL G | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+APARELHO DE GINASTICA | SUDOESTE/OCTOGONAL | SHCSW CCSW 3 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 14/08/2015
+QUADRA POLIESPORTIVA | SÃO SEBASTIÃO | BAIRRO BELA VISTA RUA 1 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | SÃO SEBASTIÃO | BAIRRO BELA VISTA RUA DA CRUZ | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | SÃO SEBASTIÃO | BAIRRO BELA VISTA RUA DA CRUZ | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | SÃO SEBASTIÃO | BAIRRO SAO BARTOLOMEU  Q 2 CJ 6/7 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | SÃO SEBASTIÃO | BAIRRO SAO BARTOLOMEU Q 1 CJ 1 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | SÃO SEBASTIÃO | BAIRRO SAO BARTOLOMEU Q 1/2 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | SÃO SEBASTIÃO | BAIRRO SAO FRANCISCO RUA 22 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+CAMPO ILUMINADO | SÃO SEBASTIÃO | BAIRRO SAO FRANCISCO RUA 22 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | SÃO SEBASTIÃO | BAIRRO SAO FRANCISCO RUA 22 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | SÃO SEBASTIÃO | BAIRRO SAO JOSE RUA 22 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | SÃO SEBASTIÃO | BAIRRO SAO JOSE RUA 22 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA DE AREIA | SÃO SEBASTIÃO | BAIRRO SAO JOSE RUA 22 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | SÃO SEBASTIÃO | BAIRRO SAO JOSE RUA MARGINAL DO AGUDO | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA DE AREIA | SÃO SEBASTIÃO | BAIRRO SAO JOSE RUA MARGINAL DO AGUDO | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | SÃO SEBASTIÃO | BAIRRO TRADICIONAL RUA 24 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+CAMPO SINTETICO | SÃO SEBASTIÃO | CENTRO RUA 45 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | SÃO SEBASTIÃO | CENTRO RUA 71 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA DE AREIA | SÃO SEBASTIÃO | CENTRO RUA 76 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | SÃO SEBASTIÃO | CENTRO RUA 76 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | SÃO SEBASTIÃO | CONDOMINIO RESIDENCIAL VITORIA | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+CAMPO ILUMINADO | SÃO SEBASTIÃO | PARQUE ECOLOGICO SAO SABASTIAO | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA DE AREIA | SÃO SEBASTIÃO | PARQUE ECOLOGICO SAO SEBASTAO | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA DE AREIA | SÃO SEBASTIÃO | PARQUE ECOLOGICO SAO SEBASTIAO | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA DE AREIA | SÃO SEBASTIÃO | PARQUE ECOLOGICO SAO SEBASTIAO | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA DE AREIA | SÃO SEBASTIÃO | PARQUE ECOLOGICO SAO SEBASTIAO | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA DE AREIA | SÃO SEBASTIÃO | PARQUE ECOLOGICO SAO SEBASTIAO | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | SÃO SEBASTIÃO | PARQUE ECOLOGICO SAO SEBASTIAO | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+SKATE PARK | SÃO SEBASTIÃO | Q 02 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+CAMPO SINTETICO | SÃO SEBASTIÃO | Q 02 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | SÃO SEBASTIÃO | Q 02 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | SÃO SEBASTIÃO | Q 02 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | SÃO SEBASTIÃO | Q 101 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | SÃO SEBASTIÃO | Q 102 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | SÃO SEBASTIÃO | Q 104 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | SÃO SEBASTIÃO | Q 201 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | SÃO SEBASTIÃO | Q 202 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | SÃO SEBASTIÃO | Q 203 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | SÃO SEBASTIÃO | Q 203 CJ 16 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | SÃO SEBASTIÃO | Q 204 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA DE AREIA | SÃO SEBASTIÃO | Q 301 CJ 3 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | SÃO SEBASTIÃO | Q 305 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | SÃO SEBASTIÃO | Q 305 CJ 3 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | SÃO SEBASTIÃO | RUA CONTORNO DO PARQUE 23A/23B | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+APARELHO DE GINASTICA | SÃO SEBASTIÃO | RUA CONTORNO DOPPARQUE 23A/23B | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 27/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | BAIRRO AGUAS CLARAS_PARQUE URBANO | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+CAMPO SINTETICO | TAGUATINGA | BAIRRO AGUAS CLARAS_PARQUE URBANO | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | BAIRRO AGUAS CLARAS_PARQUE URBANO | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | CNB1/ QNB1 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | CNC 3/5 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | CNF 1/3 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | CNF 1/3 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | CNJ 7 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | CSD 2/4 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | EQNL 1/3 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | EQNL 10/12 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | EQNL 10/12 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | EQNL 13/15 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | EQNL 13/15 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | EQNL 13/15 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | EQNL 17/19 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | EQNL 17/19 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | EQNL 2/4 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | EQNL 21/23 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | EQNL 5/7 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | EQNL 5/7 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | EQNL 6/8 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | EQNL 9/11 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | EQNL 9/11 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | EQNM 36/38 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | EQNM 38/40 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | EQNM 38/40 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | PARQUE DO CORTADO | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | PARQUE ECOLOGICO SABURO ONOYAMA | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | PARQUE ECOLOGICO SABURO ONOYAMA | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | PRACA DO BICALHO | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | PRACA DO BICALHO | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | PRACA DO BICALHO | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | PRACA DO DI | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | PRACA DO DI | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNA 28 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | QNA 28 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNA 52 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | QNA 52 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+CAMPO ILUMINADO | TAGUATINGA | QNC C | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | QND 12 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QND 40/53 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QND 43 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNG  AE 14 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNG 12 AE | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNG 16/29 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNG 30/41 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | QNG 32/43 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNG 5/ CNG 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNG 5/ CNG 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | QNG 5/ CNG 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+CAMPO ILUMINADO | TAGUATINGA | QNG AE 17 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNH 03 AE | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | QNH 7/CNH 1 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNH 7/CNH 1 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNH 7/CNH 1 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | QNJ 43/QNL 12 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNJ 58 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | QNJ 58 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | QNJ AE 03 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | QNJ AE 03 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNJ AE 03 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNJ AE 09 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | QNJ AE 09 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNJ AE 14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+CAMPO SINTETICO | TAGUATINGA | QNJ AE 7 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | QNL 11/13 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNL 14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNL 16 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | QNL 16 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNL 16 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+SKATE PARK | TAGUATINGA | QNL 16 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | QNL 16/17 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | QNL 19/21 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNL 22 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNL 24 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | QNL 24 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | QNL 28 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNL 28 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNM 34 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNM 34 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNM 34/36 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNM 36 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | QNM 38 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | QNM 38 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNM 38 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNM 38 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | QNM 40/42 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QNM 42 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | QS 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | QS 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QS 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QS 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QS 5 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QS 5 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | QS 6/8 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+ANFITEATRO | TAGUATINGA | QS 6/8 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+SKATE PARK | TAGUATINGA | QS 6/8 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QS 6/8 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QS 7 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QS 7 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QS 9 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QSC 1 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QSD 33/45 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+CAMPO SINTETICO | TAGUATINGA | QSE 10 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QSE 18/ CSE 5 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+CAMPO ILUMINADO | TAGUATINGA | QSE 2 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | QSE 4/5 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QSE 4/6 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QSE 5/7 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QSE SETOR E | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QSE SETOR E | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QSE SETOR SUL | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QSF 03 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QSF 1 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QSF 11 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QSF 13 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | QSF 13 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | QSF 15 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QSF 15 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QSF 2 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QSF 9 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | QSF AE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | SMT CJ 10 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | SMT CJ 12 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | SMT CJ 17 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+CAMPO SINTETICO | TAGUATINGA | TAGUAPARQUE | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+SKATE PARK | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | TAGUATINGA | TAGUAPARQUE | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+APARELHO DE GINASTICA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA DE AREIA | TAGUATINGA | TAGUAPARQUE | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015
+QUADRA POLIESPORTIVA | ÁGUAS CLARAS | Q 104 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 03/08/2015
+APARELHO DE GINASTICA | ÁGUAS CLARAS | Q 107 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 03/08/2015
+SKATE PARK | ÁGUAS CLARAS | Q 107 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 03/08/2015
+QUADRA POLIESPORTIVA | ÁGUAS CLARAS | Q 107 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 03/08/2015
+QUADRA POLIESPORTIVA | ÁGUAS CLARAS | Q 202 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 03/08/2015
+QUADRA POLIESPORTIVA | ÁGUAS CLARAS | Q 210 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 03/08/2015
+APARELHO DE GINASTICA | ÁGUAS CLARAS | Q 301 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 03/08/2015
+QUADRA POLIESPORTIVA | ÁGUAS CLARAS | Q 301 | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 03/08/2015
+QUADRA POLIESPORTIVA | ÁGUAS CLARAS | RUA 19 SUL | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 03/08/2015
+QUADRA DE AREIA | ÁGUAS CLARAS | RUA 31 SUL | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 03/08/2015
+SKATE PARK | ÁGUAS CLARAS | RUA 37 SUL | INTEGRADO | BOM | NAO | não informada (valor-padrão de 1900 no cadastro) | 03/08/2015
