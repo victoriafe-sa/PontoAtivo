@@ -1,13 +1,16 @@
-TÍTULO: Parques Distritais e Ecológicos sob gestão do Brasília Ambiental - Brasília Ambiental - Brasília Ambiental
+TÍTULO: Parques Distritais e Ecológicos sob gestão do Brasília Ambiental
 ÓRGÃO: Brasília Ambiental (Ibram-DF)
 LINK: https://www.ibram.df.gov.br/parques-sob-gestao-do-ibram
-TEMA: Parques — lista e localização
+TEMA: Lista de parques distritais e ecológicos e sua localização (região administrativa)
 ABRANGÊNCIA: DF
+TIPO DE EVIDÊNCIA: Lista/inventário oficial (sem equipamentos esportivos)
+COMPROVA FUNCIONAMENTO ATUAL?: Não (descreve a situação na data da publicação)
+DATA DE PUBLICAÇÃO: 22/02/2018 (atualizada em outra data; ver texto)
 DATA DE COLETA: 2026-11-05
-ID NO CATÁLOGO: F056
-SITUAÇÃO: Aprovada (revisão assistida; sem leitura integral por pessoa)
-RESSALVAS: nenhuma
-AVISO: texto extraído e limpo automaticamente da fonte original (arquivo guardado em fontes_originais/). Confira no link antes de usar como informação oficial.
+ID: F056
+ESTADO DE VALIDAÇÃO: Pendente de validação humana (texto extraído automaticamente; cabeçalho x conteúdo x link conferidos por script em 2026-11-07)
+RESSALVAS: Não informa equipamentos esportivos, horários nem acessibilidade. Página viva criada em 2018 e atualizada em 06/07/2026.
+AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.
 ==============================================================================
 
 ### Parques Distritais e Ecológicos sob gestão do Brasília Ambiental
@@ -92,5 +95,3 @@ Parque Ecológico Cachoeirinha Parque Ecológico Cachoeirinha Paranoá
 Parque de Uso Múltiplo Metropolitano Ceilândia
 Confira a publicação Guia de Parques do Distrito Federal, que apresenta 33 dos 72 parques, considerados em condições de receber visitantes que buscam espaço para realizar atividades físicas, de lazer ou simplesmente contemplação da natureza. Bem ilustrado com fotos e mapas, seu objetivo é “fazer uma singela declaração de amor ao Cerrado, palco de belezas naturais únicas”.
 No DF, existem ainda dois Parques urbanos sob gerência especial de outras entidades do Governo: o Parque de Uso Múltiplo Taguaparque, pela Administração Regional de Taguatinga e o Parque Dona Sarah Kubitschek, pela Secretaria de Turismo.
-
-27642095

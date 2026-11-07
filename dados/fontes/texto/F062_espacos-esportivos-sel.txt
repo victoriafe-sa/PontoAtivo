@@ -1,13 +1,16 @@
-TÍTULO: Espaços Esportivos
-ÓRGÃO: SEL-DF
+TÍTULO: Espaços Esportivos (SEL)
+ÓRGÃO: Secretaria de Esporte e Lazer do DF (SEL-DF)
 LINK: https://www.esporte.df.gov.br/espacos-esportivos/
-TEMA: Lista de espaços esportivos e regras de reserva
+TEMA: Espaços esportivos administrados pela SEL e regras de reserva
 ABRANGÊNCIA: DF
+TIPO DE EVIDÊNCIA: Lista/inventário oficial (sem endereços)
+COMPROVA FUNCIONAMENTO ATUAL?: Não (descreve a situação na data da publicação)
+DATA DE PUBLICAÇÃO: 19/02/2025 (atualizada em outra data; ver texto)
 DATA DE COLETA: 2026-11-05
-ID NO CATÁLOGO: F062
-SITUAÇÃO: Aprovada (revisão assistida; sem leitura integral por pessoa)
-RESSALVAS: nenhuma
-AVISO: texto extraído e limpo automaticamente da fonte original (arquivo guardado em fontes_originais/). Confira no link antes de usar como informação oficial.
+ID: F062
+ESTADO DE VALIDAÇÃO: Pendente de validação humana (texto extraído automaticamente; cabeçalho x conteúdo x link conferidos por script em 2026-11-07)
+RESSALVAS: Lista os espaços, mas não traz endereços (ver F058–F061). Valores de locação estão na Portaria 264/2023, que não está neste pacote. Página atualizada em 16/04/2026.
+AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.
 ==============================================================================
 
 19/02/25 às 18h22 - Atualizado em 16/04/26 às 14h58
@@ -52,5 +55,3 @@ Outras informações relevantes 1. A reserva prévia do espaço será automatica
 
 Dúvidas Para esclarecimentos adicionais ou dúvidas sobre o processo de reserva de espaços esportivos, entre em contato através do e-mail: protocolo@esporte.df.gov.br
 Certifique-se de incluir todas as informações necessárias em seu pedido de reserva para agilizar o processo de análise.
-
-6149402

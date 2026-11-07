@@ -1,16 +1,17 @@
 TÍTULO: Governo do DF amplia acessibilidade e entrega novo PEC para os moradores de Ceilândia
-ÓRGÃO: Adm. Regional de Ceilândia
+ÓRGÃO: Administração Regional de Ceilândia (GDF)
 LINK: https://www.ceilandia.df.gov.br/w/governo-do-df-amplia-acessibilidade-e-entrega-novo-pec-para-os-moradores-de-ceilandia
-TEMA: PEC — localização e acessibilidade
+TEMA: PEC na quadra 9/11 e calçadas acessíveis (EQNO 11/13)
 ABRANGÊNCIA: Ceilândia
+TIPO DE EVIDÊNCIA: Notícia: entrega/instalação concluída (publicada em 29/05/2025)
+COMPROVA FUNCIONAMENTO ATUAL?: Não (descreve a situação na data da publicação)
+DATA DE PUBLICAÇÃO: 29/05/2025
 DATA DE COLETA: 2026-11-05
-ID NO CATÁLOGO: F066
-SITUAÇÃO: Aprovada (revisão assistida; sem leitura integral por pessoa)
-RESSALVAS: nenhuma
-AVISO: texto extraído e limpo automaticamente da fonte original (arquivo guardado em fontes_originais/). Confira no link antes de usar como informação oficial.
+ID: F066
+ESTADO DE VALIDAÇÃO: Pendente de validação humana (texto extraído automaticamente; cabeçalho x conteúdo x link conferidos por script em 2026-11-07)
+RESSALVAS: A acessibilidade citada é a das calçadas (piso tátil, rebaixamento de meio-fio), não do PEC. Também descreve obras em andamento (quadras 18/19 e 8).
+AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.
 ==============================================================================
-
-### Noticia Aberta
 
 29/05/2025 às 17h04 - Atualizado em 26/10/2026 às 01h18
 
@@ -28,5 +29,3 @@ Melhorias
 Atualmente, a administração também realiza obras nas quadras 18/19 e na quadra 8. Na semana anterior, foi concluída a calçada do colégio 12 na EQNM 6/8, em Ceilândia Norte, localizado logo abaixo do parque, por demanda da comunidade. A prioridade da gestão é atender áreas com equipamentos públicos, como escolas e unidades de saúde.
 Além dessas frentes, está prevista a calçada da entrada do colégio 22 na EQNN 8/4, em Ceilândia Sul, e a revitalização da região central de Ceilândia, próxima à Feira do Rolo e ao restaurante comunitário. Uma parte da intervenção está sendo executada por empresa contratada, e a outra ficará sob responsabilidade da administração, em parceria com a Novacap.
 Cerca de 4 km de calçada foram recentemente finalizados no entorno do Parque Urbano de Ceilândia, inaugurado em abril de 2025 com a presença do governador Ibaneis Rocha. O espaço conta com gradil em todo o perímetro, quadra de areia, campo sintético, playgrounds, duchas, parcão (área para cachorros), mesas com bancos, banheiros e academia ao ar livre. Tudo isso em uma área de 103 mil metros quadrados, dividida em três zonas.
-
-Maria da Penha ONLINE

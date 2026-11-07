@@ -1,0 +1,133 @@
+TÍTULO: Campos e Quadras Poliesportivas (cadastro oficial SEDUH-DF)
+ÓRGÃO: Secretaria de Desenvolvimento Urbano e Habitação do DF (SEDUH-DF), DIGEO/COSIT/UNTEC; camada na IDE-DF
+LINK: https://metadados.seduh.df.gov.br/geonetwork/srv/por/catalog.search#/metadata/22fe3be6-795b-458a-abc6-14c024d04ab8
+TEMA: Cadastro de campos e quadras poliesportivas (9.904 polígonos): situação física oficial, fonte e precisão; registros com nome
+ABRANGÊNCIA: DF
+TIPO DE EVIDÊNCIA: Cadastro oficial georreferenciado (extrato: registros com nome)
+COMPROVA FUNCIONAMENTO ATUAL?: Não (situação 'construído' é cadastral, 2016/2023)
+DATA DE PUBLICAÇÃO: metadado atualizado em 2024-01-24
+DATA DE COLETA: 2026-11-07
+ID: R04
+ESTADO DE VALIDAÇÃO: Pendente de validação humana (texto extraído automaticamente; cabeçalho x conteúdo x link conferidos por script em 2026-11-07)
+RESSALVAS: A camada não tem campo de endereço e só cerca de 1% dos registros tem nome. Base de 2016 (restituição), com inclusões a partir de 2021 sem precisão cartográfica. O tipo (cq_tipo) não tem dicionário.
+AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.
+==============================================================================
+
+CAMPOS E QUADRAS POLIESPORTIVAS
+
+Registro de metadados oficial (SEDUH-DF): https://metadados.seduh.df.gov.br/geonetwork/srv/por/catalog.search#/metadata/22fe3be6-795b-458a-abc6-14c024d04ab8
+Camada consultada (serviço público da IDE-DF): https://www.geoservicos.ide.df.gov.br/arcgis/rest/services/Publico/IDEDF/MapServer/2
+Total de registros na camada na data da coleta: 9904
+Custódia: não informado
+Situação declarada do metadado: onGoing | Metadado atualizado em: 2024-01-24
+
+RESUMO (texto oficial do metadado):
+Mapa que identifica a localização dos campos e quadras poliesportivas no Distrito Federal. A base inicial foi elaborada com base na restituição fotogramétrica de 2016, com escala de levantamento compatível com 1:500 classificado como PEC A, precisão digital de até 19 cm planimetria e 28 cm altimetria. A restituição realizada em 2016 foi uma parceria da Companhia Imobiliária de Brasília (Terracap) com a Secretaria de Desenvolvimento Urbano e Habitação (SEDUH). A partir de 2021, as novas quadras e campos identificados em imagens de sensoriamento remoto ou de VANT estão sendo inseridos nessa camada com indicador de ausência de precisão cartográfica para dados cadastrais, quando for o caso. Nessa camada e possível obter informações relacionadas ao tipo de campos e quadras, precisão cartográfica, código identificador único (CIU), nome, situação e área. Os registros foram mantidos nulos para o caso em que não foi possível identificar a informação ou quando a informação não era compatível com o tipo de dado da estrutura. Essa camada pode ser relacionada com os lotes implantados ou registrado usando o Código Identificador Único (CIU). Em caso de dúvidas, entrar em contato com a diretoria Diretoria de Geoinformações Urbanas e Territoriais (DIGEO/COSIT/UNTEC/SEDUH).
+
+FINALIDADE (texto oficial):
+Identificar a localização dos campos e quadras poliesportivas no Distrito Federal.
+
+LIMITAÇÃO DE USO (texto oficial):
+As feições que não puderam ser restituídas ou não existiam em 2016 que foram vetorizados e, neste caso, o atributo "ORIGEM" especifica a origem do vetor. Excepcionalmente nesses casos, os campos e quadras advindos de IMAGEM, PROJETOS E OUTROS, não possuem precisão cartográfica.
+
+LINHAGEM (texto oficial):
+Localização dos campos e quadras poliesportivas no Distrito Federal e suas dimensões territoriais com base na restituição fotogramétrica de 2016, com escala de levantamento compatível com 1:500. Classificado como PEC A, precisão digital de até 19 cm planimetria e 28 cm altimetria. A partir de 2021, as novas quadras e campos identificados em imagens de sensoriamento remoto ou de VANT vão ser inseridos por meio de vetorização nessa camada com indicador de ausência de precisão cartográfica para dados cadastrais.
+
+ALERTA OFICIAL DA SEDUH: alguns locais do cadastro podem constar de projetos urbanísticos sem terem sido implantados. Estar listado neste cadastro NÃO comprova que o espaço exista, esteja aberto ou funcione. Antes de afirmar disponibilidade, é preciso preservar e consultar a situação física e operacional de cada registro.
+
+COMPLETUDE DOS CAMPOS (calculada na coleta):
+- nome: 82 de 9904 (1%)
+- código identificador único (CIU): 7722 de 9904 (78%)
+- endereço: a camada NÃO possui campo de endereço.
+
+SITUAÇÃO (domínio oficial 'ctm_sit_fisica' declarado pela própria camada): CONSTRUÍDO: 9704, ABANDONADO: 168, DESCONHECIDO: 9, EM CONSTRUÇÃO: 9, DESTRUÍDO: 9, NÃO APLICÁVEL: 2, CONSTRUÍDO, MAS EM OBRAS: 2, cód. 55 (fora do domínio): 1
+FONTE DA POLIGONAL (domínio oficial 'ctm_origem'): RESTITUIÇÃO DO ANO DE 2016: 7561, RESTITUIÇÃO DO ANO DE 2023: 2340, AEROLEVANTAMENTO: 3
+TIPO (cq_tipo): a camada não declara dicionário; distribuição dos códigos, sem tradução: 5: 5076, 7: 2832, 9: 641, 10: 477, 0: 395, 12: 234, 2: 210, 6: 32, 1: 3, 99: 2, 8: 1, 9999: 1
+
+'CONSTRUÍDO' é a situação física cadastral na data do levantamento (restituição de 2016, ou de 2023 quando a fonte indica) e não equivale a espaço aberto ao público ou em uso.
+
+REGISTROS COM NOME PREENCHIDO (82 de 9904). Os demais não têm nome nem endereço.
+Colunas: nome | situação (domínio oficial) | tipo(código) | CIU | área (m²) | fonte da poligonal | geometria aproximada
+
+13º GRUPAMENTO DE BOMBEIROS MILITAR | CONSTRUÍDO | 7 | 136III2B0228 | 731 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CAIC | CONSTRUÍDO | 7 | 0056IV5A0124 | 1094 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CAIC | CONSTRUÍDO | 7 | 0171IV1D0300 | 1070 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CAIC | CONSTRUÍDO | 7 | 0081II5A0049 | 1062 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CAIC - JULIA KUBITSCHEK DE OLIVEIRA | CONSTRUÍDO | 7 | 0070II5D0668 | 1123 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CAIC AYRTON SENNA | CONSTRUÍDO | 7 | 00166I5A0123 | 927 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CAIC HELENA REIS | CONSTRUÍDO | 7 | 00166I2B0019 | 945 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CAIC PROFESSOR ANÍSIO TEIXEIRA | CONSTRUÍDO | 7 | 0133II3D0319 | 868 | RESTITUIÇÃO DO ANO DE 2016 | SIM
+CAIC PROFESSOR WALTER JOSÉ DE MOURA | CONSTRUÍDO | 7 | 0151IV1C0061 | 918 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CAIC SANTA MARIA | CONSTRUÍDO | 12 | 00216I1C0250 | 644 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CAIC SANTA PAULINA ENSINO FUNDAMENTAL E INFANTIL | CONSTRUÍDO | 7 | 122III3D0221 | 967 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CEF 01 DO PARANOÁ | CONSTRUÍDO | 7 | 122III3D0287 | 708 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CEF 01 LAGO NORTE | CONSTRUÍDO | 7 | 104III1A0124 | 594 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CEF 02 DO GUARÁ/ CED 02 DO GUARÁ | CONSTRUÍDO | 7 | 136III2D0163 | 608 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CEF 14 DE TAGUATINGA | CONSTRUÍDO | 7 | 0134IV3D0038 | 509 | RESTITUIÇÃO DO ANO DE 2016 | SIM
+CEF 16 | CONSTRUÍDO | 7 | 0134IV4A0691 | 605 | RESTITUIÇÃO DO ANO DE 2016 | SIM
+CEF 206 | CONSTRUÍDO | 7 | 0166IV3C0057 | 717 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CEF 4 | CONSTRUÍDO | 7 | 134III6D0487 | 643 | RESTITUIÇÃO DO ANO DE 2016 | SIM
+CEF 405 | CONSTRUÍDO | 7 | 0166IV6D0761 | 437 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO DE EDUCAÇÃO PROFISSIONAL SAÚDE | CONSTRUÍDO | 7 | 0056IV4C0068 | 607 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO DE ENSINO DE FUNDAMENTAL 115 | CONSTRUÍDO | 7 | 00182I2D0141 | 687 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO DE ENSINO ESPECIAL 01 | CONSTRUÍDO | 7 | 00166I3D0368 | 728 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO DE ENSINO ESPECIAL 01 DO GUARÁ | CONSTRUÍDO | 7 | 136III2C0196 | 666 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO DE ENSINO ESPECIAL DE BRAZLÂNDIA | CONSTRUÍDO | 7 | 0081II6B0075 | 189 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO DE ENSINO FUNDAMENTAL 04 DO GUARÁ I | CONSTRUÍDO | 7 | 136III2C0165 | 708 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO DE ENSINO FUNDAMENTAL 1 DE BRAZLÂNDIA | CONSTRUÍDO | 7 | 0081II2B0660 | 701 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO DE ENSINO FUNDAMENTAL 2 DE BRAZLÂNDIA | CONSTRUÍDO | 7 | 0081II3A0022 | 810 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO DE ENSINO FUNDAMENTAL 301 | CONSTRUÍDO | 7 | 0166IV4B0125 | 671 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO DE ENSINO FUNDAMENTAL 304 | CONSTRUÍDO | 7 | 0166II2A0251 | 1963 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO DE ENSINO FUNDAMENTAL 306 | CONSTRUÍDO | 7 | 00182I3B0295 | 676 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO DE ENSINO FUNDAMENTAL 308 | CONSTRUÍDO | 12 | 0215IV1D0220 | 642 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO DE ENSINO FUNDAMENTAL 4 DE SOBRADINHO | CONSTRUÍDO | 7 | 0071IV1A0203 | 671 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO DE ENSINO FUNDAMENTAL 511 | CONSTRUÍDO | 7 | 00182I5D0261 | 716 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO DE ENSINO FUNDAMENTAL 602 | CONSTRUÍDO | 7 | 167III4D0080 | 674 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO DE ENSINO FUNDAMENTAL 7 DE SOBRADINHO | CONSTRUÍDO | 7 | 0070II5D0505 | 708 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO DE ENSINO FUNDAMENTAL BOSQUE | CONSTRUÍDO | 7 | 0171IV3C0611 | 710 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO DE ENSINO MÉDIO 1 DE BRAZLÂNDIA | CONSTRUÍDO | 7 | 0081IV3A0078 | 591 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO DE ENSINO MÉDIO 414 | CONSTRUÍDO | 7 | 0150IV3A0228 | 1784 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO DE ENSINO SANTA RITA DE CÁSSIA | CONSTRUÍDO | 7 | 00071I4D0157 | 430 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO EDUCACIONAL 01 (CENTRÃO) | CONSTRUÍDO | 7 | 0056IV4C0066 | 616 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO EDUCACIONAL 01 DO GUARÁ | CONSTRUÍDO | 7 | 0152II1C0056 | 605 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO EDUCACIONAL 03 | CONSTRUÍDO | 7 | 0056II4D0864 | 821 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO EDUCACIONAL 03 DE SOBRADINHO | CONSTRUÍDO | 7 | 071III1A0222 | 663 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO EDUCACIONAL 123 | CONSTRUÍDO | 7 | 00166I4C0339 | 1797 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO EDUCACIONAL 2 DE BRAZLÂNDIA | CONSTRUÍDO | 7 | 0081II5B0151 | 1288 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO EDUCACIONAL 3 DE BRAZLÂNDIA | CONSTRUÍDO | 7 | 0064IV6C0592 | 760 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO EDUCACIONAL DELTA | CONSTRUÍDO | 7 | 0056IV1D0059 | 603 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO EDUCAIONAL 15 DE CEILÂNDIA | CONSTRUÍDO | 7 | 0133II2D0113 | 712 | RESTITUIÇÃO DO ANO DE 2016 | SIM
+CENTRO INTERESCOLAR DE LÍNGUAS DO GUARÁ/ CENTRO DE ENSINO FUNDAMENTAL 02 | CONSTRUÍDO | 7 | 136III3A0407 | 711 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+CENTRO OLÍMPICO | CONSTRUÍDO | 7 | 0064IV6C0049 | 1598 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+COLEGIO VITORIA | CONSTRUÍDO | 7 | 00216I5A0736 | 404 | RESTITUIÇÃO DO ANO DE 2016 | SIM
+COLÉGIO ALENCAR | CONSTRUÍDO | 7 | 00150I5A0396 | 576 | RESTITUIÇÃO DO ANO DE 2016 | SIM
+COLÉGIO ALUB - UNIDADE GUARÁ | CONSTRUÍDO | 7 | 136III2A0386 | 398 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+COLÉGIO INTEGRADO POLIVALENTE | CONSTRUÍDO | 7 | 00216I5A0701 | 435 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+COLÉGIO JESUS MARIA E JOSÉ | CONSTRUÍDO | 7 | 0134II5B0075 | 1688 | RESTITUIÇÃO DO ANO DE 2016 | SIM
+COLÉGIO LÁ SALLE | CONSTRUÍDO | 7 | 071III3D0006 | 1404 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+COLÉGIO MAXWELL | CONSTRUÍDO | 7 | 136III3C0471 | 1723 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+COLÉGIO TIRADENTES | CONSTRUÍDO | 7 | 00150I5A0772 | 698 | RESTITUIÇÃO DO ANO DE 2016 | SIM
+EC 09 DE BRAZLÂNDIA | CONSTRUÍDO | 7 | 0064IV6B0225 | 699 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+ESCOLA ADVENTISTA | CONSTRUÍDO | 7 | 136III6C0575 | 674 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+ESCOLA BEM TE VI | CONSTRUÍDO | 7 | 00071I5C0250 | 403 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+ESCOLA CLASSE 04 | CONSTRUÍDO | 7 | 0056IV4D0486 | 528 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+ESCOLA CLASSE 108 DE SAMAMBAIA | CONSTRUÍDO | 7 | 0150IV5D0060 | 1031 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+ESCOLA CLASSE 121 | CONSTRUÍDO | 7 | 00166I4C0316 | 1200 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+ESCOLA CLASSE 15 DE CEILÂNDIA | CONSTRUÍDO | 7 | 00150I3A0331 | 580 | RESTITUIÇÃO DO ANO DE 2016 | SIM
+ESCOLA CLASSE 2 RIACHO FUNDO II | CONSTRUÍDO | 7 | 167III2A0283 | 387 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+ESCOLA CLASSE 215 SANTA MARIA | CONSTRUÍDO | 12 | 00216I1C0752 | 349 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+ESCOLA CLASSE 50 | CONSTRUÍDO | 7 | 0134IV5D0280 | 523 | RESTITUIÇÃO DO ANO DE 2016 | SIM
+ESCOLA CLASSE 502 | CONSTRUÍDO | 7 | 0166II1D0014 | 1031 | RESTITUIÇÃO DO ANO DE 2016 | SIM
+GINÁSIO DE ESPORTES DO NÚCLEO BANDEIRANTE | CONSTRUÍDO | 7 | 0152IV4C0034 | 612 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+GINÁSIO DO CENTRO EDUCATIVO PASSIONISTA | CONSTRUÍDO | 0 | 0167II2A0165 | 1306 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+IESE - QUADRA ESPORTIVA BEATA MARIA CRUCIFIXA CURCIO | CONSTRUÍDO | 7 | 00071I6C0274 | 698 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+INSTITUTO DE EDUCAÇÃO FÊNIX | CONSTRUÍDO | 7 | 0116IV6D0893 | 484 | RESTITUIÇÃO DO ANO DE 2016 | SIM
+INSTITUTO EDUCACIONAL SANTO ELIAS | CONSTRUÍDO | 7 | 00071I6C0252 | 504 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+INSTITUTO SÃO JOSÉ CIANSP | CONSTRUÍDO | 7 | 071III2C0173 | 2426 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+J | CONSTRUÍDO | 5 | 00154I1C0032 | 336 | RESTITUIÇÃO DO ANO DE 2016 | SIM
+MONT BLANC CENTRO EDUCACIONAL_CAMBRIDGE | CONSTRUÍDO | 7 | 00071I6C0247 | 580 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+PROJEÇÃO COLÉGIO E FACULDADE | CONSTRUÍDO | 7 | 071III3B0206 | 551 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+QUADRA COBERTA | CONSTRUÍDO | 7 | — | 713 | RESTITUIÇÃO DO ANO DE 2016 | SIM
+QUADRA DE ESPOTES | CONSTRUÍDO | 7 | — | 667 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+SESC | CONSTRUÍDO | 5 | 0166II1A0125 | 1113 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
+TONY MATOS_QUADRA DE ESPORTES | CONSTRUÍDO | 5 | 071III4C0003 | 3108 | RESTITUIÇÃO DO ANO DE 2016 | NÃO
