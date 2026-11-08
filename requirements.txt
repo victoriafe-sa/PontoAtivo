@@ -1,0 +1,4 @@
+# Para instalar o torch só para CPU (bem menor), rode antes:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch>=2.0
+sentence-transformers>=3.0
