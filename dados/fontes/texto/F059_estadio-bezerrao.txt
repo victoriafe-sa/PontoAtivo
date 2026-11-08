@@ -1,0 +1,27 @@
+TÍTULO: Estádio Bezerrão
+ÓRGÃO: Secretaria de Esporte e Lazer do DF (SEL-DF)
+LINK: https://www.esporte.df.gov.br/estadio-bezerrao
+TEMA: Estádio: região, inauguração, capacidade e endereço
+ABRANGÊNCIA: Gama
+TIPO DE EVIDÊNCIA: Informativo institucional do espaço
+COMPROVA FUNCIONAMENTO ATUAL?: Não (descreve a situação na data da publicação)
+DATA DE PUBLICAÇÃO: 17/02/2025 (atualizada em outra data; ver texto)
+DATA DE COLETA: 2026-11-05
+ID: F059
+ESTADO DE VALIDAÇÃO: Pendente de validação humana (texto extraído automaticamente; cabeçalho x conteúdo x link conferidos por script em 2026-11-07)
+RESSALVAS: Página curta (cerca de 500 caracteres); capacidade 'estimada' segundo a página.
+AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.
+==============================================================================
+
+### Estádio Popularmente Conhecido Como “bezerrão”
+
+17/02/25 às 15h59 - Atualizado em 20/02/26 às 16h13
+
+## Estádio popularmente conhecido como “Bezerrão”
+
+Estádio Bezerrão:
+REGÃO: GAMA
+Inaugurado em 1977, o espaço passou por uma grande reforma há 15 anos para sediar partidas de futebol profissional. Foi palco do amistoso entre Brasil e Portugal na reinauguração em 2008, com a presença do jogador Cristiano Ronaldo, e da Copa do Mundo Fifa Sub-17, em 2019, capacidade atual estimada para 20.310 espectadores.
+
+Endereço
+St. Central – Gama, Brasília – DF, 72405-610
