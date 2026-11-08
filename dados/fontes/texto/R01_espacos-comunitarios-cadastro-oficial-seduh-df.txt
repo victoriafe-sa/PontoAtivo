@@ -1,0 +1,293 @@
+TÍTULO: Espaços comunitários (cadastro oficial SEDUH-DF)
+ÓRGÃO: Secretaria de Desenvolvimento Urbano e Habitação do DF (SEDUH-DF), DIGEO/COSIT/UNTEC; camada na IDE-DF
+LINK: https://metadados.seduh.df.gov.br/geonetwork/srv/por/catalog.search#/metadata/821defc2-fb03-4d40-a0b6-110e0e76d383
+TEMA: Cadastro de praças, quadras, campos, áreas verdes e pontos de encontro comunitário, com situação física e operacional
+ABRANGÊNCIA: DF
+TIPO DE EVIDÊNCIA: Cadastro oficial georreferenciado (extrato dos registros com nome ou endereço)
+COMPROVA FUNCIONAMENTO ATUAL?: Não (cadastro; consta de projetos urbanísticos sem garantia de implantação)
+DATA DE PUBLICAÇÃO: metadado atualizado em 2023-04-19
+DATA DE COLETA: 2026-11-07
+ID: R01
+ESTADO DE VALIDAÇÃO: Pendente de validação humana (texto extraído automaticamente; cabeçalho x conteúdo x link conferidos por script em 2026-11-07)
+RESSALVAS: Só cerca de 7% dos registros têm nome e 10% têm endereço; a maioria foi atualizada em 2016. Os códigos de situação física/operacional não têm dicionário na camada e foram mantidos como códigos. O alerta oficial da SEDUH sobre locais de projeto não implantados está no texto.
+AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.
+==============================================================================
+
+ESPAÇOS COMUNITÁRIOS
+
+Registro de metadados oficial (SEDUH-DF): https://metadados.seduh.df.gov.br/geonetwork/srv/por/catalog.search#/metadata/821defc2-fb03-4d40-a0b6-110e0e76d383
+Camada consultada (serviço público da IDE-DF): https://www.geoservicos.ide.df.gov.br/arcgis/rest/services/Publico/EQUIPAMENTOS_URBANOS/MapServer/2
+Total de registros na camada na data da coleta: 2431
+Custódia: Diretoria de Geoinformações Urbanas e Territoriais (DIGEO/COSIT/UNTEC)
+Situação declarada do metadado: onGoing | Metadado atualizado em: 2023-04-19
+
+RESUMO (texto oficial do metadado):
+Plano de informação criado pela Diretoria de Geoinformações Urbanas e Territoriais (DIGEO/COSIT/UNTEC) da Secretaria de Desenvolvimento Urbano e Habitação (SEDUH) para armazenar informações referentes aos espaços comunitários do Distrito Federal. São considerados espaços comunitários, quadras, campos, áreas verdes, pontos de encontro comunitário e praças. A camada tem uma atualização continua tendo como base os dados da restituição e atualizada a partir da vetorização sobre imagens de aerolevantamento e sensoriamento remoto disponíveis e projetos urbanísticos. A camada traz informações como tipo, nome, endereço, nome do projeto que aparece se for o caso, a origem da geometria, se se encontra operacional, a situação física e o ano da informação que o polígono foi atualizado. Nos casos em que a geometria tem como origem o projeto urbanístico, verificar a situação física para saber se o espaço comunitário está ou não implantado. Nem sempre os espaços comunitários previstos nos projetos urbanísticos estão listados no quadro demonstrativo dos projetos.
+
+FINALIDADE (texto oficial):
+Indicar a informações e geometrias dos espaços comunitários do Distrito Federal.
+
+LIMITAÇÃO DE USO (texto oficial):
+Nos casos em que a geometria tem como origem o projeto urbanístico, verificar a situação física para saber se o espaço comunitário está ou não implantado. Nem sempre as poligonais indicados nessa camada correspondem a praças que constam no quadro demonstrativo, ou seja, são somente indicativas. Quando a origem for projeto urbanístico, vale o que constar no projeto.
+
+LINHAGEM (texto oficial):
+Vetorizado manualmente quando a origem é projeto urbanístico.
+
+ALERTA OFICIAL DA SEDUH: alguns locais do cadastro podem constar de projetos urbanísticos sem terem sido implantados. Estar listado neste cadastro NÃO comprova que o espaço exista, esteja aberto ou funcione. Antes de afirmar disponibilidade, é preciso preservar e consultar a situação física e operacional de cada registro.
+
+COMPLETUDE DOS CAMPOS (calculada na coleta):
+- nome: 170 de 2431 (7%)
+- endereço: 234 de 2431 (10%)
+- nome do projeto: 263 de 2431 (11%)
+- ano da informação: 2415 de 2431 (99%)
+
+DISTRIBUIÇÃO DOS CÓDIGOS (a camada não declara dicionário de domínio para estes campos; os números NÃO foram traduzidos):
+- ec_sit_fisica (situação física; o metadado manda consultá-la para saber se o espaço está implantado): 2: 2157, 1: 112, 9: 56, 8: 27, 0: 23, (vazio): 23, 4: 19, 7: 8, 6: 5, 5: 1
+- ec_operacional (o metadado diz que a camada informa se o espaço 'se encontra operacional'; sem dicionário dos valores): 1: 2246, 0: 156, (vazio): 29
+- ec_prev_projeto (campo ligado a projeto urbanístico; significado dos valores não documentado): (vazio): 2159, 1: 262, 0: 10
+- ec_origem (origem da geometria): 1: 2154, 2: 226, 7: 23, 5: 21, (vazio): 4, 0: 2, 4: 1
+- ec_ano (ano da informação): 2016: 2185, 2009: 53, 2018: 42, 2021: 24, (vazio): 16, 2001: 16, 2025: 14, 2020: 13, 1999: 13, 2022: 12, 2024: 12, 2000: 11, 2023: 8, 2014: 4, 2017: 4, 1993: 2, 2026: 2
+
+REGISTROS COM NOME OU ENDEREÇO PREENCHIDO (240 de 2431). Os demais registros não têm nome nem endereço e não podem ser localizados por texto.
+Colunas: tipo(código) | nome | endereço | projeto | prev_projeto | origem | operacional | sit_fisica | ano
+
+1 | PRAÇA AV MORRO AZUL/ RUA PARQUE | AV MORRO AZUL/ RUA PARQUE | URB_019/2014 | 1 | 2 | 0 | 9 | 2014
+1 | PRAÇA  BAIRRO CENTRO DE MULTIPLAS ATIVIDADES AV COMERCIAL AE 6/7 | BAIRRO CENTRO DE MULTIPLAS ATIVIDADES AV COMERCIAL AE 6/7 | URB 114/2009 | 1 | 2 | 0 | 8 | 2009
+1 | PRAÇA BAIRRO RESIDENCIAL OESTE QD 201 CJ  8 | BAIRRO RESIDENCIAL OESTE QD 201 CJ 8 | URB 114/2009 | 1 | 2 | 0 | 1 | 2009
+1 | PRAÇA  BAIRRO SÃO BARTOLOMEU QD 02 AV COMERCIAL | BAIRRO SÃO BARTOLOMEU QD 02 AV COMERCIAL | URB 114/2009 | 1 | 2 | 0 | 9 | 2009
+1 | PRAÇA QD 303 | QD 305 CJ 5 | URB 114/2009 | 1 | 2 | 0 | 1 | 2009
+1 | PRAÇA RUA DO PARQUE/ RUA 4 | RUA DO PARQUE/ RUA 4 | URB_019/2014 | 1 | 2 | 0 | 9 | 2014
+15 | ETE | SETOR HABITACIONAL ARAPOANGA - ETAPA 3 QUADRA Q 10 | URB 144/2009 | 1 | 2 | 0 | 0 | 2022
+15 | BACIA | SETOR HABITACIONAL ARAPOANGA - ETAPA 3 QUADRA Q 10 | URB 144/2009 | 1 | 2 | 0 | 0 | 2022
+16 | — | SETOR HABITACIONAL ARAPOANGA - ETAPA 3 QUADRA Q 10 | URB 144/2009 | 1 | 2 | 0 | 0 | 2022
+16 | — | SETOR HABITACIONAL ARAPOANGA - ETAPA 3 QUADRA Q 11 | URB 144/2009 | 1 | 2 | 0 | 0 | 2022
+1 | — | ADE ÁGUAS CLARAS CJ 13 | URB 122/1997 | 1 | 7 | 1 | 9 | 2018
+1 | — | ADE ÁGUAS CLARAS CJ 14 | URB 122/1997 | 1 | 5 | 1 | 9 | 2018
+1 | — | ADE ÁGUAS CLARAS CJ 8 | URB 122/1997 | 1 | 7 | 1 | 9 | 2018
+1 | — | ADE ÁGUAS CLARAS CJ 9 | URB 122/1997 | 1 | 7 | 1 | 9 | 2018
+1 | PRAÇA  AV CRIXÁ/ RUA 1 | AV CRIXÁ/ RUA 1 | URB 019/2014 | 1 | 2 | 0 | 9 | 2014
+1 | PRAÇA  AV CRIXÁ/ RUA 2 | AV CRIXÁ/ RUA 2 | URB 019/2014 | 1 | 2 | 0 | 1 | 2014
+1 | PRAÇA AVENIDA EUCALIPTOS/COMERCIAL | AVENIDA EUCALIPTOS/COMERCIAL | URB 114/2009 | 1 | 2 | 0 | 9 | 2009
+13 | — | BAIRRO AGUAS CLARAS QS 6 | URB 42/1990 | 1 | 7 | 0 | 8 | 2018
+1 | PRAÇA BAIRRO CENTRO DE MULTIPLAS ATIVIDADES  AE 9 | BAIRRO CENTRO DE MULTIPLAS ATIVIDADES  AE 9 | URB 120/2020 | 1 | 2 | — | — | 2025
+1 | PRAÇA  BAIRRO CENTRO RUA 45/ RUA DA GAMELEIRA | BAIRRO CENTRO RUA 45/ RUA DA GAMELEIRA | URB 114/2009 | 1 | 2 | 1 | 8 | 2009
+1 | PRAÇA  RUA DO CAIC/AV COMERCIAL | BAIRRO CENTRO RUA DO CAIC/ AV COMERCIAL | URB 114/2009 | 1 | 2 | 0 | 8 | 2009
+1 | PRAÇA AVENIDA MORRO AZUL | BAIRRO MORRO AZUL AV MORRO AZUL RUA 01/08 | URB 114/2009 | 1 | 2 | 1 | 2 | 2009
+1 | PRAÇA  BAIRRO MORRO AZUL QD 1 CJ 1/15 | BAIRRO MORRO AZUL QD 1 CJ 1/15 | URB 114/2009 | 1 | 2 | 1 | 2 | 2009
+1 | PRAÇA BAIRRO MORRO AZUL | BAIRRO MORRO AZUL RUA 08/SERRA ZUL | URB 114/2009 | 1 | 2 | 0 | 8 | 2009
+1 | PRAÇA BAIRRO RESIDENCIAL OESTE QD 101 | BAIRRO RESIDENCIAL OESTE QD 101 AE 6/7 | URB 114/2009 | 1 | 2 | 1 | 2 | 2009
+1 | PRAÇA BAIRRO RESIDENCIAL OESTE QD 101 | BAIRRO RESIDENCIAL OESTE QD 101 CJ 2 | URB 144/2009 | 1 | 2 | 1 | 2 | 2009
+1 | PRAÇA LINEAR 03 SETOR A | BAIRRO RESIDENCIAL OESTE QD 102 SETOR A | URB 114/2009 | 1 | 2 | 1 | 2 | 2009
+1 | PRAÇA LINEAR 03 SETOR B | BAIRRO RESIDENCIAL OESTE QD 102 SETOR B | URB 114/2009 | 1 | 2 | 0 | 8 | 2009
+1 | PRAÇA LINEAR 03 SETOR C | BAIRRO RESIDENCIAL OESTE QD 102 SETOR C | URB 114/2009 | 1 | 2 | 1 | 2 | 2009
+1 | PRAÇA  BAIRRO RESIDENCIAL OESTE | BAIRRO RESIDENCIAL OESTE QD 103  CJ 3/8 | URB 114/2009 | 1 | 2 | 0 | 1 | 2009
+1 | PRAÇA LINEAR BAIRRO RESIDENCIAL OESTE QD 103 CJ 5/10 | BAIRRO RESIDENCIAL OESTE QD 103 CJ 5/10 | URB 114/2009 | 1 | 2 | 1 | 2 | 2009
+1 | PRAÇA LINEAR  BAIRRO RESIDENCIAL OESTE QD 103 CJ 8/12 SETOR C | BAIRRO RESIDENCIAL OESTE QD 103 CJ 8/12 SETOR C | URB 114/2009 | 1 | 2 | 1 | 2 | 2009
+1 | PRAÇA BAIRRO RESIDENCIAL OESTE QD 201 CJ 2/5 | BAIRRO RESIDENCIAL OESTE QD 201 CJ 2/5 | URB 114/2009 | 1 | 2 | 1 | 2 | 2009
+1 | PRAÇA BAIRRO RESIDENCIAL OESTE QD 201 CJ 3/9 | BAIRRO RESIDENCIAL OESTE QD 201 CJ 3/9 | URB 114/2009 | 1 | 2 | 1 | 2 | 2009
+1 | PRAÇA  BAIRRO RESIDENCIAL OESTE QD 201 CJ 5/11 | BAIRRO RESIDENCIAL OESTE QD 201 CJ 5/11 | URB 114/2009 | 1 | 2 | 0 | 1 | 2009
+1 | PRAÇA BAIRRO RESIDENCIAL OESTE QD 201 CJ 6/10 | BAIRRO RESIDENCIAL OESTE QD 201 CJ 6/10 | URB 114/2009 | 1 | 2 | 1 | 2 | 2009
+1 | PRAÇA BAIRRO RESIDENCIAL OESTE QD 202 | BAIRRO RESIDENCIAL OESTE QD 202 CJ 7/9 | URB 114/2009 | 1 | 2 | 0 | 1 | 2009
+1 | PRAÇA LINEAR 4 SETOR A BAIRRO RESIDENCIAL OESTE | BAIRRO RESIDENCIAL OESTE QD 202 CJ 8/9 SETOR A | URB 114/2009 | 1 | 2 | 0 | 1 | 2009
+1 | PRAÇA LINEAR 4 SETOR B BAIRRO RESIDENCIAL OESTE | BAIRRO RESIDENCIAL OESTE QD 202 SETOR B CJ 8/10 | URB 114/2009 | 1 | 2 | 0 | 1 | 2009
+1 | PRAÇA LINEAR 4 SETOR C BAIRRO RESIDENCIAL OESTE | BAIRRO RESIDENCIAL OESTE QD 202 SETOR C CJ 4/11 | URB 114/2009 | 1 | 2 | 0 | 1 | 2009
+1 | PRAÇA LINEAR 04 SETOR C BAIRRO RESIDENCIAL OESTE SETOR C | BAIRRO RESIDENCIAL OESTE QD 202 SETOR C CJ 6/12 | URB 114/2009 | 1 | 2 | 0 | 1 | 2009
+1 | PRAÇA BAIRRO RESIDENCIAL OESTE QD 204 | BAIRRO RESIDENCIAL OESTE QD 204 | URB 114/2009 | 1 | 2 | 1 | 2 | 2009
+1 | PRAÇA BAIRRO RESIDENCIAL OESTE QD 301 CJ 3 AV BOM SUCESSO | BAIRRO RESIDENCIAL OESTE QD 301 CJ 3 AV BOM SUCESSO | URB 114/2009 | 1 | 2 | 0 | 2 | 2009
+1 | PRAÇA BAIRRO RESIDENCIAL OESTE QD 301/302 | BAIRRO RESIDENCIAL OESTE QD 301/302 CJ 9/1 | URB 114/2009 | 1 | 2 | 0 | 1 | 2009
+1 | PRAÇA LINEAR SETOR D BAIRRO RESIDENCIAL OESTE QD 302 | BAIRRO RESIDENCIAL OESTE QD 302 SETOR D CJ 1/4 | URB 114/2009 | 1 | 2 | 0 | 1 | 2009
+1 | PRAÇA BAIRRO RESIDENCIAL OESTE QD 304 | BAIRRO RESIDENCIAL OESTE QD 304 CJ 3/5 | URB 114/2009 | 1 | 2 | 1 | 2 | 2009
+1 | PRAÇA BAIRRO RESIDENCIAL OESTE QD 306 | BAIRRO RESIDENCIAL OESTE QD 306 CJ 5 AE 1 | URB 114/2009 | 1 | 2 | 0 | 1 | 2009
+1 | PRAÇA BAIRRO SÃO BARTOLOMEU | BAIRRO SÃO BARTOLOMEU  RUA SÃO MIGUEL/ AV COMERCIAL | URB 114/2009 | 1 | 2 | 1 | 2 | 2009
+1 | PRAÇA BAIRRO SÃO BARTOLOMEU QD 02 | BAIRRO SÃO BARTOLOMEU AE QD 02 CJ 01 | URB 114/2009 | 1 | 2 | 0 | 1 | 2009
+1 | PRAÇA BAIRRO SÃO BARTOLOMEU | BAIRRO SÃO BARTOLOMEU QD 02 CJ 3/10 | URB 114/2009 | 1 | 2 | 0 | 9 | 2009
+1 | PRAÇA BAIRRO SÃO BARTOLOMEU QD 1 CJ 1/2 | BAIRRO SÃO BARTOLOMEU QD 1 CJ 1/2 | URB 114/2009 | 1 | 2 | 0 | 8 | 2009
+1 | PRAÇA BAIRRO SÃO BARTOLOMEU QD 1 CJ 2/3 | BAIRRO SÃO BARTOLOMEU QD 1 CJ 2/3 | URB 114/2009 | 1 | 2 | 1 | 2 | 2009
+1 | PRAÇA  BAIRRO SÃO BARTOLOMEU QD 2 CJ 4 | BAIRRO SÃO BARTOLOMEU QD 2 CJ 4 | URB 114/2009 | 1 | 2 | 0 | 1 | 2009
+1 | — | BAIRRO ÁGUAS CLARAS QS 6 | URB 42/1990 | 1 | 7 | 0 | 8 | 2018
+1 | — | BAIRRO ÁGUAS CLARAS QS 6 | URB 42/1990 | 1 | 7 | 1 | 2 | 2018
+1 | — | BAIRRO ÁGUAS CLARAS QS 7 | — | 0 | 5 | 1 | 4 | 2018
+1 | PRAÇA 810 | BAIRRO ÁGUAS CLARAS QS 7 PÇ 810 | URB 048/1984 | 1 | 2 | 1 | 0 | 2021
+1 | — | BAIRRO ÁGUAS CLARAS QS 8 | — | 0 | 5 | 1 | 2 | 2018
+1 | — | BAIRRO ÁGUAS CLARAS QS 8 | — | 0 | 5 | 1 | 4 | 2018
+1 | — | BAIRRO ÁGUAS CLARAS QS 8 | — | 0 | 5 | 1 | 4 | 2018
+1 | — | BAIRRO ÁGUAS CLARAS QS 9 | URB 26/1997 | 1 | 7 | 1 | 9 | 2018
+1 | — | BAIRRO ÁGUAS CLARAS QS 9 | URB 26/1997 | 1 | 7 | 1 | 6 | 2018
+4 | — | EQ 416/516 PARQUE INFANTIL | URB 015/2020 | 1 | 2 | 0 | 1 | 2020
+3 | — | EQ 416/516 PEC | URB 015/2020 | 1 | 2 | 0 | 1 | 2020
+1 | — | EQ 416/516 PRAÇA 1 | URB 015/2020 | 1 | 2 | 0 | 1 | 2020
+1 | — | EQ 416/516 PRAÇA 2 | URB 015/2020 | 1 | 2 | 0 | 1 | 2020
+1 | — | EQ 417/517 PRAÇA | URB 015/2020 | 1 | 2 | 0 | 1 | 2020
+5 | — | EQ 418/518 CAMPO DE FUTEBOL SINTÉTICO | URB 015/2020 | 1 | 2 | 0 | 1 | 2020
+3 | — | EQ 418/518 PEC | URB 015/2020 | 1 | 2 | 0 | 1 | 2020
+1 | — | EQ 418/518 PRAÇA 1 | URB 015/2020 | 1 | 2 | 0 | 1 | 2020
+1 | — | EQ 418/518 PRAÇA 2 | URB 015/2020 | 1 | 2 | 0 | 1 | 2020
+7 | — | EQ 418/518 QUADRA POLIESPORTIVA | URB 015/2020 | 1 | 2 | 0 | 1 | 2020
+7 | IESE - QUADRA ESPORTIVA BEATA MARIA CRUCIFIXA CURCIO | — | — | — | 1 | 1 | 2 | 2016
+16 | Parque Distrital Retirinho | — | URB 342/2022 | 1 | 2 | — | — | 2023
+3 | PEC SQNW 104 | — | MDE MOB 179/2020 | 1 | 2 | — | 0 | 2020
+1 | PRACA DO BOSQUE | PRACA DO BOSQUE | URB 28/2000 | 1 | 5 | 1 | 2 | 2018
+1 | PRAÇA DO BOSQUE Q 3 | PRAÇA DO BOSQUE Q 3 | URB 106/2001 | 1 | 2 | 0 | 8 | 2001
+1 | PRAÇA Q 1 | PRAÇA Q 1 | URB 106/2001 | 1 | 2 | 0 | 2 | 2001
+1 | PRAÇA Q 10 | PRAÇA Q 10 | URB 106/2001 | 1 | 2 | 0 | 1 | 2001
+1 | PRAÇA Q 11 | PRAÇA Q 11 | URB 106/2001 | 1 | 2 | 0 | 2 | 2001
+1 | PRAÇA PRINCIPAL | PRAÇA Q 2 | URB 106/2001 | 1 | 2 | 0 | 2 | 2001
+1 | PRAÇA Q 3 | PRAÇA Q 3 | URB 110/1999 | 1 | 2 | 0 | 9 | 1999
+1 | PRAÇA Q 4 | PRAÇA Q 4 | URB 106/2001 | 1 | 2 | 0 | 2 | 2001
+1 | PRAÇA Q 4 | PRAÇA Q 4 | URB 110/1999 | 1 | 2 | 0 | 9 | 1999
+1 | PRAÇA Q 5 | PRAÇA Q 5 | URB 106/2001 | 1 | 2 | 0 | 2 | 2001
+1 | PRAÇA Q 5 | PRAÇA Q 5 | URB 106/2001 | 1 | 2 | 0 | 1 | 2001
+1 | PRAÇA Q 5 | PRAÇA Q 5 | URB 106/2001 | 1 | 2 | 0 | 2 | 2001
+1 | PRAÇA Q 6 | PRAÇA Q 6 | URB 106/2001 | 1 | 2 | 0 | 2 | 2001
+1 | PRAÇA Q 6 | PRAÇA Q 6 | URB 106/2001 | 1 | 2 | 0 | 2 | 2001
+1 | PRAÇA Q 6/7 | PRAÇA Q 6/7 | URB 106/2001 | 1 | 2 | 0 | 2 | 2001
+1 | PRAÇA Q 7 | PRAÇA Q 7 | URB 106/2001 | 1 | 2 | 0 | 2 | 2001
+1 | PRAÇA Q 8 | PRAÇA Q 8 | URB 106/2001 | 1 | 2 | 0 | 4 | 2001
+1 | PRAÇA Q 8/9 | PRAÇA Q 8/9 | URB 106/2001 | 1 | 2 | 0 | 2 | 2001
+1 | PRAÇA Q 9 | PRAÇA Q 9 | URB 106/2001 | 1 | 2 | 0 | 2 | 2001
+1 | PRAÇA CJ 11 | PRAÇA QD 2 CJ 11 | URB 036/2017 | 1 | 2 | 0 | 8 | 2017
+1 | PRAÇA CJ 2 | PRAÇA QD 2 CJ 2 | URB 036/2017 | 1 | 2 | 0 | 8 | 2017
+1 | PRAÇA CJ 3 | PRAÇA QD 2 CJ 3 | URB 036/2017 | 1 | 2 | 0 | 8 | 2017
+1 | PRAÇA QD 201 | PRAÇA QD 201 CJ 2/4 | URB 111/1999 | 1 | 2 | 0 | 9 | 1999
+1 | PRAÇA QD 202 | PRAÇA QD 202  CJ 2/4 | URB 111/1999 | 1 | 2 | 0 | 9 | 1999
+1 | PRAÇA QD 202 | PRAÇA QD 202 AV CENTRAL/AV CÓRREGO DO URUBU | URB 111/1999 | 1 | 2 | 0 | 9 | 1999
+1 | PRAÇA QD 203 | PRAÇA QD 203 | URB 111/1999 | 1 | 2 | 0 | 9 | 1999
+1 | PRAÇA QD 204 | PRAÇA QD 204 CJ 13/ AE 1 | URB 111/1999 | 1 | 2 | 0 | 9 | 1999
+1 | PRAÇA  QD 204 | PRAÇA QD 204 CJ 14/15 | URB 111/1999 | 1 | 2 | 0 | 9 | 1999
+1 | PRAÇA QD 205 | PRAÇA QD 205 CJ 15/16 | URB 111/1999 | 1 | 2 | 0 | 9 | 1999
+1 | PRAÇA QD 205 | PRAÇA QD 205 CJ 16/ AE 5 | URB 111/1999 | 1 | 2 | 0 | 9 | 1999
+1 | PRAÇA QD 305 | PRAÇA QD 305 CJ 8/9 | URB 114/2009 | 1 | 2 | 1 | 2 | 2009
+1 | PRAÇA CJ 24 | PRAÇA QD 5 CJ 24 | URB 036/2017 | 1 | 2 | 0 | 1 | 2017
+1 | PRAÇA  SETOR D | PRAÇA SETOR D QD 303 CJ 4/5 | URB 114/2009 | 1 | 2 | 0 | 1 | 2009
+1 | — | QC 02 PRAÇA | URB 006/2020 | 1 | 2 | 1 | 2 | 2021
+1 | — | QC 04 PRAÇA | URB 006/2020 | 1 | 2 | 1 | 2 | 2021
+1 | — | QC 04 PRAÇA | URB 006/2020 | 1 | 2 | 0 | 0 | 2021
+1 | — | QC 04 PRAÇA | URB 006/2020 | 1 | 2 | 1 | 2 | 2021
+1 | — | QC 04 PRAÇA | URB 006/2020 | 1 | 2 | 1 | 2 | 2021
+1 | — | QC 04 PRAÇA | URB 006/2020 | 1 | 2 | 1 | 2 | 2021
+1 | — | QC 04 PRAÇA | URB 006/2020 | 1 | 2 | 0 | 0 | 2021
+1 | — | QC 06 PRAÇA | URB 006/2020 | 1 | 2 | 0 | 0 | 2021
+1 | — | QC 06 PRAÇA | URB 006/2020 | 1 | 2 | 0 | 0 | 2021
+1 | — | QC 06 PRAÇA | URB 006/2020 | 1 | 2 | 0 | 0 | 2021
+1 | — | QC 06 PRAÇA | URB 006/2020 | 1 | 2 | 1 | 2 | 2021
+1 | — | QC 06 PRAÇA | URB 006/2020 | 1 | 2 | 0 | 0 | 2021
+1 | — | QC 06 PRAÇA | URB 006/2020 | 1 | 2 | 0 | 0 | 2021
+1 | — | QC 06 PRAÇA | URB 006/2020 | 1 | 2 | 0 | 0 | 2021
+1 | — | QC1 PRAÇA | URB 006/2020 | 1 | 2 | 1 | 2 | 2021
+1 | PRAÇA QD 101 | QD 101 CJ 2/3 | URB 051/2000 | 1 | 2 | 0 | 9 | 2000
+1 | PRAÇA QD 102 | QD 102 CJ 11/16 | URB 114/2009 | 1 | 2 | 1 | 2 | 2009
+1 | PRAÇA QD  102 CJ 3/4 | QD 102 CJ 3/4 | URB 051/2000 | 1 | 2 | 0 | 9 | 2000
+1 | PRAÇA QD 102  CJ 4 | QD 102 CJ 4 | URB 051/2000 | 1 | 2 | 0 | 1 | 2000
+1 | PRAÇA  QD 103 7/11 SETOR B | QD 103 7/11 SETOR B | URB 114/2009 | 1 | 2 | 1 | 2 | 2009
+1 | PRAÇA QD 2  AE CJ 13 | QD 2  AE CJ 13 | URB 114/2009 | 1 | 2 | 0 | 1 | 2009
+1 | PRAÇA QD 202 | QD 202 CJ 11/15 | URB 114/2009 | 1 | 2 | 0 | 1 | 2009
+1 | PRAÇA QD 203 | QD 203 CJ 9/10 | URB 114/2009 | 1 | 2 | 1 | 2 | 2009
+1 | PRAÇA LINEAR 02 SETOR A | QD 203 PRAÇA LINEAR 02 SETOR A | URB 114/2009 | 1 | 2 | 0 | 1 | 2009
+1 | PRAÇA LINEAR 02 SETOR B | QD 203 PRAÇA LINEAR 02 SETOR B | URB 114/2009 | 1 | 2 | 0 | 9 | 2009
+1 | PRAÇA LINEAR 02 SETOR C COM HORTA COMUNITÁRIA | QD 203 PRAÇA LINEAR 02 SETOR C | URB 114/2009 | 1 | 2 | 0 | 1 | 2009
+1 | PRAÇA QD 205 | QD 205 CJ 6/8 | URB 114/2009 | 1 | 2 | 0 | 1 | 2009
+1 | PRAÇA QD 301 | QD 301 CJ 4/7 | URB 051/2000 | 1 | 2 | 0 | 1 | 2000
+1 | PRAÇA QD 302 CJ 10 | QD 302 CJ 10 | URB 051/2000 | 1 | 2 | 1 | 2 | 2000
+1 | PRAÇA QD 302 CJ 2 | QD 302 CJ 2 | URB 051/2000 | 1 | 2 | 1 | 6 | 2000
+1 | PRAÇA QD 302 | QD 302 CJ 4/15 | URB 114/2009 | 1 | 2 | 1 | 2 | 2009
+1 | PRAÇA QD 302 | QD 302 CJ 6/7 | URB 051/2000 | 1 | 2 | 1 | 8 | 2000
+1 | PRAÇA QD 302 CJ 9 | QD 302 CJ 9 | URB 051/2000 | 1 | 2 | 0 | 9 | 2000
+1 | PRAÇA QD 305 | QD 305 CJ 14 EPC | URB 114/2009 | 1 | 2 | 0 | 8 | 2009
+1 | PRAÇA  QD 305 | QD 305 CJ 14 EPC | URB 114/2009 | 1 | 2 | 0 | 8 | 2009
+1 | QE 46 | QE 46, Área Praça Central | URB 209/1993 | — | 5 | 1 | 2 | 2016
+1 | PRAÇA QN 104 | QN 104 CJ 1/2 | URB 051/2000 | 1 | 2 | 0 | 1 | 2000
+1 | PRAÇA DE ESPORTES QN 319 | QN 319  RUA 1/9 | URB 52/1990 | 1 | 2 | 1 | 2 | 2016
+1 | PRAÇA QN 321 | QN 321 CJ F/J | URB 52/1990 | 1 | 2 | 0 | 8 | 2016
+1 | PRAÇA QN 323 | QN 323 CJ F/J | URB 52/1990 | 1 | 2 | 0 | 1 | 2016
+1 | PRAÇA DE ESPORTES QN 421 | QN 421 AREA ESPECIAL 1 | URB 52/1990 | 1 | 2 | 1 | 2 | 2016
+1 | PRAÇA QR 202 | QR 202 CJ 3/10 | URB 051/2000 | 1 | 2 | 0 | 9 | 2000
+1 | PRAÇA QR 203 | QR 203 CJ 2/3 | URB 052/1990 | 1 | 2 | 1 | 9 | 2016
+1 | PRAÇA  QR  204 | QR 204  CJ 9/10 | URB 051/2000 | 1 | 2 | 1 | 2 | 2000
+1 | PRAÇA QR 205 | QR 205 CJ 2/5 | URB 52/1990 | 1 | 2 | 1 | 2 | 2016
+1 | PRAÇA QR 207 | QR 207 CJ 4/6 | URB 52/1990 | 1 | 2 | 1 | 2 | 2016
+1 | PRAÇA QR 209 | QR 209 CJ 4/7 | URB 52/1990 | 1 | 2 | 1 | 2 | 2016
+1 | PRAÇA QR 211 | QR 211 CJ 4/7 | URB 52/1990 | 1 | 2 | 1 | 1 | 2016
+1 | PRAÇA QR 213 | QR 213 EPC CJ 2 | URB 52/1990 | 1 | 2 | 0 | 1 | 2016
+1 | PRAÇA QR 215 | QR 215 CJ 2/6 | URB 52/1990 | 1 | 2 | 1 | 2 | 2016
+1 | PRAÇA QR 221 | QR 221 CJ 7/8 | URB 52/1990 | 1 | 2 | 1 | 2 | 2016
+1 | PRAÇA QR 223 | QR 223 EPC CJ 3 | URB 52/1990 | 1 | 2 | 1 | 2 | 2016
+1 | PRAÇA QR 225 | QR 225 CJ 2/3 | URB 52/1990 | 1 | 2 | 1 | 2 | 2016
+1 | PRAÇA QR 513 CJ 13/14 | QR 513 CJ 13/14 | URB 52/1990 | 1 | 2 | 1 | 2 | 2016
+1 | PRAÇA QR 513 CJ 16/17 | QR 513 CJ 16/17 | URB 52/1990 | 1 | 2 | 1 | 2 | 2016
+1 | PRAÇA 513 CJ 3/19 | QR 513 CJ 3/19 | URB 52/1990 | 1 | 2 | 0 | 1 | 2016
+1 | PRAÇA QR 513 CJ 8/15 | QR 513 CJ 8/15 | URB 52/1990 | 1 | 2 | 1 | 2 | 2016
+1 | PRAÇA QR 515 CJ 10/12 | QR 515 CJ 10/12 | URB 52/1990 | 1 | 2 | 0 | 1 | 2016
+1 | PRAÇA QR 515 CJ 4/16 | QR 515 CJ 4/16 | URB 52/1990 | 1 | 2 | 0 | 1 | 2016
+1 | PRAÇA QR 515  CJ 9/10 | QR 515 CJ 9/10 | URB 52/1990 | 1 | 2 | 1 | 2 | 2016
+1 | PRAÇA QR 519 CJ 2/3 | QR 519 CJ 2/3 | URB 52/1990 | 1 | 2 | 1 | 2 | 2016
+1 | PRAÇA QR 521 CJ 5/6 | QR 521 CJ 5/6 | URB 52/1990 | 1 | 2 | 0 | 1 | 2016
+1 | PRAÇA QR 521 CJ 8/9 | QR 521 CJ 8/9 | URB 52/1990 | 1 | 2 | 1 | 2 | 2016
+1 | PRAÇA QR 523 CJ 4/6 | QR 523 CJ 4/6 | URB 52/1990 | 1 | 2 | 1 | 2 | 2016
+1 | — | QS 11 | URB 114/1997 | 1 | 7 | 0 | 8 | 2018
+1 | — | QS 11 | URB 114/1997 | 1 | 7 | 1 | 2 | 2018
+1 | — | QS 11 CJ F | URB 114/1997 | 1 | 7 | 0 | 8 | 2018
+1 | — | QS 11 CJ P | URB 114/1997 | 1 | 7 | 0 | 8 | 2018
+1 | PRAÇA QS 125 | QS 125  RUA 2 CJ G/J | URB 52/1990 | 1 | 2 | 0 | 1 | 2016
+1 | PRAÇA QS 517 | QS 517 CJ 1/6 | URB 52/1990 | 1 | 2 | 1 | 2 | 2016
+1 | PRAÇA QS 517 CJ 9/14 | QS 517 CJ 9/14 | URB 52/1990 | 1 | 2 | 1 | 2 | 2016
+1 | PRAÇA 800-A | QS-07 | URB 048/1984 | 1 | 2 | 1 | 2 | 2021
+7 | QUADRA COBERTA | — | — | — | 1 | 1 | 2 | 2016
+7 | QUADRA DE ESPOTES | — | — | — | 1 | 1 | 2 | 2016
+7 | QUADRA POLIESPORTIVA SQNW 104 | — | MDE MOB 179/2020 | 1 | 2 | — | 0 | 2020
+1 | PRAÇA EQ 52/54 | SETOR CENTRAL EQ 52/54 PRAÇA | URB 122/1993 | 1 | 2 | 0 | 6 | 1993
+1 | PRAÇA Q 19 | SETOR CENTRAL Q 19 PRAÇA | URB 122/1993 | 1 | 2 | 0 | 9 | 1993
+1 | PRAÇA Q 20 | SETOR CENTRAL Q 20 PRAÇA | URB 122/1993 | 1 | 2 | 0 | 9 | —
+16 | ELUP | SETOR HABITACIONAL CONTAGEM SERRA DOURADA I CJ CMA ELUP | URB-RP 061/2010 | 1 | 2 | 0 | 9 | 2025
+16 | ELUP | SETOR HABITACIONAL CONTAGEM SERRA DOURADA I CJ CMC ELUP | URB-RP 061/2010 | 1 | 2 | 0 | 9 | 2025
+16 | ELUP | SETOR HABITACIONAL ESTRADA DO SOL - RESIDENCIAL VILLAGE GOLDEN GREEN - SETOR 3 QUADRA 20 CONJUNTO B ELUP | URB 232/2022 | 1 | 2 | 0 | 9 | 2025
+16 | ELUP | SETOR HABITACIONAL ESTRADA DO SOL - RESIDENCIAL VILLAGE GOLDEN GREEN - SETOR 3 QUADRA 20 CONJUNTO E ELUP | URB 232/2022 | 1 | 2 | 0 | 9 | 2025
+15 | EPU | SETOR HABITACIONAL ESTRADA DO SOL - RESIDENCIAL VILLAGE GOLDEN GREEN - SETOR 3 QUADRA 20 EPU | URB 232/2022 | 1 | 2 | 0 | 9 | 2025
+15 | EPU CAESB | SETOR HABITACIONAL ESTRADA DO SOL - RESIDENCIAL VILLAGE GOLDEN GREEN - SETOR 3 QUADRA 20 EPU CAESB | URB 232/2022 | 1 | 2 | 0 | 9 | 2025
+16 | — | SETOR HABITACIONAL GRANDE COLORADO/VIVENDAS COLORADO MOD. H | URB-RP 100/2009 | 1 | 2 | 1 | 2 | 2023
+15 | — | SETOR HABITACIONAL TORORÓ QD B3 VIA E-4 | URB 236/2022 | 1 | 2 | — | — | 2022
+16 | — | SETOR HABITACIONAL TORORÓ QD B3 VIA E-4 | URB 236/2022 | 1 | 2 | — | — | 2022
+16 | — | SETOR HABITACIONAL TORORÓ QD B3 VIA E-4 | URB 236/2022 | 1 | 2 | — | — | 2022
+16 | — | SETOR NORTE ÁREA ESPECIAL - AE 4N LT A | URB 082/2021 | 1 | 2 | — | — | —
+16 | — | SETOR NORTE ÁREA ESPECIAL - AE 4N LT A | URB 082/2021 | 1 | 2 | — | — | —
+16 | — | SETOR NORTE ÁREA ESPECIAL - AE 4N LT A | URB 082/2021 | 1 | 2 | — | — | —
+16 | — | SETOR NORTE ÁREA ESPECIAL - AE 4N LT A | URB 082/2021 | 1 | 2 | — | — | —
+16 | — | SETOR NORTE ÁREA ESPECIAL - AE 4N LT A | URB 082/2021 | 1 | 2 | — | — | —
+16 | ELUP SGAN Q 904/905 | SGAN Q 904/905 | URB 084/2019 | 1 | 2 | 0 | 9 | 2025
+16 | ELUP SGAN Q 904/905 | SGAN Q 904/905 | URB 084/2019 | 1 | 2 | 0 | 9 | 2025
+14 | ELUP | SH BOA VISTA PARCELAMENTO BERNADETE Q 2 ELUP | URB 045/2021 | 1 | 0 | 0 | 0 | 2021
+15 | EPU | SH BOA VISTA PARCELAMENTO BERNADETE Q 2 EPU | URB 045/2021 | 1 | 0 | 0 | 0 | 2021
+15 | ELUP | SH ESTRADA DO SOL PARCELAMENTO PARQUE DOS PINHEIROS | URB 270/2021 | 1 | 2 | 0 | 9 | 2022
+15 | ELUP | SH ESTRADA DO SOL PARCELAMENTO PARQUE DOS PINHEIROS | URB 270/2021 | 1 | 2 | 0 | 9 | 2022
+15 | — | SH MANSOES SOBRADINHO - EMPREENDIMENTO SOBRADINHO II | URB 050/2023 | 1 | 2 | 0 | 4 | 2023
+15 | — | SH MANSOES SOBRADINHO - EMPREENDIMENTO SOBRADINHO II | URB 050/2023 | 1 | 2 | 0 | 4 | 2023
+16 | — | SH MANSOES SOBRADINHO - EMPREENDIMENTO SOBRADINHO II | URB 050/2023 | 1 | 2 | 0 | 4 | 2023
+16 | — | SH MANSOES SOBRADINHO - EMPREENDIMENTO SOBRADINHO II | URB 050/2023 | 1 | 2 | 0 | 4 | 2023
+1 | — | SH RIACHO FUNDO II QC 01 CJ 1/2 | URB 006/2020 | 1 | 2 | 0 | 0 | 2021
+16 | ELUP | SH TORORO/MANSOES RURAIS DO LAGO SUL QD | URB 163/2017 | 1 | 2 | — | 0 | 2026
+16 | ELUP | SH TORORO/MANSOES RURAIS DO LAGO SUL QD | URB 163/2017 | 1 | 2 | — | 0 | 2026
+14 | AREA PUBLICA 2 | SHCNW AREA PUBLICA 2 | — | 0 | 2 | — | 4 | —
+14 | AREA PUBLICA 1 | SHCNW CLNW 2/3 AREA PUBLICA 1 | — | 0 | 2 | — | 2 | —
+13 | — | SHIS | URB 78/1987 | 1 | 7 | 0 | 8 | 2018
+12 | — | SHIS QI 5 LT F | URB 78/87 | 1 | 2 | 0 | 0 | 2018
+1 | — | SHIS QI A | URB 30/2006 | 1 | 7 | 1 | 2 | 2016
+16 | ELUP | SHJB Q1 RUA 1 | URB 111/2010 | 1 | 2 | 1 | 2 | 2022
+16 | ELUP | SHJB Q1 RUA 3 ELUP | URB 111/2010 | 1 | 2 | 1 | 2 | 2022
+16 | — | SHSB TRECHO 1 QSB 1 CJ 8 | URB-RP 076/2020 | 1 | 2 | 1 | 2 | 2024
+16 | — | SHSB TRECHO 1 QSB 2 CJ 2 | URB-RP 076/2020 | 1 | 2 | 0 | 9 | 2024
+16 | — | SHSB TRECHO 1 QSB 2 CJ 4 | URB-RP 076/2020 | 1 | 2 | 0 | 4 | 2024
+16 | — | SHSB TRECHO 1 QSB 4 CJ 1 | URB-RP 076/2020 | 1 | 2 | 0 | 4 | 2024
+16 | — | SHSB TRECHO 1 QSB 4 CJ 2A | URB-RP 076/2020 | 1 | 2 | 0 | 4 | 2024
+16 | — | SHSB TRECHO 1 QSB 4 CJ 2B | URB-RP 076/2020 | 1 | 2 | 0 | 4 | 2024
+16 | — | SHSB TRECHO 1 QSB 4 CJ 3 | URB-RP 076/2020 | 1 | 2 | 0 | 4 | 2024
+16 | — | SHSB TRECHO 1 QSB 4 CJ 4 | URB-RP 076/2020 | 1 | 2 | 0 | 4 | 2024
+1 | PRAÇA Q 1 | SHTQ TRECHO 1 Q 1 AVENIDA COMERCIAL PRAÇA | URB-110/1999 | 1 | 2 | 0 | 2 | 1999
+1 | PRAÇA Q 1 | SHTQ TRECHO 1 Q 1 PRAÇA | URB 110/1999 | 1 | 2 | 0 | 2 | 1999
+1 | PRACA Q 4 | SHTQ TRECHO 1 Q 4 PRAÇA | URB 110/1999 | 1 | 2 | 0 | 9 | 1999
+1 | — | SRIA  - EQ 31/33 LT 7 | URB 037/2018 | 1 | 2 | 0 | 9 | 2020
+1 | PRAÇA QE 19 | SRIA II QE 19 CL PRAÇA | PR 13/1 | 1 | 2 | 1 | 8 | —
+16 | ELUP | SRIA II QE 25 | URB 082/2025 | 1 | 2 | — | — | 2025
+16 | ELUP | SRIA II QE 25 | URB 082/2025 | 1 | 2 | — | — | 2025
+16 | ELUP | SRIA II QE 25 | URB 082/2025 | 1 | 2 | — | — | 2025
+16 | ELUP | SRIA II QE 25 | URB 082/2025 | 1 | 2 | — | — | 2025
+16 | ELUP | SRIA II QE 25 | URB 082/2025 | 1 | 2 | — | — | 2025
+4 | <Null> | SUL DA CLN 310, BLOCO A E LESTE DO BLOCO K DA SQN 310 | — | 0 | 4 | 1 | 2 | 2016

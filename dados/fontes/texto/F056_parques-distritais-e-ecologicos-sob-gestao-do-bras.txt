@@ -1,0 +1,97 @@
+TÍTULO: Parques Distritais e Ecológicos sob gestão do Brasília Ambiental
+ÓRGÃO: Brasília Ambiental (Ibram-DF)
+LINK: https://www.ibram.df.gov.br/parques-sob-gestao-do-ibram
+TEMA: Lista de parques distritais e ecológicos e sua localização (região administrativa)
+ABRANGÊNCIA: DF
+TIPO DE EVIDÊNCIA: Lista/inventário oficial (sem equipamentos esportivos)
+COMPROVA FUNCIONAMENTO ATUAL?: Não (descreve a situação na data da publicação)
+DATA DE PUBLICAÇÃO: 22/02/2018 (atualizada em outra data; ver texto)
+DATA DE COLETA: 2026-11-05
+ID: F056
+ESTADO DE VALIDAÇÃO: Pendente de validação humana (texto extraído automaticamente; cabeçalho x conteúdo x link conferidos por script em 2026-11-07)
+RESSALVAS: Não informa equipamentos esportivos, horários nem acessibilidade. Página viva criada em 2018 e atualizada em 06/07/2026.
+AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.
+==============================================================================
+
+### Parques Distritais e Ecológicos sob gestão do Brasília Ambiental
+
+22/02/18 às 08h20 - Atualizado em 06/07/26 às 16h25
+
+## Parques Distritais e Ecológicos sob gestão do Brasília Ambiental
+
+Nome Recategorização Localização
+
+Parque Uso Múltiplo do Lago Norte Parque Ecológico do Lago Norte Brasília
+Parque de Uso Múltiplo da Enseada Norte Parque Ecológico da Enseada Norte Brasília
+Parque Recreativo e Ecológico Canela de Ema Refúgio da Vida Silvestre Canela de Ema Sobradinho
+Parque Vivencial Denner Parque de Uso Múltiplo Denner Guará
+Parque das Aves Parque de Uso Múltiplo das Aves Brasília
+Parque Ecológico Ezechias Heringer Parque Distrital Ezechias Heringer Guará
+Parque Bosque dos Tribunais Parque de Uso Múltiplo Bosque dos Tribunais Brasília
+Parque Bosque dos Constituintes Parque de Uso Múltiplo Bosque dos Constituintes Brasília
+Parque de Uso Múltiplo da Asa Sul Parque Ecológico da Asa Sul Brasília
+Parque Ecológico Olhos d’Água Parque Ecológico Olhos d’Água Brasília
+Parque Urbano e Vivencial Vila Planalto Parque de Uso Múltiplo da Vila Planalto Vila Planalto
+Parque Ecológico Ponte Alta do Gama Refúgio da Vida Silvestre Ponte Alta do Gama Gama
+Parque Recreativo do Gama (Prainha) Parque Distrital do Gama Gama
+Parque Urbano e Vivencial do Gama Parque Ecológico do Gama Gama
+Parque do Cortado Parque Ecológico Saburo Onoyama e Cortado Taguatinga
+Parque Ecológico Saburo Onoyama Parque Ecológico Saburo Onoyama e Cortado Taguatinga
+Parque Ecológico Veredinha Parque Ecológico Veredinha Brazlândia
+Parque Ecológico dos Jequitibás Parque Ecológico dos Jequitibás Sobradinho
+Parque Ecológico e Vivencial de Sobradinho Parque Ecológico de Sobradinho Sobradinho
+Parque Ambiental Colégio Agrícola de Brasília Refúgio da Vida Silvestre Lagoa Joaquim de Medeiros Planaltina
+Parque de Uso Múltiplo Vale do Amanhecer Refúgio da Vida Silvestre Vale do Amanhecer Planaltina
+Parque Ecológico do DER Parque Ecológico do DER Planaltina
+Parque Ecológico dos Pequizeiros Parque Distrital dos Pequizeiros Planaltina
+Parque Ecológico e Vivencial Cachoeira do Pipiripau Área de Relevante Interesse Ecológico Cachoeira do Pipiripau Planaltina
+Parque Ecológico e Vivencial da Lagoa Joaquim de Medeiros Refúgio de Vida Silvestre Lagoa Joaquim de Medeiros Planaltina
+Parque Ecológico e Vivencial do Retirinho Parque Distrital do Retirinho Planaltina
+Parque Ecológico Vivencial Estância Refúgio de Vida Silvestre Mestre d’Armas Planaltina
+Parque Recreativo Sucupira Parque Ecológico Sucupira Planaltina
+Parque de Uso Múltiplo das Esculturas Parque de Uso Múltiplo das Esculturas Paranoá
+Parque Urbano do Paranoá e ARIE Paranoá Sul Parque Ecológico do Paranoá Paranoá
+Parque Ecológico Córrego da Onça Estação Ecológica Córrego da Onça Park Way
+Parque Ecológico Lauro Muller (Ecológico do Catetinho) Parque Ecológico do Catetinho Park Way
+Parque Ecológico Luiz Cruls Parque Ecológico do Catetinho Park Way
+Parque Recreativo do Núcleo Bandeirante Parque de Uso Múltiplo do Núcleo Bandeirante Núcleo Bandeirante
+Parque Ecológico do Descoberto Monumento Natural do Descoberto Ceilândia
+Parque Recreativo do Setor “O” Parque de Uso Múltiplo do Setor “O” Ceilândia
+Parque Ecológico e Vivencial dos Eucaliptos Parque de Uso Múltiplo dos Eucaliptos Guará
+Parque Ecológico Vivencial Gatumé Refúgio da Vida Silvestre Gatumé Samambaia
+Parque Três Meninas Parque Ecológico Três Meninas Samambaia
+Parque Ecológico do Tororó Parque Ecológico do Tororó Jardim Botânico
+Parque Recreativo de Santa Maria Parque Ecológico de Santa Maria Santa Maria
+Parque Ecológico de São Sebastião Parque Distrital de São Sebastião São Sebastião
+Parque Ecológico e Vivencial do Recanto das Emas Parque Distrital Recanto das Emas Recanto das Emas
+Parque Ecológico das Copaíbas Parque Distrital Copaíbas Lago Sul
+Parque Ecológico Bernardo Sayão(Ecológico do Rasgado) Parque Distrital Bernardo Sayão Lago Sul
+Parque Ecológico Dom Bosco Monumento Natural Dom Bosco Lago Sul
+Parque Vivencial e Ecológico Canjerana Refúgio da Vida Silvestre Canjerana Lago Sul
+Parque Ecológico Península Sul Parque Ecológico Península Sul Lago Sul
+Parque Vivencial do Anfiteatro Natural do Lago Sul Parque Ecológico do Anfiteatro Natural Lago Sul
+Parque Ecológico Sementes do Itapoã Parque Ecológico Sementes do Itapoã Itapoã
+Parque ecológico e Vivencial do Riacho Fundo Parque Ecológico do Riacho Fundo Riacho Fundo
+Parque Vivencial do Morro do Careca Refúgio da Vida Silvestre Morro do Careca Lago Sul
+Parque Ecológico das Garças Parque Ecológico das Garças Lago Sul
+Parque Ecológico Taquari Parque Ecológico Varjão-Taquari Lago Norte
+Parque Ecológico da Vila Varjão Parque Ecológico Vila Varjão Lago Norte
+Parque Urbano da Vila Estrutural Parque_de Uso Múltiplo da Vila_Estrutural SCIA
+Parque Ecológico e Vivencial da Candangolândia (Pinheiros) Parque Ecológico da Candangolândia Candangolândia
+Parque de Areal Parque Vivencial do Areal Águas Claras
+Parque Ecológico de Águas Claras Parque Ecológico de Águas Claras Águas Claras
+Parque de Uso Múltiplo das Sucupiras Parque Ecológico das Sucupiras Sudoeste
+Parque Urbano do Sudoeste Parque de Uso Múltiplo Bosque dos Sudoeste Sudoeste
+Parque de Uso Múltiplo Centro de Lazer e Cultural Viva Sobradinho (Sobradinho II) Refúgio da Vida Silvestre Canela de Ema Sobradinho
+Parque Burle Marx Parque Ecológico Burle Marx Brasília
+Parque Recreativo de Taguatinga Parque de Uso Múltiplo de Taguatinga Taguatinga
+Parque Ecológico Irmão Afonso Hauss Vicente Pires
+Parque das Corujas Parque de Uso Múltiplo das Corujas Ceilândia
+Parque Lagoinha Ceilândia
+Parque Ecológico Garça Branca Refúgio da Vida Silvestre Garça Branca Lago Sul
+Parque Distrital Salto do Tororó Parque Distrital Salto do Tororó Jardim Botânico
+Parque Distrital Boca da Mata Parque Distrital Boca da Mata Taguatinga
+Parque Ecológico Cachoeirinha Parque Ecológico Cachoeirinha Paranoá
+Parque de Uso Múltiplo Metropolitano Ceilândia
+Confira a publicação Guia de Parques do Distrito Federal, que apresenta 33 dos 72 parques, considerados em condições de receber visitantes que buscam espaço para realizar atividades físicas, de lazer ou simplesmente contemplação da natureza. Bem ilustrado com fotos e mapas, seu objetivo é “fazer uma singela declaração de amor ao Cerrado, palco de belezas naturais únicas”.
+No DF, existem ainda dois Parques urbanos sob gerência especial de outras entidades do Governo: o Parque de Uso Múltiplo Taguaparque, pela Administração Regional de Taguatinga e o Parque Dona Sarah Kubitschek, pela Secretaria de Turismo.
