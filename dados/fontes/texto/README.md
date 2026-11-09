@@ -12,4 +12,4 @@ Cada .txt começa com um cabeçalho (título, órgão, link, tema, abrangência,
 
 Prefixos de ID: `F` = fonte já presente na base do projeto; `N` = fonte nova da auditoria; `R` = cadastro oficial de localização da SEDUH-DF (4 documentos).
 
-Gerado por `python -m src.pacote_fontes` no projeto PontoAtivo RAG.
+O pacote foi originalmente extraído no projeto PontoAtivo RAG. Neste repositório, o pipeline atual ingere todos os 25 textos (F, N e R). Para a entrega atual, consulte `dados/catalogo.csv`, `docs/semana-02/pipeline-ingestao.md` e as evidências da demonstração. A auditoria e `lista_fontes.csv` preservam observações históricas da seleção anterior, inclusive referências à antiga base do RAG; essas referências não descrevem a composição do índice atual.

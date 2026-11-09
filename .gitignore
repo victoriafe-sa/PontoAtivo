@@ -89,3 +89,7 @@ desktop.ini
 *.log
 *.tmp
 ~$*
+
+dados/vetorial/*
+!dados/vetorial/.gitkeep
+dados/chunks.jsonlexclui
