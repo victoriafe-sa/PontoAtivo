@@ -1,151 +1,194 @@
 # PontoAtivo
 
-Plataforma esportiva inclusiva para o Distrito Federal. Projeto do **Challenge 2 (CBL), Big Idea "Qualidade de Vida"**.
+Protótipo de recuperação de informações sobre espaços esportivos e prática inclusiva de atividades físicas no Distrito Federal. Projeto do **Challenge 2 (CBL), Big Idea "Qualidade de Vida"**.
 
-> **Status:** Semana 2, construção da base de conhecimento e do primeiro protótipo de RAG (recuperação aumentada por geração). Ainda não há interface, entrevistas concluídas nem resultados medidos com usuários.
+Este README é o guia atual de funcionamento e execução do projeto. Todos os comandos abaixo devem ser executados a partir da raiz do repositório, onde estão `src/`, `dados/` e `requirements.txt`.
 
-## O que é o projeto
+## Estado atual
 
-Praticar esporte nem sempre depende só de vontade. Muitas vezes é preciso achar pessoas com horários parecidos, descobrir quais espaços existem, saber quanto custam e se atendem a quem tem deficiência.
+O projeto possui uma base selecionada e limpa com **25 documentos-fonte**, divididos em **599 chunks**, embeddings multilíngues E5 e banco vetorial Chroma. A consulta funciona pela linha de comando.
 
-O PontoAtivo investiga se uma plataforma com apoio de inteligência artificial pode ajudar moradores do DF a:
+A resposta automática é **extrativa**: apresenta os próprios trechos recuperados, com identificação das fontes, datas e ressalvas. Ainda não há interface web, geração de sínteses por LLM, agenda em tempo real ou busca de parceiros implementada.
 
-- encontrar **parceiros** para praticar uma modalidade;
-- encontrar **espaços esportivos** (públicos e privados) adequados;
-- consultar **informações de acessibilidade** confiáveis, com fonte e data de verificação.
+As informações das fontes permanecem pendentes de validação humana quanto à situação atual dos locais. Um documento que menciona acessibilidade ou funcionamento não comprova essas condições hoje.
 
-A acessibilidade orienta a busca e a forma como os resultados são mostrados, e não é só um filtro extra. A IA entra como apoio à decisão, nunca como substituta de informação verificada.
+## Como funciona
 
-### Pergunta central (Essential Question)
+```text
+25 documentos previamente extraídos e limpos
+    → leitura do texto e dos metadados
+    → divisão em 599 chunks
+    → embeddings E5 dos trechos
+    → persistência no Chroma
 
-> Como uma solução baseada em inteligência artificial pode apoiar moradores do Distrito Federal na escolha de parceiros e espaços para a prática inclusiva de atividades físicas, considerando interesses, horários, localização, custos, acessibilidade e informações confiáveis?
-
-### Princípios do projeto
-
-- Nenhum espaço é marcado como acessível sem verificação.
-- Toda informação sobre locais tem **fonte** e **data de verificação**.
-- Quando faltarem dados, o sistema deve dizer isso em vez de inventar.
-- Coleta mínima de dados pessoais (LGPD).
-
-## Foco da Semana 2: base de conhecimento + RAG
-
-Nesta etapa o foco é a **qualidade da recuperação de informação**, a **fundamentação das respostas** e a **rastreabilidade das fontes**. A interface e a experiência do usuário ficam para depois.
-
-### Como o sistema funciona
-
-```
-Documentos-fonte (dados/fontes/)
-        │
-        ▼
-   Ingestão ──► limpeza ──► chunking ──► embeddings ──► banco vetorial
-                                                              │
-Consulta do usuário ──► embedding da consulta ──► busca dos chunks mais relevantes
-                                                              │
-                                                              ▼
-                                  Resposta fundamentada nos chunks + fontes citadas
+Pergunta do usuário
+    → embedding da pergunta com o mesmo E5
+    → recuperação dos 5 chunks mais próximos por cosseno
+    → exibição do ranking e das fontes
+    → resposta extrativa com até 3 chunks citados
 ```
 
-1. **Ingestão:** os documentos-fonte são lidos, limpos e divididos em trechos (chunks).
-2. **Embeddings:** cada chunk é convertido em vetor e guardado no banco vetorial.
-3. **Recuperação:** a consulta também vira vetor, e o sistema busca os chunks mais próximos.
-4. **Geração:** a resposta é escrita com base apenas no que foi recuperado, citando as fontes. Se não houver dados suficientes, o sistema diz isso.
+1. **Chunking:** textos corridos são divididos em até 800 caracteres, com sobreposição alvo de 120 e cortes preferenciais por frase ou palavra. Cadastros são agrupados por registros inteiros até 1.000 caracteres, com cabeçalho repetido e sem sobreposição.
+2. **Embeddings:** `intfloat/multilingual-e5-base`, via `sentence-transformers`, produz vetores normalizados de 768 dimensões. Os textos indexados recebem `passage: ` e as perguntas recebem `query: `.
+3. **Banco vetorial:** o Chroma guarda IDs, embeddings, textos originais e metadados na coleção `pontoativo_fontes`, usando distância de cosseno.
+4. **Recuperação:** a consulta retorna os `k` chunks mais próximos; o padrão é 5. A similaridade apresentada é `1 - distância de cosseno`.
+5. **Resposta e fontes:** o sistema reproduz até três trechos, com ID, título, URL, publicação, coleta, validação e ressalvas. O JSON exportado conserva todos os resultados recuperados e a resposta integral.
 
-### Checklist da entrega
+**Similaridade não é probabilidade de acerto.** O sistema ainda não detecta automaticamente quando as evidências são insuficientes: essa avaliação depende de revisão humana.
 
-- [ ] Base de conhecimento curada, com no mínimo 20 documentos-fonte
-- [ ] Descrição da estratégia de chunking
-- [ ] Descrição da estratégia de embeddings
-- [ ] Banco vetorial implementado
-- [ ] Demonstração: consulta, chunks recuperados, resposta fundamentada e fontes usadas
-- [ ] Diagrama de arquitetura
-- [ ] Pipeline de ingestão de dados
+## Requisitos e instalação
 
-**Prazo:** segunda-feira, 09/11, às 8h. A entrega é feita na pasta da equipe no Teams (canal *Segundo Desafio*), e não pelo GitHub.
+O ambiente utilizado na verificação foi **Python 3.13 no Windows**. As dependências estão em [requirements.txt](requirements.txt): PyTorch, sentence-transformers e Chroma.
 
-## Como o repositório está organizado
+No PowerShell, na raiz do repositório:
 
-```
-pontoativo/
-├── README.md
-├── docs/
-│   ├── semana-01/                  # definição do problema e plano de pesquisa
-│   └── semana-02/
-│       ├── arquitetura.md
-│       ├── pipeline-ingestao.md
-│       ├── estrategia-chunking.md
-│       ├── estrategia-embeddings.md
-│       └── demonstracao.md
-├── dados/
-│   ├── catalogo.csv                # lista de todas as fontes
-│   ├── fontes/                     # documentos-fonte (mín. 20)
-│   └── vetorial/                   # banco vetorial gerado (fora do git)
-├── src/
-│   ├── ingestao/                   # leitura, limpeza, chunking, embeddings, carga
-│   ├── recuperacao/                # busca dos chunks mais relevantes
-│   ├── geracao/                    # resposta fundamentada com citação de fontes
-│   └── main.py                     # ponto de entrada
-├── tests/
-│   └── consultas-demo.md           # consultas de teste e resultados esperados
-├── pesquisa/                       # roteiros e síntese das entrevistas (anonimizada)
-└── .gitignore
+```powershell
+python -m venv .venv
+.venv/Scripts/python.exe -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+.venv/Scripts/python.exe -m pip install -r requirements.txt
 ```
 
-| Pasta | O que vai aqui |
+O comando do PyTorch usa a distribuição para CPU. Não é necessário ativar o ambiente virtual: os exemplos chamam diretamente o Python de `.venv`.
+
+Não são necessárias chaves de API. A instalação das bibliotecas e o primeiro uso do E5 exigem internet. O modelo ocupa aproximadamente **1,1 GB**, é baixado automaticamente e reutilizado do cache nas próximas execuções.
+
+## Preparar o banco vetorial
+
+Se `dados/vetorial/` já estiver preenchido e atualizado, siga diretamente para a consulta. O banco local não é versionado: depois de clonar o repositório, normalmente será necessário gerá-lo.
+
+```powershell
+.venv/Scripts/python.exe src/ingestao/carga.py
+```
+
+A carga lê os textos de `dados/fontes/texto/`, faz o chunking, gera os embeddings e grava o banco em `dados/vetorial/`, em lotes de 256. A configuração atual produz 25 fontes e 599 chunks.
+
+**Executar a carga recria a coleção e substitui os dados anteriores.** Refaça essa etapa quando alterar as fontes, o chunking ou o modelo. A carga usa textos já extraídos e limpos; não baixa páginas nem reextrai PDFs.
+
+## Fazer uma consulta
+
+```powershell
+.venv/Scripts/python.exe src/main.py "A academia pública do Parque da Cidade é gratuita e como utilizar?" -k 5
+```
+
+A saída mostra:
+
+- a pergunta submetida;
+- os chunks recuperados, ordenados por similaridade;
+- o documento de origem, URL, data de coleta e um recorte de cada resultado;
+- a resposta extrativa, com até três chunks completos e suas fontes.
+
+Para outra pergunta, basta substituir o texto entre aspas. `-k` controla quantos chunks recuperar; a resposta continua limitada aos três primeiros.
+
+```powershell
+.venv/Scripts/python.exe src/main.py "Quais modalidades esportivas são oferecidas pelos Centros Olímpicos e Paralímpicos do DF?" -k 5
+```
+
+### Salvar a demonstração e suas evidências
+
+```powershell
+.venv/Scripts/python.exe src/main.py "A academia pública do Parque da Cidade é gratuita e como utilizar?" -k 5 --json consulta-demo.json
+```
+
+Esse comando grava `consulta-demo.json` na raiz, com pergunta, ranking, IDs, textos integrais, metadados, distâncias, scores de similaridade e resposta. O arquivo pode ser usado para conferir a fundamentação e a rastreabilidade sem executar a consulta novamente.
+
+O caminho de saída deve apontar para uma pasta que já exista. O comando acima não precisa da pasta temporária de entrega nem do LEIA-ME.
+
+### Mostrar somente a recuperação
+
+```powershell
+.venv/Scripts/python.exe src/recuperacao/buscar.py "Onde praticar natação?" -k 5
+```
+
+### Usar o modelo já baixado sem acesso ao Hub
+
+Depois de uma primeira execução com download concluído:
+
+```powershell
+$env:HF_HUB_OFFLINE = "1"
+.venv/Scripts/python.exe src/main.py "Qual é o endereço do Estádio Bezerrão no Gama?" -k 5
+```
+
+Para permitir acesso ao Hub novamente na mesma sessão do PowerShell:
+
+```powershell
+Remove-Item Env:HF_HUB_OFFLINE -ErrorAction SilentlyContinue
+```
+
+## Conferir o funcionamento
+
+```powershell
+.venv/Scripts/python.exe tests/teste_chunking.py
+.venv/Scripts/python.exe tests/teste_banco.py
+.venv/Scripts/python.exe tests/teste_embeddings.py
+.venv/Scripts/python.exe tests/teste_resposta.py
+```
+
+| Teste | O que verifica |
 |---|---|
-| `docs/semana-01/` | Documento da Semana 1: problema, partes interessadas, hipóteses, riscos e métricas |
-| `docs/semana-02/` | Documentação do RAG: arquitetura, pipeline, chunking, embeddings e demonstração |
-| `dados/fontes/` | Os documentos que alimentam a base de conhecimento |
-| `dados/catalogo.csv` | Uma linha por fonte: id, título, origem, link, data de acesso, tipo e observações |
-| `dados/vetorial/` | Banco vetorial local. É gerado pela ingestão e não é versionado |
-| `src/` | Código do pipeline: ingestão, recuperação e geração |
-| `tests/` | Consultas de teste usadas na demonstração |
-| `pesquisa/` | Roteiros de entrevista, modelo de termo de consentimento e síntese anonimizada |
+| `teste_chunking.py` | IDs únicos, limites de tamanho, metadados e preservação de textos e registros |
+| `teste_banco.py` | Carga, persistência, cosseno, ordenação e filtro por fonte, usando vetores sintéticos em banco temporário |
+| `teste_embeddings.py` | Recuperação com E5 real em cinco exemplos pequenos |
+| `teste_resposta.py` | Preservação dos trechos, IDs, fontes, datas, ressalvas e limite da resposta |
 
-> **Privacidade:** não versionar nomes, contatos, áudios ou termos assinados dos participantes. Esses materiais ficam fora do git, em local privado da equipe.
+O teste de banco não mede qualidade semântica. Os exemplos de embeddings também não representam uma avaliação geral de precisão do sistema.
 
-## Como rodar
+## Estrutura do repositório
 
-> A stack ainda será definida pela equipe e registrada em `docs/semana-02/arquitetura.md`.
-
-```bash
-# 1. Clonar o repositório
-git clone <url-do-repositorio>
-cd pontoativo
-
-# 2. Configurar variáveis de ambiente
-cp .env.example .env      # preencher chaves de API, se necessário
-
-# 3. Instalar dependências
-# (comando a definir conforme a stack)
-
-# 4. Rodar a ingestão para gerar o banco vetorial
-# (comando a definir)
-
-# 5. Fazer uma consulta
-# (comando a definir, ex.: python src/main.py "pergunta")
+```text
+PontoAtivo/
+├── README.MD
+├── requirements.txt
+├── src/
+│   ├── ingestao/          # chunking, embeddings, banco e carga
+│   ├── recuperacao/       # busca semântica
+│   ├── geracao/           # resposta extrativa
+│   └── main.py            # consulta e exportação JSON
+├── dados/
+│   ├── catalogo.csv       # inventário das fontes
+│   ├── fontes/texto/      # 25 textos, PDF original e curadoria
+│   └── vetorial/          # banco gerado localmente, fora do Git
+├── dados_oficiais_seduh/  # coleta original; não é entrada direta da carga
+├── docs/
+│   ├── semana-01/
+│   └── semana-02/
+└── tests/
 ```
 
-## Roadmap
+A pasta temporária `Semana 2` não faz parte da execução atual e já não está presente neste checkout. Código, fontes e comandos deste README são suficientes para instalar as dependências, gerar o banco e fazer consultas.
 
-| Etapa | Foco | Situação |
-|---|---|---|
-| Semana 1 | Problema, partes interessadas, riscos, métricas e plano de pesquisa | Concluída |
-| Semana 2 | Base de conhecimento e primeiro mecanismo de RAG | Em andamento |
-| Semanas seguintes | Protótipo de consulta e comparação com os meios atuais de busca | A fazer |
+## Documentação e fontes
 
-Ideias como reservas, pagamento compartilhado, gamificação e eventos comerciais ficam como **possibilidades futuras** e não fazem parte do compromisso atual.
+- [Catálogo das fontes](dados/catalogo.csv).
+- [Histórico de curadoria e limitações das fontes](dados/fontes/texto/AUDITORIA.md).
+- [Arquitetura](docs/semana-02/arquitetura.md).
+- [Pipeline de ingestão](docs/semana-02/pipeline-ingestao.md).
+- [Estratégia de chunking](docs/semana-02/estrategia-chunking.md).
+- [Estratégia de embeddings](docs/semana-02/estrategia-embeddings.md).
+- [Demonstração documentada anteriormente](docs/semana-02/demonstracao.md).
+
+Esses documentos preservam o histórico de desenvolvimento e podem mencionar materiais temporários de entrega removidos. Para executar o código atual, utilize os comandos deste README.
+
+## Limites atuais
+
+- Não há confirmação de disponibilidade, vagas, horários ou acessibilidade em tempo real.
+- As fontes incluem documentos antigos e camadas cadastrais obsoletas, identificados nas ressalvas.
+- O E5 aceita até 512 tokens. Na medição dos 599 textos indexados, dois chegaram a ultrapassar esse limite, com máximo de 520. Seus embeddings são truncados; o texto original permanece integral no banco.
+- A resposta exibe evidências candidatas. Trechos semelhantes podem não responder à pergunta, mesmo com score alto.
+- A proposta mais ampla de encontrar parceiros e comparar espaços permanece como evolução futura.
 
 ## Como contribuir
 
-1. Crie uma branch a partir da `main` (`docs/...`, `dados/...`, `feat/...`).
-2. Use commits curtos com prefixo: `docs:`, `pesquisa:`, `dados:`, `feat:`, `fix:`.
-3. Toda fonte nova entra no `dados/catalogo.csv`, com origem, link e data de acesso.
-4. Abra um Pull Request e peça revisão de outro integrante.
+1. Registre novas fontes em `dados/catalogo.csv`, com origem, URL e data de coleta.
+2. Preserve os metadados e as ressalvas nos cabeçalhos dos textos-fonte.
+3. Refaça a ingestão e confira as consultas após alterações que afetem o índice.
+4. Abra um Pull Request para revisão pela equipe.
+
+Não versione nomes, contatos, áudios ou termos assinados de participantes de pesquisa. Mantenha esses materiais fora do repositório.
 
 ## Equipe
 
 - Victoria Ferreira
 - Pedro Alvim
-- Cibelly Lourenço 
-- Marcos Bittar 
+- Cibelly Lourenço
+- Marcos Bittar
 - Rebeca Vitória
