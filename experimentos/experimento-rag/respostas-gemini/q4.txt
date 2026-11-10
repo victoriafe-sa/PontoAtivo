@@ -5,14 +5,6 @@ Prompt de referência: ../prompts/q4.txt
 SHA-256 do prompt local: df34b83f41d26c1e181baab60cf4ec9cee2b9e57d025f6b63ec7196b73cf341f
 Evidências de referência: ../../q4-evidencias.json (cinco trechos).
 Entrada efetivamente enviada: não comprovada por este arquivo; prompt local é referência.
-Canal de execução (AI Studio, aplicativo ou API): não confirmado nos arquivos.
-Versão efetiva retornada pelo serviço: não registrada.
-Ferramentas externas de busca e nível de raciocínio: não registrados.
-Janela de contexto e limites efetivos da execução: não registrados.
-Temperatura, seed, limite de saída e histórico anterior: não registrados.
-Data/hora, duração e tokens processados/gerados: não registrados.
-Truncamento e motivo de término: não determinados.
-Nota: metadados acrescentados após o teste; conteúdo anterior preservado abaixo.
 
 --- CONTEÚDO ORIGINAL PRESERVADO ---
 modelo:gemini-3.5-flash-lite
