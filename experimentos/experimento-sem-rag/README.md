@@ -1,6 +1,6 @@
 # Experimento de LLM sem RAG — semana 3
 
-Contraparte do [experimento com RAG](../experimento-rag/README.md). As mesmas perguntas são enviadas aos mesmos modelos **sem nenhum documento recuperado**, para medir o que cada LLM responde só com o conhecimento prévio. O cenário de referência (pipeline atual, com recuperação e resposta extrativa) foi executado novamente para confirmar que as evidências da rodada com RAG continuam reproduzíveis.
+Contraparte do [experimento com RAG](../experimento-rag/analise-respostas.md). As mesmas perguntas são enviadas aos mesmos modelos **sem nenhum documento recuperado**, para medir o que cada LLM responde só com o conhecimento prévio. O cenário de referência (pipeline atual, com recuperação e resposta extrativa) foi executado novamente para confirmar que as evidências da rodada com RAG continuam reproduzíveis.
 
 Data da execução: **10/11/2026** (America/Sao_Paulo). Na Q4, "amanhã" corresponde a **11/11/2026**.
 
@@ -10,14 +10,14 @@ A numeração segue a lista desta rodada, que difere da usada no experimento com
 
 | ID aqui | Pergunta | ID no experimento com RAG | Evidências originais |
 |---|---|---|---|
-| Q1 | Qual é o endereço do Estádio Bezerrão no Gama? | Q3 | `../q3-evidencias.json` |
-| Q2 | Quais modalidades esportivas são oferecidas pelos Centros Olímpicos e Paralímpicos do DF? | Q2 | `../q2-evidencias.json` |
-| Q3 | A academia pública do Parque da Cidade é gratuita e como utilizar? | Q1 | `../q1-evidencias.json` |
-| Q4 | Qual quadra tem vaga disponível amanhã às 19h e acessibilidade verificada para cadeirantes? | Q4 | `../q4-evidencias.json` |
+| Q1 | Qual é o endereço do Estádio Bezerrão no Gama? | Q3 | `../experimento-rag/evidencias/q3-evidencias.json` |
+| Q2 | Quais modalidades esportivas são oferecidas pelos Centros Olímpicos e Paralímpicos do DF? | Q2 | `../experimento-rag/evidencias/q2-evidencias.json` |
+| Q3 | A academia pública do Parque da Cidade é gratuita e como utilizar? | Q1 | `../experimento-rag/evidencias/q1-evidencias.json` |
+| Q4 | Qual quadra tem vaga disponível amanhã às 19h e acessibilidade verificada para cadeirantes? | Q4 | `../experimento-rag/evidencias/q4-evidencias.json` |
 
 ## Prompt
 
-Os arquivos de `prompts/` são o prompt do experimento com RAG sem o bloco `EVIDÊNCIAS`. Persona, limite de 200 palavras, regras sobre datas e ressalvas e formato de saída foram mantidos. Apenas três linhas mudam:
+Os arquivos de `prompts/` desta pasta (e não os de `../prompts/`, que são da rodada com RAG) são o prompt do experimento com RAG sem o bloco `EVIDÊNCIAS`. Persona, limite de 200 palavras, regras sobre datas e ressalvas e formato de saída foram mantidos. Apenas três linhas mudam:
 
 | Com RAG | Sem RAG |
 |---|---|
@@ -83,17 +83,18 @@ O RAG multiplica a entrada por cerca de 14–17 vezes. Com o contexto padrão de
 
 O pipeline atual foi executado do zero: `src/ingestao/carga.py` gerou 25 fontes e 599 chunks, e `src/main.py "<pergunta>" -k 5 --json` foi rodado para as quatro perguntas. As saídas estão em `cenario-referencia/qN.json`, na numeração desta rodada.
 
-- Os 5 trechos recuperados e suas posições são **idênticos** aos de `../q*-evidencias.json` nas quatro perguntas.
+- Os 5 trechos recuperados e suas posições são **idênticos** aos de `../experimento-rag/evidencias/q*-evidencias.json` nas quatro perguntas.
 - A resposta é extrativa (não usa LLM), e uma segunda execução produziu exatamente o mesmo resultado.
 - Tempo: ~3,7 s por consulta, incluindo o carregamento do E5 a cada chamada. Na primeira rodada, Q3 e Q4 levaram ~15 min cada. Esse comportamento não se repetiu e não foi possível determinar a causa (possível suspensão do processo ou disputa de recursos com o download dos modelos), por isso os tempos considerados são os da segunda execução.
 
 ## Estrutura
 
+O script de execução fica em [`scripts/rodar_experimento_sem_rag.py`](../../scripts/rodar_experimento_sem_rag.py), ao lado do script da rodada com RAG.
+
 ```text
 experimento-sem-rag/
 ├── README.md                 # este arquivo
 ├── analise-respostas.md      # avaliação das respostas e comparação com RAG
-├── executar_sem_rag.py       # script de execução (só biblioteca padrão)
 ├── metricas.csv              # tokens e tempos por pergunta/modelo
 ├── prompts/q1..q4.txt        # prompts enviados
 ├── respostas-llama/q1..q4.txt
@@ -111,14 +112,14 @@ Na raiz do repositório, com o Ollama em execução:
 
 ```bash
 ollama pull qwen3:8b && ollama pull llama3.2:3b
-python3 resultados/semana-03/experimento-sem-rag/executar_sem_rag.py llama qwen
+python3 scripts/rodar_experimento_sem_rag.py llama qwen
 ```
 
 Gemini: salve a chave em `.env` na raiz (o arquivo é ignorado pelo Git e a chave não é gravada nos resultados) e use o Python do `.venv`. No macOS, o Python do python.org não traz certificados raiz, e o `.venv` tem o `certifi`, que o script usa:
 
 ```bash
 echo 'GEMINI_API_KEY=sua_chave_real' > .env
-.venv/bin/python resultados/semana-03/experimento-sem-rag/executar_sem_rag.py gemini
+.venv/bin/python scripts/rodar_experimento_sem_rag.py gemini
 ```
 
 O script sobrescreve `respostas-*` e `brutos/`. Para preservar uma rodada, copie a pasta antes de repetir.
