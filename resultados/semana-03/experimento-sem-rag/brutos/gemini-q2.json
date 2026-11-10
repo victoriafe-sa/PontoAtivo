@@ -1,0 +1,20 @@
+{
+  "pergunta_id": "q2",
+  "modelo": "gemini-3.5-flash-lite",
+  "provedor": "gemini",
+  "executado_em": "2026-11-10T16:04:42-03:00",
+  "maquina": "Darwin arm64",
+  "resposta": "Resposta:\nOs Centros Olímpicos e Paralímpicos (COPs) do Distrito Federal oferecem diversas modalidades esportivas, tanto olímpicas quanto paralímpicas, que tradicionalmente incluem natação, hidroginástica, atletismo, futebol, futsal, basquete, vôlei, handebol, ginástica e lutas. A oferta exata de modalidades pode variar conforme a unidade específica (como as de Ceilândia, Taguatinga, Gama, entre outras) e a gestão vigente.\n\nLimitações:\nNão posso confirmar a grade atualizada de modalidades oferecidas em cada unidade dos COPs no momento presente, pois a programação e a disponibilidade de vagas mudam frequentemente. \n\nFontes utilizadas:\nConhecimento geral prévio sobre programas esportivos governamentais do Distrito Federal. Não sei especificar a origem exata (órgão ou documento específico) desta lista geral de modalidades, pois não tenho acesso a documentos oficiais recentes ou ferramentas de busca.",
+  "raciocinio": "",
+  "configuracao": {
+    "generationConfig": "padrão da API",
+    "ferramentas": "nenhuma (sem busca)",
+    "versao_modelo_api": "gemini-3.5-flash-lite"
+  },
+  "tokens_entrada": 205,
+  "tokens_saida": 200,
+  "tokens_raciocinio": null,
+  "tokens_total": 405,
+  "tempo_parede_s": 5.194,
+  "motivo_fim": "STOP"
+}
