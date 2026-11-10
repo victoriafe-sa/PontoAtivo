@@ -1,0 +1,32 @@
+REGISTRO DO EXPERIMENTO — Q4
+Identificador anotado no arquivo original: qwen3:8b
+Origem da identificação: anotação no arquivo de resposta, sem log individual de execução.
+Prompt de referência: ../prompts/q4.txt
+SHA-256 do prompt local: df34b83f41d26c1e181baab60cf4ec9cee2b9e57d025f6b63ec7196b73cf341f
+Evidências de referência: ../../q4-evidencias.json (cinco trechos).
+Entrada efetivamente enviada: não comprovada por este arquivo; prompt local é referência.
+Canal de execução: não confirmado por transcrição individual.
+Versão do Ollama e digest/quantização do modelo: não registrados.
+Contexto configurado (num_ctx) e modo de raciocínio: não registrados; não inferidos das instruções sugeridas.
+Temperatura, seed, limite de saída e histórico anterior: não registrados.
+Data/hora, duração e tokens processados/gerados: não registrados.
+Truncamento e motivo de término: não determinados.
+Nota: metadados acrescentados após o teste; conteúdo anterior preservado abaixo.
+
+--- CONTEÚDO ORIGINAL PRESERVADO ---
+modelo:qwen3:8b
+Resposta:  
+Não é possível confirmar a disponibilidade de quadras com vaga para cadeirantes amanhã às 19h, pois nenhuma das 
+evidências fornece informações sobre a disponibilidade horária ou a ocupação das quadras no momento solicitado. 
+Além disso, embora a Lei nº 6.637/2020 (artigos 112, 113 e 114) estabeleça normas de acessibilidade para espaços 
+públicos, como vagas para pessoas com deficiência, não há dados específicos sobre o estado atual das quadras ou a 
+disponibilidade de vagas em horários específicos.  
+
+Limitações:  
+- Não há informações sobre a disponibilidade horária das quadras.  
+- Não há dados atualizados sobre a ocupação ou disponibilidade de vagas em horários específicos.  
+
+Fontes utilizadas:  
+- N05-024 (Lei nº 6.637/2020 – normas de acessibilidade).  
+- R04-005 (Cadastro oficial de quadras poliesportivas – informações sobre situação física).  
+- F066-005 e F066-001 (notícias sobre melhorias em acessibilidade em Ceilândia).

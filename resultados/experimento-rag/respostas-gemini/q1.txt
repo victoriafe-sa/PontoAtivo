@@ -1,0 +1,24 @@
+REGISTRO DO EXPERIMENTO — Q1
+Identificador anotado no arquivo original: gemini-3.5-flash-lite
+Origem da identificação: anotação no arquivo de resposta, sem log individual de execução.
+Prompt de referência: ../prompts/q1.txt
+SHA-256 do prompt local: 9362fb0fd7608df75a58d70290ddb023fa32b275ed83fcc2a67745370ec48af4
+Evidências de referência: ../../q1-evidencias.json (cinco trechos).
+Entrada efetivamente enviada: não comprovada por este arquivo; prompt local é referência.
+Canal de execução (AI Studio, aplicativo ou API): não confirmado nos arquivos.
+Versão efetiva retornada pelo serviço: não registrada.
+Ferramentas externas de busca e nível de raciocínio: não registrados.
+Janela de contexto e limites efetivos da execução: não registrados.
+Temperatura, seed, limite de saída e histórico anterior: não registrados.
+Data/hora, duração e tokens processados/gerados: não registrados.
+Truncamento e motivo de término: não determinados.
+Nota: metadados acrescentados após o teste; conteúdo anterior preservado abaixo.
+
+--- CONTEÚDO ORIGINAL PRESERVADO ---
+modelo:gemini-3.5-flash-lite
+Resposta:
+A academia pública do Parque da Cidade é gratuita, oferecendo acesso a uma sala completa de musculação e a aulas coletivas de diversas modalidades [N04-008]. Para utilizá-la, é necessário baixar o aplicativo "Mude – Yoga e Fitness", concluir o cadastro e agendar o horário [N04-008]. O funcionamento do espaço é condicionado à presença de um profissional de educação física [N04-008].
+Limitações:
+As informações referem-se ao período de 2024/2025 (com base em uma publicação de janeiro de 2025) e tratam da situação daquela data, sendo necessário confirmar a atualidade do funcionamento e das regras atuais [N04-008].
+Fontes utilizadas:
+[N04-008]

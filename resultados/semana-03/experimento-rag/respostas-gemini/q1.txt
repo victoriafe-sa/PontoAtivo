@@ -1,7 +1,0 @@
-modelo:gemini-3.5-flash-lite
-Resposta:
-A academia pública do Parque da Cidade é gratuita, oferecendo acesso a uma sala completa de musculação e a aulas coletivas de diversas modalidades [N04-008]. Para utilizá-la, é necessário baixar o aplicativo "Mude – Yoga e Fitness", concluir o cadastro e agendar o horário [N04-008]. O funcionamento do espaço é condicionado à presença de um profissional de educação física [N04-008].
-Limitações:
-As informações referem-se ao período de 2024/2025 (com base em uma publicação de janeiro de 2025) e tratam da situação daquela data, sendo necessário confirmar a atualidade do funcionamento e das regras atuais [N04-008].
-Fontes utilizadas:
-[N04-008]

@@ -1,0 +1,30 @@
+REGISTRO DO EXPERIMENTO — Q1
+Identificador anotado no arquivo original: qwen3:8b
+Origem da identificação: anotação no arquivo de resposta, sem log individual de execução.
+Prompt de referência: ../prompts/q1.txt
+SHA-256 do prompt local: 9362fb0fd7608df75a58d70290ddb023fa32b275ed83fcc2a67745370ec48af4
+Evidências de referência: ../../q1-evidencias.json (cinco trechos).
+Entrada efetivamente enviada: não comprovada por este arquivo; prompt local é referência.
+Canal de execução: não confirmado por transcrição individual.
+Versão do Ollama e digest/quantização do modelo: não registrados.
+Contexto configurado (num_ctx) e modo de raciocínio: não registrados; não inferidos das instruções sugeridas.
+Temperatura, seed, limite de saída e histórico anterior: não registrados.
+Data/hora, duração e tokens processados/gerados: não registrados.
+Truncamento e motivo de término: não determinados.
+Nota: metadados acrescentados após o teste; conteúdo anterior preservado abaixo.
+
+--- CONTEÚDO ORIGINAL PRESERVADO ---
+modelo: qwen3:8b
+Resposta:  
+A academia pública do Parque da Cidade oferece atividades físicas gratuitas, conforme mencionado no trecho 
+N04-008. Para utilizá-la, é necessário baixar o aplicativo Mude – Yoga e Fitness, concluir o cadastro e agendar o 
+horário. O funcionamento dos espaços está condicionado à presença de um profissional de educação física, conforme 
+exigência do Conselho Regional da categoria (N04-008). A academia é mantida em parceria com empresas privadas 
+(N04-002).  
+
+Limitações:  
+As informações sobre horários e perfil de uso referem-se a 2024/2025 e precisam ser confirmadas para a atualidade 
+(N04-002). Além disso, a validação das informações está pendente de análise humana.  
+
+Fontes utilizadas:  
+N04-008, N04-002.

@@ -1,0 +1,47 @@
+REGISTRO DO EXPERIMENTO — Q2
+Identificador anotado no arquivo original: qwen3:8b
+Origem da identificação: anotação no arquivo de resposta, sem log individual de execução.
+Prompt de referência: ../prompts/q2.txt
+SHA-256 do prompt local: 02cd44a6aa7f523ea71bb1559cf9b695c21163c9dee9b59fb883de4de6533d31
+Evidências de referência: ../../q2-evidencias.json (cinco trechos).
+Entrada efetivamente enviada: não comprovada por este arquivo; prompt local é referência.
+Canal de execução: não confirmado por transcrição individual.
+Versão do Ollama e digest/quantização do modelo: não registrados.
+Contexto configurado (num_ctx) e modo de raciocínio: não registrados; não inferidos das instruções sugeridas.
+Temperatura, seed, limite de saída e histórico anterior: não registrados.
+Data/hora, duração e tokens processados/gerados: não registrados.
+Truncamento e motivo de término: não determinados.
+Nota: metadados acrescentados após o teste; conteúdo anterior preservado abaixo.
+Repetição: o conteúdo inclui uma segunda saída após “Novo teste:”; não deve ser contado como uma quinta pergunta nem substituir silenciosamente a primeira saída.
+
+--- CONTEÚDO ORIGINAL PRESERVADO ---
+modelo: qwen3:8b
+Ginástica Localizada, Pilates, Vôlei, Jiu-Jitsu, Judô, Taekwondo, Karatê e Capoterapia, entre outras (ID: 
+N03-003). A lista é exemplificativa, e o quantitativo, modalidades e horários variam conforme a unidade (ID: 
+N03-003).  
+
+Limitações:  
+As informações estão baseadas em publicações de 2025 e 2026, e não há garantia de que sejam atualizadas. Além 
+disso, o prazo de inscrição em algumas oportunidades já encerrou (ID: N03-003; N02-002).  
+
+Fontes utilizadas:  
+- N03-003: 
+https://www.esporte.df.gov.br/w/centros-olimpicos-e-paralimpicos-do-df-oferecem-mais-de-10-mil-vagas-remanescentes 
+ 
+- N02-002: 
+https://www.agenciabrasilia.df.gov.br/w/centros-olimpicos-e-paralimpicos-abrem-mais-de-12-mil-vagas-no-df-com-estruhttps://www.agenciabrasilia.df.gov.br/w/centros-olimpicos-e-paralimpicos-abrem-mais-de-12-mil-vagas-no-d-com-estrutura-reforcada
+
+Novo teste:
+Resposta:  
+Os Centros Olímpicos e Paralímpicos do DF oferecem modalidades como Atletismo, Basquete, Futsal, Futebol Society, 
+Ginástica Localizada, Pilates, Vôlei, Jiu-Jitsu, Judô, Taekwondo, Karatê e Capoterapia, entre outras (ID: 
+N03-003). O quantitativo de vagas, modalidades, faixa etária e horários variam conforme a unidade (ID: N03-003).  
+
+Limitações:  
+As informações fornecidas são baseadas em dados de 2025 e 2026, e o prazo de inscrição já encerrou. A lista de 
+modalidades é exemplificativa, e não há detalhamento das atividades por unidade.  
+
+Fontes utilizadas:  
+- N03-003: Notícia institucional (07/09/2025).  
+- N02-002: Notícia institucional (07/04/2026).  
+- F028-001: Informativo institucional do espaço (19/02/2025).
