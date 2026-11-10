@@ -1,0 +1,10 @@
+modelo: llama3.2:3b
+executado_em: 2026-11-10T12:41:04-03:00
+tokens: entrada=249 saida=84
+tempo_s: 2.191
+---
+Infelizmente, não tenho informações sobre os Centros Olímpicos e Paralímpicos do Distrito Federal.
+
+Não posso confirmar quais modalidades esportivas são oferecidas pelos Centros Olímpicos e Paralímpicos do DF.
+
+Não tenho conhecimento sobre a existência desses centros ou informações sobre suas atividades esportivas.

@@ -1,0 +1,33 @@
+{
+  "pergunta_id": "q4",
+  "modelo": "llama3.2:3b",
+  "provedor": "ollama",
+  "executado_em": "2026-11-10T12:41:10-03:00",
+  "maquina": "Darwin arm64",
+  "amanha_refere_se_a": "2026-11-11",
+  "ollama_versao": "0.32.0",
+  "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+  "familia": "llama",
+  "parametros_modelo": "3.2B",
+  "quantizacao": "Q4_K_M",
+  "parametros_padrao_modelfile": "stop                           \"<|start_header_id|>\"\nstop                           \"<|end_header_id|>\"\nstop                           \"<|eot_id|>\"",
+  "resposta": "Desculpe, mas não tenho informações atualizadas sobre vagas de quadras específicas ou acesseabilidade em espaços esportivos no Distrito Federal.\n\nNão posso confirmar se há vaga disponível amanhã às 19h ou se é acessível para cadeirantes. Para obter informações precisas, recomendo entrar em contato diretamente com o espaço esportivo ou organismo responsável pela gestão de quadras e atividades no Distrito Federal.\n\nNão tenho conhecimento sobre a origem das regras ou políticas de acessibilidade de espaços esportivos no DF. Se você precisar de informações sobre como obter acesso a quadras para pessoas com deficiência, recomendo procurar orientação do órgão responsável pela política de inclusão e acessibilidade no Distrito Federal.\n\nNão tenho fontes específicas para citar nesse caso.",
+  "raciocinio": "",
+  "configuracao": {
+    "options": {
+      "seed": 42
+    },
+    "stream": false,
+    "think": "padrão do Ollama (não definido)",
+    "endpoint": "/api/generate"
+  },
+  "tokens_entrada": 248,
+  "tokens_saida": 192,
+  "tempo_total_s": 4.745,
+  "tempo_carga_s": 0.117,
+  "tempo_entrada_s": 0.137,
+  "tempo_geracao_s": 4.489,
+  "tokens_por_s": 42.77,
+  "tempo_parede_s": 4.747,
+  "motivo_fim": "stop"
+}

@@ -1,0 +1,132 @@
+{
+  "consulta": "A academia pública do Parque da Cidade é gratuita e como utilizar?",
+  "k": 5,
+  "resultados": [
+    {
+      "id": "N04-008",
+      "texto": "parcerias entre a iniciativa privada e a gestão pública podem criar soluções potentes e que beneficiam toda a população. Juntos, conseguimos oferecer um espaço que vai além da prática esportiva, promovendo qualidade de vida e reforçando nosso propósito de transformar cidades em ecossistemas de saúde e bem-estar”, defende o CEO da Mude, Marcus Moraes.\nComo utilizar\nA população pode usufruir da sala completa de musculação e aulas coletivas de diversas modalidades gratuitamente. Para realizar as atividades, é necessário baixar o aplicativo Mude – Yoga e Fitness, concluir o cadastro e agendar o horário. O funcionamento dos espaços está condicionado à presença de um profissional de educação física, conforme exigência do Conselho Regional da categoria.",
+      "metadados": {
+        "tema": "Academia pública gratuita do Parque da Cidade: horários e modalidades",
+        "total_chunks": 8,
+        "abrangencia": "Plano Piloto (inferida: o texto não cita a RA)",
+        "regioes": "",
+        "id_fonte": "N04",
+        "indice_chunk": 8,
+        "link": "https://www.agenciabrasilia.df.gov.br/w/academia-publica-do-parque-da-cidade-vira-ponto-de-encontro-e-saude-para-brasilienses",
+        "titulo": "Academia pública do Parque da Cidade vira ponto de encontro e saúde para brasilienses",
+        "recorte": "",
+        "tipo_chunk": "texto",
+        "tipo_evidencia": "Notícia institucional (11/01/2025)",
+        "ressalvas": "Horários e perfil de uso referem-se a 2024/2025: confirmar atualidade. Espaço mantido em parceria com empresas privadas. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "data_coleta": "2026-11-07",
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "validacao": "Pendente de validação humana",
+        "orgao": "Agência Brasília (GDF)",
+        "data_publicacao": "11/01/2025"
+      },
+      "distancia": 0.09098219871520996,
+      "similaridade": 0.90901780128479
+    },
+    {
+      "id": "N04-002",
+      "texto": "a atividades físicas, além de reforçar a conexão entre prática esportiva e qualidade de vida em um ambiente ao ar livre.\nReaberta em junho de 2024, a academia pública do Parque da Cidade oferece atividades físicas gratuitas, ao ar livre | Foto: Paulo H. Carvalho/Agência Brasília\nNo segundo semestre do ano, o perfil dos frequentadores revela uma adesão diversificada. Dos usuários da academia, 58% são homens e 42% mulheres. Enquanto as aulas coletivas atraem majoritariamente o público feminino (74% de participação), a musculação é preferida pelos homens (66%). O espaço tem capacidade para receber até 45 pessoas simultaneamente.",
+      "metadados": {
+        "tipo_chunk": "texto",
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "titulo": "Academia pública do Parque da Cidade vira ponto de encontro e saúde para brasilienses",
+        "tipo_evidencia": "Notícia institucional (11/01/2025)",
+        "regioes": "",
+        "total_chunks": 8,
+        "data_coleta": "2026-11-07",
+        "link": "https://www.agenciabrasilia.df.gov.br/w/academia-publica-do-parque-da-cidade-vira-ponto-de-encontro-e-saude-para-brasilienses",
+        "id_fonte": "N04",
+        "ressalvas": "Horários e perfil de uso referem-se a 2024/2025: confirmar atualidade. Espaço mantido em parceria com empresas privadas. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "data_publicacao": "11/01/2025",
+        "tema": "Academia pública gratuita do Parque da Cidade: horários e modalidades",
+        "recorte": "",
+        "orgao": "Agência Brasília (GDF)",
+        "abrangencia": "Plano Piloto (inferida: o texto não cita a RA)",
+        "validacao": "Pendente de validação humana",
+        "indice_chunk": 2
+      },
+      "distancia": 0.09927010536193848,
+      "similaridade": 0.9007298946380615
+    },
+    {
+      "id": "N04-001",
+      "texto": "11/01/2025 às 08h25 - Atualizado em 26/10/2026 às 01h04\n# Academia pública do Parque da Cidade vira ponto de encontro e saúde para brasilienses\nReaberto em 2024, espaço oferece atividades físicas gratuitas e promove bem-estar em meio à natureza do maior parque urbano da América Latina\nPor Thaís Miranda, da Agência Brasília | Edição: Carolina Caraballo\nA academia pública do Parque da Cidade Sarah Kubitschek tornou-se um ponto de encontro para brasilienses de diferentes idades e estilos de vida. Reaberta em junho de 2024 graças a uma parceria do Governo do Distrito Federal (GDF) com o Laboratório Exame e a empresa Mude, o espaço oferece acesso gratuito a atividades físicas, além de reforçar a conexão entre prática esportiva e qualidade de vida em um ambiente ao ar livre.",
+      "metadados": {
+        "data_publicacao": "11/01/2025",
+        "id_fonte": "N04",
+        "tipo_evidencia": "Notícia institucional (11/01/2025)",
+        "tipo_chunk": "texto",
+        "abrangencia": "Plano Piloto (inferida: o texto não cita a RA)",
+        "titulo": "Academia pública do Parque da Cidade vira ponto de encontro e saúde para brasilienses",
+        "indice_chunk": 1,
+        "link": "https://www.agenciabrasilia.df.gov.br/w/academia-publica-do-parque-da-cidade-vira-ponto-de-encontro-e-saude-para-brasilienses",
+        "recorte": "",
+        "data_coleta": "2026-11-07",
+        "total_chunks": 8,
+        "regioes": "",
+        "ressalvas": "Horários e perfil de uso referem-se a 2024/2025: confirmar atualidade. Espaço mantido em parceria com empresas privadas. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "validacao": "Pendente de validação humana",
+        "tema": "Academia pública gratuita do Parque da Cidade: horários e modalidades",
+        "orgao": "Agência Brasília (GDF)",
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)"
+      },
+      "distancia": 0.10650122165679932,
+      "similaridade": 0.8934987783432007
+    },
+    {
+      "id": "N04-007",
+      "texto": "na democratização do acesso ao esporte e na criação de espaços que conectem a prática física ao meio ambiente. Essa academia é um exemplo de como esporte e natureza podem caminhar juntos, promovendo saúde e qualidade de vida para todos”.\nO administrador do Parque da Cidade, Todi Moreno, também reforça o impacto positivo da iniciativa: “Essa parceria é uma conquista para o Parque da Cidade e para todos os brasilienses. A academia, além de gratuita, é um espaço inclusivo que incentiva a prática esportiva e oferece uma nova oportunidade de convivência em meio à natureza”.\n“Esse projeto é um exemplo de como parcerias entre a iniciativa privada e a gestão pública podem criar soluções potentes e que beneficiam toda a população.",
+      "metadados": {
+        "tema": "Academia pública gratuita do Parque da Cidade: horários e modalidades",
+        "link": "https://www.agenciabrasilia.df.gov.br/w/academia-publica-do-parque-da-cidade-vira-ponto-de-encontro-e-saude-para-brasilienses",
+        "tipo_chunk": "texto",
+        "titulo": "Academia pública do Parque da Cidade vira ponto de encontro e saúde para brasilienses",
+        "indice_chunk": 7,
+        "recorte": "",
+        "tipo_evidencia": "Notícia institucional (11/01/2025)",
+        "orgao": "Agência Brasília (GDF)",
+        "id_fonte": "N04",
+        "abrangencia": "Plano Piloto (inferida: o texto não cita a RA)",
+        "ressalvas": "Horários e perfil de uso referem-se a 2024/2025: confirmar atualidade. Espaço mantido em parceria com empresas privadas. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "data_publicacao": "11/01/2025",
+        "total_chunks": 8,
+        "validacao": "Pendente de validação humana",
+        "data_coleta": "2026-11-07",
+        "regioes": ""
+      },
+      "distancia": 0.117362380027771,
+      "similaridade": 0.882637619972229
+    },
+    {
+      "id": "N04-006",
+      "texto": "Todo dia eu estou aqui, só não venho no dia que está fechado ou chovendo. Eu acho ótimo porque é bom para a nossa saúde. Antes da academia eu só andava de bike, agora vejo muita diferença na saúde, estando ativa todos os dias. Quando chove e não consigo vir, sinto falta”, defende.\nA aposentada Getinalia Batista frequenta a academia desde a sua reabertura: “Eu faço tudo que eles oferecem: musculação, fitdance, HIIT e funcional”\nInclusão e sustentabilidade\nA reabertura da academia foi possível graças a uma parceria público-privada, destacada pelo secretário de Esporte e Lazer do Distrito Federal, Renato Junqueira: “Estamos investindo na democratização do acesso ao esporte e na criação de espaços que conectem a prática física ao meio ambiente.",
+      "metadados": {
+        "data_publicacao": "11/01/2025",
+        "orgao": "Agência Brasília (GDF)",
+        "recorte": "",
+        "tipo_evidencia": "Notícia institucional (11/01/2025)",
+        "regioes": "",
+        "ressalvas": "Horários e perfil de uso referem-se a 2024/2025: confirmar atualidade. Espaço mantido em parceria com empresas privadas. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "tipo_chunk": "texto",
+        "validacao": "Pendente de validação humana",
+        "id_fonte": "N04",
+        "total_chunks": 8,
+        "tema": "Academia pública gratuita do Parque da Cidade: horários e modalidades",
+        "abrangencia": "Plano Piloto (inferida: o texto não cita a RA)",
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "data_coleta": "2026-11-07",
+        "link": "https://www.agenciabrasilia.df.gov.br/w/academia-publica-do-parque-da-cidade-vira-ponto-de-encontro-e-saude-para-brasilienses",
+        "indice_chunk": 6,
+        "titulo": "Academia pública do Parque da Cidade vira ponto de encontro e saúde para brasilienses"
+      },
+      "distancia": 0.12041610479354858,
+      "similaridade": 0.8795838952064514
+    }
+  ],
+  "resposta": "Resposta extrativa — os trechos abaixo são evidências candidatas à pergunta. A proximidade vetorial não garante que respondam a todos os seus pontos.\n\n[N04-008] Academia pública do Parque da Cidade vira ponto de encontro e saúde para brasilienses\nparcerias entre a iniciativa privada e a gestão pública podem criar soluções potentes e que beneficiam toda a população. Juntos, conseguimos oferecer um espaço que vai além da prática esportiva, promovendo qualidade de vida e reforçando nosso propósito de transformar cidades em ecossistemas de saúde e bem-estar”, defende o CEO da Mude, Marcus Moraes.\nComo utilizar\nA população pode usufruir da sala completa de musculação e aulas coletivas de diversas modalidades gratuitamente. Para realizar as atividades, é necessário baixar o aplicativo Mude – Yoga e Fitness, concluir o cadastro e agendar o horário. O funcionamento dos espaços está condicionado à presença de um profissional de educação física, conforme exigência do Conselho Regional da categoria.\nFonte: https://www.agenciabrasilia.df.gov.br/w/academia-publica-do-parque-da-cidade-vira-ponto-de-encontro-e-saude-para-brasilienses\nPublicação: 11/01/2025 | Coleta: 2026-11-07\nValidação: Pendente de validação humana | Ressalvas: Horários e perfil de uso referem-se a 2024/2025: confirmar atualidade. Espaço mantido em parceria com empresas privadas. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.\n\n[N04-002] Academia pública do Parque da Cidade vira ponto de encontro e saúde para brasilienses\na atividades físicas, além de reforçar a conexão entre prática esportiva e qualidade de vida em um ambiente ao ar livre.\nReaberta em junho de 2024, a academia pública do Parque da Cidade oferece atividades físicas gratuitas, ao ar livre | Foto: Paulo H. Carvalho/Agência Brasília\nNo segundo semestre do ano, o perfil dos frequentadores revela uma adesão diversificada. Dos usuários da academia, 58% são homens e 42% mulheres. Enquanto as aulas coletivas atraem majoritariamente o público feminino (74% de participação), a musculação é preferida pelos homens (66%). O espaço tem capacidade para receber até 45 pessoas simultaneamente.\nFonte: https://www.agenciabrasilia.df.gov.br/w/academia-publica-do-parque-da-cidade-vira-ponto-de-encontro-e-saude-para-brasilienses\nPublicação: 11/01/2025 | Coleta: 2026-11-07\nValidação: Pendente de validação humana | Ressalvas: Horários e perfil de uso referem-se a 2024/2025: confirmar atualidade. Espaço mantido em parceria com empresas privadas. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.\n\n[N04-001] Academia pública do Parque da Cidade vira ponto de encontro e saúde para brasilienses\n11/01/2025 às 08h25 - Atualizado em 26/10/2026 às 01h04\n# Academia pública do Parque da Cidade vira ponto de encontro e saúde para brasilienses\nReaberto em 2024, espaço oferece atividades físicas gratuitas e promove bem-estar em meio à natureza do maior parque urbano da América Latina\nPor Thaís Miranda, da Agência Brasília | Edição: Carolina Caraballo\nA academia pública do Parque da Cidade Sarah Kubitschek tornou-se um ponto de encontro para brasilienses de diferentes idades e estilos de vida. Reaberta em junho de 2024 graças a uma parceria do Governo do Distrito Federal (GDF) com o Laboratório Exame e a empresa Mude, o espaço oferece acesso gratuito a atividades físicas, além de reforçar a conexão entre prática esportiva e qualidade de vida em um ambiente ao ar livre.\nFonte: https://www.agenciabrasilia.df.gov.br/w/academia-publica-do-parque-da-cidade-vira-ponto-de-encontro-e-saude-para-brasilienses\nPublicação: 11/01/2025 | Coleta: 2026-11-07\nValidação: Pendente de validação humana | Ressalvas: Horários e perfil de uso referem-se a 2024/2025: confirmar atualidade. Espaço mantido em parceria com empresas privadas. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.\n\nLimite: os trechos descrevem as fontes nas datas indicadas. Não confirmam funcionamento, vagas, horários ou acessibilidade atuais. Se o dado solicitado não aparece nos trechos, não é possível confirmá-lo."
+}

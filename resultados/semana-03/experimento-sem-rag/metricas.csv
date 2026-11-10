@@ -1,0 +1,13 @@
+pergunta_id,modelo,provedor,executado_em,tokens_entrada,tokens_saida,tokens_total,tempo_total_s,tempo_parede_s,tempo_carga_s,tempo_entrada_s,tempo_geracao_s,tokens_por_s,motivo_fim,quantizacao,digest
+q1,gemini-3.5-flash-lite,gemini,2026-11-10T16:03:51-03:00,199,196,395,,51.898,,,,,STOP,,
+q2,gemini-3.5-flash-lite,gemini,2026-11-10T16:04:42-03:00,205,200,405,,5.194,,,,,STOP,,
+q3,gemini-3.5-flash-lite,gemini,2026-11-10T16:04:48-03:00,199,225,424,,7.977,,,,,STOP,,
+q4,gemini-3.5-flash-lite,gemini,2026-11-10T16:05:21-03:00,210,178,388,,1.608,,,,,STOP,,
+q1,llama3.2:3b,ollama,2026-11-10T12:40:59-03:00,238,74,,2.433,2.436,0.124,0.641,1.664,44.47,stop,Q4_K_M,a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72
+q2,llama3.2:3b,ollama,2026-11-10T12:41:04-03:00,249,84,,2.191,2.193,0.118,0.137,1.935,43.41,stop,Q4_K_M,a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72
+q3,llama3.2:3b,ollama,2026-11-10T12:41:06-03:00,237,165,,4.033,4.036,0.116,0.135,3.78,43.65,stop,Q4_K_M,a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72
+q4,llama3.2:3b,ollama,2026-11-10T12:41:10-03:00,248,192,,4.745,4.747,0.117,0.137,4.489,42.77,stop,Q4_K_M,a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72
+q1,qwen3:8b,ollama,2026-11-10T12:41:15-03:00,223,434,,24.626,24.628,0.164,1.36,23.099,18.79,stop,Q4_K_M,500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41
+q2,qwen3:8b,ollama,2026-11-10T12:41:49-03:00,235,529,,28.527,28.53,0.096,0.396,28.025,18.88,stop,Q4_K_M,500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41
+q3,qwen3:8b,ollama,2026-11-10T12:42:18-03:00,223,428,,24.517,24.52,0.099,0.339,24.067,17.78,stop,Q4_K_M,500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41
+q4,qwen3:8b,ollama,2026-11-10T12:42:42-03:00,234,425,,24.851,24.854,0.099,0.379,24.363,17.44,stop,Q4_K_M,500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41
