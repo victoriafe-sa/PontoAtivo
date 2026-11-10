@@ -1,0 +1,32 @@
+{
+  "pergunta_id": "q2",
+  "modelo": "qwen3:8b",
+  "provedor": "ollama",
+  "executado_em": "2026-11-10T12:41:49-03:00",
+  "maquina": "Darwin arm64",
+  "ollama_versao": "0.32.0",
+  "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+  "familia": "qwen3",
+  "parametros_modelo": "8.2B",
+  "quantizacao": "Q4_K_M",
+  "parametros_padrao_modelfile": "repeat_penalty                 1\nstop                           \"<|im_start|>\"\nstop                           \"<|im_end|>\"\ntemperature                    0.6\ntop_k                          20\ntop_p                          0.95",
+  "resposta": "Resposta:  \nOs Centros Olímpicos e Paralímpicos do Distrito Federal (DF) oferecem modalidades esportivas como atletismo, natação, voleibol, futebol, ginástica artística, judô, taekwondo, ciclismo e esgrima, além de atividades adaptadas para pessoas com deficiência, como futebol 5 para atletas paralímpicos, natação paralímpica e esgrima adaptada. Essas instalações visam promover a prática esportiva inclusiva e o desenvolvimento de atletas em diferentes níveis.  \n\nLimitações:  \nNão há uma lista exata ou atualizada de todas as modalidades ofertadas pelos Centros Olímpicos e Paralímpicos do DF em meu banco de dados. As informações são baseadas em conhecimento geral sobre estruturas esportivas públicas no Brasil.  \n\nFontes utilizadas:  \n- Conhecimento prévio sobre ações de inclusão esportiva no DF e no Brasil.  \n- Informações gerais sobre Centros Olímpicos e Paralímpicos no contexto nacional.",
+  "raciocinio": "Okay, the user is asking about the sports modalities offered by the Olympic and Paralympic Centers in the Federal District. I need to recall what I know about these centers. From what I remember, the Olympic Centers in Brazil are part of the National Olympic Committee's infrastructure, but I'm not sure about the specific ones in DF. The Paralympic Centers might be similar but focused on adaptive sports.\n\nWait, the user mentioned the Federal District, which is Brazil's capital. The Olympic Centers there might be under the Coordenação do Esporte (Coordenadoria de Esporte) or similar agencies. But I don't have specific info on the exact sports offered. I should check if there are any known sports like athletics, swimming, or team sports. Also, Paralympic Centers might include wheelchair sports, blind football, etc.\n\nHowever, I don't have the exact list or sources. I should mention that the information isn't available in my current knowledge base and suggest checking official sources like the Coordenação do Esporte or the website of the Olympic Committee of Brazil. Need to make sure not to invent any details or cite non-existent sources. Also, note that the answer is based on general knowledge of Olympic and Paralympic centers, not specific data from the DF.",
+  "configuracao": {
+    "options": {
+      "seed": 42
+    },
+    "stream": false,
+    "think": "padrão do Ollama (não definido)",
+    "endpoint": "/api/generate"
+  },
+  "tokens_entrada": 235,
+  "tokens_saida": 529,
+  "tempo_total_s": 28.527,
+  "tempo_carga_s": 0.096,
+  "tempo_entrada_s": 0.396,
+  "tempo_geracao_s": 28.025,
+  "tokens_por_s": 18.88,
+  "tempo_parede_s": 28.53,
+  "motivo_fim": "stop"
+}

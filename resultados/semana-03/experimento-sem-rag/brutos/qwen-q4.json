@@ -1,0 +1,33 @@
+{
+  "pergunta_id": "q4",
+  "modelo": "qwen3:8b",
+  "provedor": "ollama",
+  "executado_em": "2026-11-10T12:42:42-03:00",
+  "maquina": "Darwin arm64",
+  "amanha_refere_se_a": "2026-11-11",
+  "ollama_versao": "0.32.0",
+  "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+  "familia": "qwen3",
+  "parametros_modelo": "8.2B",
+  "quantizacao": "Q4_K_M",
+  "parametros_padrao_modelfile": "repeat_penalty                 1\nstop                           \"<|im_start|>\"\nstop                           \"<|im_end|>\"\ntemperature                    0.6\ntop_k                          20\ntop_p                          0.95",
+  "resposta": "Resposta:  \nAtualmente, não há informações disponíveis sobre vagas específicas de quadras com acessibilidade para cadeirantes no PontoAtivo para o horário solicitado. O projeto prioriza espaços inclusivos, mas a disponibilidade de vagas e detalhes técnicos de acessibilidade dependem da gestão local de cada unidade.  \n\nLimitações:  \n- Não há acesso a dados em tempo real sobre ocupação ou disponibilidade de vagas.  \n- Acessibilidade é garantida por padrões de projeto, mas a verificação prática exige contato direto com as instalações.  \n\nFontes utilizadas:  \n- Conhecimento prévio sobre o PontoAtivo e suas diretrizes de inclusão.  \n- Não foi possível consultar fontes externas para confirmar disponibilidade específica.",
+  "raciocinio": "Okay, the user is asking which court has a spot available tomorrow at 7 PM and is accessible for wheelchair users. Let me start by recalling what I know about PontoAtivo. It's a project in the Federal District promoting inclusive sports and physical activities. They likely have information on accessible facilities.\n\nFirst, I need to check if there's any specific court mentioned in their projects. From what I remember, PontoAtivo focuses on accessibility, so they might have designated courts with ramps, wide entrances, etc. But I don't have real-time data on availability. The user is asking for a specific time and availability, which I can't confirm without current booking info.\n\nAlso, the user wants to know about accessibility. I should mention that PontoAtivo prioritizes accessibility, but without specific court details, I can't name one. I should inform them that they need to check the official site or contact the organization for the latest info. I should also note that my knowledge is up to 2023, so if there are recent changes, they might not be reflected here. Need to make sure not to invent any information or references. Alright, structure the answer with the response, limitations, and sources used.",
+  "configuracao": {
+    "options": {
+      "seed": 42
+    },
+    "stream": false,
+    "think": "padrão do Ollama (não definido)",
+    "endpoint": "/api/generate"
+  },
+  "tokens_entrada": 234,
+  "tokens_saida": 425,
+  "tempo_total_s": 24.851,
+  "tempo_carga_s": 0.099,
+  "tempo_entrada_s": 0.379,
+  "tempo_geracao_s": 24.363,
+  "tokens_por_s": 17.44,
+  "tempo_parede_s": 24.854,
+  "motivo_fim": "stop"
+}
