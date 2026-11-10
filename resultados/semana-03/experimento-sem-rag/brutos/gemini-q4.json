@@ -1,0 +1,21 @@
+{
+  "pergunta_id": "q4",
+  "modelo": "gemini-3.5-flash-lite",
+  "provedor": "gemini",
+  "executado_em": "2026-11-10T16:05:21-03:00",
+  "maquina": "Darwin arm64",
+  "amanha_refere_se_a": "2026-11-11",
+  "resposta": "Resposta:\nComo assistente do PontoAtivo, não tenho acesso a sistemas de reservas em tempo real, agendas atualizadas ou ferramentas de busca externa. Por isso, não posso informar qual quadra específica possui vaga disponível amanhã às 19h com acessibilidade verificada para cadeirantes. \n\nLimitações:\nMeu conhecimento prévio não inclui a disponibilidade horária em tempo real de quadras esportivas no Distrito Federal, tampouco relatórios atualizados sobre a verificação de acessibilidade para cadeirantes em locais específicos para a data de amanhã. Não posso confirmar a situação atual de agendamentos.\n\nFontes utilizadas:\nNenhuma fonte específica pode ser citada para esta consulta, pois desconheço a origem de dados em tempo real sobre vagas e vistorias de acessibilidade para o dia de amanhã.",
+  "raciocinio": "",
+  "configuracao": {
+    "generationConfig": "padrão da API",
+    "ferramentas": "nenhuma (sem busca)",
+    "versao_modelo_api": "gemini-3.5-flash-lite"
+  },
+  "tokens_entrada": 210,
+  "tokens_saida": 178,
+  "tokens_raciocinio": null,
+  "tokens_total": 388,
+  "tempo_parede_s": 1.608,
+  "motivo_fim": "STOP"
+}

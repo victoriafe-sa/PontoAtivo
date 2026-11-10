@@ -1,0 +1,20 @@
+{
+  "pergunta_id": "q1",
+  "modelo": "gemini-3.5-flash-lite",
+  "provedor": "gemini",
+  "executado_em": "2026-11-10T16:03:51-03:00",
+  "maquina": "Darwin arm64",
+  "resposta": "Resposta:\nO Estádio Walmir Campelo Bezerra, conhecido como Bezerrão, está localizado no Setor Central do Gama, Distrito Federal (endereço específico: Setor Leste, Área Especial, Gama, Brasília - DF). Ressalto que esta informação refere-se a registros históricos e geográficos tradicionais do local, não podendo confirmar se houve alguma alteração recente na numeração ou denominação exata do logradouro.\n\nLimitações:\nNão possuo acesso a ferramentas de busca em tempo real para verificar se houve mudança recente no endereço oficial ou se o estádio passa por alguma alteração em sua estrutura de localização física na data atual.\n\nFontes utilizadas:\nConhecimento geral prévio sobre a geografia e praças esportivas do Distrito Federal. A origem específica de documentos oficiais de tombamento ou cadastro imobiliário não pode ser detalhada com precisão por falta de acesso a fontes documentais diretas no momento.",
+  "raciocinio": "",
+  "configuracao": {
+    "generationConfig": "padrão da API",
+    "ferramentas": "nenhuma (sem busca)",
+    "versao_modelo_api": "gemini-3.5-flash-lite"
+  },
+  "tokens_entrada": 199,
+  "tokens_saida": 196,
+  "tokens_raciocinio": null,
+  "tokens_total": 395,
+  "tempo_parede_s": 51.898,
+  "motivo_fim": "STOP"
+}
