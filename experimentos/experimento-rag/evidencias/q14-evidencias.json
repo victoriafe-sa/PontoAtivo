@@ -1,0 +1,132 @@
+{
+  "consulta": "O que o programa Semear oferece para pessoas com deficiência?",
+  "k": 5,
+  "resultados": [
+    {
+      "id": "N01-009",
+      "texto": "o desenvolvimento das modalidades esportivas e de lazer;III - garantir às pessoas com deficiência acesso a um espaço adequado às suas necessidades específicas propiciando a prática paradesportiva, o lazer e a inclusão social;IV - promover o atendimento esportivo de excelência aos usuários dos Centros Olímpicos e Paralímpicos do Distrito Federal;V - potencializar o foco no atendimento de crianças, jovens, adultos, idosos e pessoas com deficiência e mobilidade reduzida, para manutenção de um estilo de vida ativo e saudável, contribuindo no combate ao sedentarismo e doenças crônico-degenerativas associadas;VI - oportunizar, além das atividades esportivas, outras ações interligadas às atividades culturais e sociais, bem como fomentar manifestações com temas relacionados ao meio-ambiente,",
+      "metadados": {
+        "link": "https://www.sinj.df.gov.br/sinj/Norma/a5fa515d12f1424d96047f54788db994/sel_prt_99_2022.html",
+        "tipo_evidencia": "Regra/norma",
+        "data_coleta": "2026-11-07",
+        "tema": "Normas do Programa dos COPs: matrícula, 5% das vagas para pessoas com deficiência, turmas",
+        "total_chunks": 50,
+        "comprova_funcionamento": "Não se aplica (norma)",
+        "id_fonte": "N01",
+        "tipo_chunk": "texto",
+        "titulo": "Portaria SEL nº 99, de 02/06/2022: Programa Centros Olímpicos e Paralímpicos",
+        "recorte": "",
+        "abrangencia": "DF",
+        "regioes": "",
+        "data_publicacao": "02/06/2022",
+        "validacao": "Pendente de validação humana",
+        "orgao": "Secretaria de Esporte e Lazer do DF (portaria publicada no SINJ-DF)",
+        "ressalvas": "Texto compilado; alterada por Portarias 279, 281 e 282/2022 (listadas como legislação correlata). Substitui a Portaria 99/2021, revogada. Conferir vigência. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "indice_chunk": 9
+      },
+      "distancia": 0.16020917892456055,
+      "similaridade": 0.8397908210754395
+    },
+    {
+      "id": "N01-023",
+      "texto": "normalmente do processo de seleção, sendo posicionado, para fins de seleção, em posição posterior a do candidato que obteve a menor pontuação.Art. 15. O Programa Centros Olímpicos e Paralímpicos do Distrito Federal destinará 5% (cinco por cento) das vagas às pessoas com deficiência que serão avaliadas por equipe multidisciplinar específica.Parágrafo único.",
+      "metadados": {
+        "validacao": "Pendente de validação humana",
+        "orgao": "Secretaria de Esporte e Lazer do DF (portaria publicada no SINJ-DF)",
+        "abrangencia": "DF",
+        "data_publicacao": "02/06/2022",
+        "total_chunks": 50,
+        "regioes": "",
+        "titulo": "Portaria SEL nº 99, de 02/06/2022: Programa Centros Olímpicos e Paralímpicos",
+        "tipo_chunk": "texto",
+        "ressalvas": "Texto compilado; alterada por Portarias 279, 281 e 282/2022 (listadas como legislação correlata). Substitui a Portaria 99/2021, revogada. Conferir vigência. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "id_fonte": "N01",
+        "link": "https://www.sinj.df.gov.br/sinj/Norma/a5fa515d12f1424d96047f54788db994/sel_prt_99_2022.html",
+        "recorte": "",
+        "data_coleta": "2026-11-07",
+        "indice_chunk": 23,
+        "tipo_evidencia": "Regra/norma",
+        "comprova_funcionamento": "Não se aplica (norma)",
+        "tema": "Normas do Programa dos COPs: matrícula, 5% das vagas para pessoas com deficiência, turmas"
+      },
+      "distancia": 0.16377472877502441,
+      "similaridade": 0.8362252712249756
+    },
+    {
+      "id": "N01-042",
+      "texto": "eV - oferecer atividades esportivas, culturais e de lazer, bem como palestras de temáticas diversas, de modo a favorecer o desenvolvimento dos jovens e adolescentes das Regiões Administrativas abrangidas pelo Projeto.Art. 33. O Projeto Esporte à Meia-Noite terá funcionamento nas Regiões Administrativas do Distrito Federal que possuem unidades dos Centros Olímpicos e Paralímpicos conforme estabelecido em Portaria Conjunta e Plano de Trabalho específico.Art. 4. A participação no Projeto Esporte à Meia Noite se dará de forma ampla, por meio do livre acesso dos adolescentes e jovens às unidades dos Centros Olímpicos e Paralímpicos do Distrito Federal.CAPÍTULO IVPROJETO ESPORTE COM A COMUNIDADEArt. 35. O Projeto Esporte com a Comunidade consiste na possibilidade de uso dos espaços esportivos",
+      "metadados": {
+        "data_publicacao": "02/06/2022",
+        "total_chunks": 50,
+        "comprova_funcionamento": "Não se aplica (norma)",
+        "tema": "Normas do Programa dos COPs: matrícula, 5% das vagas para pessoas com deficiência, turmas",
+        "link": "https://www.sinj.df.gov.br/sinj/Norma/a5fa515d12f1424d96047f54788db994/sel_prt_99_2022.html",
+        "validacao": "Pendente de validação humana",
+        "ressalvas": "Texto compilado; alterada por Portarias 279, 281 e 282/2022 (listadas como legislação correlata). Substitui a Portaria 99/2021, revogada. Conferir vigência. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "tipo_evidencia": "Regra/norma",
+        "titulo": "Portaria SEL nº 99, de 02/06/2022: Programa Centros Olímpicos e Paralímpicos",
+        "data_coleta": "2026-11-07",
+        "id_fonte": "N01",
+        "orgao": "Secretaria de Esporte e Lazer do DF (portaria publicada no SINJ-DF)",
+        "abrangencia": "DF",
+        "indice_chunk": 42,
+        "regioes": "",
+        "tipo_chunk": "texto",
+        "recorte": ""
+      },
+      "distancia": 0.16392242908477783,
+      "similaridade": 0.8360775709152222
+    },
+    {
+      "id": "N01-015",
+      "texto": "prioridade no atendimento presencial nos Centros Olímpicos e Paralímpicos§ 5º Para os fins do disposto nesta Portaria, considera-se:I - pessoa com deficiência aquela que tem impedimento de longo prazo de natureza física, mental, intelectual ou sensorial, o qual, em interação com uma ou mais barreiras, pode obstruir sua participação plena e efetiva na sociedade em igualdade de condições com as demais pessoas, nos termos do art. 2º da Lei nº 13.146, de 2015;",
+      "metadados": {
+        "ressalvas": "Texto compilado; alterada por Portarias 279, 281 e 282/2022 (listadas como legislação correlata). Substitui a Portaria 99/2021, revogada. Conferir vigência. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "comprova_funcionamento": "Não se aplica (norma)",
+        "abrangencia": "DF",
+        "tipo_evidencia": "Regra/norma",
+        "link": "https://www.sinj.df.gov.br/sinj/Norma/a5fa515d12f1424d96047f54788db994/sel_prt_99_2022.html",
+        "validacao": "Pendente de validação humana",
+        "regioes": "",
+        "data_coleta": "2026-11-07",
+        "tema": "Normas do Programa dos COPs: matrícula, 5% das vagas para pessoas com deficiência, turmas",
+        "id_fonte": "N01",
+        "total_chunks": 50,
+        "data_publicacao": "02/06/2022",
+        "tipo_chunk": "texto",
+        "orgao": "Secretaria de Esporte e Lazer do DF (portaria publicada no SINJ-DF)",
+        "recorte": "",
+        "titulo": "Portaria SEL nº 99, de 02/06/2022: Programa Centros Olímpicos e Paralímpicos",
+        "indice_chunk": 15
+      },
+      "distancia": 0.16456091403961182,
+      "similaridade": 0.8354390859603882
+    },
+    {
+      "id": "N01-014",
+      "texto": "ouII - a partir de demanda por parte do Poder Judiciário, Ministério Público, Conselho Tutelar, Defensoria Pública ou órgão estatal de proteção social e dos direitos da criança e do adolescente.§ 3º Os alunos com deficiência poderão ser alocados, a partir de avaliação e disponibilidade de vaga, em uma turma regular ou em turma exclusiva para pessoas com deficiência.§ 4º As pessoas com deficiência, as pessoas com transtorno do espectro autista, os idosos com idade igual ou superior a 60 (sessenta) anos, as gestantes, as lactantes, as pessoas com crianças de colo, os obesos, as pessoas com fibromialgia, pessoas que se submetem à hemodiálise e com neoplasia maligna, terão prioridade no atendimento presencial nos Centros Olímpicos e Paralímpicos§ 5º Para os fins do disposto nesta Portaria,",
+      "metadados": {
+        "orgao": "Secretaria de Esporte e Lazer do DF (portaria publicada no SINJ-DF)",
+        "tipo_evidencia": "Regra/norma",
+        "validacao": "Pendente de validação humana",
+        "titulo": "Portaria SEL nº 99, de 02/06/2022: Programa Centros Olímpicos e Paralímpicos",
+        "tipo_chunk": "texto",
+        "id_fonte": "N01",
+        "link": "https://www.sinj.df.gov.br/sinj/Norma/a5fa515d12f1424d96047f54788db994/sel_prt_99_2022.html",
+        "ressalvas": "Texto compilado; alterada por Portarias 279, 281 e 282/2022 (listadas como legislação correlata). Substitui a Portaria 99/2021, revogada. Conferir vigência. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "tema": "Normas do Programa dos COPs: matrícula, 5% das vagas para pessoas com deficiência, turmas",
+        "data_publicacao": "02/06/2022",
+        "comprova_funcionamento": "Não se aplica (norma)",
+        "total_chunks": 50,
+        "indice_chunk": 14,
+        "data_coleta": "2026-11-07",
+        "regioes": "",
+        "abrangencia": "DF",
+        "recorte": ""
+      },
+      "distancia": 0.16574275493621826,
+      "similaridade": 0.8342572450637817
+    }
+  ],
+  "resposta": "Resposta extrativa — os trechos abaixo são evidências candidatas à pergunta. A proximidade vetorial não garante que respondam a todos os seus pontos.\n\n[N01-009] Portaria SEL nº 99, de 02/06/2022: Programa Centros Olímpicos e Paralímpicos\no desenvolvimento das modalidades esportivas e de lazer;III - garantir às pessoas com deficiência acesso a um espaço adequado às suas necessidades específicas propiciando a prática paradesportiva, o lazer e a inclusão social;IV - promover o atendimento esportivo de excelência aos usuários dos Centros Olímpicos e Paralímpicos do Distrito Federal;V - potencializar o foco no atendimento de crianças, jovens, adultos, idosos e pessoas com deficiência e mobilidade reduzida, para manutenção de um estilo de vida ativo e saudável, contribuindo no combate ao sedentarismo e doenças crônico-degenerativas associadas;VI - oportunizar, além das atividades esportivas, outras ações interligadas às atividades culturais e sociais, bem como fomentar manifestações com temas relacionados ao meio-ambiente,\nFonte: https://www.sinj.df.gov.br/sinj/Norma/a5fa515d12f1424d96047f54788db994/sel_prt_99_2022.html\nPublicação: 02/06/2022 | Coleta: 2026-11-07\nValidação: Pendente de validação humana | Ressalvas: Texto compilado; alterada por Portarias 279, 281 e 282/2022 (listadas como legislação correlata). Substitui a Portaria 99/2021, revogada. Conferir vigência. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.\n\n[N01-023] Portaria SEL nº 99, de 02/06/2022: Programa Centros Olímpicos e Paralímpicos\nnormalmente do processo de seleção, sendo posicionado, para fins de seleção, em posição posterior a do candidato que obteve a menor pontuação.Art. 15. O Programa Centros Olímpicos e Paralímpicos do Distrito Federal destinará 5% (cinco por cento) das vagas às pessoas com deficiência que serão avaliadas por equipe multidisciplinar específica.Parágrafo único.\nFonte: https://www.sinj.df.gov.br/sinj/Norma/a5fa515d12f1424d96047f54788db994/sel_prt_99_2022.html\nPublicação: 02/06/2022 | Coleta: 2026-11-07\nValidação: Pendente de validação humana | Ressalvas: Texto compilado; alterada por Portarias 279, 281 e 282/2022 (listadas como legislação correlata). Substitui a Portaria 99/2021, revogada. Conferir vigência. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.\n\n[N01-042] Portaria SEL nº 99, de 02/06/2022: Programa Centros Olímpicos e Paralímpicos\neV - oferecer atividades esportivas, culturais e de lazer, bem como palestras de temáticas diversas, de modo a favorecer o desenvolvimento dos jovens e adolescentes das Regiões Administrativas abrangidas pelo Projeto.Art. 33. O Projeto Esporte à Meia-Noite terá funcionamento nas Regiões Administrativas do Distrito Federal que possuem unidades dos Centros Olímpicos e Paralímpicos conforme estabelecido em Portaria Conjunta e Plano de Trabalho específico.Art. 4. A participação no Projeto Esporte à Meia Noite se dará de forma ampla, por meio do livre acesso dos adolescentes e jovens às unidades dos Centros Olímpicos e Paralímpicos do Distrito Federal.CAPÍTULO IVPROJETO ESPORTE COM A COMUNIDADEArt. 35. O Projeto Esporte com a Comunidade consiste na possibilidade de uso dos espaços esportivos\nFonte: https://www.sinj.df.gov.br/sinj/Norma/a5fa515d12f1424d96047f54788db994/sel_prt_99_2022.html\nPublicação: 02/06/2022 | Coleta: 2026-11-07\nValidação: Pendente de validação humana | Ressalvas: Texto compilado; alterada por Portarias 279, 281 e 282/2022 (listadas como legislação correlata). Substitui a Portaria 99/2021, revogada. Conferir vigência. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.\n\nLimite: os trechos descrevem as fontes nas datas indicadas. Não confirmam funcionamento, vagas, horários ou acessibilidade atuais. Se o dado solicitado não aparece nos trechos, não é possível confirmá-lo."
+}

@@ -1,0 +1,132 @@
+{
+  "consulta": "O que o Decreto distrital nº 28.494/2007 determina sobre acessibilidade em instalações esportivas?",
+  "k": 5,
+  "resultados": [
+    {
+      "id": "N05-006",
+      "texto": "(Artigo vetado pelo Governador, mas mantido pela Câmara Legislativa do Distrito Federal)Parágrafo único. São prioritariamente apoiadas as manifestações desportivas e paradesportivas de rendimento e a educacional, compreendendo as atividades de:I – desenvolvimento de recursos humanos especializados em cada uma das áreas de deficiência;II – promoção de competições desportivas internacionais, nacionais e distritais;III – pesquisa científica, desenvolvimento tecnológico, documentação e informação;IV – construção, ampliação, recuperação e adaptação de instalações desportivas, paradesportivas e de lazer.Art. 99. Os eventos esportivos devem ter, em seu calendário, datas reservadas para a realização de eventos para as pessoas com deficiência.",
+      "metadados": {
+        "abrangencia": "DF",
+        "titulo": "Lei nº 6.637/2020 (Estatuto da Pessoa com Deficiência do DF): recorte do Cap. VIII e do Cap. IX (Seções I a III)",
+        "ressalvas": "RECORTE de uma lei de 148 mil caracteres (texto integral no link). O próprio texto indica dispositivos vetados pelo Governador e mantidos pela Câmara Legislativa; conferir vigência e redação consolidada.",
+        "tipo_evidencia": "Regra/norma (RECORTE)",
+        "id_fonte": "N05",
+        "link": "https://www.sinj.df.gov.br/sinj/Norma/f82224a2df8f4c5aba3f200f1941c6a0/Lei_6637_20_07_2020.html",
+        "indice_chunk": 6,
+        "validacao": "Pendente de validação humana",
+        "data_coleta": "2026-11-07",
+        "comprova_funcionamento": "Não se aplica (norma)",
+        "data_publicacao": "20/07/2020",
+        "recorte": "Capítulo VIII (arts. 97 a ...) e Capítulo IX, Seções I a III (até o art. 134). Quebras de linha inseridas antes de cada 'Art.' (sem alterar o texto). AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "regioes": "",
+        "orgao": "Governo do Distrito Federal (lei distrital; texto no SINJ-DF)",
+        "tema": "Acessibilidade: esporte, lazer, parques, praças e espaços de uso público",
+        "tipo_chunk": "texto",
+        "total_chunks": 42
+      },
+      "distancia": 0.15127086639404297,
+      "similaridade": 0.848729133605957
+    },
+    {
+      "id": "N05-039",
+      "texto": "obrigatoriamente o principal nos casos de nova construção;III – deve ser disponibilizada rota acessível em percursos que comuniquem horizontal e verticalmente todas as dependências e serviços do edifício, entre si e com o exterior, onde se devem cumprir os requisitos de acessibilidade de que trata esta Seção;IV – os edifícios devem dispor de pelo menos 2 instalações sanitárias acessíveis por pavimento, sendo uma masculina e uma feminina.Art. 133. Os órgãos da administração direta e indireta, autarquias, empresas de economia mista e entidades privadas que prestem atendimento diretamente ao público ficam obrigados a implementar modificações físicas, inclusive nas áreas destinadas ao atendimento público, assim como soluções técnicas nos equipamentos de autoatendimento, com vistas à",
+      "metadados": {
+        "tipo_evidencia": "Regra/norma (RECORTE)",
+        "data_publicacao": "20/07/2020",
+        "validacao": "Pendente de validação humana",
+        "total_chunks": 42,
+        "indice_chunk": 39,
+        "ressalvas": "RECORTE de uma lei de 148 mil caracteres (texto integral no link). O próprio texto indica dispositivos vetados pelo Governador e mantidos pela Câmara Legislativa; conferir vigência e redação consolidada.",
+        "recorte": "Capítulo VIII (arts. 97 a ...) e Capítulo IX, Seções I a III (até o art. 134). Quebras de linha inseridas antes de cada 'Art.' (sem alterar o texto). AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "comprova_funcionamento": "Não se aplica (norma)",
+        "tema": "Acessibilidade: esporte, lazer, parques, praças e espaços de uso público",
+        "titulo": "Lei nº 6.637/2020 (Estatuto da Pessoa com Deficiência do DF): recorte do Cap. VIII e do Cap. IX (Seções I a III)",
+        "tipo_chunk": "texto",
+        "orgao": "Governo do Distrito Federal (lei distrital; texto no SINJ-DF)",
+        "abrangencia": "DF",
+        "regioes": "",
+        "data_coleta": "2026-11-07",
+        "link": "https://www.sinj.df.gov.br/sinj/Norma/f82224a2df8f4c5aba3f200f1941c6a0/Lei_6637_20_07_2020.html",
+        "id_fonte": "N05"
+      },
+      "distancia": 0.1515141725540161,
+      "similaridade": 0.8484858274459839
+    },
+    {
+      "id": "N05-023",
+      "texto": "análoga.Seção IIDos Elementos de UrbanizaçãoArt. 109. O planejamento e a urbanização das vias públicas, dos parques e dos demais espaços de uso público devem ser concebidos e executados de forma a torná-los acessíveis para as pessoas com deficiência.Art. 110. As vias públicas, os parques e os demais espaços de uso público existentes, assim como as respectivas instalações de serviços e mobiliários urbanos, devem ser adaptados, obedecendo-se a ordem de prioridade que vise à maior eficiência das modificações, no sentido de promover a plena acessibilidade às pessoas com deficiência.Art. 111. Os parques de diversões públicos e privados devem adaptar no mínimo 5% de cada brinquedo e de seus equipamentos e identificá-los para possibilitar sua utilização por pessoas com deficiência, tanto quanto",
+      "metadados": {
+        "comprova_funcionamento": "Não se aplica (norma)",
+        "data_coleta": "2026-11-07",
+        "tipo_chunk": "texto",
+        "id_fonte": "N05",
+        "regioes": "",
+        "validacao": "Pendente de validação humana",
+        "ressalvas": "RECORTE de uma lei de 148 mil caracteres (texto integral no link). O próprio texto indica dispositivos vetados pelo Governador e mantidos pela Câmara Legislativa; conferir vigência e redação consolidada.",
+        "titulo": "Lei nº 6.637/2020 (Estatuto da Pessoa com Deficiência do DF): recorte do Cap. VIII e do Cap. IX (Seções I a III)",
+        "tema": "Acessibilidade: esporte, lazer, parques, praças e espaços de uso público",
+        "recorte": "Capítulo VIII (arts. 97 a ...) e Capítulo IX, Seções I a III (até o art. 134). Quebras de linha inseridas antes de cada 'Art.' (sem alterar o texto). AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "tipo_evidencia": "Regra/norma (RECORTE)",
+        "data_publicacao": "20/07/2020",
+        "link": "https://www.sinj.df.gov.br/sinj/Norma/f82224a2df8f4c5aba3f200f1941c6a0/Lei_6637_20_07_2020.html",
+        "orgao": "Governo do Distrito Federal (lei distrital; texto no SINJ-DF)",
+        "indice_chunk": 23,
+        "total_chunks": 42,
+        "abrangencia": "DF"
+      },
+      "distancia": 0.1520264744758606,
+      "similaridade": 0.8479735255241394
+    },
+    {
+      "id": "N05-038",
+      "texto": "Para os fins do disposto neste artigo, na construção, ampliação ou reforma de edifícios públicos ou privados destinados ao uso coletivo, devem ser observados, pelo menos, os seguintes requisitos de acessibilidade:I – nas áreas externas ou internas da edificação, destinadas à garagem e ao estacionamento de uso público, devem ser reservadas 5% das vagas próximas dos acessos de circulação de pedestres, devidamente sinalizadas e demarcadas, conforme legislação e normas técnicas em vigor, para veículos que transportem pessoas com deficiência;II – um dos acessos ao interior da edificação deve estar livre de barreiras arquitetônicas e de obstáculos que impeçam ou dificultem a acessibilidade de pessoa com deficiência, sendo preferencialmente o principal nos casos de ampliação ou reforma e",
+      "metadados": {
+        "ressalvas": "RECORTE de uma lei de 148 mil caracteres (texto integral no link). O próprio texto indica dispositivos vetados pelo Governador e mantidos pela Câmara Legislativa; conferir vigência e redação consolidada.",
+        "tipo_evidencia": "Regra/norma (RECORTE)",
+        "recorte": "Capítulo VIII (arts. 97 a ...) e Capítulo IX, Seções I a III (até o art. 134). Quebras de linha inseridas antes de cada 'Art.' (sem alterar o texto). AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "indice_chunk": 38,
+        "tema": "Acessibilidade: esporte, lazer, parques, praças e espaços de uso público",
+        "link": "https://www.sinj.df.gov.br/sinj/Norma/f82224a2df8f4c5aba3f200f1941c6a0/Lei_6637_20_07_2020.html",
+        "data_publicacao": "20/07/2020",
+        "orgao": "Governo do Distrito Federal (lei distrital; texto no SINJ-DF)",
+        "abrangencia": "DF",
+        "regioes": "",
+        "titulo": "Lei nº 6.637/2020 (Estatuto da Pessoa com Deficiência do DF): recorte do Cap. VIII e do Cap. IX (Seções I a III)",
+        "id_fonte": "N05",
+        "comprova_funcionamento": "Não se aplica (norma)",
+        "data_coleta": "2026-11-07",
+        "total_chunks": 42,
+        "tipo_chunk": "texto",
+        "validacao": "Pendente de validação humana"
+      },
+      "distancia": 0.15211009979248047,
+      "similaridade": 0.8478899002075195
+    },
+    {
+      "id": "N05-004",
+      "texto": "visuais, folclore, artesanato, entre outras manifestações culturais;e) cursos e oficinas culturais acessíveis às pessoas com deficiência;IV – prática desportiva e paradesportiva nos seguintes moldes:a) prática desportiva e paradesportiva formal e não formal como direito de cada um;b) meios que facilitem o exercício de atividades desportivas e paradesportivas entre as pessoas com deficiência e suas entidades representativas;c) acessibilidade às instalações desportivas dos estabelecimentos de ensino, desde a educação infantil até o nível superior;d) inclusão de atividades desportivas e paradesportivas nos estabelecimentos de ensino, desde a educação infantil até o nível superior;V – incentivo ao turismo para as pessoas com deficiência, mediante:a) publicação e uso de guias de turismo com",
+      "metadados": {
+        "comprova_funcionamento": "Não se aplica (norma)",
+        "titulo": "Lei nº 6.637/2020 (Estatuto da Pessoa com Deficiência do DF): recorte do Cap. VIII e do Cap. IX (Seções I a III)",
+        "data_publicacao": "20/07/2020",
+        "tipo_evidencia": "Regra/norma (RECORTE)",
+        "tema": "Acessibilidade: esporte, lazer, parques, praças e espaços de uso público",
+        "id_fonte": "N05",
+        "orgao": "Governo do Distrito Federal (lei distrital; texto no SINJ-DF)",
+        "regioes": "",
+        "link": "https://www.sinj.df.gov.br/sinj/Norma/f82224a2df8f4c5aba3f200f1941c6a0/Lei_6637_20_07_2020.html",
+        "ressalvas": "RECORTE de uma lei de 148 mil caracteres (texto integral no link). O próprio texto indica dispositivos vetados pelo Governador e mantidos pela Câmara Legislativa; conferir vigência e redação consolidada.",
+        "validacao": "Pendente de validação humana",
+        "total_chunks": 42,
+        "abrangencia": "DF",
+        "recorte": "Capítulo VIII (arts. 97 a ...) e Capítulo IX, Seções I a III (até o art. 134). Quebras de linha inseridas antes de cada 'Art.' (sem alterar o texto). AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "indice_chunk": 4,
+        "tipo_chunk": "texto",
+        "data_coleta": "2026-11-07"
+      },
+      "distancia": 0.15298694372177124,
+      "similaridade": 0.8470130562782288
+    }
+  ],
+  "resposta": "Resposta extrativa — os trechos abaixo são evidências candidatas à pergunta. A proximidade vetorial não garante que respondam a todos os seus pontos.\n\n[N05-006] Lei nº 6.637/2020 (Estatuto da Pessoa com Deficiência do DF): recorte do Cap. VIII e do Cap. IX (Seções I a III)\n(Artigo vetado pelo Governador, mas mantido pela Câmara Legislativa do Distrito Federal)Parágrafo único. São prioritariamente apoiadas as manifestações desportivas e paradesportivas de rendimento e a educacional, compreendendo as atividades de:I – desenvolvimento de recursos humanos especializados em cada uma das áreas de deficiência;II – promoção de competições desportivas internacionais, nacionais e distritais;III – pesquisa científica, desenvolvimento tecnológico, documentação e informação;IV – construção, ampliação, recuperação e adaptação de instalações desportivas, paradesportivas e de lazer.Art. 99. Os eventos esportivos devem ter, em seu calendário, datas reservadas para a realização de eventos para as pessoas com deficiência.\nFonte: https://www.sinj.df.gov.br/sinj/Norma/f82224a2df8f4c5aba3f200f1941c6a0/Lei_6637_20_07_2020.html\nPublicação: 20/07/2020 | Coleta: 2026-11-07\nValidação: Pendente de validação humana | Ressalvas: RECORTE de uma lei de 148 mil caracteres (texto integral no link). O próprio texto indica dispositivos vetados pelo Governador e mantidos pela Câmara Legislativa; conferir vigência e redação consolidada.\n\n[N05-039] Lei nº 6.637/2020 (Estatuto da Pessoa com Deficiência do DF): recorte do Cap. VIII e do Cap. IX (Seções I a III)\nobrigatoriamente o principal nos casos de nova construção;III – deve ser disponibilizada rota acessível em percursos que comuniquem horizontal e verticalmente todas as dependências e serviços do edifício, entre si e com o exterior, onde se devem cumprir os requisitos de acessibilidade de que trata esta Seção;IV – os edifícios devem dispor de pelo menos 2 instalações sanitárias acessíveis por pavimento, sendo uma masculina e uma feminina.Art. 133. Os órgãos da administração direta e indireta, autarquias, empresas de economia mista e entidades privadas que prestem atendimento diretamente ao público ficam obrigados a implementar modificações físicas, inclusive nas áreas destinadas ao atendimento público, assim como soluções técnicas nos equipamentos de autoatendimento, com vistas à\nFonte: https://www.sinj.df.gov.br/sinj/Norma/f82224a2df8f4c5aba3f200f1941c6a0/Lei_6637_20_07_2020.html\nPublicação: 20/07/2020 | Coleta: 2026-11-07\nValidação: Pendente de validação humana | Ressalvas: RECORTE de uma lei de 148 mil caracteres (texto integral no link). O próprio texto indica dispositivos vetados pelo Governador e mantidos pela Câmara Legislativa; conferir vigência e redação consolidada.\n\n[N05-023] Lei nº 6.637/2020 (Estatuto da Pessoa com Deficiência do DF): recorte do Cap. VIII e do Cap. IX (Seções I a III)\nanáloga.Seção IIDos Elementos de UrbanizaçãoArt. 109. O planejamento e a urbanização das vias públicas, dos parques e dos demais espaços de uso público devem ser concebidos e executados de forma a torná-los acessíveis para as pessoas com deficiência.Art. 110. As vias públicas, os parques e os demais espaços de uso público existentes, assim como as respectivas instalações de serviços e mobiliários urbanos, devem ser adaptados, obedecendo-se a ordem de prioridade que vise à maior eficiência das modificações, no sentido de promover a plena acessibilidade às pessoas com deficiência.Art. 111. Os parques de diversões públicos e privados devem adaptar no mínimo 5% de cada brinquedo e de seus equipamentos e identificá-los para possibilitar sua utilização por pessoas com deficiência, tanto quanto\nFonte: https://www.sinj.df.gov.br/sinj/Norma/f82224a2df8f4c5aba3f200f1941c6a0/Lei_6637_20_07_2020.html\nPublicação: 20/07/2020 | Coleta: 2026-11-07\nValidação: Pendente de validação humana | Ressalvas: RECORTE de uma lei de 148 mil caracteres (texto integral no link). O próprio texto indica dispositivos vetados pelo Governador e mantidos pela Câmara Legislativa; conferir vigência e redação consolidada.\n\nLimite: os trechos descrevem as fontes nas datas indicadas. Não confirmam funcionamento, vagas, horários ou acessibilidade atuais. Se o dado solicitado não aparece nos trechos, não é possível confirmá-lo."
+}

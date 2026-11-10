@@ -1,0 +1,132 @@
+{
+  "consulta": "Quanto a Novacap está investindo em Pontos de Encontro Comunitário e quantos PECs pretende instalar ou revitalizar?",
+  "k": 5,
+  "resultados": [
+    {
+      "id": "F065-002",
+      "texto": "de exercícios físicos em um Ponto de Encontro Comunitário (PEC) levou qualidade de vida e lazer para a população local. A execução faz parte do conjunto de ordens de serviço assinadas pelo Governo do DF por meio do Programa GDF na Sua Porta.\nAo lado de um parquinho infantil, a Companhia Urbanizadora da Nova Capital do Brasil (Novacap) instalou aparelhos que estimulam atividades físicas e o convívio da comunidade local. O valor investido em cada PEC é de aproximadamente R$ 35 mil.\nPara o chefe da Divisão de Equipamentos da Novacap, Ramon Castro, o Programa GDF na Sua Porta tem sido um eficiente instrumento de atendimento às demandas da sociedade, fomentando a articulação entre a população, administrações regionais e secretarias.\n“Essa ação vem ao encontro dos anseios da população.",
+      "metadados": {
+        "titulo": "PEC construído no GDF na Sua Porta promove saúde e lazer para a quadra 605 do Recanto das Emas",
+        "validacao": "Pendente de validação humana",
+        "id_fonte": "F065",
+        "recorte": "",
+        "regioes": "",
+        "link": "https://agenciabrasilia.df.gov.br/w/pec-construido-no-gdf-na-sua-porta-promove-saude-e-lazer-para-a-quadra-605-do-recanto-das-emas",
+        "data_publicacao": "24/07/2026",
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "orgao": "Agência Brasília (GDF)",
+        "tipo_chunk": "texto",
+        "tema": "PEC instalado na quadra 605 do Recanto das Emas",
+        "tipo_evidencia": "Notícia: entrega/instalação concluída (publicada em 24/07/2026)",
+        "indice_chunk": 2,
+        "ressalvas": "Não informa horários nem acessibilidade do equipamento. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "abrangencia": "Recanto das Emas",
+        "data_coleta": "2026-11-05",
+        "total_chunks": 7
+      },
+      "distancia": 0.11450278759002686,
+      "similaridade": 0.8854972124099731
+    },
+    {
+      "id": "F066-002",
+      "texto": "no Setor O, e a entrega de um novo Ponto de Encontro Comunitário (PEC) na quadra 9/11, com investimento de R$ 350 mil. As calçadas facilitam o deslocamento seguro da população, enquanto a PEC oferece estrutura para atividades físicas e de convivência social. As obras são executadas pela Companhia Urbanizadora da Nova Capital do Brasil (Novacap) em parceria com a Administração Regional.\nA prioridade tem sido garantir acessibilidade, especialmente para estudantes e moradores da comunidade, segundo o administrador regional, Dilson de Almeida. “A gente tem priorizado fazer calçadas em locais onde há equipamentos públicos e acesso ao transporte coletivo.",
+      "metadados": {
+        "recorte": "",
+        "abrangencia": "Ceilândia",
+        "tema": "PEC na quadra 9/11 e calçadas acessíveis (EQNO 11/13)",
+        "data_coleta": "2026-11-05",
+        "id_fonte": "F066",
+        "ressalvas": "A acessibilidade citada é a das calçadas (piso tátil, rebaixamento de meio-fio), não do PEC. Também descreve obras em andamento (quadras 18/19 e 8). AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "validacao": "Pendente de validação humana",
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "orgao": "Administração Regional de Ceilândia (GDF)",
+        "regioes": "",
+        "indice_chunk": 2,
+        "data_publicacao": "29/05/2025",
+        "titulo": "Governo do DF amplia acessibilidade e entrega novo PEC para os moradores de Ceilândia",
+        "link": "https://www.ceilandia.df.gov.br/w/governo-do-df-amplia-acessibilidade-e-entrega-novo-pec-para-os-moradores-de-ceilandia",
+        "total_chunks": 7,
+        "tipo_evidencia": "Notícia: entrega/instalação concluída (publicada em 29/05/2025)",
+        "tipo_chunk": "texto"
+      },
+      "distancia": 0.12344729900360107,
+      "similaridade": 0.8765527009963989
+    },
+    {
+      "id": "F065-004",
+      "texto": "em função da iluminação e do estímulo ao fluxo de pessoas, vão trazer maior qualidade de vida para a comunidade local.\nAo lado de um parquinho infantil, a Novacap instalou aparelhos que estimulam atividades físicas e o convívio da comunidade local | Foto: Paulo H. Carvalho/Agência Brasília “Aqui, antigamente, os jovens não tinham lazer. Era uma dificuldade imensa. Agora, com esse PEC, já dá para ver que os meninos vão ficar alegres, mais à vontade para ir à escola, menos estressados. É um projeto muito importante”, disse, afirmando que também irá usar os aparelhos disponibilizados no espaço.\nO empreendedor Elimar Carvalho da Silva, de 45 anos, mora no Recanto das Emas desde os 13 anos de idade.",
+      "metadados": {
+        "data_coleta": "2026-11-05",
+        "recorte": "",
+        "link": "https://agenciabrasilia.df.gov.br/w/pec-construido-no-gdf-na-sua-porta-promove-saude-e-lazer-para-a-quadra-605-do-recanto-das-emas",
+        "abrangencia": "Recanto das Emas",
+        "total_chunks": 7,
+        "regioes": "",
+        "titulo": "PEC construído no GDF na Sua Porta promove saúde e lazer para a quadra 605 do Recanto das Emas",
+        "id_fonte": "F065",
+        "indice_chunk": 4,
+        "orgao": "Agência Brasília (GDF)",
+        "data_publicacao": "24/07/2026",
+        "tipo_chunk": "texto",
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "ressalvas": "Não informa horários nem acessibilidade do equipamento. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "tema": "PEC instalado na quadra 605 do Recanto das Emas",
+        "validacao": "Pendente de validação humana",
+        "tipo_evidencia": "Notícia: entrega/instalação concluída (publicada em 24/07/2026)"
+      },
+      "distancia": 0.13856327533721924,
+      "similaridade": 0.8614367246627808
+    },
+    {
+      "id": "F065-006",
+      "texto": "esses equipamentos servem para pais e mães terem um local para se exercitar e para as crianças se divertirem”, disse.\nSegundo o arquiteto e gerente de obras da Administração do Recanto das Emas, Rosinildo Rafael de Barros, a população exerce um papel significativo no levantamento de necessidades de reparo e manutenção de equipamentos públicos.\n“[Esse processo] é muito importante porque a administração trabalha junto com a comunidade. A comunidade nos passa as demandas, fiscalizamos pontos que estão críticos e que precisam de reformas, e, por meio dessas solicitações, vamos atender a comunidade”, afirmou.\nRessocialização por meio do trabalho\nA execução do trabalho foi feita por reeducandos, parceria da Novacap com a Fundação de Amparo ao Trabalhador Preso (Funap-DF).",
+      "metadados": {
+        "regioes": "",
+        "tipo_chunk": "texto",
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "total_chunks": 7,
+        "validacao": "Pendente de validação humana",
+        "recorte": "",
+        "link": "https://agenciabrasilia.df.gov.br/w/pec-construido-no-gdf-na-sua-porta-promove-saude-e-lazer-para-a-quadra-605-do-recanto-das-emas",
+        "data_coleta": "2026-11-05",
+        "id_fonte": "F065",
+        "tema": "PEC instalado na quadra 605 do Recanto das Emas",
+        "abrangencia": "Recanto das Emas",
+        "orgao": "Agência Brasília (GDF)",
+        "data_publicacao": "24/07/2026",
+        "titulo": "PEC construído no GDF na Sua Porta promove saúde e lazer para a quadra 605 do Recanto das Emas",
+        "tipo_evidencia": "Notícia: entrega/instalação concluída (publicada em 24/07/2026)",
+        "indice_chunk": 6,
+        "ressalvas": "Não informa horários nem acessibilidade do equipamento. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial."
+      },
+      "distancia": 0.1450323462486267,
+      "similaridade": 0.8549676537513733
+    },
+    {
+      "id": "F066-001",
+      "texto": "29/05/2025 às 17h04 - Atualizado em 26/10/2026 às 01h18\n### Governo do DF amplia acessibilidade e entrega novo PEC para os moradores de Ceilândia\nCom 2 mil metros de calçadas na EQNO 11/13 e academia ao ar livre na 9/11, governo melhora mobilidade e oferece mais lazer à comunidade com apoio da Novacap e da Administração Regional\nKarol Ribeiro, da Agência Brasília | Edição: Débora Cronemberger\nO Governo do Distrito Federal (GDF) investe na melhoria da acessibilidade e na oferta de espaços de lazer em Ceilândia, com a construção de 2 mil metros de calçadas na EQNO 11/13, no Setor O, e a entrega de um novo Ponto de Encontro Comunitário (PEC) na quadra 9/11, com investimento de R$ 350 mil.",
+      "metadados": {
+        "recorte": "",
+        "regioes": "",
+        "data_coleta": "2026-11-05",
+        "ressalvas": "A acessibilidade citada é a das calçadas (piso tátil, rebaixamento de meio-fio), não do PEC. Também descreve obras em andamento (quadras 18/19 e 8). AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "orgao": "Administração Regional de Ceilândia (GDF)",
+        "data_publicacao": "29/05/2025",
+        "tema": "PEC na quadra 9/11 e calçadas acessíveis (EQNO 11/13)",
+        "link": "https://www.ceilandia.df.gov.br/w/governo-do-df-amplia-acessibilidade-e-entrega-novo-pec-para-os-moradores-de-ceilandia",
+        "titulo": "Governo do DF amplia acessibilidade e entrega novo PEC para os moradores de Ceilândia",
+        "id_fonte": "F066",
+        "abrangencia": "Ceilândia",
+        "validacao": "Pendente de validação humana",
+        "indice_chunk": 1,
+        "total_chunks": 7,
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "tipo_evidencia": "Notícia: entrega/instalação concluída (publicada em 29/05/2025)",
+        "tipo_chunk": "texto"
+      },
+      "distancia": 0.14576518535614014,
+      "similaridade": 0.8542348146438599
+    }
+  ],
+  "resposta": "Resposta extrativa — os trechos abaixo são evidências candidatas à pergunta. A proximidade vetorial não garante que respondam a todos os seus pontos.\n\n[F065-002] PEC construído no GDF na Sua Porta promove saúde e lazer para a quadra 605 do Recanto das Emas\nde exercícios físicos em um Ponto de Encontro Comunitário (PEC) levou qualidade de vida e lazer para a população local. A execução faz parte do conjunto de ordens de serviço assinadas pelo Governo do DF por meio do Programa GDF na Sua Porta.\nAo lado de um parquinho infantil, a Companhia Urbanizadora da Nova Capital do Brasil (Novacap) instalou aparelhos que estimulam atividades físicas e o convívio da comunidade local. O valor investido em cada PEC é de aproximadamente R$ 35 mil.\nPara o chefe da Divisão de Equipamentos da Novacap, Ramon Castro, o Programa GDF na Sua Porta tem sido um eficiente instrumento de atendimento às demandas da sociedade, fomentando a articulação entre a população, administrações regionais e secretarias.\n“Essa ação vem ao encontro dos anseios da população.\nFonte: https://agenciabrasilia.df.gov.br/w/pec-construido-no-gdf-na-sua-porta-promove-saude-e-lazer-para-a-quadra-605-do-recanto-das-emas\nPublicação: 24/07/2026 | Coleta: 2026-11-05\nValidação: Pendente de validação humana | Ressalvas: Não informa horários nem acessibilidade do equipamento. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.\n\n[F066-002] Governo do DF amplia acessibilidade e entrega novo PEC para os moradores de Ceilândia\nno Setor O, e a entrega de um novo Ponto de Encontro Comunitário (PEC) na quadra 9/11, com investimento de R$ 350 mil. As calçadas facilitam o deslocamento seguro da população, enquanto a PEC oferece estrutura para atividades físicas e de convivência social. As obras são executadas pela Companhia Urbanizadora da Nova Capital do Brasil (Novacap) em parceria com a Administração Regional.\nA prioridade tem sido garantir acessibilidade, especialmente para estudantes e moradores da comunidade, segundo o administrador regional, Dilson de Almeida. “A gente tem priorizado fazer calçadas em locais onde há equipamentos públicos e acesso ao transporte coletivo.\nFonte: https://www.ceilandia.df.gov.br/w/governo-do-df-amplia-acessibilidade-e-entrega-novo-pec-para-os-moradores-de-ceilandia\nPublicação: 29/05/2025 | Coleta: 2026-11-05\nValidação: Pendente de validação humana | Ressalvas: A acessibilidade citada é a das calçadas (piso tátil, rebaixamento de meio-fio), não do PEC. Também descreve obras em andamento (quadras 18/19 e 8). AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.\n\n[F065-004] PEC construído no GDF na Sua Porta promove saúde e lazer para a quadra 605 do Recanto das Emas\nem função da iluminação e do estímulo ao fluxo de pessoas, vão trazer maior qualidade de vida para a comunidade local.\nAo lado de um parquinho infantil, a Novacap instalou aparelhos que estimulam atividades físicas e o convívio da comunidade local | Foto: Paulo H. Carvalho/Agência Brasília “Aqui, antigamente, os jovens não tinham lazer. Era uma dificuldade imensa. Agora, com esse PEC, já dá para ver que os meninos vão ficar alegres, mais à vontade para ir à escola, menos estressados. É um projeto muito importante”, disse, afirmando que também irá usar os aparelhos disponibilizados no espaço.\nO empreendedor Elimar Carvalho da Silva, de 45 anos, mora no Recanto das Emas desde os 13 anos de idade.\nFonte: https://agenciabrasilia.df.gov.br/w/pec-construido-no-gdf-na-sua-porta-promove-saude-e-lazer-para-a-quadra-605-do-recanto-das-emas\nPublicação: 24/07/2026 | Coleta: 2026-11-05\nValidação: Pendente de validação humana | Ressalvas: Não informa horários nem acessibilidade do equipamento. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.\n\nLimite: os trechos descrevem as fontes nas datas indicadas. Não confirmam funcionamento, vagas, horários ou acessibilidade atuais. Se o dado solicitado não aparece nos trechos, não é possível confirmá-lo."
+}

@@ -1,0 +1,132 @@
+{
+  "consulta": "Quais modalidades são oferecidas no COP do Setor O, em Ceilândia?",
+  "k": 5,
+  "resultados": [
+    {
+      "id": "F009-004",
+      "texto": "O parque é um patrimônio da comunidade e precisa estar cada vez mais acessível, seguro e acolhedor”.\nCom cerca de 103 mil m², o Parque Urbano do Setor O é um dos principais espaços de lazer, esporte e convivência da população de Ceilândia | Foto: Divulgação/Administração de Ceilândia Variedade\nO Parque Urbano do Setor O oferece uma ampla variedade de equipamentos públicos, como quadra de areia, campo sintético, playgrounds, duchas, parcão (área exclusiva para cães), mesas com bancos, banheiros, portaria e academia ao ar livre. O espaço é dividido em três zonas, planejadas para atender públicos diversos, incluindo crianças, jovens, idosos e pessoas com mobilidade reduzida. As melhorias nos acessos internos também favorecem a circulação segura de pedestres e ciclistas.",
+      "metadados": {
+        "recorte": "",
+        "ressalvas": "A notícia informa o horário (diariamente, das 5h às 23h); confirmar a atualidade. Bloco 'Leia também' removido. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "link": "https://agenciabrasilia.df.gov.br/w/parque-urbano-do-setor-o-se-consolida-como-espaco-de-lazer-seguranca-e-convivencia-em-ceilandia",
+        "tipo_evidencia": "Notícia: entrega/instalação concluída (publicada em 06/01/2026)",
+        "id_fonte": "F009",
+        "data_publicacao": "06/01/2026",
+        "tipo_chunk": "texto",
+        "regioes": "",
+        "tema": "Parque Urbano do Setor O: benfeitorias entregues (cercamento, acessos, iluminação LED) e horário de funcionamento",
+        "abrangencia": "Ceilândia",
+        "titulo": "Parque Urbano do Setor O se solidifica como espaço de lazer, segurança e convivência em Ceilândia",
+        "validacao": "Pendente de validação humana",
+        "orgao": "Agência Brasília (GDF), com informações da Administração Regional de Ceilândia",
+        "data_coleta": "2026-11-05",
+        "total_chunks": 9,
+        "indice_chunk": 4
+      },
+      "distancia": 0.12341940402984619,
+      "similaridade": 0.8765805959701538
+    },
+    {
+      "id": "N02-005",
+      "texto": "O secretário também reforçou o papel social dos COPs. “Os centros são ferramentas de transformação social. Ao oferecer vagas gratuitas com estrutura adequada, estamos promovendo saúde, inclusão e oportunidades para crianças, jovens, adultos e idosos em todas as regiões administrativas”, completou.\nAtualmente, os COPs oferecem dezenas de modalidades esportivas e atendem milhares de alunos, consolidando-se como referência em esporte, lazer e inclusão social no Distrito Federal.\nDistribuição das vagas por unidade\nCeilândia (Setor O): 1.793 vagas\nEstrutural: 1.719 vagas\nBrazlândia: 1.354 vagas\nPlanaltina: 1.297 vagas\nSamambaia: 1.265 vagas\nCeilândia (P Norte): 853 vagas\nRecanto das Emas: 853 vagas\nGama: 793 vagas\nSobradinho: 713 vagas\nSanta Maria: 702 vagas\nSão Sebastião: 664 vagas",
+      "metadados": {
+        "tipo_chunk": "texto",
+        "data_coleta": "2026-11-07",
+        "total_chunks": 6,
+        "tema": "COPs em 2026: vagas, atendimento a pessoas com deficiência e reformas",
+        "regioes": "",
+        "recorte": "",
+        "link": "https://www.agenciabrasilia.df.gov.br/w/centros-olimpicos-e-paralimpicos-abrem-mais-de-12-mil-vagas-no-df-com-estrutura-reforcada",
+        "id_fonte": "N02",
+        "validacao": "Pendente de validação humana",
+        "titulo": "Centros olímpicos e paralímpicos abrem mais de 12 mil vagas no DF com estrutura reforçada",
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "orgao": "Agência Brasília (GDF), com informações da SEL-DF",
+        "indice_chunk": 5,
+        "tipo_evidencia": "Notícia institucional (edital de matrícula 01/2026)",
+        "ressalvas": "Calendário de inscrições (15/04 a 11/12/2026) pode já ter se encerrado; não lista modalidades. Reformas descritas em 7 unidades. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "data_publicacao": "07/04/2026",
+        "abrangencia": "DF (12 unidades)"
+      },
+      "distancia": 0.13567852973937988,
+      "similaridade": 0.8643214702606201
+    },
+    {
+      "id": "F009-008",
+      "texto": "O também se destaca como palco de diversas atividades gratuitas nas áreas de lazer, saúde, bem-estar, cultura e esporte. Ao longo do ano, o espaço recebe ações comunitárias, eventos esportivos, atividades físicas orientadas, apresentações culturais e iniciativas voltadas à promoção da qualidade de vida, reunindo moradores de diferentes idades. Essas programações reforçam o potencial do parque como um importante espaço público para a realização de eventos voltados à população, estimulando a convivência social, o uso consciente da área verde e o fortalecimento dos vínculos comunitários em Ceilândia.\nHistórico\nCriado em 1995, o espaço enfrentou diversos desafios ao longo dos anos até ser plenamente liberado para uso da população.",
+      "metadados": {
+        "tema": "Parque Urbano do Setor O: benfeitorias entregues (cercamento, acessos, iluminação LED) e horário de funcionamento",
+        "tipo_chunk": "texto",
+        "indice_chunk": 8,
+        "abrangencia": "Ceilândia",
+        "validacao": "Pendente de validação humana",
+        "link": "https://agenciabrasilia.df.gov.br/w/parque-urbano-do-setor-o-se-consolida-como-espaco-de-lazer-seguranca-e-convivencia-em-ceilandia",
+        "data_coleta": "2026-11-05",
+        "id_fonte": "F009",
+        "recorte": "",
+        "orgao": "Agência Brasília (GDF), com informações da Administração Regional de Ceilândia",
+        "regioes": "",
+        "total_chunks": 9,
+        "ressalvas": "A notícia informa o horário (diariamente, das 5h às 23h); confirmar a atualidade. Bloco 'Leia também' removido. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "titulo": "Parque Urbano do Setor O se solidifica como espaço de lazer, segurança e convivência em Ceilândia",
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "data_publicacao": "06/01/2026",
+        "tipo_evidencia": "Notícia: entrega/instalação concluída (publicada em 06/01/2026)"
+      },
+      "distancia": 0.13703113794326782,
+      "similaridade": 0.8629688620567322
+    },
+    {
+      "id": "F009-009",
+      "texto": "em 1995, o espaço enfrentou diversos desafios ao longo dos anos até ser plenamente liberado para uso da população. Em 2019, o parque passou a ser gerido pela Administração Regional de Ceilândia. Já em maio de 2024, foi oficialmente instituído como Parque Urbano do Setor O, por meio do Decreto nº 45.796, assinado pelo governador Ibaneis Rocha. O texto aprovou o Plano de Uso e Ocupação do local, autorizou o cancelamento do registro de parcelamentos que interferiam na área e estabeleceu, de forma definitiva, o perímetro e os usos permitidos.\nParque Urbano do Setor O\n→ Horário de funcionamento: diariamente, das 5h às 23h\n*Com informações da Administração Regional de Ceilândia",
+      "metadados": {
+        "link": "https://agenciabrasilia.df.gov.br/w/parque-urbano-do-setor-o-se-consolida-como-espaco-de-lazer-seguranca-e-convivencia-em-ceilandia",
+        "orgao": "Agência Brasília (GDF), com informações da Administração Regional de Ceilândia",
+        "abrangencia": "Ceilândia",
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "regioes": "",
+        "titulo": "Parque Urbano do Setor O se solidifica como espaço de lazer, segurança e convivência em Ceilândia",
+        "validacao": "Pendente de validação humana",
+        "tema": "Parque Urbano do Setor O: benfeitorias entregues (cercamento, acessos, iluminação LED) e horário de funcionamento",
+        "tipo_chunk": "texto",
+        "data_publicacao": "06/01/2026",
+        "total_chunks": 9,
+        "data_coleta": "2026-11-05",
+        "ressalvas": "A notícia informa o horário (diariamente, das 5h às 23h); confirmar a atualidade. Bloco 'Leia também' removido. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "id_fonte": "F009",
+        "indice_chunk": 9,
+        "recorte": "",
+        "tipo_evidencia": "Notícia: entrega/instalação concluída (publicada em 06/01/2026)"
+      },
+      "distancia": 0.13869667053222656,
+      "similaridade": 0.8613033294677734
+    },
+    {
+      "id": "F009-007",
+      "texto": "de atos de vandalismo, com danos a bancos, lixeiras, torneiras, bebedouros e outras estruturas de uso coletivo. Essas ações geram custos extras de manutenção e impactam diretamente a qualidade do espaço público. “Cuidar do parque é uma responsabilidade de todos. Quando há vandalismo, toda a comunidade é prejudicada”, ressaltou João Marcelo.\nO parcão totalmente cercado permite que tutores soltem seus cachorros para brincar com segurança Eventos\nAlém da estrutura voltada ao lazer diário, o Parque Urbano do Setor O também se destaca como palco de diversas atividades gratuitas nas áreas de lazer, saúde, bem-estar, cultura e esporte.",
+      "metadados": {
+        "data_coleta": "2026-11-05",
+        "tipo_chunk": "texto",
+        "regioes": "",
+        "link": "https://agenciabrasilia.df.gov.br/w/parque-urbano-do-setor-o-se-consolida-como-espaco-de-lazer-seguranca-e-convivencia-em-ceilandia",
+        "id_fonte": "F009",
+        "abrangencia": "Ceilândia",
+        "indice_chunk": 7,
+        "ressalvas": "A notícia informa o horário (diariamente, das 5h às 23h); confirmar a atualidade. Bloco 'Leia também' removido. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "data_publicacao": "06/01/2026",
+        "tipo_evidencia": "Notícia: entrega/instalação concluída (publicada em 06/01/2026)",
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "total_chunks": 9,
+        "titulo": "Parque Urbano do Setor O se solidifica como espaço de lazer, segurança e convivência em Ceilândia",
+        "orgao": "Agência Brasília (GDF), com informações da Administração Regional de Ceilândia",
+        "validacao": "Pendente de validação humana",
+        "recorte": "",
+        "tema": "Parque Urbano do Setor O: benfeitorias entregues (cercamento, acessos, iluminação LED) e horário de funcionamento"
+      },
+      "distancia": 0.13893359899520874,
+      "similaridade": 0.8610664010047913
+    }
+  ],
+  "resposta": "Resposta extrativa — os trechos abaixo são evidências candidatas à pergunta. A proximidade vetorial não garante que respondam a todos os seus pontos.\n\n[F009-004] Parque Urbano do Setor O se solidifica como espaço de lazer, segurança e convivência em Ceilândia\nO parque é um patrimônio da comunidade e precisa estar cada vez mais acessível, seguro e acolhedor”.\nCom cerca de 103 mil m², o Parque Urbano do Setor O é um dos principais espaços de lazer, esporte e convivência da população de Ceilândia | Foto: Divulgação/Administração de Ceilândia Variedade\nO Parque Urbano do Setor O oferece uma ampla variedade de equipamentos públicos, como quadra de areia, campo sintético, playgrounds, duchas, parcão (área exclusiva para cães), mesas com bancos, banheiros, portaria e academia ao ar livre. O espaço é dividido em três zonas, planejadas para atender públicos diversos, incluindo crianças, jovens, idosos e pessoas com mobilidade reduzida. As melhorias nos acessos internos também favorecem a circulação segura de pedestres e ciclistas.\nFonte: https://agenciabrasilia.df.gov.br/w/parque-urbano-do-setor-o-se-consolida-como-espaco-de-lazer-seguranca-e-convivencia-em-ceilandia\nPublicação: 06/01/2026 | Coleta: 2026-11-05\nValidação: Pendente de validação humana | Ressalvas: A notícia informa o horário (diariamente, das 5h às 23h); confirmar a atualidade. Bloco 'Leia também' removido. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.\n\n[N02-005] Centros olímpicos e paralímpicos abrem mais de 12 mil vagas no DF com estrutura reforçada\nO secretário também reforçou o papel social dos COPs. “Os centros são ferramentas de transformação social. Ao oferecer vagas gratuitas com estrutura adequada, estamos promovendo saúde, inclusão e oportunidades para crianças, jovens, adultos e idosos em todas as regiões administrativas”, completou.\nAtualmente, os COPs oferecem dezenas de modalidades esportivas e atendem milhares de alunos, consolidando-se como referência em esporte, lazer e inclusão social no Distrito Federal.\nDistribuição das vagas por unidade\nCeilândia (Setor O): 1.793 vagas\nEstrutural: 1.719 vagas\nBrazlândia: 1.354 vagas\nPlanaltina: 1.297 vagas\nSamambaia: 1.265 vagas\nCeilândia (P Norte): 853 vagas\nRecanto das Emas: 853 vagas\nGama: 793 vagas\nSobradinho: 713 vagas\nSanta Maria: 702 vagas\nSão Sebastião: 664 vagas\nFonte: https://www.agenciabrasilia.df.gov.br/w/centros-olimpicos-e-paralimpicos-abrem-mais-de-12-mil-vagas-no-df-com-estrutura-reforcada\nPublicação: 07/04/2026 | Coleta: 2026-11-07\nValidação: Pendente de validação humana | Ressalvas: Calendário de inscrições (15/04 a 11/12/2026) pode já ter se encerrado; não lista modalidades. Reformas descritas em 7 unidades. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.\n\n[F009-008] Parque Urbano do Setor O se solidifica como espaço de lazer, segurança e convivência em Ceilândia\nO também se destaca como palco de diversas atividades gratuitas nas áreas de lazer, saúde, bem-estar, cultura e esporte. Ao longo do ano, o espaço recebe ações comunitárias, eventos esportivos, atividades físicas orientadas, apresentações culturais e iniciativas voltadas à promoção da qualidade de vida, reunindo moradores de diferentes idades. Essas programações reforçam o potencial do parque como um importante espaço público para a realização de eventos voltados à população, estimulando a convivência social, o uso consciente da área verde e o fortalecimento dos vínculos comunitários em Ceilândia.\nHistórico\nCriado em 1995, o espaço enfrentou diversos desafios ao longo dos anos até ser plenamente liberado para uso da população.\nFonte: https://agenciabrasilia.df.gov.br/w/parque-urbano-do-setor-o-se-consolida-como-espaco-de-lazer-seguranca-e-convivencia-em-ceilandia\nPublicação: 06/01/2026 | Coleta: 2026-11-05\nValidação: Pendente de validação humana | Ressalvas: A notícia informa o horário (diariamente, das 5h às 23h); confirmar a atualidade. Bloco 'Leia também' removido. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.\n\nLimite: os trechos descrevem as fontes nas datas indicadas. Não confirmam funcionamento, vagas, horários ou acessibilidade atuais. Se o dado solicitado não aparece nos trechos, não é possível confirmá-lo."
+}
