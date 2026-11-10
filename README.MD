@@ -38,17 +38,38 @@ Pergunta do usuário
 
 ## Requisitos e instalação
 
-O ambiente utilizado na verificação foi **Python 3.13 no Windows**. As dependências estão em [requirements.txt](requirements.txt): PyTorch, sentence-transformers e Chroma.
+A verificação original foi feita com **Python 3.13 no Windows**. Para executar no **macOS (Terminal com zsh ou bash)**, use as instruções abaixo. As dependências estão em [requirements.txt](requirements.txt): PyTorch, sentence-transformers e Chroma.
 
-No PowerShell, na raiz do repositório:
+### macOS
+
+Na raiz do repositório:
+
+```bash
+python3 --version
+python3 -m venv .venv
+.venv/bin/python -m pip install --upgrade pip
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m pip check
+```
+
+Se `.venv/bin/python` já existir e funcionar, pule a criação do ambiente. Neste checkout foi encontrado Python **3.14.6 em Apple Silicon (arm64)**; a instalação completa e a execução do modelo devem ser verificadas com os testes abaixo antes de considerar o ambiente validado.
+
+No macOS, o executável fica em `.venv/bin/python`. O caminho `.venv/Scripts/python.exe` pertence ao Windows. Use `-m pip`, e não `-m pip3`: esse é o nome do módulo, independentemente do sistema operacional.
+
+O `requirements.txt` já inclui `torch`, portanto não é necessário instalá-lo separadamente. No Mac, use o índice padrão do pip, conforme a [documentação do PyTorch](https://pytorch.org/get-started/locally/); o índice `https://download.pytorch.org/whl/cpu` do exemplo Windows não é necessário.
+
+Não é necessário ativar o ambiente virtual: todos os comandos de execução abaixo chamam diretamente o Python de `.venv`. Execute cada etapa somente se a anterior terminar sem erros. Se aparecer `No matching distribution found`, confira qual dependência falhou e sua compatibilidade com a versão do Python e a arquitetura do Mac antes de recriar o ambiente.
+
+### Windows (PowerShell)
 
 ```powershell
 python -m venv .venv
+.venv/Scripts/python.exe -m pip install --upgrade pip
 .venv/Scripts/python.exe -m pip install torch --index-url https://download.pytorch.org/whl/cpu
 .venv/Scripts/python.exe -m pip install -r requirements.txt
 ```
 
-O comando do PyTorch usa a distribuição para CPU. Não é necessário ativar o ambiente virtual: os exemplos chamam diretamente o Python de `.venv`.
+Os exemplos seguintes são para **macOS**. No Windows, substitua `.venv/bin/python` por `.venv/Scripts/python.exe`; as variáveis do modo offline têm comandos próprios, indicados naquela seção.
 
 Não são necessárias chaves de API. A instalação das bibliotecas e o primeiro uso do E5 exigem internet. O modelo ocupa aproximadamente **1,1 GB**, é baixado automaticamente e reutilizado do cache nas próximas execuções.
 
@@ -56,8 +77,8 @@ Não são necessárias chaves de API. A instalação das bibliotecas e o primeir
 
 Se `dados/vetorial/` já estiver preenchido e atualizado, siga diretamente para a consulta. O banco local não é versionado: depois de clonar o repositório, normalmente será necessário gerá-lo.
 
-```powershell
-.venv/Scripts/python.exe src/ingestao/carga.py
+```bash
+.venv/bin/python src/ingestao/carga.py
 ```
 
 A carga lê os textos de `dados/fontes/texto/`, faz o chunking, gera os embeddings e grava o banco em `dados/vetorial/`, em lotes de 256. A configuração atual produz 25 fontes e 599 chunks.
@@ -66,8 +87,8 @@ A carga lê os textos de `dados/fontes/texto/`, faz o chunking, gera os embeddin
 
 ## Fazer uma consulta
 
-```powershell
-.venv/Scripts/python.exe src/main.py "A academia pública do Parque da Cidade é gratuita e como utilizar?" -k 5
+```bash
+.venv/bin/python src/main.py "A academia pública do Parque da Cidade é gratuita e como utilizar?" -k 5
 ```
 
 A saída mostra:
@@ -79,14 +100,14 @@ A saída mostra:
 
 Para outra pergunta, basta substituir o texto entre aspas. `-k` controla quantos chunks recuperar; a resposta continua limitada aos três primeiros.
 
-```powershell
-.venv/Scripts/python.exe src/main.py "Quais modalidades esportivas são oferecidas pelos Centros Olímpicos e Paralímpicos do DF?" -k 5
+```bash
+.venv/bin/python src/main.py "Quais modalidades esportivas são oferecidas pelos Centros Olímpicos e Paralímpicos do DF?" -k 5
 ```
 
 ### Salvar a demonstração e suas evidências
 
-```powershell
-.venv/Scripts/python.exe src/main.py "A academia pública do Parque da Cidade é gratuita e como utilizar?" -k 5 --json consulta-demo.json
+```bash
+.venv/bin/python src/main.py "A academia pública do Parque da Cidade é gratuita e como utilizar?" -k 5 --json consulta-demo.json
 ```
 
 Esse comando grava `consulta-demo.json` na raiz, com pergunta, ranking, IDs, textos integrais, metadados, distâncias, scores de similaridade e resposta. O arquivo pode ser usado para conferir a fundamentação e a rastreabilidade sem executar a consulta novamente.
@@ -95,32 +116,34 @@ O caminho de saída deve apontar para uma pasta que já exista. O comando acima 
 
 ### Mostrar somente a recuperação
 
-```powershell
-.venv/Scripts/python.exe src/recuperacao/buscar.py "Onde praticar natação?" -k 5
+```bash
+.venv/bin/python src/recuperacao/buscar.py "Onde praticar natação?" -k 5
 ```
 
 ### Usar o modelo já baixado sem acesso ao Hub
 
 Depois de uma primeira execução com download concluído:
 
-```powershell
-$env:HF_HUB_OFFLINE = "1"
-.venv/Scripts/python.exe src/main.py "Qual é o endereço do Estádio Bezerrão no Gama?" -k 5
+```bash
+export HF_HUB_OFFLINE=1
+.venv/bin/python src/main.py "Qual é o endereço do Estádio Bezerrão no Gama?" -k 5
 ```
 
-Para permitir acesso ao Hub novamente na mesma sessão do PowerShell:
+Para permitir acesso ao Hub novamente na mesma sessão do Terminal:
 
-```powershell
-Remove-Item Env:HF_HUB_OFFLINE -ErrorAction SilentlyContinue
+```bash
+unset HF_HUB_OFFLINE
 ```
+
+No Windows (PowerShell), use `$env:HF_HUB_OFFLINE = "1"` para ativar e `Remove-Item Env:HF_HUB_OFFLINE -ErrorAction SilentlyContinue` para desativar. O modo offline exige que o modelo já esteja no cache e que o banco tenha sido gerado.
 
 ## Conferir o funcionamento
 
-```powershell
-.venv/Scripts/python.exe tests/teste_chunking.py
-.venv/Scripts/python.exe tests/teste_banco.py
-.venv/Scripts/python.exe tests/teste_embeddings.py
-.venv/Scripts/python.exe tests/teste_resposta.py
+```bash
+.venv/bin/python tests/teste_chunking.py
+.venv/bin/python tests/teste_banco.py
+.venv/bin/python tests/teste_embeddings.py
+.venv/bin/python tests/teste_resposta.py
 ```
 
 | Teste | O que verifica |
@@ -129,6 +152,8 @@ Remove-Item Env:HF_HUB_OFFLINE -ErrorAction SilentlyContinue
 | `teste_banco.py` | Carga, persistência, cosseno, ordenação e filtro por fonte, usando vetores sintéticos em banco temporário |
 | `teste_embeddings.py` | Recuperação com E5 real em cinco exemplos pequenos |
 | `teste_resposta.py` | Preservação dos trechos, IDs, fontes, datas, ressalvas e limite da resposta |
+
+O teste de embeddings carrega o modelo E5 real e pode baixá-lo na primeira execução. Os demais testes não precisam desse download; o teste de banco usa um diretório temporário e não substitui o banco do projeto.
 
 O teste de banco não mede qualidade semântica. Os exemplos de embeddings também não representam uma avaliação geral de precisão do sistema.
 

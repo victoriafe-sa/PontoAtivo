@@ -1,0 +1,132 @@
+{
+  "consulta": "Qual quadra tem vaga disponível amanhã às 19h e acessibilidade verificada para cadeirantes?",
+  "k": 5,
+  "resultados": [
+    {
+      "id": "N05-024",
+      "texto": "tecnicamente possível.Art. 112. O projeto e o traçado dos elementos de urbanização públicos e privados de uso comunitário, compreendidos os itinerários e as passagens de pedestres, os percursos de entrada e saída de veículos, as escadas e as rampas, devem observar os parâmetros estabelecidos pelas normas técnicas de acessibilidade em vigor.Art. 113. Os parques, praças, jardins e espaços livres públicos devem dispor de pelo menos 2 instalações sanitárias acessíveis, sendo uma masculina e uma feminina, em conformidade com as normas técnicas de acessibilidade em vigor, incluindo identificação e rota acessível.Art. 114. Em todas as áreas de estacionamento de veículos localizadas em vias ou em espaços públicos, devem ser reservadas vagas próximas dos acessos de circulação de pedestres,",
+      "metadados": {
+        "data_coleta": "2026-11-07",
+        "validacao": "Pendente de validação humana",
+        "tema": "Acessibilidade: esporte, lazer, parques, praças e espaços de uso público",
+        "tipo_chunk": "texto",
+        "titulo": "Lei nº 6.637/2020 (Estatuto da Pessoa com Deficiência do DF): recorte do Cap. VIII e do Cap. IX (Seções I a III)",
+        "recorte": "Capítulo VIII (arts. 97 a ...) e Capítulo IX, Seções I a III (até o art. 134). Quebras de linha inseridas antes de cada 'Art.' (sem alterar o texto). AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "total_chunks": 42,
+        "orgao": "Governo do Distrito Federal (lei distrital; texto no SINJ-DF)",
+        "tipo_evidencia": "Regra/norma (RECORTE)",
+        "indice_chunk": 24,
+        "link": "https://www.sinj.df.gov.br/sinj/Norma/f82224a2df8f4c5aba3f200f1941c6a0/Lei_6637_20_07_2020.html",
+        "ressalvas": "RECORTE de uma lei de 148 mil caracteres (texto integral no link). O próprio texto indica dispositivos vetados pelo Governador e mantidos pela Câmara Legislativa; conferir vigência e redação consolidada.",
+        "abrangencia": "DF",
+        "data_publicacao": "20/07/2020",
+        "comprova_funcionamento": "Não se aplica (norma)",
+        "id_fonte": "N05",
+        "regioes": ""
+      },
+      "distancia": 0.1437464952468872,
+      "similaridade": 0.8562535047531128
+    },
+    {
+      "id": "R04-005",
+      "texto": "Classificado como PEC A, precisão digital de até 19 cm planimetria e 28 cm altimetria. A partir de 2021, as novas quadras e campos identificados em imagens de sensoriamento remoto ou de VANT vão ser inseridos por meio de vetorização nessa camada com indicador de ausência de precisão cartográfica para dados cadastrais.\nALERTA OFICIAL DA SEDUH: alguns locais do cadastro podem constar de projetos urbanísticos sem terem sido implantados. Estar listado neste cadastro NÃO comprova que o espaço exista, esteja aberto ou funcione. Antes de afirmar disponibilidade, é preciso preservar e consultar a situação física e operacional de cada registro.\nCOMPLETUDE DOS CAMPOS (calculada na coleta):\n- nome: 82 de 9904 (1%)\n- código identificador único (CIU): 7722 de 9904 (78%)",
+      "metadados": {
+        "abrangencia": "DF",
+        "total_chunks": 18,
+        "data_coleta": "2026-11-07",
+        "tema": "Cadastro de campos e quadras poliesportivas (9.904 polígonos): situação física oficial, fonte e precisão; registros com nome",
+        "ressalvas": "A camada não tem campo de endereço e só cerca de 1% dos registros tem nome. Base de 2016 (restituição), com inclusões a partir de 2021 sem precisão cartográfica. O tipo (cq_tipo) não tem dicionário. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "orgao": "Secretaria de Desenvolvimento Urbano e Habitação do DF (SEDUH-DF), DIGEO/COSIT/UNTEC; camada na IDE-DF",
+        "recorte": "",
+        "link": "https://metadados.seduh.df.gov.br/geonetwork/srv/por/catalog.search#/metadata/22fe3be6-795b-458a-abc6-14c024d04ab8",
+        "regioes": "",
+        "tipo_evidencia": "Cadastro oficial georreferenciado (extrato: registros com nome)",
+        "id_fonte": "R04",
+        "titulo": "Campos e Quadras Poliesportivas (cadastro oficial SEDUH-DF)",
+        "tipo_chunk": "texto",
+        "validacao": "Pendente de validação humana",
+        "indice_chunk": 5,
+        "data_publicacao": "metadado atualizado em 2024-01-24",
+        "comprova_funcionamento": "Não (situação 'construído' é cadastral, 2016/2023)"
+      },
+      "distancia": 0.14540237188339233,
+      "similaridade": 0.8545976281166077
+    },
+    {
+      "id": "N05-016",
+      "texto": "pessoas com deficiência, considerando-se suas especificidades, em teatros, cinemas, auditórios, salas de conferência, museus, bibliotecas e ambientes de natureza similar;VII – reserva de vagas específicas, devidamente sinalizadas, para veículos que transportem pessoas com deficiência, em garagens e estacionamentos nas edificações e demais espaços urbanos de uso público e coletivo;VIII – concepção, organização, implantação e adequação dos veículos e da infraestrutura de todos os sistemas de transporte coletivo, público ou privado, aos requisitos de acessibilidade estabelecidos na legislação e nas demais normas de acessibilidade em vigor;IX – implantação de sinalização ambiental, visual e tátil para orientação de pessoas com deficiência nas edificações de uso público, uso coletivo e uso",
+      "metadados": {
+        "tipo_evidencia": "Regra/norma (RECORTE)",
+        "total_chunks": 42,
+        "data_coleta": "2026-11-07",
+        "comprova_funcionamento": "Não se aplica (norma)",
+        "indice_chunk": 16,
+        "validacao": "Pendente de validação humana",
+        "orgao": "Governo do Distrito Federal (lei distrital; texto no SINJ-DF)",
+        "tipo_chunk": "texto",
+        "recorte": "Capítulo VIII (arts. 97 a ...) e Capítulo IX, Seções I a III (até o art. 134). Quebras de linha inseridas antes de cada 'Art.' (sem alterar o texto). AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "regioes": "",
+        "id_fonte": "N05",
+        "titulo": "Lei nº 6.637/2020 (Estatuto da Pessoa com Deficiência do DF): recorte do Cap. VIII e do Cap. IX (Seções I a III)",
+        "ressalvas": "RECORTE de uma lei de 148 mil caracteres (texto integral no link). O próprio texto indica dispositivos vetados pelo Governador e mantidos pela Câmara Legislativa; conferir vigência e redação consolidada.",
+        "tema": "Acessibilidade: esporte, lazer, parques, praças e espaços de uso público",
+        "link": "https://www.sinj.df.gov.br/sinj/Norma/f82224a2df8f4c5aba3f200f1941c6a0/Lei_6637_20_07_2020.html",
+        "data_publicacao": "20/07/2020",
+        "abrangencia": "DF"
+      },
+      "distancia": 0.1498304009437561,
+      "similaridade": 0.8501695990562439
+    },
+    {
+      "id": "F066-005",
+      "texto": "Antes, eu tinha que ir lá para o outro lado de Ceilândia, atravessar a pista. E como eu tenho uns problemas de saúde, eu tinha muito medo de atravessar. Agora não, agora ficou bem melhor.”Ela se anima com a nova rotina: “Agora, vou vir todos os dias, porque ficou acessível, né? A atividade física é boa pra tudo: para o coração, para a mente, para a pele, para o braço, para tudo! Graças a Deus, ficou muito bom. Eu só tenho a agradecer”, destaca.\nMelhorias\nAtualmente, a administração também realiza obras nas quadras 18/19 e na quadra 8. Na semana anterior, foi concluída a calçada do colégio 12 na EQNM 6/8, em Ceilândia Norte, localizado logo abaixo do parque, por demanda da comunidade. A prioridade da gestão é atender áreas com equipamentos públicos, como escolas e unidades de saúde.",
+      "metadados": {
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "validacao": "Pendente de validação humana",
+        "indice_chunk": 5,
+        "recorte": "",
+        "id_fonte": "F066",
+        "abrangencia": "Ceilândia",
+        "total_chunks": 7,
+        "titulo": "Governo do DF amplia acessibilidade e entrega novo PEC para os moradores de Ceilândia",
+        "tema": "PEC na quadra 9/11 e calçadas acessíveis (EQNO 11/13)",
+        "regioes": "",
+        "tipo_evidencia": "Notícia: entrega/instalação concluída (publicada em 29/05/2025)",
+        "data_coleta": "2026-11-05",
+        "tipo_chunk": "texto",
+        "data_publicacao": "29/05/2025",
+        "orgao": "Administração Regional de Ceilândia (GDF)",
+        "ressalvas": "A acessibilidade citada é a das calçadas (piso tátil, rebaixamento de meio-fio), não do PEC. Também descreve obras em andamento (quadras 18/19 e 8). AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "link": "https://www.ceilandia.df.gov.br/w/governo-do-df-amplia-acessibilidade-e-entrega-novo-pec-para-os-moradores-de-ceilandia"
+      },
+      "distancia": 0.15001219511032104,
+      "similaridade": 0.849987804889679
+    },
+    {
+      "id": "F066-001",
+      "texto": "29/05/2025 às 17h04 - Atualizado em 26/10/2026 às 01h18\n### Governo do DF amplia acessibilidade e entrega novo PEC para os moradores de Ceilândia\nCom 2 mil metros de calçadas na EQNO 11/13 e academia ao ar livre na 9/11, governo melhora mobilidade e oferece mais lazer à comunidade com apoio da Novacap e da Administração Regional\nKarol Ribeiro, da Agência Brasília | Edição: Débora Cronemberger\nO Governo do Distrito Federal (GDF) investe na melhoria da acessibilidade e na oferta de espaços de lazer em Ceilândia, com a construção de 2 mil metros de calçadas na EQNO 11/13, no Setor O, e a entrega de um novo Ponto de Encontro Comunitário (PEC) na quadra 9/11, com investimento de R$ 350 mil.",
+      "metadados": {
+        "recorte": "",
+        "validacao": "Pendente de validação humana",
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "indice_chunk": 1,
+        "regioes": "",
+        "titulo": "Governo do DF amplia acessibilidade e entrega novo PEC para os moradores de Ceilândia",
+        "id_fonte": "F066",
+        "tipo_evidencia": "Notícia: entrega/instalação concluída (publicada em 29/05/2025)",
+        "total_chunks": 7,
+        "link": "https://www.ceilandia.df.gov.br/w/governo-do-df-amplia-acessibilidade-e-entrega-novo-pec-para-os-moradores-de-ceilandia",
+        "abrangencia": "Ceilândia",
+        "tema": "PEC na quadra 9/11 e calçadas acessíveis (EQNO 11/13)",
+        "data_coleta": "2026-11-05",
+        "tipo_chunk": "texto",
+        "ressalvas": "A acessibilidade citada é a das calçadas (piso tátil, rebaixamento de meio-fio), não do PEC. Também descreve obras em andamento (quadras 18/19 e 8). AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "orgao": "Administração Regional de Ceilândia (GDF)",
+        "data_publicacao": "29/05/2025"
+      },
+      "distancia": 0.1514655351638794,
+      "similaridade": 0.8485344648361206
+    }
+  ],
+  "resposta": "Resposta extrativa — os trechos abaixo são evidências candidatas à pergunta. A proximidade vetorial não garante que respondam a todos os seus pontos.\n\n[N05-024] Lei nº 6.637/2020 (Estatuto da Pessoa com Deficiência do DF): recorte do Cap. VIII e do Cap. IX (Seções I a III)\ntecnicamente possível.Art. 112. O projeto e o traçado dos elementos de urbanização públicos e privados de uso comunitário, compreendidos os itinerários e as passagens de pedestres, os percursos de entrada e saída de veículos, as escadas e as rampas, devem observar os parâmetros estabelecidos pelas normas técnicas de acessibilidade em vigor.Art. 113. Os parques, praças, jardins e espaços livres públicos devem dispor de pelo menos 2 instalações sanitárias acessíveis, sendo uma masculina e uma feminina, em conformidade com as normas técnicas de acessibilidade em vigor, incluindo identificação e rota acessível.Art. 114. Em todas as áreas de estacionamento de veículos localizadas em vias ou em espaços públicos, devem ser reservadas vagas próximas dos acessos de circulação de pedestres,\nFonte: https://www.sinj.df.gov.br/sinj/Norma/f82224a2df8f4c5aba3f200f1941c6a0/Lei_6637_20_07_2020.html\nPublicação: 20/07/2020 | Coleta: 2026-11-07\nValidação: Pendente de validação humana | Ressalvas: RECORTE de uma lei de 148 mil caracteres (texto integral no link). O próprio texto indica dispositivos vetados pelo Governador e mantidos pela Câmara Legislativa; conferir vigência e redação consolidada.\n\n[R04-005] Campos e Quadras Poliesportivas (cadastro oficial SEDUH-DF)\nClassificado como PEC A, precisão digital de até 19 cm planimetria e 28 cm altimetria. A partir de 2021, as novas quadras e campos identificados em imagens de sensoriamento remoto ou de VANT vão ser inseridos por meio de vetorização nessa camada com indicador de ausência de precisão cartográfica para dados cadastrais.\nALERTA OFICIAL DA SEDUH: alguns locais do cadastro podem constar de projetos urbanísticos sem terem sido implantados. Estar listado neste cadastro NÃO comprova que o espaço exista, esteja aberto ou funcione. Antes de afirmar disponibilidade, é preciso preservar e consultar a situação física e operacional de cada registro.\nCOMPLETUDE DOS CAMPOS (calculada na coleta):\n- nome: 82 de 9904 (1%)\n- código identificador único (CIU): 7722 de 9904 (78%)\nFonte: https://metadados.seduh.df.gov.br/geonetwork/srv/por/catalog.search#/metadata/22fe3be6-795b-458a-abc6-14c024d04ab8\nPublicação: metadado atualizado em 2024-01-24 | Coleta: 2026-11-07\nValidação: Pendente de validação humana | Ressalvas: A camada não tem campo de endereço e só cerca de 1% dos registros tem nome. Base de 2016 (restituição), com inclusões a partir de 2021 sem precisão cartográfica. O tipo (cq_tipo) não tem dicionário. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.\n\n[N05-016] Lei nº 6.637/2020 (Estatuto da Pessoa com Deficiência do DF): recorte do Cap. VIII e do Cap. IX (Seções I a III)\npessoas com deficiência, considerando-se suas especificidades, em teatros, cinemas, auditórios, salas de conferência, museus, bibliotecas e ambientes de natureza similar;VII – reserva de vagas específicas, devidamente sinalizadas, para veículos que transportem pessoas com deficiência, em garagens e estacionamentos nas edificações e demais espaços urbanos de uso público e coletivo;VIII – concepção, organização, implantação e adequação dos veículos e da infraestrutura de todos os sistemas de transporte coletivo, público ou privado, aos requisitos de acessibilidade estabelecidos na legislação e nas demais normas de acessibilidade em vigor;IX – implantação de sinalização ambiental, visual e tátil para orientação de pessoas com deficiência nas edificações de uso público, uso coletivo e uso\nFonte: https://www.sinj.df.gov.br/sinj/Norma/f82224a2df8f4c5aba3f200f1941c6a0/Lei_6637_20_07_2020.html\nPublicação: 20/07/2020 | Coleta: 2026-11-07\nValidação: Pendente de validação humana | Ressalvas: RECORTE de uma lei de 148 mil caracteres (texto integral no link). O próprio texto indica dispositivos vetados pelo Governador e mantidos pela Câmara Legislativa; conferir vigência e redação consolidada.\n\nLimite: os trechos descrevem as fontes nas datas indicadas. Não confirmam funcionamento, vagas, horários ou acessibilidade atuais. Se o dado solicitado não aparece nos trechos, não é possível confirmá-lo."
+}

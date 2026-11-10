@@ -1,0 +1,15 @@
+modelo:llama3.2:3b
+Resposta:
+Infelizmente, não foi possível encontrar quadras com vaga disponível amanhã às 19h e acessibilidade verificada 
+para cadeirantes.
+
+Limitações:
+* Não há evidências suficientes para confirmar a disponibilidade de quadras com vaga específica e acessibilidade 
+verificada.
+* O cadastro oficial não fornece informações sobre a situação física e operacional de cada registro, o que torna 
+difícil determinar a disponibilidade de recursos.
+
+Fontes utilizadas:
+* Cadastro oficial georreferenciado da Secretaria de Desenvolvimento Urbano e Habitação do DF (R04-005)
+* Notícia: entrega/instalação concluída do Governo do DF amplia acessibilidade e entrega novo PEC para os 
+moradores de Ceilândia (F066-001, F066-005)

@@ -1,0 +1,18 @@
+modelo:llama3.2:3b
+Resposta:
+Infelizmente, não foi possível confirmar se a academia pública do Parque da Cidade é gratuita ou como utilizar, 
+pois as evidências fornecidas não mencionam essas informações. As fontes citadas são notícias institucionais que 
+mencionam a reabertura da academia em 2024 e o seu perfil de uso, mas não fornecem informações sobre os horários, 
+modalidades ou preços de uso.
+
+Limitações:
+- Não foi possível confirmar se a academia pública do Parque da Cidade é gratuita.
+- Não foi possível determinar como utilizar a academia.
+
+Fontes utilizadas:
+- Agência Brasília (GDF). Notícia institucional: "Academia pública do Parque da Cidade vira ponto de encontro e 
+saúde para brasilienses" (11/01/2025)
+- Agência Brasília (GDF). Notícia institucional: "Academia pública do Parque da Cidade vira ponto de encontro e 
+saúde para brasilienses" (11/01/2025)
+- Agência Brasília (GDF). Notícia institucional: "Academia pública do Parque da Cidade vira ponto de encontro e 
+saúde para brasilienses" (11/01/2025)

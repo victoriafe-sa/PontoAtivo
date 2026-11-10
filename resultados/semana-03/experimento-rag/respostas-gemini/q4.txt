@@ -1,0 +1,7 @@
+modelo:gemini-3.5-flash-lite
+Resposta:
+Com base nas evidências fornecidas, não é possível indicar nenhuma quadra que possua vaga disponível amanhã às 19h e acessibilidade verificada para cadeirantes.
+Limitações:
+As evidências contêm apenas normas gerais de acessibilidade (como a Lei nº 6.637/2020) [N05-016, N05-024], dados de um cadastro oficial de quadras (SEDUH-DF) que alerta explicitamente que estar listado não comprova existência, abertura ou funcionamento [R04-005], e notícias sobre a entrega de um Ponto de Encontro Comunitário (PEC) e calçadas acessíveis em Ceilândia em maio de 2025 [F066-001, F066-005]. Nenhuma das fontes traz informações sobre disponibilidade de horários específicos ("amanhã às 19h") ou atestados operacionais de acessibilidade para cadeirantes em quadras.
+Fontes utilizadas:
+[N05-016], [N05-024], [R04-005], [F066-001], [F066-005].
