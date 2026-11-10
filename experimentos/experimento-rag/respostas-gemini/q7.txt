@@ -1,0 +1,7 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta: Com base nas evidências fornecidas, as informações disponíveis sobre o Centro Olímpico de Samambaia limitam-se ao seu endereço (QS 119 Área Especial 01, Centro Urbano – Samambaia Sul/DF), ao seu diretor (Farion Souza) e ao número de vagas oferecidas (1.265 vagas em abril de 2026) [F028-009, N02-005]. As evidências não detalham quais equipamentos esportivos a unidade possui [F028-009].
+
+Limitações: As evidências fornecidas não contêm a relação de equipamentos esportivos ou modalidades do Centro Olímpico de Samambaia [F028-009]. Os registros de quadras e campos listados para a região de Samambaia referem-se a logradouros gerais (como quadras e campos sintéticos em quadras específicas), e não especificamente ao Centro Olímpico [R03-174, R03-179].
+
+Fontes utilizadas: [F028-009], [N02-005], [R03-174], [R03-179]

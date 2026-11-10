@@ -1,0 +1,7 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta: As evidências fornecidas mencionam que a unidade de Ceilândia (Setor O) conta com 1.793 vagas em Centros Olímpicos e Paralímpicos (COPs) [N02-005], além de infraestrutura no Parque Urbano do Setor O que inclui quadra de areia, campo sintético e academia ao ar livre [F009-004]. Contudo, as evidências não detalham quais modalidades esportivas específicas são oferecidas nesse COP [N02-005].
+
+Limitações: As fontes não listam as modalidades oferecidas pelo COP do Setor O [N02-005].
+
+Fontes utilizadas: [N02-005], [F009-004]

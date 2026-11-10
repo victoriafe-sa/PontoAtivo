@@ -1,0 +1,7 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta: As evidências fornecidas não contêm informações sobre quadras de tênis no Gama, nem sobre a disponibilidade de reservas para hoje à noite.
+
+Limitações: Não é possível confirmar a existência de quadras de tênis livres ou disponíveis para reserva no Gama, pois os dados disponíveis cobrem apenas informações gerais sobre o Estádio Bezerrão [F059-001] e registros de quadras poliesportivas, campos, skate parks e aparelhos de ginástica [R03-043, R03-044, R03-052, R03-180], sem menção a modalidades de tênis ou status de reserva.
+
+Fontes utilizadas: [F059-001], [R03-043], [R03-044], [R03-052], [R03-180]

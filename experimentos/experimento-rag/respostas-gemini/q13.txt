@@ -1,0 +1,10 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta:
+As evidências fornecidas não contêm informações específicas sobre a "Escola Paralímpica de Esportes". Os dados disponíveis referem-se de maneira geral ao Programa Centros Olímpicos e Paralímpicos (COPs) do Distrito Federal, que atendem um público de faixa etária ampla, contemplando crianças, adolescentes, jovens, adultos e idosos, incluindo pessoas com deficiência (PCD), a partir de 3 anos [N01-012] ou 4 anos de idade [F028-001, N03-002]. As evidências citam apenas que há vagas distribuídas em modalidades como o atletismo [N03-002], mas não detalham a lista completa de modalidades ofertadas [F028-001].
+
+Limitações:
+As evidências são insuficientes para confirmar a faixa etária específica e a lista de modalidades da "Escola Paralímpica de Esportes", pois tratam apenas do programa geral dos Centros Olímpicos e Paralímpicos (COPs) [F028-001, N01-012, N03-002].
+
+Fontes utilizadas:
+[F028-001], [N01-012], [N03-002]

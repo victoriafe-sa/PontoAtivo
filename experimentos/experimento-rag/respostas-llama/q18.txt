@@ -1,0 +1,9 @@
+modelo: llama3.2:3b
+
+Não posso confirmar o preço da mensalidade das academias particulares do Lago Sul, pois as evidências fornecidas não contêm informações sobre preços de serviços ou mensalidades. As fontes disponíveis são notícias institucionais que tratam sobre a academia pública do Parque da Cidade e quadras poliesportivas no Distrito Federal, mas não oferecem informações sobre academias particulares.
+
+Resposta:
+Não há evidências suficientes para confirmar o preço da mensalidade das academias particulares do Lago Sul.
+
+Fontes utilizadas:
+Nenhuma fonte foi utilizada para obter informações sobre preços de serviços ou mensalidades de academias particulares.

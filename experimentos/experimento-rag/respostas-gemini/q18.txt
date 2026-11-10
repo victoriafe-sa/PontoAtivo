@@ -1,0 +1,7 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta: As evidências fornecidas não contêm informações sobre o preço da mensalidade de academias particulares no Lago Sul.
+
+Limitações: Os dados disponíveis abordam apenas a academia pública gratuita do Parque da Cidade (no Plano Piloto) [N04-001, N04-002, N04-003, N04-008] e registros de aparelhos de ginástica e quadras no Lago Sul e Lago Norte em dados cadastrais antigos [R03-072]. Não há dados sobre custos de estabelecimentos particulares.
+
+Fontes utilizadas: Nenhuma das fontes fornecidas pôde responder à pergunta.

@@ -1,0 +1,12 @@
+modelo: qwen3:8b
+
+Resposta:  
+O Centro Olímpico de Samambaia possui equipamentos esportivos como quadras poliesportivas, campos de terra batida, skate parks e aparelhos de ginástica, conforme registros da Secretaria de Desenvolvimento Urbano e Habitação do DF (SEDUH-DF). Esses equipamentos estão localizados em diferentes áreas da região administrativa de Samambaia, como QS 607, QS 610, QS 613, QS 621, QS 631 e QR 305, entre outros. (ID: R03-179, R03-174, R03-171)
+
+Limitações:  
+As informações são baseadas em registros georreferenciados, que são considerados obsoletos e não confirmam a atualidade dos dados. Além disso, os endereços podem não ser localizáveis com precisão.
+
+Fontes utilizadas:  
+- R03-179: Registros de quadras, campos, skate parks e aparelhos de ginástica.  
+- R03-174: Cadastro oficial de equipamentos esportivos.  
+- R03-171: Detalhamento de quadras e outros espaços esportivos.
