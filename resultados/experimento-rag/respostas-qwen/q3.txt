@@ -1,0 +1,28 @@
+REGISTRO DO EXPERIMENTO — Q3
+Identificador anotado no arquivo original: qwen3:8b
+Origem da identificação: anotação no arquivo de resposta, sem log individual de execução.
+Prompt de referência: ../prompts/q3.txt
+SHA-256 do prompt local: 0cf940999261f730dd6b9e1933f183fd8d97cdee3e1fd4ae007f009f8a681628
+Evidências de referência: ../../q3-evidencias.json (cinco trechos).
+Entrada efetivamente enviada: não comprovada por este arquivo; prompt local é referência.
+Canal de execução: não confirmado por transcrição individual.
+Versão do Ollama e digest/quantização do modelo: não registrados.
+Contexto configurado (num_ctx) e modo de raciocínio: não registrados; não inferidos das instruções sugeridas.
+Temperatura, seed, limite de saída e histórico anterior: não registrados.
+Data/hora, duração e tokens processados/gerados: não registrados.
+Truncamento e motivo de término: não determinados.
+Nota: metadados acrescentados após o teste; conteúdo anterior preservado abaixo.
+
+--- CONTEÚDO ORIGINAL PRESERVADO ---
+modelo: qwen3:8b
+Resposta:  
+O endereço do Estádio Bezerrão no Gama é **St. Central – Gama, Brasília – DF, 72405-610**, conforme indicado no 
+trecho F059-001.
+
+Limitações:  
+A informação foi extraída de um texto informativo institucional, que destaca o endereço, mas não fornece detalhes 
+adicionais sobre a atualidade ou precisão da informação. A fonte também alerta que a capacidade é estimada e que a 
+informação deve ser confirmada no link original.
+
+Fontes utilizadas:  
+- F059-001: Informação sobre o Estádio Bezerrão, incluindo endereço.

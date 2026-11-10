@@ -1,0 +1,24 @@
+REGISTRO DO EXPERIMENTO — Q4
+Identificador anotado no arquivo original: gemini-3.5-flash-lite
+Origem da identificação: anotação no arquivo de resposta, sem log individual de execução.
+Prompt de referência: ../prompts/q4.txt
+SHA-256 do prompt local: df34b83f41d26c1e181baab60cf4ec9cee2b9e57d025f6b63ec7196b73cf341f
+Evidências de referência: ../../q4-evidencias.json (cinco trechos).
+Entrada efetivamente enviada: não comprovada por este arquivo; prompt local é referência.
+Canal de execução (AI Studio, aplicativo ou API): não confirmado nos arquivos.
+Versão efetiva retornada pelo serviço: não registrada.
+Ferramentas externas de busca e nível de raciocínio: não registrados.
+Janela de contexto e limites efetivos da execução: não registrados.
+Temperatura, seed, limite de saída e histórico anterior: não registrados.
+Data/hora, duração e tokens processados/gerados: não registrados.
+Truncamento e motivo de término: não determinados.
+Nota: metadados acrescentados após o teste; conteúdo anterior preservado abaixo.
+
+--- CONTEÚDO ORIGINAL PRESERVADO ---
+modelo:gemini-3.5-flash-lite
+Resposta:
+Com base nas evidências fornecidas, não é possível indicar nenhuma quadra que possua vaga disponível amanhã às 19h e acessibilidade verificada para cadeirantes.
+Limitações:
+As evidências contêm apenas normas gerais de acessibilidade (como a Lei nº 6.637/2020) [N05-016, N05-024], dados de um cadastro oficial de quadras (SEDUH-DF) que alerta explicitamente que estar listado não comprova existência, abertura ou funcionamento [R04-005], e notícias sobre a entrega de um Ponto de Encontro Comunitário (PEC) e calçadas acessíveis em Ceilândia em maio de 2025 [F066-001, F066-005]. Nenhuma das fontes traz informações sobre disponibilidade de horários específicos ("amanhã às 19h") ou atestados operacionais de acessibilidade para cadeirantes em quadras.
+Fontes utilizadas:
+[N05-016], [N05-024], [R04-005], [F066-001], [F066-005].

@@ -1,0 +1,24 @@
+REGISTRO DO EXPERIMENTO — Q3
+Identificador anotado no arquivo original: gemini-3.5-flash-lite
+Origem da identificação: anotação no arquivo de resposta, sem log individual de execução.
+Prompt de referência: ../prompts/q3.txt
+SHA-256 do prompt local: 0cf940999261f730dd6b9e1933f183fd8d97cdee3e1fd4ae007f009f8a681628
+Evidências de referência: ../../q3-evidencias.json (cinco trechos).
+Entrada efetivamente enviada: não comprovada por este arquivo; prompt local é referência.
+Canal de execução (AI Studio, aplicativo ou API): não confirmado nos arquivos.
+Versão efetiva retornada pelo serviço: não registrada.
+Ferramentas externas de busca e nível de raciocínio: não registrados.
+Janela de contexto e limites efetivos da execução: não registrados.
+Temperatura, seed, limite de saída e histórico anterior: não registrados.
+Data/hora, duração e tokens processados/gerados: não registrados.
+Truncamento e motivo de término: não determinados.
+Nota: metadados acrescentados após o teste; conteúdo anterior preservado abaixo.
+
+--- CONTEÚDO ORIGINAL PRESERVADO ---
+modelo: gemini-3.5-flash-lite
+Resposta:
+O endereço do Estádio Bezerrão é St. Central – Gama, Brasília – DF, CEP 72405-610 [F059-001].
+Limitações:
+A informação tem como base o informativo institucional atualizado em 20/02/2026 [F059-001]. O documento traz a ressalva de que se trata de texto da fonte, sendo recomendada a conferência no link oficial antes de utilizá-lo como informação oficial [F059-001].
+Fontes utilizadas:
+[F059-001]

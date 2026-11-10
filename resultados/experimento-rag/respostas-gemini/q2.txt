@@ -1,0 +1,24 @@
+REGISTRO DO EXPERIMENTO — Q2
+Identificador anotado no arquivo original: gemini-3.5-flash-lite
+Origem da identificação: anotação no arquivo de resposta, sem log individual de execução.
+Prompt de referência: ../prompts/q2.txt
+SHA-256 do prompt local: 02cd44a6aa7f523ea71bb1559cf9b695c21163c9dee9b59fb883de4de6533d31
+Evidências de referência: ../../q2-evidencias.json (cinco trechos).
+Entrada efetivamente enviada: não comprovada por este arquivo; prompt local é referência.
+Canal de execução (AI Studio, aplicativo ou API): não confirmado nos arquivos.
+Versão efetiva retornada pelo serviço: não registrada.
+Ferramentas externas de busca e nível de raciocínio: não registrados.
+Janela de contexto e limites efetivos da execução: não registrados.
+Temperatura, seed, limite de saída e histórico anterior: não registrados.
+Data/hora, duração e tokens processados/gerados: não registrados.
+Truncamento e motivo de término: não determinados.
+Nota: metadados acrescentados após o teste; conteúdo anterior preservado abaixo.
+
+--- CONTEÚDO ORIGINAL PRESERVADO ---
+modelo:gemini-3.5-flash-lite
+Resposta:
+De acordo com dados de setembro de 2025, os Centros Olímpicos e Paralímpicos (COPs) oferecem modalidades que incluem atletismo, basquete, futsal, futebol society, ginástica localizada, pilates, vôlei, jiu-jitsu, judô, taekwondo, karatê, capoterapia, entre outras [N03-003]. O atendimento é voltado para o público a partir de 4 anos de idade, contemplando crianças, adolescentes, jovens, adultos, idosos e pessoas com deficiência (PcD) [N02-002, F028-001].
+Limitações:
+A listagem exata de modalidades pode variar, pois as evidências apontam que a relação é exemplificativa e que a oferta, o quantitativo de vagas e os horários mudam conforme cada unidade [N03-003]. Além disso, a lista de modalidades específica baseia-se em documento de 2025 [N03-003], não havendo nas evidências atuais a tabela completa detalhada por unidade para o ano vigente.
+Fontes utilizadas:
+[N03-003], [N02-002], [F028-001]

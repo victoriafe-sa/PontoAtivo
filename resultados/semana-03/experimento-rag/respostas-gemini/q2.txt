@@ -1,7 +1,0 @@
-modelo:gemini-3.5-flash-lite
-Resposta:
-De acordo com dados de setembro de 2025, os Centros Olímpicos e Paralímpicos (COPs) oferecem modalidades que incluem atletismo, basquete, futsal, futebol society, ginástica localizada, pilates, vôlei, jiu-jitsu, judô, taekwondo, karatê, capoterapia, entre outras [N03-003]. O atendimento é voltado para o público a partir de 4 anos de idade, contemplando crianças, adolescentes, jovens, adultos, idosos e pessoas com deficiência (PcD) [N02-002, F028-001].
-Limitações:
-A listagem exata de modalidades pode variar, pois as evidências apontam que a relação é exemplificativa e que a oferta, o quantitativo de vagas e os horários mudam conforme cada unidade [N03-003]. Além disso, a lista de modalidades específica baseia-se em documento de 2025 [N03-003], não havendo nas evidências atuais a tabela completa detalhada por unidade para o ano vigente.
-Fontes utilizadas:
-[N03-003], [N02-002], [F028-001]
