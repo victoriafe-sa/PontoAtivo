@@ -1,0 +1,7 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta: Com base nas evidências fornecidas, não é possível responder o que o Decreto distrital nº 28.494/2007 determina sobre acessibilidade em instalações esportivas, pois os documentos apresentados contêm apenas trechos da Lei nº 6.637/2020 e não mencionam o referido decreto.
+
+Limitações: As evidências disponíveis são insuficientes para fornecer informações sobre o Decreto distrital nº 28.494/2007.
+
+Fontes utilizadas: Nenhuma (evidências insuficientes).

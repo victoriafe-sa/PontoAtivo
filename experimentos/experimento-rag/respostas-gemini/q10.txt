@@ -1,0 +1,19 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta:
+Nos Centros Olímpicos e Paralímpicos, são consideradas faltas graves as seguintes condutas:
+* Agredir fisicamente funcionários (dentro ou fora da instituição) ou qualquer usuário [F003-014];
+* Pichar as dependências ou qualquer objeto pertencente à instituição [F003-014];
+* Roubar pertences de usuários, professores, colaboradores ou materiais de propriedade do Centro Olímpico e Paralímpico [F003-014];
+* Assediar sexualmente professores, alunos, usuários ou colaboradores [F003-014];
+* Obter mais de 30% de faltas não justificadas por mês [F003-014];
+* Não comparecer a três aulas consecutivas sem justificativa [F003-014];
+* Ser reincidente em falta média [F003-014];
+* Incidir em uma falta grave [F003-014].
+A pena aplicada para essas condutas é o desligamento do Centro Olímpico e Paralímpico [F003-014].
+
+Limitações:
+As evidências referem-se ao Manual de Uso dos Centros Olímpicos e Paralímpicos do DF (documento de 2022), cuja vigência atual precisa ser conferida.
+
+Fontes utilizadas:
+* [F003-014]

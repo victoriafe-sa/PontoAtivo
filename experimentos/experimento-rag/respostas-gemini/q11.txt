@@ -1,0 +1,16 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta:
+As unidades dos Centros Olímpicos e Paralímpicos funcionam de segunda-feira a domingo [F003-004]. As atividades físicas orientadas ocorrem nos seguintes horários, conforme a grade de modalidades esportivas:
+- Às segundas-feiras, das 14h às 18h [F003-004].
+- De terça-feira a sexta-feira, das 06h45min às 21h45min [F003-004].
+- Aos sábados, das 8h às 12h [F003-004].
+Além disso, há um tempo de tolerância de atraso de no máximo 10 minutos no início das atividades para os alunos inscritos [F003-008]. As segundas-feiras, das 08h às 12h, são destinadas à manutenção, atividades administrativas e coordenação [F003-004], e há oferta de atividades desportivas e de lazer para a comunidade aos finais de semana (sábados das 14h às 18h e domingos das 09h às 16h) [F003-004, F003-005].
+
+Limitações:
+As informações provêm de um manual de 2022, cuja vigência atual precisa ser conferida [F003-004 (ressalvas)]. 
+
+Fontes utilizadas:
+- [F003-004]
+- [F003-005]
+- [F003-008]

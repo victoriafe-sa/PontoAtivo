@@ -1,0 +1,19 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta:
+Os Pontos de Encontro Comunitário (PECs) listados no Plano Piloto possuem endereços informados em um cadastro oficial da SEDUH-DF [R02-038]. Entre os locais indicados na região administrativa constam:
+- Parque da Cidade [R02-038]
+- SGAS 614 [R02-038]
+- SQS 205 Bloco B [R02-038]
+- SQS 210 Bloco A [R02-039]
+- SQS 215 Bloco E [R02-039]
+- SQS 316 Bloco H [R02-039]
+- SQS 404 Bloco J [R02-039]
+- SQS 410 Bloco H [R02-039]
+- SQS 412 Bloco P [R02-039]
+
+Limitações:
+A camada de dados utilizada é declarada oficialmente como obsoleta, tendo seu metadado atualizado em 07/03/2023 [R02-038]. Os registros fornecem os endereços, mas a fonte possui ressalvas de que o estado de conservação está preenchido em poucos registros e o cadastro não serve para provar que os PECs existam ou funcionem atualmente [R02-038]. 
+
+Fontes utilizadas:
+[R02-038], [R02-039]

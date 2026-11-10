@@ -1,0 +1,12 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta:
+Uma pessoa com deficiência pode buscar a prática desportiva e paradesportiva formal e não formal como um direito garantido, contando com meios que facilitem essa prática e com a inclusão de atividades desportivas e paradesportivas em estabelecimentos de ensino [N05-004]. No âmbito do Programa Centros Olímpicos e Paralímpicos (COPs), a oferta de modalidades esportivas e de lazer alcança pessoas com deficiência a partir dos 3 anos de idade [N01-012]. O acesso às atividades dos COPs pode ser pleiteado por qualquer cidadão [N01-012], e os alunos com deficiência podem ser alocados em turmas regulares ou em turmas exclusivas, conforme avaliação e disponibilidade de vagas [N01-014]. Além disso, essas pessoas possuem prioridade no atendimento presencial [N01-014].
+
+Limitações:
+As evidências não detalham o passo a passo prático para realizar a inscrição ou os documentos necessários, mencionando apenas que o acesso pode ser pleiteado e que há alocação baseada em avaliação e disponibilidade de vagas [N01-012, N01-014].
+
+Fontes utilizadas:
+- [N05-004]
+- [N01-012]
+- [N01-014]

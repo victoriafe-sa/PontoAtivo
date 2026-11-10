@@ -1,0 +1,10 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta: 
+Com base nas evidências, o valor investido pela Novacap em cada Ponto de Encontro Comunitário (PEC) é de aproximadamente R$ 35 mil [F065-002]. Além disso, há o registro de um investimento específico de R$ 350 mil na entrega de um PEC na quadra 9/11 em Ceilândia [F066-002]. As evidências não informam um quantitativo total de quantos PECs a Novacap pretende instalar ou revitalizar no Distrito Federal.
+
+Limitações: 
+As evidências não fornecem dados sobre o planejamento futuro, metas globais ou o número total de PECs que a Novacap pretende instalar ou revitalizar, detalhando apenas casos pontuais já executados.
+
+Fontes utilizadas: 
+[F065-002], [F066-002]

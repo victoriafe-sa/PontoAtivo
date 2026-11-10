@@ -1,0 +1,7 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta: As evidências fornecidas não contêm informações sobre o PEC da Fercal, portanto não é possível confirmar se ele possui banheiro adaptado para cadeirantes.
+
+Limitações: Os documentos disponíveis abordam apenas um PEC no Recanto das Emas (quadra 605) [F065-001], um PEC em Ceilândia (quadra 9/11) [F066-001] e normas gerais sobre acessibilidade em parques, praças e espaços públicos no Distrito Federal [N05-024], mas não mencionam a região da Fercal nem os detalhes de suas instalações sanitárias.
+
+Fontes utilizadas: Nenhuma das fontes fornecidas menciona o PEC da Fercal.
