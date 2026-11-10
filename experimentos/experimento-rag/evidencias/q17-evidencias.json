@@ -1,0 +1,132 @@
+{
+  "consulta": "Quem é isento do pagamento da taxa da Escola de Esportes da Secretaria de Esporte e Lazer?",
+  "k": 5,
+  "resultados": [
+    {
+      "id": "F064-004",
+      "texto": "devidos pela ocupação dos bens e espaços públicos esportivos e de lazer poderão ser revistos e atualizados sempre que houver necessidade de reequilibrar a composição dos custos de manutenção.§ 6º Os órgãos públicos distritais são isentos do pagamento do preço público para a utilização dos bens e espaços públicos esportivos e de lazer quando realizarem diretamente os eventos.Art. 3º Compete ao Secretário de Estado de Esporte e Lazer, sempre em caráter precário e revogável:I - Autorizar o uso dos bens e espaços públicos esportivos e de lazer sob sua gestão a outros órgãos públicos ou a particulares;II - Autorizar o uso dos bens e espaços públicos esportivos e de lazer por particulares com isenção ou redução do preço público, caso reconheça, justificadamente, a existência de relevante",
+      "metadados": {
+        "abrangencia": "DF",
+        "ressalvas": "Texto compilado, com alterações posteriores indicadas como 'Legislação Correlata' (Lei Complementar 1.063/2025 e Decreto 49.323/2026). Conferir vigência no SINJ. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "titulo": "Decreto nº 45.269, de 08/12/2023",
+        "tipo_evidencia": "Regra/norma",
+        "data_publicacao": "08/12/2023",
+        "indice_chunk": 4,
+        "id_fonte": "F064",
+        "recorte": "",
+        "data_coleta": "2026-11-05",
+        "link": "https://www.sinj.df.gov.br/sinj/Norma/1b5ab145e1984280b7142d0324f013aa/Decreto_45269_08_12_2023.html",
+        "regioes": "",
+        "orgao": "Governo do Distrito Federal (decreto distrital; texto no SINJ-DF)",
+        "tipo_chunk": "texto",
+        "comprova_funcionamento": "Não se aplica (norma)",
+        "tema": "Gestão e uso de bens e espaços esportivos e de lazer pela SEL",
+        "validacao": "Pendente de validação humana",
+        "total_chunks": 6
+      },
+      "distancia": 0.1507779359817505,
+      "similaridade": 0.8492220640182495
+    },
+    {
+      "id": "N01-032",
+      "texto": "à Subsecretaria responsável pela gestão direta dos Centros Olímpicos e Paralímpicos para análise e decisão, mediante justificativa.Art. 22. O aluno desligado por meio de processo administrativo somente poderá ingressar novamente no Programa Centros Olímpicos e Paralímpicos, após o prazo de 01 (um) ano do fato ensejador do seu desligamento, e desde que seja selecionado em novo processo de matrícula.TÍTULO IIIDOS PROJETOS NO ÂMBITO DO PROGRAMA CENTROS OLÍMPICOS E PARALÍMPICOSCAPÍTULO IDO PROJETO ESPORTE EDUCAArt. 23. O Projeto Esporte Educa tem como objetivo promover a Educação em Tempo Integral no âmbito do Programa Centros Olímpicos e Paralímpicos sendo realizado em parceria com a Secretaria de Estado de Educação do Distrito Federal – SEEDF, regulamentado por meio de Portaria Conjunta",
+      "metadados": {
+        "abrangencia": "DF",
+        "ressalvas": "Texto compilado; alterada por Portarias 279, 281 e 282/2022 (listadas como legislação correlata). Substitui a Portaria 99/2021, revogada. Conferir vigência. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "comprova_funcionamento": "Não se aplica (norma)",
+        "total_chunks": 50,
+        "tipo_chunk": "texto",
+        "data_publicacao": "02/06/2022",
+        "titulo": "Portaria SEL nº 99, de 02/06/2022: Programa Centros Olímpicos e Paralímpicos",
+        "indice_chunk": 32,
+        "tipo_evidencia": "Regra/norma",
+        "recorte": "",
+        "orgao": "Secretaria de Esporte e Lazer do DF (portaria publicada no SINJ-DF)",
+        "validacao": "Pendente de validação humana",
+        "id_fonte": "N01",
+        "regioes": "",
+        "data_coleta": "2026-11-07",
+        "tema": "Normas do Programa dos COPs: matrícula, 5% das vagas para pessoas com deficiência, turmas",
+        "link": "https://www.sinj.df.gov.br/sinj/Norma/a5fa515d12f1424d96047f54788db994/sel_prt_99_2022.html"
+      },
+      "distancia": 0.15949499607086182,
+      "similaridade": 0.8405050039291382
+    },
+    {
+      "id": "F064-003",
+      "texto": "indenização, mediante justificativa motivada em interesse público na sua retomada.§ 1º A Secretaria de Estado de Esporte e Lazer definirá, por meio de normas complementares, os critérios para solicitação de reserva, do funcionamento e uso dos bens e espaços públicos esportivos e de lazer sob sua gestão.§ 2º Os eventos de natureza esportiva terão preferência sobre os demais eventos.§ 3º É vedada a sublocação dos bens e espaços públicos esportivos e de lazer cuja utilização tenha sido autorizada de acordo com o disposto neste Decreto.§ 4º A Secretaria de Estado de Esporte e Lazer estipulará por meio de normas complementares os valores dos preços públicos, dos bens e espaços públicos esportivos e de lazer sob sua gestão, a serem recolhidos ao Fundo de Apoio ao Esporte - FAE.§ 5º Os valores",
+      "metadados": {
+        "regioes": "",
+        "comprova_funcionamento": "Não se aplica (norma)",
+        "indice_chunk": 3,
+        "recorte": "",
+        "ressalvas": "Texto compilado, com alterações posteriores indicadas como 'Legislação Correlata' (Lei Complementar 1.063/2025 e Decreto 49.323/2026). Conferir vigência no SINJ. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "tema": "Gestão e uso de bens e espaços esportivos e de lazer pela SEL",
+        "total_chunks": 6,
+        "tipo_chunk": "texto",
+        "abrangencia": "DF",
+        "validacao": "Pendente de validação humana",
+        "orgao": "Governo do Distrito Federal (decreto distrital; texto no SINJ-DF)",
+        "tipo_evidencia": "Regra/norma",
+        "id_fonte": "F064",
+        "link": "https://www.sinj.df.gov.br/sinj/Norma/1b5ab145e1984280b7142d0324f013aa/Decreto_45269_08_12_2023.html",
+        "data_publicacao": "08/12/2023",
+        "data_coleta": "2026-11-05",
+        "titulo": "Decreto nº 45.269, de 08/12/2023"
+      },
+      "distancia": 0.16213303804397583,
+      "similaridade": 0.8378669619560242
+    },
+    {
+      "id": "N01-049",
+      "texto": "eVII - integrar a comunidade por meio da valorização da convivência nos espaços esportivos.Art. 41. O Projeto Lazer para Todos será destinado ao desenvolvimento de atividades de caráter esportivo e de lazer, conforme as disposições do Programa Centros Olímpicos e Paralímpicos e de acordo com as normas de uso dos espaços esportivos da Secretaria de Esporte e Lazer.TÍTULO IVDISPOSIÇÕES FINAISArt. 42. Não será cobrada nenhum tipo de valor para a participação nas ações e Projetos desenvolvidos no âmbito do Programa Centros Olímpicos e Paralímpicos.Art. 43. Fica delegada competência à Subsecretaria responsável pela gestão dos Centros Olímpicos e Paralímpicos a elaboração de normas complementares à plena execução das disposições desta Portaria.Art. 44. Os fundamentos, objetivos e diretrizes",
+      "metadados": {
+        "recorte": "",
+        "titulo": "Portaria SEL nº 99, de 02/06/2022: Programa Centros Olímpicos e Paralímpicos",
+        "comprova_funcionamento": "Não se aplica (norma)",
+        "total_chunks": 50,
+        "tipo_evidencia": "Regra/norma",
+        "link": "https://www.sinj.df.gov.br/sinj/Norma/a5fa515d12f1424d96047f54788db994/sel_prt_99_2022.html",
+        "regioes": "",
+        "tipo_chunk": "texto",
+        "data_coleta": "2026-11-07",
+        "data_publicacao": "02/06/2022",
+        "indice_chunk": 49,
+        "ressalvas": "Texto compilado; alterada por Portarias 279, 281 e 282/2022 (listadas como legislação correlata). Substitui a Portaria 99/2021, revogada. Conferir vigência. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "orgao": "Secretaria de Esporte e Lazer do DF (portaria publicada no SINJ-DF)",
+        "abrangencia": "DF",
+        "id_fonte": "N01",
+        "tema": "Normas do Programa dos COPs: matrícula, 5% das vagas para pessoas com deficiência, turmas",
+        "validacao": "Pendente de validação humana"
+      },
+      "distancia": 0.16267293691635132,
+      "similaridade": 0.8373270630836487
+    },
+    {
+      "id": "N01-019",
+      "texto": "Em caráter excepcional e discricionário, a Secretaria de Estado de Esporte e Lazer poderá autorizar o uso da estrutura esportiva à pessoa física ou jurídica.Art. 9º As atividades regulares serão realizadas de segunda à sexta-feira, entre 06h às 22h, e aos sábados de 08h às 12h.§ 1º Salvo em situações excepcionais, o turno matutino das segundas-feiras ficará reservado para a realização de manutenção das instalações físicas.§ 2º Em situações excepcionais e a critério da Secretaria de Estado de Esporte e Lazer, as atividades regulares poderão ser desenvolvidas em outros dias e horários.Art. 10. A secretaria dos Centros Olímpicos e Paralímpicos funcionará, para atendimento ao público, de segunda à sexta-feira, de 08h às 18h.Parágrafo único.",
+      "metadados": {
+        "orgao": "Secretaria de Esporte e Lazer do DF (portaria publicada no SINJ-DF)",
+        "id_fonte": "N01",
+        "tipo_evidencia": "Regra/norma",
+        "data_publicacao": "02/06/2022",
+        "recorte": "",
+        "tema": "Normas do Programa dos COPs: matrícula, 5% das vagas para pessoas com deficiência, turmas",
+        "link": "https://www.sinj.df.gov.br/sinj/Norma/a5fa515d12f1424d96047f54788db994/sel_prt_99_2022.html",
+        "data_coleta": "2026-11-07",
+        "ressalvas": "Texto compilado; alterada por Portarias 279, 281 e 282/2022 (listadas como legislação correlata). Substitui a Portaria 99/2021, revogada. Conferir vigência. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "tipo_chunk": "texto",
+        "titulo": "Portaria SEL nº 99, de 02/06/2022: Programa Centros Olímpicos e Paralímpicos",
+        "total_chunks": 50,
+        "comprova_funcionamento": "Não se aplica (norma)",
+        "validacao": "Pendente de validação humana",
+        "regioes": "",
+        "indice_chunk": 19,
+        "abrangencia": "DF"
+      },
+      "distancia": 0.16393524408340454,
+      "similaridade": 0.8360647559165955
+    }
+  ],
+  "resposta": "Resposta extrativa — os trechos abaixo são evidências candidatas à pergunta. A proximidade vetorial não garante que respondam a todos os seus pontos.\n\n[F064-004] Decreto nº 45.269, de 08/12/2023\ndevidos pela ocupação dos bens e espaços públicos esportivos e de lazer poderão ser revistos e atualizados sempre que houver necessidade de reequilibrar a composição dos custos de manutenção.§ 6º Os órgãos públicos distritais são isentos do pagamento do preço público para a utilização dos bens e espaços públicos esportivos e de lazer quando realizarem diretamente os eventos.Art. 3º Compete ao Secretário de Estado de Esporte e Lazer, sempre em caráter precário e revogável:I - Autorizar o uso dos bens e espaços públicos esportivos e de lazer sob sua gestão a outros órgãos públicos ou a particulares;II - Autorizar o uso dos bens e espaços públicos esportivos e de lazer por particulares com isenção ou redução do preço público, caso reconheça, justificadamente, a existência de relevante\nFonte: https://www.sinj.df.gov.br/sinj/Norma/1b5ab145e1984280b7142d0324f013aa/Decreto_45269_08_12_2023.html\nPublicação: 08/12/2023 | Coleta: 2026-11-05\nValidação: Pendente de validação humana | Ressalvas: Texto compilado, com alterações posteriores indicadas como 'Legislação Correlata' (Lei Complementar 1.063/2025 e Decreto 49.323/2026). Conferir vigência no SINJ. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.\n\n[N01-032] Portaria SEL nº 99, de 02/06/2022: Programa Centros Olímpicos e Paralímpicos\nà Subsecretaria responsável pela gestão direta dos Centros Olímpicos e Paralímpicos para análise e decisão, mediante justificativa.Art. 22. O aluno desligado por meio de processo administrativo somente poderá ingressar novamente no Programa Centros Olímpicos e Paralímpicos, após o prazo de 01 (um) ano do fato ensejador do seu desligamento, e desde que seja selecionado em novo processo de matrícula.TÍTULO IIIDOS PROJETOS NO ÂMBITO DO PROGRAMA CENTROS OLÍMPICOS E PARALÍMPICOSCAPÍTULO IDO PROJETO ESPORTE EDUCAArt. 23. O Projeto Esporte Educa tem como objetivo promover a Educação em Tempo Integral no âmbito do Programa Centros Olímpicos e Paralímpicos sendo realizado em parceria com a Secretaria de Estado de Educação do Distrito Federal – SEEDF, regulamentado por meio de Portaria Conjunta\nFonte: https://www.sinj.df.gov.br/sinj/Norma/a5fa515d12f1424d96047f54788db994/sel_prt_99_2022.html\nPublicação: 02/06/2022 | Coleta: 2026-11-07\nValidação: Pendente de validação humana | Ressalvas: Texto compilado; alterada por Portarias 279, 281 e 282/2022 (listadas como legislação correlata). Substitui a Portaria 99/2021, revogada. Conferir vigência. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.\n\n[F064-003] Decreto nº 45.269, de 08/12/2023\nindenização, mediante justificativa motivada em interesse público na sua retomada.§ 1º A Secretaria de Estado de Esporte e Lazer definirá, por meio de normas complementares, os critérios para solicitação de reserva, do funcionamento e uso dos bens e espaços públicos esportivos e de lazer sob sua gestão.§ 2º Os eventos de natureza esportiva terão preferência sobre os demais eventos.§ 3º É vedada a sublocação dos bens e espaços públicos esportivos e de lazer cuja utilização tenha sido autorizada de acordo com o disposto neste Decreto.§ 4º A Secretaria de Estado de Esporte e Lazer estipulará por meio de normas complementares os valores dos preços públicos, dos bens e espaços públicos esportivos e de lazer sob sua gestão, a serem recolhidos ao Fundo de Apoio ao Esporte - FAE.§ 5º Os valores\nFonte: https://www.sinj.df.gov.br/sinj/Norma/1b5ab145e1984280b7142d0324f013aa/Decreto_45269_08_12_2023.html\nPublicação: 08/12/2023 | Coleta: 2026-11-05\nValidação: Pendente de validação humana | Ressalvas: Texto compilado, com alterações posteriores indicadas como 'Legislação Correlata' (Lei Complementar 1.063/2025 e Decreto 49.323/2026). Conferir vigência no SINJ. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.\n\nLimite: os trechos descrevem as fontes nas datas indicadas. Não confirmam funcionamento, vagas, horários ou acessibilidade atuais. Se o dado solicitado não aparece nos trechos, não é possível confirmá-lo."
+}
