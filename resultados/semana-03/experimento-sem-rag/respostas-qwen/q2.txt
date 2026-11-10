@@ -1,0 +1,14 @@
+modelo: qwen3:8b
+executado_em: 2026-11-10T12:41:49-03:00
+tokens: entrada=235 saida=529
+tempo_s: 28.527
+---
+Resposta:  
+Os Centros Olímpicos e Paralímpicos do Distrito Federal (DF) oferecem modalidades esportivas como atletismo, natação, voleibol, futebol, ginástica artística, judô, taekwondo, ciclismo e esgrima, além de atividades adaptadas para pessoas com deficiência, como futebol 5 para atletas paralímpicos, natação paralímpica e esgrima adaptada. Essas instalações visam promover a prática esportiva inclusiva e o desenvolvimento de atletas em diferentes níveis.  
+
+Limitações:  
+Não há uma lista exata ou atualizada de todas as modalidades ofertadas pelos Centros Olímpicos e Paralímpicos do DF em meu banco de dados. As informações são baseadas em conhecimento geral sobre estruturas esportivas públicas no Brasil.  
+
+Fontes utilizadas:  
+- Conhecimento prévio sobre ações de inclusão esportiva no DF e no Brasil.  
+- Informações gerais sobre Centros Olímpicos e Paralímpicos no contexto nacional.

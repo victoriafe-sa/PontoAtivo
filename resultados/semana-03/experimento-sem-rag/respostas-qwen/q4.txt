@@ -1,0 +1,16 @@
+modelo: qwen3:8b
+executado_em: 2026-11-10T12:42:42-03:00
+tokens: entrada=234 saida=425
+tempo_s: 24.851
+amanha_refere_se_a: 2026-11-11
+---
+Resposta:  
+Atualmente, não há informações disponíveis sobre vagas específicas de quadras com acessibilidade para cadeirantes no PontoAtivo para o horário solicitado. O projeto prioriza espaços inclusivos, mas a disponibilidade de vagas e detalhes técnicos de acessibilidade dependem da gestão local de cada unidade.  
+
+Limitações:  
+- Não há acesso a dados em tempo real sobre ocupação ou disponibilidade de vagas.  
+- Acessibilidade é garantida por padrões de projeto, mas a verificação prática exige contato direto com as instalações.  
+
+Fontes utilizadas:  
+- Conhecimento prévio sobre o PontoAtivo e suas diretrizes de inclusão.  
+- Não foi possível consultar fontes externas para confirmar disponibilidade específica.
