@@ -1,0 +1,8 @@
+modelo: llama3.2:3b
+executado_em: 2026-11-10T12:40:59-03:00
+tokens: entrada=238 saida=74
+tempo_s: 2.433
+---
+Não tenho informações suficientes para fornecer o endereço do Estádio Bezerrão em Gama. Não posso confirmar a localização ou precisar informações sobre este estúdio.
+
+Não sei qual é o órgão ou documento que forneça essa informação, portanto não posso citar uma fonte específica.

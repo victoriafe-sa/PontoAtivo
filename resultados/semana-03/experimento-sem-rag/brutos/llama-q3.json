@@ -1,0 +1,32 @@
+{
+  "pergunta_id": "q3",
+  "modelo": "llama3.2:3b",
+  "provedor": "ollama",
+  "executado_em": "2026-11-10T12:41:06-03:00",
+  "maquina": "Darwin arm64",
+  "ollama_versao": "0.32.0",
+  "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+  "familia": "llama",
+  "parametros_modelo": "3.2B",
+  "quantizacao": "Q4_K_M",
+  "parametros_padrao_modelfile": "stop                           \"<|start_header_id|>\"\nstop                           \"<|end_header_id|>\"\nstop                           \"<|eot_id|>\"",
+  "resposta": "A academia pública do Parque da Cidade no Distrito Federal é uma instituição de ensino físico que oferece serviços de recreação e esporte. No entanto, não consegui encontrar informações sobre a abordagem de preços ou opções de assinatura para o uso desse espaço.\n\nÉ possível que a academia seja gratuita ou ofereça programas de benefícios para certos grupos, como residentes locais ou pessoas com deficiência. Além disso, pode ser necessário consultar diretamente o site oficial da academia ou entrar em contato com ela para obter informações atualizadas sobre os preços e opções de utilização.\n\nNo entanto, não consegui encontrar nenhuma fonte confiável que forneça informações sobre como utilizar a academia gratuita.",
+  "raciocinio": "",
+  "configuracao": {
+    "options": {
+      "seed": 42
+    },
+    "stream": false,
+    "think": "padrão do Ollama (não definido)",
+    "endpoint": "/api/generate"
+  },
+  "tokens_entrada": 237,
+  "tokens_saida": 165,
+  "tempo_total_s": 4.033,
+  "tempo_carga_s": 0.116,
+  "tempo_entrada_s": 0.135,
+  "tempo_geracao_s": 3.78,
+  "tokens_por_s": 43.65,
+  "tempo_parede_s": 4.036,
+  "motivo_fim": "stop"
+}
