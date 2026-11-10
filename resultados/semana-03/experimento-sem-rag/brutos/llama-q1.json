@@ -1,0 +1,32 @@
+{
+  "pergunta_id": "q1",
+  "modelo": "llama3.2:3b",
+  "provedor": "ollama",
+  "executado_em": "2026-11-10T12:40:59-03:00",
+  "maquina": "Darwin arm64",
+  "ollama_versao": "0.32.0",
+  "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+  "familia": "llama",
+  "parametros_modelo": "3.2B",
+  "quantizacao": "Q4_K_M",
+  "parametros_padrao_modelfile": "stop                           \"<|start_header_id|>\"\nstop                           \"<|end_header_id|>\"\nstop                           \"<|eot_id|>\"",
+  "resposta": "Não tenho informações suficientes para fornecer o endereço do Estádio Bezerrão em Gama. Não posso confirmar a localização ou precisar informações sobre este estúdio.\n\nNão sei qual é o órgão ou documento que forneça essa informação, portanto não posso citar uma fonte específica.",
+  "raciocinio": "",
+  "configuracao": {
+    "options": {
+      "seed": 42
+    },
+    "stream": false,
+    "think": "padrão do Ollama (não definido)",
+    "endpoint": "/api/generate"
+  },
+  "tokens_entrada": 238,
+  "tokens_saida": 74,
+  "tempo_total_s": 2.433,
+  "tempo_carga_s": 0.124,
+  "tempo_entrada_s": 0.641,
+  "tempo_geracao_s": 1.664,
+  "tokens_por_s": 44.47,
+  "tempo_parede_s": 2.436,
+  "motivo_fim": "stop"
+}

@@ -1,0 +1,13 @@
+modelo: llama3.2:3b
+executado_em: 2026-11-10T12:41:10-03:00
+tokens: entrada=248 saida=192
+tempo_s: 4.745
+amanha_refere_se_a: 2026-11-11
+---
+Desculpe, mas não tenho informações atualizadas sobre vagas de quadras específicas ou acesseabilidade em espaços esportivos no Distrito Federal.
+
+Não posso confirmar se há vaga disponível amanhã às 19h ou se é acessível para cadeirantes. Para obter informações precisas, recomendo entrar em contato diretamente com o espaço esportivo ou organismo responsável pela gestão de quadras e atividades no Distrito Federal.
+
+Não tenho conhecimento sobre a origem das regras ou políticas de acessibilidade de espaços esportivos no DF. Se você precisar de informações sobre como obter acesso a quadras para pessoas com deficiência, recomendo procurar orientação do órgão responsável pela política de inclusão e acessibilidade no Distrito Federal.
+
+Não tenho fontes específicas para citar nesse caso.
