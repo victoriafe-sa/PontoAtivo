@@ -2,8 +2,8 @@
 tempo e consumo de tokens.
 
 Uso (a partir da raiz do repositório):
-    python3 resultados/semana-03/experimento-sem-rag/executar_sem_rag.py qwen llama
-    GEMINI_API_KEY=... python3 resultados/semana-03/experimento-sem-rag/executar_sem_rag.py gemini
+    python3 scripts/rodar_experimento_sem_rag.py qwen llama
+    GEMINI_API_KEY=... python3 scripts/rodar_experimento_sem_rag.py gemini
 
 Requer apenas a biblioteca padrão do Python. Os modelos locais rodam pelo
 Ollama (http://localhost:11434). O Gemini só é executado se GEMINI_API_KEY
@@ -19,7 +19,8 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
-PASTA = Path(__file__).resolve().parent
+RAIZ = Path(__file__).resolve().parents[1]
+PASTA = RAIZ / "experimentos" / "experimento-sem-rag"
 PERGUNTAS = ["q1", "q2", "q3", "q4"]
 OLLAMA = "http://localhost:11434"
 SEED = 42  # fixa a amostragem para permitir repetição; demais parâmetros ficam no padrão do modelo
@@ -41,7 +42,7 @@ except ImportError:
 
 def carregar_env():
     """Lê GEMINI_API_KEY de um .env na raiz do repositório (ignorado pelo Git)."""
-    env = PASTA.parents[2] / ".env"
+    env = RAIZ / ".env"
     if env.exists() and not os.environ.get("GEMINI_API_KEY"):
         for linha in env.read_text(encoding="utf-8").splitlines():
             chave, _, valor = linha.partition("=")
