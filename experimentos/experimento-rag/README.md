@@ -9,11 +9,13 @@ O experimento reúne 20 perguntas, cinco trechos recuperados por pergunta e 60 r
 | `prompts/q1.txt` a `q20.txt` | Pergunta, instruções e evidências locais de referência. |
 | `evidencias/q1-evidencias.json` a `q20-evidencias.json` | Resultados do pipeline usados como referência documental. |
 | `respostas-gemini/`, `respostas-qwen/`, `respostas-llama/` | Textos das respostas preservados. |
-| `brutos/<modelo>-qN.json` | Registros documentais importados dos TXT existentes, com origem e campos ausentes explícitos. |
+| `brutos/<modelo>-qN.json` | Registros documentais importados dos TXT existentes, com origem e campos ausentes explícitos. **Não estão versionados** (ver abaixo). |
 | `metricas.csv` | Uma linha por pergunta e grupo de modelo, com referências aos arquivos e situação das métricas. |
 | `analise-respostas.md` | Avaliação qualitativa das respostas e limitações. |
 
 ## Origem e limites dos registros históricos
+
+> **Registros ausentes no repositório:** os 60 JSONs históricos `brutos/<modelo>-qN.json` nunca foram incluídos no Git, embora sejam citados na coluna `arquivo_bruto` do `metricas.csv`. Também faltam os JSONs de duas rodadas do Gemini com falha (`rodada-20261112-084429-326726/q1.json` e `rodada-20261112-084513-664720/q1.json`) e os de Q14–Q20 da `rodada-20261112-084720-482124`. As linhas do CSV foram mantidas como estão; as respostas em TXT continuam disponíveis. Se os arquivos forem recuperados, basta adicioná-los nos caminhos indicados.
 
 Os 60 JSONs de `brutos/` foram organizados posteriormente a partir dos arquivos locais. **Não são respostas brutas de API nem logs recuperados da execução original.** Cada registro preserva o TXT integral em `conteudo_arquivo_original`, sua assinatura SHA-256 e o texto da resposta separado dos cabeçalhos. Os TXT originais não foram alterados.
 
@@ -21,7 +23,7 @@ O campo `modelo` reproduz a identificação explícita no conteúdo original qua
 
 Prompts, evidências e hash do prompt indicam referências locais atuais. Não comprovam a entrada efetivamente enviada, seu processamento integral ou a ausência de truncamento.
 
-Datas de execução, tokens, tempos, configuração, provedor e demais informações não disponíveis ficam nulos nos JSONs ou vazios no CSV. **Vazio não significa zero.** Todas as linhas do CSV têm `status_metricas=nao_registradas`. Não é possível reconstruir tokens e latência reais apenas a partir dos TXT, nem usar a data dos arquivos como data da execução.
+Datas de execução, tokens, tempos, configuração, provedor e demais informações não disponíveis ficam nulos nos JSONs ou vazios no CSV. **Vazio não significa zero.** Todas as 60 linhas históricas do CSV têm `status_metricas=nao_registradas`. Não é possível reconstruir tokens e latência reais apenas a partir dos TXT, nem usar a data dos arquivos como data da execução.
 
 As colunas básicas do CSV seguem o experimento sem RAG. Foram acrescentadas `status_metricas`, `origem_modelo`, `arquivo_resposta` e `arquivo_bruto` para explicar a ausência de medidas e permitir rastrear cada linha.
 
