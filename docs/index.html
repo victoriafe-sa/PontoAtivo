@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PontoAtivo</title>
+<meta name="description" content="Protótipo de recuperação de informações sobre espaços esportivos e prática inclusiva de atividades físicas no Distrito Federal.">
+<style>
+:root{
+  --bg:#002b36;        /* azul-petróleo bem escuro */
+  --surface:#073642;   /* azul-petróleo escuro */
+  --surface-2:#0b4452;
+  --line:#145566;
+  --text:#eee8d5;
+  --muted:#93a1a1;
+  --accent:#2aa198;
+  --accent-2:#5fd3c9;
+  --ok:#859900; --warn:#b58900; --bad:#dc5a4a; --neutral:#6c8a94;
+  --radius:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent-2)}
+h1,h2,h3{line-height:1.2;margin:0 0 .5em}
+h2{font-size:clamp(1.5rem,3vw,2rem)}
+p{margin:0 0 1em}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+section{padding:64px 0;border-top:1px solid var(--line)}
+.lead{color:var(--muted);max-width:720px}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent-2);outline-offset:2px}
+
+/* navegação */
+nav{position:sticky;top:0;z-index:10;background:rgba(0,43,54,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:20px;height:60px}
+.logo{font-weight:800;font-size:1.15rem;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:8px;white-space:nowrap}
+.logo span{width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(42,161,152,.25)}
+.links{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.links a{color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:8px;white-space:nowrap;font-size:.92rem}
+.links a:hover,.links a.ativo{color:var(--text);background:var(--surface)}
+
+/* topo */
+.hero{padding:80px 0 64px;border-top:0}
+.hero h1{font-size:clamp(2.2rem,6vw,3.6rem);letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--accent-2)}
+.tag{display:inline-block;font-size:.8rem;color:var(--accent-2);border:1px solid var(--line);border-radius:999px;padding:3px 12px;margin-bottom:18px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-block;padding:10px 18px;border-radius:10px;text-decoration:none;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--text)}
+.btn.primario{background:var(--accent);border-color:var(--accent);color:#002b36}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:48px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.stat b{display:block;font-size:2rem;color:var(--accent-2);font-variant-numeric:tabular-nums}
+.stat small{color:var(--muted)}
+.aviso{background:var(--surface);border-left:4px solid var(--warn);border-radius:8px;padding:12px 16px;color:var(--muted);font-size:.95rem;margin-top:24px}
+
+/* pipeline */
+.pipe{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:28px 0 16px;counter-reset:passo}
+.passo{position:relative;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px;transition:border-color .3s,transform .3s,background .3s}
+.passo::before{counter-increment:passo;content:counter(passo);display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--surface-2);color:var(--accent-2);font-weight:700;margin-bottom:8px}
+.passo b{display:block}
+.passo small{color:var(--muted)}
+.passo.ativo{border-color:var(--accent);background:var(--surface-2);transform:translateY(-3px)}
+.passo.ativo::before{background:var(--accent);color:#002b36}
+.detalhe{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px;min-height:120px}
+.detalhe code,.mono{font-family:var(--mono);font-size:.88em;background:var(--bg);padding:1px 6px;border-radius:5px}
+
+/* busca */
+.busca{display:flex;gap:8px;margin:24px 0 12px}
+input[type=search],select{flex:1;background:var(--surface);border:1px solid var(--line);color:var(--text);border-radius:10px;padding:12px 14px;font:inherit;min-width:0}
+input::placeholder{color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.chip{background:transparent;border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:.88rem;color:var(--muted)}
+.chip:hover,.chip.ativo{border-color:var(--accent);color:var(--text);background:var(--surface)}
+.resultado{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin-bottom:12px;animation:surge .35s ease both}
+.resultado header{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.resultado .id{font-family:var(--mono);color:var(--accent-2);font-weight:700}
+.resultado .trecho{white-space:pre-wrap;color:var(--text);font-size:.95rem;max-height:9.5em;overflow:hidden;position:relative}
+.resultado .trecho.aberto{max-height:none}
+.resultado .meta{color:var(--muted);font-size:.85rem;margin-top:8px}
+.barra{height:6px;background:var(--bg);border-radius:9px;overflow:hidden;width:120px;align-self:center}
+.barra i{display:block;height:100%;background:var(--accent)}
+mark{background:rgba(181,137,0,.35);color:inherit;border-radius:3px;padding:0 2px}
+.link-sutil{background:none;border:0;color:var(--accent-2);padding:0;font-size:.85rem}
+.vazio{color:var(--muted);padding:20px;text-align:center;border:1px dashed var(--line);border-radius:var(--radius)}
+
+/* comparador */
+.comp{display:grid;grid-template-columns:280px 1fr;gap:20px;margin-top:24px}
+.lista-q{display:flex;flex-direction:column;gap:6px;max-height:640px;overflow:auto;padding-right:4px}
+.lista-q button{text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.9rem;color:var(--muted)}
+.lista-q button b{color:var(--accent-2);margin-right:6px}
+.lista-q button.ativo{border-color:var(--accent);color:var(--text);background:var(--surface-2)}
+.sel-q{display:none}
+.pergunta{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin-bottom:14px}
+.pergunta h3{font-size:1.15rem}
+.pergunta .ref{color:var(--muted);font-size:.9rem;margin:0}
+.toggle{display:inline-flex;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:4px;margin-bottom:14px}
+.toggle button{background:none;border:0;padding:8px 16px;border-radius:7px;color:var(--muted)}
+.toggle button.ativo{background:var(--accent);color:#002b36;font-weight:700}
+.modelos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.card-modelo{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px;display:flex;flex-direction:column;animation:surge .35s ease both}
+.card-modelo h4{margin:0;font-size:1rem}
+.card-modelo .mid{font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+.selo{display:inline-block;font-size:.75rem;font-weight:700;padding:2px 10px;border-radius:999px;margin:10px 0 4px;align-self:flex-start;color:#002b36}
+.selo.ok{background:var(--ok)}.selo.warn{background:var(--warn)}.selo.bad{background:var(--bad)}.selo.neutral{background:var(--neutral)}
+.avaliacao{font-size:.85rem;color:var(--muted);margin-bottom:10px}
+.texto-resp{white-space:pre-wrap;font-size:.9rem;border-top:1px solid var(--line);padding-top:10px;max-height:320px;overflow:auto}
+.cit{font-family:var(--mono);font-size:.82em;background:var(--bg);border:1px solid var(--line);color:var(--accent-2);border-radius:5px;padding:0 5px}
+.cit:hover{border-color:var(--accent)}
+.legenda{display:flex;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:.85rem;margin-top:14px}
+.legenda span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;background:var(--c)}
+
+/* fontes */
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.fonte{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px;display:flex;flex-direction:column;gap:6px;animation:surge .3s ease both}
+.fonte .topo{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.fonte .id{font-family:var(--mono);color:var(--accent-2);font-weight:700}
+.fonte .n{font-size:.78rem;color:var(--muted)}
+.fonte h3{font-size:1rem;margin:0}
+.fonte small{color:var(--muted)}
+.fonte details{font-size:.85rem;color:var(--muted)}
+.fonte summary{cursor:pointer;color:var(--accent-2)}
+
+/* executar */
+.abas{display:flex;gap:6px;margin:20px 0 12px}
+.aba{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 14px;color:var(--muted)}
+.aba.ativo{border-color:var(--accent);color:var(--text)}
+.cmd{position:relative;background:#001f27;border:1px solid var(--line);border-radius:10px;margin:0 0 12px}
+.cmd .rot{display:block;font-size:.8rem;color:var(--muted);padding:10px 14px 0}
+.cmd pre{margin:0;padding:6px 14px 12px;overflow-x:auto;font-family:var(--mono);font-size:.88rem;color:var(--text)}
+.copiar{position:absolute;top:8px;right:8px;background:var(--surface);border:1px solid var(--line);border-radius:7px;padding:3px 10px;font-size:.78rem;color:var(--muted)}
+.copiar.ok{color:var(--ok);border-color:var(--ok)}
+
+/* limites e equipe */
+.lim{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;padding:0;list-style:none}
+.lim li{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px;color:var(--muted)}
+.lim li b{color:var(--text);display:block;margin-bottom:4px}
+.equipe{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.equipe span{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.9rem}
+
+/* modal */
+dialog{background:var(--surface);color:var(--text);border:1px solid var(--line);border-radius:var(--radius);max-width:min(720px,calc(100vw - 32px));padding:0}
+dialog::backdrop{background:rgba(0,20,26,.75)}
+dialog .corpo{padding:20px;max-height:70vh;overflow:auto;white-space:pre-wrap;font-size:.92rem}
+dialog header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 20px;border-bottom:1px solid var(--line)}
+dialog header button{background:none;border:0;font-size:1.4rem;color:var(--muted)}
+
+.revelar{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+.revelar.visivel{opacity:1;transform:none}
+@keyframes surge{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.revelar{opacity:1;transform:none}html{scroll-behavior:auto}}
+
+@media (max-width:860px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .pipe{grid-template-columns:1fr 1fr}
+  .comp{grid-template-columns:1fr}
+  .lista-q{display:none}
+  .sel-q{display:block;width:100%;margin-bottom:14px}
+  .modelos{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .links{display:none}
+  .pipe{grid-template-columns:1fr}
+  .busca{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#inicio"><span></span>PontoAtivo</a>
+    <div class="links">
+      <a href="#como">Como funciona</a>
+      <a href="#explorar">Explorar a base</a>
+      <a href="#comparar">Com e sem RAG</a>
+      <a href="#fontes">Fontes</a>
+      <a href="#executar">Executar</a>
+      <a href="#limites">Limites</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero wrap" id="inicio">
+  <span class="tag">Challenge 2 (CBL) · Big Idea “Qualidade de Vida”</span>
+  <h1>Onde praticar atividade física no DF, <em>com a fonte ao lado</em>.</h1>
+  <p class="lead">O PontoAtivo é um protótipo de recuperação de informações sobre espaços esportivos e prática inclusiva de atividades físicas no Distrito Federal. Cada resposta vem com os trechos dos documentos oficiais que a sustentam.</p>
+  <div class="cta">
+    <a class="btn primario" href="#explorar">Explorar a base</a>
+    <a class="btn" href="#comparar">Ver experimentos</a>
+    <a class="btn" href="https://github.com/victoriafe-sa/PontoAtivo">Código no GitHub</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><b data-conta="fontes">0</b><small>documentos-fonte</small></div>
+    <div class="stat"><b data-conta="chunks">0</b><small>trechos indexados</small></div>
+    <div class="stat"><b data-conta="perguntas">0</b><small>perguntas de avaliação</small></div>
+    <div class="stat"><b>3</b><small>modelos comparados</small></div>
+  </div>
+  <p class="aviso">As informações vêm de fontes coletadas em novembro de 2026 e estão pendentes de validação humana. Um documento que menciona acessibilidade ou funcionamento não comprova essas condições hoje.</p>
+</header>
+
+<main>
+<section id="como" class="revelar">
+  <div class="wrap">
+    <h2>Como funciona</h2>
+    <p class="lead">Clique em cada etapa para ver o que acontece nela. Os documentos são preparados uma vez; depois, cada pergunta percorre o mesmo caminho.</p>
+    <div class="pipe" id="pipe"></div>
+    <div class="detalhe" id="detalhe" aria-live="polite"></div>
+  </div>
+</section>
+
+<section id="explorar" class="revelar">
+  <div class="wrap">
+    <h2>Explorar a base</h2>
+    <p class="lead">Pesquise nos 599 trechos que o sistema usa como evidência. Esta busca no navegador é por <strong>palavras</strong>; o sistema real usa busca <strong>semântica</strong> com embeddings E5 e pode trazer resultados diferentes.</p>
+    <div class="busca">
+      <input type="search" id="q" placeholder="Ex.: natação, acessibilidade, Ceilândia…" aria-label="Pesquisar nos trechos">
+      <select id="filtro-fonte" aria-label="Filtrar por fonte"><option value="">Todas as fontes</option></select>
+    </div>
+    <div class="chips" id="exemplos"></div>
+    <div id="resultados" aria-live="polite"></div>
+  </div>
+</section>
+
+<section id="comparar" class="revelar">
+  <div class="wrap">
+    <h2>Com RAG × sem RAG</h2>
+    <p class="lead">As mesmas 20 perguntas foram feitas a três modelos: com os trechos recuperados no prompt (RAG) e sem eles. Escolha uma pergunta e alterne o cenário. Clique num ID citado, como <span class="cit">N04-008</span>, para ver o trecho original.</p>
+    <div class="comp">
+      <div>
+        <select class="sel-q" id="sel-q" aria-label="Escolher pergunta"></select>
+        <div class="lista-q" id="lista-q"></div>
+      </div>
+      <div>
+        <div class="pergunta" id="pergunta"></div>
+        <div class="toggle" role="tablist" aria-label="Cenário">
+          <button data-cen="rag" class="ativo" role="tab">Com RAG</button>
+          <button data-cen="sem_rag" role="tab">Sem RAG</button>
+        </div>
+        <div class="modelos" id="modelos"></div>
+        <div class="legenda">
+          <span style="--c:var(--ok)">Adequada</span>
+          <span style="--c:var(--warn)">Parcial</span>
+          <span style="--c:var(--bad)">Problema</span>
+          <span style="--c:var(--neutral)">Abstenção / sem avaliação</span>
+        </div>
+        <p class="legenda">O selo resume o início da avaliação registrada nas análises da equipe (<a href="https://github.com/victoriafe-sa/PontoAtivo/blob/main/experimentos/experimento-rag/analise-respostas.md">com RAG</a>, <a href="https://github.com/victoriafe-sa/PontoAtivo/blob/main/experimentos/experimento-sem-rag/analise-respostas.md">sem RAG</a>). No cenário sem RAG, só Q1–Q4 foram avaliadas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="fontes" class="revelar">
+  <div class="wrap">
+    <h2>Fontes</h2>
+    <p class="lead">Os 25 documentos da base, com órgão, data de coleta e ressalvas. Sempre confira no link original antes de usar como informação oficial.</p>
+    <div class="busca"><input type="search" id="qf" placeholder="Filtrar por título, órgão ou tema…" aria-label="Filtrar fontes"></div>
+    <div class="chips" id="tipos"></div>
+    <div class="grade" id="grade"></div>
+  </div>
+</section>
+
+<section id="executar" class="revelar">
+  <div class="wrap">
+    <h2>Executar localmente</h2>
+    <p class="lead">Não há chaves de API. A instalação e o primeiro uso do modelo E5 (~1,1 GB) exigem internet. Rode os comandos na raiz do repositório.</p>
+    <div class="abas" role="tablist">
+      <button class="aba ativo" data-so="mac">macOS / Linux</button>
+      <button class="aba" data-so="win">Windows</button>
+    </div>
+    <div id="cmds"></div>
+    <p class="lead">Detalhes, testes e modo offline estão no <a href="https://github.com/victoriafe-sa/PontoAtivo#readme">README</a>.</p>
+  </div>
+</section>
+
+<section id="limites" class="revelar">
+  <div class="wrap">
+    <h2>Limites atuais</h2>
+    <ul class="lim">
+      <li><b>Sem tempo real</b>Não há confirmação de disponibilidade, vagas, horários ou acessibilidade atuais.</li>
+      <li><b>Fontes datadas</b>Há documentos antigos e camadas cadastrais obsoletas, indicados nas ressalvas.</li>
+      <li><b>Similaridade ≠ acerto</b>Trechos parecidos podem não responder à pergunta, mesmo com score alto.</li>
+      <li><b>Resposta extrativa</b>O sistema mostra evidências; não gera sínteses por LLM. Os LLMs aparecem só nos experimentos.</li>
+      <li><b>Limite do E5</b>O modelo aceita 512 tokens; 2 dos 599 trechos passam disso e têm o embedding truncado.</li>
+      <li><b>Validação humana</b>Decidir se as evidências bastam continua dependendo de revisão humana.</li>
+    </ul>
+    <h3 style="margin-top:40px">Equipe</h3>
+    <div class="equipe"><span>Victoria Ferreira</span><span>Pedro Alvim</span><span>Cibelly Lourenço</span><span>Marcos Bittar</span><span>Rebeca Vitória</span></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">PontoAtivo · Challenge 2 (CBL) · <a href="https://github.com/victoriafe-sa/PontoAtivo">github.com/victoriafe-sa/PontoAtivo</a></div></footer>
+
+<dialog id="modal">
+  <header><strong id="modal-titulo"></strong><button id="fechar" aria-label="Fechar">×</button></header>
+  <div class="corpo" id="modal-corpo"></div>
+</dialog>
+
+<script>
+const REPO = 'https://github.com/victoriafe-sa/PontoAtivo/blob/main/';
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const norm = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+let D = null, chunkPorId = {}, fontePorId = {};
+
+/* ---------- pipeline ---------- */
+const PASSOS = [
+  ['Fontes', '25 documentos oficiais', `<p>São <b>25 documentos-fonte</b> previamente extraídos e limpos (páginas da SEL-DF, Agência Brasília, cadastros da SEDUH, normas). Cada um traz metadados: órgão, link, data de publicação, data de coleta, estado de validação e ressalvas.</p><p>Código: <code>dados/fontes/texto/</code> · <a href="${REPO}dados/fontes/texto/AUDITORIA.md">histórico de curadoria</a></p>`],
+  ['Chunking', '599 trechos', `<p>Textos corridos viram trechos de até <b>800 caracteres</b>, com sobreposição de ~120 e cortes preferenciais por frase. Cadastros são agrupados por registros inteiros até 1.000 caracteres, repetindo o cabeçalho.</p><p>Código: <code>src/ingestao/chunking.py</code> · <a href="${REPO}docs/semana-02/estrategia-chunking.md">estratégia</a></p>`],
+  ['Embeddings', 'E5 multilíngue, 768 dim.', `<p>O modelo <code>intfloat/multilingual-e5-base</code> transforma cada trecho em um vetor normalizado de 768 dimensões. Trechos recebem o prefixo <code>passage:</code> e perguntas, <code>query:</code>.</p><p>Código: <code>src/ingestao/embeddings.py</code> · <a href="${REPO}docs/semana-02/estrategia-embeddings.md">estratégia</a></p>`],
+  ['Busca', 'top-5 por cosseno', `<p>A pergunta vira vetor com o mesmo E5 e o <b>Chroma</b> devolve os 5 trechos mais próximos por distância de cosseno. A similaridade exibida é <code>1 − distância</code>; ela <b>não</b> é probabilidade de acerto.</p><p>Código: <code>src/recuperacao/buscar.py</code> · <code>src/ingestao/banco.py</code></p>`],
+  ['Resposta', 'extrativa e citada', `<p>A resposta reproduz até <b>3 trechos</b> com ID, título, URL, datas, validação e ressalvas, sem acrescentar fatos. O JSON exportado guarda o ranking completo para auditoria.</p><p>Código: <code>src/geracao/responder.py</code> · <code>src/main.py</code></p>`],
+];
+let passoAtual = 0, timerPasso;
+function mostrarPasso(i, manual) {
+  passoAtual = i;
+  document.querySelectorAll('.passo').forEach((el, j) => el.classList.toggle('ativo', j === i));
+  $('#detalhe').innerHTML = `<h3>${PASSOS[i][0]}</h3>${PASSOS[i][2]}`;
+  if (manual) clearInterval(timerPasso);
+}
+$('#pipe').innerHTML = PASSOS.map((p, i) => `<button class="passo" data-i="${i}"><b>${p[0]}</b><small>${p[1]}</small></button>`).join('');
+$('#pipe').addEventListener('click', e => { const b = e.target.closest('.passo'); if (b) mostrarPasso(+b.dataset.i, true); });
+mostrarPasso(0);
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches)
+  timerPasso = setInterval(() => mostrarPasso((passoAtual + 1) % PASSOS.length), 4500);
+
+/* ---------- executar ---------- */
+const CMDS = {
+  mac: [['Criar ambiente e instalar', 'python3 -m venv .venv\n.venv/bin/python -m pip install --upgrade pip\n.venv/bin/python -m pip install -r requirements.txt'],
+        ['Gerar o banco vetorial', '.venv/bin/python src/ingestao/carga.py'],
+        ['Fazer uma consulta', '.venv/bin/python src/main.py "A academia pública do Parque da Cidade é gratuita e como utilizar?" -k 5']],
+  win: [['Criar ambiente e instalar', 'python -m venv .venv\n.venv/Scripts/python.exe -m pip install --upgrade pip\n.venv/Scripts/python.exe -m pip install torch --index-url https://download.pytorch.org/whl/cpu\n.venv/Scripts/python.exe -m pip install -r requirements.txt'],
+        ['Gerar o banco vetorial', '.venv/Scripts/python.exe src/ingestao/carga.py'],
+        ['Fazer uma consulta', '.venv/Scripts/python.exe src/main.py "A academia pública do Parque da Cidade é gratuita e como utilizar?" -k 5']],
+};
+function mostrarCmds(so) {
+  document.querySelectorAll('.aba').forEach(a => a.classList.toggle('ativo', a.dataset.so === so));
+  $('#cmds').innerHTML = CMDS[so].map(([r, c]) => `<div class="cmd"><span class="rot">${r}</span><pre>${esc(c)}</pre><button class="copiar">copiar</button></div>`).join('');
+}
+document.querySelector('.abas').addEventListener('click', e => { if (e.target.dataset.so) mostrarCmds(e.target.dataset.so); });
+$('#cmds').addEventListener('click', async e => {
+  if (!e.target.matches('.copiar')) return;
+  try { await navigator.clipboard.writeText(e.target.previousElementSibling.textContent); e.target.textContent = 'copiado'; e.target.classList.add('ok'); }
+  catch { e.target.textContent = 'selecione e copie'; }
+  setTimeout(() => { e.target.textContent = 'copiar'; e.target.classList.remove('ok'); }, 1600);
+});
+mostrarCmds(/Win/.test(navigator.platform) ? 'win' : 'mac');
+
+/* ---------- modal de trecho ---------- */
+function abrirChunk(id) {
+  const c = chunkPorId[id];
+  if (!c) return;
+  const f = fontePorId[c.f];
+  $('#modal-titulo').textContent = `${id} · ${f.titulo}`;
+  $('#modal-corpo').innerHTML = `${esc(c.t)}\n\n<small style="color:var(--muted)">Fonte: <a href="${esc(f.link)}" target="_blank" rel="noopener">${esc(f.orgao)}</a> · coleta ${esc(f.coleta)} · ${esc(f.validacao)}</small>`;
+  $('#modal').showModal();
+}
+$('#fechar').onclick = () => $('#modal').close();
+$('#modal').addEventListener('click', e => { if (e.target === $('#modal')) $('#modal').close(); });
+document.addEventListener('click', e => { const b = e.target.closest('button.cit'); if (b) abrirChunk(b.dataset.id); });
+
+/* ---------- busca por palavras ---------- */
+const PARADAS = new Set('a o as os de da do das dos e em no na nos nas um uma para por com sem que qual quais como onde se ao aos é ou mais'.split(' '));
+let indice = [];
+function buscar() {
+  const q = $('#q').value.trim(), filtro = $('#filtro-fonte').value;
+  const termos = norm(q).split(/\W+/).filter(t => t.length > 1 && !PARADAS.has(t));
+  document.querySelectorAll('#exemplos .chip').forEach(c => c.classList.toggle('ativo', c.textContent === q));
+  if (!termos.length) { $('#resultados').innerHTML = '<div class="vazio">Digite uma pergunta ou escolha um exemplo acima.</div>'; return; }
+  const res = [];
+  for (const it of indice) {
+    if (filtro && it.c.f !== filtro) continue;
+    let s = 0, cobertos = 0;
+    for (const t of termos) {
+      const n = it.n.split(t).length - 1;
+      if (n) { cobertos++; s += 1 + Math.log(n); }
+      if (it.tit.includes(t)) s += 0.5;
+    }
+    if (cobertos) res.push({ c: it.c, s: s * (cobertos / termos.length) });
+  }
+  res.sort((a, b) => b.s - a.s);
+  const top = res.slice(0, 5), max = top[0]?.s || 1;
+  if (!top.length) { $('#resultados').innerHTML = '<div class="vazio">Nenhum trecho contém esses termos. Tente sinônimos ou palavras mais gerais.</div>'; return; }
+  const re = new RegExp(termos.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|'), 'gi');
+  $('#resultados').innerHTML = `<p class="lead" style="font-size:.9rem">${res.length} trechos contêm algum termo; mostrando os 5 com mais ocorrências.</p>` +
+    top.map(({ c, s }, i) => {
+      const f = fontePorId[c.f];
+      return `<article class="resultado" style="animation-delay:${i * 60}ms">
+        <header><span><span class="id">${c.id}</span> · ${esc(f.titulo)}</span><span class="barra" title="relevância relativa"><i style="width:${Math.round(s / max * 100)}%"></i></span></header>
+        <div class="trecho">${destacar(c.t, re)}</div>
+        <button class="link-sutil expandir">mostrar trecho completo</button>
+        <div class="meta">${esc(f.orgao)} · coleta ${esc(f.coleta)} · ${esc(f.validacao)} · <a href="${esc(f.link)}" target="_blank" rel="noopener">abrir fonte</a></div>
+      </article>`;
+    }).join('');
+}
+function destacar(texto, re) {
+  // destaca ignorando acentos: compara pela versão normalizada, que tem o mesmo comprimento
+  const n = norm(texto); let out = '', ult = 0, m;
+  if (n.length !== texto.length) return esc(texto);
+  re.lastIndex = 0;
+  while ((m = re.exec(n))) { out += esc(texto.slice(ult, m.index)) + '<mark>' + esc(texto.slice(m.index, m.index + m[0].length)) + '</mark>'; ult = m.index + m[0].length; }
+  return out + esc(texto.slice(ult));
+}
+$('#resultados').addEventListener('click', e => {
+  if (!e.target.matches('.expandir')) return;
+  const t = e.target.previousElementSibling; t.classList.toggle('aberto');
+  e.target.textContent = t.classList.contains('aberto') ? 'recolher' : 'mostrar trecho completo';
+});
+let deb; $('#q').addEventListener('input', () => { clearTimeout(deb); deb = setTimeout(buscar, 180); });
+$('#filtro-fonte').addEventListener('change', buscar);
+
+/* ---------- comparador ---------- */
+const NOMES = { gemini: 'Gemini 3.5 Flash-Lite', qwen: 'Qwen3 8B', llama: 'Llama 3.2 3B' };
+let qAtual = 1, cenario = 'rag';
+function classificar(txt) {
+  if (!txt) return ['neutral', 'Sem avaliação'];
+  const c = norm(txt.split(/[;:(]/)[0]);
+  if (/recusa|alucina|errad|indevid|transfere|atribu|mistura|acrescenta|contradit|troca/.test(c)) return ['bad', 'Problema'];
+  if (/parcial|vaga|especulativ|omite|\bmas\b|sem resolver|ambigu|responde sobre/.test(c)) return ['warn', 'Parcial'];
+  if (/correta|correto|fiel|adequada|sustentada/.test(c)) return ['ok', 'Adequada'];
+  if (/absten/.test(c)) return ['neutral', 'Abstenção'];
+  return ['neutral', 'Ver avaliação'];
+}
+function citar(texto) {
+  return esc(texto).replace(/\b([FNR]\d{2,3}-\d{3})\b/g, (m, id) => chunkPorId[id] ? `<button class="cit" data-id="${id}">${id}</button>` : m);
+}
+function mostrarPergunta() {
+  const p = D.perguntas[qAtual - 1];
+  document.querySelectorAll('#lista-q button').forEach((b, i) => b.classList.toggle('ativo', i === qAtual - 1));
+  $('#sel-q').value = qAtual;
+  document.querySelectorAll('.toggle button').forEach(b => b.classList.toggle('ativo', b.dataset.cen === cenario));
+  $('#pergunta').innerHTML = `<h3>${esc(p.id)} — ${esc(p.pergunta)}</h3>
+    <p class="ref"><b>Categoria:</b> ${esc(p.categoria)} · <b>${p.respondivel ? 'Respondível pelas fontes' : 'Não respondível pelas fontes'}</b></p>
+    <p class="ref" style="margin-top:6px"><b>Referência:</b> ${citar(p.referencia)}</p>`;
+  const resp = D.respostas[cenario][qAtual] || {}, aval = (D.avaliacoes[cenario] || {})[qAtual] || {};
+  $('#modelos').innerHTML = ['gemini', 'qwen', 'llama'].map((m, i) => {
+    const r = resp[m], [cls, rot] = classificar(aval[m]);
+    return `<article class="card-modelo" style="animation-delay:${i * 70}ms">
+      <h4>${NOMES[m]}</h4><span class="mid">${esc(r?.modelo || '')}</span>
+      <span class="selo ${cls}">${rot}</span>
+      <div class="avaliacao">${aval[m] ? esc(aval[m]) : 'Esta resposta não foi avaliada na análise registrada.'}</div>
+      <div class="texto-resp">${r ? citar(r.texto) : '<em>Resposta não encontrada.</em>'}</div>
+    </article>`;
+  }).join('');
+}
+document.querySelector('.toggle').addEventListener('click', e => { if (e.target.dataset.cen) { cenario = e.target.dataset.cen; mostrarPergunta(); } });
+$('#lista-q').addEventListener('click', e => { const b = e.target.closest('button'); if (b) { qAtual = +b.dataset.q; mostrarPergunta(); } });
+$('#sel-q').addEventListener('change', e => { qAtual = +e.target.value; mostrarPergunta(); });
+
+/* ---------- fontes ---------- */
+let tipoAtual = '';
+const tipoCurto = t => t.split(/[ (/:]/)[0];
+function mostrarFontes() {
+  const q = norm($('#qf').value.trim());
+  const lista = D.fontes.filter(f => (!tipoAtual || tipoCurto(f.tipo) === tipoAtual) && (!q || norm(`${f.id} ${f.titulo} ${f.orgao} ${f.tema}`).includes(q)));
+  $('#grade').innerHTML = lista.length ? lista.map((f, i) => `<article class="fonte" style="animation-delay:${Math.min(i, 12) * 30}ms">
+      <div class="topo"><span class="id">${f.id}</span><span class="n">${f.chunks} trechos</span></div>
+      <h3>${esc(f.titulo)}</h3>
+      <small>${esc(f.orgao)}</small>
+      <small>${esc(f.tema)}</small>
+      <small>Publicação: ${esc(f.publicacao)} · Coleta: ${esc(f.coleta)}</small>
+      <details><summary>Ressalvas</summary>${esc(f.ressalvas)}</details>
+      <a href="${esc(f.link)}" target="_blank" rel="noopener">Abrir fonte original ↗</a>
+    </article>`).join('') : '<div class="vazio">Nenhuma fonte corresponde ao filtro.</div>';
+}
+$('#qf').addEventListener('input', mostrarFontes);
+$('#tipos').addEventListener('click', e => {
+  if (!e.target.matches('.chip')) return;
+  tipoAtual = e.target.dataset.t;
+  document.querySelectorAll('#tipos .chip').forEach(c => c.classList.toggle('ativo', c === e.target));
+  mostrarFontes();
+});
+
+/* ---------- contadores e revelação ---------- */
+function contar(el, alvo) {
+  const t0 = performance.now(), dur = 900;
+  const passo = t => { const k = Math.min(1, (t - t0) / dur); el.textContent = Math.round(alvo * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(passo); };
+  requestAnimationFrame(passo);
+}
+const obs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visivel'); obs.unobserve(e.target); } }), { threshold: .08 });
+document.querySelectorAll('.revelar').forEach(el => obs.observe(el));
+const navObs = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) document.querySelectorAll('.links a').forEach(a => a.classList.toggle('ativo', a.getAttribute('href') === '#' + e.target.id));
+}), { rootMargin: '-45% 0px -50% 0px' });
+document.querySelectorAll('main section').forEach(s => navObs.observe(s));
+
+/* ---------- dados ---------- */
+fetch('dados.json').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(d => {
+  D = d;
+  d.chunks.forEach(c => chunkPorId[c.id] = c);
+  d.fontes.forEach(f => fontePorId[f.id] = f);
+  indice = d.chunks.map(c => ({ c, n: norm(c.t), tit: norm(fontePorId[c.f].titulo) }));
+  contar($('[data-conta=fontes]'), d.fontes.length);
+  contar($('[data-conta=chunks]'), d.chunks.length);
+  contar($('[data-conta=perguntas]'), d.perguntas.length);
+
+  $('#filtro-fonte').innerHTML += d.fontes.map(f => `<option value="${f.id}">${f.id} — ${esc(f.titulo.slice(0, 60))}</option>`).join('');
+  const exemplos = ['natação acessibilidade', 'academia Parque da Cidade', 'endereço Bezerrão', 'falta grave', 'matrícula COP', 'skate'];
+  $('#exemplos').innerHTML = exemplos.map(x => `<button class="chip">${x}</button>`).join('');
+  $('#exemplos').addEventListener('click', e => { if (e.target.matches('.chip')) { $('#q').value = e.target.textContent; buscar(); } });
+  buscar();
+
+  $('#lista-q').innerHTML = d.perguntas.map((p, i) => `<button data-q="${i + 1}"><b>${esc(p.id)}</b>${esc(p.pergunta)}</button>`).join('');
+  $('#sel-q').innerHTML = d.perguntas.map((p, i) => `<option value="${i + 1}">${esc(p.id)} — ${esc(p.pergunta)}</option>`).join('');
+  mostrarPergunta();
+
+  const tipos = [...new Set(d.fontes.map(f => tipoCurto(f.tipo)))].sort();
+  $('#tipos').innerHTML = `<button class="chip ativo" data-t="">Todos</button>` + tipos.map(t => `<button class="chip" data-t="${esc(t)}">${esc(t)}</button>`).join('');
+  mostrarFontes();
+}).catch(() => {
+  const msg = '<div class="vazio">Não foi possível carregar <code>dados.json</code>. Se abriu o arquivo direto do disco, rode <code>python3 -m http.server -d docs</code> e acesse http://localhost:8000.</div>';
+  ['#resultados', '#modelos', '#grade'].forEach(s => $(s).innerHTML = msg);
+});
+</script>
+</body>
+</html>
