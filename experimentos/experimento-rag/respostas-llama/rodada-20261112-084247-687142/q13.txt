@@ -1,9 +1,0 @@
-modelo: llama3.2:3b
-
-A Escola Paralímpica de Esportes atende crianças, adolescentes, jovens, adultos e idosos, com faixa etária a partir de quatro anos.
-
-Essa afirmação é sustentada pelo trecho "Podem se inscrever crianças a partir de quatro anos, adolescentes, jovens, adultos e idosos." ID do trecho: N03-002
-
-Além disso, as modalidades esportivas oferecidas incluem atletismo, entre outras.
-
-Essa afirmação é sustentada pelo trecho "As vagas estão distribuídas em modalidades como:\n* Atletismo" ID do trecho: N03-002
