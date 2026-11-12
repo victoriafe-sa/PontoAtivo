@@ -1,0 +1,72 @@
+{
+  "id": "t1-01b",
+  "teste": 1,
+  "pergunta": "Qual é a idade mínima para participar do projeto Semear?",
+  "condicao": "sem_rag",
+  "evidencia_ids": [],
+  "pergunta_id": "t1-01b",
+  "modelo": "qwen3:8b",
+  "provedor": "ollama",
+  "repeticao": 1,
+  "inicio": "2026-11-12T09:38:23.199374-03:00",
+  "entrada": {
+    "model": "qwen3:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, sobre espaços esportivos inclusivos no DF.\nData de referência do cenário: 12/11/2026. Responda em português, até 200 palavras.\nNão invente fatos ou fontes. Preserve datas e ressalvas. Informação histórica não confirma situação atual.\nResponda às partes conhecidas e explique especificamente o que não pode confirmar.\nUse somente seu conhecimento prévio; não há busca ou ferramentas. Indique a origem quando souber; se não souber, diga isso.\n\n\nPERGUNTA:\nQual é a idade mínima para participar do projeto Semear?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 8192,
+      "num_predict": 4096
+    },
+    "think": false
+  },
+  "prompt_sha256": "cf6a4f47f6f06f1ffedd0ec09e044588ef37b86f62461065aa66f85b382da122",
+  "arquivo_bruto": "rodadas/20261112-092351-979787/qwen/t1-01b--sem_rag--r1.json",
+  "saida": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-12T12:38:33.574729Z",
+    "message": {
+      "role": "assistant",
+      "content": "Resposta:  \nA idade mínima para participar do projeto Semear, conforme informações disponíveis até 12/11/2026, é de 12 anos.\n\nLimitações:  \nNão há informações atualizadas sobre possíveis mudanças na idade mínima após 2026. A informação fornecida refere-se a dados históricos e não pode confirmar a situação atual.\n\nFontes utilizadas:  \nConhecimento prévio sobre o projeto Semear e suas diretrizes iniciais."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 10374090833,
+    "load_duration": 87202042,
+    "prompt_eval_count": 187,
+    "prompt_eval_duration": 662821000,
+    "eval_count": 113,
+    "eval_duration": 9619390000
+  },
+  "arquivo_resposta": "rodadas/20261112-092351-979787/qwen/t1-01b--sem_rag--r1.txt",
+  "tempo_cliente_segundos": 10.376655083000514,
+  "fim": "2026-11-12T09:38:33.576313-03:00",
+  "metricas": {
+    "pergunta_id": "t1-01b",
+    "modelo": "qwen3:8b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:38:23.199374-03:00",
+    "tempo_parede_s": 10.376655083000514,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "rodadas/20261112-092351-979787/qwen/t1-01b--sem_rag--r1.txt",
+    "arquivo_bruto": "rodadas/20261112-092351-979787/qwen/t1-01b--sem_rag--r1.json",
+    "tokens_entrada": 187,
+    "tokens_saida": 113,
+    "motivo_fim": "stop",
+    "tempo_total_s": 10.374090833,
+    "tempo_carga_s": 0.087202042,
+    "tempo_entrada_s": 0.662821,
+    "tempo_geracao_s": 9.61939,
+    "tokens_total": 300,
+    "tokens_por_s": 11.74710662526418,
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

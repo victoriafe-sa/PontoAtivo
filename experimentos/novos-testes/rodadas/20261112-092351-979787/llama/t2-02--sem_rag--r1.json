@@ -1,0 +1,71 @@
+{
+  "id": "t2-02",
+  "teste": 2,
+  "pergunta": "A academia pública do Parque da Cidade é gratuita, como faço o agendamento e há horário livre em 13/11/2026 às 19h?",
+  "condicao": "sem_rag",
+  "evidencia_ids": [],
+  "pergunta_id": "t2-02",
+  "modelo": "llama3.2:3b",
+  "provedor": "ollama",
+  "repeticao": 1,
+  "inicio": "2026-11-12T09:26:33.684309-03:00",
+  "entrada": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, sobre espaços esportivos inclusivos no DF.\nData de referência do cenário: 12/11/2026. Responda em português, até 200 palavras.\nNão invente fatos ou fontes. Preserve datas e ressalvas. Informação histórica não confirma situação atual.\nResponda às partes conhecidas e explique especificamente o que não pode confirmar.\nUse somente seu conhecimento prévio; não há busca ou ferramentas. Indique a origem quando souber; se não souber, diga isso.\n\n\nPERGUNTA:\nA academia pública do Parque da Cidade é gratuita, como faço o agendamento e há horário livre em 13/11/2026 às 19h?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 8192,
+      "num_predict": 4096
+    }
+  },
+  "prompt_sha256": "8b0fdcc6e698ad7fed0046aad0290689f33a969b3f2e238aba613e1f3c70cdd6",
+  "arquivo_bruto": "rodadas/20261112-092351-979787/llama/t2-02--sem_rag--r1.json",
+  "saida": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-12T12:26:39.675254Z",
+    "message": {
+      "role": "assistant",
+      "content": "Lamento, mas não tenho informações atualizadas sobre a academia pública do Parque da Cidade ou sua política de preços. Além disso, não posso confirmar se há horário livre em 13/11/2026 às 19h.\n\nA academia pública pode ter mudanças na política de preços ao longo do tempo, e não tenho acesso a informações em tempo real. Para obter informações atualizadas sobre o agendamento e os horários disponíveis, recomendo entrar em contato diretamente com a academia ou visitar seu site oficial (se tiver).\n\nSe você precisar de ajuda para encontrar academias públicas gratuitas no Distrito Federal, posso tentar fornecer informações gerais sobre a oferta de espaços esportivos inclusivos no DF."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 5989257625,
+    "load_duration": 106020500,
+    "prompt_eval_count": 214,
+    "prompt_eval_duration": 255065000,
+    "eval_count": 171,
+    "eval_duration": 5619397000
+  },
+  "arquivo_resposta": "rodadas/20261112-092351-979787/llama/t2-02--sem_rag--r1.txt",
+  "tempo_cliente_segundos": 5.991664750000382,
+  "fim": "2026-11-12T09:26:39.676484-03:00",
+  "metricas": {
+    "pergunta_id": "t2-02",
+    "modelo": "llama3.2:3b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:26:33.684309-03:00",
+    "tempo_parede_s": 5.991664750000382,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "rodadas/20261112-092351-979787/llama/t2-02--sem_rag--r1.txt",
+    "arquivo_bruto": "rodadas/20261112-092351-979787/llama/t2-02--sem_rag--r1.json",
+    "tokens_entrada": 214,
+    "tokens_saida": 171,
+    "motivo_fim": "stop",
+    "tempo_total_s": 5.989257625,
+    "tempo_carga_s": 0.1060205,
+    "tempo_entrada_s": 0.255065,
+    "tempo_geracao_s": 5.619397,
+    "tokens_total": 385,
+    "tokens_por_s": 30.430311294966344,
+    "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

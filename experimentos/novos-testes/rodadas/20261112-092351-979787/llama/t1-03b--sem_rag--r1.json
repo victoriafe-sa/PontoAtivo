@@ -1,0 +1,71 @@
+{
+  "id": "t1-03b",
+  "teste": 1,
+  "pergunta": "Como utilizar a academia particular do Lago Sul e é gratuito?",
+  "condicao": "sem_rag",
+  "evidencia_ids": [],
+  "pergunta_id": "t1-03b",
+  "modelo": "llama3.2:3b",
+  "provedor": "ollama",
+  "repeticao": 1,
+  "inicio": "2026-11-12T09:24:20.826606-03:00",
+  "entrada": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, sobre espaços esportivos inclusivos no DF.\nData de referência do cenário: 12/11/2026. Responda em português, até 200 palavras.\nNão invente fatos ou fontes. Preserve datas e ressalvas. Informação histórica não confirma situação atual.\nResponda às partes conhecidas e explique especificamente o que não pode confirmar.\nUse somente seu conhecimento prévio; não há busca ou ferramentas. Indique a origem quando souber; se não souber, diga isso.\n\n\nPERGUNTA:\nComo utilizar a academia particular do Lago Sul e é gratuito?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 8192,
+      "num_predict": 4096
+    }
+  },
+  "prompt_sha256": "b57092b90b75b6f4a885f13a0666ea9b1fa652943d57f4ba36dd99456d1fe660",
+  "arquivo_bruto": "rodadas/20261112-092351-979787/llama/t1-03b--sem_rag--r1.json",
+  "saida": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-12T12:24:22.563518Z",
+    "message": {
+      "role": "assistant",
+      "content": "Não posso fornecer informações sobre como utilizar a academia particular do Lago Sul e se é gratuita.\n\nPosso dizer que o Lago Sul é um dos principais espaços esportivos da Região Federal de Brasília (DF), conhecido por suas instalações de lazer, esporte e recreação."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 1735198458,
+    "load_duration": 105977291,
+    "prompt_eval_count": 190,
+    "prompt_eval_duration": 78587000,
+    "eval_count": 68,
+    "eval_duration": 1541354000
+  },
+  "arquivo_resposta": "rodadas/20261112-092351-979787/llama/t1-03b--sem_rag--r1.txt",
+  "tempo_cliente_segundos": 1.7376616660003492,
+  "fim": "2026-11-12T09:24:22.564805-03:00",
+  "metricas": {
+    "pergunta_id": "t1-03b",
+    "modelo": "llama3.2:3b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:24:20.826606-03:00",
+    "tempo_parede_s": 1.7376616660003492,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "rodadas/20261112-092351-979787/llama/t1-03b--sem_rag--r1.txt",
+    "arquivo_bruto": "rodadas/20261112-092351-979787/llama/t1-03b--sem_rag--r1.json",
+    "tokens_entrada": 190,
+    "tokens_saida": 68,
+    "motivo_fim": "stop",
+    "tempo_total_s": 1.735198458,
+    "tempo_carga_s": 0.105977291,
+    "tempo_entrada_s": 0.078587,
+    "tempo_geracao_s": 1.541354,
+    "tokens_total": 258,
+    "tokens_por_s": 44.1170555239095,
+    "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

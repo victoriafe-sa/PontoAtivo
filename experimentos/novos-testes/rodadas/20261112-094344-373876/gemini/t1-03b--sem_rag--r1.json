@@ -1,0 +1,123 @@
+{
+  "id": "t1-03b",
+  "teste": 1,
+  "pergunta": "Como utilizar a academia particular do Lago Sul e é gratuito?",
+  "condicao": "sem_rag",
+  "evidencia_ids": [],
+  "pergunta_id": "t1-03b",
+  "modelo": "gemini-3.5-flash-lite",
+  "provedor": "gemini",
+  "repeticao": 1,
+  "inicio": "2026-11-12T09:44:22.543339-03:00",
+  "entrada": {
+    "model": "gemini-3.5-flash-lite",
+    "contents": "Você é o assistente do PontoAtivo, sobre espaços esportivos inclusivos no DF.\nData de referência do cenário: 12/11/2026. Responda em português, até 200 palavras.\nNão invente fatos ou fontes. Preserve datas e ressalvas. Informação histórica não confirma situação atual.\nResponda às partes conhecidas e explique especificamente o que não pode confirmar.\nUse somente seu conhecimento prévio; não há busca ou ferramentas. Indique a origem quando souber; se não souber, diga isso.\n\n\nPERGUNTA:\nComo utilizar a academia particular do Lago Sul e é gratuito?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n",
+    "config": {
+      "temperature": 0,
+      "max_output_tokens": 4096
+    }
+  },
+  "prompt_sha256": "b57092b90b75b6f4a885f13a0666ea9b1fa652943d57f4ba36dd99456d1fe660",
+  "arquivo_bruto": "rodadas/20261112-094344-373876/gemini/t1-03b--sem_rag--r1.json",
+  "saida": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Thu, 12 Nov 2026 12:44:31 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=8946",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "Resposta:\nComo assistente do PontoAtivo, projeto voltado para espaços esportivos inclusivos e públicos no Distrito Federal, não possuo informações sobre as regras de utilização, gratuidade ou funcionamento de academias particulares no Lago Sul. O escopo do nosso projeto e base de conhecimento restringe-se a espaços esportivos públicos e iniciativas de inclusão geridas ou mapeadas pelo Governo do Distrito Federal (GDF), não abrangendo estabelecimentos privados.\n\nLimitações:\nNão posso confirmar se a academia particular do Lago Sul mencionada possui acesso gratuito ou quais são os procedimentos para sua utilização, pois o PontoAtivo foca estritamente em espaços esportivos inclusivos públicos no Distrito Federal, sem dados sobre empreendimentos privados específicos.\n\nFontes utilizadas:\nBase de conhecimento interna do assistente PontoAtivo sobre políticas e espaços esportivos públicos no DF. (Origem: Conhecimento prévio sobre o escopo do projeto PontoAtivo).",
+              "thought": null,
+              "thought_signature": "EmAKXgFpFH0TlQWFY07FsHJ5B6q5cS6vKqIQ3GlWEFMQFrfAqkglKt9RF6qf5QLi6suQgvMFX4ZP7Hs0lS_AZrJ9aQK45HPDTkHkOOGPhej0FaLCFM28LCvPZRKE-e1icSk=",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "prT1aqm7NpPMytMP_tHCWQ",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 202,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 161,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 161
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 363,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "arquivo_resposta": "rodadas/20261112-094344-373876/gemini/t1-03b--sem_rag--r1.txt",
+  "tempo_cliente_segundos": 8.970882374999746,
+  "fim": "2026-11-12T09:44:31.513995-03:00",
+  "metricas": {
+    "pergunta_id": "t1-03b",
+    "modelo": "gemini-3.5-flash-lite",
+    "provedor": "gemini",
+    "executado_em": "2026-11-12T09:44:22.543339-03:00",
+    "tempo_parede_s": 8.970882374999746,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "rodadas/20261112-094344-373876/gemini/t1-03b--sem_rag--r1.txt",
+    "arquivo_bruto": "rodadas/20261112-094344-373876/gemini/t1-03b--sem_rag--r1.json",
+    "tokens_entrada": 161,
+    "tokens_saida": 202,
+    "tokens_total": 363,
+    "motivo_fim": "STOP",
+    "status_metricas": "registradas"
+  }
+}

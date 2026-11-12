@@ -1,0 +1,71 @@
+{
+  "id": "t2-03",
+  "teste": 2,
+  "pergunta": "A partir de qual idade posso participar dos COPs, pessoas com deficiência estão incluídas e há vaga para uma criança de 5 anos no COP do Gama em 13/11/2026?",
+  "condicao": "sem_rag",
+  "evidencia_ids": [],
+  "pergunta_id": "t2-03",
+  "modelo": "llama3.2:3b",
+  "provedor": "ollama",
+  "repeticao": 1,
+  "inicio": "2026-11-12T09:25:40.642688-03:00",
+  "entrada": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, sobre espaços esportivos inclusivos no DF.\nData de referência do cenário: 12/11/2026. Responda em português, até 200 palavras.\nNão invente fatos ou fontes. Preserve datas e ressalvas. Informação histórica não confirma situação atual.\nResponda às partes conhecidas e explique especificamente o que não pode confirmar.\nUse somente seu conhecimento prévio; não há busca ou ferramentas. Indique a origem quando souber; se não souber, diga isso.\n\n\nPERGUNTA:\nA partir de qual idade posso participar dos COPs, pessoas com deficiência estão incluídas e há vaga para uma criança de 5 anos no COP do Gama em 13/11/2026?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 8192,
+      "num_predict": 4096
+    }
+  },
+  "prompt_sha256": "a361774117bda358700523a71eea9a21dcdf7c59d6eae9b24a9a7da2c39bf142",
+  "arquivo_bruto": "rodadas/20261112-092351-979787/llama/t2-03--sem_rag--r1.json",
+  "saida": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-12T12:25:44.60589Z",
+    "message": {
+      "role": "assistant",
+      "content": "Não posso fornecer informações sobre a participação de crianças de 5 anos nos COPs, pois não tenho conhecimento específico sobre o evento ou suas regras.\n\nPosso dizer que os COPs (Copa do Pará) são um torneio de futebol para pessoas com deficiência, organizado pela Federação Brasileira de Futebol (CBF). No entanto, não tenho informações sobre a idade mínima para participar ou se há vagas para crianças menores de 18 anos.\n\nAlém disso, não posso confirmar se as instalações do estádio Gama são acessíveis e inclusivas para pessoas com deficiência."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 3961318333,
+    "load_duration": 106238875,
+    "prompt_eval_count": 225,
+    "prompt_eval_duration": 279195000,
+    "eval_count": 150,
+    "eval_duration": 3558993000
+  },
+  "arquivo_resposta": "rodadas/20261112-092351-979787/llama/t2-03--sem_rag--r1.txt",
+  "tempo_cliente_segundos": 3.9639441669996813,
+  "fim": "2026-11-12T09:25:44.607259-03:00",
+  "metricas": {
+    "pergunta_id": "t2-03",
+    "modelo": "llama3.2:3b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:25:40.642688-03:00",
+    "tempo_parede_s": 3.9639441669996813,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "rodadas/20261112-092351-979787/llama/t2-03--sem_rag--r1.txt",
+    "arquivo_bruto": "rodadas/20261112-092351-979787/llama/t2-03--sem_rag--r1.json",
+    "tokens_entrada": 225,
+    "tokens_saida": 150,
+    "motivo_fim": "stop",
+    "tempo_total_s": 3.961318333,
+    "tempo_carga_s": 0.106238875,
+    "tempo_entrada_s": 0.279195,
+    "tempo_geracao_s": 3.558993,
+    "tokens_total": 375,
+    "tokens_por_s": 42.14675330915234,
+    "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

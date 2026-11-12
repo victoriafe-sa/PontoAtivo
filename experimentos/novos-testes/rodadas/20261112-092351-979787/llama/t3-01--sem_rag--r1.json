@@ -1,0 +1,71 @@
+{
+  "id": "t3-01",
+  "teste": 3,
+  "pergunta": "Qual é o endereço do Estádio Bezerrão no Gama?",
+  "condicao": "sem_rag",
+  "evidencia_ids": [],
+  "pergunta_id": "t3-01",
+  "modelo": "llama3.2:3b",
+  "provedor": "ollama",
+  "repeticao": 1,
+  "inicio": "2026-11-12T09:26:57.768488-03:00",
+  "entrada": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, sobre espaços esportivos inclusivos no DF.\nData de referência do cenário: 12/11/2026. Responda em português, até 200 palavras.\nNão invente fatos ou fontes. Preserve datas e ressalvas. Informação histórica não confirma situação atual.\nResponda às partes conhecidas e explique especificamente o que não pode confirmar.\nUse somente seu conhecimento prévio; não há busca ou ferramentas. Indique a origem quando souber; se não souber, diga isso.\n\n\nPERGUNTA:\nQual é o endereço do Estádio Bezerrão no Gama?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 8192,
+      "num_predict": 4096
+    }
+  },
+  "prompt_sha256": "3c0aba7b6545fddf1c1ad0bcbc6db4dd3bc59dc84f78876a374ff339e97bfade",
+  "arquivo_bruto": "rodadas/20261112-092351-979787/llama/t3-01--sem_rag--r1.json",
+  "saida": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-12T12:27:01.622906Z",
+    "message": {
+      "role": "assistant",
+      "content": "Não posso fornecer informações sobre o localização atual do Estádio Bezerrão no Gama, pois não tenho acesso a informações em tempo real. No entanto, posso dizer que o Estádio Bezerrão é um estádio de futebol localizado na cidade de Gama, Distrito Federal (DF), Brasil.\n\nLimitações:\nNão tenho informações atualizadas sobre o endereço do Estádio Bezerrão no momento da minha última atualização em 2023."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 3852636667,
+    "load_duration": 104640000,
+    "prompt_eval_count": 193,
+    "prompt_eval_duration": 238408000,
+    "eval_count": 107,
+    "eval_duration": 3490528000
+  },
+  "arquivo_resposta": "rodadas/20261112-092351-979787/llama/t3-01--sem_rag--r1.txt",
+  "tempo_cliente_segundos": 3.855251750000207,
+  "fim": "2026-11-12T09:27:01.624331-03:00",
+  "metricas": {
+    "pergunta_id": "t3-01",
+    "modelo": "llama3.2:3b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:26:57.768488-03:00",
+    "tempo_parede_s": 3.855251750000207,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "rodadas/20261112-092351-979787/llama/t3-01--sem_rag--r1.txt",
+    "arquivo_bruto": "rodadas/20261112-092351-979787/llama/t3-01--sem_rag--r1.json",
+    "tokens_entrada": 193,
+    "tokens_saida": 107,
+    "motivo_fim": "stop",
+    "tempo_total_s": 3.852636667,
+    "tempo_carga_s": 0.10464,
+    "tempo_entrada_s": 0.238408,
+    "tempo_geracao_s": 3.490528,
+    "tokens_total": 300,
+    "tokens_por_s": 30.65438810403469,
+    "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

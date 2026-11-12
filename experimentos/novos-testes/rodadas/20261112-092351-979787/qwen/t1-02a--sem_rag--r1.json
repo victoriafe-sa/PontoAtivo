@@ -1,0 +1,72 @@
+{
+  "id": "t1-02a",
+  "teste": 1,
+  "pergunta": "Quais modalidades são oferecidas nos Centros Olímpicos e Paralímpicos?",
+  "condicao": "sem_rag",
+  "evidencia_ids": [],
+  "pergunta_id": "t1-02a",
+  "modelo": "qwen3:8b",
+  "provedor": "ollama",
+  "repeticao": 1,
+  "inicio": "2026-11-12T09:37:18.735662-03:00",
+  "entrada": {
+    "model": "qwen3:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, sobre espaços esportivos inclusivos no DF.\nData de referência do cenário: 12/11/2026. Responda em português, até 200 palavras.\nNão invente fatos ou fontes. Preserve datas e ressalvas. Informação histórica não confirma situação atual.\nResponda às partes conhecidas e explique especificamente o que não pode confirmar.\nUse somente seu conhecimento prévio; não há busca ou ferramentas. Indique a origem quando souber; se não souber, diga isso.\n\n\nPERGUNTA:\nQuais modalidades são oferecidas nos Centros Olímpicos e Paralímpicos?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 8192,
+      "num_predict": 4096
+    },
+    "think": false
+  },
+  "prompt_sha256": "5aeb37c5b9192396b7d7a620140732f1336ee39380b44d808b19eca28202aa16",
+  "arquivo_bruto": "rodadas/20261112-092351-979787/qwen/t1-02a--sem_rag--r1.json",
+  "saida": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-12T12:37:34.332823Z",
+    "message": {
+      "role": "assistant",
+      "content": "Resposta:  \nOs Centros Olímpicos e Paralímpicos no DF oferecem modalidades como atletismo, natação, ginástica artística, voleibol, handebol, judô, karatê, taekwondo, esgrima, basquete e futebol. Esses espaços buscam promover a prática esportiva de forma inclusiva, com adaptações para pessoas com deficiência.\n\nLimitações:  \nNão há informações atualizadas até 12/11/2026 sobre possíveis novas modalidades ou mudanças nas ofertas. A resposta baseia-se em informações históricas e não confirma a situação atual.\n\nFontes utilizadas:  \nConhecimento prévio sobre os Centros Olímpicos e Paralímpicos no DF."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 15595679709,
+    "load_duration": 87956209,
+    "prompt_eval_count": 195,
+    "prompt_eval_duration": 758318000,
+    "eval_count": 183,
+    "eval_duration": 14741666000
+  },
+  "arquivo_resposta": "rodadas/20261112-092351-979787/qwen/t1-02a--sem_rag--r1.txt",
+  "tempo_cliente_segundos": 15.598385792000045,
+  "fim": "2026-11-12T09:37:34.334370-03:00",
+  "metricas": {
+    "pergunta_id": "t1-02a",
+    "modelo": "qwen3:8b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:37:18.735662-03:00",
+    "tempo_parede_s": 15.598385792000045,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "rodadas/20261112-092351-979787/qwen/t1-02a--sem_rag--r1.txt",
+    "arquivo_bruto": "rodadas/20261112-092351-979787/qwen/t1-02a--sem_rag--r1.json",
+    "tokens_entrada": 195,
+    "tokens_saida": 183,
+    "motivo_fim": "stop",
+    "tempo_total_s": 15.595679709,
+    "tempo_carga_s": 0.087956209,
+    "tempo_entrada_s": 0.758318,
+    "tempo_geracao_s": 14.741666,
+    "tokens_total": 378,
+    "tokens_por_s": 12.413793664840867,
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

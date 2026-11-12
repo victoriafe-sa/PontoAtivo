@@ -1,0 +1,149 @@
+{
+  "id": "t3-01",
+  "teste": 3,
+  "pergunta": "Qual é o endereço do Estádio Bezerrão no Gama?",
+  "condicao": "sem_rag",
+  "evidencia_ids": [],
+  "pergunta_id": "t3-01",
+  "modelo": "gemini-3.5-flash-lite",
+  "provedor": "gemini",
+  "repeticao": 1,
+  "inicio": "2026-11-12T09:47:21.931398-03:00",
+  "entrada": {
+    "model": "gemini-3.5-flash-lite",
+    "contents": "Você é o assistente do PontoAtivo, sobre espaços esportivos inclusivos no DF.\nData de referência do cenário: 12/11/2026. Responda em português, até 200 palavras.\nNão invente fatos ou fontes. Preserve datas e ressalvas. Informação histórica não confirma situação atual.\nResponda às partes conhecidas e explique especificamente o que não pode confirmar.\nUse somente seu conhecimento prévio; não há busca ou ferramentas. Indique a origem quando souber; se não souber, diga isso.\n\n\nPERGUNTA:\nQual é o endereço do Estádio Bezerrão no Gama?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n",
+    "config": {
+      "temperature": 0,
+      "max_output_tokens": 4096
+    }
+  },
+  "prompt_sha256": "3c0aba7b6545fddf1c1ad0bcbc6db4dd3bc59dc84f78876a374ff339e97bfade",
+  "arquivo_bruto": "rodadas/20261112-094344-373876/gemini/t3-01--sem_rag--r1.json",
+  "falhas_api": [
+    {
+      "tentativa": 1,
+      "tipo": "ServerError",
+      "codigo_http": 503
+    }
+  ],
+  "saida": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Thu, 12 Nov 2026 12:47:57 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=9897",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "Resposta:\nO Estádio Walmir Campelo Bezerra, conhecido como Bezerrão, está localizado no Setor Central do Gama, Distrito Federal (endere",
+              "thought": null,
+              "thought_signature": null,
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            },
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "ço de referência histórica: Área Especial, Setor Central, Gama, Brasília - DF).\n\nLimitações:\nNão é possível confirmar se houve alteração na numeração oficial da via, a situação operacional atual do estádio em 12/11/2026, nem se o local conta com todas as adaptações de acessibilidade inclusiva exigidas na data de referência, pois informações históricas não garantem o status presente.\n\nFontes utilizadas:\nConhecimento prévio sobre equipamentos esportivos do Distrito Federal (sem consulta a bases de dados em tempo real).",
+              "thought": null,
+              "thought_signature": "EmAKXgFpFH0TF8ghPmX3h4_8E7rg4vbqczbSipdnewmuEQ_62ZE4H7z5k5uc5sb-8ISllUw22c3LoWwPJJYjRk7n9col1FyCjVy5L7bcYjPEfSX55Z1Fta9KUnD3sB_8Jh4=",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "c7X1asC6HKe-xdIPjIuP8AI",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 154,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 162,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 162
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 316,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "arquivo_resposta": "rodadas/20261112-094344-373876/gemini/t3-01--sem_rag--r1.txt",
+  "tempo_cliente_segundos": 35.15083054200022,
+  "fim": "2026-11-12T09:47:57.081891-03:00",
+  "metricas": {
+    "pergunta_id": "t3-01",
+    "modelo": "gemini-3.5-flash-lite",
+    "provedor": "gemini",
+    "executado_em": "2026-11-12T09:47:21.931398-03:00",
+    "tempo_parede_s": 35.15083054200022,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "rodadas/20261112-094344-373876/gemini/t3-01--sem_rag--r1.txt",
+    "arquivo_bruto": "rodadas/20261112-094344-373876/gemini/t3-01--sem_rag--r1.json",
+    "tokens_entrada": 162,
+    "tokens_saida": 154,
+    "tokens_total": 316,
+    "motivo_fim": "STOP",
+    "status_metricas": "registradas"
+  }
+}

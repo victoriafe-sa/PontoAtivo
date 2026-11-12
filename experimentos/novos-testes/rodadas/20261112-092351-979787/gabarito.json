@@ -1,0 +1,179 @@
+[
+  {
+    "id": "t1-01a",
+    "teste": 1,
+    "pergunta": "Qual é a idade mínima para participar do Programa Centros Olímpicos e Paralímpicos?",
+    "evidencia_ids": [
+      "F028-001"
+    ],
+    "fatos_esperados": [
+      "A partir de 4 anos, conforme página atualizada em 26/06/2026."
+    ],
+    "limites_esperados": [
+      "Não comprova turma ou vaga atual."
+    ],
+    "par": "idade"
+  },
+  {
+    "id": "t1-01b",
+    "teste": 1,
+    "pergunta": "Qual é a idade mínima para participar do projeto Semear?",
+    "evidencia_ids": [
+      "F028-001"
+    ],
+    "fatos_esperados": [],
+    "limites_esperados": [
+      "O trecho é sobre COPs; não comprova idade mínima do Semear."
+    ],
+    "par": "idade"
+  },
+  {
+    "id": "t1-02a",
+    "teste": 1,
+    "pergunta": "Quais modalidades são oferecidas nos Centros Olímpicos e Paralímpicos?",
+    "evidencia_ids": [
+      "N03-003"
+    ],
+    "fatos_esperados": [
+      "Atletismo, basquete, futsal, futebol society, ginástica localizada, pilates, vôlei, jiu-jitsu, judô, taekwondo, karatê e capoterapia."
+    ],
+    "limites_esperados": [
+      "Lista exemplificativa; oferta varia por unidade; não comprova oferta atual."
+    ],
+    "par": "modalidades"
+  },
+  {
+    "id": "t1-02b",
+    "teste": 1,
+    "pergunta": "Quais modalidades são oferecidas na Escola Paralímpica de Esportes?",
+    "evidencia_ids": [
+      "N03-003"
+    ],
+    "fatos_esperados": [],
+    "limites_esperados": [
+      "Não transferir modalidades dos COPs para a Escola Paralímpica."
+    ],
+    "par": "modalidades"
+  },
+  {
+    "id": "t1-03a",
+    "teste": 1,
+    "pergunta": "Como utilizar a academia pública do Parque da Cidade e é gratuito?",
+    "evidencia_ids": [
+      "N04-008"
+    ],
+    "fatos_esperados": [
+      "Musculação e aulas gratuitas; baixar Mude – Yoga e Fitness, cadastrar-se e agendar; presença de profissional de educação física."
+    ],
+    "limites_esperados": [
+      "Informação documental, sem confirmação operacional atual."
+    ],
+    "par": "gratuidade"
+  },
+  {
+    "id": "t1-03b",
+    "teste": 1,
+    "pergunta": "Como utilizar a academia particular do Lago Sul e é gratuito?",
+    "evidencia_ids": [
+      "N04-008"
+    ],
+    "fatos_esperados": [],
+    "limites_esperados": [
+      "Não transferir gratuidade ou procedimento da academia pública para academia privada não identificada."
+    ],
+    "par": "gratuidade"
+  },
+  {
+    "id": "t2-01",
+    "teste": 2,
+    "pergunta": "Qual é o endereço do Bezerrão, qual a capacidade estimada e há disponibilidade para reserva em 13/11/2026 às 19h?",
+    "evidencia_ids": [
+      "F059-001"
+    ],
+    "fatos_esperados": [
+      "St. Central – Gama, Brasília – DF, 72405-610.",
+      "Capacidade estimada de 20.310 espectadores; página atualizada em 20/02/2026."
+    ],
+    "limites_esperados": [
+      "Não há agenda de reservas; não confirmar nem negar vaga."
+    ],
+    "par": null
+  },
+  {
+    "id": "t2-02",
+    "teste": 2,
+    "pergunta": "A academia pública do Parque da Cidade é gratuita, como faço o agendamento e há horário livre em 13/11/2026 às 19h?",
+    "evidencia_ids": [
+      "N04-008"
+    ],
+    "fatos_esperados": [
+      "Musculação e aulas gratuitas.",
+      "Baixar Mude – Yoga e Fitness, cadastrar-se e agendar; funcionamento condicionado a profissional de educação física."
+    ],
+    "limites_esperados": [
+      "Não há disponibilidade de agenda para a data solicitada."
+    ],
+    "par": null
+  },
+  {
+    "id": "t2-03",
+    "teste": 2,
+    "pergunta": "A partir de qual idade posso participar dos COPs, pessoas com deficiência estão incluídas e há vaga para uma criança de 5 anos no COP do Gama em 13/11/2026?",
+    "evidencia_ids": [
+      "F028-001"
+    ],
+    "fatos_esperados": [
+      "A partir de 4 anos.",
+      "Público inclui pessoas com deficiência; página atualizada em 26/06/2026."
+    ],
+    "limites_esperados": [
+      "Elegibilidade geral não comprova vaga nem turma específica no Gama."
+    ],
+    "par": null
+  },
+  {
+    "id": "t3-01",
+    "teste": 3,
+    "pergunta": "Qual é o endereço do Estádio Bezerrão no Gama?",
+    "evidencia_ids": [
+      "F059-001"
+    ],
+    "fatos_esperados": [
+      "St. Central – Gama, Brasília – DF, 72405-610."
+    ],
+    "limites_esperados": [
+      "Endereço documental; atualização de 20/02/2026 não comprova funcionamento atual."
+    ],
+    "par": null
+  },
+  {
+    "id": "t3-02",
+    "teste": 3,
+    "pergunta": "Como utilizar a academia pública do Parque da Cidade e é gratuito?",
+    "evidencia_ids": [
+      "N04-008"
+    ],
+    "fatos_esperados": [
+      "Gratuito; baixar Mude – Yoga e Fitness, cadastrar-se e agendar; presença de profissional de educação física."
+    ],
+    "limites_esperados": [
+      "Não confirmar disponibilidade ou funcionamento atual."
+    ],
+    "par": null
+  },
+  {
+    "id": "t3-03",
+    "teste": 3,
+    "pergunta": "Qual é a idade mínima para participar do Programa Centros Olímpicos e Paralímpicos?",
+    "evidencia_ids": [
+      "F028-001"
+    ],
+    "fatos_esperados": [
+      "A partir de 4 anos; página atualizada em 26/06/2026."
+    ],
+    "limites_esperados": [
+      "Não comprova turma ou vaga atual."
+    ],
+    "par": null
+  }
+]

@@ -1,0 +1,72 @@
+{
+  "id": "t2-03",
+  "teste": 2,
+  "pergunta": "A partir de qual idade posso participar dos COPs, pessoas com deficiência estão incluídas e há vaga para uma criança de 5 anos no COP do Gama em 13/11/2026?",
+  "condicao": "sem_rag",
+  "evidencia_ids": [],
+  "pergunta_id": "t2-03",
+  "modelo": "qwen3:8b",
+  "provedor": "ollama",
+  "repeticao": 1,
+  "inicio": "2026-11-12T09:33:03.049774-03:00",
+  "entrada": {
+    "model": "qwen3:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, sobre espaços esportivos inclusivos no DF.\nData de referência do cenário: 12/11/2026. Responda em português, até 200 palavras.\nNão invente fatos ou fontes. Preserve datas e ressalvas. Informação histórica não confirma situação atual.\nResponda às partes conhecidas e explique especificamente o que não pode confirmar.\nUse somente seu conhecimento prévio; não há busca ou ferramentas. Indique a origem quando souber; se não souber, diga isso.\n\n\nPERGUNTA:\nA partir de qual idade posso participar dos COPs, pessoas com deficiência estão incluídas e há vaga para uma criança de 5 anos no COP do Gama em 13/11/2026?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 8192,
+      "num_predict": 4096
+    },
+    "think": false
+  },
+  "prompt_sha256": "a361774117bda358700523a71eea9a21dcdf7c59d6eae9b24a9a7da2c39bf142",
+  "arquivo_bruto": "rodadas/20261112-092351-979787/qwen/t2-03--sem_rag--r1.json",
+  "saida": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-12T12:33:22.370163Z",
+    "message": {
+      "role": "assistant",
+      "content": "Resposta:  \nOs COPs (Caminhadas Olímpicas Populares) são eventos inclusivos que recebem pessoas com deficiência e são abertos a todos, incluindo crianças. No entanto, não há informações específicas sobre a idade mínima para participar dos COPs no DF em 2026. Em geral, crianças a partir de 5 anos podem participar, mas isso depende da organização do evento. Em relação ao COP do Gama em 13/11/2026, não há registros disponíveis sobre a disponibilidade de vagas para crianças de 5 anos.\n\nLimitações:  \n- Não há dados atualizados sobre a idade mínima para participar dos COPs em 2026.  \n- Não há informações específicas sobre vagas para crianças de 5 anos no COP do Gama em data mencionada.\n\nFontes utilizadas:  \n- Conhecimento prévio sobre os COPs e suas características inclusivas.  \n- Não há fontes específicas para as datas e vagas mencionadas."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 19318928333,
+    "load_duration": 93063583,
+    "prompt_eval_count": 224,
+    "prompt_eval_duration": 977375000,
+    "eval_count": 231,
+    "eval_duration": 18210191000
+  },
+  "arquivo_resposta": "rodadas/20261112-092351-979787/qwen/t2-03--sem_rag--r1.txt",
+  "tempo_cliente_segundos": 19.321911416000148,
+  "fim": "2026-11-12T09:33:22.371832-03:00",
+  "metricas": {
+    "pergunta_id": "t2-03",
+    "modelo": "qwen3:8b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:33:03.049774-03:00",
+    "tempo_parede_s": 19.321911416000148,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "rodadas/20261112-092351-979787/qwen/t2-03--sem_rag--r1.txt",
+    "arquivo_bruto": "rodadas/20261112-092351-979787/qwen/t2-03--sem_rag--r1.json",
+    "tokens_entrada": 224,
+    "tokens_saida": 231,
+    "motivo_fim": "stop",
+    "tempo_total_s": 19.318928333,
+    "tempo_carga_s": 0.093063583,
+    "tempo_entrada_s": 0.977375,
+    "tempo_geracao_s": 18.210191,
+    "tokens_total": 455,
+    "tokens_por_s": 12.685204674679142,
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "mapeamento": {
+    "1": 1,
+    "4": 2,
+    "6": 3
+  },
+  "observacao": "Renumeracao de identificadores; entradas e saidas das APIs e respostas TXT preservadas integralmente. Hashes dos snapshots recalculados; originais abaixo.",
+  "hashes_originais": {
+    "20261112-092351-979787": {
+      "tarefas.json": "0e643ec8305a8f2b115f19c6c75d95a8bf058ff4f2cd79ee820980bd49d7cbdb",
+      "evidencias.json": "9ca7c89e5ff7dfaafb848ac3c2c27ca566430b8826b72e605ebd9d4b590c776b",
+      "gabarito.json": "830088c23a0b71da682aecf9fc448ae1c46c209c21c71eaac0647168a33c394f"
+    },
+    "20261112-094344-373876": {
+      "tarefas.json": "0e643ec8305a8f2b115f19c6c75d95a8bf058ff4f2cd79ee820980bd49d7cbdb",
+      "evidencias.json": "9ca7c89e5ff7dfaafb848ac3c2c27ca566430b8826b72e605ebd9d4b590c776b",
+      "gabarito.json": "830088c23a0b71da682aecf9fc448ae1c46c209c21c71eaac0647168a33c394f"
+    }
+  }
+}

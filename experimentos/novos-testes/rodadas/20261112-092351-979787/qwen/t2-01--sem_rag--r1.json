@@ -1,0 +1,72 @@
+{
+  "id": "t2-01",
+  "teste": 2,
+  "pergunta": "Qual é o endereço do Bezerrão, qual a capacidade estimada e há disponibilidade para reserva em 13/11/2026 às 19h?",
+  "condicao": "sem_rag",
+  "evidencia_ids": [],
+  "pergunta_id": "t2-01",
+  "modelo": "qwen3:8b",
+  "provedor": "ollama",
+  "repeticao": 1,
+  "inicio": "2026-11-12T09:28:35.140881-03:00",
+  "entrada": {
+    "model": "qwen3:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, sobre espaços esportivos inclusivos no DF.\nData de referência do cenário: 12/11/2026. Responda em português, até 200 palavras.\nNão invente fatos ou fontes. Preserve datas e ressalvas. Informação histórica não confirma situação atual.\nResponda às partes conhecidas e explique especificamente o que não pode confirmar.\nUse somente seu conhecimento prévio; não há busca ou ferramentas. Indique a origem quando souber; se não souber, diga isso.\n\n\nPERGUNTA:\nQual é o endereço do Bezerrão, qual a capacidade estimada e há disponibilidade para reserva em 13/11/2026 às 19h?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 8192,
+      "num_predict": 4096
+    },
+    "think": false
+  },
+  "prompt_sha256": "28457ad8b7218c946dc52a299d2290b86b2166f080b79b5a4577742f6de9462f",
+  "arquivo_bruto": "rodadas/20261112-092351-979787/qwen/t2-01--sem_rag--r1.json",
+  "saida": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-12T12:28:48.996009Z",
+    "message": {
+      "role": "assistant",
+      "content": "Resposta:  \nO Bezerrão é um espaço esportivo inclusivo localizado no Distrito Federal, mas não é possível confirmar o endereço exato, a capacidade estimada ou a disponibilidade para reserva em 13/11/2026 às 19h. A informação sobre o local não está disponível em fontes confiáveis ou atualizadas até a data de referência.\n\nLimitações:  \n- Não há registros oficiais ou públicos com dados atualizados sobre o Bezerrão.  \n- A disponibilidade de reservas e as especificações técnicas do espaço não podem ser verificadas.  \n\nFontes utilizadas:  \n- Conhecimento prévio sobre espaços esportivos inclusivos no DF.  \n- Não há fontes confiáveis para confirmar os dados solicitados."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 13853163166,
+    "load_duration": 87284875,
+    "prompt_eval_count": 213,
+    "prompt_eval_duration": 885020000,
+    "eval_count": 178,
+    "eval_duration": 12875540000
+  },
+  "arquivo_resposta": "rodadas/20261112-092351-979787/qwen/t2-01--sem_rag--r1.txt",
+  "tempo_cliente_segundos": 13.855900791999375,
+  "fim": "2026-11-12T09:28:48.997349-03:00",
+  "metricas": {
+    "pergunta_id": "t2-01",
+    "modelo": "qwen3:8b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:28:35.140881-03:00",
+    "tempo_parede_s": 13.855900791999375,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "rodadas/20261112-092351-979787/qwen/t2-01--sem_rag--r1.txt",
+    "arquivo_bruto": "rodadas/20261112-092351-979787/qwen/t2-01--sem_rag--r1.json",
+    "tokens_entrada": 213,
+    "tokens_saida": 178,
+    "motivo_fim": "stop",
+    "tempo_total_s": 13.853163166,
+    "tempo_carga_s": 0.087284875,
+    "tempo_entrada_s": 0.88502,
+    "tempo_geracao_s": 12.87554,
+    "tokens_total": 391,
+    "tokens_por_s": 13.824662887925477,
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}
