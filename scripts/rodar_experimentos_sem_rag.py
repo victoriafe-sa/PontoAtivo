@@ -1,7 +1,6 @@
-"""Novas rodadas sem RAG, com parâmetros e registros iguais aos do executor RAG.
+"""Executa Q1–Q20 sem RAG, com parâmetros e registros iguais aos do executor RAG.
 
 Exemplo: python3 scripts/rodar_experimentos_sem_rag.py --modelo llama --inicio 5 --fim 20
-O script singular rodar_experimento_sem_rag.py permanece como executor histórico.
 """
 from pathlib import Path
 import rodar_experimentos_rag as executor

@@ -2,7 +2,7 @@
 
 ## Ampliação Q5–Q20
 
-Os prompts Q5–Q20 usam as mesmas perguntas e numeração do experimento com RAG, sem o bloco de evidências. Para novas rodadas, use o executor **plural**:
+Os prompts Q5–Q20 usam as mesmas perguntas e numeração do experimento com RAG, sem o bloco de evidências. Para novas rodadas, use o único executor sem RAG, `scripts/rodar_experimentos_sem_rag.py`.
 
 Em 12/11/2026, Q5–Q20 foram concluídas nos três modelos, totalizando 48 novas respostas e 60 linhas no CSV com as 12 históricas. As respostas dessa ampliação foram movidas para `respostas-<modelo>/q5.txt` a `q20.txt`, junto de Q1–Q4. Os caminhos nos JSONs e no CSV foram atualizados. Os registros brutos permanecem identificados pelas rodadas:
 
@@ -22,7 +22,7 @@ O último comando lê a chave da área de transferência do Mac e requer `google
 
 Em futuras execuções, o script ainda cria respostas em `respostas-<modelo>/rodada-<data-hora>/`; os JSONs completos e `ambiente.json`, em `brutos/<modelo>/rodada-<data-hora>/`. O CSV recebe uma linha por chamada, incluindo falhas, sem substituir as linhas históricas. Os caminhos para os registros brutos no CSV identificam cada rodada. Os prompts disponíveis não comprovam que todas as execuções foram concluídas; confira os JSONs e o status das métricas.
 
-O novo executor compartilha parâmetros com `rodar_experimentos_rag.py`: Ollama `/api/chat`, temperatura 0, seed 42, contexto 8.192, limite de saída 4.096 e raciocínio do Qwen desativado; Gemini temperatura 0 e limite de saída 4.096. Nenhuma busca ou ferramenta é fornecida. O tempo do Ollama pode incluir carregamento. As condições diferem da rodada histórica Q1–Q4 descrita abaixo, cujo executor singular foi preservado. Para uma comparação uniforme de Q1–Q20, execute também Q1–Q4 com o novo executor, em outra rodada.
+O executor compartilha parâmetros com `rodar_experimentos_rag.py`: Ollama `/api/chat`, temperatura 0, seed 42, contexto 8.192, limite de saída 4.096 e raciocínio do Qwen desativado; Gemini temperatura 0 e limite de saída 4.096. Nenhuma busca ou ferramenta é fornecida. O tempo do Ollama pode incluir carregamento. As condições diferem da rodada histórica Q1–Q4 descrita abaixo, cujo executor antigo foi removido; os resultados e registros históricos foram preservados. Para uma comparação uniforme de Q1–Q20, execute também Q1–Q4 com o executor atual, em outra rodada.
 
 O restante deste README e `analise-respostas.md` descrevem a rodada histórica Q1–Q4, não uma avaliação das novas respostas.
 
@@ -117,7 +117,7 @@ O pipeline atual foi executado do zero: `src/ingestao/carga.py` gerou 25 fontes 
 
 ## Estrutura
 
-O script de execução fica em [`scripts/rodar_experimento_sem_rag.py`](../../scripts/rodar_experimento_sem_rag.py), ao lado do script da rodada com RAG.
+O script de execução fica em [`scripts/rodar_experimentos_sem_rag.py`](../../scripts/rodar_experimentos_sem_rag.py), ao lado do script da rodada com RAG.
 
 ```text
 experimento-sem-rag/
@@ -134,23 +134,23 @@ experimento-sem-rag/
 
 Cada arquivo de resposta começa com um cabeçalho (modelo, data/hora, tokens e tempo). O texto da resposta vem depois de `---`, sem edição.
 
-## Como reproduzir
+## Como executar novas rodadas
 
-Na raiz do repositório, com o Ollama em execução:
+O único executor atende Q1–Q20. Sem `--inicio` e `--fim`, executa Q5–Q20. Para executar todas as perguntas, na raiz do repositório e com o Ollama em execução:
 
 ```bash
 ollama pull qwen3:8b && ollama pull llama3.2:3b
-python3 scripts/rodar_experimento_sem_rag.py llama qwen
+python3 scripts/rodar_experimentos_sem_rag.py --modelo llama --inicio 1 --fim 20
+python3 scripts/rodar_experimentos_sem_rag.py --modelo qwen --inicio 1 --fim 20
 ```
 
-Gemini: salve a chave em `.env` na raiz (o arquivo é ignorado pelo Git e a chave não é gravada nos resultados) e use o Python do `.venv`. No macOS, o Python do python.org não traz certificados raiz, e o `.venv` tem o `certifi`, que o script usa:
+Gemini: use um ambiente com `google-genai` instalado. O script lê `GEMINI_API_KEY` do ambiente ou solicita a chave com entrada oculta. No Mac, também é possível copiar a chave e executar:
 
 ```bash
-echo 'GEMINI_API_KEY=sua_chave_real' > .env
-.venv/bin/python scripts/rodar_experimento_sem_rag.py gemini
+python3 scripts/rodar_experimentos_sem_rag.py --modelo gemini --inicio 1 --fim 20 --chave-area-transferencia
 ```
 
-O script sobrescreve `respostas-*` e `brutos/`. Para preservar uma rodada, copie a pasta antes de repetir.
+Para repetir apenas Q1–Q4, use `--inicio 1 --fim 4`. Essas execuções usam os parâmetros atuais descritos no início deste README, que diferem dos parâmetros da rodada histórica. Cada execução cria uma nova pasta de rodada e acrescenta métricas ao CSV, preservando os resultados anteriores. Adicione `--simular` para validar os prompts sem chamar os modelos.
 
 ## Pendências
 
