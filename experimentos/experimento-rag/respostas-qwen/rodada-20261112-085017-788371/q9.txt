@@ -1,0 +1,10 @@
+modelo: qwen3:8b
+
+Resposta:  
+As melhorias de acessibilidade entregues junto com o novo PEC de Ceilândia incluem a construção de 2 mil metros de calçadas na EQNO 11/13, com piso tátil e rebaixamento de meio-fio, conforme mencionado em F066-001 e F066-002. Essas melhorias visam facilitar o deslocamento seguro da população, especialmente para estudantes e moradores da região. O PEC em si não é descrito como acessível, mas oferece estrutura para atividades físicas e convivência social, conforme F066-002 e F066-004.
+
+Limitações:  
+As informações sobre a acessibilidade do PEC não estão claras nas fontes, e as melhorias mencionadas são focadas nas calçadas. Além disso, as obras em outras quadras (18/19 e 8) são mencionadas como em andamento, mas não estão concluídas.
+
+Fontes utilizadas:  
+F066-001, F066-002, F066-004.

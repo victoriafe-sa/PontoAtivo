@@ -1,0 +1,11 @@
+modelo: qwen3:8b
+
+Resposta:  
+A Escola Paralímpica de Esportes atende a uma faixa etária ampla, a partir de 03 (três) anos de idade, contemplando crianças, adolescentes, jovens, adultos e idosos, conforme o art. 5º da Portaria SEL nº 99/2022 (ID: N01-012). As modalidades ofertadas incluem atletismo, entre outras, conforme mencionado na notícia institucional (ID: N03-002).  
+
+Limitações:  
+Não há informações específicas sobre as modalidades oferecidas na Escola Paralímpica de Esportes, apenas referências gerais sobre as modalidades dos Centros Olímpicos e Paralímpicos.  
+
+Fontes utilizadas:  
+- N01-012  
+- N03-002

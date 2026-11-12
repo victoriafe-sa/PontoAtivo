@@ -1,0 +1,71 @@
+{
+  "pergunta": "Q7",
+  "pergunta_id": "q7",
+  "rodada": "rodada-20261112-090705-730262",
+  "modelo": "qwen3:8b",
+  "provedor": "ollama",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/qwen/rodada-20261112-090705-730262/ambiente.json",
+  "inicio": "2026-11-12T09:07:33.922098-03:00",
+  "prompt_sha256": "81529cc469413690f969d33ef2de4fb863dbfe54ae708339c4fd272015ef05c3",
+  "entrada": {
+    "model": "qwen3:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nQuais equipamentos esportivos o Centro Olímpico de Samambaia possui?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "num_ctx": 8192,
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 4096
+    },
+    "think": false
+  },
+  "arquivo_bruto": "brutos/qwen/rodada-20261112-090705-730262/q7.json",
+  "saida": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-12T12:07:51.726557Z",
+    "message": {
+      "role": "assistant",
+      "content": "Resposta:  \nO Centro Olímpico de Samambaia, localizado no Distrito Federal, possui uma ampla gama de equipamentos esportivos, incluindo quadras de vôlei, futebol, basquete e handebol, além de piscinas olímpicas, pista de atletismo, ginásio de esportes e áreas para prática de esportes coletivos e individuais. O complexo também conta com equipamentos para treinamento de força e condicionamento físico, além de instalações para eventos esportivos e culturais. Essas informações são baseadas em descrições públicas do empreendimento, que destaca sua infraestrutura voltada para a prática de atividades físicas e esportivas.\n\nLimitações:  \nNão há acesso a dados atualizados sobre a disponibilidade específica de equipamentos em tempo real ou mudanças recentes na infraestrutura.\n\nFontes utilizadas:  \nDescrições públicas do Centro Olímpico de Samambaia, disponíveis em seus canais oficiais e em documentos institucionais do Distrito Federal."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 17795379917,
+    "load_duration": 87571292,
+    "prompt_eval_count": 233,
+    "prompt_eval_duration": 576244000,
+    "eval_count": 241,
+    "eval_duration": 17130251000
+  },
+  "arquivo_resposta": "respostas-qwen/q7.txt",
+  "tempo_cliente_segundos": 17.798394875000213,
+  "fim": "2026-11-12T09:07:51.728417-03:00",
+  "metricas": {
+    "pergunta_id": "q7",
+    "modelo": "qwen3:8b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:07:33.922098-03:00",
+    "tempo_parede_s": 17.798394875000213,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-qwen/q7.txt",
+    "arquivo_bruto": "brutos/qwen/rodada-20261112-090705-730262/q7.json",
+    "tokens_entrada": 233,
+    "tokens_saida": 241,
+    "motivo_fim": "stop",
+    "tempo_total_s": 17.795379917,
+    "tempo_carga_s": 0.087571292,
+    "tempo_entrada_s": 0.576244,
+    "tempo_geracao_s": 17.130251,
+    "tokens_total": 474,
+    "tokens_por_s": 14.068678853567294,
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

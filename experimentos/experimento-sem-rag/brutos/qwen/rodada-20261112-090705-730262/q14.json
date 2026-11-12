@@ -1,0 +1,71 @@
+{
+  "pergunta": "Q14",
+  "pergunta_id": "q14",
+  "rodada": "rodada-20261112-090705-730262",
+  "modelo": "qwen3:8b",
+  "provedor": "ollama",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/qwen/rodada-20261112-090705-730262/ambiente.json",
+  "inicio": "2026-11-12T09:09:20.001321-03:00",
+  "prompt_sha256": "2404b5ea4ca1b43a20806c44640057d79141e136cf6538cc2a13ee52f571dd89",
+  "entrada": {
+    "model": "qwen3:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nO que o programa Semear oferece para pessoas com deficiência?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "num_ctx": 8192,
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 4096
+    },
+    "think": false
+  },
+  "arquivo_bruto": "brutos/qwen/rodada-20261112-090705-730262/q14.json",
+  "saida": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-12T12:09:35.40812Z",
+    "message": {
+      "role": "assistant",
+      "content": "Resposta:  \nO programa Semear, desenvolvido pelo PontoAtivo, oferece atividades físicas e esportivas inclusivas para pessoas com deficiência, visando promover a inclusão, o lazer e a saúde. As atividades são adaptadas para atender às necessidades de diferentes tipos de deficiência, garantindo que todos possam participar com segurança e conforto. O programa busca estimular a prática de esportes em ambientes acessíveis e acolhedores, promovendo a integração social e o bem-estar das pessoas com deficiência.\n\nLimitações:  \nNão há informações detalhadas sobre o funcionamento atual do programa, pois o conhecimento disponível é limitado a descrições gerais do PontoAtivo.\n\nFontes utilizadas:  \nConhecimento interno sobre o PontoAtivo e o programa Semear."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 15405177375,
+    "load_duration": 85241334,
+    "prompt_eval_count": 229,
+    "prompt_eval_duration": 698803000,
+    "eval_count": 189,
+    "eval_duration": 14615477000
+  },
+  "arquivo_resposta": "respostas-qwen/q14.txt",
+  "tempo_cliente_segundos": 15.407752750000327,
+  "fim": "2026-11-12T09:09:35.409570-03:00",
+  "metricas": {
+    "pergunta_id": "q14",
+    "modelo": "qwen3:8b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:09:20.001321-03:00",
+    "tempo_parede_s": 15.407752750000327,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-qwen/q14.txt",
+    "arquivo_bruto": "brutos/qwen/rodada-20261112-090705-730262/q14.json",
+    "tokens_entrada": 229,
+    "tokens_saida": 189,
+    "motivo_fim": "stop",
+    "tempo_total_s": 15.405177375,
+    "tempo_carga_s": 0.085241334,
+    "tempo_entrada_s": 0.698803,
+    "tempo_geracao_s": 14.615477,
+    "tokens_total": 418,
+    "tokens_por_s": 12.931497206693972,
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

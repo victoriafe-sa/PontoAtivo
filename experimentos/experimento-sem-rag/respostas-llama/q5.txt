@@ -1,0 +1,18 @@
+modelo: llama3.2:3b
+
+Resposta:
+
+Existem Centros Olímpicos e Paralímpicos em várias regiões administrativas do Distrito Federal, incluindo:
+
+* Brasília (região central)
+* Ceilândia
+* Planaltina
+* Guará
+* Sobradinho
+
+Esses centros são responsáveis por organizar e realizar competições esportivas para atletas com deficiência.
+
+Limitações:
+Não tenho informações sobre a localização exata de cada centro ou detalhes específicos sobre as regiões administrativas onde eles estão localizados.
+
+Fonte utilizada: Não tenho informações suficientes para citar uma fonte específica.

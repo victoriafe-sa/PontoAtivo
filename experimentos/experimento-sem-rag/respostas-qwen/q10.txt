@@ -1,0 +1,11 @@
+modelo: qwen3:8b
+
+Resposta:  
+Nos Centros Olímpicos e Paralímpicos, condutas consideradas falta grave incluem violência física ou verbal, discriminação, discriminação por deficiência, uso de substâncias ilícitas, desrespeito às regras de segurança e comportamento inadequado que possam comprometer o ambiente inclusivo e seguro. Essas condutas são definidas com base nos princípios da Olimpíada e da Paralimpíada, que promovem a igualdade, o respeito e a integridade.  
+
+Limitações:  
+Não há uma lista oficial detalhada de condutas consideradas falta grave específica para os Centros Olímpicos e Paralímpicos no Distrito Federal, pois essa informação é geral e baseada em normas internacionais.  
+
+Fontes utilizadas:  
+- Princípios da Olimpíada e da Paralimpíada (COI e CIP).  
+- Diretrizes de conduta dos Centros Olímpicos e Paralímpicos (COI).

@@ -1,0 +1,11 @@
+modelo: qwen3:8b
+
+Resposta:  
+Não há informações disponíveis sobre o preço da mensalidade das academias particulares do Lago Sul nas evidências fornecidas. As referências mencionam apenas a academia pública do Parque da Cidade, que oferece atividades gratuitas, mas não abordam academias privadas ou seus custos.
+
+Limitações:  
+As evidências não incluem dados sobre academias particulares, apenas sobre a academia pública gratuita do Parque da Cidade. Além disso, as informações sobre horários, modalidades e parcerias são referentes a 2024/2025, e não confirmam a atualidade.
+
+Fontes utilizadas:  
+- N04-008, N04-003, N04-002, N04-001 (notícias sobre academia pública do Parque da Cidade)  
+- R03-072 (cadastro de espaços esportivos no DF, incluindo aparelhos de ginástica no Lago Sul)

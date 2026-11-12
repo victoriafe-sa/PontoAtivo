@@ -1,0 +1,122 @@
+{
+  "pergunta": "Q12",
+  "pergunta_id": "q12",
+  "rodada": "rodada-20261112-090813-909087",
+  "modelo": "gemini-3.5-flash-lite",
+  "provedor": "gemini",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/gemini/rodada-20261112-090813-909087/ambiente.json",
+  "inicio": "2026-11-12T09:08:25.818770-03:00",
+  "prompt_sha256": "bda61db400fe0bdaa668065e775aa0a1cd1641ba6ceceb02e0d59001e8c8421f",
+  "entrada": {
+    "model": "gemini-3.5-flash-lite",
+    "contents": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nO que o Decreto distrital nº 28.494/2007 determina sobre acessibilidade em instalações esportivas?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n",
+    "config": {
+      "temperature": 0,
+      "max_output_tokens": 4096
+    }
+  },
+  "arquivo_bruto": "brutos/gemini/rodada-20261112-090813-909087/q12.json",
+  "saida": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Thu, 12 Nov 2026 12:08:27 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1365",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "Resposta:\nComo assistente do PontoAtivo, informo que não possuo, em minha base de conhecimento prévio, o teor específico do Decreto distrital nº 28.494/2007 sobre acessibilidade em instalações esportivas. Portanto, não posso detalhar suas determinações ou confirmar se as normas estabelecidas nele continuam em vigor atualmente no Distrito Federal.\n\nLimitações:\nMeu conhecimento prévio é insuficiente para detalhar o conteúdo do Decreto distrital nº 28.494/2007. Não disponho do texto normativo dessa legislação específica e não posso confirmar a situação atual de suas diretrizes sem acesso a documentos oficiais recentes ou buscas externas.\n\nFontes utilizadas:\nDesconheço a origem documental desta norma específica apenas com base na memória interna.",
+              "thought": null,
+              "thought_signature": "EmAKXgFpFH0Ttx-X14DpMga1SVH4NgjNnmhQnVbCSRof2VLx-zh1rp0mX4-C_AiWzDsg_RQCCRph080IrhH7f0STZEvjP0p0o69k5rYum9IJwqjblmaXClSbf9OjOSyplUo=",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "Oqz1arOBBaL6wbUP7ODZ6As",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 171,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 215,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 215
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 386,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "arquivo_resposta": "respostas-gemini/q12.txt",
+  "tempo_cliente_segundos": 1.4788026669998544,
+  "fim": "2026-11-12T09:08:27.298163-03:00",
+  "metricas": {
+    "pergunta_id": "q12",
+    "modelo": "gemini-3.5-flash-lite",
+    "provedor": "gemini",
+    "executado_em": "2026-11-12T09:08:25.818770-03:00",
+    "tempo_parede_s": 1.4788026669998544,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-gemini/q12.txt",
+    "arquivo_bruto": "brutos/gemini/rodada-20261112-090813-909087/q12.json",
+    "tokens_entrada": 215,
+    "tokens_saida": 171,
+    "tokens_total": 386,
+    "motivo_fim": "STOP",
+    "status_metricas": "registradas"
+  }
+}

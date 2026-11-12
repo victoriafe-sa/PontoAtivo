@@ -1,0 +1,10 @@
+modelo: qwen3:8b
+
+Resposta:  
+O programa Semear, desenvolvido pelo PontoAtivo, oferece atividades físicas e esportivas inclusivas para pessoas com deficiência, visando promover a inclusão, o lazer e a saúde. As atividades são adaptadas para atender às necessidades de diferentes tipos de deficiência, garantindo que todos possam participar com segurança e conforto. O programa busca estimular a prática de esportes em ambientes acessíveis e acolhedores, promovendo a integração social e o bem-estar das pessoas com deficiência.
+
+Limitações:  
+Não há informações detalhadas sobre o funcionamento atual do programa, pois o conhecimento disponível é limitado a descrições gerais do PontoAtivo.
+
+Fontes utilizadas:  
+Conhecimento interno sobre o PontoAtivo e o programa Semear.

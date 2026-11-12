@@ -1,0 +1,71 @@
+{
+  "pergunta": "Q8",
+  "pergunta_id": "q8",
+  "rodada": "rodada-20261112-090705-730262",
+  "modelo": "qwen3:8b",
+  "provedor": "ollama",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/qwen/rodada-20261112-090705-730262/ambiente.json",
+  "inicio": "2026-11-12T09:07:51.729691-03:00",
+  "prompt_sha256": "afaa649528ea95e50bb17d57e724d878823675d5c30e83dc4224c9ad7763e1ef",
+  "entrada": {
+    "model": "qwen3:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nQuanto a Novacap está investindo em Pontos de Encontro Comunitário e quantos PECs pretende instalar ou revitalizar?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "num_ctx": 8192,
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 4096
+    },
+    "think": false
+  },
+  "arquivo_bruto": "brutos/qwen/rodada-20261112-090705-730262/q8.json",
+  "saida": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-12T12:08:05.359804Z",
+    "message": {
+      "role": "assistant",
+      "content": "Resposta:  \nAté o momento, não há informações disponíveis sobre o valor exato da investimento da Novacap em Pontos de Encontro Comunitário (PEC) ou o número de PECs que pretende instalar ou revitalizar. A Novacap, como órgão responsável pela gestão de espaços públicos no Distrito Federal, tem realizado investimentos em infraestrutura esportiva e de lazer, mas os detalhes específicos sobre os PECs não foram divulgados publicamente em fontes confiáveis.\n\nLimitações:  \nNão há acesso a dados atualizados ou específicos sobre o orçamento ou plano de expansão dos PECs pela Novacap.\n\nFontes utilizadas:  \nConhecimento prévio sobre a atuação da Novacap no Distrito Federal."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 13626416500,
+    "load_duration": 87176792,
+    "prompt_eval_count": 246,
+    "prompt_eval_duration": 729861000,
+    "eval_count": 172,
+    "eval_duration": 12800111000
+  },
+  "arquivo_resposta": "respostas-qwen/q8.txt",
+  "tempo_cliente_segundos": 13.630321874999936,
+  "fim": "2026-11-12T09:08:05.362535-03:00",
+  "metricas": {
+    "pergunta_id": "q8",
+    "modelo": "qwen3:8b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:07:51.729691-03:00",
+    "tempo_parede_s": 13.630321874999936,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-qwen/q8.txt",
+    "arquivo_bruto": "brutos/qwen/rodada-20261112-090705-730262/q8.json",
+    "tokens_entrada": 246,
+    "tokens_saida": 172,
+    "motivo_fim": "stop",
+    "tempo_total_s": 13.6264165,
+    "tempo_carga_s": 0.087176792,
+    "tempo_entrada_s": 0.729861,
+    "tempo_geracao_s": 12.800111,
+    "tokens_total": 418,
+    "tokens_por_s": 13.437383472690199,
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

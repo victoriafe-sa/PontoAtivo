@@ -1,0 +1,10 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta:
+Como assistente do PontoAtivo, não tenho acesso a sistemas de reservas em tempo real, horários atualizados ou à disponibilidade diária das quadras de tênis no Gama para hoje à noite.
+
+Limitações:
+Não possuo dados em tempo real, ferramentas de busca ou conexão com sistemas de agendamento de instalações esportivas do Distrito Federal. Portanto, não posso confirmar quais quadras estão livres no momento.
+
+Fontes utilizadas:
+Nenhuma. (Não utilizei fontes externas ou documentos, pois meu conhecimento prévio não inclui a programação diária de reservas de quadras).

@@ -1,0 +1,71 @@
+{
+  "pergunta": "Q5",
+  "pergunta_id": "q5",
+  "rodada": "rodada-20261112-090705-730262",
+  "modelo": "qwen3:8b",
+  "provedor": "ollama",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/qwen/rodada-20261112-090705-730262/ambiente.json",
+  "inicio": "2026-11-12T09:07:05.738628-03:00",
+  "prompt_sha256": "ba10275a676bba495a9846b01be036184c014836e36f055714fa5a642c6458c0",
+  "entrada": {
+    "model": "qwen3:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nEm quais regiões administrativas do DF existem Centros Olímpicos e Paralímpicos?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "num_ctx": 8192,
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 4096
+    },
+    "think": false
+  },
+  "arquivo_bruto": "brutos/qwen/rodada-20261112-090705-730262/q5.json",
+  "saida": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-12T12:07:20.49131Z",
+    "message": {
+      "role": "assistant",
+      "content": "Resposta:  \nOs Centros Olímpicos e Paralímpicos no Distrito Federal (DF) estão localizados principalmente nas regiões administrativas de Ceilândia e Taguatinga. Esses centros são parte da infraestrutura esportiva desenvolvida para promover a prática de atividades físicas e esportivas, com foco na inclusão e no desenvolvimento de atletas.  \n\nLimitações:  \nNão há informações detalhadas sobre a distribuição exata de todos os centros em todas as regiões do DF, e não foi possível confirmar se outros municípios também possuem tais centros.  \n\nFontes utilizadas:  \nConhecimento prévio sobre a infraestrutura esportiva do DF e informações públicas sobre centros olímpicos e paralímpicos no DF."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 14730989042,
+    "load_duration": 113712375,
+    "prompt_eval_count": 239,
+    "prompt_eval_duration": 1454353000,
+    "eval_count": 183,
+    "eval_duration": 13130068000
+  },
+  "arquivo_resposta": "respostas-qwen/q5.txt",
+  "tempo_cliente_segundos": 14.732523958000002,
+  "fim": "2026-11-12T09:07:20.492400-03:00",
+  "metricas": {
+    "pergunta_id": "q5",
+    "modelo": "qwen3:8b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:07:05.738628-03:00",
+    "tempo_parede_s": 14.732523958000002,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-qwen/q5.txt",
+    "arquivo_bruto": "brutos/qwen/rodada-20261112-090705-730262/q5.json",
+    "tokens_entrada": 239,
+    "tokens_saida": 183,
+    "motivo_fim": "stop",
+    "tempo_total_s": 14.730989042,
+    "tempo_carga_s": 0.113712375,
+    "tempo_entrada_s": 1.454353,
+    "tempo_geracao_s": 13.130068,
+    "tokens_total": 422,
+    "tokens_por_s": 13.937475419015348,
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

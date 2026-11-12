@@ -1,0 +1,10 @@
+modelo: qwen3:8b
+
+Resposta:  
+A Escola Paralímpica de Esportes atende a pessoas com deficiência, em diferentes faixas etárias, desde a infância até a idade adulta. Oferece modalidades como atletismo, natação, vôlei sentado, futebol 7, basquete e handebol. Essas atividades são adaptadas para garantir a inclusão e o desenvolvimento físico, social e emocional dos participantes.
+
+Limitações:  
+Não há informações detalhadas sobre a faixa etária específica em que cada modalidade é oferecida, nem sobre a estrutura de turmas ou horários.
+
+Fontes utilizadas:  
+Conhecimento prévio sobre a Escola Paralímpica de Esportes no Distrito Federal.

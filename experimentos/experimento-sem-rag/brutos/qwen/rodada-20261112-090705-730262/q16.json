@@ -1,0 +1,71 @@
+{
+  "pergunta": "Q16",
+  "pergunta_id": "q16",
+  "rodada": "rodada-20261112-090705-730262",
+  "modelo": "qwen3:8b",
+  "provedor": "ollama",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/qwen/rodada-20261112-090705-730262/ambiente.json",
+  "inicio": "2026-11-12T09:09:51.810735-03:00",
+  "prompt_sha256": "9604da6f5ab8192bd12404da141929e6ebed20c8fdd99010c5f43de97525386c",
+  "entrada": {
+    "model": "qwen3:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nOnde ficam os Pontos de Encontro Comunitário listados no Plano Piloto?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "num_ctx": 8192,
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 4096
+    },
+    "think": false
+  },
+  "arquivo_bruto": "brutos/qwen/rodada-20261112-090705-730262/q16.json",
+  "saida": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-12T12:10:06.826188Z",
+    "message": {
+      "role": "assistant",
+      "content": "Resposta:  \nOs Pontos de Encontro Comunitário listados no Plano Piloto estão distribuídos em diferentes regiões do Distrito Federal, com o objetivo de promover a inclusão e o acesso a atividades físicas. Esses pontos são geralmente localizados em áreas públicas, como praças, parques e vias de circulação, facilitando o acesso à população. No entanto, a localização exata de cada ponto varia conforme o plano específico e a região do DF em que se encontra.\n\nLimitações:  \nNão há uma lista centralizada ou oficial divulgada com as coordenadas exatas de todos os Pontos de Encontro Comunitário do Plano Piloto. A informação disponível é genérica e baseia-se em descrições gerais do projeto.\n\nFontes utilizadas:  \nConhecimento prévio sobre o Plano Piloto e projetos de inclusão esportiva no Distrito Federal."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 15013769042,
+    "load_duration": 86746334,
+    "prompt_eval_count": 235,
+    "prompt_eval_duration": 696697000,
+    "eval_count": 202,
+    "eval_duration": 14214195000
+  },
+  "arquivo_resposta": "respostas-qwen/q16.txt",
+  "tempo_cliente_segundos": 15.01595766599985,
+  "fim": "2026-11-12T09:10:06.827116-03:00",
+  "metricas": {
+    "pergunta_id": "q16",
+    "modelo": "qwen3:8b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:09:51.810735-03:00",
+    "tempo_parede_s": 15.01595766599985,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-qwen/q16.txt",
+    "arquivo_bruto": "brutos/qwen/rodada-20261112-090705-730262/q16.json",
+    "tokens_entrada": 235,
+    "tokens_saida": 202,
+    "motivo_fim": "stop",
+    "tempo_total_s": 15.013769042,
+    "tempo_carga_s": 0.086746334,
+    "tempo_entrada_s": 0.696697,
+    "tempo_geracao_s": 14.214195,
+    "tokens_total": 437,
+    "tokens_por_s": 14.211145970630064,
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

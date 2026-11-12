@@ -1,13 +1,15 @@
 modelo: qwen3:8b
-executado_em: 2026-11-10T12:41:15-03:00
-tokens: entrada=223 saida=434
-tempo_s: 24.626
+executado_em: 2026-11-10T12:42:18-03:00
+tokens: entrada=223 saida=428
+tempo_s: 24.517
 ---
 Resposta:  
-O Estádio Bezerrão, também conhecido como Estádio do Gama, está localizado no bairro de Gama, no Distrito Federal. Seu endereço exato é **Av. das Forças Armadas, 1000 – Gama, Brasília-DF**.  
+A academia pública do Parque da Cidade em Brasília é gratuita, conforme informações do projeto PontoAtivo, que promove espaços esportivos inclusivos no Distrito Federal. Para utilizar o espaço, é necessário comparecer ao local com um documento de identidade e, em alguns casos, registrar-se previamente. A disponibilidade de horários e equipamentos pode variar conforme a demanda.  
 
 Limitações:  
-Não há informações adicionais sobre mudanças recentes no nome ou endereço, mas a referência ao Estádio do Gama é comum em fontes locais.  
+- Não há detalhes específicos sobre o funcionamento exato da academia no Parque da Cidade, já que o PontoAtivo se concentra em projetos de inclusão, não em detalhes operacionais de cada unidade.  
+- As regras podem ter mudado, e não há atualização da informação.  
 
 Fontes utilizadas:  
-Conhecimento geral sobre espaços esportivos do Distrito Federal e nomes associados a regiões como Gama. Não há acesso a documentos oficiais ou atualizações específicas sobre o local.
+- Conhecimento prévio sobre o PontoAtivo e políticas públicas de espaços esportivos no DF.  
+- Informações gerais sobre academias públicas gratuitas no Brasil.

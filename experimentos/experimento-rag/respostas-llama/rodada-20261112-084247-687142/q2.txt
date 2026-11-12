@@ -1,0 +1,16 @@
+modelo: llama3.2:3b
+
+Resposta:
+
+Os Centros Olímpicos e Paralímpicos do Distrito Federal oferecem várias modalidades esportivas, incluindo Atletismo, Basquete, Futsal, Futebol Society, Ginástica Localizada, Pilates, Vôlei, Jiu-Jitsu, Judô, Taekwondo, Karatê e Capoterapia.
+
+Limitações:
+
+Não é possível confirmar a totalidade das modalidades oferecidas pelos Centros Olímpicos e Paralímpicos do Distrito Federal, pois a lista de modalidades é exemplificativa e varia por unidade. Além disso, não há informações sobre as turmas disponíveis para cada modalidade.
+
+Fontes utilizadas:
+
+* N03-003: Notícia institucional (07/09/2025) - "Centros Olímpicos e Paralímpicos do DF oferecem mais de 10 mil vagas remanescentes"
+* N02-002: Notícia institucional (edital de matrícula 01/2026) - "Centros olímpicos e paralímpicos abrem mais de 12 mil vagas no DF com estrutura reforçada"
+* F028-001: Informativo institucional do espaço (endereços, diretores, matrícula) - "Centros Olímpicos e Paralímpicos"
+* N03-004: Notícia institucional (07/09/2025) - "Centros Olímpicos e Paralímpicos do DF oferecem mais de 10 mil vagas remanescentes"

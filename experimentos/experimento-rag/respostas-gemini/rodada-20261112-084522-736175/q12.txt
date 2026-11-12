@@ -1,0 +1,7 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta: As evidências fornecidas não contêm informações sobre o Decreto distrital nº 28.494/2007.
+
+Limitações: Os documentos disponíveis tratam da Lei nº 6.637/2020 (Estatuto da Pessoa com Deficiência do DF) e não mencionam o Decreto nº 28.494/2007, tornando impossível confirmar o que ele determina sobre acessibilidade em instalações esportivas.
+
+Fontes utilizadas: Nenhuma.

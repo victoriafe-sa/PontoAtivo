@@ -1,0 +1,70 @@
+{
+  "pergunta": "Q5",
+  "pergunta_id": "q5",
+  "rodada": "rodada-20261112-090313-284534",
+  "modelo": "llama3.2:3b",
+  "provedor": "ollama",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/llama/rodada-20261112-090313-284534/ambiente.json",
+  "inicio": "2026-11-12T09:03:13.293280-03:00",
+  "prompt_sha256": "ba10275a676bba495a9846b01be036184c014836e36f055714fa5a642c6458c0",
+  "entrada": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nEm quais regiões administrativas do DF existem Centros Olímpicos e Paralímpicos?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "num_ctx": 8192,
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 4096
+    }
+  },
+  "arquivo_bruto": "brutos/llama/rodada-20261112-090313-284534/q5.json",
+  "saida": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-12T12:04:32.189227Z",
+    "message": {
+      "role": "assistant",
+      "content": "Resposta:\n\nExistem Centros Olímpicos e Paralímpicos em várias regiões administrativas do Distrito Federal, incluindo:\n\n* Brasília (região central)\n* Ceilândia\n* Planaltina\n* Guará\n* Sobradinho\n\nEsses centros são responsáveis por organizar e realizar competições esportivas para atletas com deficiência.\n\nLimitações:\nNão tenho informações sobre a localização exata de cada centro ou detalhes específicos sobre as regiões administrativas onde eles estão localizados.\n\nFonte utilizada: Não tenho informações suficientes para citar uma fonte específica."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 78897818875,
+    "load_duration": 29678774250,
+    "prompt_eval_count": 247,
+    "prompt_eval_duration": 758427000,
+    "eval_count": 144,
+    "eval_duration": 48457068000
+  },
+  "arquivo_resposta": "respostas-llama/q5.txt",
+  "tempo_cliente_segundos": 78.89974170799997,
+  "fim": "2026-11-12T09:04:32.190788-03:00",
+  "metricas": {
+    "pergunta_id": "q5",
+    "modelo": "llama3.2:3b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:03:13.293280-03:00",
+    "tempo_parede_s": 78.89974170799997,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-llama/q5.txt",
+    "arquivo_bruto": "brutos/llama/rodada-20261112-090313-284534/q5.json",
+    "tokens_entrada": 247,
+    "tokens_saida": 144,
+    "motivo_fim": "stop",
+    "tempo_total_s": 78.897818875,
+    "tempo_carga_s": 29.67877425,
+    "tempo_entrada_s": 0.758427,
+    "tempo_geracao_s": 48.457068,
+    "tokens_total": 391,
+    "tokens_por_s": 2.971702703927526,
+    "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

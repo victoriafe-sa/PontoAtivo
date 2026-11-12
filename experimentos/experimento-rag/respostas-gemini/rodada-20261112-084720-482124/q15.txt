@@ -1,0 +1,12 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta:
+Uma pessoa com deficiência pode buscar a prática desportiva e paradesportiva formal e não formal como um direito garantido, contando com meios que facilitem o exercício dessas atividades [N05-004]. No Distrito Federal, o Programa Centros Olímpicos e Paralímpicos (COPs) oferece modalidades esportivas e de lazer para o público a partir de 3 anos de idade, incluindo pessoas com deficiência [N01-012]. O acesso às atividades pode ser pleiteado por qualquer cidadão [N01-012]. Após avaliação e conforme a disponibilidade de vagas, os alunos com deficiência podem ser alocados em turmas regulares ou em turmas exclusivas [N01-014]. Além disso, essas pessoas possuem prioridade no atendimento presencial nos Centros Olímpicos e Paralímpicos [N01-014].
+
+Limitações:
+As evidências fornecidas não detalham o passo a passo prático, documentos necessários para inscrição ou a lista exata dos locais de atendimento além dos Centros Olímpicos e Paralímpicos.
+
+Fontes utilizadas:
+- N05-004
+- N01-012
+- N01-014

@@ -1,0 +1,9 @@
+modelo: llama3.2:3b
+
+A Escola Paralímpica de Esportes é uma instituição que oferece atividades físicas inclusivas para pessoas com deficiência. Ela atende a faixas etárias variadas, mas não consegui encontrar informações específicas sobre a faixa etária mais comum.
+
+Quanto às modalidades, a escola oferece uma variedade de esportes e atividades físicas adaptadas às necessidades das pessoas com deficiência. Algumas das modalidades incluem atletismo, basquete, futebol, tênis, natação, entre outras.
+
+Limitações: Não consegui encontrar informações específicas sobre a faixa etária mais comum ou as modalidades mais populares da Escola Paralímpica de Esportes.
+
+Fonte utilizada: Não consegui encontrar uma fonte confiável que forneça essa informação.

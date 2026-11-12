@@ -1,0 +1,11 @@
+modelo: qwen3:8b
+
+Resposta:  
+Não há informações suficientes para confirmar quais quadras de tênis do Gama estão disponíveis para reserva hoje à noite. As evidências fornecidas mencionam quadras poliesportivas e campos, mas não especificam quadras de tênis ou disponibilidade para reservas. Além disso, os dados estão obsoletos e não fornecem informações atualizadas sobre uso ou disponibilidade.
+
+Limitações:  
+- As fontes indicam que os dados são obsoletos e não confirmam a disponibilidade atual.  
+- Não há menção a quadras de tênis ou sistemas de reserva.  
+
+Fontes utilizadas:  
+- R03-044, R03-052, R03-180, R03-043.

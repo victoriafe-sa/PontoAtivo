@@ -1,0 +1,70 @@
+{
+  "pergunta": "Q19",
+  "pergunta_id": "q19",
+  "rodada": "rodada-20261112-090313-284534",
+  "modelo": "llama3.2:3b",
+  "provedor": "ollama",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/llama/rodada-20261112-090313-284534/ambiente.json",
+  "inicio": "2026-11-12T09:06:45.222149-03:00",
+  "prompt_sha256": "a2408c1227fcc7885c56d0487335ad28dce17e678407bb6b35c9e2756a8da00b",
+  "entrada": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nQual quadra de tênis do Gama está livre para reserva hoje à noite?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "num_ctx": 8192,
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 4096
+    }
+  },
+  "arquivo_bruto": "brutos/llama/rodada-20261112-090313-284534/q19.json",
+  "saida": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-12T12:06:48.74094Z",
+    "message": {
+      "role": "assistant",
+      "content": "Desculpe, mas não tenho informações sobre a disponibilidade de quadras de tênis específicas do Gama ou em qualquer outro local, incluindo a capacidade de reserva para datas e horários específicos.\n\nNão posso confirmar se uma quadra de tênis está livre para reserva hoje à noite sem acesso a informações atualizadas sobre agendamentos e disponibilidade."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 3516603750,
+    "load_duration": 184345334,
+    "prompt_eval_count": 241,
+    "prompt_eval_duration": 439186000,
+    "eval_count": 83,
+    "eval_duration": 2890732000
+  },
+  "arquivo_resposta": "respostas-llama/q19.txt",
+  "tempo_cliente_segundos": 3.5193061669997405,
+  "fim": "2026-11-12T09:06:48.742535-03:00",
+  "metricas": {
+    "pergunta_id": "q19",
+    "modelo": "llama3.2:3b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:06:45.222149-03:00",
+    "tempo_parede_s": 3.5193061669997405,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-llama/q19.txt",
+    "arquivo_bruto": "brutos/llama/rodada-20261112-090313-284534/q19.json",
+    "tokens_entrada": 241,
+    "tokens_saida": 83,
+    "motivo_fim": "stop",
+    "tempo_total_s": 3.51660375,
+    "tempo_carga_s": 0.184345334,
+    "tempo_entrada_s": 0.439186,
+    "tempo_geracao_s": 2.890732,
+    "tokens_total": 324,
+    "tokens_por_s": 28.712450687230778,
+    "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

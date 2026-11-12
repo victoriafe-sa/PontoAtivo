@@ -1,0 +1,122 @@
+{
+  "pergunta": "Q11",
+  "pergunta_id": "q11",
+  "rodada": "rodada-20261112-090813-909087",
+  "modelo": "gemini-3.5-flash-lite",
+  "provedor": "gemini",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/gemini/rodada-20261112-090813-909087/ambiente.json",
+  "inicio": "2026-11-12T09:08:24.261951-03:00",
+  "prompt_sha256": "7ab6a28464750faf13e04d13778af257afe5b3220b21ee650dc01bc110ba059b",
+  "entrada": {
+    "model": "gemini-3.5-flash-lite",
+    "contents": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nEm que horários acontecem as aulas nos Centros Olímpicos e Paralímpicos?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n",
+    "config": {
+      "temperature": 0,
+      "max_output_tokens": 4096
+    }
+  },
+  "arquivo_bruto": "brutos/gemini/rodada-20261112-090813-909087/q11.json",
+  "saida": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Thu, 12 Nov 2026 12:08:25 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1531",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "Resposta:\nOs horários das aulas nos Centros Olímpicos e Paralímpicos (COP) do Distrito Federal geralmente ocorrem em dois turnos principais (matutino e vespertino), de terça a sexta-feira, abrangendo também atividades aos sábados. No entanto, os horários específicos variam conforme a modalidade esportiva escolhida (como natação, hidroginástica, futebol, entre outras), a faixa etária dos participantes e a unidade específica do Centro Olímpico e Paralímpico (por exemplo, Estrutural, Riacho Fundo I, Samambaia, Ceilândia, entre outras).\n\nLimitações:\nNão posso confirmar a grade horária atual, exata e unificada de todas as unidades dos Centros Olímpicos e Paralímpicos, pois os cronogramas sofrem alterações periódicas de acordo com a abertura de editais de novas turmas, renovações de matrícula e a disponibilidade de vagas de cada gestão.\n\nFontes utilizadas:\nA informação geral sobre o funcionamento em turnos e dias da semana é baseada no conhecimento prévio geral sobre o funcionamento histórico dos Centros Olímpicos e Paralímpicos do Distrito Federal, geridos pelo Governo do Distrito Federal (GDF). Não tenho a origem documental exata ou o ato normativo específico que rege a tabela horária vigente no momento.",
+              "thought": null,
+              "thought_signature": "EmAKXgFpFH0Tj26v6HoPjGjOFvF9GGqoYRSg66RGpbMsxu3WZ9Js2Yb3XvZJ8QN8PpdkTXEPfvRAejNjmf4oO7DfQuq8q4oimkhNGa0GRjnMoBGDLOqx_83_MaLbr_u1AVM=",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "OKz1apPPH9DjytMP8Lfr4Ak",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 274,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 203,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 203
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 477,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "arquivo_resposta": "respostas-gemini/q11.txt",
+  "tempo_cliente_segundos": 1.555141666000054,
+  "fim": "2026-11-12T09:08:25.817702-03:00",
+  "metricas": {
+    "pergunta_id": "q11",
+    "modelo": "gemini-3.5-flash-lite",
+    "provedor": "gemini",
+    "executado_em": "2026-11-12T09:08:24.261951-03:00",
+    "tempo_parede_s": 1.555141666000054,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-gemini/q11.txt",
+    "arquivo_bruto": "brutos/gemini/rodada-20261112-090813-909087/q11.json",
+    "tokens_entrada": 203,
+    "tokens_saida": 274,
+    "tokens_total": 477,
+    "motivo_fim": "STOP",
+    "status_metricas": "registradas"
+  }
+}

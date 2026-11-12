@@ -1,0 +1,17 @@
+modelo: llama3.2:3b
+
+Resposta:
+
+Para começar a praticar esporte paralímpico, uma pessoa com deficiência pode seguir os seguintes passos:
+
+1. **Conhecer as modalidades**: Pesquisar sobre as diferentes modalidades de esportes paralímpicos disponíveis e escolher aquela que melhor se adapta às suas habilidades e interesses.
+2. **Encontrar um clube ou organização**: Procurar por clubes ou organizações que ofereçam treinamento e competições para pessoas com deficiência, como a Federação Brasileira de Atletismo (FBAS) ou a Confederação Brasileira de Esportes Paralímpicos (CBESP).
+3. **Obter orientação**: Buscar orientação de um treinador ou especialista em esportes paralímpicos que possa ajudar a desenvolver habilidades e técnicas adequadas.
+4. **Participar de atividades de treinamento**: Participar de atividades de treinamento e prática para desenvolver as habilidades necessárias.
+
+Limitações:
+
+* A falta de infraestrutura e recursos adequados pode ser um obstáculo para o acesso a esportes paralímpicos.
+* A falta de conscientização e educação sobre esportes paralímpicos também pode ser um desafio.
+
+Fonte utilizada: Não tenho informações específicas sobre fontes, mas posso dizer que as diretrizes e orientações para pessoas com deficiência podem ser encontradas em sites oficiais de organizações como a FBAS ou a CBESP.

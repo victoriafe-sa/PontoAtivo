@@ -1,0 +1,13 @@
+modelo: qwen3:8b
+
+Resposta:  
+O programa Semear, conforme evidenciado na Portaria SEL nº 99/2022, oferece atividades esportivas, culturais e de lazer, bem como palestras de temáticas diversas, visando o desenvolvimento dos jovens e adolescentes das Regiões Administrativas abrangidas pelo Projeto. Além disso, o programa garante acesso a espaços adequados às necessidades específicas de pessoas com deficiência, promovendo a prática de paradesportiva, o lazer e a inclusão social. O programa também destina 5% das vagas para pessoas com deficiência, avaliadas por equipe multidisciplinar específica.  
+
+Limitações:  
+As informações apresentadas são baseadas em normas e regulamentações, e não há evidências de funcionamento atual do programa. Além disso, a vigência e a aplicação prática das normas podem estar sujeitas a atualizações ou alterações.  
+
+Fontes utilizadas:  
+- N01-009  
+- N01-023  
+- N01-042  
+- N01-014

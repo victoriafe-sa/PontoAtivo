@@ -1,0 +1,10 @@
+modelo: qwen3:8b
+
+Resposta:  
+O novo PEC (Parque Esportivo e Cultural) de Ceilândia inclui melhorias de acessibilidade como rampas, calçadas adaptadas, elevadores e banheiros com acessibilidade, visando atender pessoas com deficiência. Essas melhorias são parte da política de inclusão do Distrito Federal, que busca garantir o acesso a espaços públicos para todos.
+
+Limitações:  
+Não há informações detalhadas sobre as especificações exatas das melhorias de acessibilidade ou a data de entrega do projeto.
+
+Fontes utilizadas:  
+Conhecimento prévio sobre políticas públicas e projetos de infraestrutura no Distrito Federal.

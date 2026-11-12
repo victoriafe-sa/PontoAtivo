@@ -1,0 +1,122 @@
+{
+  "pergunta": "Q8",
+  "pergunta_id": "q8",
+  "rodada": "rodada-20261112-090813-909087",
+  "modelo": "gemini-3.5-flash-lite",
+  "provedor": "gemini",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/gemini/rodada-20261112-090813-909087/ambiente.json",
+  "inicio": "2026-11-12T09:08:18.949657-03:00",
+  "prompt_sha256": "afaa649528ea95e50bb17d57e724d878823675d5c30e83dc4224c9ad7763e1ef",
+  "entrada": {
+    "model": "gemini-3.5-flash-lite",
+    "contents": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nQuanto a Novacap está investindo em Pontos de Encontro Comunitário e quantos PECs pretende instalar ou revitalizar?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n",
+    "config": {
+      "temperature": 0,
+      "max_output_tokens": 4096
+    }
+  },
+  "arquivo_bruto": "brutos/gemini/rodada-20261112-090813-909087/q8.json",
+  "saida": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Thu, 12 Nov 2026 12:08:20 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1984",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "Resposta:\nComo assistente do PontoAtivo, informo que meu conhecimento prévio é insuficiente para detalhar os valores exatos que a Companhia Urbanizadora da Nova Capital do Brasil (Novacap) está investindo atualmente em Pontos de Encontro Comunitário (PECs) no Distrito Federal, bem como a meta exata de novas instalações ou revitalizações em andamento. O Governo do Distrito Federal (GDF) e a própria Novacap realizam periodicamente licitações e programas voltados à manutenção e implantação desses espaços, mas não possuo dados atualizados sobre contratos vigentes ou cronogramas recentes.\n\nLimitações:\nNão disponho de dados em tempo real, relatórios recentes da Novacap ou informações atualizadas sobre o orçamento atual e o planejamento exato para a construção ou reforma de PECs no Distrito Federal.\n\nFontes utilizadas:\nNenhuma fonte específica pôde ser consultada, pois meu conhecimento prévio sobre os valores correntes e metas recentes da Novacap é insuficiente.",
+              "thought": null,
+              "thought_signature": "EmAKXgFpFH0TZfqrHnrQR88QN99rzKWPtVQEAEAj8djdj0H1i2EpnXVpNaTCySCIk4Q5TvTLTy2lZKddxyyBcIbcvZUadQflUfZ_prwzLQOTdPrUtcmw8X_sqYmIYVDdINk=",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "M6z1apXsC6jgytMP-oaRkAc",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 218,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 213,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 213
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 431,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "arquivo_resposta": "respostas-gemini/q8.txt",
+  "tempo_cliente_segundos": 2.057985958000245,
+  "fim": "2026-11-12T09:08:21.008190-03:00",
+  "metricas": {
+    "pergunta_id": "q8",
+    "modelo": "gemini-3.5-flash-lite",
+    "provedor": "gemini",
+    "executado_em": "2026-11-12T09:08:18.949657-03:00",
+    "tempo_parede_s": 2.057985958000245,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-gemini/q8.txt",
+    "arquivo_bruto": "brutos/gemini/rodada-20261112-090813-909087/q8.json",
+    "tokens_entrada": 213,
+    "tokens_saida": 218,
+    "tokens_total": 431,
+    "motivo_fim": "STOP",
+    "status_metricas": "registradas"
+  }
+}

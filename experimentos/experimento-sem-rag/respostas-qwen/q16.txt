@@ -1,0 +1,10 @@
+modelo: qwen3:8b
+
+Resposta:  
+Os Pontos de Encontro Comunitário listados no Plano Piloto estão distribuídos em diferentes regiões do Distrito Federal, com o objetivo de promover a inclusão e o acesso a atividades físicas. Esses pontos são geralmente localizados em áreas públicas, como praças, parques e vias de circulação, facilitando o acesso à população. No entanto, a localização exata de cada ponto varia conforme o plano específico e a região do DF em que se encontra.
+
+Limitações:  
+Não há uma lista centralizada ou oficial divulgada com as coordenadas exatas de todos os Pontos de Encontro Comunitário do Plano Piloto. A informação disponível é genérica e baseia-se em descrições gerais do projeto.
+
+Fontes utilizadas:  
+Conhecimento prévio sobre o Plano Piloto e projetos de inclusão esportiva no Distrito Federal.

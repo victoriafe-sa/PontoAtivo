@@ -1,0 +1,10 @@
+modelo: qwen3:8b
+
+Resposta:  
+Não é possível confirmar quais quadras de tênis do Gama estão disponíveis para reserva hoje à noite, pois não há acesso em tempo real a sistemas de reservas ou informações atualizadas sobre disponibilidade de quadras esportivas. A disponibilidade de quadras depende do sistema de gestão do local, que não está acessível por meio do PontoAtivo ou outros canais oficiais.
+
+Limitações:  
+Não há acesso a sistemas de reservas ou informações em tempo real sobre a disponibilidade das quadras de tênis no Gama.
+
+Fontes utilizadas:  
+Nenhuma fonte externa foi utilizada, pois o conhecimento disponível não inclui dados atualizados sobre reservas ou disponibilidade de quadras esportivas.

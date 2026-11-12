@@ -1,0 +1,71 @@
+{
+  "pergunta": "Q18",
+  "pergunta_id": "q18",
+  "rodada": "rodada-20261112-090705-730262",
+  "modelo": "qwen3:8b",
+  "provedor": "ollama",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/qwen/rodada-20261112-090705-730262/ambiente.json",
+  "inicio": "2026-11-12T09:10:20.131094-03:00",
+  "prompt_sha256": "f688aba71a1546855eb53b6637f3c4484c535d60bd87defe472b3823a25eea5b",
+  "entrada": {
+    "model": "qwen3:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nQual é o preço da mensalidade das academias particulares do Lago Sul?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "num_ctx": 8192,
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 4096
+    },
+    "think": false
+  },
+  "arquivo_bruto": "brutos/qwen/rodada-20261112-090705-730262/q18.json",
+  "saida": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-12T12:10:34.356992Z",
+    "message": {
+      "role": "assistant",
+      "content": "Resposta:  \nO preço da mensalidade das academias particulares no Lago Sul varia conforme o estabelecimento, sendo geralmente entre R$ 300,00 e R$ 800,00, dependendo do tipo de plano, benefícios e equipamentos oferecidos. Esse valor pode ser encontrado em sites de comparação de preços, como Ideia do Consumidor, ou diretamente nas instituições.\n\nLimitações:  \nNão há uma fonte oficial única que liste todos os valores das academias do Lago Sul, pois as informações são dinâmicas e dependem de cada estabelecimento.\n\nFontes utilizadas:  \nConhecimento geral sobre preços de academias no Brasil e práticas comuns no setor."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 14223915125,
+    "load_duration": 91234709,
+    "prompt_eval_count": 233,
+    "prompt_eval_duration": 603880000,
+    "eval_count": 172,
+    "eval_duration": 13522627000
+  },
+  "arquivo_resposta": "respostas-qwen/q18.txt",
+  "tempo_cliente_segundos": 14.225619708000067,
+  "fim": "2026-11-12T09:10:34.357482-03:00",
+  "metricas": {
+    "pergunta_id": "q18",
+    "modelo": "qwen3:8b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:10:20.131094-03:00",
+    "tempo_parede_s": 14.225619708000067,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-qwen/q18.txt",
+    "arquivo_bruto": "brutos/qwen/rodada-20261112-090705-730262/q18.json",
+    "tokens_entrada": 233,
+    "tokens_saida": 172,
+    "motivo_fim": "stop",
+    "tempo_total_s": 14.223915125,
+    "tempo_carga_s": 0.091234709,
+    "tempo_entrada_s": 0.60388,
+    "tempo_geracao_s": 13.522627,
+    "tokens_total": 405,
+    "tokens_por_s": 12.719422047210205,
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

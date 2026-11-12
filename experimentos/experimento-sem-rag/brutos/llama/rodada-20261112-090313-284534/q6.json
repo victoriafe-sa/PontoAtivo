@@ -1,0 +1,70 @@
+{
+  "pergunta": "Q6",
+  "pergunta_id": "q6",
+  "rodada": "rodada-20261112-090313-284534",
+  "modelo": "llama3.2:3b",
+  "provedor": "ollama",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/llama/rodada-20261112-090313-284534/ambiente.json",
+  "inicio": "2026-11-12T09:04:32.192392-03:00",
+  "prompt_sha256": "5ba310a8fb891eaeeee6cb2d3ce58a0dbd4fda73cbe5d21a273b358b46a968c1",
+  "entrada": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nQuais modalidades são oferecidas no COP do Setor O, em Ceilândia?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "num_ctx": 8192,
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 4096
+    }
+  },
+  "arquivo_bruto": "brutos/llama/rodada-20261112-090313-284534/q6.json",
+  "saida": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-12T12:04:38.820497Z",
+    "message": {
+      "role": "assistant",
+      "content": "Lamento, mas não tenho informações sobre o COP do Setor O, em Ceilândia. Não posso confirmar quais modalidades são oferecidas nesse local.\n\nNão tenho conhecimento sobre a existência ou as atividades desse espaço esportivo específico. Se você puder fornecer mais contexto ou detalhes, ficarei feliz em tentar ajudar.\n\nAté que eu não tenha informações, não posso responder à sua pergunta."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 6626430875,
+    "load_duration": 136939375,
+    "prompt_eval_count": 243,
+    "prompt_eval_duration": 213838000,
+    "eval_count": 102,
+    "eval_duration": 6273747000
+  },
+  "arquivo_resposta": "respostas-llama/q6.txt",
+  "tempo_cliente_segundos": 6.628860499999973,
+  "fim": "2026-11-12T09:04:38.821858-03:00",
+  "metricas": {
+    "pergunta_id": "q6",
+    "modelo": "llama3.2:3b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:04:32.192392-03:00",
+    "tempo_parede_s": 6.628860499999973,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-llama/q6.txt",
+    "arquivo_bruto": "brutos/llama/rodada-20261112-090313-284534/q6.json",
+    "tokens_entrada": 243,
+    "tokens_saida": 102,
+    "motivo_fim": "stop",
+    "tempo_total_s": 6.626430875,
+    "tempo_carga_s": 0.136939375,
+    "tempo_entrada_s": 0.213838,
+    "tempo_geracao_s": 6.273747,
+    "tokens_total": 345,
+    "tokens_por_s": 16.258226543085016,
+    "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

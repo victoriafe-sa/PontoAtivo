@@ -1,0 +1,10 @@
+modelo: qwen3:8b
+
+Resposta:  
+O preço da mensalidade das academias particulares no Lago Sul varia conforme o estabelecimento, sendo geralmente entre R$ 300,00 e R$ 800,00, dependendo do tipo de plano, benefícios e equipamentos oferecidos. Esse valor pode ser encontrado em sites de comparação de preços, como Ideia do Consumidor, ou diretamente nas instituições.
+
+Limitações:  
+Não há uma fonte oficial única que liste todos os valores das academias do Lago Sul, pois as informações são dinâmicas e dependem de cada estabelecimento.
+
+Fontes utilizadas:  
+Conhecimento geral sobre preços de academias no Brasil e práticas comuns no setor.

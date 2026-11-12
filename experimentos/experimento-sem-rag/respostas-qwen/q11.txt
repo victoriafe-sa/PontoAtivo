@@ -1,0 +1,10 @@
+modelo: qwen3:8b
+
+Resposta:  
+O horário das aulas nos Centros Olímpicos e Paralímpicos varia conforme o tipo de atividade e o público-alvo. Geralmente, as aulas ocorrem em horários que facilitam o acesso da população, incluindo manhã, tarde e, em alguns casos, noite. No entanto, não há uma programação única para todos os centros, pois cada unidade pode ter sua própria agenda, dependendo da demanda e das parcerias com instituições locais.
+
+Limitações:  
+Não há uma fonte única que centralize todas as informações sobre os horários das aulas em todos os Centros Olímpicos e Paralímpicos do Distrito Federal. As informações podem variar conforme o local e a instituição responsável.
+
+Fontes utilizadas:  
+Conhecimento geral sobre funcionamento dos Centros Olímpicos e Paralímpicos no Distrito Federal.

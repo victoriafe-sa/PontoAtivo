@@ -1,0 +1,10 @@
+modelo: qwen3:8b
+
+Resposta:  
+O pagamento da taxa da Escola de Esportes da Secretaria de Esporte e Lazer do Distrito Federal é isento para pessoas com deficiência, idosos e crianças até 12 anos, conforme políticas de inclusão e acesso gratuito a atividades físicas estabelecidas pelo órgão. Essa política busca promover a prática esportiva de forma equitativa e acessível a todos os grupos sociais.
+
+Limitações:  
+Não há informações detalhadas sobre possíveis isenções adicionais ou exceções específicas que possam existir em certos casos.
+
+Fontes utilizadas:  
+Conhecimento prévio sobre políticas públicas e programas de inclusão da Secretaria de Esporte e Lazer do Distrito Federal.

@@ -1,0 +1,10 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta:
+Uma pessoa com deficiência pode começar a praticar esporte paralímpico procurando instituições especializadas, como o Comitê Paralímpico Brasileiro (CPB), centros de referência paralímpicos ou secretarias de esporte locais. O primeiro passo geralmente envolve a classificação funcional, que avalia o impacto da deficiência na prática esportiva para direcionar o atleta à modalidade mais adequada. No Distrito Federal, iniciativas governamentais e associações locais costumam oferecer projetos de iniciação esportiva inclusiva. Como não tenho acesso a dados em tempo real, não posso confirmar quais programas específicos estão ativos no momento.
+
+Limitações:
+Não posso confirmar a situação atual dos programas de iniciação esportiva no Distrito Federal, nem listar quais centros específicos estão operando sem a consulta a documentos recentes.
+
+Fontes utilizadas:
+Diretrizes gerais do Comitê Paralímpico Brasileiro (CPB) sobre iniciação esportiva e classificação funcional (conhecimento prévio geral; não tenho a origem documental exata desta diretriz).
