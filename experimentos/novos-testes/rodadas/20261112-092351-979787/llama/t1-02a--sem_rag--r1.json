@@ -1,0 +1,71 @@
+{
+  "id": "t1-02a",
+  "teste": 1,
+  "pergunta": "Quais modalidades são oferecidas nos Centros Olímpicos e Paralímpicos?",
+  "condicao": "sem_rag",
+  "evidencia_ids": [],
+  "pergunta_id": "t1-02a",
+  "modelo": "llama3.2:3b",
+  "provedor": "ollama",
+  "repeticao": 1,
+  "inicio": "2026-11-12T09:26:39.677105-03:00",
+  "entrada": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, sobre espaços esportivos inclusivos no DF.\nData de referência do cenário: 12/11/2026. Responda em português, até 200 palavras.\nNão invente fatos ou fontes. Preserve datas e ressalvas. Informação histórica não confirma situação atual.\nResponda às partes conhecidas e explique especificamente o que não pode confirmar.\nUse somente seu conhecimento prévio; não há busca ou ferramentas. Indique a origem quando souber; se não souber, diga isso.\n\n\nPERGUNTA:\nQuais modalidades são oferecidas nos Centros Olímpicos e Paralímpicos?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 8192,
+      "num_predict": 4096
+    }
+  },
+  "prompt_sha256": "5aeb37c5b9192396b7d7a620140732f1336ee39380b44d808b19eca28202aa16",
+  "arquivo_bruto": "rodadas/20261112-092351-979787/llama/t1-02a--sem_rag--r1.json",
+  "saida": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-12T12:26:43.422671Z",
+    "message": {
+      "role": "assistant",
+      "content": "Não posso fornecer informações sobre os centros olímpicos e paralímpicos do Distrito Federal, pois não tenho conhecimento prévio sobre essa informação. Meu conhecimento é limitado até a data de referência: 12/11/2026.\n\nNão posso confirmar quais modalidades são oferecidas nos Centros Olímpicos e Paralímpicos do Distrito Federal, pois não tenho informações atualizadas sobre essa questão."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 3743799084,
+    "load_duration": 106376584,
+    "prompt_eval_count": 199,
+    "prompt_eval_duration": 236966000,
+    "eval_count": 105,
+    "eval_duration": 3393804000
+  },
+  "arquivo_resposta": "rodadas/20261112-092351-979787/llama/t1-02a--sem_rag--r1.txt",
+  "tempo_cliente_segundos": 3.746669042000576,
+  "fim": "2026-11-12T09:26:43.424281-03:00",
+  "metricas": {
+    "pergunta_id": "t1-02a",
+    "modelo": "llama3.2:3b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:26:39.677105-03:00",
+    "tempo_parede_s": 3.746669042000576,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "rodadas/20261112-092351-979787/llama/t1-02a--sem_rag--r1.txt",
+    "arquivo_bruto": "rodadas/20261112-092351-979787/llama/t1-02a--sem_rag--r1.json",
+    "tokens_entrada": 199,
+    "tokens_saida": 105,
+    "motivo_fim": "stop",
+    "tempo_total_s": 3.743799084,
+    "tempo_carga_s": 0.106376584,
+    "tempo_entrada_s": 0.236966,
+    "tempo_geracao_s": 3.393804,
+    "tokens_total": 304,
+    "tokens_por_s": 30.938734234505,
+    "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

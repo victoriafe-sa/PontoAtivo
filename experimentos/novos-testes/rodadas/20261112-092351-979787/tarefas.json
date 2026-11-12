@@ -1,0 +1,311 @@
+[
+  {
+    "id": "t1-01a",
+    "teste": 1,
+    "pergunta": "Qual é a idade mínima para participar do Programa Centros Olímpicos e Paralímpicos?",
+    "condicao": "sem_rag",
+    "evidencia_ids": []
+  },
+  {
+    "id": "t1-01a",
+    "teste": 1,
+    "pergunta": "Qual é a idade mínima para participar do Programa Centros Olímpicos e Paralímpicos?",
+    "condicao": "rag_curto",
+    "evidencia_ids": [
+      "F028-001"
+    ]
+  },
+  {
+    "id": "t1-01b",
+    "teste": 1,
+    "pergunta": "Qual é a idade mínima para participar do projeto Semear?",
+    "condicao": "sem_rag",
+    "evidencia_ids": []
+  },
+  {
+    "id": "t1-01b",
+    "teste": 1,
+    "pergunta": "Qual é a idade mínima para participar do projeto Semear?",
+    "condicao": "rag_curto",
+    "evidencia_ids": [
+      "F028-001"
+    ]
+  },
+  {
+    "id": "t1-02a",
+    "teste": 1,
+    "pergunta": "Quais modalidades são oferecidas nos Centros Olímpicos e Paralímpicos?",
+    "condicao": "sem_rag",
+    "evidencia_ids": []
+  },
+  {
+    "id": "t1-02a",
+    "teste": 1,
+    "pergunta": "Quais modalidades são oferecidas nos Centros Olímpicos e Paralímpicos?",
+    "condicao": "rag_curto",
+    "evidencia_ids": [
+      "N03-003"
+    ]
+  },
+  {
+    "id": "t1-02b",
+    "teste": 1,
+    "pergunta": "Quais modalidades são oferecidas na Escola Paralímpica de Esportes?",
+    "condicao": "sem_rag",
+    "evidencia_ids": []
+  },
+  {
+    "id": "t1-02b",
+    "teste": 1,
+    "pergunta": "Quais modalidades são oferecidas na Escola Paralímpica de Esportes?",
+    "condicao": "rag_curto",
+    "evidencia_ids": [
+      "N03-003"
+    ]
+  },
+  {
+    "id": "t1-03a",
+    "teste": 1,
+    "pergunta": "Como utilizar a academia pública do Parque da Cidade e é gratuito?",
+    "condicao": "sem_rag",
+    "evidencia_ids": []
+  },
+  {
+    "id": "t1-03a",
+    "teste": 1,
+    "pergunta": "Como utilizar a academia pública do Parque da Cidade e é gratuito?",
+    "condicao": "rag_curto",
+    "evidencia_ids": [
+      "N04-008"
+    ]
+  },
+  {
+    "id": "t1-03b",
+    "teste": 1,
+    "pergunta": "Como utilizar a academia particular do Lago Sul e é gratuito?",
+    "condicao": "sem_rag",
+    "evidencia_ids": []
+  },
+  {
+    "id": "t1-03b",
+    "teste": 1,
+    "pergunta": "Como utilizar a academia particular do Lago Sul e é gratuito?",
+    "condicao": "rag_curto",
+    "evidencia_ids": [
+      "N04-008"
+    ]
+  },
+  {
+    "id": "t2-01",
+    "teste": 2,
+    "pergunta": "Qual é o endereço do Bezerrão, qual a capacidade estimada e há disponibilidade para reserva em 13/11/2026 às 19h?",
+    "condicao": "sem_rag",
+    "evidencia_ids": []
+  },
+  {
+    "id": "t2-01",
+    "teste": 2,
+    "pergunta": "Qual é o endereço do Bezerrão, qual a capacidade estimada e há disponibilidade para reserva em 13/11/2026 às 19h?",
+    "condicao": "rag_curto",
+    "evidencia_ids": [
+      "F059-001"
+    ]
+  },
+  {
+    "id": "t2-02",
+    "teste": 2,
+    "pergunta": "A academia pública do Parque da Cidade é gratuita, como faço o agendamento e há horário livre em 13/11/2026 às 19h?",
+    "condicao": "sem_rag",
+    "evidencia_ids": []
+  },
+  {
+    "id": "t2-02",
+    "teste": 2,
+    "pergunta": "A academia pública do Parque da Cidade é gratuita, como faço o agendamento e há horário livre em 13/11/2026 às 19h?",
+    "condicao": "rag_curto",
+    "evidencia_ids": [
+      "N04-008"
+    ]
+  },
+  {
+    "id": "t2-03",
+    "teste": 2,
+    "pergunta": "A partir de qual idade posso participar dos COPs, pessoas com deficiência estão incluídas e há vaga para uma criança de 5 anos no COP do Gama em 13/11/2026?",
+    "condicao": "sem_rag",
+    "evidencia_ids": []
+  },
+  {
+    "id": "t2-03",
+    "teste": 2,
+    "pergunta": "A partir de qual idade posso participar dos COPs, pessoas com deficiência estão incluídas e há vaga para uma criança de 5 anos no COP do Gama em 13/11/2026?",
+    "condicao": "rag_curto",
+    "evidencia_ids": [
+      "F028-001"
+    ]
+  },
+  {
+    "id": "t3-01",
+    "teste": 3,
+    "pergunta": "Qual é o endereço do Estádio Bezerrão no Gama?",
+    "condicao": "sem_rag",
+    "evidencia_ids": []
+  },
+  {
+    "id": "t3-01",
+    "teste": 3,
+    "pergunta": "Qual é o endereço do Estádio Bezerrão no Gama?",
+    "condicao": "rag_curto",
+    "evidencia_ids": [
+      "F059-001"
+    ]
+  },
+  {
+    "id": "t3-01",
+    "teste": 3,
+    "pergunta": "Qual é o endereço do Estádio Bezerrão no Gama?",
+    "condicao": "rag_ruido_inicio",
+    "evidencia_ids": [
+      "F059-001",
+      "F060-001",
+      "F062-001",
+      "N01-049",
+      "N03-003"
+    ]
+  },
+  {
+    "id": "t3-01",
+    "teste": 3,
+    "pergunta": "Qual é o endereço do Estádio Bezerrão no Gama?",
+    "condicao": "rag_ruido_meio",
+    "evidencia_ids": [
+      "F060-001",
+      "F062-001",
+      "F059-001",
+      "N01-049",
+      "N03-003"
+    ]
+  },
+  {
+    "id": "t3-01",
+    "teste": 3,
+    "pergunta": "Qual é o endereço do Estádio Bezerrão no Gama?",
+    "condicao": "rag_ruido_fim",
+    "evidencia_ids": [
+      "F060-001",
+      "F062-001",
+      "N01-049",
+      "N03-003",
+      "F059-001"
+    ]
+  },
+  {
+    "id": "t3-02",
+    "teste": 3,
+    "pergunta": "Como utilizar a academia pública do Parque da Cidade e é gratuito?",
+    "condicao": "sem_rag",
+    "evidencia_ids": []
+  },
+  {
+    "id": "t3-02",
+    "teste": 3,
+    "pergunta": "Como utilizar a academia pública do Parque da Cidade e é gratuito?",
+    "condicao": "rag_curto",
+    "evidencia_ids": [
+      "N04-008"
+    ]
+  },
+  {
+    "id": "t3-02",
+    "teste": 3,
+    "pergunta": "Como utilizar a academia pública do Parque da Cidade e é gratuito?",
+    "condicao": "rag_ruido_inicio",
+    "evidencia_ids": [
+      "N04-008",
+      "F060-001",
+      "F062-001",
+      "N01-049",
+      "N03-003"
+    ]
+  },
+  {
+    "id": "t3-02",
+    "teste": 3,
+    "pergunta": "Como utilizar a academia pública do Parque da Cidade e é gratuito?",
+    "condicao": "rag_ruido_meio",
+    "evidencia_ids": [
+      "F060-001",
+      "F062-001",
+      "N04-008",
+      "N01-049",
+      "N03-003"
+    ]
+  },
+  {
+    "id": "t3-02",
+    "teste": 3,
+    "pergunta": "Como utilizar a academia pública do Parque da Cidade e é gratuito?",
+    "condicao": "rag_ruido_fim",
+    "evidencia_ids": [
+      "F060-001",
+      "F062-001",
+      "N01-049",
+      "N03-003",
+      "N04-008"
+    ]
+  },
+  {
+    "id": "t3-03",
+    "teste": 3,
+    "pergunta": "Qual é a idade mínima para participar do Programa Centros Olímpicos e Paralímpicos?",
+    "condicao": "sem_rag",
+    "evidencia_ids": []
+  },
+  {
+    "id": "t3-03",
+    "teste": 3,
+    "pergunta": "Qual é a idade mínima para participar do Programa Centros Olímpicos e Paralímpicos?",
+    "condicao": "rag_curto",
+    "evidencia_ids": [
+      "F028-001"
+    ]
+  },
+  {
+    "id": "t3-03",
+    "teste": 3,
+    "pergunta": "Qual é a idade mínima para participar do Programa Centros Olímpicos e Paralímpicos?",
+    "condicao": "rag_ruido_inicio",
+    "evidencia_ids": [
+      "F028-001",
+      "F060-001",
+      "F062-001",
+      "N01-049",
+      "N03-003"
+    ]
+  },
+  {
+    "id": "t3-03",
+    "teste": 3,
+    "pergunta": "Qual é a idade mínima para participar do Programa Centros Olímpicos e Paralímpicos?",
+    "condicao": "rag_ruido_meio",
+    "evidencia_ids": [
+      "F060-001",
+      "F062-001",
+      "F028-001",
+      "N01-049",
+      "N03-003"
+    ]
+  },
+  {
+    "id": "t3-03",
+    "teste": 3,
+    "pergunta": "Qual é a idade mínima para participar do Programa Centros Olímpicos e Paralímpicos?",
+    "condicao": "rag_ruido_fim",
+    "evidencia_ids": [
+      "F060-001",
+      "F062-001",
+      "N01-049",
+      "N03-003",
+      "F028-001"
+    ]
+  }
+]

@@ -1,0 +1,71 @@
+{
+  "id": "t2-01",
+  "teste": 2,
+  "pergunta": "Qual é o endereço do Bezerrão, qual a capacidade estimada e há disponibilidade para reserva em 13/11/2026 às 19h?",
+  "condicao": "sem_rag",
+  "evidencia_ids": [],
+  "pergunta_id": "t2-01",
+  "modelo": "llama3.2:3b",
+  "provedor": "ollama",
+  "repeticao": 1,
+  "inicio": "2026-11-12T09:24:17.174811-03:00",
+  "entrada": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, sobre espaços esportivos inclusivos no DF.\nData de referência do cenário: 12/11/2026. Responda em português, até 200 palavras.\nNão invente fatos ou fontes. Preserve datas e ressalvas. Informação histórica não confirma situação atual.\nResponda às partes conhecidas e explique especificamente o que não pode confirmar.\nUse somente seu conhecimento prévio; não há busca ou ferramentas. Indique a origem quando souber; se não souber, diga isso.\n\n\nPERGUNTA:\nQual é o endereço do Bezerrão, qual a capacidade estimada e há disponibilidade para reserva em 13/11/2026 às 19h?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 8192,
+      "num_predict": 4096
+    }
+  },
+  "prompt_sha256": "28457ad8b7218c946dc52a299d2290b86b2166f080b79b5a4577742f6de9462f",
+  "arquivo_bruto": "rodadas/20261112-092351-979787/llama/t2-01--sem_rag--r1.json",
+  "saida": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-12T12:24:20.825195Z",
+    "message": {
+      "role": "assistant",
+      "content": "Lamento, mas não tenho informações atualizadas sobre o Bezerrão ou outros espaços esportivos inclusivos no Distrito Federal até a data de referência do cenário (12/11/2026).\n\nNão posso confirmar o endereço, capacidade estimada ou disponibilidade para reserva do Bezerrão em 13/11/2026 às 19h.\n\nLimitações:\n\n* Não tenho acesso a informações em tempo real ou atualizadas.\n* Não tenho conhecimento sobre os horários de funcionamento ou disponibilidade de reservas dos espaços esportivos.\n\nNão posso fornecer respostas precisas sem atualizações ou informações mais recentes."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 3648321750,
+    "load_duration": 107324166,
+    "prompt_eval_count": 212,
+    "prompt_eval_duration": 145987000,
+    "eval_count": 146,
+    "eval_duration": 3389162000
+  },
+  "arquivo_resposta": "rodadas/20261112-092351-979787/llama/t2-01--sem_rag--r1.txt",
+  "tempo_cliente_segundos": 3.6505696249996618,
+  "fim": "2026-11-12T09:24:20.826115-03:00",
+  "metricas": {
+    "pergunta_id": "t2-01",
+    "modelo": "llama3.2:3b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:24:17.174811-03:00",
+    "tempo_parede_s": 3.6505696249996618,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "rodadas/20261112-092351-979787/llama/t2-01--sem_rag--r1.txt",
+    "arquivo_bruto": "rodadas/20261112-092351-979787/llama/t2-01--sem_rag--r1.json",
+    "tokens_entrada": 212,
+    "tokens_saida": 146,
+    "motivo_fim": "stop",
+    "tempo_total_s": 3.64832175,
+    "tempo_carga_s": 0.107324166,
+    "tempo_entrada_s": 0.145987,
+    "tempo_geracao_s": 3.389162,
+    "tokens_total": 358,
+    "tokens_por_s": 43.07849551009955,
+    "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

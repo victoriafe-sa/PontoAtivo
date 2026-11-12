@@ -1,0 +1,142 @@
+{
+  "id": "t1-01b",
+  "teste": 1,
+  "pergunta": "Qual é a idade mínima para participar do projeto Semear?",
+  "condicao": "sem_rag",
+  "evidencia_ids": [],
+  "pergunta_id": "t1-01b",
+  "modelo": "gemini-3.5-flash-lite",
+  "provedor": "gemini",
+  "repeticao": 1,
+  "inicio": "2026-11-12T09:47:57.082612-03:00",
+  "entrada": {
+    "model": "gemini-3.5-flash-lite",
+    "contents": "Você é o assistente do PontoAtivo, sobre espaços esportivos inclusivos no DF.\nData de referência do cenário: 12/11/2026. Responda em português, até 200 palavras.\nNão invente fatos ou fontes. Preserve datas e ressalvas. Informação histórica não confirma situação atual.\nResponda às partes conhecidas e explique especificamente o que não pode confirmar.\nUse somente seu conhecimento prévio; não há busca ou ferramentas. Indique a origem quando souber; se não souber, diga isso.\n\n\nPERGUNTA:\nQual é a idade mínima para participar do projeto Semear?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n",
+    "config": {
+      "temperature": 0,
+      "max_output_tokens": 4096
+    }
+  },
+  "prompt_sha256": "cf6a4f47f6f06f1ffedd0ec09e044588ef37b86f62461065aa66f85b382da122",
+  "arquivo_bruto": "rodadas/20261112-094344-373876/gemini/t1-01b--sem_rag--r1.json",
+  "saida": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Thu, 12 Nov 2026 12:48:07 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=10388",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "Resposta: Com base no meu conhecimento prévio, não possuo informações detalhadas sobre a idade mínima para participar do projeto \"Semear\" relacionado a espaços esportivos inclusivos no Distrito Federal.\n\nLimitações: Não tenho acesso a dados específicos sobre as regras de faixa etária, critérios de elegibilidade ou o funcionamento atual do projeto Semear na data de referência (12/11/2026), pois tais detalhes não estão disponíveis na minha base de conhecimento prévio. Informações históricas ou parciais sobre projetos sociais e esportivos locais não confirm",
+              "thought": null,
+              "thought_signature": null,
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            },
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "am a situação atual ou regulamentos vigentes.\n\nFontes utilizadas: Nenhuma fonte disponível para esta informação específica.",
+              "thought": null,
+              "thought_signature": "EmAKXgFpFH0Ta_4C1CMV08ORrjKY6SXkzkvCdkU2R58AyDRoq9o-dTBpzUmqO6Q8CG4g3zCc55H3QenX_GXvznSdcsrrHtHCVhbq9IFPweTcJtpiczUcdR40KHSs4XuiQlM=",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "fbX1auT0GMbDxdIPhNTUyQ0",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 141,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 161,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 161
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 302,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "arquivo_resposta": "rodadas/20261112-094344-373876/gemini/t1-01b--sem_rag--r1.txt",
+  "tempo_cliente_segundos": 10.478948082999523,
+  "fim": "2026-11-12T09:48:07.561776-03:00",
+  "metricas": {
+    "pergunta_id": "t1-01b",
+    "modelo": "gemini-3.5-flash-lite",
+    "provedor": "gemini",
+    "executado_em": "2026-11-12T09:47:57.082612-03:00",
+    "tempo_parede_s": 10.478948082999523,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "rodadas/20261112-094344-373876/gemini/t1-01b--sem_rag--r1.txt",
+    "arquivo_bruto": "rodadas/20261112-094344-373876/gemini/t1-01b--sem_rag--r1.json",
+    "tokens_entrada": 161,
+    "tokens_saida": 141,
+    "tokens_total": 302,
+    "motivo_fim": "STOP",
+    "status_metricas": "registradas"
+  }
+}

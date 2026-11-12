@@ -1,0 +1,72 @@
+{
+  "id": "t1-03b",
+  "teste": 1,
+  "pergunta": "Como utilizar a academia particular do Lago Sul e é gratuito?",
+  "condicao": "sem_rag",
+  "evidencia_ids": [],
+  "pergunta_id": "t1-03b",
+  "modelo": "qwen3:8b",
+  "provedor": "ollama",
+  "repeticao": 1,
+  "inicio": "2026-11-12T09:28:48.998147-03:00",
+  "entrada": {
+    "model": "qwen3:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, sobre espaços esportivos inclusivos no DF.\nData de referência do cenário: 12/11/2026. Responda em português, até 200 palavras.\nNão invente fatos ou fontes. Preserve datas e ressalvas. Informação histórica não confirma situação atual.\nResponda às partes conhecidas e explique especificamente o que não pode confirmar.\nUse somente seu conhecimento prévio; não há busca ou ferramentas. Indique a origem quando souber; se não souber, diga isso.\n\n\nPERGUNTA:\nComo utilizar a academia particular do Lago Sul e é gratuito?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 8192,
+      "num_predict": 4096
+    },
+    "think": false
+  },
+  "prompt_sha256": "b57092b90b75b6f4a885f13a0666ea9b1fa652943d57f4ba36dd99456d1fe660",
+  "arquivo_bruto": "rodadas/20261112-092351-979787/qwen/t1-03b--sem_rag--r1.json",
+  "saida": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-12T12:29:00.552969Z",
+    "message": {
+      "role": "assistant",
+      "content": "Resposta:  \nA academia particular do Lago Sul é um espaço privado e, em geral, não é gratuito. A utilização depende de contratos de adesão, valores de mensalidade e políticas específicas da instituição. Não há informações disponíveis sobre a disponibilidade de acesso gratuito para o público em geral.\n\nLimitações:  \nNão há dados atualizados até 12/11/2026 sobre políticas de acesso gratuito ou promoções específicas da academia. A informação histórica não reflete a situação atual.\n\nFontes utilizadas:  \nConhecimento prévio sobre estrutura de academias privadas no DF."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 11553402709,
+    "load_duration": 88411542,
+    "prompt_eval_count": 186,
+    "prompt_eval_duration": 669797000,
+    "eval_count": 139,
+    "eval_duration": 10785385000
+  },
+  "arquivo_resposta": "rodadas/20261112-092351-979787/qwen/t1-03b--sem_rag--r1.txt",
+  "tempo_cliente_segundos": 11.556375791999926,
+  "fim": "2026-11-12T09:29:00.554815-03:00",
+  "metricas": {
+    "pergunta_id": "t1-03b",
+    "modelo": "qwen3:8b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:28:48.998147-03:00",
+    "tempo_parede_s": 11.556375791999926,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "rodadas/20261112-092351-979787/qwen/t1-03b--sem_rag--r1.txt",
+    "arquivo_bruto": "rodadas/20261112-092351-979787/qwen/t1-03b--sem_rag--r1.json",
+    "tokens_entrada": 186,
+    "tokens_saida": 139,
+    "motivo_fim": "stop",
+    "tempo_total_s": 11.553402709,
+    "tempo_carga_s": 0.088411542,
+    "tempo_entrada_s": 0.669797,
+    "tempo_geracao_s": 10.785385,
+    "tokens_total": 325,
+    "tokens_por_s": 12.887810680842641,
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "t2-02",
+  "teste": 2,
+  "pergunta": "A academia pública do Parque da Cidade é gratuita, como faço o agendamento e há horário livre em 13/11/2026 às 19h?",
+  "condicao": "sem_rag",
+  "evidencia_ids": [],
+  "pergunta_id": "t2-02",
+  "modelo": "qwen3:8b",
+  "provedor": "ollama",
+  "repeticao": 1,
+  "inicio": "2026-11-12T09:37:05.014633-03:00",
+  "entrada": {
+    "model": "qwen3:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, sobre espaços esportivos inclusivos no DF.\nData de referência do cenário: 12/11/2026. Responda em português, até 200 palavras.\nNão invente fatos ou fontes. Preserve datas e ressalvas. Informação histórica não confirma situação atual.\nResponda às partes conhecidas e explique especificamente o que não pode confirmar.\nUse somente seu conhecimento prévio; não há busca ou ferramentas. Indique a origem quando souber; se não souber, diga isso.\n\n\nPERGUNTA:\nA academia pública do Parque da Cidade é gratuita, como faço o agendamento e há horário livre em 13/11/2026 às 19h?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 8192,
+      "num_predict": 4096
+    },
+    "think": false
+  },
+  "prompt_sha256": "8b0fdcc6e698ad7fed0046aad0290689f33a969b3f2e238aba613e1f3c70cdd6",
+  "arquivo_bruto": "rodadas/20261112-092351-979787/qwen/t2-02--sem_rag--r1.json",
+  "saida": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-12T12:37:18.733243Z",
+    "message": {
+      "role": "assistant",
+      "content": "Resposta:  \nA academia pública do Parque da Cidade oferece aulas gratuitas, mas o acesso pode exigir agendamento prévio. Para confirmar a disponibilidade em 13/11/2026 às 19h, é necessário consultar o site oficial ou a secretaria da unidade. Não há informações atualizadas sobre a disponibilidade de horários nesse período.\n\nLimitações:  \nNão há dados específicos sobre agendamento ou disponibilidade de horários para a data e horário mencionados. A informação histórica não reflete a situação atual.\n\nFontes utilizadas:  \nConhecimento prévio sobre a estrutura e funcionamento das academias públicas no DF."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 13716632416,
+    "load_duration": 86326000,
+    "prompt_eval_count": 215,
+    "prompt_eval_duration": 987808000,
+    "eval_count": 155,
+    "eval_duration": 12618128000
+  },
+  "arquivo_resposta": "rodadas/20261112-092351-979787/qwen/t2-02--sem_rag--r1.txt",
+  "tempo_cliente_segundos": 13.719432083000356,
+  "fim": "2026-11-12T09:37:18.734776-03:00",
+  "metricas": {
+    "pergunta_id": "t2-02",
+    "modelo": "qwen3:8b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:37:05.014633-03:00",
+    "tempo_parede_s": 13.719432083000356,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "rodadas/20261112-092351-979787/qwen/t2-02--sem_rag--r1.txt",
+    "arquivo_bruto": "rodadas/20261112-092351-979787/qwen/t2-02--sem_rag--r1.json",
+    "tokens_entrada": 215,
+    "tokens_saida": 155,
+    "motivo_fim": "stop",
+    "tempo_total_s": 13.716632416,
+    "tempo_carga_s": 0.086326,
+    "tempo_entrada_s": 0.987808,
+    "tempo_geracao_s": 12.618128,
+    "tokens_total": 370,
+    "tokens_por_s": 12.283914063956237,
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

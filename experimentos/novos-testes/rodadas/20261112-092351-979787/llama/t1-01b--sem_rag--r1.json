@@ -1,0 +1,71 @@
+{
+  "id": "t1-01b",
+  "teste": 1,
+  "pergunta": "Qual é a idade mínima para participar do projeto Semear?",
+  "condicao": "sem_rag",
+  "evidencia_ids": [],
+  "pergunta_id": "t1-01b",
+  "modelo": "llama3.2:3b",
+  "provedor": "ollama",
+  "repeticao": 1,
+  "inicio": "2026-11-12T09:27:01.625110-03:00",
+  "entrada": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, sobre espaços esportivos inclusivos no DF.\nData de referência do cenário: 12/11/2026. Responda em português, até 200 palavras.\nNão invente fatos ou fontes. Preserve datas e ressalvas. Informação histórica não confirma situação atual.\nResponda às partes conhecidas e explique especificamente o que não pode confirmar.\nUse somente seu conhecimento prévio; não há busca ou ferramentas. Indique a origem quando souber; se não souber, diga isso.\n\n\nPERGUNTA:\nQual é a idade mínima para participar do projeto Semear?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 8192,
+      "num_predict": 4096
+    }
+  },
+  "prompt_sha256": "cf6a4f47f6f06f1ffedd0ec09e044588ef37b86f62461065aa66f85b382da122",
+  "arquivo_bruto": "rodadas/20261112-092351-979787/llama/t1-01b--sem_rag--r1.json",
+  "saida": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-12T12:27:03.723868Z",
+    "message": {
+      "role": "assistant",
+      "content": "Não tenho informações sobre o projeto \"Semear\" ou sua idade mínima de participação.\n\nNão posso confirmar a existência ou detalhes do projeto \"Semear\". Não tenho conhecimento prévio sobre esse assunto."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 2097165708,
+    "load_duration": 107021917,
+    "prompt_eval_count": 191,
+    "prompt_eval_duration": 118974000,
+    "eval_count": 50,
+    "eval_duration": 1869609000
+  },
+  "arquivo_resposta": "rodadas/20261112-092351-979787/llama/t1-01b--sem_rag--r1.txt",
+  "tempo_cliente_segundos": 2.099882957999398,
+  "fim": "2026-11-12T09:27:03.725513-03:00",
+  "metricas": {
+    "pergunta_id": "t1-01b",
+    "modelo": "llama3.2:3b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:27:01.625110-03:00",
+    "tempo_parede_s": 2.099882957999398,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "rodadas/20261112-092351-979787/llama/t1-01b--sem_rag--r1.txt",
+    "arquivo_bruto": "rodadas/20261112-092351-979787/llama/t1-01b--sem_rag--r1.json",
+    "tokens_entrada": 191,
+    "tokens_saida": 50,
+    "motivo_fim": "stop",
+    "tempo_total_s": 2.097165708,
+    "tempo_carga_s": 0.107021917,
+    "tempo_entrada_s": 0.118974,
+    "tempo_geracao_s": 1.869609,
+    "tokens_total": 241,
+    "tokens_por_s": 26.743559749658885,
+    "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

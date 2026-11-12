@@ -1,0 +1,71 @@
+{
+  "id": "t1-03a",
+  "teste": 1,
+  "pergunta": "Como utilizar a academia pública do Parque da Cidade e é gratuito?",
+  "condicao": "sem_rag",
+  "evidencia_ids": [],
+  "pergunta_id": "t1-03a",
+  "modelo": "llama3.2:3b",
+  "provedor": "ollama",
+  "repeticao": 1,
+  "inicio": "2026-11-12T09:25:07.234849-03:00",
+  "entrada": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, sobre espaços esportivos inclusivos no DF.\nData de referência do cenário: 12/11/2026. Responda em português, até 200 palavras.\nNão invente fatos ou fontes. Preserve datas e ressalvas. Informação histórica não confirma situação atual.\nResponda às partes conhecidas e explique especificamente o que não pode confirmar.\nUse somente seu conhecimento prévio; não há busca ou ferramentas. Indique a origem quando souber; se não souber, diga isso.\n\n\nPERGUNTA:\nComo utilizar a academia pública do Parque da Cidade e é gratuito?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 8192,
+      "num_predict": 4096
+    }
+  },
+  "prompt_sha256": "c1079651a4cd7fcf0ec6ca803df1b333687a44f3bee3db26002df8ba5db568f3",
+  "arquivo_bruto": "rodadas/20261112-092351-979787/llama/t1-03a--sem_rag--r1.json",
+  "saida": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-12T12:25:11.471306Z",
+    "message": {
+      "role": "assistant",
+      "content": "Não posso fornecer informações sobre o status atual de uma data específica que está além de minha capacidade de conhecimento prévio. Minha última atualização foi em 01/01/2024.\n\nNo entanto, posso fornecer informações gerais sobre como utilizar a academia pública do Parque da Cidade e se é gratuita.\n\nA academia pública do Parque da Cidade é um espaço esportivo inclusivo que oferece serviços de lazer e recreação para a população. Para utilizar a academia, é necessário pagar uma taxa ou adquirir um cartão de acesso.\n\nNão posso confirmar se a academia é gratuita ou não, pois isso depende de políticas e regulamentações atuais que estão além da minha capacidade de conhecimento prévio."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 4234778250,
+    "load_duration": 102920375,
+    "prompt_eval_count": 192,
+    "prompt_eval_duration": 103469000,
+    "eval_count": 163,
+    "eval_duration": 4024251000
+  },
+  "arquivo_resposta": "rodadas/20261112-092351-979787/llama/t1-03a--sem_rag--r1.txt",
+  "tempo_cliente_segundos": 4.237251709000702,
+  "fim": "2026-11-12T09:25:11.472633-03:00",
+  "metricas": {
+    "pergunta_id": "t1-03a",
+    "modelo": "llama3.2:3b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:25:07.234849-03:00",
+    "tempo_parede_s": 4.237251709000702,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "rodadas/20261112-092351-979787/llama/t1-03a--sem_rag--r1.txt",
+    "arquivo_bruto": "rodadas/20261112-092351-979787/llama/t1-03a--sem_rag--r1.json",
+    "tokens_entrada": 192,
+    "tokens_saida": 163,
+    "motivo_fim": "stop",
+    "tempo_total_s": 4.23477825,
+    "tempo_carga_s": 0.102920375,
+    "tempo_entrada_s": 0.103469,
+    "tempo_geracao_s": 4.024251,
+    "tokens_total": 355,
+    "tokens_por_s": 40.50443175636908,
+    "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

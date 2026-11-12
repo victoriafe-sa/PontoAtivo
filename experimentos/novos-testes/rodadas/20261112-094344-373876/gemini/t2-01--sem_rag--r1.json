@@ -1,0 +1,123 @@
+{
+  "id": "t2-01",
+  "teste": 2,
+  "pergunta": "Qual é o endereço do Bezerrão, qual a capacidade estimada e há disponibilidade para reserva em 13/11/2026 às 19h?",
+  "condicao": "sem_rag",
+  "evidencia_ids": [],
+  "pergunta_id": "t2-01",
+  "modelo": "gemini-3.5-flash-lite",
+  "provedor": "gemini",
+  "repeticao": 1,
+  "inicio": "2026-11-12T09:44:21.061801-03:00",
+  "entrada": {
+    "model": "gemini-3.5-flash-lite",
+    "contents": "Você é o assistente do PontoAtivo, sobre espaços esportivos inclusivos no DF.\nData de referência do cenário: 12/11/2026. Responda em português, até 200 palavras.\nNão invente fatos ou fontes. Preserve datas e ressalvas. Informação histórica não confirma situação atual.\nResponda às partes conhecidas e explique especificamente o que não pode confirmar.\nUse somente seu conhecimento prévio; não há busca ou ferramentas. Indique a origem quando souber; se não souber, diga isso.\n\n\nPERGUNTA:\nQual é o endereço do Bezerrão, qual a capacidade estimada e há disponibilidade para reserva em 13/11/2026 às 19h?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n",
+    "config": {
+      "temperature": 0,
+      "max_output_tokens": 4096
+    }
+  },
+  "prompt_sha256": "28457ad8b7218c946dc52a299d2290b86b2166f080b79b5a4577742f6de9462f",
+  "arquivo_bruto": "rodadas/20261112-094344-373876/gemini/t2-01--sem_rag--r1.json",
+  "saida": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Thu, 12 Nov 2026 12:44:22 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1453",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "Resposta:\nO Estádio Walmir Campelo Bezerra (Bezerrão) fica localizado no Setor Central, Área Especial 4, Gama, Distrito Federal. Sua capacidade estimada histórica é de cerca de 20.310 pessoas. \n\nLimitações:\nNão é possível confirmar a disponibilidade para reserva em 13/11/2026 às 19h, pois não tenho acesso a sistemas de agendamento em tempo real, calendários atuais ou dados operacionais para essa data futura. Informações históricas sobre o estádio não garantem sua situação operacional ou disponibilidade atual.\n\nFontes utilizadas:\nConhecimento prévio sobre equipamentos esportivos do Distrito Federal (Governo do Distrito Federal / Secretaria de Esporte e Lazer).",
+              "thought": null,
+              "thought_signature": "EmAKXgFpFH0THWN0NEYf1NYoxHWGsOdjfljwKHZi60lNIBnDLAHr4Y57cyzGRtKbExZigo2LInoZOELiT6E_hQjeRyl8CGQuSOzXjY9im8hGHmq0hyJRbbJJYC___wSo8Yk=",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "pbT1asqNGM2FytMPhaPG2Ak",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 162,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 185,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 185
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 347,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "arquivo_resposta": "rodadas/20261112-094344-373876/gemini/t2-01--sem_rag--r1.txt",
+  "tempo_cliente_segundos": 1.4805651249998846,
+  "fim": "2026-11-12T09:44:22.542661-03:00",
+  "metricas": {
+    "pergunta_id": "t2-01",
+    "modelo": "gemini-3.5-flash-lite",
+    "provedor": "gemini",
+    "executado_em": "2026-11-12T09:44:21.061801-03:00",
+    "tempo_parede_s": 1.4805651249998846,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "rodadas/20261112-094344-373876/gemini/t2-01--sem_rag--r1.txt",
+    "arquivo_bruto": "rodadas/20261112-094344-373876/gemini/t2-01--sem_rag--r1.json",
+    "tokens_entrada": 185,
+    "tokens_saida": 162,
+    "tokens_total": 347,
+    "motivo_fim": "STOP",
+    "status_metricas": "registradas"
+  }
+}

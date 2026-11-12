@@ -1,0 +1,123 @@
+{
+  "id": "t2-02",
+  "teste": 2,
+  "pergunta": "A academia pública do Parque da Cidade é gratuita, como faço o agendamento e há horário livre em 13/11/2026 às 19h?",
+  "condicao": "sem_rag",
+  "evidencia_ids": [],
+  "pergunta_id": "t2-02",
+  "modelo": "gemini-3.5-flash-lite",
+  "provedor": "gemini",
+  "repeticao": 1,
+  "inicio": "2026-11-12T09:46:40.897659-03:00",
+  "entrada": {
+    "model": "gemini-3.5-flash-lite",
+    "contents": "Você é o assistente do PontoAtivo, sobre espaços esportivos inclusivos no DF.\nData de referência do cenário: 12/11/2026. Responda em português, até 200 palavras.\nNão invente fatos ou fontes. Preserve datas e ressalvas. Informação histórica não confirma situação atual.\nResponda às partes conhecidas e explique especificamente o que não pode confirmar.\nUse somente seu conhecimento prévio; não há busca ou ferramentas. Indique a origem quando souber; se não souber, diga isso.\n\n\nPERGUNTA:\nA academia pública do Parque da Cidade é gratuita, como faço o agendamento e há horário livre em 13/11/2026 às 19h?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n",
+    "config": {
+      "temperature": 0,
+      "max_output_tokens": 4096
+    }
+  },
+  "prompt_sha256": "8b0fdcc6e698ad7fed0046aad0290689f33a969b3f2e238aba613e1f3c70cdd6",
+  "arquivo_bruto": "rodadas/20261112-094344-373876/gemini/t2-02--sem_rag--r1.json",
+  "saida": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Thu, 12 Nov 2026 12:46:46 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=5270",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "Resposta:\nComo assistente do PontoAtivo, com base nas informações disponíveis até 12/11/2026, as quadras e espaços esportivos administrados pela Secretaria de Esporte e Lazer do DF costumam ter acesso gratuito, mas muitos locais públicos funcionam por ordem de chegada ou exigem cadastro prévio (como no aplicativo de gestão esportiva do DF, quando aplicável). \n\nLimitações:\nNão posso confirmar a gratuidade específica, a necessidade de agendamento, a disponibilidade ou a existência de horário livre para a academia pública do Parque da Cidade em 13/11/2026, às 19h. Informações históricas sobre o funcionamento do local não garantem a situação atual ou regras vigentes nesta data futura. Não tenho acesso a ferramentas de busca em tempo real para verificar a agenda atualizada do espaço.\n\nFontes utilizadas:\nConhecimento prévio sobre a gestão de espaços públicos esportivos no Distrito Federal.",
+              "thought": null,
+              "thought_signature": "EmAKXgFpFH0T-x_5QtOzlrnJGHNczgOPhc79hHSr0yFnrj9C9AjTkcExgLbvmD82OsN2kzi8pU8DQHvzdaHJcm8xejvDfOQ5qDCVxJCWEU-QEwzTtn4gCSCAXrxxltw3gSA=",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "MbX1av7wDYmCytMP46LnyAY",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 208,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 187,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 187
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 395,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "arquivo_resposta": "rodadas/20261112-094344-373876/gemini/t2-02--sem_rag--r1.txt",
+  "tempo_cliente_segundos": 5.294155208999655,
+  "fim": "2026-11-12T09:46:46.192132-03:00",
+  "metricas": {
+    "pergunta_id": "t2-02",
+    "modelo": "gemini-3.5-flash-lite",
+    "provedor": "gemini",
+    "executado_em": "2026-11-12T09:46:40.897659-03:00",
+    "tempo_parede_s": 5.294155208999655,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "rodadas/20261112-094344-373876/gemini/t2-02--sem_rag--r1.txt",
+    "arquivo_bruto": "rodadas/20261112-094344-373876/gemini/t2-02--sem_rag--r1.json",
+    "tokens_entrada": 187,
+    "tokens_saida": 208,
+    "tokens_total": 395,
+    "motivo_fim": "STOP",
+    "status_metricas": "registradas"
+  }
+}

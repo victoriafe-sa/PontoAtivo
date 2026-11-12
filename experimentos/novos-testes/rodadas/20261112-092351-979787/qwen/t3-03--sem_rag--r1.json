@@ -1,0 +1,72 @@
+{
+  "id": "t3-03",
+  "teste": 3,
+  "pergunta": "Qual é a idade mínima para participar do Programa Centros Olímpicos e Paralímpicos?",
+  "condicao": "sem_rag",
+  "evidencia_ids": [],
+  "pergunta_id": "t3-03",
+  "modelo": "qwen3:8b",
+  "provedor": "ollama",
+  "repeticao": 1,
+  "inicio": "2026-11-12T09:27:03.726667-03:00",
+  "entrada": {
+    "model": "qwen3:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, sobre espaços esportivos inclusivos no DF.\nData de referência do cenário: 12/11/2026. Responda em português, até 200 palavras.\nNão invente fatos ou fontes. Preserve datas e ressalvas. Informação histórica não confirma situação atual.\nResponda às partes conhecidas e explique especificamente o que não pode confirmar.\nUse somente seu conhecimento prévio; não há busca ou ferramentas. Indique a origem quando souber; se não souber, diga isso.\n\n\nPERGUNTA:\nQual é a idade mínima para participar do Programa Centros Olímpicos e Paralímpicos?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 8192,
+      "num_predict": 4096
+    },
+    "think": false
+  },
+  "prompt_sha256": "b12c3571416a5438f66ecb2d5dec4b9b3a2c2f35648c091c83bcf48fdf83f173",
+  "arquivo_bruto": "rodadas/20261112-092351-979787/qwen/t3-03--sem_rag--r1.json",
+  "saida": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-12T12:27:22.295963Z",
+    "message": {
+      "role": "assistant",
+      "content": "Resposta:  \nA idade mínima para participar do Programa Centros Olímpicos e Paralímpicos não é especificada publicamente em fontes confiáveis até 12/11/2026.\n\nLimitações:  \nNão há informações disponíveis sobre a idade mínima para o programa, e não é possível confirmar se há restrições etárias, pois o foco do programa é a inclusão e o acesso a pessoas com deficiência, sem limitar a idade. A informação histórica não confirma a situação atual, e não há dados atualizados até a data de referência.\n\nFontes utilizadas:  \n- Conhecimento prévio sobre o Programa Centros Olímpicos e Paralímpicos no DF.  \n- Ausência de fontes confiáveis e atualizadas sobre a idade mínima."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 18567562417,
+    "load_duration": 3490963750,
+    "prompt_eval_count": 198,
+    "prompt_eval_duration": 1393994000,
+    "eval_count": 185,
+    "eval_duration": 13678796000
+  },
+  "arquivo_resposta": "rodadas/20261112-092351-979787/qwen/t3-03--sem_rag--r1.txt",
+  "tempo_cliente_segundos": 18.570582291999926,
+  "fim": "2026-11-12T09:27:22.297680-03:00",
+  "metricas": {
+    "pergunta_id": "t3-03",
+    "modelo": "qwen3:8b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:27:03.726667-03:00",
+    "tempo_parede_s": 18.570582291999926,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "rodadas/20261112-092351-979787/qwen/t3-03--sem_rag--r1.txt",
+    "arquivo_bruto": "rodadas/20261112-092351-979787/qwen/t3-03--sem_rag--r1.json",
+    "tokens_entrada": 198,
+    "tokens_saida": 185,
+    "motivo_fim": "stop",
+    "tempo_total_s": 18.567562417,
+    "tempo_carga_s": 3.49096375,
+    "tempo_entrada_s": 1.393994,
+    "tempo_geracao_s": 13.678796,
+    "tokens_total": 383,
+    "tokens_por_s": 13.52458213427556,
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

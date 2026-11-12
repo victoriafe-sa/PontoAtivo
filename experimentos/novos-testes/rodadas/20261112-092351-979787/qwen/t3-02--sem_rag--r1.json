@@ -1,0 +1,72 @@
+{
+  "id": "t3-02",
+  "teste": 3,
+  "pergunta": "Como utilizar a academia pública do Parque da Cidade e é gratuito?",
+  "condicao": "sem_rag",
+  "evidencia_ids": [],
+  "pergunta_id": "t3-02",
+  "modelo": "qwen3:8b",
+  "provedor": "ollama",
+  "repeticao": 1,
+  "inicio": "2026-11-12T09:28:20.284941-03:00",
+  "entrada": {
+    "model": "qwen3:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, sobre espaços esportivos inclusivos no DF.\nData de referência do cenário: 12/11/2026. Responda em português, até 200 palavras.\nNão invente fatos ou fontes. Preserve datas e ressalvas. Informação histórica não confirma situação atual.\nResponda às partes conhecidas e explique especificamente o que não pode confirmar.\nUse somente seu conhecimento prévio; não há busca ou ferramentas. Indique a origem quando souber; se não souber, diga isso.\n\n\nPERGUNTA:\nComo utilizar a academia pública do Parque da Cidade e é gratuito?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 8192,
+      "num_predict": 4096
+    },
+    "think": false
+  },
+  "prompt_sha256": "c1079651a4cd7fcf0ec6ca803df1b333687a44f3bee3db26002df8ba5db568f3",
+  "arquivo_bruto": "rodadas/20261112-092351-979787/qwen/t3-02--sem_rag--r1.json",
+  "saida": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-12T12:28:35.138767Z",
+    "message": {
+      "role": "assistant",
+      "content": "Resposta:  \nA academia pública do Parque da Cidade em Brasília é um espaço esportivo inclusivo e gratuito para a população. Para utilizá-la, basta comparecer ao local durante os horários de funcionamento, sem necessidade de cadastro ou pagamento. O espaço oferece equipamentos para diferentes modalidades de exercício, além de áreas para atividades ao ar livre.\n\nLimitações:  \nNão há informações atualizadas sobre os horários de funcionamento ou possíveis mudanças na política de acesso após 2026. A disponibilidade de equipamentos e a manutenção do espaço também podem variar.\n\nFontes utilizadas:  \nInformações baseiam-se em dados históricos sobre o Parque da Cidade e políticas públicas de espaços esportivos no DF, sem confirmação da situação em 12/11/2026."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 14852368584,
+    "load_duration": 86955292,
+    "prompt_eval_count": 188,
+    "prompt_eval_duration": 726227000,
+    "eval_count": 190,
+    "eval_duration": 14020453000
+  },
+  "arquivo_resposta": "rodadas/20261112-092351-979787/qwen/t3-02--sem_rag--r1.txt",
+  "tempo_cliente_segundos": 14.85475491699981,
+  "fim": "2026-11-12T09:28:35.140058-03:00",
+  "metricas": {
+    "pergunta_id": "t3-02",
+    "modelo": "qwen3:8b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:28:20.284941-03:00",
+    "tempo_parede_s": 14.85475491699981,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "rodadas/20261112-092351-979787/qwen/t3-02--sem_rag--r1.txt",
+    "arquivo_bruto": "rodadas/20261112-092351-979787/qwen/t3-02--sem_rag--r1.json",
+    "tokens_entrada": 188,
+    "tokens_saida": 190,
+    "motivo_fim": "stop",
+    "tempo_total_s": 14.852368584,
+    "tempo_carga_s": 0.086955292,
+    "tempo_entrada_s": 0.726227,
+    "tempo_geracao_s": 14.020453,
+    "tokens_total": 378,
+    "tokens_por_s": 13.551630607085235,
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

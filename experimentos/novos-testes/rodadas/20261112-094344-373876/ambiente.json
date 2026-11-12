@@ -1,0 +1,20 @@
+{
+  "data_cenario": "2026-11-12",
+  "modo": "controle_documental_manual",
+  "truncamento": "não determinado automaticamente",
+  "ordem_seed": 42,
+  "repeticoes": 1,
+  "modelos": [
+    "gemini"
+  ],
+  "testes": [
+    1,
+    2,
+    3
+  ],
+  "arquivos_sha256": {
+    "tarefas.json": "0cec99fd12d0b5e1306e50adc0b613b21a460aafbc3c23127256bec160c89070",
+    "evidencias.json": "9ca7c89e5ff7dfaafb848ac3c2c27ca566430b8826b72e605ebd9d4b590c776b",
+    "gabarito.json": "7ec5f99029f29882d2dff0d7965289129a929f70a5d7e940722c48d6cf43f9a9"
+  }
+}

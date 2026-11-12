@@ -1,0 +1,142 @@
+{
+  "id": "t2-03",
+  "teste": 2,
+  "pergunta": "A partir de qual idade posso participar dos COPs, pessoas com deficiência estão incluídas e há vaga para uma criança de 5 anos no COP do Gama em 13/11/2026?",
+  "condicao": "sem_rag",
+  "evidencia_ids": [],
+  "pergunta_id": "t2-03",
+  "modelo": "gemini-3.5-flash-lite",
+  "provedor": "gemini",
+  "repeticao": 1,
+  "inicio": "2026-11-12T09:45:36.239412-03:00",
+  "entrada": {
+    "model": "gemini-3.5-flash-lite",
+    "contents": "Você é o assistente do PontoAtivo, sobre espaços esportivos inclusivos no DF.\nData de referência do cenário: 12/11/2026. Responda em português, até 200 palavras.\nNão invente fatos ou fontes. Preserve datas e ressalvas. Informação histórica não confirma situação atual.\nResponda às partes conhecidas e explique especificamente o que não pode confirmar.\nUse somente seu conhecimento prévio; não há busca ou ferramentas. Indique a origem quando souber; se não souber, diga isso.\n\n\nPERGUNTA:\nA partir de qual idade posso participar dos COPs, pessoas com deficiência estão incluídas e há vaga para uma criança de 5 anos no COP do Gama em 13/11/2026?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n",
+    "config": {
+      "temperature": 0,
+      "max_output_tokens": 4096
+    }
+  },
+  "prompt_sha256": "a361774117bda358700523a71eea9a21dcdf7c59d6eae9b24a9a7da2c39bf142",
+  "arquivo_bruto": "rodadas/20261112-094344-373876/gemini/t2-03--sem_rag--r1.json",
+  "saida": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Thu, 12 Nov 2026 12:45:38 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=2440",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "Resposta:",
+              "thought": null,
+              "thought_signature": null,
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            },
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": " Não posso confirmar as regras atuais de idade mínima, a inclusão de pessoas com deficiência ou a disponibilidade exata de vagas para uma criança de 5 anos no COP (Centro Olímpico e Paralímpico) do Gama em 13/11/2026. Historicamente, os Centros Olímpicos e Paralímpicos do Distrito Federal oferecem atividades esportivas gratuitas para diversas faixas etárias (geralmente a partir de 4 ou 7 anos, dependendo da modalidade) e contam com atendimento voltado para pessoas com deficiência (PCD). No entanto, informacoes históricas não confirmam a situação atual em novembro de 2026.\n\nLimitações: Não tenho acesso em tempo real a sistemas de matrícula, editais vigentes, cronogramas específicos de vagas ou regras atualizadas dos COPs para a data de 13/11/2026. \n\nFontes utilizadas: Conhecimento prévio sobre o perfil histórico de atendimento dos Centros Olímpicos e Paralímpicos (COPs) da Secretaria de Esporte e Lazer do Distrito Federal (SEL-DF).",
+              "thought": null,
+              "thought_signature": "EmAKXgFpFH0Tshd_Fk7pHYZvOEsMNJ_nTQNuSyLOqESfgxoKNy9ID31xwdHWJKPL1eqvQs2QQi50jBrbCNaOnyIDCxNH5hm2_F71EO1Icpg9IfEjwMeo1RNCLwscYdNXmr4=",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "8LT1atyGI6aho_UPsM_foAo",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 240,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 194,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 194
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 434,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "arquivo_resposta": "rodadas/20261112-094344-373876/gemini/t2-03--sem_rag--r1.txt",
+  "tempo_cliente_segundos": 2.46579974999986,
+  "fim": "2026-11-12T09:45:38.705641-03:00",
+  "metricas": {
+    "pergunta_id": "t2-03",
+    "modelo": "gemini-3.5-flash-lite",
+    "provedor": "gemini",
+    "executado_em": "2026-11-12T09:45:36.239412-03:00",
+    "tempo_parede_s": 2.46579974999986,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "rodadas/20261112-094344-373876/gemini/t2-03--sem_rag--r1.txt",
+    "arquivo_bruto": "rodadas/20261112-094344-373876/gemini/t2-03--sem_rag--r1.json",
+    "tokens_entrada": 194,
+    "tokens_saida": 240,
+    "tokens_total": 434,
+    "motivo_fim": "STOP",
+    "status_metricas": "registradas"
+  }
+}
