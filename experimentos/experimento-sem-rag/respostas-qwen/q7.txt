@@ -1,0 +1,10 @@
+modelo: qwen3:8b
+
+Resposta:  
+O Centro Olímpico de Samambaia, localizado no Distrito Federal, possui uma ampla gama de equipamentos esportivos, incluindo quadras de vôlei, futebol, basquete e handebol, além de piscinas olímpicas, pista de atletismo, ginásio de esportes e áreas para prática de esportes coletivos e individuais. O complexo também conta com equipamentos para treinamento de força e condicionamento físico, além de instalações para eventos esportivos e culturais. Essas informações são baseadas em descrições públicas do empreendimento, que destaca sua infraestrutura voltada para a prática de atividades físicas e esportivas.
+
+Limitações:  
+Não há acesso a dados atualizados sobre a disponibilidade específica de equipamentos em tempo real ou mudanças recentes na infraestrutura.
+
+Fontes utilizadas:  
+Descrições públicas do Centro Olímpico de Samambaia, disponíveis em seus canais oficiais e em documentos institucionais do Distrito Federal.

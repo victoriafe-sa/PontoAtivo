@@ -1,0 +1,10 @@
+modelo: llama3.2:3b
+
+Resposta:
+O programa Semear oferece atividades esportivas, culturais e de lazer para pessoas com deficiência, além de palestras de temáticas diversas. Além disso, o programa destina 5% das vagas às pessoas com deficiência que serão avaliadas por equipe multidisciplinar específica.
+
+Limitações:
+Não há informações suficientes para confirmar se o programa Semear oferece atividades específicas para pessoas com deficiência ou se é um programa separado do Programa Centros Olímpicos e Paralímpicos do Distrito Federal.
+
+Fontes utilizadas:
+As fontes utilizadas são as normas do Programa dos COPs: matrícula, 5% das vagas para pessoas com deficiência, turmas, publicadas pela Secretaria de Esporte e Lazer do DF (portaria publicada no SINJ-DF).

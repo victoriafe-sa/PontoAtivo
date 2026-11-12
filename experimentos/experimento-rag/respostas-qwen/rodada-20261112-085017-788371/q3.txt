@@ -1,0 +1,10 @@
+modelo: qwen3:8b
+
+Resposta:  
+O endereço do Estádio Bezerrão no Gama é **St. Central – Gama, Brasília – DF, 72405-610**, conforme indicado no trecho F059-001.
+
+Limitações:  
+A informação foi extraída de um texto informativo institucional, que menciona o endereço, mas não fornece detalhes adicionais como CEP completo ou informações atualizadas. Além disso, a validação humana ainda está pendente, e o conteúdo deve ser confirmado diretamente no link fornecido.
+
+Fontes utilizadas:  
+- F059-001: Informações sobre o Estádio Bezerrão, incluindo endereço.

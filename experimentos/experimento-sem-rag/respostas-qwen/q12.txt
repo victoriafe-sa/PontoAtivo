@@ -1,0 +1,10 @@
+modelo: qwen3:8b
+
+Resposta:  
+O Decreto Distrital nº 28.494/2007 estabelece normas para a criação e manutenção de espaços esportivos e de lazer no Distrito Federal, incluindo requisitos de acessibilidade. Ele determina que as instalações devem ser acessíveis a pessoas com deficiência, garantindo a utilização de rampas, elevadores, banheiros adaptados e outros recursos que facilitam o acesso e a participação em atividades físicas. Essas diretrizes visam promover a inclusão e o direito à prática esportiva para todos os cidadãos.
+
+Limitações:  
+Não há acesso a textos completos do decreto para confirmar detalhes específicos além da descrição geral.
+
+Fontes utilizadas:  
+Conhecimento geral sobre políticas públicas e legislação relacionada à acessibilidade no Distrito Federal.

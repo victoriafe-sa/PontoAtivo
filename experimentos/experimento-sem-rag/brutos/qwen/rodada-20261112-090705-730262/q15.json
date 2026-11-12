@@ -1,0 +1,71 @@
+{
+  "pergunta": "Q15",
+  "pergunta_id": "q15",
+  "rodada": "rodada-20261112-090705-730262",
+  "modelo": "qwen3:8b",
+  "provedor": "ollama",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/qwen/rodada-20261112-090705-730262/ambiente.json",
+  "inicio": "2026-11-12T09:09:35.411071-03:00",
+  "prompt_sha256": "5543aea9961e14f2a2a1e0b5d7fdcba4468067abf416ae90b00fa52d73d17027",
+  "entrada": {
+    "model": "qwen3:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nComo uma pessoa com deficiência pode começar a praticar esporte paralímpico?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "num_ctx": 8192,
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 4096
+    },
+    "think": false
+  },
+  "arquivo_bruto": "brutos/qwen/rodada-20261112-090705-730262/q15.json",
+  "saida": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-12T12:09:51.807873Z",
+    "message": {
+      "role": "assistant",
+      "content": "Resposta:  \nPara começar a praticar esporte paralímpico, uma pessoa com deficiência deve procurar centros esportivos ou associações que ofereçam atividades adaptadas. Esses espaços geralmente possuem equipamentos e técnicas adequadas para diferentes tipos de deficiência, como paralisia cerebral, amputação ou visão reduzida. É recomendável buscar orientação de profissionais especializados, como fisioterapeutas ou treinadores de esportes adaptados, que podem ajudar a escolher a melhor modalidade. Além disso, programas governamentais, como o PontoAtivo no Distrito Federal, promovem a inclusão e oferecem informações sobre aulas e eventos voltados a pessoas com deficiência.  \n\nLimitações:  \nNão foi possível confirmar a disponibilidade atual de todas as modalidades em todos os locais.  \n\nFontes utilizadas:  \nConhecimento geral sobre esportes paralímpicos e programas de inclusão."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 16394924375,
+    "load_duration": 90193459,
+    "prompt_eval_count": 234,
+    "prompt_eval_duration": 685839000,
+    "eval_count": 221,
+    "eval_duration": 15608656000
+  },
+  "arquivo_resposta": "respostas-qwen/q15.txt",
+  "tempo_cliente_segundos": 16.39793945800011,
+  "fim": "2026-11-12T09:09:51.809441-03:00",
+  "metricas": {
+    "pergunta_id": "q15",
+    "modelo": "qwen3:8b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:09:35.411071-03:00",
+    "tempo_parede_s": 16.39793945800011,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-qwen/q15.txt",
+    "arquivo_bruto": "brutos/qwen/rodada-20261112-090705-730262/q15.json",
+    "tokens_entrada": 234,
+    "tokens_saida": 221,
+    "motivo_fim": "stop",
+    "tempo_total_s": 16.394924375,
+    "tempo_carga_s": 0.090193459,
+    "tempo_entrada_s": 0.685839,
+    "tempo_geracao_s": 15.608656,
+    "tokens_total": 455,
+    "tokens_por_s": 14.158810342158864,
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

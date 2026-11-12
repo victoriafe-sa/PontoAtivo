@@ -1,0 +1,71 @@
+{
+  "pergunta": "Q10",
+  "pergunta_id": "q10",
+  "rodada": "rodada-20261112-090705-730262",
+  "modelo": "qwen3:8b",
+  "provedor": "ollama",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/qwen/rodada-20261112-090705-730262/ambiente.json",
+  "inicio": "2026-11-12T09:08:16.934282-03:00",
+  "prompt_sha256": "dae5df2f96bf3072eddc370c7a82338f574e655a466194bb63aad1b899002163",
+  "entrada": {
+    "model": "qwen3:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nQuais condutas são consideradas falta grave nos Centros Olímpicos e Paralímpicos?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "num_ctx": 8192,
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 4096
+    },
+    "think": false
+  },
+  "arquivo_bruto": "brutos/qwen/rodada-20261112-090705-730262/q10.json",
+  "saida": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-12T12:08:35.696022Z",
+    "message": {
+      "role": "assistant",
+      "content": "Resposta:  \nNos Centros Olímpicos e Paralímpicos, condutas consideradas falta grave incluem violência física ou verbal, discriminação, discriminação por deficiência, uso de substâncias ilícitas, desrespeito às regras de segurança e comportamento inadequado que possam comprometer o ambiente inclusivo e seguro. Essas condutas são definidas com base nos princípios da Olimpíada e da Paralimpíada, que promovem a igualdade, o respeito e a integridade.  \n\nLimitações:  \nNão há uma lista oficial detalhada de condutas consideradas falta grave específica para os Centros Olímpicos e Paralímpicos no Distrito Federal, pois essa informação é geral e baseada em normas internacionais.  \n\nFontes utilizadas:  \n- Princípios da Olimpíada e da Paralimpíada (COI e CIP).  \n- Diretrizes de conduta dos Centros Olímpicos e Paralímpicos (COI)."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 18760675000,
+    "load_duration": 88000209,
+    "prompt_eval_count": 237,
+    "prompt_eval_duration": 642840000,
+    "eval_count": 240,
+    "eval_duration": 18020220000
+  },
+  "arquivo_resposta": "respostas-qwen/q10.txt",
+  "tempo_cliente_segundos": 18.76298725000015,
+  "fim": "2026-11-12T09:08:35.697666-03:00",
+  "metricas": {
+    "pergunta_id": "q10",
+    "modelo": "qwen3:8b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:08:16.934282-03:00",
+    "tempo_parede_s": 18.76298725000015,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-qwen/q10.txt",
+    "arquivo_bruto": "brutos/qwen/rodada-20261112-090705-730262/q10.json",
+    "tokens_entrada": 237,
+    "tokens_saida": 240,
+    "motivo_fim": "stop",
+    "tempo_total_s": 18.760675,
+    "tempo_carga_s": 0.088000209,
+    "tempo_entrada_s": 0.64284,
+    "tempo_geracao_s": 18.02022,
+    "tokens_total": 477,
+    "tokens_por_s": 13.318372361713676,
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

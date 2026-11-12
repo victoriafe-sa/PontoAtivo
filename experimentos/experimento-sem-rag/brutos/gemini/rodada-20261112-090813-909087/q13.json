@@ -1,0 +1,122 @@
+{
+  "pergunta": "Q13",
+  "pergunta_id": "q13",
+  "rodada": "rodada-20261112-090813-909087",
+  "modelo": "gemini-3.5-flash-lite",
+  "provedor": "gemini",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/gemini/rodada-20261112-090813-909087/ambiente.json",
+  "inicio": "2026-11-12T09:08:27.298911-03:00",
+  "prompt_sha256": "a8271c899029284913982ab0d78aa292d1a5ae6678f9b02cfe1ecf2a843764fd",
+  "entrada": {
+    "model": "gemini-3.5-flash-lite",
+    "contents": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nQual faixa etária e quais modalidades a Escola Paralímpica de Esportes atende?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n",
+    "config": {
+      "temperature": 0,
+      "max_output_tokens": 4096
+    }
+  },
+  "arquivo_bruto": "brutos/gemini/rodada-20261112-090813-909087/q13.json",
+  "saida": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Thu, 12 Nov 2026 12:08:28 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1398",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "Resposta:\nComo assistente do PontoAtivo, informo que, de acordo com o meu conhecimento prévio sobre iniciativas paralímpicas gerais baseadas no modelo do Comitê Paralímpico Brasileiro (CPB), a Escola Paralímpica de Esportes costuma atender crianças e jovens. No entanto, não posso confirmar se esses parâmetros exatos (faixa etária e modalidades específicas) se aplicam à unidade ou projeto específico eventualmente existente no Distrito Federal, pois os detalhes exatos variam conforme editais e atualizações locais.\n\nLimitações:\nMeu conhecimento é insuficiente para detalhar a faixa etária exata e a grade de modalidades ofertadas atualmente pela Escola Paralímpica de Esportes no Distrito Federal, nem posso confirmar a situação atual do projeto, pois as informações podem ter mudado.\n\nFontes utilizadas:\nBaseio-me no conhecimento geral sobre o programa padrão da Escola Paralímpica de Esportes do Comitê Paralímpico Brasileiro (CPB). A origem exata de dados específicos para o Distrito Federal não é do meu conhecimento atual.",
+              "thought": null,
+              "thought_signature": "EmAKXgFpFH0TfYqSA9_h8yj4P67uLCswwS7NfN4u5kslYEa6TRqPAzDqMDi6ecBlXs5rXbd6L_wrbIPLPWTwG8ih2HvHHKq25ovGZJedodnZ7EU72NCn4dYL3sG1KMs0Zas=",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "O6z1atebIvm2xdIP-KvZ0Qo",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 224,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 205,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 205
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 429,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "arquivo_resposta": "respostas-gemini/q13.txt",
+  "tempo_cliente_segundos": 1.4213559170002554,
+  "fim": "2026-11-12T09:08:28.720778-03:00",
+  "metricas": {
+    "pergunta_id": "q13",
+    "modelo": "gemini-3.5-flash-lite",
+    "provedor": "gemini",
+    "executado_em": "2026-11-12T09:08:27.298911-03:00",
+    "tempo_parede_s": 1.4213559170002554,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-gemini/q13.txt",
+    "arquivo_bruto": "brutos/gemini/rodada-20261112-090813-909087/q13.json",
+    "tokens_entrada": 205,
+    "tokens_saida": 224,
+    "tokens_total": 429,
+    "motivo_fim": "STOP",
+    "status_metricas": "registradas"
+  }
+}

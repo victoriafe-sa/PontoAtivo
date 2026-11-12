@@ -1,0 +1,70 @@
+{
+  "pergunta": "Q11",
+  "pergunta_id": "q11",
+  "rodada": "rodada-20261112-090313-284534",
+  "modelo": "llama3.2:3b",
+  "provedor": "ollama",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/llama/rodada-20261112-090313-284534/ambiente.json",
+  "inicio": "2026-11-12T09:05:43.984234-03:00",
+  "prompt_sha256": "7ab6a28464750faf13e04d13778af257afe5b3220b21ee650dc01bc110ba059b",
+  "entrada": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nEm que horários acontecem as aulas nos Centros Olímpicos e Paralímpicos?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "num_ctx": 8192,
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 4096
+    }
+  },
+  "arquivo_bruto": "brutos/llama/rodada-20261112-090313-284534/q11.json",
+  "saida": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-12T12:05:54.962664Z",
+    "message": {
+      "role": "assistant",
+      "content": "Lamento, mas não tenho informações sobre os horários das aulas nos Centros Olímpicos e Paralímpicos. Não posso confirmar a disponibilidade de horários específicos para as aulas em centros esportivos do Distrito Federal.\n\nNão tenho conhecimento sobre os horários das aulas nos Centros Olímpicos e Paralímpicos, pois não tenho informações atualizadas sobre esse assunto. Se você precisar de informações mais recentes, recomendo entrar em contato diretamente com o órgão responsável ou visitar seu site oficial.\n\nNão posso confirmar a disponibilidade de horários específicos para as aulas em centros esportivos do Distrito Federal."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 10977006250,
+    "load_duration": 114995417,
+    "prompt_eval_count": 245,
+    "prompt_eval_duration": 496895000,
+    "eval_count": 156,
+    "eval_duration": 10358693000
+  },
+  "arquivo_resposta": "respostas-llama/q11.txt",
+  "tempo_cliente_segundos": 10.979411958000128,
+  "fim": "2026-11-12T09:05:54.964128-03:00",
+  "metricas": {
+    "pergunta_id": "q11",
+    "modelo": "llama3.2:3b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:05:43.984234-03:00",
+    "tempo_parede_s": 10.979411958000128,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-llama/q11.txt",
+    "arquivo_bruto": "brutos/llama/rodada-20261112-090313-284534/q11.json",
+    "tokens_entrada": 245,
+    "tokens_saida": 156,
+    "motivo_fim": "stop",
+    "tempo_total_s": 10.97700625,
+    "tempo_carga_s": 0.114995417,
+    "tempo_entrada_s": 0.496895,
+    "tempo_geracao_s": 10.358693,
+    "tokens_total": 401,
+    "tokens_por_s": 15.059814978588514,
+    "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

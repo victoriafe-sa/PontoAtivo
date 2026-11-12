@@ -1,0 +1,15 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta:
+De acordo com o Manual de Uso dos Centros Olímpicos e Paralímpicos do DF (documento de 2022), as atividades físicas orientadas ocorrem nos seguintes horários, conforme a grade das modalidades esportivas disponíveis:
+- Às segundas-feiras, das 14h às 18h [F003-004].
+- De terça-feira à sexta-feira, das 06h45min às 21h45min [F003-004].
+- Aos sábados, das 8h às 12h [F003-004].
+Além disso, há um tempo de tolerância de atraso de no máximo 10 minutos no início das atividades para os alunos inscritos [F003-008].
+
+Limitações: 
+As evidências não especificam a grade detalhada de horários de cada modalidade esportiva individual, nem garantem a vigência atual dessa norma de 2022.
+
+Fontes utilizadas:
+- F003-004 [F003-004]
+- F003-008 [F003-008]

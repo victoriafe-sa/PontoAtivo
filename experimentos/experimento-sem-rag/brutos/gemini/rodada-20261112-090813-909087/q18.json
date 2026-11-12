@@ -1,0 +1,141 @@
+{
+  "pergunta": "Q18",
+  "pergunta_id": "q18",
+  "rodada": "rodada-20261112-090813-909087",
+  "modelo": "gemini-3.5-flash-lite",
+  "provedor": "gemini",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/gemini/rodada-20261112-090813-909087/ambiente.json",
+  "inicio": "2026-11-12T09:08:35.164070-03:00",
+  "prompt_sha256": "f688aba71a1546855eb53b6637f3c4484c535d60bd87defe472b3823a25eea5b",
+  "entrada": {
+    "model": "gemini-3.5-flash-lite",
+    "contents": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nQual é o preço da mensalidade das academias particulares do Lago Sul?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n",
+    "config": {
+      "temperature": 0,
+      "max_output_tokens": 4096
+    }
+  },
+  "arquivo_bruto": "brutos/gemini/rodada-20261112-090813-909087/q18.json",
+  "saida": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Thu, 12 Nov 2026 12:08:37 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1836",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "Resposta:\nNão é possível fornecer o preço exato da mensalidade das academias particulares no Lago Sul, Distrito Federal, pois os valores variam amplamente conforme a rede, a estrutura do local, os serviços oferecidos (como natação, musculação ou aulas coletivas) e o tipo de plano escolhido. \n\nLimitações:\nMeu conhecimento prévio não inclui uma tabela atualizada de preços de estabelecimentos privados específicos no Lago Sul, e os valores de mercado mudam constantemente. Não posso confirmar a situação atual dos preços praticados nessas academias.\n\nFontes utilizadas:\nDesconheço",
+              "thought": null,
+              "thought_signature": null,
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            },
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": " a origem exata de dados consolidados sobre mensalidades de academias particulares no Lago Sul, pois esse tipo de informação comercial não é centralizado em documentos públicos oficiais de órgãos governamentais do Distrito Federal.",
+              "thought": null,
+              "thought_signature": "EmAKXgFpFH0TS1QGVAv1ONS1LqAktAfD6_X8wmYD42C0pB4UKpBRxm-WvxDhCz0vD72fnXrRswANGGHNVgDbbPd6sFRAqnVhIs1JrpmdjiT8IGQtv_Ecg2-0K5PpGFFAqMQ=",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "Q6z1as-bGpOmxdIP8JG58Qg",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 169,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 201,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 201
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 370,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "arquivo_resposta": "respostas-gemini/q18.txt",
+  "tempo_cliente_segundos": 1.8922691249999843,
+  "fim": "2026-11-12T09:08:37.056853-03:00",
+  "metricas": {
+    "pergunta_id": "q18",
+    "modelo": "gemini-3.5-flash-lite",
+    "provedor": "gemini",
+    "executado_em": "2026-11-12T09:08:35.164070-03:00",
+    "tempo_parede_s": 1.8922691249999843,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-gemini/q18.txt",
+    "arquivo_bruto": "brutos/gemini/rodada-20261112-090813-909087/q18.json",
+    "tokens_entrada": 201,
+    "tokens_saida": 169,
+    "tokens_total": 370,
+    "motivo_fim": "STOP",
+    "status_metricas": "registradas"
+  }
+}

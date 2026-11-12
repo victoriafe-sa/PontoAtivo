@@ -1,0 +1,11 @@
+modelo: qwen3:8b
+
+Resposta:  
+A Novacap investiu R$ 35 mil em cada PEC instalado, conforme mencionado no trecho F065-002. No trecho F066-002, é informado que houve um investimento de R$ 350 mil em um PEC na quadra 9/11. No entanto, não há informações sobre o total de PECs que a Novacap pretende instalar ou revitalizar, pois as evidências fornecidas apenas descrevem projetos específicos e não mencionam metas ou planos gerais.
+
+Limitações:  
+As informações disponíveis são limitadas a projetos específicos e não fornecem dados sobre o total de PECs previstos ou a escala do investimento total da Novacap.
+
+Fontes utilizadas:  
+- F065-002  
+- F066-002

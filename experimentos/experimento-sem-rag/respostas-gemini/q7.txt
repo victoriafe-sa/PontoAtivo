@@ -1,0 +1,10 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta:
+Como assistente do PontoAtivo, informo que o Centro Olímpico e Paralímpico de Samambaia (COP Samambaia), localizado no Distrito Federal, geralmente conta com infraestrutura voltada para diversas modalidades esportivas e inclusivas, como piscina semiolímpica, quadras poliesportivas cobertas, campo de futebol sintético, pista de corrida e salas para atividades como ginástica e lutas. No entanto, não posso confirmar com precisão a lista exata e atualizada de todos os equipamentos disponíveis no momento.
+
+Limitações:
+Meu conhecimento prévio não inclui uma listagem detalhada, recente ou oficial de todos os equipamentos esportivos atualmente operacionais no Centro Olímpico de Samambaia, nem atesto a situação atual das instalações.
+
+Fontes utilizadas:
+A origem desta afirmação baseia-se em notícias gerais e descrições históricas sobre a rede de Centros Olímpicos e Paralímpicos do Distrito Federal geridos pelo governo local. Não sei precisar a origem documental exata desta descrição geral, pois não tenho acesso a documentos oficiais recentes ou ferramentas de busca externos.

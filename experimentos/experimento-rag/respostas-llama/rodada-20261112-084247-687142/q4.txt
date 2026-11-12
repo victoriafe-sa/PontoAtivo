@@ -1,0 +1,12 @@
+modelo: llama3.2:3b
+
+Resposta:
+
+Não é possível confirmar a disponibilidade de uma vaga em quadra específica amanhã às 19h com acessibilidade verificada para cadeirantes, pois não há informações suficientes sobre o cadastro de campos e quadras poliesportivas no Distrito Federal.
+
+Limitações:
+- Falta de informações detalhadas sobre a situação física e operacional de cada registro.
+- Não há dados atualizados após 2026.
+
+Fontes utilizadas:
+Nenhuma fonte foi utilizada para responder à pergunta, pois as evidências disponíveis não fornecem informações suficientes para confirmar a disponibilidade de uma vaga em quadra específica.

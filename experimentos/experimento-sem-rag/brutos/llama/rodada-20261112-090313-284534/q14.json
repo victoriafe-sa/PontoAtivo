@@ -1,0 +1,70 @@
+{
+  "pergunta": "Q14",
+  "pergunta_id": "q14",
+  "rodada": "rodada-20261112-090313-284534",
+  "modelo": "llama3.2:3b",
+  "provedor": "ollama",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/llama/rodada-20261112-090313-284534/ambiente.json",
+  "inicio": "2026-11-12T09:06:10.737456-03:00",
+  "prompt_sha256": "2404b5ea4ca1b43a20806c44640057d79141e136cf6538cc2a13ee52f571dd89",
+  "entrada": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nO que o programa Semear oferece para pessoas com deficiência?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "num_ctx": 8192,
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 4096
+    }
+  },
+  "arquivo_bruto": "brutos/llama/rodada-20261112-090313-284534/q14.json",
+  "saida": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-12T12:06:17.809762Z",
+    "message": {
+      "role": "assistant",
+      "content": "Olá! Estou aqui para ajudar com informações sobre o programa Semear e atividades físicas inclusivas no Distrito Federal.\n\nResposta:\nO programa Semear é um projeto que visa promover a inclusão de pessoas com deficiência em atividades físicas. Ele oferece uma variedade de atividades, como esportes adaptados, treinamento personalizado e apoio emocional, para ajudar as pessoas com deficiência a se exercitar e se sentir mais conectadas à sociedade.\n\nLimitações:\nInfelizmente, não tenho informações específicas sobre o que o programa Semear oferece exatamente para pessoas com deficiência. Pode ser necessário consultar fontes diretas ou organizações envolvidas no projeto para obter mais detalhes.\n\nFontes utilizadas:\nNão tenho informações suficientes para citar fontes específicas. Se você tiver mais informações sobre o programa Semear, posso tentar ajudar com mais precisão."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 7070680958,
+    "load_duration": 103851167,
+    "prompt_eval_count": 237,
+    "prompt_eval_duration": 251236000,
+    "eval_count": 211,
+    "eval_duration": 6709192000
+  },
+  "arquivo_resposta": "respostas-llama/q14.txt",
+  "tempo_cliente_segundos": 7.0735681669998485,
+  "fim": "2026-11-12T09:06:17.811496-03:00",
+  "metricas": {
+    "pergunta_id": "q14",
+    "modelo": "llama3.2:3b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:06:10.737456-03:00",
+    "tempo_parede_s": 7.0735681669998485,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-llama/q14.txt",
+    "arquivo_bruto": "brutos/llama/rodada-20261112-090313-284534/q14.json",
+    "tokens_entrada": 237,
+    "tokens_saida": 211,
+    "motivo_fim": "stop",
+    "tempo_total_s": 7.070680958,
+    "tempo_carga_s": 0.103851167,
+    "tempo_entrada_s": 0.251236,
+    "tempo_geracao_s": 6.709192,
+    "tokens_total": 448,
+    "tokens_por_s": 31.44939062706806,
+    "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

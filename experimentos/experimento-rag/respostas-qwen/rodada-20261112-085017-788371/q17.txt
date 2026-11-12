@@ -1,0 +1,10 @@
+modelo: qwen3:8b
+
+Resposta:  
+Os órgãos públicos distritais são isentos do pagamento do preço público para a utilização dos bens e espaços públicos esportivos e de lazer quando realizarem diretamente os eventos. (ID: F064-004)
+
+Limitações:  
+A informação está baseada em um texto compilado e sujeito a alterações posteriores, conforme mencionado nas ressalvas. Portanto, é necessário verificar a vigência e a atualização da norma no SINJ antes de considerá-la como informação oficial.
+
+Fontes utilizadas:  
+- F064-004: Decreto nº 45.269, de 08/12/2023.

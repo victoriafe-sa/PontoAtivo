@@ -1,10 +1,8 @@
 modelo: llama3.2:3b
-executado_em: 2026-11-10T12:41:06-03:00
-tokens: entrada=237 saida=165
-tempo_s: 4.033
+executado_em: 2026-11-10T12:40:59-03:00
+tokens: entrada=238 saida=74
+tempo_s: 2.433
 ---
-A academia pública do Parque da Cidade no Distrito Federal é uma instituição de ensino físico que oferece serviços de recreação e esporte. No entanto, não consegui encontrar informações sobre a abordagem de preços ou opções de assinatura para o uso desse espaço.
+Não tenho informações suficientes para fornecer o endereço do Estádio Bezerrão em Gama. Não posso confirmar a localização ou precisar informações sobre este estúdio.
 
-É possível que a academia seja gratuita ou ofereça programas de benefícios para certos grupos, como residentes locais ou pessoas com deficiência. Além disso, pode ser necessário consultar diretamente o site oficial da academia ou entrar em contato com ela para obter informações atualizadas sobre os preços e opções de utilização.
-
-No entanto, não consegui encontrar nenhuma fonte confiável que forneça informações sobre como utilizar a academia gratuita.
+Não sei qual é o órgão ou documento que forneça essa informação, portanto não posso citar uma fonte específica.

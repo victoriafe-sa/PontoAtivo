@@ -1,0 +1,16 @@
+modelo: llama3.2:3b
+
+Resposta:
+
+A academia pública do Parque da Cidade não é gratuita.
+
+Limitações:
+
+Não há evidências suficientes para confirmar que a academia pública do Parque da Cidade é gratuita. As fontes disponíveis mencionam que a academia oferece atividades físicas gratuitas, mas não especificam se há custos associados à sua utilização.
+
+Fontes utilizadas:
+
+* N04-001: "A academia pública do Parque da Cidade Sarah Kubitschek tornou-se um ponto de encontro para brasilienses de diferentes idades e estilos de vida. Reaberta em junho de 2024 graças a uma parceria do Governo do Distrito Federal (GDF) com o Laboratório Exame e a empresa Mude, o espaço oferece acesso gratuito a atividades físicas..."
+* N04-002: "A academia pública do Parque da Cidade oferece atividades físicas gratuitas, ao ar livre"
+* N04-006: "Eu faço tudo que eles oferecem: musculação, fitdance, HIIT e funcional" (não especifica se há custos associados à utilização)
+* N04-007: "Essa academia é um exemplo de como esporte e natureza podem caminhar juntos, promovendo saúde e qualidade de vida para todos”. (não especifica se há custos associados à utilização)

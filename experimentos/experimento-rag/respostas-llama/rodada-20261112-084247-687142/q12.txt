@@ -1,0 +1,13 @@
+modelo: llama3.2:3b
+
+Resposta:
+O Decreto distrital nº 28.494/2007 determina que as instalações esportivas devem ser acessíveis para pessoas com deficiência, conforme artigos 99 e 133.
+
+Limitações:
+Não é possível confirmar se o Decreto distrital nº 28.494/2007 determina a obrigação de priorizar as manifestações desportivas e paradesportivas de rendimento e a educação para pessoas com deficiência, como mencionado no trecho "I – desenvolvimento de recursos humanos especializados em cada uma das áreas de deficiência;II – promoção de competições desportivas internacionais, nacionais e distritais;III – pesquisa científica, desenvolvimento tecnológico, documentação e informação;IV – construção, ampliação, recuperação e adaptação de instalações desportivas, paradesportivas e de lazer.".
+
+Fontes utilizadas:
+As fontes utilizadas são as seguintes:
+
+- Lei nº 6.637/2020 (Estatuto da Pessoa com Deficiência do DF): recorte do Cap. VIII e do Cap. IX (Seções I a III)
+- Decreto distrital nº 28.494/2007

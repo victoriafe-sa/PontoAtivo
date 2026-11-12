@@ -1,0 +1,7 @@
+{
+  "modelo_solicitado": "gemini-3.5-flash-lite",
+  "cenario": "sem_rag",
+  "contexto": "Uma mensagem independente por pergunta, sem histórico.",
+  "truncamento": "Não determinado automaticamente.",
+  "observacao": "Configurações desta rodada não comprovam as anteriores."
+}

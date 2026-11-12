@@ -1,0 +1,19 @@
+modelo: llama3.2:3b
+
+Resposta:
+As condutas consideradas falta grave nos Centros Olímpicos e Paralímpicos são:
+
+* Agredir fisicamente funcionários do Centro Olímpico e Paralímpico dentro ou fora da instituição bem como qualquer usuário (7.3.1);
+* Pichar as dependências bem como qualquer objetivo pertencente ao Centro Olímpico e Paralímpico (7.3.2);
+* Roubar pertences de usuário, professores ou demais colaboradores, ou material de propriedade do Centro Olímpico e Paralímpico (7.3.3);
+* Assediar sexualmente professor, aluno ou qualquer usuário ou colaborador do Centro Olímpico e Paralímpico (7.3.4);
+* Tiver mais de 30% (trinta por cento) de faltas não justificadas por mês (7.3.5);
+* Não comparecer, consecutivamente, em três aulas, sem justificativa (7.3.6);
+* For reincidente em falta média (7.3.7);
+* Incidir em uma falta grave (7.3.8).
+
+Limitações:
+Não é possível confirmar se essas condutas são consideradas falta grave nos Centros Olímpicos e Paralímpicos, pois a evidência fornece apenas as regras de uso e conduta dos alunos dos COPs.
+
+Fontes utilizadas:
+A evidência foi extraída do manual de uso dos Centros Olímpicos e Paralímpicos do DF, publicado pela Secretaria de Esporte e Lazer do Distrito Federal (SEL-DF).

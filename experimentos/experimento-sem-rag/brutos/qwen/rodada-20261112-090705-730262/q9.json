@@ -1,0 +1,71 @@
+{
+  "pergunta": "Q9",
+  "pergunta_id": "q9",
+  "rodada": "rodada-20261112-090705-730262",
+  "modelo": "qwen3:8b",
+  "provedor": "ollama",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/qwen/rodada-20261112-090705-730262/ambiente.json",
+  "inicio": "2026-11-12T09:08:05.363798-03:00",
+  "prompt_sha256": "e52a43b60d56fd5d510cfc225bf91425dc328210387f49ac29cd047a3f7d416f",
+  "entrada": {
+    "model": "qwen3:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nQue melhorias de acessibilidade foram entregues junto com o novo PEC de Ceilândia?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "num_ctx": 8192,
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 4096
+    },
+    "think": false
+  },
+  "arquivo_bruto": "brutos/qwen/rodada-20261112-090705-730262/q9.json",
+  "saida": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-12T12:08:16.933403Z",
+    "message": {
+      "role": "assistant",
+      "content": "Resposta:  \nO novo PEC (Parque Esportivo e Cultural) de Ceilândia inclui melhorias de acessibilidade como rampas, calçadas adaptadas, elevadores e banheiros com acessibilidade, visando atender pessoas com deficiência. Essas melhorias são parte da política de inclusão do Distrito Federal, que busca garantir o acesso a espaços públicos para todos.\n\nLimitações:  \nNão há informações detalhadas sobre as especificações exatas das melhorias de acessibilidade ou a data de entrega do projeto.\n\nFontes utilizadas:  \nConhecimento prévio sobre políticas públicas e projetos de infraestrutura no Distrito Federal."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 11567034750,
+    "load_duration": 87409750,
+    "prompt_eval_count": 235,
+    "prompt_eval_duration": 574013000,
+    "eval_count": 148,
+    "eval_duration": 10897315000
+  },
+  "arquivo_resposta": "respostas-qwen/q9.txt",
+  "tempo_cliente_segundos": 11.568834500000321,
+  "fim": "2026-11-12T09:08:16.933950-03:00",
+  "metricas": {
+    "pergunta_id": "q9",
+    "modelo": "qwen3:8b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:08:05.363798-03:00",
+    "tempo_parede_s": 11.568834500000321,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-qwen/q9.txt",
+    "arquivo_bruto": "brutos/qwen/rodada-20261112-090705-730262/q9.json",
+    "tokens_entrada": 235,
+    "tokens_saida": 148,
+    "motivo_fim": "stop",
+    "tempo_total_s": 11.56703475,
+    "tempo_carga_s": 0.08740975,
+    "tempo_entrada_s": 0.574013,
+    "tempo_geracao_s": 10.897315,
+    "tokens_total": 383,
+    "tokens_por_s": 13.581327143429366,
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

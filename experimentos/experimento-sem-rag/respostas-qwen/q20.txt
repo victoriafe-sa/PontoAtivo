@@ -1,0 +1,10 @@
+modelo: qwen3:8b
+
+Resposta:  
+Não há informações disponíveis no meu conhecimento prévio sobre a existência de banheiros adaptados para cadeirantes no PEC da Fercal. O PEC (Parque Esportivo da Fercal) é um espaço de lazer e esporte, e embora espaços públicos tenham obrigações de acessibilidade conforme a Lei Brasileira de Inclusão (Lei 13.146/2015), não posso confirmar se esse específico equipamento está disponível.
+
+Limitações:  
+Não tenho acesso a informações atualizadas ou específicas sobre o PEC da Fercal.
+
+Fontes utilizadas:  
+Nenhuma fonte externa foi utilizada, pois o conhecimento é baseado em informações prévias e genéricas sobre legislação e espaços públicos.

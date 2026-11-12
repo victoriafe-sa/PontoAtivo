@@ -1,13 +1,13 @@
 modelo: gemini-3.5-flash-lite
-executado_em: 2026-11-10T16:04:48-03:00
-tokens: entrada=199 saida=225
-tempo_s: 7.977
+executado_em: 2026-11-10T16:03:51-03:00
+tokens: entrada=199 saida=196
+tempo_s: 51.898
 ---
 Resposta:
-As academias públicas ao ar livre no Distrito Federal, incluindo as localizadas no Parque da Cidade Dona Sarah Kubitschek, são de uso gratuito para a população. Para utilizá-las, geralmente não é necessário realizar cadastro prévio ou agendamento; basta comparecer ao local e usar os equipamentos disponíveis. Recomenda-se o uso de roupas adequadas para prática de exercícios e, preferencialmente, a avaliação médica prévia. Ressalto que meu conhecimento prévio não confirma a situação atual exata dos equipamentos, reformas recentes ou regras específicas vigentes no parque hoje.
+O Estádio Walmir Campelo Bezerra, conhecido como Bezerrão, está localizado no Setor Central do Gama, Distrito Federal (endereço específico: Setor Leste, Área Especial, Gama, Brasília - DF). Ressalto que esta informação refere-se a registros históricos e geográficos tradicionais do local, não podendo confirmar se houve alguma alteração recente na numeração ou denominação exata do logradouro.
 
 Limitações:
-Não posso confirmar a situação operacional atual, a existência de restrições recentes, manutenções em curso ou novas regras de uso específicas para a academia do Parque da Cidade no momento presente.
+Não possuo acesso a ferramentas de busca em tempo real para verificar se houve mudança recente no endereço oficial ou se o estádio passa por alguma alteração em sua estrutura de localização física na data atual.
 
 Fontes utilizadas:
-Conhecimento geral sobre o modelo padrão de funcionamento das academias públicas ao ar livre geridas pelo Governo do Distrito Federal (GDF). A origem exata de regulamentos específicos de cada praça esportiva do Parque da Cidade não é de meu conhecimento detalhado.
+Conhecimento geral prévio sobre a geografia e praças esportivas do Distrito Federal. A origem específica de documentos oficiais de tombamento ou cadastro imobiliário não pode ser detalhada com precisão por falta de acesso a fontes documentais diretas no momento.

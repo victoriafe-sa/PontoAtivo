@@ -1,0 +1,70 @@
+{
+  "pergunta": "Q7",
+  "pergunta_id": "q7",
+  "rodada": "rodada-20261112-090313-284534",
+  "modelo": "llama3.2:3b",
+  "provedor": "ollama",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/llama/rodada-20261112-090313-284534/ambiente.json",
+  "inicio": "2026-11-12T09:04:38.823053-03:00",
+  "prompt_sha256": "81529cc469413690f969d33ef2de4fb863dbfe54ae708339c4fd272015ef05c3",
+  "entrada": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nQuais equipamentos esportivos o Centro Olímpico de Samambaia possui?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "num_ctx": 8192,
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 4096
+    }
+  },
+  "arquivo_bruto": "brutos/llama/rodada-20261112-090313-284534/q7.json",
+  "saida": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-12T12:04:45.687676Z",
+    "message": {
+      "role": "assistant",
+      "content": "Não tenho informações sobre o equipamento esportivo do Centro Olímpico de Samambaia. Não posso confirmar a lista de equipamentos disponíveis no local.\n\nNão tenho conhecimento sobre a origem da informação ou se ela está atualizada. A lista de equipamentos pode ter mudado desde que não tenha informações atualizadas.\n\nNão posso fornecer informações precisas sem acesso a fontes atualizadas e confiáveis."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 6863130667,
+    "load_duration": 112207625,
+    "prompt_eval_count": 241,
+    "prompt_eval_duration": 347524000,
+    "eval_count": 97,
+    "eval_duration": 6401517000
+  },
+  "arquivo_resposta": "respostas-llama/q7.txt",
+  "tempo_cliente_segundos": 6.865517167000235,
+  "fim": "2026-11-12T09:04:45.689124-03:00",
+  "metricas": {
+    "pergunta_id": "q7",
+    "modelo": "llama3.2:3b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:04:38.823053-03:00",
+    "tempo_parede_s": 6.865517167000235,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-llama/q7.txt",
+    "arquivo_bruto": "brutos/llama/rodada-20261112-090313-284534/q7.json",
+    "tokens_entrada": 241,
+    "tokens_saida": 97,
+    "motivo_fim": "stop",
+    "tempo_total_s": 6.863130667,
+    "tempo_carga_s": 0.112207625,
+    "tempo_entrada_s": 0.347524,
+    "tempo_geracao_s": 6.401517,
+    "tokens_total": 338,
+    "tokens_por_s": 15.152658346451318,
+    "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

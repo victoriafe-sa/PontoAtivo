@@ -1,0 +1,12 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta:
+Os Centros Olímpicos e Paralímpicos (COPs) do Distrito Federal oferecem vagas distribuídas em diversas modalidades esportivas e socioesportivas [N03-003, N02-002, F028-001]. Conforme dados divulgados em setembro de 2025, as opções incluem atletismo, basquete, futsal, futebol society, ginástica localizada, pilates, vôlei, jiu-jitsu, judô, taekwondo, karatê e capoterapia, entre outras [N03-003]. As atividades atendem a um público amplo a partir de 4 anos de idade (crianças, adolescentes, jovens, adultos e idosos), além de contarem com atendimento especializado voltado para pessoas com deficiência (PcD) [N03-003, N02-002, F028-001]. O quantitativo de vagas, as modalidades específicas e os horários podem variar de acordo com cada unidade [N03-003].
+
+Limitações:
+As evidências informam que as modalidades listadas são exemplificativas e que a oferta exata varia conforme a unidade [N03-003]. Além disso, os documentos descrevem a situação nas datas de suas publicações (2025 e 2026), não confirmando necessariamente a disponibilidade atual de todas as modalidades e vagas citadas [N03-003, N02-002, F028-001].
+
+Fontes utilizadas:
+- N03-003
+- N02-002
+- F028-001

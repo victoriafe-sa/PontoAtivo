@@ -1,0 +1,10 @@
+modelo: qwen3:8b
+
+Resposta:  
+Para começar a praticar esporte paralímpico, uma pessoa com deficiência deve procurar centros esportivos ou associações que ofereçam atividades adaptadas. Esses espaços geralmente possuem equipamentos e técnicas adequadas para diferentes tipos de deficiência, como paralisia cerebral, amputação ou visão reduzida. É recomendável buscar orientação de profissionais especializados, como fisioterapeutas ou treinadores de esportes adaptados, que podem ajudar a escolher a melhor modalidade. Além disso, programas governamentais, como o PontoAtivo no Distrito Federal, promovem a inclusão e oferecem informações sobre aulas e eventos voltados a pessoas com deficiência.  
+
+Limitações:  
+Não foi possível confirmar a disponibilidade atual de todas as modalidades em todos os locais.  
+
+Fontes utilizadas:  
+Conhecimento geral sobre esportes paralímpicos e programas de inclusão.

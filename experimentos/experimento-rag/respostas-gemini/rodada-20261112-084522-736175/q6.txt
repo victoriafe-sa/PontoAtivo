@@ -1,0 +1,7 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta: As evidências fornecidas não especificam quais modalidades esportivas são oferecidas no Centro Olímpico e Paralímpico (COP) do Setor O, em Ceilândia. As fontes apenas mencionam que a unidade conta com 1.793 vagas [N02-005], mas não listam as modalidades disponíveis [N02-005].
+
+Limitações: Os dados disponíveis informam apenas a quantidade de vagas para o COP do Setor O, sem detalhar a lista de modalidades esportivas ofertadas [N02-005].
+
+Fontes utilizadas: [N02-005].

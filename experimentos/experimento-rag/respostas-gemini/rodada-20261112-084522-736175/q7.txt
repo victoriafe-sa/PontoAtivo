@@ -1,0 +1,10 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta:
+As evidências fornecidas não contêm informações detalhadas sobre quais equipamentos esportivos o Centro Olímpico de Samambaia possui [F028-009]. O documento menciona apenas o endereço (QS 119 Área Especial 01, Centro Urbano – Samambaia Sul/DF) e o diretor da unidade (Farion Souza) [F028-009], além de indicar que a unidade oferecia 1.265 vagas em abril de 2026 [N02-005], mas a tabela específica de modalidades e estruturas não consta nos textos [F028-009].
+
+Limitações:
+As evidências são insuficientes para listar os equipamentos esportivos do Centro Olímpico de Samambaia, pois informam apenas dados de contato, localização, gestão e oferta de vagas, sem detalhar a infraestrutura física interna.
+
+Fontes utilizadas:
+[F028-009], [N02-005]

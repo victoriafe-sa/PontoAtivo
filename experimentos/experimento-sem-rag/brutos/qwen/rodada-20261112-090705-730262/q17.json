@@ -1,0 +1,71 @@
+{
+  "pergunta": "Q17",
+  "pergunta_id": "q17",
+  "rodada": "rodada-20261112-090705-730262",
+  "modelo": "qwen3:8b",
+  "provedor": "ollama",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/qwen/rodada-20261112-090705-730262/ambiente.json",
+  "inicio": "2026-11-12T09:10:06.828593-03:00",
+  "prompt_sha256": "78c70a45a959b4c048b62285502b3eb6a3c7894df98e3388463b04aca54e3e2f",
+  "entrada": {
+    "model": "qwen3:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nQuem é isento do pagamento da taxa da Escola de Esportes da Secretaria de Esporte e Lazer?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "num_ctx": 8192,
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 4096
+    },
+    "think": false
+  },
+  "arquivo_bruto": "brutos/qwen/rodada-20261112-090705-730262/q17.json",
+  "saida": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-12T12:10:20.128904Z",
+    "message": {
+      "role": "assistant",
+      "content": "Resposta:  \nO pagamento da taxa da Escola de Esportes da Secretaria de Esporte e Lazer do Distrito Federal é isento para pessoas com deficiência, idosos e crianças até 12 anos, conforme políticas de inclusão e acesso gratuito a atividades físicas estabelecidas pelo órgão. Essa política busca promover a prática esportiva de forma equitativa e acessível a todos os grupos sociais.\n\nLimitações:  \nNão há informações detalhadas sobre possíveis isenções adicionais ou exceções específicas que possam existir em certos casos.\n\nFontes utilizadas:  \nConhecimento prévio sobre políticas públicas e programas de inclusão da Secretaria de Esporte e Lazer do Distrito Federal."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 13298410667,
+    "load_duration": 86866042,
+    "prompt_eval_count": 240,
+    "prompt_eval_duration": 647622000,
+    "eval_count": 164,
+    "eval_duration": 12552621000
+  },
+  "arquivo_resposta": "respostas-qwen/q17.txt",
+  "tempo_cliente_segundos": 13.300362416000098,
+  "fim": "2026-11-12T09:10:20.129709-03:00",
+  "metricas": {
+    "pergunta_id": "q17",
+    "modelo": "qwen3:8b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:10:06.828593-03:00",
+    "tempo_parede_s": 13.300362416000098,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-qwen/q17.txt",
+    "arquivo_bruto": "brutos/qwen/rodada-20261112-090705-730262/q17.json",
+    "tokens_entrada": 240,
+    "tokens_saida": 164,
+    "motivo_fim": "stop",
+    "tempo_total_s": 13.298410667,
+    "tempo_carga_s": 0.086866042,
+    "tempo_entrada_s": 0.647622,
+    "tempo_geracao_s": 12.552621,
+    "tokens_total": 404,
+    "tokens_por_s": 13.065000528574869,
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

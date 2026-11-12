@@ -1,0 +1,71 @@
+{
+  "pergunta": "Q6",
+  "pergunta_id": "q6",
+  "rodada": "rodada-20261112-090705-730262",
+  "modelo": "qwen3:8b",
+  "provedor": "ollama",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/qwen/rodada-20261112-090705-730262/ambiente.json",
+  "inicio": "2026-11-12T09:07:20.493683-03:00",
+  "prompt_sha256": "5ba310a8fb891eaeeee6cb2d3ce58a0dbd4fda73cbe5d21a273b358b46a968c1",
+  "entrada": {
+    "model": "qwen3:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nQuais modalidades são oferecidas no COP do Setor O, em Ceilândia?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "num_ctx": 8192,
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 4096
+    },
+    "think": false
+  },
+  "arquivo_bruto": "brutos/qwen/rodada-20261112-090705-730262/q6.json",
+  "saida": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-12T12:07:33.918834Z",
+    "message": {
+      "role": "assistant",
+      "content": "Resposta:  \nO Centro Olímpico do Setor O (COP) em Ceilândia oferece diversas modalidades esportivas, incluindo futebol, vôlei, basquete, handebol, futsal, ginástica artística, ginástica rítmica, natação e judô. Essas modalidades são voltadas para atletas de diferentes idades e níveis de habilidade, promovendo a inclusão e o desenvolvimento esportivo.\n\nLimitações:  \nNão há informações detalhadas sobre todas as modalidades disponíveis no COP em Ceilândia, e a lista pode variar conforme o período e as parcerias institucionais.\n\nFontes utilizadas:  \nConhecimento prévio sobre o COP e suas atividades esportivas."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 13408197625,
+    "load_duration": 89226958,
+    "prompt_eval_count": 235,
+    "prompt_eval_duration": 636328000,
+    "eval_count": 176,
+    "eval_duration": 12689412000
+  },
+  "arquivo_resposta": "respostas-qwen/q6.txt",
+  "tempo_cliente_segundos": 13.411158124999929,
+  "fim": "2026-11-12T09:07:33.920511-03:00",
+  "metricas": {
+    "pergunta_id": "q6",
+    "modelo": "qwen3:8b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:07:20.493683-03:00",
+    "tempo_parede_s": 13.411158124999929,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-qwen/q6.txt",
+    "arquivo_bruto": "brutos/qwen/rodada-20261112-090705-730262/q6.json",
+    "tokens_entrada": 235,
+    "tokens_saida": 176,
+    "motivo_fim": "stop",
+    "tempo_total_s": 13.408197625,
+    "tempo_carga_s": 0.089226958,
+    "tempo_entrada_s": 0.636328,
+    "tempo_geracao_s": 12.689412,
+    "tokens_total": 411,
+    "tokens_por_s": 13.8698310055659,
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

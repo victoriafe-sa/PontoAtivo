@@ -1,0 +1,10 @@
+modelo: qwen3:8b
+
+Resposta:  
+As condutas consideradas falta grave nos Centros Olímpicos e Paralímpicos incluem: agressão física a funcionários ou usuários (F003-014), vandalismo (pichar ou destruir dependências) (F003-014), roubo de pertences ou materiais (F003-014), assédio sexual (F003-014), acumular mais de 30% de faltas não justificadas por mês (F003-014), ausência consecutiva em três aulas sem justificativa (F003-014), reincidente em falta média (F003-014) e incidir em uma falta grave (F003-014). A pena para essas condutas é o desligamento do Centro Olímpico e Paralímpico.
+
+Limitações:  
+As normas mencionadas estão em um manual de 2022, cuja vigência e validação ainda estão pendentes. Portanto, não se pode confirmar se essas regras estão em vigor atualmente.
+
+Fontes utilizadas:  
+F003-014, F003-012.

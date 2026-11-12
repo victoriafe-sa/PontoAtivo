@@ -1,0 +1,10 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta:
+Os horários das aulas nos Centros Olímpicos e Paralímpicos (COP) do Distrito Federal geralmente ocorrem em dois turnos principais (matutino e vespertino), de terça a sexta-feira, abrangendo também atividades aos sábados. No entanto, os horários específicos variam conforme a modalidade esportiva escolhida (como natação, hidroginástica, futebol, entre outras), a faixa etária dos participantes e a unidade específica do Centro Olímpico e Paralímpico (por exemplo, Estrutural, Riacho Fundo I, Samambaia, Ceilândia, entre outras).
+
+Limitações:
+Não posso confirmar a grade horária atual, exata e unificada de todas as unidades dos Centros Olímpicos e Paralímpicos, pois os cronogramas sofrem alterações periódicas de acordo com a abertura de editais de novas turmas, renovações de matrícula e a disponibilidade de vagas de cada gestão.
+
+Fontes utilizadas:
+A informação geral sobre o funcionamento em turnos e dias da semana é baseada no conhecimento prévio geral sobre o funcionamento histórico dos Centros Olímpicos e Paralímpicos do Distrito Federal, geridos pelo Governo do Distrito Federal (GDF). Não tenho a origem documental exata ou o ato normativo específico que rege a tabela horária vigente no momento.

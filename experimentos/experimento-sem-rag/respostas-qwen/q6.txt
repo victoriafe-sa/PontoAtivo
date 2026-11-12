@@ -1,0 +1,10 @@
+modelo: qwen3:8b
+
+Resposta:  
+O Centro Olímpico do Setor O (COP) em Ceilândia oferece diversas modalidades esportivas, incluindo futebol, vôlei, basquete, handebol, futsal, ginástica artística, ginástica rítmica, natação e judô. Essas modalidades são voltadas para atletas de diferentes idades e níveis de habilidade, promovendo a inclusão e o desenvolvimento esportivo.
+
+Limitações:  
+Não há informações detalhadas sobre todas as modalidades disponíveis no COP em Ceilândia, e a lista pode variar conforme o período e as parcerias institucionais.
+
+Fontes utilizadas:  
+Conhecimento prévio sobre o COP e suas atividades esportivas.

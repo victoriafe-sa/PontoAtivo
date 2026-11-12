@@ -1,0 +1,7 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta: As evidências fornecidas não contêm informações sobre um programa chamado "Semear" ou o que ele oferece para pessoas com deficiência. 
+
+Limitações: As evidências disponíveis tratam das normas do Programa dos Centros Olímpicos e Paralímpicos (COPs) do Distrito Federal (como a Portaria SEL nº 99/2022), mas não mencionam o programa Semear. Portanto, não é possível confirmar o que o programa Semear oferece.
+
+Fontes utilizadas: Nenhuma das fontes fornecidas menciona o programa Semear.

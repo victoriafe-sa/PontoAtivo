@@ -1,0 +1,122 @@
+{
+  "pergunta": "Q19",
+  "pergunta_id": "q19",
+  "rodada": "rodada-20261112-090813-909087",
+  "modelo": "gemini-3.5-flash-lite",
+  "provedor": "gemini",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/gemini/rodada-20261112-090813-909087/ambiente.json",
+  "inicio": "2026-11-12T09:08:37.057872-03:00",
+  "prompt_sha256": "a2408c1227fcc7885c56d0487335ad28dce17e678407bb6b35c9e2756a8da00b",
+  "entrada": {
+    "model": "gemini-3.5-flash-lite",
+    "contents": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nQual quadra de tênis do Gama está livre para reserva hoje à noite?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n",
+    "config": {
+      "temperature": 0,
+      "max_output_tokens": 4096
+    }
+  },
+  "arquivo_bruto": "brutos/gemini/rodada-20261112-090813-909087/q19.json",
+  "saida": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Thu, 12 Nov 2026 12:08:38 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=995",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "Resposta:\nComo assistente do PontoAtivo, não tenho acesso a sistemas de reservas em tempo real, horários atualizados ou à disponibilidade diária das quadras de tênis no Gama para hoje à noite.\n\nLimitações:\nNão possuo dados em tempo real, ferramentas de busca ou conexão com sistemas de agendamento de instalações esportivas do Distrito Federal. Portanto, não posso confirmar quais quadras estão livres no momento.\n\nFontes utilizadas:\nNenhuma. (Não utilizei fontes externas ou documentos, pois meu conhecimento prévio não inclui a programação diária de reservas de quadras).",
+              "thought": null,
+              "thought_signature": "EmAKXgFpFH0Tsdr_mtIdNl8Zvs7K1rbuP8M-obTgTm3rU0kpPPgfnBOrYmBnzATQ3J-ODECetbLnsNH-D9Lz7YmSIi8JTNAL2ZaMQ4cp2mvyxlPsEbkJc2J0Y53BcxwpRhM=",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "Raz1aqTQEsbDxdIPhNTUyQ0",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 127,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 202,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 202
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 329,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "arquivo_resposta": "respostas-gemini/q19.txt",
+  "tempo_cliente_segundos": 1.1359897500001352,
+  "fim": "2026-11-12T09:08:38.194416-03:00",
+  "metricas": {
+    "pergunta_id": "q19",
+    "modelo": "gemini-3.5-flash-lite",
+    "provedor": "gemini",
+    "executado_em": "2026-11-12T09:08:37.057872-03:00",
+    "tempo_parede_s": 1.1359897500001352,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-gemini/q19.txt",
+    "arquivo_bruto": "brutos/gemini/rodada-20261112-090813-909087/q19.json",
+    "tokens_entrada": 202,
+    "tokens_saida": 127,
+    "tokens_total": 329,
+    "motivo_fim": "STOP",
+    "status_metricas": "registradas"
+  }
+}

@@ -1,0 +1,12 @@
+modelo: qwen3:8b
+
+Resposta:  
+Uma pessoa com deficiência pode começar a praticar esporte paralímpico acessando os Centros Olímpicos e Paralímpicos do Distrito Federal, que oferecem atividades inclusivas. A Lei nº 6.637/2020 (ID: N05-004) garante o direito à prática desportiva e paradesportiva, incluindo acesso a instalações e inclusão em estabelecimentos de ensino. A Portaria SEL nº 99/2022 (ID: N01-009) também destaca a garantia de acesso a espaços adequados para a prática paradesportiva e a inclusão social. Além disso, a Portaria estabelece que pessoas com deficiência têm prioridade no atendimento presencial nos Centros Olímpicos e Paralímpicos (ID: N01-014).  
+
+Limitações:  
+As normas mencionadas são vigentes e em vigor, mas a validação humana ainda está pendente, e é necessário verificar a atualidade e a redação consolidada das leis.  
+
+Fontes utilizadas:  
+- N05-004  
+- N01-009  
+- N01-014

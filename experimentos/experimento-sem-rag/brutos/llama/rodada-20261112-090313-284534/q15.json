@@ -1,0 +1,70 @@
+{
+  "pergunta": "Q15",
+  "pergunta_id": "q15",
+  "rodada": "rodada-20261112-090313-284534",
+  "modelo": "llama3.2:3b",
+  "provedor": "ollama",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/llama/rodada-20261112-090313-284534/ambiente.json",
+  "inicio": "2026-11-12T09:06:17.812885-03:00",
+  "prompt_sha256": "5543aea9961e14f2a2a1e0b5d7fdcba4468067abf416ae90b00fa52d73d17027",
+  "entrada": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nComo uma pessoa com deficiência pode começar a praticar esporte paralímpico?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "num_ctx": 8192,
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 4096
+    }
+  },
+  "arquivo_bruto": "brutos/llama/rodada-20261112-090313-284534/q15.json",
+  "saida": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-12T12:06:29.406965Z",
+    "message": {
+      "role": "assistant",
+      "content": "Resposta:\n\nPara começar a praticar esporte paralímpico, uma pessoa com deficiência pode seguir os seguintes passos:\n\n1. **Conhecer as modalidades**: Pesquisar sobre as diferentes modalidades de esportes paralímpicos disponíveis e escolher aquela que melhor se adapta às suas habilidades e interesses.\n2. **Encontrar um clube ou organização**: Procurar por clubes ou organizações que ofereçam treinamento e competições para pessoas com deficiência, como a Federação Brasileira de Atletismo (FBAS) ou a Confederação Brasileira de Esportes Paralímpicos (CBESP).\n3. **Obter orientação**: Buscar orientação de um treinador ou especialista em esportes paralímpicos que possa ajudar a desenvolver habilidades e técnicas adequadas.\n4. **Participar de atividades de treinamento**: Participar de atividades de treinamento e prática para desenvolver as habilidades necessárias.\n\nLimitações:\n\n* A falta de infraestrutura e recursos adequados pode ser um obstáculo para o acesso a esportes paralímpicos.\n* A falta de conscientização e educação sobre esportes paralímpicos também pode ser um desafio.\n\nFonte utilizada: Não tenho informações específicas sobre fontes, mas posso dizer que as diretrizes e orientações para pessoas com deficiência podem ser encontradas em sites oficiais de organizações como a FBAS ou a CBESP."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 11592643000,
+    "load_duration": 103736084,
+    "prompt_eval_count": 243,
+    "prompt_eval_duration": 255955000,
+    "eval_count": 351,
+    "eval_duration": 11227344000
+  },
+  "arquivo_resposta": "respostas-llama/q15.txt",
+  "tempo_cliente_segundos": 11.595246208999924,
+  "fim": "2026-11-12T09:06:29.408401-03:00",
+  "metricas": {
+    "pergunta_id": "q15",
+    "modelo": "llama3.2:3b",
+    "provedor": "ollama",
+    "executado_em": "2026-11-12T09:06:17.812885-03:00",
+    "tempo_parede_s": 11.595246208999924,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-llama/q15.txt",
+    "arquivo_bruto": "brutos/llama/rodada-20261112-090313-284534/q15.json",
+    "tokens_entrada": 243,
+    "tokens_saida": 351,
+    "motivo_fim": "stop",
+    "tempo_total_s": 11.592643,
+    "tempo_carga_s": 0.103736084,
+    "tempo_entrada_s": 0.255955,
+    "tempo_geracao_s": 11.227344,
+    "tokens_total": 594,
+    "tokens_por_s": 31.26295943190126,
+    "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+    "quantizacao": "Q4_K_M",
+    "status_metricas": "registradas"
+  }
+}

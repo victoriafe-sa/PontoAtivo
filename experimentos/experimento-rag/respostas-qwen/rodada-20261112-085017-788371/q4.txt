@@ -1,0 +1,13 @@
+modelo: qwen3:8b
+
+Resposta:  
+Não é possível confirmar a disponibilidade de quadras com vaga para cadeirantes amanhã às 19h, pois nenhuma das evidências fornece informações sobre a disponibilidade de vagas em horários específicos ou sobre a acessibilidade de quadras em tempo real. A evidência R04-005 menciona um cadastro de quadras, mas não fornece dados sobre horários ou acessibilidade. A evidência F066-005 e F066-001 referem-se a melhorias em acessibilidade em áreas específicas, mas não indicam disponibilidade de vagas em horários definidos.
+
+Limitações:  
+- Não há informações sobre a disponibilidade de vagas em horários específicos.  
+- Não há dados sobre a acessibilidade de quadras em tempo real.  
+
+Fontes utilizadas:  
+- R04-005  
+- F066-005  
+- F066-001

@@ -1,0 +1,10 @@
+modelo: gemini-3.5-flash-lite
+
+Resposta: 
+Sim, a academia pública do Parque da Cidade oferece atividades físicas gratuitas, incluindo uma sala completa de musculação e aulas coletivas de diversas modalidades [N04-008]. Para utilizar o espaço, é necessário baixar o aplicativo Mude – Yoga e Fitness, concluir o cadastro e realizar o agendamento do horário [N04-008]. O funcionamento da academia fica condicionado à presença de um profissional de educação física [N04-008]. O espaço foi reaberto em junho de 2024 por meio de uma parceria entre o GDF, o Laboratório Exame e a empresa Mude [N04-001].
+
+Limitações: 
+As evidências descrevem a situação da academia com base em informações divulgadas em janeiro de 2025, com ressalvas de que os horários e perfis de uso referem-se ao período de 2024/2025, sendo necessário confirmar a atualidade das regras [N04-008, N04-metadados].
+
+Fontes utilizadas:
+[N04-001], [N04-008]

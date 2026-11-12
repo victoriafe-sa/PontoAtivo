@@ -1,0 +1,122 @@
+{
+  "pergunta": "Q16",
+  "pergunta_id": "q16",
+  "rodada": "rodada-20261112-090813-909087",
+  "modelo": "gemini-3.5-flash-lite",
+  "provedor": "gemini",
+  "tipo_registro": "execucao_api",
+  "cenario": "sem_rag",
+  "ambiente_referencia": "brutos/gemini/rodada-20261112-090813-909087/ambiente.json",
+  "inicio": "2026-11-12T09:08:32.018746-03:00",
+  "prompt_sha256": "9604da6f5ab8192bd12404da141929e6ebed20c8fdd99010c5f43de97525386c",
+  "entrada": {
+    "model": "gemini-3.5-flash-lite",
+    "contents": "Você é o assistente do PontoAtivo, projeto sobre espaços esportivos e atividades físicas inclusivas no Distrito Federal.\n\nResponda usando apenas o seu conhecimento prévio. Nenhum documento, resultado de busca ou ferramenta externa foi fornecido.\n\nREGRAS:\n1. Responda em português, com até 200 palavras.\n2. Indique a origem de cada afirmação factual quando souber (órgão, site ou documento). Se não souber a origem, diga isso.\n3. Não invente informações nem referências.\n4. Preserve datas e ressalvas relevantes.\n5. Não trate informações antigas como confirmação da situação atual.\n6. Se o seu conhecimento for insuficiente, explique o que não pode confirmar.\n\nPERGUNTA:\nOnde ficam os Pontos de Encontro Comunitário listados no Plano Piloto?\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n",
+    "config": {
+      "temperature": 0,
+      "max_output_tokens": 4096
+    }
+  },
+  "arquivo_bruto": "brutos/gemini/rodada-20261112-090813-909087/q16.json",
+  "saida": {
+    "sdk_http_response": {
+      "headers": {
+        "x-gemini-service-tier": "standard",
+        "content-type": "application/json; charset=UTF-8",
+        "vary": "Origin, X-Origin, Referer",
+        "content-encoding": "gzip",
+        "date": "Thu, 12 Nov 2026 12:08:33 GMT",
+        "server": "scaffolding on HTTPServer2",
+        "x-xss-protection": "0",
+        "x-frame-options": "SAMEORIGIN",
+        "x-content-type-options": "nosniff",
+        "server-timing": "gfet4t7; dur=1632",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "transfer-encoding": "chunked"
+      },
+      "body": null
+    },
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "media_resolution": null,
+              "code_execution_result": null,
+              "executable_code": null,
+              "file_data": null,
+              "function_call": null,
+              "function_response": null,
+              "inline_data": null,
+              "text": "Resposta:\nOs Pontos de Encontro Comunitário (PECs) no Plano Piloto, no Distrito Federal, estão localizados em diversas quadras residenciais, parques e áreas públicas das Asas Sul e Norte, além do Eixo Monumental e dos eixos comerciais. Esses locais costumam contar com academias ao ar livre voltadas para a prática de atividades físicas pela comunidade. Contudo, não é possível listar todos os endereços exatos atuais apenas com o conhecimento prévio geral, pois a instalação, manutenção e expansão dessas estruturas ocorrem de forma contínua por órgãos do governo local.\n\nLimitações:\nNão possuo uma listagem completa, atualizada e oficial com o endereço exato de cada Ponto de Encontro Comunitário (PEC) atualmente instalado no Plano Piloto. Informações específicas sobre a situação operacional atual de cada equipamento exigem consulta a bases de dados recentes da administração pública.\n\nFontes utilizadas:\nConhecimento geral prévio sobre a estruturação urbana do Distrito Federal e implantação de academias ao ar livre (PECs) pelo Governo do Distrito Federal (GDF). A origem exata de decretos ou listas específicas por quadra não pode ser detalhada com precisão sem acesso a documentos oficiais atualizados da Secretaria de Esporte e Lazer ou da Administração Regional do Plano Piloto.",
+              "thought": null,
+              "thought_signature": "EmAKXgFpFH0TAu3jnla_NS92dGdg1b874LdeIWGhzWOgj1RtyHHtbs7Kk2I8FIj7sxaKJmvHlotJWCwmJ57O8U-AaYzLX68_NV8KdUX60twv6Yr9q5CbmoTPolRuFNwMfNI=",
+              "video_metadata": null,
+              "tool_call": null,
+              "tool_response": null,
+              "part_metadata": null,
+              "audio_transcription": null,
+              "media_processing": null,
+              "speech_metadata": null
+            }
+          ],
+          "role": "model"
+        },
+        "citation_metadata": null,
+        "finish_message": null,
+        "token_count": null,
+        "finish_reason": "STOP",
+        "grounding_metadata": null,
+        "avg_logprobs": null,
+        "index": 0,
+        "logprobs_result": null,
+        "safety_ratings": null,
+        "url_context_metadata": null,
+        "continuation_token": null
+      }
+    ],
+    "create_time": null,
+    "model_version": "gemini-3.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "QKz1atHXENico_UPsvj7uAw",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 279,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 205,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 205
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 484,
+      "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+  },
+  "arquivo_resposta": "respostas-gemini/q16.txt",
+  "tempo_cliente_segundos": 1.6581532090003748,
+  "fim": "2026-11-12T09:08:33.677682-03:00",
+  "metricas": {
+    "pergunta_id": "q16",
+    "modelo": "gemini-3.5-flash-lite",
+    "provedor": "gemini",
+    "executado_em": "2026-11-12T09:08:32.018746-03:00",
+    "tempo_parede_s": 1.6581532090003748,
+    "origem_modelo": "retorno_api",
+    "arquivo_resposta": "respostas-gemini/q16.txt",
+    "arquivo_bruto": "brutos/gemini/rodada-20261112-090813-909087/q16.json",
+    "tokens_entrada": 205,
+    "tokens_saida": 279,
+    "tokens_total": 484,
+    "motivo_fim": "STOP",
+    "status_metricas": "registradas"
+  }
+}
