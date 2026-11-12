@@ -191,6 +191,16 @@ A pasta temporária `Semana 2` não faz parte da execução atual e já não est
 - [Estratégia de embeddings](docs/semana-02/estrategia-embeddings.md).
 - [Demonstração documentada anteriormente](docs/semana-02/demonstracao.md).
 
+### Site (GitHub Pages)
+
+A página do projeto fica em [docs/index.html](docs/index.html) e lê os dados de `docs/dados.json`. Depois de alterar fontes, chunks, perguntas, respostas ou análises dos experimentos, regenere os dados (só biblioteca padrão):
+
+```bash
+python3 scripts/gerar_site.py
+```
+
+Para ver localmente: `python3 -m http.server -d docs` e acesse http://localhost:8000. Para publicar, ative em **Settings → Pages → Deploy from a branch → `main` / `/docs`**.
+
 Esses documentos preservam o histórico de desenvolvimento e podem mencionar materiais temporários de entrega removidos. Para executar o código atual, utilize os comandos deste README.
 
 ## Limites atuais
