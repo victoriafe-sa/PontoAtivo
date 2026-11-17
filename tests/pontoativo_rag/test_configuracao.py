@@ -13,7 +13,7 @@ def test_settings_usa_defaults_relativos_ao_projeto(tmp_path: Path) -> None:
     assert settings.data_dir == tmp_path.resolve() / "dados"
     assert settings.vector_db_dir == tmp_path.resolve() / "dados" / "rag" / "vetorial"
     assert settings.embedding_model == (
-        "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+        "intfloat/multilingual-e5-base"
     )
     assert settings.parent_chunk_tokens == 450
     assert settings.chunk_overlap_tokens == 50
@@ -90,3 +90,15 @@ def test_modelo_do_mapa_pode_ser_outro(monkeypatch, tmp_path: Path) -> None:
     settings = Settings.from_env(root=tmp_path)
     assert settings.map_model == "qwen3:4b"
     assert settings.ollama_model == "gemma4:12b"
+
+
+def test_limiar_de_abstencao_segue_o_modelo_de_embeddings(tmp_path, monkeypatch):
+    monkeypatch.delenv("PONTOATIVO_MAX_DISTANCE", raising=False)
+    monkeypatch.setenv("PONTOATIVO_EMBEDDING_MODEL", "intfloat/multilingual-e5-base")
+    e5 = Settings.from_env(tmp_path)
+    assert e5.max_distance == 0.12 and round(e5.distance_scale, 3) == 0.267
+    monkeypatch.setenv("PONTOATIVO_EMBEDDING_MODEL", "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
+    minilm = Settings.from_env(tmp_path)
+    assert minilm.max_distance == 0.45 and minilm.distance_scale == 1.0
+    monkeypatch.setenv("PONTOATIVO_MAX_DISTANCE", "0.13")
+    assert Settings.from_env(tmp_path).max_distance == 0.13

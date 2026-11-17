@@ -18,7 +18,7 @@ from typing import Protocol, Sequence
 
 from .carregamento import DocumentLoadError, load_catalog, write_documents_jsonl
 from .carregamento import load_document
-from .limpeza import clean_documents, drop_duplicate_chunks
+from .limpeza import clean_documents, drop_duplicate_chunks, drop_empty_chunks
 from .configuracao import Settings
 from .modelos import EmbeddingSegment, NormalizedDocument, SourceRecord
 from .processamento import (
@@ -60,6 +60,7 @@ class IngestionReport:
     duplicates: dict[str, str] = field(default_factory=dict)
     parent_chunks: int = 0
     duplicate_chunks: int = 0
+    empty_chunks: int = 0
     embedding_segments: int = 0
     segments_encoded: int = 0
     segments_reused: int = 0
@@ -81,6 +82,7 @@ class IngestionReport:
             f"Duplicados por checksum ...... {len(self.duplicates)}",
             f"Chunks-pai ................... {self.parent_chunks}",
             f"  repetidos entre fontes ..... {self.duplicate_chunks} (removidos)",
+            f"  sem conteúdo ............... {self.empty_chunks} (removidos)",
             f"Segmentos de embedding ....... {self.embedding_segments}",
             f"  codificados agora .......... {self.segments_encoded}",
             f"  reaproveitados do banco .... {self.segments_reused}",
@@ -187,6 +189,7 @@ def ingest_catalog(
         )
     ]
     chunks, report.duplicate_chunks = drop_duplicate_chunks(chunks)
+    chunks, report.empty_chunks = drop_empty_chunks(chunks)
     segments: list[EmbeddingSegment] = [
         segment
         for chunk in chunks

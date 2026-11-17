@@ -23,6 +23,11 @@ EXPANDED_SEGMENTS_PER_CHUNK = 200
 # escondia a tabela de PECs do Plano Piloto (Q12).
 STRONG_LEXICAL_OVERLAP = 0.75
 SECTION_MATCH_BONUS = 0.10
+# Os bônus da busca híbrida foram medidos com o MiniLM, cujo limiar de abstenção
+# é 0,45. Outros modelos espalham as distâncias em outra escala (o E5 fica entre
+# 0,06 e 0,21), então os bônus são multiplicados por ``distance_scale``
+# (limiar do modelo ÷ 0,45). Com o MiniLM, a escala é 1 e nada muda.
+REFERENCE_MAX_DISTANCE = 0.45
 _TOKEN = re.compile(r"[a-z0-9]{3,}", re.IGNORECASE)
 _STOPWORDS = frozenset(
     "a ao aos as com da das de do dos e em entre para por que qual quais "
@@ -98,6 +103,7 @@ def _aggregate(
     *,
     missing_filter_keys: set[str] | None = None,
     query_terms: set[str] | None = None,
+    scale: float = 1.0,
 ) -> list[RetrievedChunk]:
     grouped: dict[str, RetrievedChunk] = {}
     for hit in hits:
@@ -161,17 +167,17 @@ def _aggregate(
         region_match = exact_region_match(chunk)
         # A lexical match can correct a near-tie from the vector search, but
         # cannot rescue a distant result that lacks semantic similarity.
-        score = chunk.distance - min(0.12, 0.12 * overlap)
+        score = chunk.distance - scale * min(0.12, 0.12 * overlap)
         # A pergunta que cita o nome da seção mais específica do trecho ("faltas
         # graves" e a seção "7.3 Falta Grave") aponta para ele mesmo quando o
         # embedding, diluído pelo resto do texto, o deixa mais longe.
         section_terms = _tokens(chunk.section.split(" > ")[-1])
         if len(query_terms & section_terms) >= 2:
-            score -= SECTION_MATCH_BONUS
+            score -= scale * SECTION_MATCH_BONUS
         if region_match:
             # Região ajuda a desempatar, mas não pode superar sozinha uma
             # diferença semântica grande.
-            score -= 0.18
+            score -= scale * 0.18
         return score, chunk.distance
 
     ranked = sorted(grouped.values(), key=rerank_key)
@@ -224,6 +230,7 @@ class Retriever:
         *,
         top_k: int = 5,
         reranker: str = "hibrido",
+        distance_scale: float = 1.0,
     ):
         if reranker not in {"hibrido", "vetorial"}:
             raise ValueError("reranker deve ser 'hibrido' ou 'vetorial'")
@@ -231,6 +238,7 @@ class Retriever:
         self.store = store
         self.top_k = top_k
         self.reranker = reranker
+        self.distance_scale = distance_scale
 
     def search(
         self,
@@ -248,7 +256,8 @@ class Retriever:
         if not question:
             raise ValueError("A pergunta está vazia.")
         k = top_k or self.top_k
-        vector = self.embedder.encode([question])[0]
+        encode_query = getattr(self.embedder, "encode_query", self.embedder.encode)
+        vector = encode_query([question])[0]
         n_segments = k * SEGMENTS_PER_CHUNK
         clean_filters = {key: value for key, value in (filters or {}).items() if value}
 
@@ -269,6 +278,7 @@ class Retriever:
             hits,
             missing_filter_keys=set(clean_filters) or None,
             query_terms=_tokens(question),
+            scale=self.distance_scale,
         )
         # A janela curta é o caminho normal. Só amplia a consulta quando a
         # janela foi preenchida e nenhum resultado apresenta correspondência
@@ -298,5 +308,6 @@ class Retriever:
                 expanded_hits,
                 missing_filter_keys=set(clean_filters) or None,
                 query_terms=_tokens(question),
+                scale=self.distance_scale,
             )
         return chunks[:k]

@@ -17,9 +17,10 @@ entre dois chunks perder o contexto anterior.
 
 ## Segmentos de embedding
 
-Cada chunk-pai é subdividido em segmentos de no máximo 120 tokens. O modelo
-`paraphrase-multilingual-MiniLM-L12-v2` possui uma janela efetiva curta; enviar
-diretamente 450 tokens causaria truncamento silencioso. Somente os segmentos
+Cada chunk-pai é subdividido em segmentos de no máximo 120 tokens. Os modelos de
+embedding têm janela limitada (o E5 lê até 512 tokens, e o MiniLM usado antes, bem
+menos); enviar 450 palavras de uma vez diluiria o sentido ou seria truncado em
+silêncio. Somente os segmentos
 curtos são vetorizados. Depois da busca, os resultados são agrupados pelo
 identificador do chunk-pai e o texto completo volta a ser a unidade citável.
 

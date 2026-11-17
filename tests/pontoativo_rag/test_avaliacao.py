@@ -245,3 +245,13 @@ def test_avaliador_nao_quebra_frase_em_abreviacao_de_uma_letra():
     assert _answer_sentences("Há um PEC na Praça Resistência na V. Telebrasília [F1].") == [
         "Há um PEC na Praça Resistência na V. Telebrasília [F1]."
     ]
+
+
+def test_numeros_listados_a_parte_do_endereco_contam_como_suporte() -> None:
+    # Caso real (Q12 com o E5): as quadras vêm listadas depois do setor.
+    fonte = "388 PONTO DE ENCONTRO COMUNITÁRIO SQNW 108\n389 PONTO DE ENCONTRO COMUNITÁRIO SQNW 109\n390 PONTO DE ENCONTRO COMUNITÁRIO SQNW 111"
+    chunk = _chunk("A", 0.1, fonte)
+    certa = GroundedAnswer("Onde?", "rag", "A lista inclui locais no setor SQNW, como as quadras 108, 109 e 111 [F1].", [chunk], cited=[chunk])
+    errada = GroundedAnswer("Onde?", "rag", "A lista inclui locais no setor SQNW, como as quadras 205, 206 e 207 [F1].", [chunk], cited=[chunk])
+    assert factual_answer_metrics(certa)["unsupported_claims"] == 0
+    assert factual_answer_metrics(errada)["unsupported_claims"] == 1

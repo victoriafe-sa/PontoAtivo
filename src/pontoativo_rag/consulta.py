@@ -44,7 +44,7 @@ def build_pipeline(
         )
     retriever = Retriever(
         EmbeddingProvider(settings.embedding_model), store, top_k=settings.top_k,
-        reranker=reranker,
+        reranker=reranker, distance_scale=settings.distance_scale,
     )
     llm = (
         OllamaClient(
@@ -61,6 +61,7 @@ def build_pipeline(
     return retriever, AnswerGenerator(
         llm,
         max_distance=settings.max_distance,
+        distance_scale=settings.distance_scale,
         structured=settings.structured_answers,
         max_attempts=settings.max_generation_attempts,
     )

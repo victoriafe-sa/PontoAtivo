@@ -131,6 +131,9 @@ def _terms(value: str) -> set[str]:
         letters + number
         for letters, number in re.findall(r"\b([a-z]{2,5})\s?(\d{1,4}(?:/\d{1,4})?)\b", normalized)
     )
+    # Números listados à parte ("SQNW, quadras 108, 109 e 111"; "13.672 vagas")
+    # também são fatos. Um número que não está na fonte conta contra a frase.
+    terms.update(re.findall(r"\b\d{3,}\b", normalized))
     return terms
 
 

@@ -111,3 +111,63 @@ def test_titulos_numerados_do_manual():
 def test_fonte_sem_regra_nao_ganha_titulos_novos():
     text = "PROGRAMA CENTROS OLÍMPICOS E\nPARALÍMPICOS\n1. Introdução\nTexto."
     assert {c.section for c in create_parent_chunks(_doc("DOC-900", text))} == {""}
+
+
+def test_link_de_impressao_do_sei_sai():
+    from pontoativo_rag.limpeza import remove_noise
+
+    text = ("https://sei.df.gov.br/sei/controlador.php?acao=documento_imprimir_web&id=1 1/9\n"
+            "Item 1 do termo.\nCompartilhe\n:\nTexto final.")
+    assert remove_noise(_doc(text=text)).text == "Item 1 do termo.\nTexto final."
+
+
+def _html(source_id, text):
+    doc = _doc(source_id, text)
+    return replace(doc, source=replace(doc.source, document_type="html"))
+
+
+def test_abertura_das_paginas_html_antes_do_titulo_sai():
+    noticia = "02/07/2026 às 09h56 - Atualizado em 26/10/2026 às 09h32\n# Novo PEC\nTexto."
+    aba = "Aplicativo fitness — Agência Gov\n\nAgricultura\n# Aplicativo fitness\nTexto."
+    assert clean_document(_html("DOC-009", noticia)).text == "# Novo PEC\nTexto."
+    assert clean_document(_html("DOC-023", aba)).text == "# Aplicativo fitness\nTexto."
+
+
+def test_html_sem_titulo_no_inicio_fica_igual():
+    text = "Linha 1\nLinha 2\nLinha 3\nLinha 4\nLinha 5\nLinha 6\n# Título tardio\nTexto."
+    assert clean_document(_html("DOC-900", text)).text == text
+
+
+def test_palavras_coladas_em_sequencia_e_por_virgula():
+    vocab = Counter({"nos": 9, "jogos": 5, "coletivos": 4, "as": 30, "competições": 3, "antes": 6, "dos": 40})
+    assert split_glued_word("nosjogoscoletivos", vocab) == "nos jogos coletivos"
+    assert split_glued_word("ascompetiçõesantesdos", vocab) == "as competições antes dos"
+    outras = _doc("DOC-004", "evitar nos jogos coletivos as competições antes dos 12 anos " * 3)
+    colada = _doc("DOC-005", "devem evitar,nosjogoscoletivos,ascompetições antes")
+    fixed = {d.source.source_id: d for d in fix_glued_words([outras, colada])}
+    assert fixed["DOC-005"].text == "devem evitar, nos jogos coletivos, as competições antes"
+
+
+def test_trechos_so_com_titulos_ou_artigos_vetados_saem():
+    from pontoativo_rag.limpeza import drop_empty_chunks
+
+    vazios = ["Seção V\nArt. 24.", "Seção III\nArt. 20. (VETADO).\nArt. 21.",
+              "CAPÍTULO II – DO SISTEMA NACIONAL DO ESPORTE E\nINDICADORES ESPORTIVOS"]
+    cheio = "Seção I\nArt. 1º Esta Lei institui a Lei Geral do Esporte."
+    chunks = [c for i, t in enumerate(vazios + [cheio]) for c in create_parent_chunks(_doc(f"DOC-9{i:02d}", t))]
+    kept, dropped = drop_empty_chunks(chunks)
+    assert dropped == 3 and [c.text for c in kept] == [cheio]
+
+
+def test_numeros_colados_se_separam_mas_horarios_ficam():
+    from pontoativo_rag.limpeza import unglue
+
+    vocab = Counter({"antes": 5, "dos": 9, "anos": 7, "às": 4})
+    assert unglue("antes dos12anos, às16h e 7h40 por 50min", vocab) == "antes dos 12 anos, às 16h e 7h40 por 50min"
+
+
+def test_frase_colada_do_doc005_e_corrigida():
+    outras = _doc("DOC-004", "evitar as competições antes dos anos " * 3)
+    colada = _doc("DOC-005", "evitar,nosjogosdesportivoscoletivos,ascompetiçõesantesdos12anos,asquaisexigemperfeição dos")
+    assert fix_glued_words([outras, colada])[1].text == (
+        "evitar, nos jogos desportivos coletivos, as competições antes dos 12 anos, as quais exigem perfeição dos")

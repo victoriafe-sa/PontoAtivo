@@ -25,11 +25,22 @@ class EmbeddingProvider:
         self._model_factory = model_factory
         self._model = None
 
+    def encode_query(self, texts: Sequence[str]) -> list[list[float]]:
+        return self._encode(texts, "query")
+
     def encode(self, texts: Sequence[str]) -> list[list[float]]:
+        return self._encode(texts, "passage")
+
+    def _encode(self, texts: Sequence[str], role: str) -> list[list[float]]:
         if not texts:
             return []
         if self._model is None:
             self._model = self._model_factory(self.model_name)
+        if self.model_name in {
+            "intfloat/multilingual-e5-base", "intfloat/multilingual-e5-small",
+            "intfloat/multilingual-e5-large",
+        }:
+            texts = [f"{role}: {text}" for text in texts]
         vectors = self._model.encode(
             list(texts),
             batch_size=self.batch_size,
