@@ -77,9 +77,15 @@
     byId("meeting-login").hidden = Boolean(user);
     byId("meeting-account").hidden = Boolean(user);
     byId("account-menu").hidden = !user;
+    byId("header-login").hidden = Boolean(user);
     if (user) {
       byId("account-name").textContent = user.apelido;
       byId("account-avatar").textContent = (user.apelido || "?").trim().charAt(0).toUpperCase();
+      byId("account-btn").setAttribute("aria-label", "Menu da conta de " + user.apelido);
+      byId("account-who-name").textContent = user.apelido;
+      const prefs = user.preferencias || {};
+      const info = [user.idade ? user.idade + " anos" : "", (prefs.esportes || []).join(", "), prefs.regiao || ""];
+      byId("account-who-info").textContent = info.filter(Boolean).join(" · ");
     }
     document.querySelectorAll("[data-admin-login]").forEach(b => { b.hidden = !adminLocal || Boolean(user); });
     byId("meeting-logout").hidden = !user;
@@ -307,6 +313,7 @@
   byId("meeting-place-query").addEventListener("input", e => renderPlaces(e.target.value));
   byId("meeting-create").addEventListener("click", () => create());
   byId("meeting-login").addEventListener("click", () => showAuth());
+  byId("header-login").addEventListener("click", () => showAuth());
   byId("meeting-all").addEventListener("click", () => { mine = false; refresh(); });
   byId("meeting-mine").addEventListener("click", () => {
     if (!user) { showAuth(); return; }

@@ -816,3 +816,21 @@ body[data-tela-atual="mapa"] #map { height: max(460px, calc(100vh - 8rem)); bord
 /* O selo do nível não passa mais da borda da célula. */
 .acc-cell .acc-status { flex-wrap: wrap; gap: .25rem; }
 .acc-cell .badge-ev { font-size: .6rem; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+
+/* ---------- Usuário na barra superior ---------- */
+/* Deslogado: botão "Entrar" no lugar do avatar. Logado: avatar e nome (só some no celular). */
+.account-login { display: flex; align-items: center; gap: .5rem; flex: none; background: #f1f4f9; border: 1px solid var(--line); border-radius: 999px; padding: .3rem .9rem .3rem .3rem; font: inherit; font-size: .9rem; font-weight: 700; color: var(--navy); cursor: pointer; }
+.account-login:hover { background: #e6ecf5; }
+.account-login[hidden] { display: none; }
+.account-avatar-empty { background: #fff; color: var(--navy); border: 1px solid var(--line); }
+.header-inner .account-name { display: inline; max-width: 8rem; }
+.account-who { display: grid; gap: .1rem; padding: .6rem .9rem .4rem; }
+.account-who-label { font-size: .75rem; text-transform: uppercase; letter-spacing: .04em; color: var(--gray); }
+.account-who strong { color: var(--navy); font-size: 1rem; }
+.account-who small { color: var(--gray); font-size: .82rem; }
+.account-who small:empty { display: none; }
+@media (max-width: 1400px) and (min-width: 1221px) { .header-inner .account-name { max-width: 5.5rem; } }
+@media (max-width: 560px) {
+  .header-inner .account-name, .account-login-text { display: none; }
+  .account-login { padding: .3rem; }
+}
