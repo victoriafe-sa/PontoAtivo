@@ -9,6 +9,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
 
+import pytest
+
 from ingestao.embeddings import DIMENSAO, embedding_da_consulta, gerar_embeddings
 
 CHUNKS = [
@@ -34,7 +36,8 @@ def similaridade(a, b):
     return sum(x * y for x, y in zip(a, b))
 
 
-def main():
+@pytest.mark.integration
+def test_recuperacao_com_modelo_e5():
     vetores = gerar_embeddings(CHUNKS)
     assert len(vetores) == len(CHUNKS)
     assert all(len(v) == DIMENSAO for v in vetores)
@@ -55,4 +58,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    test_recuperacao_com_modelo_e5()

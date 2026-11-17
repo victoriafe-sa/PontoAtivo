@@ -3,6 +3,7 @@
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 import argparse
+import errno
 import os
 from http.cookies import SimpleCookie, CookieError
 from urllib.parse import urlsplit, parse_qs, unquote
@@ -358,51 +359,59 @@ class Handler(SimpleHTTPRequestHandler):
             self.log_error("Falha na consulta da agenda: %s", type(error).__name__)
             self.reply(500, {"erro": "Não foi possível carregar agora. Tente novamente."})
 
+    def mutate_account(self, path, method):
+        if path == "/api/conta" and method == "POST":
+            data = self.read_json()
+            self.accounts.register(data)
+            token, user = self.accounts.login(data["login"], data["senha"], self.client_ip())
+            return self.reply(201, {"usuario": user}, self.cookie(token))
+        if path == "/api/sessao":
+            if method == "POST":
+                data = self.read_json()
+                token, user = self.accounts.login(data.get("login"), data.get("senha"), self.client_ip())
+                return self.reply(200, {"usuario": user}, self.cookie(token))
+            if method == "DELETE":
+                self.accounts.logout(self.token())
+                return self.reply(200, {"usuario": None}, self.cookie("", 0))
+        if path == "/api/sessao/admin" and method == "POST":
+            if not self.local_access():
+                raise ApiError(403, "O acesso de admin só funciona no computador do servidor.")
+            token, user = self.accounts.admin_login()
+            return self.reply(200, {"usuario": user}, self.cookie(token))
+        if path == "/api/conta/preferencias" and method == "PUT":
+            user = self.user(required=True)
+            return self.reply(200, {"preferencias": self.accounts.update_preferences(user["id"], self.read_json())})
+        raise ApiError(404, "Rota inexistente.")
+
+    def mutate_meeting(self, path, method):
+        match = EVENT_ROUTE.fullmatch(path)
+        if not (path == "/api/encontros" or match):
+            raise ApiError(404, "Rota inexistente.")
+        user = self.user(required=True)
+        if path == "/api/encontros" and method == "POST":
+            return self.reply(201, self.meetings.criar_encontro(user["id"], self.read_json()))
+        if match:
+            event_id, action = match.groups()
+            operation = {
+                ("participacao", "PUT"): self.meetings.entrar,
+                ("participacao", "DELETE"): self.meetings.sair,
+                ("cancelamento", "POST"): self.meetings.cancelar,
+            }.get((action, method))
+            if operation:
+                if method != "DELETE":
+                    self.read_json()
+                return self.reply(200, operation(event_id, user["id"]))
+        raise ApiError(404, "Rota inexistente.")
+
     def mutate(self, method):
         try:
             self.check_origin()
             path = urlsplit(self.path).path
             if path == "/api/perguntar" and method == "POST":
                 return self.ask()
-            if path == "/api/conta" and method == "POST":
-                data = self.read_json()
-                self.accounts.register(data)
-                token, user = self.accounts.login(data["login"], data["senha"], self.client_ip())
-                return self.reply(201, {"usuario": user}, self.cookie(token))
-            if path == "/api/sessao":
-                if method == "POST":
-                    data = self.read_json()
-                    token, user = self.accounts.login(data.get("login"), data.get("senha"), self.client_ip())
-                    return self.reply(200, {"usuario": user}, self.cookie(token))
-                if method == "DELETE":
-                    self.accounts.logout(self.token())
-                    return self.reply(200, {"usuario": None}, self.cookie("", 0))
-            if path == "/api/sessao/admin" and method == "POST":
-                if not self.local_access():
-                    raise ApiError(403, "O acesso de admin só funciona no computador do servidor.")
-                token, user = self.accounts.admin_login()
-                return self.reply(200, {"usuario": user}, self.cookie(token))
-            if path == "/api/conta/preferencias" and method == "PUT":
-                user = self.user(required=True)
-                return self.reply(200, {"preferencias": self.accounts.update_preferences(user["id"], self.read_json())})
-            match = EVENT_ROUTE.fullmatch(path)
-            if not (path == "/api/encontros" or match):
-                raise ApiError(404, "Rota inexistente.")
-            user = self.user(required=True)
-            if path == "/api/encontros" and method == "POST":
-                return self.reply(201, self.meetings.criar_encontro(user["id"], self.read_json()))
-            if match:
-                event_id, action = match.groups()
-                operation = {
-                    ("participacao", "PUT"): self.meetings.entrar,
-                    ("participacao", "DELETE"): self.meetings.sair,
-                    ("cancelamento", "POST"): self.meetings.cancelar,
-                }.get((action, method))
-                if operation:
-                    if method != "DELETE":
-                        self.read_json()
-                    return self.reply(200, operation(event_id, user["id"]))
-            raise ApiError(404, "Rota inexistente.")
+            if path.startswith(("/api/conta", "/api/sessao")):
+                return self.mutate_account(path, method)
+            return self.mutate_meeting(path, method)
         except ApiError as error:
             self.reply(error.status, {"erro": str(error)})
         except Exception as error:
@@ -436,8 +445,16 @@ def main():
         trust_proxy=os.getenv("PONTOATIVO_PROXY_CONFIAVEL", "").strip() in {"1", "sim", "true"},
         directory=static_dir,
     )
-    with ThreadingHTTPServer(("127.0.0.1", args.porta), handler) as server:
-        print(f"PontoAtivo: http://127.0.0.1:{args.porta}/", flush=True)
+    try:
+        server = ThreadingHTTPServer(("127.0.0.1", args.porta), handler)
+    except OSError as error:
+        if error.errno != errno.EADDRINUSE:
+            raise
+        outra_porta = args.porta + 1 if args.porta < 65535 else 8766
+        parser.exit(1, f"A porta {args.porta} já está em uso. Tente outra porta com o comando:\n"
+                       f"PYTHONPATH=src .venv/bin/python -m pontoativo_rag.web --porta {outra_porta}\n")
+    with server:
+        print(f"PontoAtivo: http://127.0.0.1:{server.server_port}/", flush=True)
         print(f"Modelo do mapa: {settings.map_model} · modelo das dúvidas: {settings.ollama_model}", flush=True)
         server.serve_forever()
 

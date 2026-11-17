@@ -25,7 +25,7 @@ def normalizar(t):
     return " ".join(t.split())
 
 
-def main():
+def test_chunks_das_fontes():
     chunks, _ = chunkar_pasta(PASTA)
     fontes = listar_fontes(PASTA)
 
@@ -79,4 +79,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    test_chunks_das_fontes()

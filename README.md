@@ -148,11 +148,9 @@ No Windows (PowerShell), use `$env:HF_HUB_OFFLINE = "1"` para ativar e `Remove-I
 ## Conferir o funcionamento
 
 ```bash
-.venv/bin/python tests/pipeline/teste_chunking.py
-.venv/bin/python tests/pipeline/teste_banco.py
-.venv/bin/python tests/pipeline/teste_embeddings.py
-.venv/bin/python tests/pipeline/teste_resposta.py
-.venv/bin/python tests/pipeline/test_registros_rag.py
+.venv/bin/python -m pytest --collect-only -q
+.venv/bin/python -m pytest -m "not integration"
+.venv/bin/python -m pytest -m integration
 ```
 
 | Teste | O que verifica |
@@ -176,7 +174,7 @@ Execute ambos os fluxos a partir da raiz.
 | Consulta e site | `src/main.py`, `src/ingestao/`, `src/recuperacao/`, `src/geracao/` | Usa `dados/catalogo.csv`, os textos em `dados/fontes/texto/` e o índice `dados/vetorial/`. O site lê `dados/chunks.jsonl`. |
 | Chat e mapa | `src/pontoativo_rag/` e [curadoria](curadoria/) | Usa `dados/catalogo_fontes.csv` e [fontes originais](dados/fontes_originais/). Gera chunks e índice próprios em `dados/rag/`. Veja o [guia de execução](docs/guia-rag.md). |
 
-A [coleta da SEDUH](dados/seduh/) conserva os dados geográficos e sua origem. Os [documentos de engenharia](docs/engenharia/) descrevem o pacote RAG. Em `tests/pipeline/` ficam as verificações do fluxo de consulta, incluindo os scripts manuais `teste_*.py`. A suíte do pacote fica em `tests/pontoativo_rag/`.
+A [coleta da SEDUH](dados/seduh/) conserva os dados geográficos e sua origem. Os [documentos de engenharia](docs/engenharia/) descrevem o pacote RAG. Em `tests/pipeline/` ficam as verificações do fluxo de consulta, descobertas pelo pytest nos arquivos `test_*.py` e `teste_*.py`. A suíte do pacote fica em `tests/pontoativo_rag/`.
 
 ## Documentação e fontes
 

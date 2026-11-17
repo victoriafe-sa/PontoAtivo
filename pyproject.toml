@@ -31,6 +31,7 @@ where = ["src"]
 [tool.pytest.ini_options]
 addopts = "-ra"
 testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py", "teste_*.py"]
 markers = [
   "integration: testes que usam modelos ou serviços externos",
 ]

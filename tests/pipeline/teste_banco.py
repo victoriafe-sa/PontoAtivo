@@ -41,7 +41,7 @@ def gerar_falso(textos):
     return [_vetor(t) for t in textos]
 
 
-def main():
+def test_carga_e_busca():
     # Chroma mantém handles nativos do índice abertos no Windows até o processo
     # terminar. Não confundir falha de limpeza temporária com falha de asserção.
     with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp:
@@ -94,4 +94,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    test_carga_e_busca()
