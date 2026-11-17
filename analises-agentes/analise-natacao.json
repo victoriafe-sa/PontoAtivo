@@ -1,0 +1,166 @@
+{
+  "consulta": "natacao gratuita",
+  "k": 5,
+  "resultados": [
+    {
+      "id": "F058-010",
+      "texto": "o pagamento deverá ser feito na conta do Fundo de Apoio ao Esporte do Distrito Federal, conforme dados abaixo:\nValores:\nR$ 60,00 (sessenta reais): crianças de 6 a 17 anos;\nR$ 80,00 (oitenta reais): adultos (mais de 18 anos).\nModalidades Ofertadas As modalidades oferecidas nos Conjunto Aquático podem ser visualizadas abaixo:\nNATAÇÃO\nSALTOS ORNAMENTAIS\nDEEP WATER\nNADO ARTISTCO\nMUSCULAÇÃO\nALONGAMENTO\nKARATÊ\nJIU JITSU NOGI\nGINASTICA ACROBATICA.\nRequisitos 1. Uma foto 3X4, atualizada.\n2. Cópia e original do RG com CPF.\n3. Cópia do comprovante de residência com CEP.\n4. Declaração escolar, para os alunos da rede pública e Secretaria de Educação do DF, de matrícula do ano vigente.\n5. Cópia e original da Carteira de Deficiente ou Laudo Médico e cópia, para os alunos com deficiência.",
+      "metadados": {
+        "validacao": "Pendente de validação humana",
+        "link": "https://www.esporte.df.gov.br/parque-aquatico-claudio-coutinho",
+        "ressalvas": "Endereço incompleto no original ('SRPN – Brasília, DF, 70655-775'); sem horários das aulas. Removidos o bloco duplicado com datas de testes de 2025 e os dados bancários institucionais. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "tipo_evidencia": "Informativo institucional do espaço (matrículas)",
+        "abrangencia": "Plano Piloto",
+        "orgao": "Secretaria de Esporte e Lazer do DF (SEL-DF)",
+        "data_publicacao": "17/02/2025 (atualizada em outra data; ver texto)",
+        "total_chunks": 14,
+        "titulo": "Conjunto Aquático Cláudio Coutinho",
+        "tema": "Conjunto aquático: modalidades, inscrição, gratuidade/PcD, taxa semestral e localização",
+        "data_coleta": "2026-11-05",
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "regioes": "",
+        "tipo_chunk": "texto",
+        "indice_chunk": 10,
+        "id_fonte": "F058",
+        "recorte": ""
+      },
+      "distancia": 0.18635016679763794,
+      "similaridade": 0.8136498332023621
+    },
+    {
+      "id": "F007-005",
+      "texto": "11h às14h30\n• Trabalho Social com Idosos– Grupo dos Mais Vividos (Oficinas sistemáticas e campanhas socioeducativas)\n• Desenvolvimento comunitário (projeto Mulheres que Cuidam de Si)\n• Sesc Cidadania\nBallet\nBaby class\nJazz\nSala de Ciências\nSesc Oceanário\nClube de Astronomia\n• Musculação\n• Pilates solo\n• Basquetebol\n• Futsal\n• Voleibol\n• Natação infantil e adulta\n• Natação para bebê\n• Hidroginástica\n• Judô\n• Projeto SESC Olímpico\n• Krav Maga\n• KungFu\n• Box Chinês\n• Pacote Fitness (HIIT, Treino Funcional, Ginástica Localizada e Ciclismo Indoor)\n• Sesc Clube de Corridas\n• Kid+Sesc\nAlergologia Pediátrica\nGinecologia\nOftalmologia\nExames Oftalmológicos\nMamografia\nMedicina da Família\nUltrassonografias\nClínica Geral\nPediatria\nPsiquiatria\nExame de Pele para uso da Piscina\nConsulta de Enfermagem",
+      "metadados": {
+        "validacao": "Pendente de validação humana",
+        "recorte": "",
+        "regioes": "",
+        "data_coleta": "2026-11-05",
+        "link": "https://www.sescdf.com.br/web/guest/taguatinga-norte",
+        "ressalvas": "Entidade não governamental. A página não traz informações de acessibilidade. Removidos blocos de interface (Trabalhe Conosco, Cardápio, Convênios...), tour virtual e notícias. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "id_fonte": "F007",
+        "indice_chunk": 5,
+        "data_publicacao": "não identificada no texto",
+        "orgao": "Sesc-DF (entidade do Sistema S; não governamental)",
+        "tipo_evidencia": "Informativo institucional do espaço",
+        "abrangencia": "Taguatinga",
+        "tema": "Unidade Sesc: endereço, horário, estruturas e modalidades",
+        "titulo": "Sesc Taguatinga Norte (Unidade Francisco Valdenir Machado Elias)",
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "total_chunks": 6,
+        "tipo_chunk": "texto"
+      },
+      "distancia": 0.18897509574890137,
+      "similaridade": 0.8110249042510986
+    },
+    {
+      "id": "R03-221",
+      "texto": "REGISTROS DE QUADRAS, CAMPOS, SKATE PARK E APARELHOS DE GINÁSTICA (exclui PEC e parque infantil): 1245\nColunas: tipo | região administrativa (domínio oficial da camada) | endereço | condição | estado de conservação (quando preenchido) | conflito | implantação | atualização\nQUADRA POLIESPORTIVA | TAGUATINGA | BAIRRO AGUAS CLARAS_PARQUE URBANO | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015\nCAMPO SINTETICO | TAGUATINGA | BAIRRO AGUAS CLARAS_PARQUE URBANO | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015\nQUADRA DE AREIA | TAGUATINGA | BAIRRO AGUAS CLARAS_PARQUE URBANO | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015\nAPARELHO DE GINASTICA | TAGUATINGA | CNB1/ QNB1 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015\nQUADRA POLIESPORTIVA | TAGUATINGA | CNC 3/5 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 01/07/2015",
+      "metadados": {
+        "data_publicacao": "metadado atualizado em 2023-03-07",
+        "data_coleta": "2026-11-07",
+        "ressalvas": "Mesma camada e mesma ressalva do R02 (obsoleta). Endereços são texto livre do cadastro e podem não ser localizáveis. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "tipo_evidencia": "Cadastro oficial georreferenciado (extrato: exclui PEC e parque infantil)",
+        "abrangencia": "DF",
+        "id_fonte": "R03",
+        "tema": "Quadras poliesportivas, quadras de areia, campos, skate parks e aparelhos de ginástica, com endereço e região administrativa",
+        "recorte": "",
+        "link": "https://metadados.seduh.df.gov.br/geonetwork/srv/por/catalog.search#/metadata/ba2bf94f-49fa-4700-ba79-5525433c7d1d",
+        "orgao": "Secretaria de Desenvolvimento Urbano e Habitação do DF (SEDUH-DF); camada na IDE-DF",
+        "total_chunks": 255,
+        "validacao": "Pendente de validação humana",
+        "comprova_funcionamento": "Não (camada declarada 'obsoleta' no metadado oficial)",
+        "indice_chunk": 221,
+        "regioes": "TAGUATINGA",
+        "tipo_chunk": "registros",
+        "titulo": "Mobiliário Esporte e Lazer: quadras, campos, skate e ginástica (cadastro oficial SEDUH-DF)"
+      },
+      "distancia": 0.19066977500915527,
+      "similaridade": 0.8093302249908447
+    },
+    {
+      "id": "F058-012",
+      "texto": "do pagamento de taxa de matrícula, sendo necessária a apresentação no ato da matrícula de documentação comprobatória.\n7. Para os alunos que possuem a partir de 70 (setenta) anos de idade, é obrigatória a apresentação de atestado médico para a prática da respectiva modalidade, informando, inclusive, que não possui qualquer contraindicação e doença infectocontagiosa que seja impeditiva para realizar essa prática, nos termos do inciso III da Lei nº 2.185, de 30 de dezembro de 1998.",
+      "metadados": {
+        "tipo_chunk": "texto",
+        "recorte": "",
+        "abrangencia": "Plano Piloto",
+        "regioes": "",
+        "indice_chunk": 12,
+        "orgao": "Secretaria de Esporte e Lazer do DF (SEL-DF)",
+        "tipo_evidencia": "Informativo institucional do espaço (matrículas)",
+        "validacao": "Pendente de validação humana",
+        "titulo": "Conjunto Aquático Cláudio Coutinho",
+        "ressalvas": "Endereço incompleto no original ('SRPN – Brasília, DF, 70655-775'); sem horários das aulas. Removidos o bloco duplicado com datas de testes de 2025 e os dados bancários institucionais. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "data_publicacao": "17/02/2025 (atualizada em outra data; ver texto)",
+        "data_coleta": "2026-11-05",
+        "link": "https://www.esporte.df.gov.br/parque-aquatico-claudio-coutinho",
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "tema": "Conjunto aquático: modalidades, inscrição, gratuidade/PcD, taxa semestral e localização",
+        "id_fonte": "F058",
+        "total_chunks": 14
+      },
+      "distancia": 0.1908177137374878,
+      "similaridade": 0.8091822862625122
+    },
+    {
+      "id": "F058-001",
+      "texto": "### Conjunto Aquático Cláudio Coutinho\n17/02/25 às 15h05 - Atualizado em 06/04/26 às 15h43\n## Conjunto Aquático Cláudio Coutinho\nMatrículas 2026\nPrograma Escola de Esporte, da Secretaria de Esporte e Lazer\nAtenção ao inicio das pré - inscrições nas modalidades secas e aquáticas, no Programa Escola de Esporte da Secretaria de Esporte e Lazer\nModalidades secas:\nKARATÊ\nJIU-JITSU\nMUSCULAÇÃO\nGINÁSTICA ACROBÁTICA\nNo caso das modalidades secas a pré inscrição será feita direto no link: sistemas.df.gov.br/complexoaquaticoclaudiocoutinho, uma vez por semestre quando houver vaga, no período disponibilizado na época .\nModalidades aquáticas:\nDEEP WATER\nNATAÇÃO\nNADO ARTÍSITICO\nSALTOS ORNAMENTAIS",
+      "metadados": {
+        "data_coleta": "2026-11-05",
+        "regioes": "",
+        "total_chunks": 14,
+        "titulo": "Conjunto Aquático Cláudio Coutinho",
+        "tipo_chunk": "texto",
+        "ressalvas": "Endereço incompleto no original ('SRPN – Brasília, DF, 70655-775'); sem horários das aulas. Removidos o bloco duplicado com datas de testes de 2025 e os dados bancários institucionais. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "indice_chunk": 1,
+        "tema": "Conjunto aquático: modalidades, inscrição, gratuidade/PcD, taxa semestral e localização",
+        "orgao": "Secretaria de Esporte e Lazer do DF (SEL-DF)",
+        "link": "https://www.esporte.df.gov.br/parque-aquatico-claudio-coutinho",
+        "validacao": "Pendente de validação humana",
+        "recorte": "",
+        "id_fonte": "F058",
+        "data_publicacao": "17/02/2025 (atualizada em outra data; ver texto)",
+        "tipo_evidencia": "Informativo institucional do espaço (matrículas)",
+        "abrangencia": "Plano Piloto"
+      },
+      "distancia": 0.19101309776306152,
+      "similaridade": 0.8089869022369385
+    }
+  ],
+  "analise": [
+    {
+      "duvida": "natacao gratuita",
+      "estado": "divergencia",
+      "conclusao": "Os documentos apresentam informações conflitantes sobre a gratuidade da natação dependendo do local:",
+      "evidencias": [
+        {
+          "id": "F058-010",
+          "passagem": "Valores:\nR$ 60,00 (sessenta reais): crianças de 6 a 17 anos;\nR$ 80,00 (oitenta reais): adultos (mais de 18 anos)."
+        },
+        {
+          "id": "F058-010",
+          "passagem": "Modalidades Ofertadas As modalidades oferecidas nos Conjunto Aquático podem ser visualizadas abaixo:\nNATAÇÃO"
+        }
+      ],
+      "trechos": [
+        "F058-010"
+      ]
+    },
+    {
+      "duvida": "natacao gratuita",
+      "estado": "lacuna",
+      "conclusao": "Não há informações sobre a gratuidade da natação na unidade do Sesc Taguatinga Norte.",
+      "evidencias": [
+        {
+          "id": "F007-005",
+          "passagem": "• Natação infantil e adulta"
+        }
+      ],
+      "trechos": [
+        "F007-005"
+      ]
+    }
+  ],
+  "rascunho": "natacao gratuita (divergencia) Os documentos apresentam informações conflitantes sobre a gratuidade da natação dependendo do local: [F058-010]\nnatacao gratuita (lacuna) Não há informações sobre a gratuidade da natação na unidade do Sesc Taguatinga Norte. [F007-005]"
+}

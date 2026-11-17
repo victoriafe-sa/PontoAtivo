@@ -1,0 +1,158 @@
+{
+  "consulta": "quadribol equipes",
+  "k": 5,
+  "resultados": [
+    {
+      "id": "R03-161",
+      "texto": "REGISTROS DE QUADRAS, CAMPOS, SKATE PARK E APARELHOS DE GINÁSTICA (exclui PEC e parque infantil): 1245\nColunas: tipo | região administrativa (domínio oficial da camada) | endereço | condição | estado de conservação (quando preenchido) | conflito | implantação | atualização\nQUADRA POLIESPORTIVA | RIACHO FUNDO | TERCEIRA ETAPA QS 14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015\nQUADRA DE AREIA | SAMAMBAIA | PARQUE TRES MENINAS | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015\nQUADRA POLIESPORTIVA | SAMAMBAIA | PARQUE TRES MENINAS | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015\nQUADRA POLIESPORTIVA | SAMAMBAIA | QN 303 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015\nQUADRA POLIESPORTIVA | SAMAMBAIA | QN 311 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015",
+      "metadados": {
+        "data_coleta": "2026-11-07",
+        "orgao": "Secretaria de Desenvolvimento Urbano e Habitação do DF (SEDUH-DF); camada na IDE-DF",
+        "abrangencia": "DF",
+        "titulo": "Mobiliário Esporte e Lazer: quadras, campos, skate e ginástica (cadastro oficial SEDUH-DF)",
+        "validacao": "Pendente de validação humana",
+        "tipo_chunk": "registros",
+        "regioes": "RIACHO FUNDO, SAMAMBAIA",
+        "data_publicacao": "metadado atualizado em 2023-03-07",
+        "tipo_evidencia": "Cadastro oficial georreferenciado (extrato: exclui PEC e parque infantil)",
+        "tema": "Quadras poliesportivas, quadras de areia, campos, skate parks e aparelhos de ginástica, com endereço e região administrativa",
+        "recorte": "",
+        "total_chunks": 255,
+        "indice_chunk": 161,
+        "ressalvas": "Mesma camada e mesma ressalva do R02 (obsoleta). Endereços são texto livre do cadastro e podem não ser localizáveis. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "id_fonte": "R03",
+        "comprova_funcionamento": "Não (camada declarada 'obsoleta' no metadado oficial)",
+        "link": "https://metadados.seduh.df.gov.br/geonetwork/srv/por/catalog.search#/metadata/ba2bf94f-49fa-4700-ba79-5525433c7d1d"
+      },
+      "distancia": 0.1790698766708374,
+      "similaridade": 0.8209301233291626
+    },
+    {
+      "id": "R03-175",
+      "texto": "REGISTROS DE QUADRAS, CAMPOS, SKATE PARK E APARELHOS DE GINÁSTICA (exclui PEC e parque infantil): 1245\nColunas: tipo | região administrativa (domínio oficial da camada) | endereço | condição | estado de conservação (quando preenchido) | conflito | implantação | atualização\nQUADRA POLIESPORTIVA | SAMAMBAIA | QS 115 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015\nCAMPO SINTETICO | SAMAMBAIA | QS 118 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015\nQUADRA DE AREIA | SAMAMBAIA | QS 118 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015\nQUADRA POLIESPORTIVA | SAMAMBAIA | QS 120 | ISOLADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015\nQUADRA POLIESPORTIVA | SAMAMBAIA | QS 123 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015",
+      "metadados": {
+        "validacao": "Pendente de validação humana",
+        "tipo_evidencia": "Cadastro oficial georreferenciado (extrato: exclui PEC e parque infantil)",
+        "tipo_chunk": "registros",
+        "total_chunks": 255,
+        "abrangencia": "DF",
+        "link": "https://metadados.seduh.df.gov.br/geonetwork/srv/por/catalog.search#/metadata/ba2bf94f-49fa-4700-ba79-5525433c7d1d",
+        "ressalvas": "Mesma camada e mesma ressalva do R02 (obsoleta). Endereços são texto livre do cadastro e podem não ser localizáveis. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "data_coleta": "2026-11-07",
+        "tema": "Quadras poliesportivas, quadras de areia, campos, skate parks e aparelhos de ginástica, com endereço e região administrativa",
+        "titulo": "Mobiliário Esporte e Lazer: quadras, campos, skate e ginástica (cadastro oficial SEDUH-DF)",
+        "data_publicacao": "metadado atualizado em 2023-03-07",
+        "comprova_funcionamento": "Não (camada declarada 'obsoleta' no metadado oficial)",
+        "recorte": "",
+        "id_fonte": "R03",
+        "indice_chunk": 175,
+        "orgao": "Secretaria de Desenvolvimento Urbano e Habitação do DF (SEDUH-DF); camada na IDE-DF",
+        "regioes": "SAMAMBAIA"
+      },
+      "distancia": 0.17932665348052979,
+      "similaridade": 0.8206733465194702
+    },
+    {
+      "id": "R03-178",
+      "texto": "REGISTROS DE QUADRAS, CAMPOS, SKATE PARK E APARELHOS DE GINÁSTICA (exclui PEC e parque infantil): 1245\nColunas: tipo | região administrativa (domínio oficial da camada) | endereço | condição | estado de conservação (quando preenchido) | conflito | implantação | atualização\nQUADRA POLIESPORTIVA | SAMAMBAIA | QS 433 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015\nQUADRA POLIESPORTIVA | SAMAMBAIA | QS 501 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015\nQUADRA POLIESPORTIVA | SAMAMBAIA | QS 502 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015\nQUADRA POLIESPORTIVA | SAMAMBAIA | QS 604 | ISOLADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015\nQUADRA POLIESPORTIVA | SAMAMBAIA | QS 605 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015",
+      "metadados": {
+        "id_fonte": "R03",
+        "data_coleta": "2026-11-07",
+        "total_chunks": 255,
+        "tema": "Quadras poliesportivas, quadras de areia, campos, skate parks e aparelhos de ginástica, com endereço e região administrativa",
+        "ressalvas": "Mesma camada e mesma ressalva do R02 (obsoleta). Endereços são texto livre do cadastro e podem não ser localizáveis. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "regioes": "SAMAMBAIA",
+        "abrangencia": "DF",
+        "indice_chunk": 178,
+        "orgao": "Secretaria de Desenvolvimento Urbano e Habitação do DF (SEDUH-DF); camada na IDE-DF",
+        "validacao": "Pendente de validação humana",
+        "data_publicacao": "metadado atualizado em 2023-03-07",
+        "tipo_evidencia": "Cadastro oficial georreferenciado (extrato: exclui PEC e parque infantil)",
+        "recorte": "",
+        "link": "https://metadados.seduh.df.gov.br/geonetwork/srv/por/catalog.search#/metadata/ba2bf94f-49fa-4700-ba79-5525433c7d1d",
+        "tipo_chunk": "registros",
+        "titulo": "Mobiliário Esporte e Lazer: quadras, campos, skate e ginástica (cadastro oficial SEDUH-DF)",
+        "comprova_funcionamento": "Não (camada declarada 'obsoleta' no metadado oficial)"
+      },
+      "distancia": 0.17942053079605103,
+      "similaridade": 0.820579469203949
+    },
+    {
+      "id": "R03-164",
+      "texto": "REGISTROS DE QUADRAS, CAMPOS, SKATE PARK E APARELHOS DE GINÁSTICA (exclui PEC e parque infantil): 1245\nColunas: tipo | região administrativa (domínio oficial da camada) | endereço | condição | estado de conservação (quando preenchido) | conflito | implantação | atualização\nQUADRA POLIESPORTIVA | SAMAMBAIA | QN 421 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015\nQUADRA POLIESPORTIVA | SAMAMBAIA | QN 423 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015\nCAMPO ILUMINADO | SAMAMBAIA | QN 433 | INTEGRADO | — | SIM | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015\nQUADRA POLIESPORTIVA | SAMAMBAIA | QN 433 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015\nQUADRA DE AREIA | SAMAMBAIA | QN 433 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015",
+      "metadados": {
+        "ressalvas": "Mesma camada e mesma ressalva do R02 (obsoleta). Endereços são texto livre do cadastro e podem não ser localizáveis. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "indice_chunk": 164,
+        "tipo_chunk": "registros",
+        "validacao": "Pendente de validação humana",
+        "abrangencia": "DF",
+        "data_publicacao": "metadado atualizado em 2023-03-07",
+        "total_chunks": 255,
+        "tipo_evidencia": "Cadastro oficial georreferenciado (extrato: exclui PEC e parque infantil)",
+        "recorte": "",
+        "regioes": "SAMAMBAIA",
+        "tema": "Quadras poliesportivas, quadras de areia, campos, skate parks e aparelhos de ginástica, com endereço e região administrativa",
+        "link": "https://metadados.seduh.df.gov.br/geonetwork/srv/por/catalog.search#/metadata/ba2bf94f-49fa-4700-ba79-5525433c7d1d",
+        "orgao": "Secretaria de Desenvolvimento Urbano e Habitação do DF (SEDUH-DF); camada na IDE-DF",
+        "id_fonte": "R03",
+        "comprova_funcionamento": "Não (camada declarada 'obsoleta' no metadado oficial)",
+        "titulo": "Mobiliário Esporte e Lazer: quadras, campos, skate e ginástica (cadastro oficial SEDUH-DF)",
+        "data_coleta": "2026-11-07"
+      },
+      "distancia": 0.1806579828262329,
+      "similaridade": 0.8193420171737671
+    },
+    {
+      "id": "F028-009",
+      "texto": "QS 16 Área Especial F Riacho Fundo 1 – DF\nTelefone: (61)2017-3021 Ramal 2028\nPlanaltina\nDiretor: Giliardo da Silva\nEndereço: Setor Recreativo e Cultural Módulo Esportivo (ao lado Restaurante Comunitário).\nTelefone: (61)2017-3021 Ramal 2023\nSamambaia\nDiretor: Farion Souza\nEndereço: QS 119 Área Especial 01, Centro Urbano – Samambaia Sul/DF.\nTelefone: (61)2017-3021 Ramal 2036\nSubsecretaria dos Centros Olímpicos e Paralímpicos\nSubsecretário: Léo Vivas\nE-mail: subcop@esporte.df.gov.br\nTelefones: (61)2017-3021",
+      "metadados": {
+        "ressalvas": "A tabela de modalidades por unidade não consta do texto (no site não é texto simples). Página atualizada em 26/06/2026. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "orgao": "Secretaria de Esporte e Lazer do DF (SEL-DF)",
+        "link": "https://www.esporte.df.gov.br/cops",
+        "tipo_evidencia": "Informativo institucional do espaço (endereços, diretores, matrícula)",
+        "titulo": "Centros Olímpicos e Paralímpicos",
+        "tipo_chunk": "texto",
+        "id_fonte": "F028",
+        "data_publicacao": "19/02/2025 (atualizada em outra data; ver texto)",
+        "abrangencia": "DF (12 unidades)",
+        "validacao": "Pendente de validação humana",
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "recorte": "",
+        "total_chunks": 9,
+        "tema": "COPs: unidades, endereços e regras de matrícula",
+        "indice_chunk": 9,
+        "regioes": "",
+        "data_coleta": "2026-11-05"
+      },
+      "distancia": 0.18087947368621826,
+      "similaridade": 0.8191205263137817
+    }
+  ],
+  "analise": [
+    {
+      "duvida": "quadribol equipes",
+      "estado": "lacuna",
+      "conclusao": "Os documentos fornecidos não contêm informações sobre 'quadribol' ou 'equipes'. Os registros tratam de infraestrutura esportiva (quadras poliesportivas, campos sintéticos, quadras de areia) e endereços de Centros Olímpicos e Paralímpicos.",
+      "evidencias": [
+        {
+          "id": "R03-161",
+          "passagem": "QUADRA POLIESPORTIVA | RIACHO FUNDO | TERCEIRA ETAPA QS 14 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 12/08/2015"
+        },
+        {
+          "id": "R03-175",
+          "passagem": "CAMPO SINTETICO | SAMAMBAIA | QS 118 | INTEGRADO | — | NAO | não informada (valor-padrão de 1900 no cadastro) | 16/06/2015"
+        },
+        {
+          "id": "F028-009",
+          "passagem": "QS 16 Área Especial F Riacho Fundo 1 – DF\nTelefone: (61)2017-3021 Ramal 2028\nPlanaltina\nDiretor: Giliardo da Silva\nEndereço: Setor Recreativo e Cultural Módulo Esportivo (ao lado Restaurante Comunitário)."
+        }
+      ],
+      "trechos": [
+        "R03-161",
+        "R03-175",
+        "F028-009"
+      ]
+    }
+  ],
+  "rascunho": "quadribol equipes (lacuna) Os documentos fornecidos não contêm informações sobre 'quadribol' ou 'equipes'. Os registros tratam de infraestrutura esportiva (quadras poliesportivas, campos sintéticos, quadras de areia) e endereços de Centros Olímpicos e Paralímpicos. [R03-161] [R03-175] [F028-009]"
+}

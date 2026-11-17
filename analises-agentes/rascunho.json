@@ -1,0 +1,132 @@
+{
+  "consulta": "sexo gratis",
+  "k": 5,
+  "resultados": [
+    {
+      "id": "N04-002",
+      "texto": "a atividades físicas, além de reforçar a conexão entre prática esportiva e qualidade de vida em um ambiente ao ar livre.\nReaberta em junho de 2024, a academia pública do Parque da Cidade oferece atividades físicas gratuitas, ao ar livre | Foto: Paulo H. Carvalho/Agência Brasília\nNo segundo semestre do ano, o perfil dos frequentadores revela uma adesão diversificada. Dos usuários da academia, 58% são homens e 42% mulheres. Enquanto as aulas coletivas atraem majoritariamente o público feminino (74% de participação), a musculação é preferida pelos homens (66%). O espaço tem capacidade para receber até 45 pessoas simultaneamente.",
+      "metadados": {
+        "total_chunks": 8,
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "abrangencia": "Plano Piloto (inferida: o texto não cita a RA)",
+        "link": "https://www.agenciabrasilia.df.gov.br/w/academia-publica-do-parque-da-cidade-vira-ponto-de-encontro-e-saude-para-brasilienses",
+        "tipo_evidencia": "Notícia institucional (11/01/2025)",
+        "data_coleta": "2026-11-07",
+        "validacao": "Pendente de validação humana",
+        "tipo_chunk": "texto",
+        "orgao": "Agência Brasília (GDF)",
+        "id_fonte": "N04",
+        "recorte": "",
+        "data_publicacao": "11/01/2025",
+        "titulo": "Academia pública do Parque da Cidade vira ponto de encontro e saúde para brasilienses",
+        "indice_chunk": 2,
+        "tema": "Academia pública gratuita do Parque da Cidade: horários e modalidades",
+        "ressalvas": "Horários e perfil de uso referem-se a 2024/2025: confirmar atualidade. Espaço mantido em parceria com empresas privadas. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "regioes": ""
+      },
+      "distancia": 0.19265025854110718,
+      "similaridade": 0.8073497414588928
+    },
+    {
+      "id": "N04-001",
+      "texto": "11/01/2025 às 08h25 - Atualizado em 26/10/2026 às 01h04\n# Academia pública do Parque da Cidade vira ponto de encontro e saúde para brasilienses\nReaberto em 2024, espaço oferece atividades físicas gratuitas e promove bem-estar em meio à natureza do maior parque urbano da América Latina\nPor Thaís Miranda, da Agência Brasília | Edição: Carolina Caraballo\nA academia pública do Parque da Cidade Sarah Kubitschek tornou-se um ponto de encontro para brasilienses de diferentes idades e estilos de vida. Reaberta em junho de 2024 graças a uma parceria do Governo do Distrito Federal (GDF) com o Laboratório Exame e a empresa Mude, o espaço oferece acesso gratuito a atividades físicas, além de reforçar a conexão entre prática esportiva e qualidade de vida em um ambiente ao ar livre.",
+      "metadados": {
+        "orgao": "Agência Brasília (GDF)",
+        "tema": "Academia pública gratuita do Parque da Cidade: horários e modalidades",
+        "data_coleta": "2026-11-07",
+        "recorte": "",
+        "data_publicacao": "11/01/2025",
+        "id_fonte": "N04",
+        "total_chunks": 8,
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "link": "https://www.agenciabrasilia.df.gov.br/w/academia-publica-do-parque-da-cidade-vira-ponto-de-encontro-e-saude-para-brasilienses",
+        "validacao": "Pendente de validação humana",
+        "tipo_chunk": "texto",
+        "regioes": "",
+        "ressalvas": "Horários e perfil de uso referem-se a 2024/2025: confirmar atualidade. Espaço mantido em parceria com empresas privadas. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "indice_chunk": 1,
+        "abrangencia": "Plano Piloto (inferida: o texto não cita a RA)",
+        "titulo": "Academia pública do Parque da Cidade vira ponto de encontro e saúde para brasilienses",
+        "tipo_evidencia": "Notícia institucional (11/01/2025)"
+      },
+      "distancia": 0.19531112909317017,
+      "similaridade": 0.8046888709068298
+    },
+    {
+      "id": "F007-005",
+      "texto": "11h às14h30\n• Trabalho Social com Idosos– Grupo dos Mais Vividos (Oficinas sistemáticas e campanhas socioeducativas)\n• Desenvolvimento comunitário (projeto Mulheres que Cuidam de Si)\n• Sesc Cidadania\nBallet\nBaby class\nJazz\nSala de Ciências\nSesc Oceanário\nClube de Astronomia\n• Musculação\n• Pilates solo\n• Basquetebol\n• Futsal\n• Voleibol\n• Natação infantil e adulta\n• Natação para bebê\n• Hidroginástica\n• Judô\n• Projeto SESC Olímpico\n• Krav Maga\n• KungFu\n• Box Chinês\n• Pacote Fitness (HIIT, Treino Funcional, Ginástica Localizada e Ciclismo Indoor)\n• Sesc Clube de Corridas\n• Kid+Sesc\nAlergologia Pediátrica\nGinecologia\nOftalmologia\nExames Oftalmológicos\nMamografia\nMedicina da Família\nUltrassonografias\nClínica Geral\nPediatria\nPsiquiatria\nExame de Pele para uso da Piscina\nConsulta de Enfermagem",
+      "metadados": {
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "id_fonte": "F007",
+        "regioes": "",
+        "recorte": "",
+        "abrangencia": "Taguatinga",
+        "titulo": "Sesc Taguatinga Norte (Unidade Francisco Valdenir Machado Elias)",
+        "indice_chunk": 5,
+        "data_publicacao": "não identificada no texto",
+        "data_coleta": "2026-11-05",
+        "tema": "Unidade Sesc: endereço, horário, estruturas e modalidades",
+        "validacao": "Pendente de validação humana",
+        "link": "https://www.sescdf.com.br/web/guest/taguatinga-norte",
+        "ressalvas": "Entidade não governamental. A página não traz informações de acessibilidade. Removidos blocos de interface (Trabalhe Conosco, Cardápio, Convênios...), tour virtual e notícias. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "tipo_evidencia": "Informativo institucional do espaço",
+        "tipo_chunk": "texto",
+        "orgao": "Sesc-DF (entidade do Sistema S; não governamental)",
+        "total_chunks": 6
+      },
+      "distancia": 0.1962760090827942,
+      "similaridade": 0.8037239909172058
+    },
+    {
+      "id": "F007-004",
+      "texto": "• Unidade Móvel Oceanário\n• 2 Consultórios de Clínica Geral\n• 1 Consultório de Pediatria\n• 1 Consultório deOftalmologia\n• 1 Consultório de Ginecologia\n• 1 Consultório de Psicologia\n• 1 Sala de triagem\n•1 Sala de preparo para exames de Mamografiae Ecografia\n• 1 Consultório de Nutrição Esportiva\n• 1 Sala de Ecografia\n• 1 Sala de Mamografia\n• Laboratório (exames laboratoriais)\n• Sala de atividades do Sesc Mais Vividos\n• Central de relacionamento com o cliente (matrículas e saúde)\n• Serviço de café da manhã buffet - Segunda a Sexta: 07h às 10h\n• Lanchonete - Segunda a Sexta: 15h às 18h30 /FinaisdeSemanaeFeriados: 09h às 16h\n• Restaurante -Todos os dias: 11h às14h30\n• Trabalho Social com Idosos– Grupo dos Mais Vividos (Oficinas sistemáticas e campanhas socioeducativas)",
+      "metadados": {
+        "tipo_chunk": "texto",
+        "tema": "Unidade Sesc: endereço, horário, estruturas e modalidades",
+        "validacao": "Pendente de validação humana",
+        "id_fonte": "F007",
+        "data_coleta": "2026-11-05",
+        "regioes": "",
+        "link": "https://www.sescdf.com.br/web/guest/taguatinga-norte",
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "total_chunks": 6,
+        "recorte": "",
+        "data_publicacao": "não identificada no texto",
+        "ressalvas": "Entidade não governamental. A página não traz informações de acessibilidade. Removidos blocos de interface (Trabalhe Conosco, Cardápio, Convênios...), tour virtual e notícias. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "orgao": "Sesc-DF (entidade do Sistema S; não governamental)",
+        "abrangencia": "Taguatinga",
+        "indice_chunk": 4,
+        "tipo_evidencia": "Informativo institucional do espaço",
+        "titulo": "Sesc Taguatinga Norte (Unidade Francisco Valdenir Machado Elias)"
+      },
+      "distancia": 0.1993160843849182,
+      "similaridade": 0.8006839156150818
+    },
+    {
+      "id": "F009-008",
+      "texto": "O também se destaca como palco de diversas atividades gratuitas nas áreas de lazer, saúde, bem-estar, cultura e esporte. Ao longo do ano, o espaço recebe ações comunitárias, eventos esportivos, atividades físicas orientadas, apresentações culturais e iniciativas voltadas à promoção da qualidade de vida, reunindo moradores de diferentes idades. Essas programações reforçam o potencial do parque como um importante espaço público para a realização de eventos voltados à população, estimulando a convivência social, o uso consciente da área verde e o fortalecimento dos vínculos comunitários em Ceilândia.\nHistórico\nCriado em 1995, o espaço enfrentou diversos desafios ao longo dos anos até ser plenamente liberado para uso da população.",
+      "metadados": {
+        "data_coleta": "2026-11-05",
+        "tema": "Parque Urbano do Setor O: benfeitorias entregues (cercamento, acessos, iluminação LED) e horário de funcionamento",
+        "orgao": "Agência Brasília (GDF), com informações da Administração Regional de Ceilândia",
+        "abrangencia": "Ceilândia",
+        "tipo_chunk": "texto",
+        "total_chunks": 9,
+        "comprova_funcionamento": "Não (descreve a situação na data da publicação)",
+        "validacao": "Pendente de validação humana",
+        "link": "https://agenciabrasilia.df.gov.br/w/parque-urbano-do-setor-o-se-consolida-como-espaco-de-lazer-seguranca-e-convivencia-em-ceilandia",
+        "id_fonte": "F009",
+        "titulo": "Parque Urbano do Setor O se solidifica como espaço de lazer, segurança e convivência em Ceilândia",
+        "tipo_evidencia": "Notícia: entrega/instalação concluída (publicada em 06/01/2026)",
+        "regioes": "",
+        "data_publicacao": "06/01/2026",
+        "recorte": "",
+        "ressalvas": "A notícia informa o horário (diariamente, das 5h às 23h); confirmar a atualidade. Bloco 'Leia também' removido. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "indice_chunk": 8
+      },
+      "distancia": 0.19938790798187256,
+      "similaridade": 0.8006120920181274
+    }
+  ],
+  "rascunho": "### Rascunho para o Agente de Validação\n\n**Pergunta:** sexo gratis\n\n**Análise das Evidências:**\nAs fontes fornecidas não contêm nenhuma informação sobre a expressão \"sexo gratis\" no sentido de serviços sexuais ou entretenimento adulto. As evidências tratam exclusivamente de atividades físicas, saúde e lazer em espaços públicos e unidades do Sesc. O termo \"gratis\" aparece apenas no contexto de serviços públicos gratuitos (exercícios físicos e ações comunitárias).\n\n**Orientações para Validação:**\n\n*   **Sobre a oferta de serviços sexuais:**\n    *   **Orientação:** Não há nenhuma evidência nos documentos que sustente a existência de \"sexo grátis\" ou qualquer serviço dessa natureza. [N04-001, N04-002, F007-004, F007-005, F009-008]\n    *   **Dados faltantes:** Não aplicável (a informação não existe nas fontes).\n\n*   **Sobre atividades físicas gratuitas (contexto do termo \"grátis\"):**\n    *   **Orientação:** A academia pública do Parque da Cidade oferece acesso gratuito a atividades físicas e bem-estar em ambiente ao ar livre [N04-001, N04-002].\n    *   **Orientação:** O Parque Urbano do Setor O em Ceilândia também é um espaço para diversas atividades gratuitas nas áreas de lazer, saúde, bem-estar, cultura e esporte [F009-008].\n\n**Conclusão:**\nA pergunta não pode ser atendida com informações positivas conforme as evidências, pois o tema solicitado não consta nos documentos fornecidos."
+}
