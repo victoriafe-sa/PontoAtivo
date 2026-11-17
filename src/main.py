@@ -1,16 +1,16 @@
-"""Consulta simples com recuperação semântica e resposta extrativa rastreável."""
+"""Consulta simples com recuperação semântica e síntese local pelo Gemma 4."""
 import argparse
 import json
 from pathlib import Path
 
-from geracao.responder import responder
+from geracao.responder import sintetizar
 from recuperacao.buscar import buscar, formatar_evidencia
 
 
 def consultar(pergunta, k=5, caminho_banco=None):
     resultados = buscar(pergunta, k=k, caminho_banco=caminho_banco)
     return {"consulta": pergunta, "k": k, "resultados": resultados,
-            "resposta": responder(resultados)}
+            "resposta": sintetizar(pergunta, resultados)}
 
 
 def main():
@@ -23,6 +23,8 @@ def main():
         ap.error("k deve ser positivo")
     try:
         registro = consultar(args.pergunta, args.k)
+    except RuntimeError as erro:
+        ap.exit(1, f"Falha na consulta: {erro}\n")
     except Exception as erro:
         ap.exit(1, f"Falha na consulta: {erro}\nConfira as dependências e execute python src/ingestao/carga.py se o banco não existir.\n")
     print(f"Consulta: {args.pergunta}\n\n{formatar_evidencia(registro['resultados'])}")

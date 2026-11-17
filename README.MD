@@ -8,7 +8,7 @@ Este README é o guia atual de funcionamento e execução do projeto. Todos os c
 
 O projeto possui uma base selecionada e limpa com **25 documentos-fonte**, divididos em **599 chunks**, embeddings multilíngues E5 e banco vetorial Chroma. A consulta funciona pela linha de comando.
 
-A resposta automática é **extrativa**: apresenta os próprios trechos recuperados, com identificação das fontes, datas e ressalvas. Ainda não há interface web, geração de sínteses por LLM, agenda em tempo real ou busca de parceiros implementada.
+O Gemma 4 12B gera uma resposta local pelo Ollama usando os trechos recuperados, com citações das fontes.
 
 As informações das fontes permanecem pendentes de validação humana quanto à situação atual dos locais. Um documento que menciona acessibilidade ou funcionamento não comprova essas condições hoje.
 
@@ -25,7 +25,7 @@ Pergunta do usuário
     → embedding da pergunta com o mesmo E5
     → recuperação dos 5 chunks mais próximos por cosseno
     → exibição do ranking e das fontes
-    → resposta extrativa com até 3 chunks citados
+    → síntese pelo gemma4:12b com citações
 ```
 
 1. **Chunking:** textos corridos são divididos em até 800 caracteres, com sobreposição alvo de 120 e cortes preferenciais por frase ou palavra. Cadastros são agrupados por registros inteiros até 1.000 caracteres, com cabeçalho repetido e sem sobreposição.
@@ -87,6 +87,8 @@ A carga lê os textos de `dados/fontes/texto/`, faz o chunking, gera os embeddin
 
 ## Fazer uma consulta
 
+Instale o Ollama e abra o aplicativo (ou inicie o serviço com `ollama serve`). Na primeira configuração, baixe o modelo com `ollama pull gemma4:12b`. O comando de consulta chama esse modelo automaticamente.
+
 ```bash
 .venv/bin/python src/main.py "A academia pública do Parque da Cidade é gratuita e como utilizar?" -k 5
 ```
@@ -96,9 +98,9 @@ A saída mostra:
 - a pergunta submetida;
 - os chunks recuperados, ordenados por similaridade;
 - o documento de origem, URL, data de coleta e um recorte de cada resultado;
-- a resposta extrativa, com até três chunks completos e suas fontes.
+- a resposta do Gemma com referências aos chunks.
 
-Para outra pergunta, basta substituir o texto entre aspas. `-k` controla quantos chunks recuperar; a resposta continua limitada aos três primeiros.
+Para outra pergunta, basta substituir o texto entre aspas. `-k` controla quantos chunks enviar ao Gemma.
 
 ```bash
 .venv/bin/python src/main.py "Quais modalidades esportivas são oferecidas pelos Centros Olímpicos e Paralímpicos do DF?" -k 5
@@ -144,6 +146,7 @@ No Windows (PowerShell), use `$env:HF_HUB_OFFLINE = "1"` para ativar e `Remove-I
 .venv/bin/python tests/teste_banco.py
 .venv/bin/python tests/teste_embeddings.py
 .venv/bin/python tests/teste_resposta.py
+.venv/bin/python tests/test_registros_rag.py
 ```
 
 | Teste | O que verifica |
@@ -151,6 +154,7 @@ No Windows (PowerShell), use `$env:HF_HUB_OFFLINE = "1"` para ativar e `Remove-I
 | `teste_chunking.py` | IDs únicos, limites de tamanho, metadados e preservação de textos e registros |
 | `teste_banco.py` | Carga, persistência, cosseno, ordenação e filtro por fonte, usando vetores sintéticos em banco temporário |
 | `teste_embeddings.py` | Recuperação com E5 real em cinco exemplos pequenos |
+| `test_registros_rag.py` | Persistência das rodadas e registro de métricas com chamadas simuladas |
 | `teste_resposta.py` | Preservação dos trechos, IDs, fontes, datas, ressalvas e limite da resposta |
 
 O teste de embeddings carrega o modelo E5 real e pode baixá-lo na primeira execução. Os demais testes não precisam desse download; o teste de banco usa um diretório temporário e não substitui o banco do projeto.
@@ -166,14 +170,19 @@ PontoAtivo/
 ├── src/
 │   ├── ingestao/          # chunking, embeddings, banco e carga
 │   ├── recuperacao/       # busca semântica
-│   ├── geracao/           # resposta extrativa
+│   ├── geracao/           # geração de respostas
 │   └── main.py            # consulta e exportação JSON
 ├── dados/
+│   ├── chunks.jsonl       # trechos usados pelo gerador do site
 │   ├── catalogo.csv       # inventário das fontes
 │   ├── fontes/texto/      # 25 textos, PDF original e curadoria
 │   └── vetorial/          # banco gerado localmente, fora do Git
 ├── dados_oficiais_seduh/  # coleta original; não é entrada direta da carga
+├── scripts/               # execução dos experimentos e geração do site
+├── experimentos/          # perguntas, rodadas, evidências e análises
 ├── docs/
+│   ├── index.html         # página publicada
+│   ├── dados.json         # dados da página
 │   ├── semana-01/
 │   └── semana-02/
 └── tests/
@@ -183,6 +192,7 @@ A pasta temporária `Semana 2` não faz parte da execução atual e já não est
 
 ## Documentação e fontes
 
+- [Índice dos experimentos e resultados](experimentos/README.md).
 - [Catálogo das fontes](dados/catalogo.csv).
 - [Histórico de curadoria e limitações das fontes](dados/fontes/texto/AUDITORIA.md).
 - [Arquitetura](docs/semana-02/arquitetura.md).
