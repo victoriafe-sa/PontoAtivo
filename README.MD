@@ -177,6 +177,7 @@ PontoAtivo/
 │   ├── catalogo.csv       # inventário das fontes
 │   ├── fontes/texto/      # 25 textos, PDF original e curadoria
 │   └── vetorial/          # banco gerado localmente, fora do Git
+├── pontoativo-rag/        # protótipo RAG, encontros e mapa de curadoria
 ├── dados_oficiais_seduh/  # coleta original; não é entrada direta da carga
 ├── scripts/               # execução dos experimentos e geração do site
 ├── experimentos/          # perguntas, rodadas, evidências e análises
@@ -187,6 +188,10 @@ PontoAtivo/
 │   └── semana-02/
 └── tests/
 ```
+
+O [protótipo RAG](pontoativo-rag/README.md) tem ambiente, dados e testes próprios. Para executar os comandos do guia, entre primeiro em `pontoativo-rag/`. A ingestão desse protótipo grava `pontoativo-rag/dados/chunks.jsonl`. O site da raiz usa `dados/chunks.jsonl`.
+
+Dentro do protótipo, [PontoAtivo-CURADORIA](pontoativo-rag/PontoAtivo-CURADORIA/) reúne o mapa e as ferramentas de curadoria. As [fontes originais](pontoativo-rag/fontes_originais/), a [documentação do pipeline](pontoativo-rag/documentacao/) e as [evidências de avaliação](pontoativo-rag/evidencias/) ficam ao lado do código.
 
 A pasta temporária `Semana 2` não faz parte da execução atual e já não está presente neste checkout. Código, fontes e comandos deste README são suficientes para instalar as dependências, gerar o banco e fazer consultas.
 
