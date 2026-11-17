@@ -1,0 +1,14 @@
+[
+  {"id":"ibram-4","source_name":"Parque Distrital de São Sebastião","latitude":-15.908761,"longitude":-47.756144,"precision":"representative_point","source_id":"ibram_onda"},
+  {"id":"ibram-6","source_name":"Parque Distrital do Retirinho","latitude":-15.616290,"longitude":-47.620113,"precision":"representative_point","source_id":"ibram_onda"},
+  {"id":"ibram-11","source_name":"Parque Distrital Salto do Tororó","latitude":-15.987596,"longitude":-47.830596,"precision":"representative_point","source_id":"ibram_onda"},
+  {"id":"ibram-16","source_name":"Parque Ecológico da Cachoeirinha","latitude":-15.774213,"longitude":-47.767042,"precision":"representative_point","source_id":"ibram_onda"},
+  {"id":"ibram-20","source_name":"Parque Ecológico do Anfiteatro Natural do Lago Sul","latitude":-15.836627,"longitude":-47.863892,"precision":"representative_point","source_id":"ibram_onda"},
+  {"id":"ibram-22","source_name":"Parque Ecológico do DER","latitude":-15.624751,"longitude":-47.688234,"precision":"representative_point","source_id":"ibram_onda"},
+  {"id":"ibram-29","source_name":"Parque Ecológico e Vivencial da Lagoa Joaquim de Medeiros","latitude":-15.634722,"longitude":-47.688490,"precision":"representative_point","source_id":"ibram_onda"},
+  {"id":"ibram-31","source_name":"Parque Ecológico da Enseada Norte","latitude":-15.771719,"longitude":-47.853376,"precision":"representative_point","source_id":"ibram_onda"},
+  {"id":"ibram-33","source_name":"Parque Ecológico Irmãos Afonso Haus (Santuário dos Pássaros)","latitude":-15.800234,"longitude":-48.053021,"precision":"representative_point","source_id":"ibram_onda"},
+  {"id":"ibram-34","source_name":"Parque Ecológico Lauro Muller (Ecológico do Catetinho)","latitude":-15.969776,"longitude":-47.992447,"precision":"representative_point","source_id":"ibram_onda"},
+  {"id":"ibram-35","source_name":"Parque Ecológico Luiz Cruls","latitude":-15.954390,"longitude":-47.995902,"precision":"representative_point","source_id":"ibram_onda"},
+  {"id":"ibram-40","source_name":"Parque Ecológico Sementes do Itapoã","latitude":-15.733608,"longitude":-47.763236,"precision":"representative_point","source_id":"ibram_onda"}
+]

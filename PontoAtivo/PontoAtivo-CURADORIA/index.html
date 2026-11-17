@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PontoAtivo – Mapa esportivo e inclusivo de Brasília</title>
+  <meta name="description" content="Mapa de PECs, quadras, campos, parques e Centros Olímpicos e Paralímpicos de Brasília e do Distrito Federal, com fonte oficial e data em cada informação." />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+  <link rel="stylesheet" href="styles.css?v=acc-1" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Acessibilidade: botão flutuante no canto inferior esquerdo (o direito tem o "voltar ao topo"). -->
+  <div class="a11y-float">
+    <button type="button" class="a11y-toggle" id="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel" aria-label="Opções de acessibilidade" title="Acessibilidade">♿</button>
+    <div class="a11y-panel" id="a11y-panel" role="toolbar" aria-label="Opções de acessibilidade" hidden>
+      <p class="a11y-label">Acessibilidade</p>
+      <div class="a11y-row">
+        <button type="button" data-a11y="font-up" aria-label="Aumentar texto">A+</button>
+        <button type="button" data-a11y="font-down" aria-label="Diminuir texto">A−</button>
+      </div>
+      <button type="button" data-a11y="contrast" aria-pressed="false">Alto contraste</button>
+      <button type="button" data-a11y="motion" aria-pressed="false">Pausar animações</button>
+    </div>
+  </div>
+
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand" aria-label="PontoAtivo – início">
+        <img src="assets/logo.svg" alt="" width="44" height="44" />
+        <span class="brand-text">
+          <strong><span class="b-navy">Ponto</span><span class="b-green">Ativo</span></strong>
+          <small>Esporte &amp; Acessibilidade</small>
+        </span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="menu" class="nav" aria-label="Principal">
+        <a href="#inicio" data-nav-tela="inicio">Início</a>
+        <a href="#mapa" data-nav-tela="mapa">Mapa</a>
+        <a href="#encontros" data-nav-tela="encontros">Encontros</a>
+        <a href="#duvidas" data-nav-tela="duvidas">Dúvidas</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#participe" class="btn btn-small btn-light">Ajude a verificar</a>
+      </nav>
+      <div class="account-menu" id="account-menu" hidden>
+        <button type="button" class="account-btn" id="account-btn" aria-expanded="false" aria-controls="account-pop" aria-label="Menu da sua conta">
+          <span class="account-avatar" id="account-avatar" aria-hidden="true">?</span>
+          <span class="account-name" id="account-name"></span>
+          <span class="account-caret" aria-hidden="true">▾</span>
+        </button>
+        <div class="account-pop" id="account-pop" hidden>
+          <button type="button" id="meeting-prefs">Minhas preferências</button>
+          <button type="button" id="account-agenda">Minha agenda</button>
+          <hr />
+          <button type="button" id="meeting-logout">Sair da conta</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- HERO -->
+    <section class="hero" id="inicio" data-tela="inicio" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="pill">Brasília · Distrito Federal</span>
+          <h1 id="hero-title">
+            Onde
+            <span class="rotator"><span id="rotating-word">jogar</span></span>
+            em Brasília?
+          </h1>
+          <p class="lead">O mapa esportivo do DF: <strong><span data-count="pec">403</span> PECs</strong>, <strong><span data-count="quadras">880</span> quadras</strong>, <strong><span data-count="campo">141</span> campos de futebol</strong>, parques e os <strong>12 Centros Olímpicos e Paralímpicos</strong>, com a fonte oficial e a data de cada informação.</p>
+          <div class="hero-cta">
+            <a href="#mapa" class="btn btn-primary">Abrir o mapa</a>
+            <a href="#pergunte" class="btn btn-ghost">💬 Perguntar por voz ou texto</a>
+            <a href="#encontros" class="btn btn-ghost">📅 Encontros esportivos</a>
+            <a href="#duvidas" class="btn btn-ghost">🔎 Pesquisar dúvidas</a>
+          </div>
+          <ul class="hero-trust" aria-label="Princípios">
+            <li><span aria-hidden="true">✔</span> Fonte e data em cada local</li>
+            <li><span aria-hidden="true">♿</span> Acessibilidade só quando verificada</li>
+            <li><span aria-hidden="true">🔒</span> Localização só com sua permissão</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="phone phone-back">
+            <div class="phone-screen">
+              <div class="ph-top"><img src="assets/logo.svg" alt="" width="22" /><b>Perto de você</b></div>
+              <div class="ph-card"><b>COP Gama</b><small>Centro Olímpico e Paralímpico · gratuito</small><em>Atende PcD (informado)</em></div>
+              <div class="ph-card"><b>PEC – Ponto de Encontro</b><small>Equipamentos de ginástica ao ar livre</small><em>Iluminação pública ✓</em></div>
+              <div class="ph-card"><b>Parque Ecológico Três Meninas</b><small>Samambaia · gratuito</small><em>Fonte: Ibram</em></div>
+            </div>
+          </div>
+          <div class="phone phone-front">
+            <div class="phone-screen">
+              <div class="ph-map">
+                <span class="pin p1"></span><span class="pin p2"></span><span class="pin p3"></span><span class="pin p4"></span>
+              </div>
+              <div class="ph-sheet">
+                <b>Quadra poliesportiva</b>
+                <small>Espaço público · gratuito</small>
+                <div class="ph-tags"><i class="ok">Bom estado</i><i class="ok">Iluminada</i><i class="unk">Acessibilidade ?</i></div>
+                <small class="ph-src">Fonte: IDE-DF / SEDUH</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section id="como-funciona" data-tela="inicio" class="section section-dark" aria-labelledby="cf-title">
+      <div class="container">
+        <p class="eyebrow">Como funciona</p>
+        <h2 id="cf-title">Do mapa à quadra em três passos</h2>
+        <p class="section-sub">Escolha o que quer praticar, veja o que existe perto de você e saiba exatamente o quanto cada informação é confiável.</p>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num">01</span>
+            <span class="step-ico" aria-hidden="true">🎯</span>
+            <h3>Filtre pelo que importa</h3>
+            <p>Tipo de espaço, região administrativa, modalidade, gratuidade, iluminação e programas para pessoas com deficiência.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">02</span>
+            <span class="step-ico" aria-hidden="true">🗺️</span>
+            <h3>Veja no mapa ou na lista</h3>
+            <p>Os mesmos resultados no mapa e numa lista acessível, ordenados por distância se você autorizar a localização.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">03</span>
+            <span class="step-ico" aria-hidden="true">✅</span>
+            <h3>Confira a fonte e vá</h3>
+            <p>Cada local mostra fonte, data e o que ainda não foi verificado. Depois, é só abrir a rota.</p>
+          </li>
+        </ol>
+
+        <div class="cf-meet">
+          <h3 class="cf-meet-title">E para praticar junto: os encontros esportivos</h3>
+          <p class="section-sub">Combine uma partida, uma corrida ou um treino com outras pessoas, num local do mapa. Participação a partir de 18 anos.</p>
+          <ol class="steps steps-4">
+            <li class="step">
+              <span class="step-num">01</span>
+              <span class="step-ico" aria-hidden="true">👤</span>
+              <h3>Entre na sua conta</h3>
+              <p>Crie uma conta com usuário, senha, um apelido público e sua faixa etária. Se quiser, escolha até 5 esportes e uma região preferidos.</p>
+            </li>
+            <li class="step">
+              <span class="step-num">02</span>
+              <span class="step-ico" aria-hidden="true">📅</span>
+              <h3>Marque um encontro</h3>
+              <p>Em <b>Marcar encontro</b> ou no balão de um local do mapa, escolha o esporte, a data e a hora, o nível, a faixa etária e o formato: dupla, trio ou grupo de 4 a 20 pessoas.</p>
+            </li>
+            <li class="step">
+              <span class="step-num">03</span>
+              <span class="step-ico" aria-hidden="true">🤝</span>
+              <h3>Outras pessoas participam</h3>
+              <p>O encontro aparece na tela Encontros e no mapa, com um pino destacado. Quem tem a faixa etária certa clica em <b>Participar</b> até as vagas acabarem.</p>
+            </li>
+            <li class="step">
+              <span class="step-num">04</span>
+              <span class="step-ico" aria-hidden="true">🗓️</span>
+              <h3>Acompanhe na sua agenda</h3>
+              <p>Em <b>Minha agenda</b> ficam os encontros que você marcou ou em que vai. Dá para sair de um encontro ou cancelar o que você organizou.</p>
+            </li>
+          </ol>
+          <ul class="cf-meet-rules">
+            <li>🔒 Os outros só veem seu apelido, nunca seu usuário ou senha.</li>
+            <li>📍 Marcar um encontro não reserva o espaço: confira as condições do local antes de ir.</li>
+            <li>🕒 Os horários são de Brasília.</li>
+          </ul>
+          <a href="#encontros" class="btn btn-primary cf-meet-cta">Ver os encontros</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAPA -->
+    <section id="mapa" data-tela="mapa" class="section" aria-labelledby="mapa-title">
+      <div class="container">
+        <p class="eyebrow">Mapa esportivo de Brasília</p>
+        <h2 id="mapa-title">Espaços para praticar atividade física no DF</h2>
+        <p class="section-sub" id="mapa-sub">Carregando a base de locais…</p>
+
+
+        <div class="ask" id="pergunte" role="search" aria-labelledby="ask-title">
+          <h3 id="ask-title">💬 Pergunte sobre locais</h3>
+          <p class="ask-sub">Locais, mapa, acessibilidade e horários. Escreva ou fale do seu jeito. Ex.: <button type="button" class="ask-ex">onde tem PEC na Ceilândia Norte perto da QNN 12</button> <button type="button" class="ask-ex">quadra de vôlei de areia no Guará</button> <button type="button" class="ask-ex">pista de skate perto de mim</button> <button type="button" class="ask-ex">qual o horário dos Centros Olímpicos?</button></p>
+          <p class="ask-hint">Dúvidas sobre matrícula, regras ou programas? Use a <a href="#pergunte-duvidas">pesquisa de dúvidas</a>.</p>
+          <form id="ask-form" class="ask-form">
+            <label for="ask-q" class="sr-only">Sua pergunta</label>
+            <input type="text" id="ask-q" autocomplete="off" placeholder="Ex.: onde tem PEC na Ceilândia Norte, QNN 12?" />
+            <button type="button" class="ask-mic" id="ask-mic" aria-pressed="false" aria-label="Falar a pergunta (gravar áudio)" title="Falar a pergunta">🎤</button>
+            <button type="submit" class="btn btn-primary">Buscar</button>
+            <button type="button" class="btn btn-outline ask-clear" data-clear-search hidden>Limpar</button>
+          </form>
+          <p class="ask-status" id="ask-status" aria-live="polite"></p>
+          <div id="ask-answer" class="ask-answer" hidden></div>
+          <details class="ask-privacy"><summary>🔒 Como tratamos sua voz e endereços</summary><small>O áudio só é captado enquanto o microfone está ligado e é transcrito pelo reconhecimento de voz do próprio navegador (no Chrome, isso passa pelo serviço do Google). Endereços digitados são localizados no OpenStreetMap. Nada é salvo pelo PontoAtivo.</small></details>
+        </div>
+
+        <p id="map-pref-note" class="pref-note" hidden></p>
+
+        <form class="map-filterbar" id="filters" aria-label="Filtros do mapa">
+          <label class="fb-item fb-search">
+            <span class="fb-label">🔍 Buscar</span>
+            <input type="search" id="f-q" placeholder="Nome, endereço ou modalidade" />
+          </label>
+          <label class="fb-item">
+            <span class="fb-label">📍 Região</span>
+            <select id="f-ra"><option value="">Todo o DF</option></select>
+          </label>
+          <details class="fb-item fb-pop">
+            <summary><span class="fb-label">🏟️ Tipo de espaço</span><span class="fb-value" id="f-tipos-resumo">Todos os tipos</span></summary>
+            <div class="fb-panel">
+              <div id="f-tipos" class="type-filters"></div>
+              <div class="mini-actions"><button type="button" id="f-all">Marcar todos</button><button type="button" id="f-none">Desmarcar</button></div>
+            </div>
+          </details>
+          <details class="fb-item fb-pop">
+            <summary><span class="fb-label">⚙️ Mais filtros</span><span class="fb-value" id="f-mais-resumo">Origem, evidência e condições</span></summary>
+            <div class="fb-panel fb-panel-wide">
+              <fieldset>
+                <legend>Origem do espaço</legend>
+                <div id="f-origem" class="type-filters">
+                  <label><input type="checkbox" name="origem" value="public" checked /> Público</label>
+                  <label><input type="checkbox" name="origem" value="social" checked /> Organização social</label>
+                  <label><input type="checkbox" name="origem" value="private" checked /> Privado</label>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Nível de evidência</legend>
+                <select id="f-evidencia">
+                  <option value="">Todos os níveis</option>
+                  <option value="oficial">Oficial (fonte governamental)</option>
+                  <option value="organizacao">Declarado pela organização</option>
+                  <option value="colaborativo">Colaborativo (comunitário/OSM)</option>
+                  <option value="campo">Verificado em campo</option>
+                </select>
+              </fieldset>
+              <fieldset>
+                <legend>Condições</legend>
+                <label><input type="checkbox" id="f-gratis" /> Apenas gratuitos</label>
+                <label><input type="checkbox" id="f-luz" /> Com iluminação pública</label>
+                <label><input type="checkbox" id="f-bom" /> Em bom estado (no levantamento)</label>
+                <label><input type="checkbox" id="f-pcd" /> Programa para PcD / esporte adaptado <small>(informado pela fonte)</small></label>
+              </fieldset>
+            </div>
+          </details>
+          <button type="button" class="btn btn-primary fb-near" id="btn-near" title="Só pedimos sua localização se você clicar. Sem permissão, use a região.">📍 Perto de mim</button>
+          <button type="button" class="filters-clear" data-clear-search hidden>✕ Limpar filtros</button>
+        </form>
+
+        <div class="map-layout">
+          <div class="map-col">
+            <div id="map" role="region" aria-label="Mapa interativo dos espaços esportivos do DF"></div>
+          </div>
+          <aside class="map-meet" aria-labelledby="map-meet-title">
+            <h3 id="map-meet-title">Encontros de hoje e amanhã</h3>
+            <p class="map-meet-status" id="map-meet-status" role="status" aria-live="polite"></p>
+            <ul class="map-meet-list" id="map-meet-list"><li class="map-meet-empty">Carregando encontros…</li></ul>
+            <a class="btn btn-outline btn-block" href="#encontros">Ver todos os encontros</a>
+          </aside>
+        </div>
+
+        <p class="results-count" id="results-count" aria-live="polite"></p>
+        <ul class="place-list" id="place-list" aria-label="Lista de espaços (equivalente acessível ao mapa)"></ul>
+        <button type="button" class="btn btn-outline btn-block" id="btn-more" hidden>Mostrar mais</button>
+
+        <div class="demo-note" role="note">
+          <strong>Sobre os dados:</strong> quadras, PECs, campos e pistas vêm do cadastro oficial do GDF (IDE-DF), feito entre 2015 e 2017. Equipamentos podem ter sido reformados, removidos ou criados depois disso. <strong>Nenhum local tem ainda acessibilidade física verificada em campo</strong>: essa é a próxima etapa da pesquisa.
+        </div>
+        <div class="legend" aria-label="Legenda de evidência e acessibilidade">
+          <span><i class="dot ok"></i> Verificado em campo</span>
+          <span><i class="dot info"></i> Informado pela fonte / declarado</span>
+          <span><i class="dot unk"></i> Desconhecido / pendente</span>
+          <span><span class="badge-ev ev-oficial">oficial</span> Fonte governamental</span>
+          <span><span class="badge-ev ev-organizacao">organização</span> Site oficial</span>
+          <span><span class="badge-ev ev-colaborativo">colaborativo</span> Comunidade/OSM</span>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section meetings-section" id="encontros" data-tela="encontros" aria-labelledby="meetings-title">
+      <div class="container">
+        <div class="meetings-heading">
+          <div>
+            <h2 id="meetings-title" tabindex="-1">Encontros esportivos</h2>
+            <p>Encontre companhia para praticar. Horários de Brasília. Participação a partir de 18 anos.</p>
+          </div>
+          <button type="button" class="btn btn-primary" id="meeting-create">Marcar encontro</button>
+        </div>
+        <div class="meetings-account" id="meeting-account">
+          <span id="meeting-account-label">Entre para organizar ou participar.</span>
+          <button type="button" id="meeting-login">Entrar / criar conta</button>
+          <button type="button" data-admin-login hidden>Entrar como admin</button>
+        </div>
+        <p id="meeting-pref-note" class="pref-note" hidden></p>
+        <div class="meetings-tabs" role="group" aria-label="Lista de encontros">
+          <button type="button" id="meeting-all" aria-pressed="true">Encontros futuros</button>
+          <button type="button" id="meeting-mine" aria-pressed="false">Minha agenda</button>
+          <button type="button" id="meeting-refresh" class="meetings-refresh" title="Atualizar a lista">↻ <span class="refresh-text">Atualizar</span></button>
+        </div>
+        <form id="meeting-filters" class="meetings-filters">
+          <label class="mf-region">Região<select name="regiao"><option value="">Todo o DF</option></select></label>
+          <label class="mf-sport">Esporte<select name="esporte"><option value="">Todos os esportes</option></select></label>
+          <label class="mf-date">Data<input type="date" name="data" /></label>
+          <details class="mf-advanced">
+            <summary>⚙️ Filtros avançados</summary>
+            <div class="mf-advanced-grid">
+          <label>Nível<select name="nivel"><option value="">Todos</option><option value="iniciante">Iniciante</option><option value="intermediario">Intermediário</option><option value="avancado">Avançado</option><option value="todos">Todos os níveis</option></select></label>
+          <label>Faixa etária<select name="idade"><option value="">Todas</option><option value="todos">Todos os adultos</option><option>18-24</option><option>25-34</option><option>35-44</option><option>45-59</option><option>60+</option></select></label>
+          <label>Formato<select name="formato"><option value="">Todos</option><option value="dupla">Dupla</option><option value="trio">Trio</option><option value="grupo">Grupo</option></select></label>
+            </div>
+          </details>
+          <button type="reset" class="mf-clear">Limpar filtros</button>
+        </form>
+        <p id="meeting-status" class="meetings-status" role="status" aria-live="polite"></p>
+        <ul id="meeting-list" class="meetings-list" aria-label="Encontros esportivos"></ul>
+      </div>
+    </section>
+
+    <dialog id="meeting-dialog" class="meeting-dialog" aria-labelledby="meeting-dialog-title">
+      <form id="meeting-form">
+        <div class="meeting-dialog-heading"><h2 id="meeting-dialog-title">Marcar encontro</h2><button type="button" data-close-dialog aria-label="Fechar formulário">✕</button></div>
+        <p>Combinar o encontro não reserva o espaço físico. Confirme as condições do local antes de ir.</p>
+        <label>Buscar local<input type="search" id="meeting-place-query" placeholder="Nome do espaço ou região" autocomplete="off" /></label>
+        <label>Local do encontro<select name="local_id" id="meeting-place" required><option value="">Selecione um local</option></select></label>
+        <label>Esporte<select name="esporte" id="meeting-sport" required><option value="">Selecione o esporte</option></select></label>
+        <label>Data e hora de Brasília<input type="datetime-local" name="inicio" required /></label>
+        <div class="meeting-form-row">
+          <label>Nível<select name="nivel" required><option value="todos">Todos os níveis</option><option value="iniciante">Iniciante</option><option value="intermediario">Intermediário</option><option value="avancado">Avançado</option></select></label>
+          <label>Faixa etária<select name="idade" required><option value="todos">Todos os adultos</option><option>18-24</option><option>25-34</option><option>35-44</option><option>45-59</option><option>60+</option></select></label>
+        </div>
+        <div class="meeting-form-row">
+          <label>Formato<select name="formato"><option value="dupla">Dupla</option><option value="trio">Trio</option><option value="grupo">Grupo</option></select></label>
+          <label id="meeting-capacity-label" hidden>Total de pessoas, incluindo você<input type="number" name="capacidade" value="4" min="4" max="20" /></label>
+        </div>
+        <p id="meeting-form-status" class="meetings-status" role="status"></p>
+        <button type="submit" class="btn btn-primary">Publicar encontro</button>
+      </form>
+    </dialog>
+
+    <dialog id="meeting-auth-dialog" class="meeting-dialog" aria-labelledby="meeting-auth-title">
+      <form id="meeting-auth-form">
+        <div class="meeting-dialog-heading"><h2 id="meeting-auth-title">Entrar</h2><button type="button" data-close-dialog aria-label="Fechar acesso à conta">✕</button></div>
+        <label>Usuário<input name="login" autocomplete="username" pattern="[A-Za-z0-9_.-]{3,50}" minlength="3" maxlength="50" required /><small>De 3 a 50 letras, números, pontos ou traços.</small></label>
+        <label>Senha<input name="senha" type="password" autocomplete="current-password" maxlength="128" required /></label>
+        <div id="meeting-registration" hidden>
+          <label>Apelido público<input name="apelido" minlength="2" maxlength="50" autocomplete="nickname" /></label>
+          <label>Sua faixa etária<select name="idade"><option value="">Selecione</option><option>18-24</option><option>25-34</option><option>35-44</option><option>45-59</option><option>60+</option></select></label>
+          <p>Ao criar a conta, você declara ter 18 anos ou mais. Seu apelido aparece nos encontros que organizar.</p>
+          <fieldset class="pref-fields" data-pref-fields>
+            <legend>Suas preferências (opcional)</legend>
+            <p class="pref-help">Servem só para abrir os encontros e o mapa já filtrados. Você pode mudar ou apagar depois.</p>
+            <div class="pref-sports" data-pref-sports role="group" aria-label="Esportes favoritos (até 5)"></div>
+            <label>Região preferida<select name="regiao" data-pref-region><option value="">Nenhuma</option></select></label>
+          </fieldset>
+        </div>
+        <p id="meeting-auth-status" class="meetings-status" role="status"></p>
+        <button type="submit" class="btn btn-primary" id="meeting-auth-submit">Entrar</button>
+        <button type="button" id="meeting-auth-toggle">Criar uma conta</button>
+        <button type="button" data-admin-login hidden>Entrar como admin</button>
+      </form>
+    </dialog>
+
+    <dialog id="pref-dialog" class="meeting-dialog" aria-labelledby="pref-title">
+      <form id="pref-form">
+        <div class="meeting-dialog-heading"><h2 id="pref-title">Minhas preferências</h2><button type="button" data-close-dialog aria-label="Fechar preferências">✕</button></div>
+        <fieldset class="pref-fields" data-pref-fields>
+          <legend>Esportes favoritos (até 5) e região</legend>
+          <p class="pref-help">Os encontros e o mapa abrem com esses filtros. Nada some: você pode limpar os filtros a qualquer momento.</p>
+          <div class="pref-sports" data-pref-sports role="group" aria-label="Esportes favoritos (até 5)"></div>
+          <label>Região preferida<select name="regiao" data-pref-region><option value="">Nenhuma</option></select></label>
+        </fieldset>
+        <p id="pref-status" class="meetings-status" role="status"></p>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <button type="button" id="pref-clear">Apagar preferências</button>
+      </form>
+    </dialog>
+
+    <!-- FONTES -->
+    <section id="fontes" data-tela="inicio" class="section section-tint" aria-labelledby="fontes-title">
+      <div class="container">
+        <p class="eyebrow">Fontes e cobertura</p>
+        <h2 id="fontes-title">De onde vêm os dados do mapa</h2>
+        <p class="section-sub">Pesquisa feita em 05/11/2026 em bases oficiais do GDF e de outras fontes públicas, com curadoria multifonte em 10/11/2026. Cada local do mapa leva o link da sua fonte.</p>
+        <div class="stats" id="stats"></div>
+        <div class="sources">
+          <article class="source">
+            <h3>IDE-DF – Infraestrutura de Dados Espaciais do DF</h3>
+            <p>Camada <em>Mobiliário Esporte e Lazer</em> (SEDUH): PECs, quadras poliesportivas e de areia, campos, pistas de skate e aparelhos de ginástica, com endereço, estado de conservação e iluminação. Camada <em>Parques Urbanos</em>: 37 parques no mapa. Camada <em>Espaços comunitários</em>: 981 campos, 184 quadras e 183 praças que não constavam do mobiliário, quase todos sem endereço (a região vem do limite oficial da RA).</p>
+            <a href="https://www.geoservicos.ide.df.gov.br/arcgis/rest/services/Publico/EQUIPAMENTOS_URBANOS/MapServer" target="_blank" rel="noopener">Abrir serviço oficial ↗</a>
+          </article>
+          <article class="source">
+            <h3>Secretaria de Esporte e Lazer do DF</h3>
+            <p>Endereços e telefones dos 12 Centros Olímpicos e Paralímpicos (gratuitos, com vagas para pessoas com deficiência) e lista dos espaços esportivos administrados pela SEL.</p>
+            <a href="https://www.esporte.df.gov.br/cops" target="_blank" rel="noopener">esporte.df.gov.br/cops ↗</a>
+          </article>
+          <article class="source">
+            <h3>Brasília Ambiental (Ibram)</h3>
+            <p>Tabela oficial de Unidades de Conservação (ago/2026): parques ecológicos e distritais por região administrativa.</p>
+            <a href="https://www.ibram.df.gov.br/unidades-de-conservacao" target="_blank" rel="noopener">ibram.df.gov.br ↗</a>
+          </article>
+          <article class="source">
+            <h3>Guia dos Espaços Públicos de Lazer do DF (UnB)</h3>
+            <p>Pesquisa de mestrado de Bruno Lofrano Porto (PPG-GEA/UnB, 2022–2023) que mapeia os espaços públicos de lazer do DF. Usada para confirmar os tipos da camada de espaços comunitários e como documento consultado pela pesquisa de dúvidas.</p>
+            <a href="https://storymaps.arcgis.com/stories/1095a2734eec4b61be03431a19a54364" target="_blank" rel="noopener">Abrir o guia ↗</a>
+          </article>
+          <article class="source">
+            <h3>Paradesporto e outras fontes</h3>
+            <p>CETEFE (Agência Gov, Metrópoles, Jornal de Brasília), Centro Olímpico da UnB e limites das regiões administrativas (IDE-DF). Localização dos locais nomeados via OpenStreetMap, conferida com o limite oficial de cada RA.</p>
+            <a href="https://agenciagov.ebc.com.br/noticias/202310/enap-reinaugura-complexo-esportivo-utilizado-por-atletas-paralimpicos-de-alto-nivel" target="_blank" rel="noopener">Agência Gov ↗</a>
+          </article>
+        </div>
+        <div class="gaps">
+          <h3>O que ainda falta (lacunas conhecidas e diagnóstico de cobertura)</h3>
+          <ul>
+            <li><strong>PECs do DF:</strong> são <strong>403 PECs georreferenciadas</strong> no cadastro aberto utilizado pelo mapa; em contrapartida, a Novacap informou publicamente em 04/11/2025 que o DF conta com <em>mais de mil PECs</em> instaladas. A minuta de pedido de LAI está disponível em <code>docs/pedido-lai-novacap.md</code> para obtenção da base georreferenciada integral.</li>
+            <li><strong>Acessibilidade física:</strong> rampas, banheiros acessíveis, piso tátil e vagas PcD não constam detalhadas em bases abertas do GDF. Dados informados por instituições são exibidos como declarados, nunca como vistoria técnica presencial.</li>
+            <li><strong>Paradesporto:</strong> modalidades e locais confirmados por fontes institucionais (CETEFE, CPB) estão catalogados; entidades como UNIACE e equipes de basquete em cadeira de rodas aguardam confirmação de locais regulares de treino em registro público.</li>
+            <li><strong>Clubes e academias privadas:</strong> mapeamento inicial de clubes esportivos com base em seus sites oficiais, sem pino no mapa até comprovação das coordenadas geográficas.</li>
+            <li id="gap-pend">12 dos 14 parques pendentes foram resolvidos via poligonal oficial do Ibram/ONDA (com indicação de ponto representativo da área). Dois parques (Lobo Guará e Lagoinha) e o Ginásio de Esportes de Samambaia permanecem como pendências geográficas em revisão.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODALIDADES -->
+    <section id="modalidades" data-tela="inicio" class="section" aria-labelledby="mod-title">
+      <div class="container">
+        <p class="eyebrow">Modalidades</p>
+        <h2 id="mod-title">Convencionais, adaptadas e ao ar livre</h2>
+        <p class="section-sub">Do alongamento no PEC ao goalball: o que dá para praticar nos espaços mapeados.</p>
+      </div>
+      <div class="marquee" data-dir="left"><div class="marquee-track" id="mq1"></div></div>
+      <div class="marquee" data-dir="right"><div class="marquee-track" id="mq2"></div></div>
+    </section>
+
+    <!-- PARA QUEM É -->
+    <section class="section section-tint" data-tela="inicio" aria-labelledby="pq-title">
+      <div class="container">
+        <p class="eyebrow">Para quem é</p>
+        <h2 id="pq-title">Pensado com quem pratica e com quem cuida dos espaços</h2>
+        <div class="audience">
+          <article class="aud-card"><span class="aud-ico" aria-hidden="true">🏃</span><h3>Quero praticar</h3><p>Descubra quadras, campos e PECs perto de casa, quase todos públicos e gratuitos.</p></article>
+          <article class="aud-card"><span class="aud-ico" aria-hidden="true">♿</span><h3>Pessoas com deficiência</h3><p>Encontre os Centros Olímpicos e Paralímpicos e as entidades de paradesporto, sabendo o que já foi confirmado.</p></article>
+          <article class="aud-card"><span class="aud-ico" aria-hidden="true">🌳</span><h3>Pessoas idosas e PECs</h3><p>Os 403 PECs cadastrados, com endereço por quadra, iluminação e estado de conservação.</p></article>
+          <article class="aud-card"><span class="aud-ico" aria-hidden="true">🏟️</span><h3>Gestores e administrações</h3><p>Veja lacunas e informações desatualizadas da sua região e ajude a corrigi-las.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONFIANÇA -->
+    <section class="section section-dark" data-tela="inicio" aria-labelledby="tr-title">
+      <div class="container trust">
+        <div>
+          <p class="eyebrow">Transparência</p>
+          <h2 id="tr-title">Melhor dizer “não sabemos” do que errar</h2>
+        </div>
+        <ul class="trust-list">
+          <li><b>Fonte em tudo.</b> Cada local tem link para a base oficial de origem.</li>
+          <li><b>Data visível.</b> Você sabe se o dado é de 2017 ou de 2026.</li>
+          <li><b>Sem acessível “de chute”.</b> Nenhum local aparece como acessível sem verificação.</li>
+          <li><b>Modalidades inferidas, sinalizadas.</b> Quando a modalidade vem só do tipo de equipamento, isso aparece no cartão.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" data-tela="duvidas" class="section" aria-labelledby="faq-title">
+      <div class="container narrow">
+        <p class="eyebrow">Dúvidas frequentes</p>
+        <h2 id="faq-title">Perguntas frequentes</h2>
+
+        <div class="ask ask-duvidas" id="pergunte-duvidas" role="search" aria-labelledby="duv-title">
+          <h3 id="duv-title">🔎 Pesquisar dúvidas</h3>
+          <p class="ask-sub">Para perguntas mais complexas: matrícula, regras, isenções, programas, direitos e paradesporto. Ex.: <button type="button" class="duv-ex">como faço matrícula nos Centros Olímpicos?</button> <button type="button" class="duv-ex">quem é isento da taxa da Escola de Esportes?</button> <button type="button" class="duv-ex">como começar no esporte paralímpico?</button></p>
+          <form id="duv-form" class="ask-form">
+            <label for="duv-q" class="sr-only">Sua dúvida</label>
+            <input type="text" id="duv-q" autocomplete="off" placeholder="Ex.: quais faltas são graves nos Centros Olímpicos?" />
+            <button type="submit" class="btn btn-primary">Pesquisar</button>
+            <button type="button" class="btn btn-outline ask-clear" id="duv-clear" hidden>Limpar</button>
+          </form>
+          <p class="ask-status" id="duv-status" aria-live="polite"></p>
+          <div id="duv-answer" class="ask-answer" hidden></div>
+          <p class="ask-privacy"><small>📄 As respostas vêm só de documentos oficiais e citam a fonte de cada frase. A pesquisa pode levar até 2 minutos. Informações sobre vagas, prazos e horários valem para a data do documento: confirme com a instituição responsável.</small></p>
+        </div>
+
+        <div class="faq">
+          <details><summary>O que é um PEC?</summary><p>Ponto de Encontro Comunitário: equipamento público com aparelhos de exercício ao ar livre, presente em todas as regiões do DF. Pode ser usado por qualquer pessoa, de graça.</p></details>
+          <details><summary>Os dados do mapa são oficiais?</summary><p>Sim. Quadras, PECs, campos, pistas de skate e parques urbanos vêm da IDE-DF (GDF). Os Centros Olímpicos vêm da Secretaria de Esporte e Lazer, e os parques ecológicos, do Ibram. O levantamento de equipamentos da IDE-DF é de 2015–2017, por isso a data aparece em cada local.</p></details>
+          <details><summary>Por que nenhum local aparece como “acessível”?</summary><p>Porque nenhuma base oficial que encontramos informa rampas, banheiros acessíveis ou piso tátil desses espaços. Só marcaremos um critério como verificado quando houver visita ou fonte documentada, com data.</p></details>
+          <details><summary>Como pessoas com deficiência podem praticar esporte de graça?</summary><p>Os 12 Centros Olímpicos e Paralímpicos da Secretaria de Esporte oferecem vagas para pessoas com deficiência, com matrícula por edital. Telefone geral: (61) 2017-3021. O CETEFE, na Asa Sul, também oferece modalidades adaptadas.</p></details>
+          <details><summary>Preciso compartilhar minha localização?</summary><p>Não. A localização só é usada se você clicar no botão, e não é enviada para nenhum servidor. Você também pode filtrar por região administrativa.</p></details>
+          <details><summary>Encontrei um erro. Como corrijo?</summary><p>Use o formulário abaixo. Relatos de moradores e gestores serão conferidos antes de alterar a base.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL DE CONTRIBUIÇÃO COMUNITÁRIA (ETAPA 7) -->
+    <div id="modal-contribuir" class="modal-backdrop" hidden>
+      <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-contribuir-title">
+        <header class="modal-header">
+          <h3 id="modal-contribuir-title">Colaborar com o PontoAtivo</h3>
+          <button type="button" class="btn-close-modal" id="btn-close-modal" aria-label="Fechar janela">×</button>
+        </header>
+        <form id="form-contribuir" class="form-modal" novalidate>
+          <input type="hidden" id="c-place-id" />
+          <p id="c-place-name" class="modal-place-name"></p>
+          
+          <div class="field">
+            <label for="c-kind">Tipo de informação</label>
+            <select id="c-kind" required>
+              <option value="accessibility">Verificação de acessibilidade física</option>
+              <option value="change">Informar mudança (estado, iluminação, reforma, etc.)</option>
+            </select>
+          </div>
+
+          <fieldset class="a11y-check-grid">
+            <legend>Acessibilidade no local (responda o que observou)</legend>
+            <div class="check-item">
+              <span>Rota de acesso sem degraus:</span>
+              <label><input type="radio" name="ans_rota" value="ok" /> Sim</label>
+              <label><input type="radio" name="ans_rota" value="no" /> Não</label>
+              <label><input type="radio" name="ans_rota" value="unknown" checked /> Não observei</label>
+            </div>
+            <div class="check-item">
+              <span>Entrada livre de obstáculos/portão acessível:</span>
+              <label><input type="radio" name="ans_entrada" value="ok" /> Sim</label>
+              <label><input type="radio" name="ans_entrada" value="no" /> Não</label>
+              <label><input type="radio" name="ans_entrada" value="unknown" checked /> Não observei</label>
+            </div>
+            <div class="check-item">
+              <span>Piso regular e circulação desimpedida:</span>
+              <label><input type="radio" name="ans_circulacao" value="ok" /> Sim</label>
+              <label><input type="radio" name="ans_circulacao" value="no" /> Não</label>
+              <label><input type="radio" name="ans_circulacao" value="unknown" checked /> Não observei</label>
+            </div>
+            <div class="check-item">
+              <span>Banheiro adaptado/acessível em funcionamento:</span>
+              <label><input type="radio" name="ans_banheiro" value="ok" /> Sim</label>
+              <label><input type="radio" name="ans_banheiro" value="no" /> Não</label>
+              <label><input type="radio" name="ans_banheiro" value="unknown" checked /> Não observei</label>
+            </div>
+            <div class="check-item">
+              <span>Vaga PcD sinalizada próxima ao acesso:</span>
+              <label><input type="radio" name="ans_vaga" value="ok" /> Sim</label>
+              <label><input type="radio" name="ans_vaga" value="no" /> Não</label>
+              <label><input type="radio" name="ans_vaga" value="unknown" checked /> Não observei</label>
+            </div>
+            <div class="check-item">
+              <span>Piso tátil ou sinalização acessível:</span>
+              <label><input type="radio" name="ans_tatil" value="ok" /> Sim</label>
+              <label><input type="radio" name="ans_tatil" value="no" /> Não</label>
+              <label><input type="radio" name="ans_tatil" value="unknown" checked /> Não observei</label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="c-notes">Observações e detalhes</label>
+            <textarea id="c-notes" rows="3" placeholder="Conte detalhes sobre o espaço, conservação ou horários…"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="c-attachment">Foto ou anexo de comprovação (opcional)</label>
+            <input type="file" id="c-attachment" accept="image/*" />
+            <small>⚠️ <strong>Atenção à privacidade:</strong> não fotografe rostos de pessoas, placas de veículos ou documentos pessoais.</small>
+          </div>
+
+          <div class="field-consent">
+            <label>
+              <input type="checkbox" id="c-consent" required />
+              Confirmo que as informações enviadas são verídicas e autorizo seu uso colaborativo no PontoAtivo para fins de moderação e pesquisa pública.
+            </label>
+          </div>
+
+          <p class="modal-alert-note">
+            ℹ️ <strong>Moderação transparente:</strong> as contribuições comunitárias são armazenadas localmente no navegador (<code>localStorage</code>) e aguardam moderação. Nenhuma contribuição comunitária altera automaticamente a base pública como "verificada em campo".
+          </p>
+
+          <div class="modal-actions">
+            <button type="button" class="btn btn-outline" id="btn-cancel-modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary" id="btn-submit-modal">Salvar contribuição</button>
+          </div>
+          <p id="c-form-msg" class="form-feedback" aria-live="polite"></p>
+        </form>
+
+        <section class="local-submissions-section" aria-label="Contribuições locais salvas">
+          <h4>Minhas contribuições salvas neste navegador</h4>
+          <div id="c-saved-list" class="saved-contributions-list"></div>
+          <div class="saved-actions">
+            <button type="button" class="btn btn-ghost" id="btn-export-contributions">Exportar contribuições (JSON)</button>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <section id="participe" data-tela="inicio" class="cta" aria-labelledby="cta-title">
+      <div class="container cta-inner">
+        <div>
+          <h2 id="cta-title">Ajude a verificar o mapa de Brasília</h2>
+          <p>Conhece um PEC, uma quadra ou um centro esportivo? Conte como ele está hoje e o que tem de acessibilidade.</p>
+        </div>
+        <form class="cta-form" id="cta-form" novalidate>
+          <label class="sr-only" for="cta-perfil">Seu perfil</label>
+          <select id="cta-perfil" required>
+            <option value="">Seu perfil…</option>
+            <option>Praticante</option>
+            <option>Pessoa com deficiência</option>
+            <option>Pessoa idosa / usuária de PEC</option>
+            <option>Gestor(a) de espaço ou administração regional</option>
+          </select>
+          <label class="sr-only" for="cta-email">E-mail</label>
+          <input id="cta-email" type="email" placeholder="seu@email.com" required />
+          <button class="btn btn-dark" type="submit">Quero ajudar</button>
+          <p class="cta-msg" id="cta-msg" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand brand-footer">
+        <img src="assets/logo.svg" alt="" width="40" height="40" />
+        <span class="brand-text"><strong>PontoAtivo</strong><small>Mapa esportivo inclusivo · Brasília – DF</small></span>
+      </div>
+      <nav aria-label="Rodapé">
+        <a href="#inicio">Início</a>
+        <a href="#mapa">Mapa</a>
+        <a href="#encontros">Encontros</a>
+        <a href="#duvidas">Dúvidas</a>
+        <a href="#fontes">Fontes</a>
+        <a href="#participe">Contato</a>
+      </nav>
+      <p class="fine">Projeto acadêmico – Challenge 2, Qualidade de Vida · 2026. Dados: IDE-DF/SEDUH, SEL-DF, Brasília Ambiental (Ibram), OpenStreetMap. Mapa © colaboradores do OpenStreetMap.</p>
+    </div>
+  </footer>
+
+  <a href="#topo" class="to-top" aria-label="Voltar ao topo">↑</a>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" defer></script>
+  <script src="telas.js?v=telas-4" defer></script>
+  <script src="data/locais.js" defer></script>
+  <script src="app.js?v=acc-1" defer></script>
+  <script src="encontros.js?v=enc-6" defer></script>
+</body>
+</html>

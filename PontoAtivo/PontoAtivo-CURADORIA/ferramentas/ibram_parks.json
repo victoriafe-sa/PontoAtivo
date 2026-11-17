@@ -1,0 +1,237 @@
+[
+ {
+  "nome": "Parque Distrital Bernardo Sayão",
+  "categoria": "Parque Distrital",
+  "ra": "Lago Sul"
+ },
+ {
+  "nome": "Parque Distrital Boca da Mata",
+  "categoria": "Parque Distrital",
+  "ra": "Taguatinga"
+ },
+ {
+  "nome": "Parque Distrital da Serrinha",
+  "categoria": "Parque Distrital",
+  "ra": "Lago Norte"
+ },
+ {
+  "nome": "Parque Distrital das Copaíbas",
+  "categoria": "Parque Distrital",
+  "ra": "Lago Sul"
+ },
+ {
+  "nome": "Parque Distrital de São Sebastião",
+  "categoria": "Parque Distrital",
+  "ra": "São Sebastião"
+ },
+ {
+  "nome": "Parque Distrital do Gama",
+  "categoria": "Parque Distrital",
+  "ra": "Gama"
+ },
+ {
+  "nome": "Parque Distrital do Retirinho",
+  "categoria": "Parque Distrital",
+  "ra": "Planaltina"
+ },
+ {
+  "nome": "Parque Distrital dos Pequizeiros",
+  "categoria": "Parque Distrital",
+  "ra": "Planaltina"
+ },
+ {
+  "nome": "Parque Distrital Lobo Guará",
+  "categoria": "Parque Distrital",
+  "ra": "Planaltina"
+ },
+ {
+  "nome": "Parque Distrital Ponte Alta do Gama",
+  "categoria": "Parque Distrital",
+  "ra": "Gama"
+ },
+ {
+  "nome": "Parque Distrital Recanto das Emas",
+  "categoria": "Parque Distrital",
+  "ra": "Recanto das Emas"
+ },
+ {
+  "nome": "Parque Distrital Salto do Tororó",
+  "categoria": "Parque Distrital",
+  "ra": "Jardim Botânico"
+ },
+ {
+  "nome": "Parque Ecológico Águas Claras",
+  "categoria": "Parque Ecológico",
+  "ra": "Águas Claras"
+ },
+ {
+  "nome": "Parque Ecológico AREAL",
+  "categoria": "Parque Ecológico",
+  "ra": "Arniqueira"
+ },
+ {
+  "nome": "Parque Ecológico Asa Sul",
+  "categoria": "Parque Ecológico",
+  "ra": "Plano Piloto"
+ },
+ {
+  "nome": "Parque Ecológico Burle Marx",
+  "categoria": "Parque Ecológico",
+  "ra": "Plano Piloto"
+ },
+ {
+  "nome": "Parque Ecológico da Cachoeirinha e Coqueirão",
+  "categoria": "Parque Ecológico",
+  "ra": "Paranoá"
+ },
+ {
+  "nome": "Parque Ecológico da Vila Varjão",
+  "categoria": "Parque Ecológico",
+  "ra": "Varjão"
+ },
+ {
+  "nome": "Parque Ecológico das Garças",
+  "categoria": "Parque Ecológico",
+  "ra": "Lago Norte"
+ },
+ {
+  "nome": "Parque Ecológico das Sucupiras",
+  "categoria": "Parque Ecológico",
+  "ra": "Sudoeste/Octogonal"
+ },
+ {
+  "nome": "Parque Ecológico do Anfiteatro Natural do Lago Sul",
+  "categoria": "Parque Ecológico",
+  "ra": "Lago Sul"
+ },
+ {
+  "nome": "Parque Ecológico do Cortado",
+  "categoria": "Parque Ecológico",
+  "ra": "Taguatinga"
+ },
+ {
+  "nome": "Parque Ecológico do DER",
+  "categoria": "Parque Ecológico",
+  "ra": "Planaltina"
+ },
+ {
+  "nome": "Parque Ecológico do Gama",
+  "categoria": "Parque Ecológico",
+  "ra": "Gama"
+ },
+ {
+  "nome": "Parque Ecológico do Lago Norte",
+  "categoria": "Parque Ecológico",
+  "ra": "Lago Norte"
+ },
+ {
+  "nome": "Parque Ecológico do Paranoá",
+  "categoria": "Parque Ecológico",
+  "ra": "Paranoá"
+ },
+ {
+  "nome": "Parque Ecológico do Riacho Fundo",
+  "categoria": "Parque Ecológico",
+  "ra": "Riacho Fundo"
+ },
+ {
+  "nome": "Parque Ecológico dos Jequitibás",
+  "categoria": "Parque Ecológico",
+  "ra": "Sobradinho"
+ },
+ {
+  "nome": "Parque Ecológico dos Pioneiros",
+  "categoria": "Parque Ecológico",
+  "ra": "Candangolândia"
+ },
+ {
+  "nome": "Parque Ecológico e Vivencial da Lagoa Joaquim de Medeiros",
+  "categoria": "Parque Ecológico",
+  "ra": "Planaltina"
+ },
+ {
+  "nome": "Parque Ecológico e Vivencial do Rio Descoberto",
+  "categoria": "Parque Ecológico",
+  "ra": "Ceilândia"
+ },
+ {
+  "nome": "Parque Ecológico Enseada Norte",
+  "categoria": "Parque Ecológico",
+  "ra": "Plano Piloto"
+ },
+ {
+  "nome": "Parque Ecológico Ezechias Heringer",
+  "categoria": "Parque Ecológico",
+  "ra": "Guará"
+ },
+ {
+  "nome": "Parque Ecológico Irmão Afonso Haus",
+  "categoria": "Parque Ecológico",
+  "ra": "Vicente Pires"
+ },
+ {
+  "nome": "Parque Ecológico Lauro Muller",
+  "categoria": "Parque Ecológico",
+  "ra": "Park Way"
+ },
+ {
+  "nome": "Parque Ecológico Luiz Cruls",
+  "categoria": "Parque Ecológico",
+  "ra": "Park Way"
+ },
+ {
+  "nome": "Parque Ecológico Olhos D´água",
+  "categoria": "Parque Ecológico",
+  "ra": "Plano Piloto"
+ },
+ {
+  "nome": "Parque Ecológico Península Sul",
+  "categoria": "Parque Ecológico",
+  "ra": "Plano Piloto"
+ },
+ {
+  "nome": "Parque Ecológico Saburo Onoyama",
+  "categoria": "Parque Ecológico",
+  "ra": "Taguatinga"
+ },
+ {
+  "nome": "Parque Ecológico Santa Maria",
+  "categoria": "Parque Ecológico",
+  "ra": "Santa maria"
+ },
+ {
+  "nome": "Parque Ecológico Sementes do Itapoã",
+  "categoria": "Parque Ecológico",
+  "ra": "Itapoã"
+ },
+ {
+  "nome": "Parque Ecológico Sucupira",
+  "categoria": "Parque Ecológico",
+  "ra": "Planaltina"
+ },
+ {
+  "nome": "Parque Ecológico Taquari",
+  "categoria": "Parque Ecológico",
+  "ra": "Lago Norte"
+ },
+ {
+  "nome": "Parque Ecológico Tororó",
+  "categoria": "Parque Ecológico",
+  "ra": "Jardim Botânico"
+ },
+ {
+  "nome": "Parque Ecológico Três Meninas",
+  "categoria": "Parque Ecológico",
+  "ra": "Samambaia"
+ },
+ {
+  "nome": "Parque Ecológico Veredinha",
+  "categoria": "Parque Ecológico",
+  "ra": "Brazlândia"
+ },
+ {
+  "nome": "Parque Lagoinha",
+  "categoria": "Parque Ecológico",
+  "ra": "Sol Nascente/Pôr do sol"
+ }
+]

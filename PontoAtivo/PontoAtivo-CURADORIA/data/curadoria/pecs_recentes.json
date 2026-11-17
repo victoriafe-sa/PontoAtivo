@@ -1,0 +1,4 @@
+[
+  {"id": "pec-candidato-qnf24", "name": "PEC da Casa Viva — QNF 24", "region": "Taguatinga Norte", "address": "QNF 24, Taguatinga Norte", "status": "candidate", "source_id": "agencia_brasilia_pec", "checked_at": "2026-11-10", "note": "Publicação oficial indica o local; revisar contra a base geográfica antes de publicar e confirmar coordenadas. Data e URL da matéria específica não foram registradas; localizar antes de publicar.", "source_date_unknown": true},
+  {"id": "pec-candidato-sudoeste", "name": "PEC recente no Sudoeste", "region": "Sudoeste/Octogonal", "address": null, "status": "review", "source_id": "agencia_brasilia_pec", "checked_at": "2026-11-10", "note": "A matéria cita a região sem endereço inequívoco; não publicar como novo ponto."}
+]

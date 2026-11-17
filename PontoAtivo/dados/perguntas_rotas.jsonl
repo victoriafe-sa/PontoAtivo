@@ -1,0 +1,22 @@
+{"id": "R01", "pergunta": "tem algum lugar pra nadar em Ceilândia?", "rota": "mapa"}
+{"id": "R02", "pergunta": "quero andar de skate perto do Guará", "rota": "mapa"}
+{"id": "R03", "pergunta": "onde dá pra fazer exercício ao ar livre em Samambaia?", "rota": "mapa"}
+{"id": "R04", "pergunta": "procuro uma pista de corrida iluminada em Taguatinga", "rota": "mapa"}
+{"id": "R05", "pergunta": "onde tem tênis de graça no Plano Piloto?", "rota": "mapa"}
+{"id": "R06", "pergunta": "algum lugar para jogar vôlei de areia no Lago Sul?", "rota": "mapa"}
+{"id": "R07", "pergunta": "qual o horário dos Centros Olímpicos?", "rota": "documentos"}
+{"id": "R08", "pergunta": "o Centro Olímpico do Gama abre no sábado?", "rota": "documentos"}
+{"id": "R09", "pergunta": "o COP de Ceilândia tem estrutura para cadeirantes?", "rota": "documentos"}
+{"id": "R10", "pergunta": "até que horas funciona o Centro Olímpico de Samambaia?", "rota": "documentos"}
+{"id": "R11", "pergunta": "quem é isento da taxa da Escola de Esportes?", "rota": "duvidas"}
+{"id": "R12", "pergunta": "como faço matrícula nos Centros Olímpicos?", "rota": "duvidas"}
+{"id": "R13", "pergunta": "quais faltas são graves nos Centros Olímpicos?", "rota": "duvidas"}
+{"id": "R14", "pergunta": "o que é o Programa Semear?", "rota": "duvidas"}
+{"id": "R15", "pergunta": "como começar no esporte paralímpico?", "rota": "duvidas"}
+{"id": "R16", "pergunta": "onde comprar cerveja no Guará?", "rota": "fora_escopo"}
+{"id": "R17", "pergunta": "qual a previsão do tempo para amanhã em Brasília?", "rota": "fora_escopo"}
+{"id": "R18", "pergunta": "me indica um bom restaurante na Asa Norte", "rota": "fora_escopo"}
+{"id": "R19", "pergunta": "quadra de vôlei e onde comprar cerveja no Guará", "rota": "fora_escopo"}
+{"id": "R20", "pergunta": "Onde posso jogar?", "rota": "esclarecer"}
+{"id": "R21", "pergunta": "tem vaga?", "rota": "esclarecer"}
+{"id": "R22", "pergunta": "quero praticar algo", "rota": "esclarecer"}
