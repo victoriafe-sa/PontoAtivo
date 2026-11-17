@@ -170,7 +170,7 @@ def ingest_catalog(
     """
     start = time.perf_counter()
     report = IngestionReport(started_at=datetime.now(timezone.utc).isoformat())
-    catalog_path = catalog_path or settings.data_dir / "catalogo_fontes.csv"
+    catalog_path = catalog_path or settings.catalog_path
     records = load_catalog(catalog_path)
     report.catalog_records = len(records)
 
@@ -200,8 +200,8 @@ def ingest_catalog(
     report.parent_chunks = len(chunks)
     report.embedding_segments = len(segments)
 
-    write_documents_jsonl(documents, settings.data_dir / "rag" / "documentos_normalizados.jsonl")
-    write_chunks_jsonl(chunks, settings.data_dir / "rag" / "chunks.jsonl")
+    write_documents_jsonl(documents, settings.generated_dir / "documentos_normalizados.jsonl")
+    write_chunks_jsonl(chunks, settings.generated_dir / "chunks.jsonl")
 
     current_ids = [segment.segment_id for segment in segments]
     already_stored = store.existing_ids(current_ids)
@@ -234,7 +234,7 @@ def main(argv: list[str] | None = None) -> int:
         "--catalogo",
         type=Path,
         default=None,
-        help="caminho do catálogo CSV (padrão: dados/catalogo_fontes.csv)",
+        help="caminho do catálogo CSV (padrão: dados/rag/catalogo.csv)",
     )
     args = parser.parse_args(argv)
 
@@ -255,9 +255,9 @@ def main(argv: list[str] | None = None) -> int:
             embedding_model=settings.embedding_model,
         ),
     )
-    save_report(report, settings.data_dir / "rag" / "relatorio_ingestao.json")
+    save_report(report, settings.generated_dir / "relatorio_ingestao.json")
     print(report.to_text())
-    print("\nRelatório salvo em dados/rag/relatorio_ingestao.json")
+    print("\nRelatório salvo em dados/rag/gerado/relatorio_ingestao.json")
     return 0 if report.documents_loaded else 1
 
 

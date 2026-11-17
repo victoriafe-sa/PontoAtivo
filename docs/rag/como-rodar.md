@@ -1,63 +1,14 @@
-# PontoAtivo RAG
+# Como rodar o assistente (RAG)
 
 [![Testes](https://github.com/victoriafe-sa/PontoAtivo/actions/workflows/ci.yml/badge.svg)](https://github.com/victoriafe-sa/PontoAtivo/actions/workflows/ci.yml)
 
-Protótipo acadêmico de recuperação aumentada por geração (RAG) para consultar
-fontes verificáveis sobre atividade física e espaços esportivos no Distrito
-Federal. A implementação está sendo construída em etapas; funcionalidades
-planejadas não são apresentadas como concluídas.
+Guia do assistente do PontoAtivo: configuração, ingestão das fontes, chat no
+mapa, avaliação e diagnóstico. A instalação do ambiente está no
+[README da raiz](../../README.md#instalação); os comandos abaixo são executados
+na raiz do repositório.
 
-## Estado atual
-
-O protótipo já possui o fluxo principal executável: catálogo e coleta de fontes,
-extração de PDF/HTML/Markdown, normalização, chunking hierárquico, embeddings,
-persistência no ChromaDB, recuperação com filtros, geração fundamentada via
-Ollama, abstenção quando não há evidência suficiente e avaliação reproduzível.
-As suítes automatizadas cobrem os módulos locais; a geração textual ainda
-depende de um Ollama disponível e a fidelidade das respostas geradas requer
-revisão humana.
-
-## Por que Python 3.11?
-
-O computador também possui Python 3.14, mas bibliotecas de aprendizado de
-máquina e bancos vetoriais nem sempre oferecem suporte imediato a versões tão
-recentes. Python 3.11 é estável e amplamente compatível com PyTorch, Sentence
-Transformers e ChromaDB.
-
-## Preparação no Windows com PowerShell
-
-Execute os comandos a partir da raiz do repositório (a pasta `PontoAtivo`, que
-contém `pyproject.toml`):
-
-```powershell
-py -3.11 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-python -m pontoativo_rag.diagnostico
-python -m pytest
-```
-
-Se o PowerShell bloquear a ativação, execute uma vez na mesma janela:
-
-```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-```
-
-## Preparação no macOS ou Linux
-
-```bash
-python3.11 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-python -m pontoativo_rag.diagnostico
-python -m pytest
-```
-
-O ambiente virtual isola as bibliotecas deste projeto das demais instalações
-do computador. `requirements.txt` instala o pacote em modo editável: alterações
-em `src/` ficam disponíveis sem reinstalação.
+Veja também: [índice da documentação do RAG](README.md) ·
+[resultado oficial da avaliação](../../experimentos/avaliacao-rag/atual/referencia_gemma12b_e5.md).
 
 ## Configuração
 
@@ -89,12 +40,12 @@ python -m pontoativo_rag.comparacao
 ```
 
 Ela roda as 18 perguntas de avaliação e mais 2 de
-`dados/perguntas_comparacao_extras.jsonl`, sem RAG (com instrução simples e
+`dados/rag/perguntas/comparacao_extras.jsonl`, sem RAG (com instrução simples e
 com instrução cautelosa) e com RAG, e grava as respostas lado a lado em
-`experimentos/evidencias/`. A análise da última rodada está em
-[`experimentos/evidencias/relatorio_comparacao_sem_rag.md`](../experimentos/evidencias/relatorio_comparacao_sem_rag.md).
+`experimentos/avaliacao-rag/`. A análise da última rodada está em
+[`relatorios/relatorio_comparacao_sem_rag.md`](../../experimentos/avaliacao-rag/relatorios/relatorio_comparacao_sem_rag.md).
 
-O relatório é salvo em `experimentos/evidencias/` com as fontes recuperadas, distâncias,
+O relatório é salvo em `experimentos/avaliacao-rag/` com as fontes recuperadas, distâncias,
 abstenções e citações. Não trate distância vetorial como probabilidade de
 acerto; a fidelidade da resposta deve ser revisada contra os documentos.
 
@@ -112,14 +63,14 @@ O limiar que decide quando o assistente diz "não sei" depende do modelo:
 erros de 0,09 a 0,145), e 0,45 para o MiniLM. Os bônus da busca híbrida e as
 folgas de abstenção acompanham o limiar na mesma escala. O portão de qualidade
 com E5 e gemma4:12b está em
-[`experimentos/evidencias/referencia_gemma12b_e5.md`](../experimentos/evidencias/referencia_gemma12b_e5.md),
+[`atual/referencia_gemma12b_e5.md`](../../experimentos/avaliacao-rag/atual/referencia_gemma12b_e5.md),
 e a referência anterior com MiniLM em
-[`experimentos/evidencias/referencia_gemma12b_minilm.md`](../experimentos/evidencias/referencia_gemma12b_minilm.md).
+[`experimentos/evidencias/referencia_gemma12b_minilm.md`](../../experimentos/avaliacao-rag/historico/referencia_gemma12b_minilm.md).
 
 Relatórios temporários com data no nome e arquivos intermediários de ingestão
 são reproduzíveis e ficam ignorados pelo Git. Depois que uma execução passar
 no portão e for revisada, copie somente o relatório aprovado para
-`experimentos/evidencias/avaliacao_atual.md`. As fontes originais e o catálogo permanecem
+`experimentos/avaliacao-rag/atual/`. As fontes originais e o catálogo permanecem
 versionáveis para preservar a auditoria.
 
 Com `--verificar-qualidade`, o comando retorna código de erro quando ocorrer
@@ -143,7 +94,7 @@ Em computadores com pouca memória de GPU, use `gemma4:12b` (8 GB) no `.env`. O
 `gemma4:26b` (18 GB) não cabe nos cerca de 16 GB de GPU de um Mac M4 de 24 GB e
 roda em grande parte na CPU. Nesse Mac, em 12/11/2026, o `gemma4:12b` passou no
 portão completo com cobertura de citações de 1,00 (contra 0,50 do `llama3.2:3b`),
-levando em média 70 s por resposta. Veja `experimentos/evidencias/relatorio_fase4_qualidade.md`.
+levando em média 70 s por resposta. Veja `experimentos/avaliacao-rag/relatorios/relatorio_fase4_qualidade.md`.
 
 Os modelos com raciocínio (gemma4, qwen3) rodam com `"think": false`; sem isso, o
 raciocínio consome o limite de saída e a resposta volta vazia.
@@ -160,14 +111,14 @@ PONTOATIVO_OLLAMA_MODEL_MAPA=<modelo>     # só a barra do mapa; vazio = o mesmo
 ```
 
 Para escolher o modelo do mapa, compare os candidatos no computador da
-demonstração com as 22 perguntas de `dados/perguntas_rotas.jsonl`:
+demonstração com as 22 perguntas de `dados/rag/perguntas/rotas.jsonl`:
 
 ```
 python -m pontoativo_rag.rotas --modelos gemma4:12b <outro-modelo>
 ```
 
 O comando mostra acertos e tempo médio por modelo e salva o relatório em
-`experimentos/evidencias/rotas_<data>.md`. Use o modelo menor só se ele acertar tantas rotas
+`experimentos/avaliacao-rag/rotas_<data>.md`. Use o modelo menor só se ele acertar tantas rotas
 quanto o atual. Os dois modelos ficam carregados juntos no Ollama, então a soma
 dos tamanhos precisa caber na memória de GPU.
 
@@ -239,13 +190,13 @@ as fontes encontradas.
 ## Testes automáticos
 
 Cada pull request e cada envio para a `main` rodam o workflow
-[`.github/workflows/ci.yml`](../.github/workflows/ci.yml) no GitHub Actions:
+[`.github/workflows/ci.yml`](../../.github/workflows/ci.yml) no GitHub Actions:
 
 - `pytest` com os testes do RAG, do chat, da moderação e dos encontros;
 - os testes da curadoria em `curadoria/ferramentas/tests`;
-- a sintaxe de `app.js`, `encontros.js` e `data/locais.js`;
-- a conferência de que `data/locais-encontros.json` está em dia com
-  `data/locais.js`.
+- a sintaxe de `site/app.js`, `site/encontros.js` e `site/data/locais.js`;
+- a conferência de que `site/data/locais-encontros.json` está em dia com
+  `site/data/locais.js`.
 
 O CI não usa o Ollama nem baixa o modelo de embeddings. A geração completa
 continua sendo verificada localmente com `python -m pontoativo_rag.avaliacao`.

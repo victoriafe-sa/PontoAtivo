@@ -64,7 +64,7 @@ repetir a calibração e o portão de qualidade (`python -m pontoativo_rag.avali
 ## Portão de qualidade com o E5
 
 Com o limiar 0,12 e o Gemma 4 12B, o portão completo passou em 17/11/2026
-([relatório](../../experimentos/evidencias/referencia_gemma12b_e5.md)): recall@4 de 0,94, fonte certa
+([relatório](../../experimentos/avaliacao-rag/atual/referencia_gemma12b_e5.md)): recall@4 de 0,94, fonte certa
 em todas as 13 perguntas com resposta, 5 de 5 abstenções corretas, nenhuma falsa
 abstenção, nenhuma citação inválida, cobertura de citações e suporte factual de 1,00.
 

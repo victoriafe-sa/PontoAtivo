@@ -50,7 +50,7 @@ def _region_key(value: str) -> str:
 
 
 def source_metrics() -> dict:
-    path = RAG_ROOT / "dados" / "catalogo_fontes.csv"
+    path = RAG_ROOT / "dados" / "rag" / "catalogo.csv"
     rows = list(csv.DictReader(path.open(encoding="utf-8")))
     classified = {
         source.source_id: source
@@ -217,7 +217,7 @@ def render(report: dict) -> str:
 def main() -> None:
     triage_revisions()
     candidate = ROOT / "data" / "locais.candidato.js"
-    published = ROOT / "data" / "locais.js"
+    published = ROOT.parent / "site" / "data" / "locais.js"
     places_path = candidate if candidate.exists() else published
     raw_places = read_js(places_path)
     if not raw_places or "evidence" not in raw_places[0]:

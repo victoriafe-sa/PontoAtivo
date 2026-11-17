@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def test_perguntas_de_rotas_cobrem_todas_as_rotas_sem_repetir():
-    questions = rotas.load_questions(ROOT / "dados" / "perguntas_rotas.jsonl")
+    questions = rotas.load_questions(ROOT / "dados" / "rag" / "perguntas" / "rotas.jsonl")
     ids = [q["id"] for q in questions]
     assert len(ids) == len(set(ids)) == 22
     assert {q["rota"] for q in questions} == set(ROUTES)

@@ -3,8 +3,8 @@
     python -m pontoativo_rag.avaliacao                 # RAG completo (Ollama)
     python -m pontoativo_rag.avaliacao --sem-geracao   # só recuperação
 
-Gera ``experimentos/evidencias/avaliacao_<data>.jsonl`` (registro completo de cada
-pergunta) e ``experimentos/evidencias/avaliacao_<data>.md`` (relatório legível). Nenhuma
+Gera ``experimentos/avaliacao-rag/avaliacao_<data>.jsonl`` (registro completo de cada
+pergunta) e ``experimentos/avaliacao-rag/avaliacao_<data>.md`` (relatório legível). Nenhuma
 métrica é estimada: tudo é calculado a partir das execuções registradas. A
 fidelidade da resposta ao contexto é deixada para revisão humana.
 """
@@ -569,7 +569,7 @@ def main(argv: list[str] | None = None) -> int:
     from .consulta import answer_question, build_pipeline
 
     settings = Settings.from_env()
-    path = args.perguntas or settings.data_dir / "perguntas_avaliacao.jsonl"
+    path = args.perguntas or settings.questions_dir / "avaliacao.jsonl"
     questions = load_questions(path)
     retriever, generator = build_pipeline(
         settings, use_llm=not args.sem_geracao, reranker=args.reranker

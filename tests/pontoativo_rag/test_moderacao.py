@@ -55,7 +55,7 @@ def test_nao_bloqueia_perguntas_esportivas_comuns(pergunta):
 
 
 def test_nenhuma_pergunta_da_avaliacao_e_bloqueada():
-    linhas = (ROOT / "dados" / "perguntas_avaliacao.jsonl").read_text(encoding="utf-8").splitlines()
+    linhas = (ROOT / "dados" / "rag" / "perguntas" / "avaliacao.jsonl").read_text(encoding="utf-8").splitlines()
     perguntas = [json.loads(linha)["pergunta"] for linha in linhas if linha.strip()]
     assert perguntas
     assert {p: termo_improprio(p) for p in perguntas if termo_improprio(p)} == {}
@@ -63,7 +63,7 @@ def test_nenhuma_pergunta_da_avaliacao_e_bloqueada():
 
 def test_nenhum_nome_de_local_do_mapa_e_bloqueado():
     locais = json.loads(
-        (ROOT / "curadoria" / "data" / "locais-encontros.json").read_text(encoding="utf-8")
+        (ROOT / "site" / "data" / "locais-encontros.json").read_text(encoding="utf-8")
     )
     assert len(locais) > 1000
     bloqueados = {

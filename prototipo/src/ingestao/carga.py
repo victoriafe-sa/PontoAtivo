@@ -1,9 +1,9 @@
 """Ingestão: fontes -> chunks -> embeddings -> banco vetorial.
 
 Rodar a partir da raiz do projeto:
-    python src/ingestao/carga.py
+    python prototipo/src/ingestao/carga.py
 
-Cria (ou recria) a coleção em dados/vetorial/. Na primeira execução o modelo
+Cria (ou recria) a coleção em prototipo/dados/vetorial/. Na primeira execução o modelo
 de embeddings (~1 GB) é baixado.
 """
 

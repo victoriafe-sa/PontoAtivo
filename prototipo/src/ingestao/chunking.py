@@ -18,8 +18,8 @@ Cada chunk guarda dois textos:
   cadastros), usado só para gerar o embedding.
 
 Uso (a partir da raiz do projeto):
-    python src/ingestao/chunking.py
-    python src/ingestao/chunking.py --saida dados/chunks.jsonl
+    python prototipo/src/ingestao/chunking.py
+    python prototipo/src/ingestao/chunking.py --saida prototipo/dados/chunks.jsonl
 """
 
 import argparse

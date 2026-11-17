@@ -330,11 +330,11 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches)
 /* ---------- executar ---------- */
 const CMDS = {
   mac: [['Criar ambiente e instalar', 'python3 -m venv .venv\n.venv/bin/python -m pip install --upgrade pip\n.venv/bin/python -m pip install -r requirements.txt'],
-        ['Gerar o banco vetorial', '.venv/bin/python src/ingestao/carga.py'],
-        ['Fazer uma consulta', '.venv/bin/python src/main.py "A academia pública do Parque da Cidade é gratuita e como utilizar?" -k 5']],
+        ['Gerar o banco vetorial', '.venv/bin/python prototipo/src/ingestao/carga.py'],
+        ['Fazer uma consulta', '.venv/bin/python prototipo/src/main.py "A academia pública do Parque da Cidade é gratuita e como utilizar?" -k 5']],
   win: [['Criar ambiente e instalar', 'python -m venv .venv\n.venv/Scripts/python.exe -m pip install --upgrade pip\n.venv/Scripts/python.exe -m pip install torch --index-url https://download.pytorch.org/whl/cpu\n.venv/Scripts/python.exe -m pip install -r requirements.txt'],
-        ['Gerar o banco vetorial', '.venv/Scripts/python.exe src/ingestao/carga.py'],
-        ['Fazer uma consulta', '.venv/Scripts/python.exe src/main.py "A academia pública do Parque da Cidade é gratuita e como utilizar?" -k 5']],
+        ['Gerar o banco vetorial', '.venv/Scripts/python.exe prototipo/src/ingestao/carga.py'],
+        ['Fazer uma consulta', '.venv/Scripts/python.exe prototipo/src/main.py "A academia pública do Parque da Cidade é gratuita e como utilizar?" -k 5']],
 };
 function mostrarCmds(so) {
   document.querySelectorAll('.aba').forEach(a => a.classList.toggle('ativo', a.dataset.so === so));

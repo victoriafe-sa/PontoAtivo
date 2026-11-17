@@ -125,8 +125,8 @@ def main(argv: list[str] | None = None) -> int:
 
     settings = Settings.from_env()
     paths = args.perguntas or [
-        settings.data_dir / "perguntas_avaliacao.jsonl",
-        settings.data_dir / "perguntas_comparacao_extras.jsonl",
+        settings.questions_dir / "avaliacao.jsonl",
+        settings.questions_dir / "comparacao_extras.jsonl",
     ]
     questions = [question for path in paths for question in load_questions(path)]
     retriever, generator = build_pipeline(settings)

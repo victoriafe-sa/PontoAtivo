@@ -7,7 +7,7 @@ class GeneratorTest(unittest.TestCase):
         root=Path(__file__).parents[2]
         with tempfile.TemporaryDirectory() as td:
             a=Path(td)/"a.js"; b=Path(td)/"b.js"
-            records=generate(root/"data"/"locais.js",root/"data"/"curadoria",a)
+            records=generate(root.parent/"site"/"data"/"locais.js",root/"data"/"curadoria",a)
             records2=generate(a,root/"data"/"curadoria",b)
             self.assertEqual(a.read_bytes(),b.read_bytes())
             park=next(x for x in records if x["id"]=="ibram-4")

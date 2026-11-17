@@ -103,11 +103,11 @@ class Settings:
         embedding_model = os.getenv("PONTOATIVO_EMBEDDING_MODEL", DEFAULT_EMBEDDING_MODEL)
         return cls(
             root=project_root,
-            sources_dir=project_root / "dados" / "fontes_originais",
+            sources_dir=project_root / "dados" / "rag" / "fontes",
             data_dir=project_root / "dados",
             vector_db_dir=project_root / "dados" / "rag" / "vetorial",
-            documentation_dir=project_root / "docs" / "engenharia",
-            evidence_dir=project_root / "experimentos" / "evidencias",
+            documentation_dir=project_root / "docs" / "rag",
+            evidence_dir=project_root / "experimentos" / "avaliacao-rag",
             embedding_model=embedding_model,
             collection_name=os.getenv(
                 "PONTOATIVO_CHROMA_COLLECTION", "pontoativo_e5_base_v1"
@@ -142,6 +142,24 @@ class Settings:
     def distance_scale(self) -> float:
         """Limiar do modelo em relação ao do MiniLM; ajusta bônus e folgas da busca."""
         return self.max_distance / REFERENCE_MAX_DISTANCE
+
+    @property
+    def rag_dir(self) -> Path:
+        """dados/rag/: fontes, catálogo, perguntas, arquivos gerados e índice."""
+        return self.data_dir / "rag"
+
+    @property
+    def catalog_path(self) -> Path:
+        return self.rag_dir / "catalogo.csv"
+
+    @property
+    def questions_dir(self) -> Path:
+        return self.rag_dir / "perguntas"
+
+    @property
+    def generated_dir(self) -> Path:
+        """Documentos normalizados, trechos e relatório da ingestão (fora do Git)."""
+        return self.rag_dir / "gerado"
 
     @property
     def map_model(self) -> str:
