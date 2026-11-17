@@ -1,0 +1,156 @@
+[
+  {
+    "id": "review-park-lobo-guara",
+    "place_id": "ibram-8",
+    "entity": "Parque Distrital Lobo Guará",
+    "reason": "not_found_in_current_ibram_geometry",
+    "status": "blocked_external_verification",
+    "category": "park",
+    "next_action": "Obter confirmação documental ou vistoria; manter fora da publicação até existir fonte com endereço/coordenada verificável."
+  },
+  {
+    "id": "review-park-lagoinha",
+    "place_id": "ibram-46",
+    "entity": "Parque Lagoinha",
+    "reason": "not_found_in_current_ibram_geometry",
+    "status": "blocked_external_verification",
+    "category": "park",
+    "next_action": "Obter confirmação documental ou vistoria; manter fora da publicação até existir fonte com endereço/coordenada verificável."
+  },
+  {
+    "id": "review-ginasio-samambaia",
+    "place_id": "sel-ginasio-samambaia",
+    "entity": "Ginásio de Esportes de Samambaia",
+    "reason": "exact_location_unconfirmed",
+    "status": "blocked_external_verification",
+    "category": "non_park_venue",
+    "next_action": "Obter confirmação documental ou vistoria; manter fora da publicação até existir fonte com endereço/coordenada verificável."
+  },
+  {
+    "id": "review-uniace",
+    "entity": "UNIACE",
+    "activity": "paradesporto",
+    "reason": "regular_training_address_unconfirmed",
+    "status": "blocked_external_verification",
+    "next_action": "Obter confirmação documental ou vistoria; manter fora da publicação até existir fonte com endereço/coordenada verificável."
+  },
+  {
+    "id": "review-candangos",
+    "entity": "Candangos — basquete em cadeira de rodas",
+    "activity": "basquete em cadeira de rodas",
+    "reason": "regular_training_address_unconfirmed",
+    "status": "blocked_external_verification",
+    "next_action": "Obter confirmação documental ou vistoria; manter fora da publicação até existir fonte com endereço/coordenada verificável."
+  },
+  {
+    "id": "review-coords-para-cetefe",
+    "place_id": "para-cetefe",
+    "entity": "CETEFE — Centro de Treinamento de Educação Física Especial",
+    "reason": "coordinates_provenance_undocumented",
+    "status": "blocked_external_verification",
+    "previous_value": {
+      "latitude": -15.8346,
+      "longitude": -47.9262
+    },
+    "note": "Valor retirado da publicação; confirmar em fonte geográfica documentada antes de exibir pino.",
+    "next_action": "Obter confirmação documental ou vistoria; manter fora da publicação até existir fonte com endereço/coordenada verificável."
+  },
+  {
+    "id": "review-coords-para-diref",
+    "place_id": "para-diref",
+    "entity": "CECAF/DIREF — Centro de Capacitação Física",
+    "reason": "coordinates_provenance_undocumented",
+    "status": "blocked_external_verification",
+    "previous_value": {
+      "latitude": -15.8218,
+      "longitude": -47.93
+    },
+    "note": "Valor retirado da publicação; confirmar em fonte geográfica documentada antes de exibir pino.",
+    "next_action": "Obter confirmação documental ou vistoria; manter fora da publicação até existir fonte com endereço/coordenada verificável."
+  },
+  {
+    "id": "review-coords-para-escola-fatima",
+    "place_id": "para-escola-fatima",
+    "entity": "Escola Franciscana Nossa Senhora de Fátima",
+    "reason": "coordinates_provenance_undocumented",
+    "status": "blocked_external_verification",
+    "previous_value": {
+      "latitude": -15.817,
+      "longitude": -47.9155
+    },
+    "note": "Valor retirado da publicação; confirmar em fonte geográfica documentada antes de exibir pino.",
+    "next_action": "Obter confirmação documental ou vistoria; manter fora da publicação até existir fonte com endereço/coordenada verificável."
+  },
+  {
+    "id": "review-coords-priv-clube-naval",
+    "place_id": "priv-clube-naval",
+    "entity": "Clube Naval de Brasília",
+    "reason": "coordinates_provenance_undocumented",
+    "status": "blocked_external_verification",
+    "previous_value": {
+      "latitude": -15.8205,
+      "longitude": -47.857
+    },
+    "note": "Valor retirado da publicação; confirmar em fonte geográfica documentada antes de exibir pino.",
+    "next_action": "Obter confirmação documental ou vistoria; manter fora da publicação até existir fonte com endereço/coordenada verificável."
+  },
+  {
+    "id": "review-coords-priv-aabb",
+    "place_id": "priv-aabb",
+    "entity": "AABB Brasília",
+    "reason": "coordinates_provenance_undocumented",
+    "status": "blocked_external_verification",
+    "previous_value": {
+      "latitude": -15.8228,
+      "longitude": -47.8517
+    },
+    "note": "Valor retirado da publicação; confirmar em fonte geográfica documentada antes de exibir pino.",
+    "next_action": "Obter confirmação documental ou vistoria; manter fora da publicação até existir fonte com endereço/coordenada verificável."
+  },
+  {
+    "id": "review-coords-priv-minas",
+    "place_id": "priv-minas",
+    "entity": "Minas Brasília Tênis Clube",
+    "reason": "coordinates_provenance_undocumented",
+    "status": "blocked_external_verification",
+    "previous_value": {
+      "latitude": -15.7419,
+      "longitude": -47.8501
+    },
+    "note": "Valor retirado da publicação; confirmar em fonte geográfica documentada antes de exibir pino.",
+    "next_action": "Obter confirmação documental ou vistoria; manter fora da publicação até existir fonte com endereço/coordenada verificável."
+  },
+  {
+    "id": "review-coords-priv-aeronautica",
+    "place_id": "priv-aeronautica",
+    "entity": "Clube da Aeronáutica de Brasília",
+    "reason": "coordinates_provenance_undocumented",
+    "status": "blocked_external_verification",
+    "previous_value": {
+      "latitude": -15.8184,
+      "longitude": -47.8615
+    },
+    "note": "Valor retirado da publicação; confirmar em fonte geográfica documentada antes de exibir pino.",
+    "next_action": "Obter confirmação documental ou vistoria; manter fora da publicação até existir fonte com endereço/coordenada verificável."
+  },
+  {
+    "id": "review-dup-escola-fatima-ide-521",
+    "place_id": "para-escola-fatima",
+    "other_place_id": "ide-521",
+    "entity": "Escola Franciscana N. S. de Fátima × Quadra poliesportiva – SHIGS 711",
+    "reason": "possible_duplicate",
+    "distance_m": 77.9,
+    "status": "blocked_external_verification",
+    "note": "Distância calculada com a coordenada sem procedência já retirada; pode ser a quadra da escola ou equipamento distinto.",
+    "next_action": "Obter confirmação documental ou vistoria; manter fora da publicação até existir fonte com endereço/coordenada verificável."
+  },
+  {
+    "id": "review-dup-pqu-5",
+    "place_id": "pqu-5",
+    "entity": "Parque Urbano Denner",
+    "reason": "exact_duplicate_in_source_base",
+    "copies": 3,
+    "status": "resolved_by_generator",
+    "note": "A base de 05/11/2026 repetia o registro três vezes com conteúdo idêntico; o gerador mantém uma cópia."
+  }
+]

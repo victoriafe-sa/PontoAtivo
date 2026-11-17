@@ -1,0 +1,13 @@
+[
+  {
+    "id": "pec-a",
+    "name": "PEC QNM 10",
+    "category": "pec",
+    "latitude": -15.815,
+    "longitude": -48.105,
+    "evidence": {
+      "location": {"value": true, "level": "oficial", "source_id": "ide_df", "source_date": "2025-01-01", "checked_at": "2026-11-10"},
+      "accessible_toilet": {"value": null, "level": "desconhecido"}
+    }
+  }
+]

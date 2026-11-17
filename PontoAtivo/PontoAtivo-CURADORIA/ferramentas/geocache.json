@@ -1,0 +1,412 @@
+{
+ "cop-brazlandia": {
+  "q": "Vila São José Brazlândia",
+  "lat": -15.6634728,
+  "lon": -48.1952164,
+  "osm": "Vila São José, Brazlândia, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": false
+ },
+ "cop-recanto": {
+  "q": "Centro Olímpico Recanto das Emas",
+  "lat": -15.9145988,
+  "lon": -48.0595815,
+  "osm": "Centro Olímpico de Recanto das Emas, Av. Copaíba, Subcentro Urbano, Recanto das Emas, Distrito Federal, Região Centro-Oeste, 72630-218, Brasil",
+  "exact": true
+ },
+ "cop-setor-o": {
+  "q": "Centro Olímpico Setor O Ceilândia",
+  "lat": -15.8006454,
+  "lon": -48.1236148,
+  "osm": "Av. Pernambuco - QNO 1 (Lado Oposto ao Centro Olímpico), Via 3, Setor O, Ceilândia, Distrito Federal, Região Centro-Oeste, 72260-624, Brasil",
+  "exact": true
+ },
+ "cop-santa-maria": {
+  "q": "Centro Olímpico Santa Maria",
+  "lat": -16.0154056,
+  "lon": -48.0054299,
+  "osm": "Centro Olímpico, Avenida Santa Maria, Residencial Ribeirão, Santa Maria, Distrito Federal, Região Centro-Oeste, 72510-000, Brasil",
+  "exact": true
+ },
+ "cop-vaquejada": {
+  "q": "Centro Olímpico Parque da Vaquejada",
+  "lat": -15.8103481,
+  "lon": -48.1380106,
+  "osm": "Centro Olímpico Parque da Vaquejada, Edf Setor P Norte Eqnp 29 23 e 21, Trecho II, Sol Nascente/Pôr do Sol, Distrito Federal, Região Centro-Oeste, 72270-300, Br",
+  "exact": false
+ },
+ "cop-sobradinho": {
+  "q": "Centro Olímpico Sobradinho",
+  "lat": -15.6529244,
+  "lon": -47.787052,
+  "osm": "Centro Olímpico, Quadra 2 Conjunto E-10, Quadra 2, Vila Dnocs, Sobradinho, Distrito Federal, Região Centro-Oeste, 71928-720, Brasil",
+  "exact": true
+ },
+ "cop-estrutural": {
+  "q": "Centro Olímpico Estrutural",
+  "lat": -15.7780131,
+  "lon": -47.9923322,
+  "osm": "Centro Olímpico e Paralímpico da Estrutural, Chácara 17 Santa Luzia, Cidade Estrutural, SCIA, Distrito Federal, Região Centro-Oeste, 71300-000, Brasil",
+  "exact": true
+ },
+ "cop-sao-sebastiao": {
+  "q": "Centro Olímpico São Sebastião",
+  "lat": -15.8914369,
+  "lon": -47.7815293,
+  "osm": "Centro Olímpico de São Sebastião, Avenida dos Eucaliptos, Quadra 02, Bairro Sao Bartolomeu, São Sebastião, Distrito Federal, Região Centro-Oeste, 71697-040, Bra",
+  "exact": true
+ },
+ "cop-gama": {
+  "q": "Centro Olímpico Gama",
+  "lat": -16.0131187,
+  "lon": -48.0603752,
+  "osm": "Centro Olímpico do Gama, Via SCLN, Setor Central, Gama, Distrito Federal, Região Centro-Oeste, 72460-100, Brasil",
+  "exact": true
+ },
+ "cop-riacho": {
+  "q": "QS 16 Riacho Fundo",
+  "lat": -15.883305,
+  "lon": -48.0174762,
+  "osm": "Riacho Fundo, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": false
+ },
+ "cop-planaltina": {
+  "q": "Centro Olímpico Planaltina",
+  "lat": -15.6152814,
+  "lon": -47.6506577,
+  "osm": "Centro Olímpico de Planaltina, Via NS-2, Setor de Áreas Especiais Norte, Planaltina, Distrito Federal, Região Centro-Oeste, 73350-207, Brasil",
+  "exact": true
+ },
+ "cop-samambaia": {
+  "q": "QS 119 Samambaia",
+  "lat": -15.8863492,
+  "lon": -48.0954211,
+  "osm": "QR/QS 305 Conjunto 02 a 15, QR 305, Samambaia Norte, Samambaia, Distrito Federal, Região Centro-Oeste, 72305-505, Brasil",
+  "exact": false
+ },
+ "sel-ginasio-samambaia": null,
+ "sel-claudio-coutinho": {
+  "q": "Parque Aquático Cláudio Coutinho",
+  "lat": -15.7802333,
+  "lon": -47.9009903,
+  "osm": "Parque Aquático Claudio Coutinho, SRPN Trecho 1, Quadra 1, Setor de Administração Municipal, Brasília, Plano Piloto, Distrito Federal, Região Centro-Oeste, 7007",
+  "exact": true
+ },
+ "sel-parque-cidade": {
+  "q": "Parque da Cidade Sarah Kubitschek",
+  "lat": -15.7998476,
+  "lon": -47.9070091,
+  "osm": "Relógio de Sol do Parque da Cidade, SRPS, Setor de Rádio e TV Sul, Asa Sul, Brasília, Plano Piloto, Distrito Federal, Região Centro-Oeste, 70390-050, Brasil",
+  "exact": true
+ },
+ "sel-bezerrao": {
+  "q": "Estádio Bezerrão Gama",
+  "lat": -16.0114434,
+  "lon": -48.0619295,
+  "osm": "Estádio Bezerrão, Avenida JK, Setor Central, Gama, Distrito Federal, Região Centro-Oeste, 72405-000, Brasil",
+  "exact": true
+ },
+ "sel-rorizao": {
+  "q": "Estádio Joaquim Domingos Roriz",
+  "lat": -15.8795674,
+  "lon": -48.0887661,
+  "osm": "Estádio Joaquim Domingos Roriz, Avenida Central, ADE Sul, Samambaia, Distrito Federal, Região Centro-Oeste, 72300-647, Brasil",
+  "exact": true
+ },
+ "sel-augustinho": {
+  "q": "Estádio Augustinho Lima Sobradinho",
+  "lat": -15.6527019,
+  "lon": -47.7852727,
+  "osm": "Estádio Augustinho Lima, Quadra 14, Vila Dnocs, Sobradinho, Distrito Federal, Região Centro-Oeste, 73010-532, Brasil",
+  "exact": true
+ },
+ "sel-abadiao": {
+  "q": "Estádio Maria de Lourdes Abadia",
+  "lat": -15.8280238,
+  "lon": -48.110319,
+  "osm": "Estádio Maria de Lourdes Abadia, St. N, QNN 14, Setor N Norte, Guariroba, Ceilândia, Distrito Federal, Região Centro-Oeste, 72220-514, Brasil",
+  "exact": true
+ },
+ "para-cetefe-enap": {
+  "q": "Enap",
+  "lat": -15.830606,
+  "lon": -47.9319375,
+  "osm": "ENAP, W3 Sul, SQS 316, Brasília, Plano Piloto, Distrito Federal, Região Centro-Oeste, 70387-000, Brasil",
+  "exact": true
+ },
+ "unb-centro-olimpico": {
+  "q": "Centro Olímpico UnB",
+  "lat": -15.7636571,
+  "lon": -47.8596401,
+  "osm": "Centro Olímpico da UnB (CO), Estrada Parque das Nações, Asa Norte, Brasília, Plano Piloto, Distrito Federal, Região Centro-Oeste, 70910-900, Brasil",
+  "exact": false
+ },
+ "ibram-0": {
+  "q": "Parque Bernardo Sayão",
+  "lat": -15.8298,
+  "lon": -47.8028174,
+  "osm": "Parque Bernardo Sayão, Lago Sul, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-1": {
+  "q": "Parque Boca da Mata",
+  "lat": -15.8670458,
+  "lon": -48.0467208,
+  "osm": "Parque Boca da Mata, Setor de Mansões Sudeste, Samambaia, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-2": {
+  "q": "Parque Distrital da Serrinha",
+  "lat": -15.7157032,
+  "lon": -47.8589163,
+  "osm": "Parque Distrital da Serrinha, Setor Habitacional Taquari, Lago Norte, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-3": {
+  "q": "Parque Copaíbas",
+  "lat": -15.8229193,
+  "lon": -47.8114671,
+  "osm": "Parque Ecológico das Copaíbas, Lago Sul, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-4": {
+  "q": "Parque São Sebastião",
+  "lat": -15.6233068,
+  "lon": -47.6623502,
+  "osm": "Praça São Sebastião;Praça Sao Sebestiao, Setor Tradicional, Planaltina, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-5": {
+  "q": "Parque Distrital do Gama",
+  "lat": -16.0429058,
+  "lon": -48.0534718,
+  "osm": "Parque Distrital do Gama, Vila DVO, Gama, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-6": null,
+ "ibram-7": {
+  "q": "Parque Pequizeiros",
+  "lat": -15.6774299,
+  "lon": -47.6220309,
+  "osm": "Parque Ecológico dos Pequizeiros, Planaltina, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-8": {
+  "q": "Lobo Guará",
+  "lat": -15.7778998,
+  "lon": -47.9141714,
+  "osm": "Pista Lobo Guará, Alameda Marechal Severiano da Fonseca, Setor Militar Urbano, Brasília, Plano Piloto, Distrito Federal, Região Centro-Oeste, 70610-650, Brasil",
+  "exact": true
+ },
+ "ibram-9": {
+  "q": "Ponte Alta do Gama",
+  "lat": -16.0391931,
+  "lon": -48.1343397,
+  "osm": "Ribeirão Ponte Alta, Gama, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-10": {
+  "q": "Parque Recanto das Emas",
+  "lat": -15.9330959,
+  "lon": -48.0980378,
+  "osm": "Parque Ecológico e Vivencial Recanto das Emas, Recanto das Emas, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-11": null,
+ "ibram-12": {
+  "q": "Parque Ecológico Águas Claras",
+  "lat": -15.830198,
+  "lon": -48.0211675,
+  "osm": "Parque Ecológico Águas Claras, Águas Claras, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-13": {
+  "q": "Parque AREAL",
+  "lat": -15.8602355,
+  "lon": -48.0212721,
+  "osm": "Parque Areal, Vila Areal, Arniqueira, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-14": {
+  "q": "Parque Asa Sul",
+  "lat": -15.837901,
+  "lon": -47.9121407,
+  "osm": "Parque de Uso Múltiplo da Asa Sul, Asa Sul, Brasília, Plano Piloto, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-15": {
+  "q": "Parque Ecológico Burle Marx",
+  "lat": -15.7548637,
+  "lon": -47.905694,
+  "osm": "Parque Ecológico Burle Marx, Setor Noroeste, Brasília, Plano Piloto, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-16": null,
+ "ibram-17": {
+  "q": "Parque Vila Varjão",
+  "lat": -15.7084999,
+  "lon": -47.8856438,
+  "osm": "Parque Vila Varjão, Varjão, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-18": {
+  "q": "Parque Garças",
+  "lat": -15.7713257,
+  "lon": -47.8316358,
+  "osm": "Parque das Garças, Lago Norte, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-19": {
+  "q": "Parque Ecológico das Sucupiras",
+  "lat": -15.7838051,
+  "lon": -47.9213397,
+  "osm": "Parque Ecológico das Sucupiras, Sudoeste e Octogonal, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-20": null,
+ "ibram-21": {
+  "q": "Parque Ecológico do Cortado",
+  "lat": -15.8156052,
+  "lon": -48.0747813,
+  "osm": "Parque Ecológico Lago do Cortado, Taguatinga Norte, Taguatinga, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-22": {
+  "q": "Parque DER",
+  "lat": -15.6911442,
+  "lon": -47.849306,
+  "osm": "Parque do DER, Grande Colorado, Sobradinho, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-23": {
+  "q": "Parque Gama",
+  "lat": -16.0313275,
+  "lon": -48.0688618,
+  "osm": "Praça 1 Setor Sul Gama, Setor Sul, Gama, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-24": {
+  "q": "Parque Ecológico do Lago Norte",
+  "lat": -15.7203431,
+  "lon": -47.8948655,
+  "osm": "Parque Ecológico do Lago Norte, Setor Habitacional Taquari, Lago Norte, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-25": {
+  "q": "Parque Paranoá",
+  "lat": -15.7675813,
+  "lon": -47.7912005,
+  "osm": "Praça 5 Paranoá Parque, Paranoá Parque, Paranoá, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-26": {
+  "q": "Parque Ecológico do Riacho Fundo",
+  "lat": -15.8875239,
+  "lon": -48.0260697,
+  "osm": "Parque Ecológico do Riacho Fundo, Colônia Agrícola Sucupira, Riacho Fundo, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-27": {
+  "q": "Parque Ecológico dos Jequitibás",
+  "lat": -15.6411087,
+  "lon": -47.7885007,
+  "osm": "Parque Ecológico dos Jequitibás, Sobradinho, Distrito Federal, Região Centro-Oeste, 73040-114, Brasil",
+  "exact": true
+ },
+ "ibram-28": {
+  "q": "Parque Pioneiros",
+  "lat": -15.8556258,
+  "lon": -47.9484136,
+  "osm": "Parque dos Pioneiros, Candangolândia, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-29": null,
+ "ibram-30": {
+  "q": "Parque Ecológico e Vivencial do Rio Descoberto",
+  "lat": -15.7943748,
+  "lon": -48.2306897,
+  "osm": "Parque Ecológico e Vivencial do Rio Descoberto, Ceilândia, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-31": null,
+ "ibram-32": {
+  "q": "Parque Ezechias Heringer",
+  "lat": -15.8313409,
+  "lon": -47.969343,
+  "osm": "Parque Ezechias Heringer, Guará II, Guará, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-33": null,
+ "ibram-34": null,
+ "ibram-35": {
+  "q": "Luiz Cruls",
+  "lat": -15.7876528,
+  "lon": -47.8989349,
+  "osm": "Planetário de Brasília Luiz Cruls, Ciclovia N1 Oeste, Setor Hoteleiro Norte, Setor de Administração Municipal, Brasília, Plano Piloto, Distrito Federal, Região ",
+  "exact": true
+ },
+ "ibram-36": {
+  "q": "Parque Ecológico Olhos D'água",
+  "lat": -15.7436536,
+  "lon": -47.8847895,
+  "osm": "Parque Olhos d'Água, Asa Norte, Brasília, Plano Piloto, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-37": {
+  "q": "Parque Península Sul",
+  "lat": -15.8291089,
+  "lon": -47.8656514,
+  "osm": "Parque Península Sul, Lago Sul, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-38": {
+  "q": "Parque Saburo Onoyama",
+  "lat": -15.8497626,
+  "lon": -48.0539802,
+  "osm": "Parque Saburo Onoyama, Taguatinga Centro, Taguatinga, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-39": {
+  "q": "Santa Maria",
+  "lat": -16.0171229,
+  "lon": -48.0131328,
+  "osm": "Santa Maria, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-40": null,
+ "ibram-41": {
+  "q": "Parque Ecológico Sucupira",
+  "lat": -15.6038785,
+  "lon": -47.6604914,
+  "osm": "Parque Ecológico Sucupira, Jardim Roriz, Vila Nossa Senhora de Fátima, Planaltina, Distrito Federal, Região Centro-Oeste, 73340-711, Brasil",
+  "exact": true
+ },
+ "ibram-42": {
+  "q": "Parque Ecológico Taquari",
+  "lat": -15.7068622,
+  "lon": -47.8747432,
+  "osm": "Parque Ecológico do Taquari, Setor Habitacional Taquari, Lago Norte, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-43": {
+  "q": "Parque Ecológico Tororó",
+  "lat": -15.945933,
+  "lon": -47.8347307,
+  "osm": "Parque Ecológico do Tororó, Santa Maria, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-44": {
+  "q": "Parque Ecológico Três Meninas",
+  "lat": -15.8704577,
+  "lon": -48.1116973,
+  "osm": "Parque Ecológico Três Meninas, Samambaia Norte, Samambaia, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-45": {
+  "q": "Parque Ecológico Veredinha",
+  "lat": -15.6735193,
+  "lon": -48.19725,
+  "osm": "Parque Ecológico Veredinha, Setor Norte, Brazlândia, Distrito Federal, Região Centro-Oeste, Brasil",
+  "exact": true
+ },
+ "ibram-46": null
+}

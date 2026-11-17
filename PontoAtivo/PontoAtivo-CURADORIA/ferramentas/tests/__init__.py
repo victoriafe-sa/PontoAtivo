@@ -1,0 +1,1 @@
+"""Testes offline e determinísticos."""
