@@ -1,0 +1,329 @@
+{
+  "generated_at": "2026-11-10",
+  "sources": {
+    "total": 24,
+    "authority": {
+      "oficial": 15,
+      "institucional": 9
+    },
+    "freshness": {
+      "em_revisao": 7,
+      "antiga": 7,
+      "desconhecida": 5,
+      "atual": 5
+    },
+    "completeness": {
+      "complete": 24,
+      "incomplete": 0,
+      "average_score": 1.0
+    },
+    "items": [
+      {
+        "source_id": "DOC-001",
+        "authority": "oficial",
+        "freshness": "em_revisao",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-002",
+        "authority": "oficial",
+        "freshness": "antiga",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-003",
+        "authority": "oficial",
+        "freshness": "desconhecida",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-004",
+        "authority": "oficial",
+        "freshness": "em_revisao",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-005",
+        "authority": "oficial",
+        "freshness": "em_revisao",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-006",
+        "authority": "oficial",
+        "freshness": "antiga",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-007",
+        "authority": "oficial",
+        "freshness": "atual",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-008",
+        "authority": "institucional",
+        "freshness": "atual",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-009",
+        "authority": "oficial",
+        "freshness": "atual",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-010",
+        "authority": "oficial",
+        "freshness": "em_revisao",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-011",
+        "authority": "institucional",
+        "freshness": "em_revisao",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-012",
+        "authority": "oficial",
+        "freshness": "antiga",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-013",
+        "authority": "institucional",
+        "freshness": "antiga",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-014",
+        "authority": "oficial",
+        "freshness": "antiga",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-015",
+        "authority": "oficial",
+        "freshness": "em_revisao",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-016",
+        "authority": "oficial",
+        "freshness": "desconhecida",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-017",
+        "authority": "oficial",
+        "freshness": "atual",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-018",
+        "authority": "oficial",
+        "freshness": "antiga",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-019",
+        "authority": "institucional",
+        "freshness": "atual",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-020",
+        "authority": "institucional",
+        "freshness": "desconhecida",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-021",
+        "authority": "institucional",
+        "freshness": "desconhecida",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-022",
+        "authority": "institucional",
+        "freshness": "desconhecida",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-023",
+        "authority": "institucional",
+        "freshness": "em_revisao",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      },
+      {
+        "source_id": "DOC-024",
+        "authority": "institucional",
+        "freshness": "antiga",
+        "completeness_score": 1.0,
+        "missing_fields": []
+      }
+    ]
+  },
+  "places": {
+    "input": "data/locais.candidato.js",
+    "total": 1752,
+    "with_coordinates": 1743,
+    "without_coordinates": 9,
+    "coverage_by_region": {
+      "Arapoanga": 2,
+      "Arniqueira": 17,
+      "Brazlândia": 32,
+      "Candangolândia": 19,
+      "Ceilândia": 172,
+      "Cruzeiro": 29,
+      "Fercal": 7,
+      "Gama": 96,
+      "Guará": 115,
+      "Itapoã": 14,
+      "Jardim Botânico": 7,
+      "Lago Norte": 19,
+      "Lago Sul": 11,
+      "Núcleo Bandeirante": 36,
+      "Paranoá": 61,
+      "Park Way": 21,
+      "Planaltina": 50,
+      "Plano Piloto": 233,
+      "Recanto das Emas": 105,
+      "Riacho Fundo": 30,
+      "Riacho Fundo Ii": 44,
+      "SCIA/Estrutural": 21,
+      "SIA": 3,
+      "Samambaia": 152,
+      "Santa Maria": 56,
+      "Sobradinho": 30,
+      "Sobradinho Ii": 25,
+      "Sol Nascente": 2,
+      "Sol Nascente/Pôr do Sol": 6,
+      "Sudoeste/Octogonal": 47,
+      "São Sebastião": 59,
+      "Taguatinga": 187,
+      "Varjão": 16,
+      "Vicente Pires": 8,
+      "Águas Claras": 20
+    },
+    "coverage_by_type": {
+      "areia": 156,
+      "campo": 141,
+      "clube": 4,
+      "cop": 12,
+      "estadio": 7,
+      "ginastica": 192,
+      "para": 3,
+      "parque": 85,
+      "pec": 403,
+      "quadra": 727,
+      "skate": 21,
+      "tenis": 1
+    },
+    "accessibility_attributes": {
+      "step_free_route": {
+        "known": 0,
+        "unknown": 1752,
+        "levels": {
+          "desconhecido": 1752
+        }
+      },
+      "entry_barrier_free": {
+        "known": 0,
+        "unknown": 1752,
+        "levels": {
+          "desconhecido": 1752
+        }
+      },
+      "circulation": {
+        "known": 0,
+        "unknown": 1752,
+        "levels": {
+          "desconhecido": 1752
+        }
+      },
+      "accessible_toilet": {
+        "known": 0,
+        "unknown": 1752,
+        "levels": {
+          "desconhecido": 1752
+        }
+      },
+      "accessible_parking": {
+        "known": 0,
+        "unknown": 1752,
+        "levels": {
+          "desconhecido": 1752
+        }
+      },
+      "tactile_paving": {
+        "known": 0,
+        "unknown": 1752,
+        "levels": {
+          "desconhecido": 1752
+        }
+      },
+      "signage": {
+        "known": 0,
+        "unknown": 1752,
+        "levels": {
+          "desconhecido": 1752
+        }
+      },
+      "adapted_equipment": {
+        "known": 13,
+        "unknown": 1739,
+        "levels": {
+          "oficial": 12,
+          "desconhecido": 1739,
+          "organizacao": 1
+        }
+      },
+      "human_support": {
+        "known": 0,
+        "unknown": 1752,
+        "levels": {
+          "desconhecido": 1752
+        }
+      }
+    }
+  },
+  "revisions": {
+    "total": 14,
+    "resolved": 1,
+    "blocked_external_verification": 13,
+    "pending": 0,
+    "by_reason": {
+      "not_found_in_current_ibram_geometry": 2,
+      "exact_location_unconfirmed": 1,
+      "regular_training_address_unconfirmed": 2,
+      "coordinates_provenance_undocumented": 7,
+      "possible_duplicate": 1,
+      "exact_duplicate_in_source_base": 1
+    }
+  }
+}

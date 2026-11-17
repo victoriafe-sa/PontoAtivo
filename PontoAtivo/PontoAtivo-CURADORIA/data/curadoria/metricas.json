@@ -1,0 +1,13 @@
+{
+  "generated_at":"2026-11-10",
+  "published_places_before":1748,
+  "pec_geocoded_open":403,
+  "pec_reported_min":1000,
+  "pec_reported_wording":"mais de mil",
+  "pec_reported_as_of":"2025-11-04",
+  "pec_gap_is_exact":false,
+  "pending_parks_before":14,
+  "parks_resolved_official_geometry":12,
+  "parks_still_review":2,
+  "pending_non_park_venues":1
+}

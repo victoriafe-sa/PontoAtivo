@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+    <html>
+
+    <head id="Head1"><meta content="IE=Edge" http-equiv="X-UA-Compatible"/><meta content="pt-br" http-equiv="Content-Language"/><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/><title>
+	
+            Decreto 28494 de 04/12/2007
+        
+</title><meta name="keywords" content="Decreto 28494 de 04/12/2007,sinj,distrito,federal,df"/><meta name="description" content="Dispõe sobre acessibilidade em instalações esportivas e dá outras providências."/><meta content="index,follow" name="robots"/><meta content="index,follow" name="googlebot"/><script type="text/javascript" language="javascript"
+            src="http://www.sinj.df.gov.br/sinjpadrao/Scripts/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" language="javascript"
+            src="http://www.sinj.df.gov.br/sinjpadrao/Scripts/platform.js"></script>
+        <script type="text/javascript" language="javascript"
+            src="http://www.sinj.df.gov.br/sinjpadrao/Scripts/liblight.js"></script>
+
+        <script type="text/javascript" language="javascript"
+            src="http://www.sinj.df.gov.br/sinjpadrao/Scripts/funcoes_norma.js?4.4.00134"></script>
+        <script type="text/javascript" language="javascript"
+            src="http://www.sinj.df.gov.br/sinjpadrao/ckeditor/ckeditor.js"></script>
+        <script type="text/javascript" language="javascript"
+            src="http://www.sinj.df.gov.br/sinjpadrao/ckeditor/adapters/jquery.js"></script>
+
+        <script type="text/javascript" src="http://www.sinj.df.gov.br/sinjpadrao/Scripts/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="http://www.sinj.df.gov.br/sinjpadrao/Scripts/jquery.form.min.js"></script>
+        <script type="text/javascript" src="http://www.sinj.df.gov.br/sinjpadrao/Scripts/jquery.cookie.js"></script>
+        <script type="text/javascript" src="http://www.sinj.df.gov.br/sinjpadrao/Scripts/on_error.js"></script>
+        <script type="text/javascript" src="http://www.sinj.df.gov.br/sinjpadrao/Jquery-ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="http://www.sinj.df.gov.br/sinjpadrao/Scripts/liblight.js?3.2.00001"></script>
+        <script type="text/javascript" src="http://www.sinj.df.gov.br/sinjpadrao/Scripts/stacktrace.js"></script>
+        <script type="text/javascript"
+            src="http://www.sinj.df.gov.br/sinjpadrao/Scripts/jquery.ajaxLight.js?3.2.00001"></script>
+        <script type="text/javascript"
+            src="http://www.sinj.df.gov.br/sinjpadrao/Scripts/jquery.autocompleteLight.js?3.2.00001"></script>
+        <script type="text/javascript" src="http://www.sinj.df.gov.br/sinjpadrao/Scripts/jMenu.jquery.min.js"></script>
+        <script type="text/javascript"
+            src="http://www.sinj.df.gov.br/sinjpadrao/Scripts/jquery.modalLight.js?3.2.00001"></script>
+        <script type="text/javascript" src="http://www.sinj.df.gov.br/sinjpadrao/Scripts/login.js?3.2.00001"></script>
+
+        <script type="text/javascript" src="http://www.sinj.df.gov.br/sinjpadrao/Scripts/funcoes_sinj.js?3.2.00001"
+            charset="utf-8"></script>
+        <script type="text/javascript" src="http://www.sinj.df.gov.br/sinjpadrao/Scripts/sessao_sinj.js?3.2.00001"></script>
+
+        <script type="text/javascript" src="http://www.sinj.df.gov.br/sinjpadrao/Scripts/stacktable.js"></script>
+
+        <script type="text/javascript" src="http://www.sinj.df.gov.br/sinjpadrao/Scripts/platform.js"></script>
+        <script type="text/javascript" src="http://www.sinj.df.gov.br/sinjpadrao/Scripts/tooltip.js"></script>
+
+        <script type="text/javascript" language="javascript">
+            function Print() {
+                $('div.control').hide();
+                window.print();
+                $('div.control').show();
+            }
+            function exibirAlteracoes(el) {
+                if (el.getAttribute('refresh')) {
+                    location.reload();
+                }
+                else {
+
+                    // NOTE: Essa funcionalidade faz com o que o texto alterado "se transforme" 
+                    // em compilado (basicamente remove informações de vide), mas define 
+                    // um comportamento diferenciado para para os parágrafos que contiverem 
+                    // vides com os seguintes textos no link "revogado pelo(a)" ou 
+                    // "declarado(a) inconstitucional pelo(a)". By Questor
+                    
+                    var regex = undefined;
+                    regex = new RegExp(/Revogado.*?pelo\(a\)/);
+                    $('p[replaced_by]:contains("Revogado")').each(function (k, p) {
+                        if (regex.test($(p).text())) {
+                            var aLinkVide = $('a.link_vide', $(p));
+                            if (aLinkVide.length > 0) {
+                                var aTexto = $(aLinkVide[aLinkVide.length - 1]).text();
+                                if (regex.test(aTexto)) {
+                                    var ds = generateDescriptionToParagraph($(p).text());
+                                    $(p).text(ds + ' ');
+                                    $(aLinkVide[aLinkVide.length - 1]).appendTo($(p));
+                                    $(p).removeAttr('replaced_by');
+                                }
+                            }
+                        }
+                    });
+                    regex = new RegExp(/Inconstitucional.*?pelo\(a\)/);
+                    $('p[replaced_by]:contains("Inconstitucional")').each(function (k, p) {
+                        if (regex.test($(p).text())) {
+                            var aLinkVide = $('a.link_vide', $(p));
+                            if (aLinkVide.length > 0) {
+                                var aTexto = $(aLinkVide[aLinkVide.length - 1]).text();
+                                if (regex.test(aTexto)) {
+                                    var ds = generateDescriptionToParagraph($(p).text());
+                                    $(p).text(ds + ' ');
+                                    $(aLinkVide[aLinkVide.length - 1]).appendTo($(p));
+                                    $(p).removeAttr('replaced_by');
+                                }
+                            }
+                        }
+                    });
+                    $('p[replaced_by]').remove();
+                    $(el).attr('refresh', '1');
+                    $(el).text('Exibir Alterações');
+                }
+            }
+
+            //Verifica os links de LECO, ordena e insere o link 'exibir mais...' e 'exibir menos...' caso exista mais de 3 links de LECO
+            function verificarLinks() {
+                var aP = $('#div_texto > p');
+                var i = 0;
+                var length = aP.length;
+                var pAfter = null;
+                var aOrder = [];
+                for (; i < length; i++) {
+                    if ($('a[href]', aP[i]).length == 1 && $('a[href]', aP[i]).text().toLowerCase().indexOf('legislação correlata') == 0) {
+                        $('a[href]', aP[i]).attr('show', '1').attr('leco', 'leco');
+                        aOrder.push({ 'text': $('a[href]', aP[i]).text(), 'href': $('a[href]', aP[i]).attr('href') });
+                        if (i >= 3) {
+                            $('a[href]', aP[i]).attr('show', '0');
+                            pAfter = aP[i];
+                        }
+                    }
+                    else {
+                        break;
+                    }
+                }
+                aOrder.sort(function (a1, a2) {
+                    return a1.text > a2.text ? 1 : a1.text < a2.text ? -1 : 0;
+                });
+                $('#div_texto a[leco="leco"]').each(function (i, o) {
+                    o.innerText = aOrder[i].text;
+                    o.href = aOrder[i].href;
+                });
+                if (pAfter != null && $('a[show="0"]').length > 3) {
+                    $('a[show="0"]').closest('p').hide();
+                    $('<p id="p_show"><a href="javascript:void(0);" onclick="exibirLinks()">Exibir mais...</a></p>').insertAfter($(pAfter));
+                    $('<p id="p_hide" style="display:none"><a href="javascript:void(0);" onclick="esconderLinks()">Exibir menos...</a></p>').insertAfter($(pAfter));
+                }
+            }
+            function exibirLinks() {
+                $('a[show="0"]').closest('p').show();
+                $('#p_hide').show();
+                $('#p_show').hide();
+            }
+            function esconderLinks() {
+                $('a[show="0"]').closest('p').hide();
+                $('#p_hide').hide();
+                $('#p_show').show();
+            }
+
+            function generateDescriptionToParagraph(text) {
+                var ds = '';
+                text = $.trim(text);
+                if (text != "") {
+                    var palavras = text.split(' ');
+                    if (palavras[0] == 'ANEXO' || palavras[0] == 'TÍTULO' || palavras[0] == 'CAPÍTULO' || palavras[0] == 'Art.' || (palavras[0] == 'Parágrafo' && palavras[1] == 'Único') || palavras[0] == '§') {
+                        ds = palavras[0] + ' ' + palavras[1];
+                    }
+                    else if (ehInciso(palavras[0]) || ehAlinea(palavras[0]) || ehNum(palavras[0])) {
+                        ds = palavras[0];
+                    }
+                    else {
+                        ds = "...";
+                    }
+                }
+                return ds;
+            }
+
+            function ehInciso(termo) {
+                var lastIndex = termo.indexOf("-");
+                if (lastIndex > 0) {
+                    termo = termo.substring(0, lastIndex);
+                }
+                return termo.match(/^[IVXLCDM]+$/i);
+            }
+
+            function ehAlinea(termo) {
+                var lastIndex = termo.indexOf(")");
+                if (lastIndex < 0) {
+                    return false;
+                }
+                if (termo.length == (lastIndex + 1)) {
+                    termo = termo.substring(0, lastIndex);
+                    return termo.match(/[a-z]/i);
+                }
+                return false;
+            }
+
+            function ehNum(termo) {
+                var lastIndex = termo.indexOf(".");
+                if (lastIndex < 0) {
+                    return false;
+                }
+                if (termo.length == (lastIndex + 1)) {
+                    termo = termo.substring(0, lastIndex);
+                    return isInt(termo);
+                }
+                return false;
+            }
+
+            $(document).ready(function () {
+                //A epígrafe do texto da norma deverá ser um link que direciona, para uma nova aba, os detalhes daquela norma; tarefa 378
+
+
+
+                var urlPath = window.location.pathname;
+                var urlSplited = urlPath.split("/");
+                var numeroNorma = urlSplited[3];
+
+                //Pegar o texto do h1
+                var elementoh1 = $('#div_texto > h1')[0].textContent;
+                //Adicionar a tag 'a'
+                $('#div_texto > h1')[0].innerHTML = '<a>' + elementoh1 + '</a>';
+
+                //Adicionar o link
+                $("#div_texto h1 a").attr('href', '/' + urlSplited[1] + '/DetalhesDeNorma.aspx?id_norma=' + numeroNorma).attr("target", '_blank');
+                //--------------------------------------------------------------------------------------
+
+
+
+
+                // var paragrafo = $('p');
+                // for (var i = 0; i < paragrafo.length; i++) {
+                //     if (paragrafo[i].innerText.match(/Os anexos constam no DODF/g)) {
+    
+                //         var spanParagrafo = paragrafo[i].textContent;
+                //         var form_consultar_diario = "\"form_consultar_diario\"";
+                //         var _form = "<form id='form_consultar_diario' name='form_consultar_diario' method='post' onsubmit='javascript: return consultarDiarioHTML(" + form_consultar_diario + ")\'>";
+                //         var _button = "<a href='javascript: void(0)' onclick='javascript: consultarDiarioHTML(" + form_consultar_diario + ")\'>";
+    
+                //         $(paragrafo)[i].innerHTML = _form + _button + "<span>" + spanParagrafo + "<span>" + "</a></form>";
+    
+                //     }
+
+                //     if (paragrafo[i].innerText.match(/Este texto não substitui o publicado no DODF/g)) {
+                //         var span = paragrafo[i].textContent;
+                //         var form_consultar_diario = "\"form_consultar_diario\"";
+                //         var _form = "<form id='form_consultar_diario' name='form_consultar_diario' method='post' onsubmit='javascript: return consultarDiarioHTML(" + form_consultar_diario + ")\'>";
+                //         var _button = "<a href='javascript: void(0)' onclick='javascript: consultarDiarioHTML(" + form_consultar_diario + ")\'>";
+                //         var arraySpan = $("p > span");
+                //         $(paragrafo)[i].innerHTML = _form + _button + "<span style='text-decoration: underline red; color: red;' >" + span + "<span>" + "</a></form>";
+                //     }
+                // }
+                // if (!paragrafo[i - 1].innerText.match(/Este texto não substitui o publicado no DODF/g)) {
+                //     $('#paginaEColuna').hide();
+                // }
+                //--------------------------------------------------------------------------------------
+
+
+
+                if ($('#div_erro').length > 0) {
+                    $('#div_norma').hide();
+                }
+                else {
+                    if ($('p[replaced_by]').length <= 0 || $('p').length == $('p[replaced_by]').length) {
+                        $('.compilado').hide();
+                    }
+                    verificarLinks();
+                }
+            });
+
+
+            var normaOVEmFunction = new normaOVEmFunction();
+            
+                //A epígrafe do texto da norma deverá ser um link que direciona, para uma nova aba, os detalhes daquela norma; tarefa 378
+
+
+            if (normaOVEmFunction != true) {
+
+                    var urlPath = window.location.pathname;
+                    var urlSplited = urlPath.split("/");
+                    var numeroNorma = urlSplited[3];
+
+                    //Pegar o texto do h1
+                    var elementoh1 = $('#div_texto > h1')[0].textContent;
+                    //Adicionar a tag 'a'
+                    $('#div_texto > h1')[0].innerHTML = '<a>' + elementoh1 + '</a>';
+
+                    //Adicionar o link
+                    $("#div_texto h1").attr('href', '/' + urlSplited[1] + '/DetalhesDeNorma.aspx?id_norma=' + numeroNorma).attr("target", '_blank');
+                    //--------------------------------------------------------------------------------------
+
+                //consultarDiarioAspErro
+                    var paragrafo = $('p');
+
+                    for (var i = 0; i < paragrafo.length; i++) {
+
+                        if (paragrafo[i].innerText.match(/Este texto não substitui o publicado no DODF/g)) {
+                            var span = paragrafo[i].textContent;
+                            var form_consultar_diario = "\"form_consultar_diario\"";
+                            var _form = "<form id='form_consultar_diario' name='form_consultar_diario' method='post' onsubmit='javascript: return consultarDiarioHTML(" + form_consultar_diario + ")\'>";
+                            var _button = "<a href='javascript: void(0)' onclick='javascript: consultarDiarioAspErro(" + form_consultar_diario + ")\'>";
+                            var arraySpan = $("p > span");
+                            $(paragrafo)[i].innerHTML = _form + _button + "<span style='text-decoration: underline red; color: red;' >" + span + "<span>" + "</a></form>";
+                        }
+                    }
+                    if (!paragrafo[i - 1].innerText.match(/Este texto não substitui o publicado no DODF/g)) {
+                        $('#paginaEColuna').hide();
+                    }
+                    //--------------------------------------------------------------------------------------
+
+                    if ($('#div_erro').length > 0) {
+                        $('#div_norma').hide();
+                    }
+                    else {
+                        if ($('p[replaced_by]').length <= 0 || $('p').length == $('p[replaced_by]').length) {
+                            $('.compilado').hide();
+                        }
+                        verificarLinks();
+                    }
+             }
+        </script>
+        <style type="text/css">
+            .control {
+                width: 100%;
+                float: left;
+            }
+
+            .print {
+                float: right;
+            }
+
+            .compilado {
+                float: left;
+            }
+
+            div.strike {
+                text-decoration: line-through;
+            }
+
+            body,
+            p,
+            h1 {
+                font-family: Tahoma;
+                font-size: 14px;
+            }
+
+            p[nota=nota] {
+                font-size: 12px;
+                border: 1px solid #777;
+                padding: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="div_norma">
+            <!-- A epígrafe do texto da norma deverá ser um link que direciona, para uma nova aba, os detalhes daquela norma; tarefa 378-->
+            
+            <!-- corpo dela epigrafe-->
+
+            <a href="/sinj/ ~/" title="Visitar o SINJ-DF - Sistema Integrado de Normas Jurídicas do
+                DF"><img src="http://www.sinj.df.gov.br/sinjpadrao/Imagens/logo_sinj.png" alt="SINJ-DF" /></a>
+
+            <div class="control">
+                <div class="compilado">
+                    <a href="javascript:void(0)" onclick="javascript:exibirAlteracoes(this);">
+                        Texto Compilado
+                    </a>
+                </div>
+                <div class="print">
+                    <a href="javascript:void(0);" onclick="javascript:Print();" title="Imprimir">
+                        <img alt="print" src="http://www.sinj.df.gov.br/sinjpadrao/Imagens/ico_print_p.png" />
+                    </a>
+                </div>
+            </div>
+            <div id="div_texto"><h1 epigrafe="epigrafe" noindex="" nota="" style="font-weight:bold; text-align:center">DECRETO Nº 28.494, DE 04 DE DEZEMBRO DE 2007.</h1>
+
+<p linkname="txt_98f1ae5ad94344e877c9efa52f50adb4" style="margin-left:50%; text-align:justify"><a class="linkname" id="txt_98f1ae5ad94344e877c9efa52f50adb4" name="txt_98f1ae5ad94344e877c9efa52f50adb4"></a>Dispõe sobre acessibilidade em instalações esportivas e dá outras providências.
+
+<p linkname="txt_112eaecbb8324bb48c9f34b79b204d4a" style="text-align:justify"><a class="linkname" id="txt_112eaecbb8324bb48c9f34b79b204d4a" name="txt_112eaecbb8324bb48c9f34b79b204d4a"></a>O GOVERNADOR DO DISTRITO FEDERAL, no uso das atribuições que lhe confere o artigo 100, inciso VII e XXVI, da Lei Orgânica do Distrito Federal, combinado com o Decreto n° 27.912, de 02 de maio de 2007; e, Considerando a necessidade de democratização do esporte por meio da garantia de acesso às atividades desportivas sem quaisquer distinções; Considerando a importância do esporte como recurso para reabilitação e inclusão social da pessoa com deficiência; Considerando ser a educação pelo esporte fundamental para a promoção do desenvolvimento humano; DECRETA:
+
+<p linkname="art1" style="text-align:justify"><a class="linkname" id="art1" name="art1"></a>Art. 1º. A construção, ampliação e recuperação de instalações esportivas no Distrito Federal atenderão aos preceitos da acessibilidade e do desenho universal.
+
+<p linkname="art1_par1" style="text-align:justify"><a class="linkname" id="art1_par1" name="art1_par1"></a>§ 1º Para os efeitos deste Decreto, estão sujeitos ao disposto no caput as áreas destinadas às praticas esportivas, sanitários, vestiários, arquibancadas, acessos, estacionamentos, garagens, portarias, e demais instalações de apoio.
+
+<p linkname="art1_par2" style="text-align:justify"><a class="linkname" id="art1_par2" name="art1_par2"></a>§ 2º Em instalações esportivas destinadas a mais de uma modalidade, será previsto percurso acessível que interligue as diversas áreas destinadas às práticas esportivas, bem como às suas instalações de apoio.
+
+<p linkname="art1_par3" style="text-align:justify"><a class="linkname" id="art1_par3" name="art1_par3"></a>§ 3º As instalações esportivas localizadas em lotes destinados a edificações de uso público ou de uso coletivo serão, também, interligadas às demais edificações do lote por meio do percurso acessível previsto no parágrafo anterior.
+
+<p linkname="art2" style="text-align:justify"><a class="linkname" id="art2" name="art2"></a>Art. 2º. O Governo do Distrito Federal desenvolverá ações para a democratização e o acesso das pessoas com deficiência ao desporto educacional, de participação e de rendimento, e propiciará a aquisição de materiais e de ajudas técnicas necessárias, tais como:
+
+<p linkname="art2_incI" style="text-align:justify"><a class="linkname" id="art2_incI" name="art2_incI"></a>I – mobiliário;
+
+<p linkname="art2_incII" style="text-align:justify"><a class="linkname" id="art2_incII" name="art2_incII"></a>II – material esportivo;
+
+<p linkname="art2_incIII" style="text-align:justify"><a class="linkname" id="art2_incIII" name="art2_incIII"></a>III – órtese e prótese esportiva;
+
+<p linkname="art2_incIV" style="text-align:justify"><a class="linkname" id="art2_incIV" name="art2_incIV"></a>IV – acessórios e equipamentos esportivos;
+
+<p linkname="art3" style="text-align:justify"><a class="linkname" id="art3" name="art3"></a>Art. 3º. Este Decreto entra em vigor na data de sua publicação.
+
+<p linkname="art4" style="text-align:justify"><a class="linkname" id="art4" name="art4"></a>Art. 4º. Revogam-se as disposições em contrário.
+
+<p linkname="txt_59654d76cdbf44e19aa7ca4c18a598c0" style="font-weight:bold; margin-bottom:0px; text-align:center"><a class="linkname" id="txt_59654d76cdbf44e19aa7ca4c18a598c0" name="txt_59654d76cdbf44e19aa7ca4c18a598c0"></a>Brasília, 04 de dezembro de 2007.
+
+<p linkname="txt_6fd4f39738284bba9e740a292d706b75" style="font-weight:bold; margin-bottom:0px; text-align:center"><a class="linkname" id="txt_6fd4f39738284bba9e740a292d706b75" name="txt_6fd4f39738284bba9e740a292d706b75"></a>120º da República e 48º de Brasília
+
+<p linkname="txt_643cd48c01cf43ca7b81762b42edd90d" style="font-weight:bold; margin-bottom:0px; text-align:center"><a class="linkname" id="txt_643cd48c01cf43ca7b81762b42edd90d" name="txt_643cd48c01cf43ca7b81762b42edd90d"></a>JOSÉ ROBERTO ARRUDA
+<p style="text-align:right"><span style="color:#FF0000"><a href=http://www.sinj.df.gov.br/sinj/BaixarArquivoDiario.aspx?id_file=8606440e-f365-3c82-8f0e-b7279148fee2 target='_blank'>Este texto não substitui o publicado no DODF nº 231, seção 1 de 05/12/2007<span id='paginaEColuna'> p. 9, col. 2<a/></span></div>
+        </div>
+
+        <script type="text/javascript">
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-20776101-1', 'auto');
+            ga('create', 'UA-90051523-1', 'auto', 'brlightTracker');
+            ga('send', 'pageview');
+            ga('brlightTracker.send', 'pageview');
+        </script>
+    </body>
+
+    </html>
