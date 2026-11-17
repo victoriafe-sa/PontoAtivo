@@ -478,6 +478,20 @@ def _has_uncited_claims(answer: str) -> bool:
     return False
 
 
+def trecho_relevante(chunk: RetrievedChunk, max_distance: float, distance_scale: float = 1.0) -> bool:
+    """Diz se um trecho recuperado conta como evidência para responder.
+
+    Vale o limiar de distância; perto dele, também valem trechos com muitas
+    palavras da pergunta ou da mesma região. O gerador e o agente de Pesquisa
+    usam esta mesma regra.
+    """
+    return (
+        chunk.distance <= max_distance
+        or (chunk.lexical_overlap >= 0.55 and chunk.distance <= max_distance + 0.25 * distance_scale)
+        or (chunk.region_match and chunk.distance <= max_distance + 0.10 * distance_scale)
+    )
+
+
 class AnswerGenerator:
     def __init__(
         self,
@@ -510,14 +524,8 @@ class AnswerGenerator:
 
     def generate(self, question: str, chunks: Sequence[RetrievedChunk]) -> GroundedAnswer:
         relevant = [
-            chunk
-            for chunk in chunks
-            if chunk.distance <= self.max_distance
-            or (
-                chunk.lexical_overlap >= 0.55
-                and chunk.distance <= self.max_distance + 0.25 * self.distance_scale
-            )
-            or (chunk.region_match and chunk.distance <= self.max_distance + 0.10 * self.distance_scale)
+            chunk for chunk in chunks
+            if trecho_relevante(chunk, self.max_distance, self.distance_scale)
         ]
         if not relevant:
             return GroundedAnswer(

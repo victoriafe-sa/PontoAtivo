@@ -1,0 +1,14 @@
+{
+  "agente": "pesquisa",
+  "acao": {
+    "pergunta_original": "Vai chover amanhã em Brasília?",
+    "tipo": "buscar_informacao",
+    "consulta": "previsão do tempo para amanhã em Brasília"
+  },
+  "status": "sem_evidencia",
+  "trechos": [],
+  "limiar": 0.12,
+  "descartados": 4,
+  "segundos": 6.75,
+  "motivo": "Nenhum dos 4 trechos recuperados ficou perto o bastante da consulta (melhor distância 0.172; limiar 0.120)."
+}

@@ -1,0 +1,29 @@
+{
+  "agente": "pesquisa",
+  "acao": {
+    "pergunta_original": "O que pode fazer um aluno ser desligado do Centro Olímpico?",
+    "tipo": "buscar_regra",
+    "consulta": "faltas graves que levam ao desligamento do aluno nos Centros Olímpicos e Paralímpicos"
+  },
+  "status": "encontrado",
+  "trechos": [
+    {
+      "id": "T1",
+      "texto": "7.3 Falta Grave\n7.\n3.1 Agredir fisicamente funcionários do Centro Olímpico e Paralímpico dentro ou fora da instituição bem comoqualquer usuário;\n7.\n3.2 Pichar as dependências bem como qualquer objetivo pertencente ao Centro Olímpico e Paralímpico;\n7.\n3.3 Roubar pertences de usuário, professores ou demais colaboradores, ou material de propriedade do CentroOlímpico e Paralímpico;\n7.\n3.4 Assediar sexualmente professor, aluno ou qualquer usuário ou colaborador do Centro Olímpico e Paralímpico;\n7.\n3.5 Tiver mais de 30% (trinta por cento) de faltas não justificadas por mês;\n7.\n3.6 Não comparecer, consecutivamente, em três aulas, sem justificativa;\n7.\n3.7 For reincidente em falta média;\n7.\n3.8 Incidir em uma falta grave.Pena: Desligamento do Centro Olímpico e Paralímpico",
+      "distancia": 0.1235,
+      "fonte": {
+        "id": "DOC-003",
+        "titulo": "Manual de Uso dos Centros Olimpicos e Paralimpicos",
+        "instituicao": "Secretaria de Estado de Esporte e Lazer do Distrito Federal",
+        "url": "https://www.esporte.df.gov.br/documents/d/esporte/manual-de-uso-do-cop",
+        "paginas": "4",
+        "secao": "7. Do descumprimento do Termo de Compromisso e das penalidades > 7.3 Falta Grave",
+        "regiao": "",
+        "atualidade": "desconhecida"
+      }
+    }
+  ],
+  "limiar": 0.12,
+  "descartados": 3,
+  "segundos": 8.2
+}
