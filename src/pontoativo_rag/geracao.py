@@ -322,7 +322,20 @@ TEXT_REVISION = (
 )
 
 # Não quebra depois de uma letra sozinha com ponto: "Rua 11 da V. Telebrasília".
-_SENTENCE_BREAK = re.compile(r"(?<![\s(][A-Za-zÀ-ÿ]\.)(?<=[.!?])\s+")
+# Abreviações que não terminam frase ("Av. Rabelo", "Dra. Ana", "Qd. 5"). As de
+# uma letra ("V. Telebrasília") já entram na regra geral abaixo.
+_ABBREVIATIONS = (
+    "Av", "Al", "Dr", "Dra", "Sr", "Sra", "Prof", "Profa", "Art", "Inc", "Pç",
+    "Qd", "Qda", "Lt", "Cj", "Conj", "Bl", "Ed", "Res", "Vl", "Rod", "Nº",
+)
+_NOT_AFTER_ABBREVIATION = "".join(
+    f"(?<![\\s(]{re.escape(form)}\\.)"
+    for abbr in _ABBREVIATIONS
+    for form in {abbr, abbr.lower(), abbr.upper()}
+)
+_SENTENCE_BREAK = re.compile(
+    r"(?<![\s(][A-Za-zÀ-ÿ]\.)" + _NOT_AFTER_ABBREVIATION + r"(?<=[.!?])\s+"
+)
 _INLINE_CITATION = re.compile(r"\s*\[[^\[\]]{0,40}\]")
 def _strip_accents(text: str) -> str:
     plain = unicodedata.normalize("NFKD", text)
@@ -471,6 +484,7 @@ class AnswerGenerator:
         llm: LLMClient | None,
         *,
         max_distance: float,
+        distance_scale: float = 1.0,
         structured: bool = False,
         max_attempts: int = 3,
     ) -> None:
@@ -478,6 +492,8 @@ class AnswerGenerator:
             raise ValueError("max_attempts deve ser pelo menos 1.")
         self.llm = llm
         self.max_distance = max_distance
+        # Folgas medidas com o MiniLM (limiar 0,45); ver recuperacao.REFERENCE_MAX_DISTANCE.
+        self.distance_scale = distance_scale
         self.structured = structured
         self.max_attempts = max_attempts
 
@@ -499,9 +515,9 @@ class AnswerGenerator:
             if chunk.distance <= self.max_distance
             or (
                 chunk.lexical_overlap >= 0.55
-                and chunk.distance <= self.max_distance + 0.25
+                and chunk.distance <= self.max_distance + 0.25 * self.distance_scale
             )
-            or (chunk.region_match and chunk.distance <= self.max_distance + 0.10)
+            or (chunk.region_match and chunk.distance <= self.max_distance + 0.10 * self.distance_scale)
         ]
         if not relevant:
             return GroundedAnswer(

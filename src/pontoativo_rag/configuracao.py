@@ -8,8 +8,19 @@ from pathlib import Path
 
 
 DEFAULT_EMBEDDING_MODEL = (
-    "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    "intfloat/multilingual-e5-base"
 )
+
+# Limiar de abstenção (distância cosseno) calibrado para cada modelo de embeddings.
+# Cada modelo espalha as distâncias numa escala própria: no MiniLM, perguntas com
+# resposta ficam até 0,38 e sem resposta a partir de 0,46; no E5, entre 0,06 e 0,21.
+# E5: faixa sem erro de 0,09 a 0,145 nas 24 perguntas de calibração (17/11/2026);
+# 0,12 fica no meio. Modelos fora da lista usam a referência do MiniLM.
+REFERENCE_MAX_DISTANCE = 0.45
+MAX_DISTANCE_BY_MODEL = {
+    "intfloat/multilingual-e5-base": 0.12,
+    "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2": REFERENCE_MAX_DISTANCE,
+}
 
 
 def _load_dotenv(root: Path) -> None:
@@ -89,6 +100,7 @@ class Settings:
                 "PONTOATIVO_CHUNK_OVERLAP_TOKENS deve ser menor que o chunk-pai."
             )
 
+        embedding_model = os.getenv("PONTOATIVO_EMBEDDING_MODEL", DEFAULT_EMBEDDING_MODEL)
         return cls(
             root=project_root,
             sources_dir=project_root / "dados" / "fontes_originais",
@@ -96,11 +108,9 @@ class Settings:
             vector_db_dir=project_root / "dados" / "rag" / "vetorial",
             documentation_dir=project_root / "docs" / "engenharia",
             evidence_dir=project_root / "experimentos" / "evidencias",
-            embedding_model=os.getenv(
-                "PONTOATIVO_EMBEDDING_MODEL", DEFAULT_EMBEDDING_MODEL
-            ),
+            embedding_model=embedding_model,
             collection_name=os.getenv(
-                "PONTOATIVO_CHROMA_COLLECTION", "pontoativo_documentos"
+                "PONTOATIVO_CHROMA_COLLECTION", "pontoativo_e5_base_v1"
             ),
             parent_chunk_tokens=parent_tokens,
             chunk_overlap_tokens=overlap_tokens,
@@ -112,7 +122,7 @@ class Settings:
             ollama_base_url=os.getenv(
                 "PONTOATIVO_OLLAMA_BASE_URL", "http://127.0.0.1:11434"
             ).rstrip("/"),
-            ollama_model=os.getenv("PONTOATIVO_OLLAMA_MODEL", "gemma4:26b"),
+            ollama_model=os.getenv("PONTOATIVO_OLLAMA_MODEL", "gemma4:12b"),
             ollama_map_model=os.getenv("PONTOATIVO_OLLAMA_MODEL_MAPA", "").strip(),
             ollama_timeout_seconds=_env_float("PONTOATIVO_OLLAMA_TIMEOUT", 180.0),
             ollama_num_ctx=_env_int("PONTOATIVO_OLLAMA_NUM_CTX", 8192, minimum=1024),
@@ -122,8 +132,16 @@ class Settings:
             max_generation_attempts=_env_int("PONTOATIVO_TENTATIVAS_GERACAO", 3),
             # Distância cosseno máxima para considerar um trecho evidência útil.
             # Não é probabilidade de acerto; é um limiar calibrado na avaliação.
-            max_distance=_env_float("PONTOATIVO_MAX_DISTANCE", 0.45),
+            max_distance=_env_float(
+                "PONTOATIVO_MAX_DISTANCE",
+                MAX_DISTANCE_BY_MODEL.get(embedding_model, REFERENCE_MAX_DISTANCE),
+            ),
         )
+
+    @property
+    def distance_scale(self) -> float:
+        """Limiar do modelo em relação ao do MiniLM; ajusta bônus e folgas da busca."""
+        return self.max_distance / REFERENCE_MAX_DISTANCE
 
     @property
     def map_model(self) -> str:

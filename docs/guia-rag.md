@@ -98,6 +98,24 @@ O relatório é salvo em `experimentos/evidencias/` com as fontes recuperadas, d
 abstenções e citações. Não trate distância vetorial como probabilidade de
 acerto; a fidelidade da resposta deve ser revisada contra os documentos.
 
+### Modelo de embeddings: multilingual-E5-base
+
+Desde 17/11/2026 o índice usa `intfloat/multilingual-e5-base` (antes era o
+MiniLM `paraphrase-multilingual-MiniLM-L12-v2`). O E5 recebe o prefixo
+`query:` nas perguntas e `passage:` nos trechos; o código coloca os prefixos
+sozinho. A coleção do Chroma passou a ser `pontoativo_e5_base_v1`, então rode a
+ingestão de novo depois de atualizar (`python -m pontoativo_rag.ingestao`; a
+primeira vez baixa o modelo).
+
+O limiar que decide quando o assistente diz "não sei" depende do modelo:
+`PONTOATIVO_MAX_DISTANCE=0.12` para o E5, calibrado em 24 perguntas (faixa sem
+erros de 0,09 a 0,145), e 0,45 para o MiniLM. Os bônus da busca híbrida e as
+folgas de abstenção acompanham o limiar na mesma escala. O portão de qualidade
+com E5 e gemma4:12b está em
+[`experimentos/evidencias/referencia_gemma12b_e5.md`](../experimentos/evidencias/referencia_gemma12b_e5.md),
+e a referência anterior com MiniLM em
+[`experimentos/evidencias/referencia_gemma12b_minilm.md`](../experimentos/evidencias/referencia_gemma12b_minilm.md).
+
 Relatórios temporários com data no nome e arquivos intermediários de ingestão
 são reproduzíveis e ficam ignorados pelo Git. Depois que uma execução passar
 no portão e for revisada, copie somente o relatório aprovado para

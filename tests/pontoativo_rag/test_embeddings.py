@@ -24,3 +24,15 @@ def test_embedding_provider_aceita_lista_vazia_sem_carregar_modelo() -> None:
 
     assert provider.encode([]) == []
 
+
+
+def test_e5_prefixos_para_documento_e_consulta():
+    entradas = []
+    class Captura:
+        def encode(self, texts, **kwargs):
+            entradas.extend(texts)
+            return [[1.0] for _ in texts]
+    provider = EmbeddingProvider("intfloat/multilingual-e5-base", model_factory=lambda _: Captura())
+    provider.encode(["edital"])
+    provider.encode_query(["como participar?"])
+    assert entradas == ["passage: edital", "query: como participar?"]

@@ -518,3 +518,22 @@ def test_abreviacao_de_uma_letra_nao_quebra_a_frase():
     raw = '{"abstencao": false, "frases": [{"texto": "Há um PEC na Rua 11 da V. Telebrasília.", "fontes": ["F1"]}]}'
 
     assert render_structured_answer(raw, 1) == "Há um PEC na Rua 11 da V. Telebrasília [F1]."
+
+
+def test_folga_lexical_acompanha_a_escala_do_modelo() -> None:
+    from dataclasses import replace
+
+    chunk = replace(_chunk("c1", 0.20), lexical_overlap=0.6)
+    llm = FakeLLM("Há aulas de natação [F1].")
+    # Limiar 0,12 do E5: a folga de 0,25 do MiniLM aceitaria até 0,37; escalada, só até ~0,187.
+    assert AnswerGenerator(llm, max_distance=0.12).generate("natação?", [chunk]).mode != "abstencao"
+    assert AnswerGenerator(llm, max_distance=0.12, distance_scale=0.12 / 0.45).generate("natação?", [chunk]).mode == "abstencao"
+
+
+def test_abreviacao_de_endereco_nao_parte_a_frase() -> None:
+    from pontoativo_rag.geracao import _SENTENCE_BREAK
+
+    # Caso real (Q12 com o E5): "a Av [F2]. Rabelo e Nelson Corso".
+    assert _SENTENCE_BREAK.split("Há PECs na Av. Rabelo e Nelson Corso. A Dra. Ana atende.") == [
+        "Há PECs na Av. Rabelo e Nelson Corso.", "A Dra. Ana atende."]
+    assert _SENTENCE_BREAK.split("O PEC fica a 2 km. Tem rampa.") == ["O PEC fica a 2 km.", "Tem rampa."]

@@ -179,3 +179,13 @@ def test_reranker_vetorial_preserva_ordem_da_distancia() -> None:
     )
 
     assert [result.chunk_id for result in results] == ["generic", "exact"]
+
+
+def test_bonus_da_regiao_acompanha_a_escala_do_modelo() -> None:
+    # Com o E5 as distâncias são ~1/4 das do MiniLM: a mesma diferença de 0,15
+    # é grande demais para a região compensar, e a ordem segue a semântica.
+    pergunta = "Onde ficam os PECs do Plano Piloto?"
+    minilm = Retriever(QueryEmbedder(), RegionStore()).search(pergunta, top_k=2)
+    e5 = Retriever(QueryEmbedder(), RegionStore(), distance_scale=0.12 / 0.45).search(pergunta, top_k=2)
+    assert minilm[0].chunk_id == "target"
+    assert e5[0].chunk_id == "generic"
