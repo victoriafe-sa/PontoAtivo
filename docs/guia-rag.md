@@ -256,11 +256,6 @@ Uma pendência do Ollama não impede as futuras etapas de ingestão e recuperaç
 ela apenas impedirá a geração textual até que o serviço e o modelo estejam
 disponíveis.
 
-## Documentação de engenharia
-
-- [Projeto técnico](superpowers/specs/2026-11-05-pontoativo-rag-design.md)
-- [Plano de implementação](superpowers/plans/2026-11-05-pontoativo-rag.md)
-
 ## Encontros esportivos
 
 A etapa **Encontros** está disponível no mapa servido por `python -m pontoativo_rag.web`.

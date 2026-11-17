@@ -13,7 +13,7 @@ import time
 import urllib.request
 import warnings
 
-BASE = Path(__file__).resolve().parents[1] / 'experimentos' / 'experimento-rag'
+PASTA_RAG = Path(__file__).resolve().parents[1] / 'experimentos' / 'experimento-rag'
 MODELOS = {'qwen': 'qwen3:8b', 'llama': 'llama3.2:3b',
            'gemini': 'gemini-3.5-flash-lite'}
 COLUNAS_METRICAS = [
@@ -73,9 +73,9 @@ def extrair_metricas(registro, ambiente):
     return linha
 
 
-def salvar_metricas(linha):
+def salvar_metricas(linha, pasta_experimento: Path):
     """Acrescenta uma chamada sem substituir o histórico, inclusive em lotes paralelos."""
-    with (BASE / 'metricas.csv').open('a+', encoding='utf-8', newline='') as arquivo:
+    with (pasta_experimento / 'metricas.csv').open('a+', encoding='utf-8', newline='') as arquivo:
         fcntl.flock(arquivo, fcntl.LOCK_EX)
         arquivo.seek(0)
         cabecalho = next(csv.reader(arquivo), None)
@@ -137,7 +137,7 @@ def chamar_gemini(cliente, entrada, registro):
             time.sleep(espera)
 
 
-def main(sem_rag=False):
+def main(sem_rag=False, *, pasta_experimento: Path = PASTA_RAG):
     ap = argparse.ArgumentParser(description='Executa prompts sem RAG.' if sem_rag else __doc__)
     ap.add_argument('--modelo', choices=MODELOS, required=True)
     ap.add_argument('--inicio', type=int, default=5)
@@ -150,7 +150,7 @@ def main(sem_rag=False):
         ap.error('Use 1 <= inicio <= fim <= 20.')
     prompts = []
     for i in range(args.inicio, args.fim + 1):
-        p = BASE / 'prompts' / f'q{i}.txt'
+        p = pasta_experimento / 'prompts' / f'q{i}.txt'
         texto = p.read_text(encoding='utf-8')
         if sem_rag and 'EVIDÊNCIAS:' in texto:
             ap.error(f'{p.name} contém um bloco de evidências; execução sem RAG cancelada.')
@@ -175,9 +175,9 @@ def main(sem_rag=False):
         cliente = genai.Client(api_key=chave)
 
     rodada = datetime.now().astimezone().strftime('rodada-%Y%m%d-%H%M%S-%f')
-    pasta = BASE / f'respostas-{args.modelo}' / rodada
+    pasta = pasta_experimento / f'respostas-{args.modelo}' / rodada
     pasta.mkdir(parents=True, exist_ok=False)
-    pasta_brutos = BASE / 'brutos' / args.modelo / rodada
+    pasta_brutos = pasta_experimento / 'brutos' / args.modelo / rodada
     pasta_brutos.mkdir(parents=True, exist_ok=False)
     ambiente = {'modelo_solicitado': MODELOS[args.modelo],
                 'cenario': 'sem_rag' if sem_rag else 'com_rag',
@@ -213,12 +213,12 @@ def main(sem_rag=False):
                         'provedor': 'gemini' if cliente else 'ollama',
                         'tipo_registro': 'execucao_api',
                         'cenario': 'sem_rag' if sem_rag else 'com_rag',
-                        'ambiente_referencia': str((pasta_brutos / 'ambiente.json').relative_to(BASE)),
+                        'ambiente_referencia': str((pasta_brutos / 'ambiente.json').relative_to(pasta_experimento)),
                         'inicio': datetime.now().astimezone().isoformat(),
                         'prompt_sha256': hashlib.sha256(prompt.encode()).hexdigest(),
                         'entrada': entrada}
             arquivo = pasta_brutos / f'q{i}.json'
-            registro['arquivo_bruto'] = str(arquivo.relative_to(BASE))
+            registro['arquivo_bruto'] = str(arquivo.relative_to(pasta_experimento))
             arquivo.write_text(json.dumps(registro, ensure_ascii=False, indent=2), encoding='utf-8')
             print(f'Executando Q{i}...', flush=True)
             inicio = time.perf_counter()
@@ -234,7 +234,7 @@ def main(sem_rag=False):
                     raise ValueError('Resposta sem texto; confira a saída JSON e o motivo de término.')
                 (pasta / f'q{i}.txt').write_text(
                     f'modelo: {MODELOS[args.modelo]}\n\n{texto}', encoding='utf-8')
-                registro['arquivo_resposta'] = str((pasta / f'q{i}.txt').relative_to(BASE))
+                registro['arquivo_resposta'] = str((pasta / f'q{i}.txt').relative_to(pasta_experimento))
                 print(f'Q{i}: salva.', flush=True)
             except KeyboardInterrupt:
                 registro['erro'] = 'KeyboardInterrupt'
@@ -253,7 +253,7 @@ def main(sem_rag=False):
                 registro['fim'] = datetime.now().astimezone().isoformat()
                 registro['metricas'] = extrair_metricas(registro, ambiente)
                 arquivo.write_text(json.dumps(registro, ensure_ascii=False, indent=2), encoding='utf-8')
-                salvar_metricas(registro['metricas'])
+                salvar_metricas(registro['metricas'], pasta_experimento)
             if registro.get('erro'):
                 print('Lote interrompido para evitar repetir uma falha de serviço/configuração.')
                 break
@@ -261,7 +261,7 @@ def main(sem_rag=False):
         if cliente:
             cliente.close()
     print(f'Resultados em: {pasta}')
-    print(f'Registros em: {pasta_brutos}; métricas em: {BASE / "metricas.csv"}')
+    print(f'Registros em: {pasta_brutos}; métricas em: {pasta_experimento / "metricas.csv"}')
     if falhas:
         raise SystemExit(1)
 

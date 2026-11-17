@@ -7,5 +7,5 @@ import rodar_experimentos_rag as executor
 
 
 if __name__ == '__main__':
-    executor.BASE = Path(__file__).resolve().parents[1] / 'experimentos' / 'experimento-sem-rag'
-    executor.main(sem_rag=True)
+    pasta_experimento = Path(__file__).resolve().parents[1] / 'experimentos' / 'experimento-sem-rag'
+    executor.main(sem_rag=True, pasta_experimento=pasta_experimento)
