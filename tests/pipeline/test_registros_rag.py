@@ -8,7 +8,7 @@ import unittest
 from unittest.mock import patch
 
 SPEC = importlib.util.spec_from_file_location(
-    'rodar_rag', Path(__file__).resolve().parents[1] / 'scripts/rodar_experimentos_rag.py')
+    'rodar_rag', Path(__file__).resolve().parents[2] / 'scripts/rodar_experimentos_rag.py')
 rag = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(rag)
 

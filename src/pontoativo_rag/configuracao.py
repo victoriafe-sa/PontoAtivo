@@ -91,11 +91,11 @@ class Settings:
 
         return cls(
             root=project_root,
-            sources_dir=project_root / "fontes_originais",
+            sources_dir=project_root / "dados" / "fontes_originais",
             data_dir=project_root / "dados",
-            vector_db_dir=project_root / "banco_vetorial",
-            documentation_dir=project_root / "documentacao",
-            evidence_dir=project_root / "evidencias",
+            vector_db_dir=project_root / "dados" / "rag" / "vetorial",
+            documentation_dir=project_root / "docs" / "engenharia",
+            evidence_dir=project_root / "experimentos" / "evidencias",
             embedding_model=os.getenv(
                 "PONTOATIVO_EMBEDDING_MODEL", DEFAULT_EMBEDDING_MODEL
             ),

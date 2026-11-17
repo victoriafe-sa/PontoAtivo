@@ -4,7 +4,7 @@ from types import SimpleNamespace
 from pontoativo_rag.avaliacao import EvaluationQuestion, load_questions
 from pontoativo_rag.comparacao import BASELINE_SYSTEMS, compare_question, render_markdown
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 
 
 class FakeModel:

@@ -53,12 +53,12 @@ Com este modelo, as similaridades ficam concentradas numa faixa alta (por volta 
 
 ## Validação
 
-`tests/teste_embeddings.py` testa o modelo sem banco vetorial: 5 trechos de exemplo sobre espaços esportivos do DF e 5 perguntas formuladas com palavras diferentes das usadas nos trechos (por exemplo, "natação" para encontrar "piscina").
+`tests/pipeline/teste_embeddings.py` testa o modelo sem banco vetorial: 5 trechos de exemplo sobre espaços esportivos do DF e 5 perguntas formuladas com palavras diferentes das usadas nos trechos (por exemplo, "natação" para encontrar "piscina").
 
 Resultado: **5 de 5 perguntas recuperaram o trecho esperado**, com similaridade entre 0,85 e 0,87.
 
 ```bash
-.venv/bin/python tests/teste_embeddings.py
+.venv/bin/python tests/pipeline/teste_embeddings.py
 ```
 
 O teste é pequeno e serve para confirmar que o modelo funciona. A avaliação da recuperação com a base completa fica para a demonstração (`docs/semana-02/demonstracao.md`).

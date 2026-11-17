@@ -6,7 +6,7 @@ mede a qualidade semântica da recuperação; isso é feito com o modelo real na
 demonstração.
 
 Rodar a partir da raiz do projeto:
-    python tests/teste_banco.py
+    python tests/pipeline/teste_banco.py
 """
 
 import hashlib
@@ -17,7 +17,7 @@ import tempfile
 import unicodedata
 from pathlib import Path
 
-RAIZ = Path(__file__).resolve().parent.parent
+RAIZ = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(RAIZ / "src"))
 
 from ingestao.banco import obter_cliente, obter_colecao  # noqa: E402

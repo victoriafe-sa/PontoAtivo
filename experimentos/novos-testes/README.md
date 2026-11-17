@@ -77,7 +77,7 @@ Gemini requer a dependência `google-genai`. Copie somente a chave da API para a
 .venv/bin/python experimentos/novos-testes/executar.py --modelos gemini --chave-area-transferencia
 ```
 
-Não é necessário regenerar os casos para executar. `preparar.py` atualiza os três arquivos de configuração do pacote; as rodadas preservam seus próprios snapshots e hashes. Os registros anteriores nunca são sobrescritos. Em falha, o executor salva o erro e interrompe o lote; não há retomada automática, e nova execução cria outra rodada.
+Não é necessário regenerar os casos para executar. `preparar.py` atualiza os três arquivos de configuração do pacote; as novas rodadas registram os hashes em `ambiente.json` e compartilham as entradas imutáveis em `rodadas/entradas/<sha256>.json`. As rodadas históricas preservam as cópias locais. Os registros anteriores nunca são sobrescritos. Em falha, o executor salva o erro e interrompe o lote; não há retomada automática, e nova execução cria outra rodada.
 
 As chamadas são sequenciais para evitar disputa entre os dois modelos desta execução. Não há garantia de ausência de outros processos locais. A ordem de condições é embaralhada com seed fixa e idêntica entre modelos dentro de cada repetição. Cada chamada começa sem histórico. Temperatura 0, seed de geração 42, contexto Ollama 8.192 e saída máxima 4.096; Qwen sem raciocínio. Repetições mantêm a seed de geração e não equivalem a amostras independentes; servem para observar estabilidade e latência. Gemini usa temperatura 0 e saída máxima 4.096, sem garantia de equivalência de amostragem com Ollama.
 

@@ -1,6 +1,6 @@
 # PontoAtivo RAG
 
-[![Testes](https://github.com/PedroAlvimm/PontoAtivo/actions/workflows/ci.yml/badge.svg)](https://github.com/PedroAlvimm/PontoAtivo/actions/workflows/ci.yml)
+[![Testes](https://github.com/victoriafe-sa/PontoAtivo/actions/workflows/ci.yml/badge.svg)](https://github.com/victoriafe-sa/PontoAtivo/actions/workflows/ci.yml)
 
 Protótipo acadêmico de recuperação aumentada por geração (RAG) para consultar
 fontes verificáveis sobre atividade física e espaços esportivos no Distrito
@@ -91,17 +91,17 @@ python -m pontoativo_rag.comparacao
 Ela roda as 18 perguntas de avaliação e mais 2 de
 `dados/perguntas_comparacao_extras.jsonl`, sem RAG (com instrução simples e
 com instrução cautelosa) e com RAG, e grava as respostas lado a lado em
-`evidencias/`. A análise da última rodada está em
-[`evidencias/relatorio_comparacao_sem_rag.md`](evidencias/relatorio_comparacao_sem_rag.md).
+`experimentos/evidencias/`. A análise da última rodada está em
+[`experimentos/evidencias/relatorio_comparacao_sem_rag.md`](../experimentos/evidencias/relatorio_comparacao_sem_rag.md).
 
-O relatório é salvo em `evidencias/` com as fontes recuperadas, distâncias,
+O relatório é salvo em `experimentos/evidencias/` com as fontes recuperadas, distâncias,
 abstenções e citações. Não trate distância vetorial como probabilidade de
 acerto; a fidelidade da resposta deve ser revisada contra os documentos.
 
 Relatórios temporários com data no nome e arquivos intermediários de ingestão
 são reproduzíveis e ficam ignorados pelo Git. Depois que uma execução passar
 no portão e for revisada, copie somente o relatório aprovado para
-`evidencias/avaliacao_atual.md`. As fontes originais e o catálogo permanecem
+`experimentos/evidencias/avaliacao_atual.md`. As fontes originais e o catálogo permanecem
 versionáveis para preservar a auditoria.
 
 Com `--verificar-qualidade`, o comando retorna código de erro quando ocorrer
@@ -125,7 +125,7 @@ Em computadores com pouca memória de GPU, use `gemma4:12b` (8 GB) no `.env`. O
 `gemma4:26b` (18 GB) não cabe nos cerca de 16 GB de GPU de um Mac M4 de 24 GB e
 roda em grande parte na CPU. Nesse Mac, em 12/11/2026, o `gemma4:12b` passou no
 portão completo com cobertura de citações de 1,00 (contra 0,50 do `llama3.2:3b`),
-levando em média 70 s por resposta. Veja `evidencias/relatorio_fase4_qualidade.md`.
+levando em média 70 s por resposta. Veja `experimentos/evidencias/relatorio_fase4_qualidade.md`.
 
 Os modelos com raciocínio (gemma4, qwen3) rodam com `"think": false`; sem isso, o
 raciocínio consome o limite de saída e a resposta volta vazia.
@@ -149,7 +149,7 @@ python -m pontoativo_rag.rotas --modelos gemma4:12b <outro-modelo>
 ```
 
 O comando mostra acertos e tempo médio por modelo e salva o relatório em
-`evidencias/rotas_<data>.md`. Use o modelo menor só se ele acertar tantas rotas
+`experimentos/evidencias/rotas_<data>.md`. Use o modelo menor só se ele acertar tantas rotas
 quanto o atual. Os dois modelos ficam carregados juntos no Ollama, então a soma
 dos tamanhos precisa caber na memória de GPU.
 
@@ -221,10 +221,10 @@ as fontes encontradas.
 ## Testes automáticos
 
 Cada pull request e cada envio para a `main` rodam o workflow
-[`.github/workflows/ci.yml`](.github/workflows/ci.yml) no GitHub Actions:
+[`.github/workflows/ci.yml`](../.github/workflows/ci.yml) no GitHub Actions:
 
 - `pytest` com os testes do RAG, do chat, da moderação e dos encontros;
-- os testes da curadoria em `PontoAtivo-CURADORIA/ferramentas/tests`;
+- os testes da curadoria em `curadoria/ferramentas/tests`;
 - a sintaxe de `app.js`, `encontros.js` e `data/locais.js`;
 - a conferência de que `data/locais-encontros.json` está em dia com
   `data/locais.js`.
@@ -236,7 +236,7 @@ Para rodar os testes da curadoria no Windows, ative o modo UTF-8 do Python,
 porque alguns arquivos são abertos sem codificação explícita:
 
 ```powershell
-cd PontoAtivo-CURADORIA; $env:PYTHONUTF8 = '1'; python -B -m unittest discover -s ferramentas/tests
+cd curadoria; $env:PYTHONUTF8 = '1'; python -B -m unittest discover -s ferramentas/tests
 ```
 
 ## Diagnóstico
@@ -258,8 +258,8 @@ disponíveis.
 
 ## Documentação de engenharia
 
-- [Projeto técnico](docs/superpowers/specs/2026-11-05-pontoativo-rag-design.md)
-- [Plano de implementação](docs/superpowers/plans/2026-11-05-pontoativo-rag.md)
+- [Projeto técnico](superpowers/specs/2026-11-05-pontoativo-rag-design.md)
+- [Plano de implementação](superpowers/plans/2026-11-05-pontoativo-rag.md)
 
 ## Encontros esportivos
 
@@ -278,7 +278,7 @@ As contas, sessões e inscrições persistem em `dados/encontros.sqlite3`, fora 
 pública e ignorado pelo Git. A senha usa scrypt com salt e a sessão usa cookie
 HttpOnly. Para escolher outro banco local, configure `PONTOATIVO_ENCONTROS_DB`.
 O catálogo da agenda deriva dos mesmos locais do mapa. Ao alterar essa base, rode
-`node PontoAtivo-CURADORIA/ferramentas/exportar-locais-encontros.mjs`.
+`node curadoria/ferramentas/exportar-locais-encontros.mjs`.
 
 No mapa, os locais com encontros futuros ganham um pino destacado com o número
 de encontros e ficam fora dos agrupamentos. O balão do pino lista os próximos

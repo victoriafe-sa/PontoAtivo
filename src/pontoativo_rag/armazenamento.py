@@ -56,7 +56,7 @@ class ChromaStore:
             raise EmbeddingModelMismatch(
                 f"A coleção {collection_name!r} contém vetores de {stored_model!r}, "
                 f"mas a configuração usa {embedding_model!r}. Apague a pasta "
-                "banco_vetorial/ e execute a ingestão novamente."
+                "dados/rag/vetorial/ e execute a ingestão novamente."
             )
 
     def upsert(

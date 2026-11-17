@@ -163,7 +163,7 @@ def main(argv: list[str] | None = None) -> int:
         "--sem-geracao", action="store_true", help="modo de diagnóstico: só recuperação"
     )
     parser.add_argument(
-        "--sem-registro", action="store_true", help="não grava evidencias/consultas.jsonl"
+        "--sem-registro", action="store_true", help="não grava experimentos/evidencias/consultas.jsonl"
     )
     args = parser.parse_args(argv)
 

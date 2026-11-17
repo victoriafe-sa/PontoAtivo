@@ -1,6 +1,7 @@
 """Confere completude e cria planilha CSV para revisão humana, sem dar notas automáticas."""
 import argparse
 import csv
+import hashlib
 import json
 from pathlib import Path
 import statistics
@@ -13,7 +14,13 @@ def main():
     args = ap.parse_args()
     pasta = BASE/'rodadas'/args.rodada
     ambiente = json.loads((pasta/'ambiente.json').read_text())
-    tarefas = [t for t in json.loads((pasta/'tarefas.json').read_text())
+    origem = pasta / 'tarefas.json'
+    if not origem.exists():
+        digest = ambiente['arquivos_sha256']['tarefas.json']
+        origem = pasta.parent / 'entradas' / (digest + '.json')
+        if hashlib.sha256(origem.read_bytes()).hexdigest() != digest:
+            raise ValueError(f'As tarefas divergem do manifesto de {pasta.name}')
+    tarefas = [t for t in json.loads(origem.read_text())
                if t['teste'] in ambiente.get('testes', [1,2,3])]
     registros = []
     faltantes = []

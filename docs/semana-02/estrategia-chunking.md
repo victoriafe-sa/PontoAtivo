@@ -2,7 +2,7 @@
 
 Chunking é a divisão de cada documento-fonte em trechos menores (*chunks*), que são indexados no banco vetorial e recuperados quando combinam com a pergunta. Este documento descreve como o PontoAtivo faz essa divisão, por quê, e o que foi testado.
 
-Código: `src/ingestao/chunking.py`. Testes: `tests/teste_chunking.py`.
+Código: `src/ingestao/chunking.py`. Testes: `tests/pipeline/teste_chunking.py`.
 
 ## Resumo
 
@@ -94,7 +94,7 @@ Os quatro cadastros (R01 a R04) concentram a maior parte dos chunks. Isso deve s
 
 ## Como foi testado
 
-`tests/teste_chunking.py` roda na base real e verifica:
+`tests/pipeline/teste_chunking.py` roda na base real e verifica:
 
 - 25 fontes lidas e todos os ids únicos;
 - nenhum chunk acima do limite (800 para texto, 1.000 para cadastros);
@@ -118,7 +118,7 @@ Estes testes verificam a **forma** dos chunks. Se a recuperação encontra os do
 ```bash
 python src/ingestao/chunking.py                          # mostra o resumo
 python src/ingestao/chunking.py --saida dados/chunks.jsonl   # grava os chunks
-python tests/teste_chunking.py                           # roda os testes
+python tests/pipeline/teste_chunking.py                           # roda os testes
 ```
 
 O módulo usa apenas a biblioteca padrão do Python. O JSONL gerado tem um chunk por linha, com `id`, `texto`, `texto_indexado` e `metadados`, pronto para a etapa de embeddings e carga no banco vetorial.

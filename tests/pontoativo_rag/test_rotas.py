@@ -4,7 +4,7 @@ from pathlib import Path
 from pontoativo_rag import rotas
 from pontoativo_rag.web import ROUTES
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 
 
 def test_perguntas_de_rotas_cobrem_todas_as_rotas_sem_repetir():

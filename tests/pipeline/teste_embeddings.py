@@ -1,13 +1,13 @@
 """Teste rápido do módulo de embeddings, sem banco vetorial.
 
 Rodar a partir da raiz do projeto:
-    .venv/bin/python tests/teste_embeddings.py
+    .venv/bin/python tests/pipeline/teste_embeddings.py
 """
 
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
 
 from ingestao.embeddings import DIMENSAO, embedding_da_consulta, gerar_embeddings
 

@@ -18,8 +18,8 @@ def test_ingestao_e_idempotente_e_registra_erros_por_fonte(tmp_path: Path) -> No
     catalog = settings.data_dir / "catalogo_fontes.csv"
     catalog.write_text(
         "source_id,title,institution,location,document_type,subject,verification_status\n"
-        "fonte-1,Documento,GDF,fontes_originais/valida.txt,txt,esporte,verificado\n"
-        "fonte-2,Ausente,GDF,fontes_originais/ausente.txt,txt,esporte,verificado\n",
+        "fonte-1,Documento,GDF,dados/fontes_originais/valida.txt,txt,esporte,verificado\n"
+        "fonte-2,Ausente,GDF,dados/fontes_originais/ausente.txt,txt,esporte,verificado\n",
         encoding="utf-8",
     )
     store = ChromaStore(settings.vector_db_dir, "teste_ingestao")
@@ -34,8 +34,8 @@ def test_ingestao_e_idempotente_e_registra_erros_por_fonte(tmp_path: Path) -> No
     assert "fonte-2" in first.errors
     assert second.embedding_segments == 1
     assert store.count() == 1
-    assert (settings.data_dir / "documentos_normalizados.jsonl").is_file()
-    assert (settings.data_dir / "chunks.jsonl").is_file()
+    assert (settings.data_dir / "rag" / "documentos_normalizados.jsonl").is_file()
+    assert (settings.data_dir / "rag" / "chunks.jsonl").is_file()
 
 
 
@@ -65,7 +65,7 @@ def test_ingestao_nao_recodifica_e_remove_vetores_de_fonte_alterada(tmp_path: Pa
     source.write_text("Versão original do regulamento.", encoding="utf-8")
     catalog = _catalog(
         settings,
-        "f1,Regulamento,SEL,https://df.gov.br/r,fontes_originais/fonte.txt,txt,regras,aprovada\n",
+        "f1,Regulamento,SEL,https://df.gov.br/r,dados/fontes_originais/fonte.txt,txt,regras,aprovada\n",
     )
     store = ChromaStore(settings.vector_db_dir, "teste_alteracao")
     embedder = CountingEmbedder()
@@ -93,7 +93,7 @@ def test_ingestao_exclui_fonte_nao_verificada(tmp_path: Path) -> None:
     (settings.sources_dir / "a.txt").write_text("Texto A.", encoding="utf-8")
     catalog = _catalog(
         settings,
-        "f1,A,SEL,https://df.gov.br/a,fontes_originais/a.txt,txt,x,pendente\n",
+        "f1,A,SEL,https://df.gov.br/a,dados/fontes_originais/a.txt,txt,x,pendente\n",
     )
     store = ChromaStore(settings.vector_db_dir, "teste_status")
 

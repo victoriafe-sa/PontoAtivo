@@ -35,9 +35,14 @@ def prompt(tarefa, evidencias):
     return texto + '\n\nPERGUNTA:\n' + tarefa['pergunta'] + '\n\nFORMATO:\nResposta:\nLimitações:\nFontes utilizadas:\n'
 
 
-def carregar():
-    tarefas = json.loads((BASE/'tarefas.json').read_text())
-    evidencias = json.loads((BASE/'evidencias.json').read_text())
+def ler_entradas():
+    return {nome: (BASE / nome).read_bytes()
+                for nome in ('tarefas.json', 'evidencias.json', 'gabarito.json')}
+
+
+def carregar(entradas):
+    tarefas = json.loads(entradas['tarefas.json'])
+    evidencias = json.loads(entradas['evidencias.json'])
     vistos = set()
     for t in tarefas:
         chave = (t['id'], t['condicao'])
@@ -60,7 +65,8 @@ def main():
     args = ap.parse_args()
     if args.repeticoes < 1:
         ap.error('repeticoes deve ser positivo')
-    tarefas, evidencias = carregar()
+    entradas = ler_entradas()
+    tarefas, evidencias = carregar(entradas)
     tarefas = [t for t in tarefas if t['teste'] in args.testes]
     if args.simular:
         for t in tarefas:
@@ -77,11 +83,17 @@ def main():
     ambiente = {'data_cenario': '2026-11-12', 'modo': 'controle_documental_manual',
                 'truncamento': 'não determinado automaticamente', 'ordem_seed':42,
                 'repeticoes':args.repeticoes, 'modelos':args.modelos, 'testes':args.testes,
-                'arquivos_sha256': {n:hashlib.sha256((BASE/n).read_bytes()).hexdigest()
-                                    for n in ['tarefas.json','evidencias.json','gabarito.json']}}
-    # Snapshot autossuficiente da rodada, inclusive gabarito não enviado aos modelos.
-    for n in ['tarefas.json','evidencias.json','gabarito.json']:
-        (rodada/n).write_bytes((BASE/n).read_bytes())
+                'arquivos_sha256': {nome: hashlib.sha256(dados).hexdigest()
+                                    for nome, dados in entradas.items()}}
+    # O manifesto da rodada identifica cada entrada no acervo compartilhado.
+    acervo = BASE / 'rodadas' / 'entradas'
+    acervo.mkdir(exist_ok=True)
+    for nome, dados in entradas.items():
+        destino = acervo / (ambiente['arquivos_sha256'][nome] + '.json')
+        if not destino.exists():
+            temporario = rodada / (nome + '.tmp')
+            temporario.write_bytes(dados)
+            temporario.replace(destino)
     if any(m != 'gemini' for m in args.modelos):
         for nome, endpoint in [('versao','version'), ('modelos_instalados','tags')]:
             with urllib.request.urlopen(f'http://localhost:11434/api/{endpoint}', timeout=10) as r:

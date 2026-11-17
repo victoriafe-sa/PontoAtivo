@@ -34,7 +34,7 @@ def _chunk(index: int, text: str = "Trecho do documento.") -> RetrievedChunk:
         source_id=f"00{index}",
         title=f"Fonte {index}",
         institution="SEL-DF",
-        location=f"fontes_originais/00{index}.pdf",
+        location=f"dados/fontes_originais/00{index}.pdf",
         text=text,
         distance=0.2,
         matched_segments=1,
@@ -197,7 +197,7 @@ def test_rota_documentos_com_rag_mostra_apenas_fontes_citadas(chat, monkeypatch)
             {
                 "referencia": "F2",
                 "titulo": "Fonte 2",
-                "url": "fontes_originais/002.pdf",
+                "url": "dados/fontes_originais/002.pdf",
                 "paginas": "2",
                 "trecho": "",
             }

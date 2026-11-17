@@ -5,7 +5,7 @@ import pytest
 
 from pontoativo_rag.moderacao import termo_improprio
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 
 
 @pytest.mark.parametrize(
@@ -63,7 +63,7 @@ def test_nenhuma_pergunta_da_avaliacao_e_bloqueada():
 
 def test_nenhum_nome_de_local_do_mapa_e_bloqueado():
     locais = json.loads(
-        (ROOT / "PontoAtivo-CURADORIA" / "data" / "locais-encontros.json").read_text(encoding="utf-8")
+        (ROOT / "curadoria" / "data" / "locais-encontros.json").read_text(encoding="utf-8")
     )
     assert len(locais) > 1000
     bloqueados = {

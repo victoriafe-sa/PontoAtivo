@@ -2,7 +2,7 @@
 
 ## Entrada e curadoria
 
-A entrada efetiva é o conjunto de 25 arquivos F###, N## e R## em dados/fontes/texto/. O PDF F003_original.pdf é o original de uma dessas fontes, não um 26º documento. Listas, README e auditoria não são ingeridos. Os cadastros SEDUH são quatro documentos-fonte compostos por registros; registros individuais não foram contados como documentos extras.
+A entrada efetiva é o conjunto de 25 arquivos F###, N## e R## em dados/fontes/texto/. O PDF dados/fontes_originais/003_manual_uso_cops.pdf é o original de uma dessas fontes, não um 26º documento. Listas, README e auditoria não são ingeridos. Os cadastros SEDUH são quatro documentos-fonte compostos por registros; registros individuais não foram contados como documentos extras.
 
 A seleção cobre espaços esportivos do DF, modalidades, regras e acessibilidade. Houve remoção de ruído, substituição de fontes redundantes ou inadequadas, correção de metadados e identificação de fontes antigas. O histórico e as limitações por fonte estão em dados/fontes/texto/AUDITORIA.md. Essa é curadoria documental, com validação humana das informações ainda pendente. Não houve nova verificação online nesta finalização.
 
@@ -26,9 +26,9 @@ python -m venv .venv
 .venv/Scripts/python.exe -m pip install -r requirements.txt
 .venv/Scripts/python.exe src/ingestao/chunking.py --saida dados/chunks.jsonl
 .venv/Scripts/python.exe src/ingestao/carga.py
-.venv/Scripts/python.exe tests/teste_chunking.py
-.venv/Scripts/python.exe tests/teste_banco.py
-.venv/Scripts/python.exe tests/teste_embeddings.py
+.venv/Scripts/python.exe tests/pipeline/teste_chunking.py
+.venv/Scripts/python.exe tests/pipeline/teste_banco.py
+.venv/Scripts/python.exe tests/pipeline/teste_embeddings.py
 .venv/Scripts/python.exe src/main.py "Qual é o endereço do Estádio Bezerrão no Gama?" -k 5
 ```
 

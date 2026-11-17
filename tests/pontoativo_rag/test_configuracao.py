@@ -9,9 +9,9 @@ def test_settings_usa_defaults_relativos_ao_projeto(tmp_path: Path) -> None:
     settings = Settings.from_env(root=tmp_path)
 
     assert settings.root == tmp_path.resolve()
-    assert settings.sources_dir == tmp_path.resolve() / "fontes_originais"
+    assert settings.sources_dir == tmp_path.resolve() / "dados" / "fontes_originais"
     assert settings.data_dir == tmp_path.resolve() / "dados"
-    assert settings.vector_db_dir == tmp_path.resolve() / "banco_vetorial"
+    assert settings.vector_db_dir == tmp_path.resolve() / "dados" / "rag" / "vetorial"
     assert settings.embedding_model == (
         "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
     )

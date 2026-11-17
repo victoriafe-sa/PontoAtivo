@@ -11,3 +11,5 @@
 - [Perguntas de avaliação](perguntas_avaliacao.jsonl)
 - [Consultas de demonstração](consultas-demo.md)
 - [Comparação de LLMs em PDF](Compara%C3%A7%C3%A3o%20de%20LLMs%20gemma412b%20%C3%97%20qwen314b.pdf)
+- [Relatório do pacote RAG](relatorio-llm-rag.docx) e [evidências das avaliações](evidencias/)
+- [Planilha de avaliação comparativa](avaliacao-comparativa.ods)

@@ -7,7 +7,7 @@ BASE = Path(__file__).resolve().parent
 spec = importlib.util.spec_from_file_location('executar', BASE/'executar.py')
 executor = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(executor)
-tarefas, evidencias = executor.carregar()
+tarefas, evidencias = executor.carregar(executor.ler_entradas())
 gabarito = json.loads((BASE/'gabarito.json').read_text())
 assert len(tarefas) == 33 and len(gabarito) == 12
 for c in gabarito:

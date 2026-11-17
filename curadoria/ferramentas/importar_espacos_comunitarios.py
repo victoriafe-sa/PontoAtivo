@@ -9,7 +9,7 @@ Quadras (7) e Praças (1), e pela área típica dos polígonos (quadras ~560 m²
 Saída: data/curadoria/espacos_comunitarios.json, no formato dos registros de
 data/locais.js; ferramentas/gerar_base.py incorpora o arquivo na base candidata.
 
-Uso (na pasta PontoAtivo-CURADORIA):
+Uso (na pasta curadoria):
     python3 -B ferramentas/importar_espacos_comunitarios.py
 """
 from __future__ import annotations

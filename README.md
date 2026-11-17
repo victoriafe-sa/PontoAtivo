@@ -4,6 +4,12 @@ Protótipo de recuperação de informações sobre espaços esportivos e prátic
 
 Este README é o guia atual de funcionamento e execução do projeto. Todos os comandos abaixo devem ser executados a partir da raiz do repositório, onde estão `src/`, `dados/` e `requirements.txt`.
 
+## Abrir no navegador
+
+Na raiz, com as dependências instaladas, execute `.venv/bin/python -m pontoativo_rag.web` e abra o [mapa com chat e encontros](http://127.0.0.1:8766/). As instruções para preparar o índice e o modelo estão no [guia RAG](docs/guia-rag.md).
+
+Para ver a apresentação e os resultados dos experimentos, execute `python3 -m http.server 8000 --bind 127.0.0.1 --directory docs` e abra a [página de resultados](http://127.0.0.1:8000/).
+
 ## Estado atual
 
 O projeto possui uma base selecionada e limpa com **25 documentos-fonte**, divididos em **599 chunks**, embeddings multilíngues E5 e banco vetorial Chroma. A consulta funciona pela linha de comando.
@@ -45,14 +51,14 @@ A verificação original foi feita com **Python 3.13 no Windows**. Para executar
 Na raiz do repositório:
 
 ```bash
-python3 --version
-python3 -m venv .venv
+python3.11 --version
+python3.11 -m venv .venv
 .venv/bin/python -m pip install --upgrade pip
 .venv/bin/python -m pip install -r requirements.txt
 .venv/bin/python -m pip check
 ```
 
-Se `.venv/bin/python` já existir e funcionar, pule a criação do ambiente. Neste checkout foi encontrado Python **3.14.6 em Apple Silicon (arm64)**; a instalação completa e a execução do modelo devem ser verificadas com os testes abaixo antes de considerar o ambiente validado.
+O pacote aceita Python 3.11 a 3.13. A integração contínua usa a versão 3.11 indicada em `.python-version`.
 
 No macOS, o executável fica em `.venv/bin/python`. O caminho `.venv/Scripts/python.exe` pertence ao Windows. Use `-m pip`, e não `-m pip3`: esse é o nome do módulo, independentemente do sistema operacional.
 
@@ -63,7 +69,7 @@ Não é necessário ativar o ambiente virtual: todos os comandos de execução a
 ### Windows (PowerShell)
 
 ```powershell
-python -m venv .venv
+py -3.11 -m venv .venv
 .venv/Scripts/python.exe -m pip install --upgrade pip
 .venv/Scripts/python.exe -m pip install torch --index-url https://download.pytorch.org/whl/cpu
 .venv/Scripts/python.exe -m pip install -r requirements.txt
@@ -142,11 +148,11 @@ No Windows (PowerShell), use `$env:HF_HUB_OFFLINE = "1"` para ativar e `Remove-I
 ## Conferir o funcionamento
 
 ```bash
-.venv/bin/python tests/teste_chunking.py
-.venv/bin/python tests/teste_banco.py
-.venv/bin/python tests/teste_embeddings.py
-.venv/bin/python tests/teste_resposta.py
-.venv/bin/python tests/test_registros_rag.py
+.venv/bin/python tests/pipeline/teste_chunking.py
+.venv/bin/python tests/pipeline/teste_banco.py
+.venv/bin/python tests/pipeline/teste_embeddings.py
+.venv/bin/python tests/pipeline/teste_resposta.py
+.venv/bin/python tests/pipeline/test_registros_rag.py
 ```
 
 | Teste | O que verifica |
@@ -163,37 +169,14 @@ O teste de banco não mede qualidade semântica. Os exemplos de embeddings tamb�
 
 ## Estrutura do repositório
 
-```text
-PontoAtivo/
-├── README.MD
-├── requirements.txt
-├── src/
-│   ├── ingestao/          # chunking, embeddings, banco e carga
-│   ├── recuperacao/       # busca semântica
-│   ├── geracao/           # geração de respostas
-│   └── main.py            # consulta e exportação JSON
-├── dados/
-│   ├── chunks.jsonl       # trechos usados pelo gerador do site
-│   ├── catalogo.csv       # inventário das fontes
-│   ├── fontes/texto/      # 25 textos, PDF original e curadoria
-│   └── vetorial/          # banco gerado localmente, fora do Git
-├── pontoativo-rag/        # protótipo RAG, encontros e mapa de curadoria
-├── dados_oficiais_seduh/  # coleta original; não é entrada direta da carga
-├── scripts/               # execução dos experimentos e geração do site
-├── experimentos/          # perguntas, rodadas, evidências e análises
-├── docs/
-│   ├── index.html         # página publicada
-│   ├── dados.json         # dados da página
-│   ├── semana-01/
-│   └── semana-02/
-└── tests/
-```
+Execute ambos os fluxos a partir da raiz.
 
-O [protótipo RAG](pontoativo-rag/README.md) tem ambiente, dados e testes próprios. Para executar os comandos do guia, entre primeiro em `pontoativo-rag/`. A ingestão desse protótipo grava `pontoativo-rag/dados/chunks.jsonl`. O site da raiz usa `dados/chunks.jsonl`.
+| Fluxo | Código | Entradas e saídas |
+|---|---|---|
+| Consulta e site | `src/main.py`, `src/ingestao/`, `src/recuperacao/`, `src/geracao/` | Usa `dados/catalogo.csv`, os textos em `dados/fontes/texto/` e o índice `dados/vetorial/`. O site lê `dados/chunks.jsonl`. |
+| Chat e mapa | `src/pontoativo_rag/` e [curadoria](curadoria/) | Usa `dados/catalogo_fontes.csv` e [fontes originais](dados/fontes_originais/). Gera chunks e índice próprios em `dados/rag/`. Veja o [guia de execução](docs/guia-rag.md). |
 
-Dentro do protótipo, [PontoAtivo-CURADORIA](pontoativo-rag/PontoAtivo-CURADORIA/) reúne o mapa e as ferramentas de curadoria. As [fontes originais](pontoativo-rag/fontes_originais/), a [documentação do pipeline](pontoativo-rag/documentacao/) e as [evidências de avaliação](pontoativo-rag/evidencias/) ficam ao lado do código.
-
-A pasta temporária `Semana 2` não faz parte da execução atual e já não está presente neste checkout. Código, fontes e comandos deste README são suficientes para instalar as dependências, gerar o banco e fazer consultas.
+A [coleta da SEDUH](dados/seduh/) conserva os dados geográficos e sua origem. Os [documentos de engenharia](docs/engenharia/) descrevem o pacote RAG. Em `tests/pipeline/` ficam as verificações do fluxo de consulta, incluindo os scripts manuais `teste_*.py`. A suíte do pacote fica em `tests/pontoativo_rag/`.
 
 ## Documentação e fontes
 
