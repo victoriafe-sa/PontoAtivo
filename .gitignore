@@ -37,6 +37,11 @@ dados/brutos/
 dados/tmp/
 base-conhecimento/indice/
 *.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-wal
+*.sqlite3-shm
 *.db
 *.parquet
 
@@ -90,6 +95,9 @@ desktop.ini
 *.tmp
 ~$*
 
+# Índices locais do protótipo, incluindo o caminho anterior
+dados/vetorial/*
+!dados/vetorial/.gitkeep
 prototipo/dados/vetorial/*
 !prototipo/dados/vetorial/.gitkeep
 
