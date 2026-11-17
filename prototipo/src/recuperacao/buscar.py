@@ -1,7 +1,7 @@
 """Recuperação: pergunta -> chunks mais relevantes, com fonte e score.
 
 Rodar a partir da raiz do projeto (depois da ingestão):
-    python src/recuperacao/buscar.py "onde fazer natação com acessibilidade?" -k 5
+    python prototipo/src/recuperacao/buscar.py "onde fazer natação com acessibilidade?" -k 5
 
 A busca devolve sempre os k chunks mais próximos (top-k), e não filtra por
 limiar de similaridade, porque com o modelo E5 as notas ficam todas numa faixa

@@ -1,6 +1,6 @@
 # Como a base de locais foi montada (05/11/2026)
 
-`data/locais.js` é gerado por `build.py` a partir de:
+`site/data/locais.js` (o mapa publicado) veio de `build.py` a partir de:
 
 1. **IDE-DF / SEDUH**: camadas *Mobiliário Esporte e Lazer* (layer 6) e *Parques Urbanos* (layer 7) do serviço
    `https://www.geoservicos.ide.df.gov.br/arcgis/rest/services/Publico/EQUIPAMENTOS_URBANOS/MapServer`.
@@ -18,7 +18,8 @@ Cada ponto é conferido com o polígono oficial da RA (tolerância de 3 km na di
 o local fica sem pino e aparece como "localização pendente".
 
 Para atualizar: baixe de novo as camadas da IDE-DF (`mob_*.json`, `parques.json`, `ras.json`) e rode
-`python build.py <pasta_geo> ibram_parks.json ../data/locais.js`.
+`python build.py <pasta_geo> ibram_parks.json ../data/locais.original-20261105.js`
+(dentro de `curadoria/ferramentas`) e depois a curadoria abaixo.
 
 ---
 
@@ -42,9 +43,9 @@ A base de dados é mantida e expandida com níveis de evidência por atributo at
    ```bash
    python3 -B ferramentas/gerar_base.py --publish
    ```
-   *Nota: Cria automaticamente backup em `data/locais.original-20261105.js` e só substitui `data/locais.js` se passar em 100% dos testes sem nenhum erro de validação.*
+   *Nota: grava em `../site/data/locais.js` só se passar em 100% dos testes sem nenhum erro de validação. A base de entrada `data/locais.original-20261105.js` não é alterada. Depois, na raiz do projeto, rode `node curadoria/ferramentas/exportar-locais-encontros.mjs`.*
 
 4. **Validar sintaxe JavaScript:**
    ```bash
-   /System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc -e "checkSyntax('app.js'); print('OK')"
+   /System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc -e "checkSyntax('../site/app.js'); print('OK')"
    ```

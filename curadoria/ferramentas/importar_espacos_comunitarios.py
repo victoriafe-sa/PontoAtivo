@@ -200,7 +200,7 @@ def build(features: list[dict], regions: list, places: list[dict]) -> list[dict]
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--base", default="data/locais.js")
+    parser.add_argument("--base", default="../site/data/locais.js")
     parser.add_argument("--saida", default="data/curadoria/espacos_comunitarios.json")
     args = parser.parse_args()
 

@@ -26,9 +26,9 @@ em português que o modo vetorial puro perde, especialmente na Q11 e na Q12.
 
 Avaliações completas:
 
-- [`fase3_vetorial`](historico/avaliacao_20261110_113500_fase3_vetorial.md)
-- [`fase3_hibrido`](historico/avaliacao_20261110_113501_fase3_hibrido.md)
-- [`comparação entre modos`](historico/comparacao_avaliacao_20261110_113500_fase3_vetorial_vs_avaliacao_20261110_113501_fase3_hibrido.md)
+- [`fase3_vetorial`](../historico/avaliacao_20261110_113500_fase3_vetorial.md)
+- [`fase3_hibrido`](../historico/avaliacao_20261110_113501_fase3_hibrido.md)
+- [`comparação entre modos`](../historico/comparacao_avaliacao_20261110_113500_fase3_vetorial_vs_avaliacao_20261110_113501_fase3_hibrido.md)
 
 ## Validação contra a Fase 1
 

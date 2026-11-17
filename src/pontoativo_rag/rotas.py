@@ -83,7 +83,7 @@ def main(argv: list[str] | None = None) -> None:
     args = parser.parse_args(argv)
 
     settings = Settings.from_env()
-    questions = load_questions(args.perguntas or settings.data_dir / "perguntas_rotas.jsonl")
+    questions = load_questions(args.perguntas or settings.questions_dir / "rotas.jsonl")
     runs = {}
     for model in args.modelos or [settings.map_model]:
         print(f"Testando {model} em {len(questions)} perguntas…", flush=True)

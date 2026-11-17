@@ -68,8 +68,8 @@ def test_markdown_mostra_referencia_e_as_duas_respostas():
 
 
 def test_perguntas_da_comparacao_somam_20_com_ids_unicos():
-    questions = load_questions(ROOT / "dados" / "perguntas_avaliacao.jsonl") + load_questions(
-        ROOT / "dados" / "perguntas_comparacao_extras.jsonl"
+    questions = load_questions(ROOT / "dados" / "rag" / "perguntas" / "avaliacao.jsonl") + load_questions(
+        ROOT / "dados" / "rag" / "perguntas" / "comparacao_extras.jsonl"
     )
 
     assert len(questions) == 20

@@ -38,7 +38,7 @@ abstenções corretas.
 
 ## Execução com LLM
 
-A avaliação completa em [`avaliacao_20261110_114544_fase4_completa.md`](historico/avaliacao_20261110_114544_fase4_completa.md) encontrou
+A avaliação completa em [`avaliacao_20261110_114544_fase4_completa.md`](../historico/avaliacao_20261110_114544_fase4_completa.md) encontrou
 falhas reais de qualidade do modelo:
 
 - 1 falsa abstenção;
@@ -66,7 +66,7 @@ Foram adicionados controles para:
   “Citei os documentos”, que não são afirmações sobre o domínio.
 
 A última execução completa com `llama3.2:3b` foi
-[`avaliacao_20261110_145018_fase4_final_llm_gate.md`](historico/avaliacao_20261110_145018_fase4_final_llm_gate.md). Seus resultados foram:
+[`avaliacao_20261110_145018_fase4_final_llm_gate.md`](../historico/avaliacao_20261110_145018_fase4_final_llm_gate.md). Seus resultados foram:
 
 - recall médio@5: `0,97`;
 - acerto de fonte: `1,00`;
@@ -83,7 +83,7 @@ com esse modelo ultrapassou 35 minutos por causa do custo das tentativas de
 regeneração e foi interrompida sem certificação do conjunto completo.
 
 A avaliação somente de recuperação, após as correções, está registrada em
-[`avaliacao_20261110_161823_correcao_achados_recuperacao_final_v2.md`](historico/avaliacao_20261110_161823_correcao_achados_recuperacao_final_v2.md) e passou:
+[`avaliacao_20261110_161823_correcao_achados_recuperacao_final_v2.md`](../historico/avaliacao_20261110_161823_correcao_achados_recuperacao_final_v2.md) e passou:
 
 - recall médio@5: `0,97`;
 - acerto de fonte: `1,00`;
@@ -106,7 +106,7 @@ gemma4 têm modo de raciocínio. Com ele ligado, o raciocínio consumia todo o
 `"think": false` (`geracao.py`).
 
 A avaliação completa, sem interrupção, está em
-[`avaliacao_20261112_100019_gemma4_12b_completa.md`](historico/avaliacao_20261112_100019_gemma4_12b_completa.md):
+[`avaliacao_20261112_100019_gemma4_12b_completa.md`](../historico/avaliacao_20261112_100019_gemma4_12b_completa.md):
 
 | Métrica | `llama3.2:3b` (10/11) | `gemma4:12b` (12/11) | Limite |
 |---|---:|---:|---:|
@@ -125,7 +125,7 @@ A avaliação completa, sem interrupção, está em
 
 O portão confere a forma das citações e a sobreposição de termos, não a correção
 das respostas. A Fase 4 só fica concluída depois da revisão humana em
-[`revisao_humana_rag_20261112_100019.md`](historico/revisao_humana_rag_20261112_100019.md). Se a revisão aceitar o resultado,
+[`revisao_humana_rag_20261112_100019.md`](../historico/revisao_humana_rag_20261112_100019.md). Se a revisão aceitar o resultado,
 copie o relatório para `evidencias/avaliacao_atual.md`.
 
 O tempo de 71 s por resposta é o limite deste hardware (cerca de 6 tokens/s) e
@@ -134,7 +134,7 @@ precisa ser mencionado na demonstração.
 ### Revisão humana (12/11/2026)
 
 Revisor: Pedro Augusto Reis Alvim. Detalhes em
-[`revisao_humana_rag_20261112_100019.md`](historico/revisao_humana_rag_20261112_100019.md).
+[`revisao_humana_rag_20261112_100019.md`](../historico/revisao_humana_rag_20261112_100019.md).
 
 | Resultado | Quantidade |
 |---|---:|
@@ -169,7 +169,7 @@ Correções:
   termos impedia a ampliação.
 
 Resultado em
-[`avaliacao_20261112_105034_gemma4_12b_correcao_q12.md`](historico/avaliacao_20261112_105034_gemma4_12b_correcao_q12.md):
+[`avaliacao_20261112_105034_gemma4_12b_correcao_q12.md`](../historico/avaliacao_20261112_105034_gemma4_12b_correcao_q12.md):
 
 | Métrica | 10h00 | 10h50 |
 |---|---:|---:|
@@ -187,7 +187,7 @@ Ela lista 4 dos 63 PECs da tabela. A lista completa por região é função do m
 
 A mudança na ordem dos trechos alterou 10 das 13 respostas. A revisão humana das
 10h00 vale só para aquela execução. Esta execução precisa de revisão própria em
-[`revisao_humana_rag.md`](revisao_humana_rag.md).
+[`revisao_humana_rag.md`](../atual/revisao_humana_rag.md).
 
 ## Qual computador estas evidências representam
 
@@ -227,13 +227,13 @@ Correções:
   nacionais não mudam: "Vasco da Gama" e "Santa Maria" não são RAs do DF.
 
 Resultado em
-[`avaliacao_20261112_115119_gemma4_12b_correcao_auditoria.md`](historico/avaliacao_20261112_115119_gemma4_12b_correcao_auditoria.md):
+[`avaliacao_20261112_115119_gemma4_12b_correcao_auditoria.md`](../historico/avaliacao_20261112_115119_gemma4_12b_correcao_auditoria.md):
 recall médio@5 de 1,00, acerto de fonte de 1,00, cobertura de citações de 1,00,
 suporte factual de 1,00, nenhuma afirmação sem suporte, 5 abstenções corretas e
 tempo médio de geração de 78 s. **Verificação automática: OK.**
 
 7 das 13 respostas mudaram (Q01, Q02, Q03, Q05, Q08, Q10, Q13). A revisão humana
-desta execução está pendente em [`revisao_humana_rag.md`](revisao_humana_rag.md).
+desta execução está pendente em [`revisao_humana_rag.md`](../atual/revisao_humana_rag.md).
 
 Ficaram fora desta correção: a Carta de Serviços sem seções (60 trechos), as
 palavras coladas do DOC-005 ("deentrada") e o cabeçalho repetido do DOC-006.
@@ -257,13 +257,13 @@ A base também ganhou o DOC-025 (Guia dos Espaços Públicos de Lazer do DF, UnB
 aprovado com ressalvas.
 
 Resultado em
-[`avaliacao_20261112_171807_gemma4_12b_limpeza.md`](historico/avaliacao_20261112_171807_gemma4_12b_limpeza.md):
+[`avaliacao_20261112_171807_gemma4_12b_limpeza.md`](../historico/avaliacao_20261112_171807_gemma4_12b_limpeza.md):
 recall médio@5 de 1,00, acerto de fonte de 1,00, cobertura de citações de 1,00,
 suporte factual de 1,00, nenhuma afirmação sem suporte, 5 abstenções corretas e
 76 s por resposta. **Verificação automática: OK.**
 
 9 das 13 respostas mudaram em relação à execução das 11h51 (Q01, Q02, Q03, Q06,
-Q07, Q08, Q10, Q11, Q13). A planilha [`revisao_humana_rag.md`](revisao_humana_rag.md)
+Q07, Q08, Q10, Q11, Q13). A planilha [`revisao_humana_rag.md`](../atual/revisao_humana_rag.md)
 passa a cobrir esta execução, que substitui as anteriores ainda não revisadas.
 
 ## Respostas mais rápidas e citações na tela (13/11/2026)
@@ -295,12 +295,12 @@ Execuções:
 
 | Execução | Portão | Afirmações sem suporte | Tempo médio |
 |---|---|---:|---:|
-| [`15h08`](historico/avaliacao_20261113_150836_gemma4_12b_respostas_rapidas.md) | falhou | 2 (Q12: frase partida em "V." e endereços não contados) | 56 s |
+| [`15h08`](../historico/avaliacao_20261113_150836_gemma4_12b_respostas_rapidas.md) | falhou | 2 (Q12: frase partida em "V." e endereços não contados) | 56 s |
 | 15h24 | falhou | 1 (Q12: o avaliador ainda partia a frase em "V.") | 63 s |
-| [`15h43`](historico/avaliacao_20261113_154315_gemma4_12b_respostas_rapidas_v3.md) | **OK** | 0 | 63 s |
+| [`15h43`](../historico/avaliacao_20261113_154315_gemma4_12b_respostas_rapidas_v3.md) | **OK** | 0 | 63 s |
 
 Na execução aprovada: recall médio@4 de 0,96 (a Q01 traz 1 das 2 fontes
 esperadas; a resposta vem completa da Carta de Serviços), acerto de fonte de
 1,00, cobertura de citações e suporte factual de 1,00, 5 abstenções corretas e
 uma tentativa por resposta (antes, 76 s em média). A planilha
-[`revisao_humana_rag.md`](revisao_humana_rag.md) passa a cobrir esta execução.
+[`revisao_humana_rag.md`](../atual/revisao_humana_rag.md) passa a cobrir esta execução.

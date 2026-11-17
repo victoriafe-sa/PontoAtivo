@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import vm from "node:vm";
-const base = new URL("../", import.meta.url);
+// O mapa publicado fica em site/; esta ferramenta mora em curadoria/ferramentas/.
+const base = new URL("../../site/", import.meta.url);
 const scope = {window: {}};
 vm.runInNewContext(fs.readFileSync(new URL("data/locais.js", base), "utf8"), scope);
 const unique = new Map();

@@ -9,7 +9,9 @@ def test_settings_usa_defaults_relativos_ao_projeto(tmp_path: Path) -> None:
     settings = Settings.from_env(root=tmp_path)
 
     assert settings.root == tmp_path.resolve()
-    assert settings.sources_dir == tmp_path.resolve() / "dados" / "fontes_originais"
+    assert settings.sources_dir == tmp_path.resolve() / "dados" / "rag" / "fontes"
+    assert settings.catalog_path == tmp_path.resolve() / "dados" / "rag" / "catalogo.csv"
+    assert settings.generated_dir == tmp_path.resolve() / "dados" / "rag" / "gerado"
     assert settings.data_dir == tmp_path.resolve() / "dados"
     assert settings.vector_db_dir == tmp_path.resolve() / "dados" / "rag" / "vetorial"
     assert settings.embedding_model == (

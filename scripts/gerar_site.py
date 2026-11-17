@@ -22,7 +22,7 @@ CABECALHO = re.compile(r'^(modelo|executado_em|tokens|tempo_s)\s*:|^---\s*$')
 
 def ler_chunks():
     chunks, fontes = [], {}
-    for linha in (RAIZ / 'dados' / 'chunks.jsonl').read_text(encoding='utf-8').splitlines():
+    for linha in (RAIZ / 'prototipo' / 'dados' / 'chunks.jsonl').read_text(encoding='utf-8').splitlines():
         c = json.loads(linha)
         m = c['metadados']
         chunks.append({'id': c['id'], 'f': m['id_fonte'], 't': c['texto']})

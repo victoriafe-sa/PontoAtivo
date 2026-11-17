@@ -56,16 +56,16 @@ jobs:
 
       - name: Sintaxe dos scripts
         run: |
-          node --check curadoria/app.js
-          node --check curadoria/encontros.js
-          node --check curadoria/data/locais.js
+          node --check site/app.js
+          node --check site/encontros.js
+          node --check site/data/locais.js
           node --check curadoria/ferramentas/exportar-locais-encontros.mjs
 
       # A agenda usa um catálogo derivado do mapa; os dois precisam estar em dia.
       - name: Catálogo dos encontros em dia com o mapa
         run: |
           node curadoria/ferramentas/exportar-locais-encontros.mjs
-          git diff --exit-code -- curadoria/data/locais-encontros.json || {
+          git diff --exit-code -- site/data/locais-encontros.json || {
             echo "::error::Rode node curadoria/ferramentas/exportar-locais-encontros.mjs e commite o resultado."
             exit 1
           }

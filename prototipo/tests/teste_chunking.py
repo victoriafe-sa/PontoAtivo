@@ -1,14 +1,14 @@
-"""Testes do chunking, com os documentos reais de dados/fontes/texto/.
+"""Testes do chunking, com os documentos reais de prototipo/dados/fontes/texto/.
 
 Rodar a partir da raiz do projeto:
-    python tests/pipeline/teste_chunking.py
+    python prototipo/tests/teste_chunking.py
 """
 
 import re
 import sys
 from pathlib import Path
 
-RAIZ = Path(__file__).resolve().parents[2]
+RAIZ = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(RAIZ / "src"))
 
 from ingestao.chunking import (  # noqa: E402

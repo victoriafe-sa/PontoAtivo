@@ -16,7 +16,7 @@ from ferramentas.gerar_base import (
 )
 
 ROOT = Path(__file__).parents[2]
-ORIGINAL_JS = ROOT / "data" / "locais.js"
+ORIGINAL_JS = ROOT.parent / "site" / "data" / "locais.js"
 CURATED_DIR = ROOT / "data" / "curadoria"
 # 1748 na base de 05/11 (pqu-5 duplicado 3x = 1746 únicos), +2 paradesporto, +4 privados = 1752,
 # mais os espaços comunitários da IDE-DF importados em 12/11 (campos, quadras e praças).

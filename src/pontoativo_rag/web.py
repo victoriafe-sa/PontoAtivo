@@ -424,7 +424,7 @@ def main():
     args = parser.parse_args()
     settings = Settings.from_env(Path(__file__).resolve().parents[2])
     database_path = Path(os.getenv("PONTOATIVO_ENCONTROS_DB", str(settings.data_dir / "encontros.sqlite3"))).resolve()
-    static_dir = (settings.root / "curadoria").resolve()
+    static_dir = (settings.root / "site").resolve()
     if database_path.is_relative_to(static_dir):
         raise ValueError("O banco de contas deve ficar fora dos arquivos públicos.")
     database = Database(database_path)

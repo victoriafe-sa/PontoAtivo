@@ -90,15 +90,16 @@ desktop.ini
 *.tmp
 ~$*
 
-dados/vetorial/*
-!dados/vetorial/.gitkeep
+prototipo/dados/vetorial/*
+!prototipo/dados/vetorial/.gitkeep
 
-dados/rag/
+dados/rag/gerado/
+dados/rag/vetorial/
 dados/*.sqlite3*
 dados/persona_*.txt
-experimentos/evidencias/*.jsonl
-experimentos/evidencias/avaliacao_20*.md
-experimentos/evidencias/comparacao_avaliacao_*.md
-experimentos/evidencias/comparacao_sem_rag_20*.md
-experimentos/evidencias/rotas_20*.md
+experimentos/avaliacao-rag/*.jsonl
+experimentos/avaliacao-rag/avaliacao_20*.md
+experimentos/avaliacao-rag/comparacao_avaliacao_*.md
+experimentos/avaliacao-rag/comparacao_sem_rag_20*.md
+experimentos/avaliacao-rag/rotas_20*.md
 curadoria/data/locais.candidato.js

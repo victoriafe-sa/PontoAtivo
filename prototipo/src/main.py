@@ -26,7 +26,7 @@ def main():
     except RuntimeError as erro:
         ap.exit(1, f"Falha na consulta: {erro}\n")
     except Exception as erro:
-        ap.exit(1, f"Falha na consulta: {erro}\nConfira as dependências e execute python src/ingestao/carga.py se o banco não existir.\n")
+        ap.exit(1, f"Falha na consulta: {erro}\nConfira as dependências e execute python prototipo/src/ingestao/carga.py se o banco não existir.\n")
     print(f"Consulta: {args.pergunta}\n\n{formatar_evidencia(registro['resultados'])}")
     print("\n" + registro["resposta"])
     if args.saida:

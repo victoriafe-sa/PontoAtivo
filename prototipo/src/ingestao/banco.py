@@ -1,10 +1,10 @@
 """Banco vetorial do PontoAtivo (Chroma, local e persistente).
 
-O banco fica em dados/vetorial/ (fora do git). Há uma única coleção,
+O banco fica em prototipo/dados/vetorial/ (fora do git). Há uma única coleção,
 ``pontoativo_fontes``, com a métrica de **cosseno**, que é a recomendada para
 os embeddings normalizados do modelo multilingual-e5-base.
 
-Os embeddings são gerados por nós (src/ingestao/embeddings.py) e passados ao
+Os embeddings são gerados por nós (prototipo/src/ingestao/embeddings.py) e passados ao
 Chroma já prontos; por isso a coleção é criada com ``embedding_function=None``
 e o Chroma nunca baixa nem usa um modelo próprio.
 """

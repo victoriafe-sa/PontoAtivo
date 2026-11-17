@@ -408,12 +408,13 @@ def main():
     parser = argparse.ArgumentParser(description="Gera a base multifonte do PontoAtivo com segurança.")
     parser.add_argument("--input", default="data/locais.original-20261105.js")
     parser.add_argument("--curadoria", default="data/curadoria")
-    parser.add_argument("--output", default="data/locais.candidato.js", help="Padrão seguro: nunca sobrescreve data/locais.js sem --publish")
-    parser.add_argument("--publish", action="store_true", help="Autorização explícita para substituir data/locais.js com backup")
-    parser.add_argument("--backup", default=None)
+    parser.add_argument("--output", default="data/locais.candidato.js", help="Padrão seguro: nunca sobrescreve ../site/data/locais.js sem --publish")
+    parser.add_argument("--publish", action="store_true", help="Autorização explícita para substituir ../site/data/locais.js com backup")
+    parser.add_argument("--backup", default="data/" + DEFAULT_BACKUP_NAME)
     args = parser.parse_args()
 
-    target = "data/locais.js" if args.publish else args.output
+    # O mapa publicado fica em site/; a curadoria roda dentro de curadoria/.
+    target = "../site/data/locais.js" if args.publish else args.output
     if args.publish:
         recs = publish_with_safety(args.input, args.curadoria, target, args.backup)
         print(f"PUBLICADO COM SUCESSO: {len(recs)} locais em {target}")

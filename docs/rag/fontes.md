@@ -1,7 +1,7 @@
 # Revisão das fontes do RAG para a entrega
 
 **Data:** 12/11/2026
-**Base:** `dados/catalogo_fontes.csv` (24 fontes, todas com `verification_status=aprovada`)
+**Base:** `dados/rag/catalogo.csv` (24 fontes, todas com `verification_status=aprovada`)
 **Status:** triagem preparada para decisão da equipe. A coluna **Decisão** fica em
 branco até a revisão humana.
 
@@ -19,7 +19,7 @@ Cada fonte foi classificada pelo que ela consegue sustentar numa resposta sobre 
 
 A atualidade vem da regra do próprio sistema (`modelos.py`): informação volátil
 (horários, vagas, inscrições) é revisada a cada 180 dias, normas a cada 730 e o
-restante a cada 365. "Usada em" lista as perguntas de `perguntas_avaliacao.jsonl`
+restante a cada 365. "Usada em" lista as perguntas de `dados/rag/perguntas/avaliacao.jsonl`
 e `perguntas_comparacao_extras.jsonl` que dependem da fonte.
 
 ## Triagem

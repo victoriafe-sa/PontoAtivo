@@ -175,7 +175,7 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     settings = Settings.from_env()
     settings.ensure_directories()
-    catalog = args.catalogo or settings.data_dir / "catalogo_fontes.csv"
+    catalog = args.catalogo or settings.catalog_path
     results = collect_sources(settings, catalog, verify_only=args.verificar)
     for result in results:
         print(f"[{result.status.upper():9}] {result.source_id} {result.detail}")

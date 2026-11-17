@@ -2,11 +2,11 @@
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from geracao.responder import responder
 from ingestao.chunking import chunkar_pasta
 
-chunks, _ = chunkar_pasta(Path(__file__).resolve().parents[2] / "dados/fontes/texto")
+chunks, _ = chunkar_pasta(Path(__file__).resolve().parents[1] / "dados/fontes/texto")
 resultados = [{"id": c["id"], "texto": c["texto"], "metadados": c["metadados"]} for c in chunks[:5]]
 resposta = responder(resultados)
 for r in resultados[:3]:

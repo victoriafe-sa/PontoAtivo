@@ -1,6 +1,11 @@
 # Revisão humana da avaliação do RAG
 
-**Avaliação revisada:** [`avaliacao_20261113_154315_gemma4_12b_respostas_rapidas_v3.md`](historico/avaliacao_20261113_154315_gemma4_12b_respostas_rapidas_v3.md)  
+> **A refazer com o E5.** Esta revisão foi feita sobre a rodada com o MiniLM
+> ([referência MiniLM](../historico/referencia_gemma12b_minilm.md)). O resultado oficial
+> atual usa o E5 ([referência E5](referencia_gemma12b_e5.md)); falta revisar as respostas
+> dessa rodada.
+
+**Avaliação revisada:** [`avaliacao_20261113_154315_gemma4_12b_respostas_rapidas_v3.md`](../historico/avaliacao_20261113_154315_gemma4_12b_respostas_rapidas_v3.md)  
 **Executada em:** 2026-11-13 15:43:15 · **Modelo:** `gemma4:12b` · **Perguntas:** 18 · **Verificação automática:** OK
 
 ## Como revisar
@@ -23,7 +28,7 @@ Para cada pergunta:
 5. Preencha **Observação** e **Revisor**.
 
 Ao final, preencha o **Resumo**. Se o resultado for aceito para a entrega, copie o
-relatório da avaliação para `evidencias/avaliacao_atual.md`.
+relatório da avaliação para `experimentos/avaliacao-rag/atual/`.
 
 **Revisor(es):** ______________________ · **Data da revisão:** ____/____/______
 
