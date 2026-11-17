@@ -6,7 +6,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
 
-from agentes.analise import analisar_duvidas, formatar_rascunho, verificar_pergunta
+from pontoativo_rag.agentes.analise import analisar_duvidas, formatar_rascunho, verificar_pergunta
 from geracao.responder import sintetizar
 from recuperacao.buscar import buscar, formatar_evidencia
 

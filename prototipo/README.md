@@ -11,12 +11,15 @@ principal do projeto (mapa, chat e encontros) é outro e fica em
 
 | Pasta | Conteúdo |
 |---|---|
-| `src/` | `main.py` (consulta), `ingestao/`, `recuperacao/`, `geracao/` e `agentes/` |
+| `src/` | `main.py` (consulta), `ingestao/`, `recuperacao/` e `geracao/` |
 | `dados/fontes/texto/` | Os 25 documentos-fonte em texto, com a [auditoria](dados/fontes/texto/AUDITORIA.md) |
 | `dados/catalogo.csv` | Catálogo das fontes (IDs F, N e R) |
 | `dados/chunks.jsonl` | Trechos gerados, lidos pelo `scripts/gerar_site.py` |
 | `dados/vetorial/` | Banco Chroma local (fora do Git) |
 | `tests/` | Verificações manuais (`teste_*.py`) |
+
+O agente de Análise usado pela opção `--rascunho` fica no pacote principal, em
+[`src/pontoativo_rag/agentes/analise.py`](../src/pontoativo_rag/agentes/analise.py).
 
 Todos os comandos abaixo são executados **a partir da raiz do repositório**, com o
 ambiente instalado conforme o [README da raiz](../README.md#instalação).

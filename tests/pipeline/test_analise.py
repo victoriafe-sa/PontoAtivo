@@ -9,7 +9,7 @@ import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "prototipo" / "src"))
 
-from agentes.analise import analisar, analisar_duvidas
+from pontoativo_rag.agentes.analise import analisar, analisar_duvidas
 from main import consultar
 
 
@@ -28,7 +28,7 @@ class TestAnalise(unittest.TestCase):
     def test_rejeita_referencia_inventada(self):
         item = {"duvida": "É gratuito?", "estado": "sustentada",
                 "conclusao": "A entrada é gratuita.", "trechos": ["outra-fonte"]}
-        with patch("agentes.analise.OllamaClient.complete", return_value=json.dumps([item])):
+        with patch("pontoativo_rag.agentes.analise.OllamaClient.complete", return_value=json.dumps([item])):
             with self.assertRaisesRegex(RuntimeError, "referência inválida"):
                 analisar_duvidas("Entrada gratuita?", [{"id": "F029-003", "texto": "Entrada: gratuita",
                                                         "metadados": {}}])
@@ -37,7 +37,7 @@ class TestAnalise(unittest.TestCase):
         item = {"duvida": "É gratuito?", "estado": "sustentada",
                 "conclusao": "É gratuito.", "trechos": ["F1"],
                 "evidencias": [{"id": "F1", "passagem": "A aula é gratuita."}]}
-        with patch("agentes.analise.OllamaClient.complete", return_value=json.dumps([item])):
+        with patch("pontoativo_rag.agentes.analise.OllamaClient.complete", return_value=json.dumps([item])):
             with self.assertRaises(RuntimeError):
                 analisar_duvidas("A aula é gratuita?", [
                     {"id": "F1", "texto": "Entrada gratuita.", "metadados": {}}])
@@ -46,7 +46,7 @@ class TestAnalise(unittest.TestCase):
         item = {"duvida": "É acessível?", "estado": "precisa_esclarecimento",
                 "conclusao": "Qual local você quer visitar?", "trechos": [],
                 "evidencias": []}
-        with patch("agentes.analise.OllamaClient.complete", return_value=json.dumps([item])):
+        with patch("pontoativo_rag.agentes.analise.OllamaClient.complete", return_value=json.dumps([item])):
             self.assertEqual(analisar_duvidas("É acessível?", [
                 {"id": "F1", "texto": "Parque acessível.", "metadados": {}}]), [item])
 
@@ -54,7 +54,7 @@ class TestAnalise(unittest.TestCase):
         item = {"duvida": "Entrada gratuita?", "estado": "sustentada",
                 "conclusao": "A entrada é gratuita.", "trechos": ["F1"],
                 "evidencias": [{"id": "F1", "passagem": "Entrada gratuita."}]}
-        with patch("agentes.analise.OllamaClient.complete", return_value=json.dumps([item])):
+        with patch("pontoativo_rag.agentes.analise.OllamaClient.complete", return_value=json.dumps([item])):
             self.assertEqual(analisar_duvidas("Entrada gratuita?", [
                 {"id": "F1", "texto": "Entrada\n gratuita.", "metadados": {}}]), [item])
 
@@ -62,7 +62,7 @@ class TestAnalise(unittest.TestCase):
         item = {"duvida": "Quadribol gratuito?", "estado": "lacuna",
                 "conclusao": "Os trechos não permitem confirmar quadribol gratuito.",
                 "trechos": [], "evidencias": []}
-        with patch("agentes.analise.OllamaClient.complete",
+        with patch("pontoativo_rag.agentes.analise.OllamaClient.complete",
                    side_effect=["[]", json.dumps([item])]) as modelo:
             resultado = analisar_duvidas("quadribol gratuito", [
                 {"id": "F1", "texto": "Aulas de natação.", "metadados": {}}])
