@@ -1,0 +1,391 @@
+{
+  "executado_em": "2026-11-19T15:11:46.878359-03:00",
+  "pergunta": "Uso cadeira de rodas e quero visitar o Parque da Cidade Dona Sarah Kubitschek. Preciso pagar para entrar? Há banheiros acessíveis? O caminho até eles também é acessível?",
+  "modelo_analise": "qwen3:8b",
+  "modelo_validacao": "llama3.1:8b",
+  "pesquisa": "busca lexical no corpus do protótipo (sem embeddings)",
+  "simulado": "somente o primeiro rascunho da Análise (preparado à mão)",
+  "eventos": [
+    {
+      "etapa": "interpretacao_para_pesquisa",
+      "acao": {
+        "consulta": "Uso cadeira de rodas e quero visitar o Parque da Cidade Dona Sarah Kubitschek. Preciso pagar para entrar? Há banheiros acessíveis? O caminho até eles também é acessível?",
+        "pergunta_original": "Uso cadeira de rodas e quero visitar o Parque da Cidade Dona Sarah Kubitschek. Preciso pagar para entrar? Há banheiros acessíveis? O caminho até eles também é acessível?",
+        "tipo": "intencao_nao_identificada"
+      },
+      "duvidas": [
+        "Preciso pagar para entrar?",
+        "Há banheiros acessíveis?",
+        "O caminho até eles também é acessível?"
+      ]
+    },
+    {
+      "etapa": "pesquisa_para_analise",
+      "resultado": {
+        "agente": "pesquisa",
+        "acao": {
+          "consulta": "Uso cadeira de rodas e quero visitar o Parque da Cidade Dona Sarah Kubitschek. Preciso pagar para entrar? Há banheiros acessíveis? O caminho até eles também é acessível?",
+          "pergunta_original": "Uso cadeira de rodas e quero visitar o Parque da Cidade Dona Sarah Kubitschek. Preciso pagar para entrar? Há banheiros acessíveis? O caminho até eles também é acessível?",
+          "tipo": "intencao_nao_identificada"
+        },
+        "status": "encontrado",
+        "trechos": [
+          {
+            "id": "T1",
+            "chunk_id": "F029-003",
+            "texto": "Em eventos especiais, o público sobe para 80 mil.\nA segurança do Parque da Cidade Sarah Kubitschek orienta que os frequentadores cumpram a Lei Distrital 2095/98 a qual proíbe a permanência de cães soltos nas vias e logradouros públicos ou em locais de livre acesso ao público do Distrito Federal.\nLivre acesso 24 horas por dia; sete dias por semana.\nEntrada: gratuita\nAcessibilidade: sim. Possui banheiros acessíveis.\nEspaço para realização de eventos: possui diversos locais para eventos, como o Pavilhão de Exposições, Praça das Fontes e estacionamentos.\nTambém orienta o cumprimento da Lei Federal n°. 2.140/2011 que dispõe sobre a obrigatoriedade do uso da focinheira e estabelece regras de segurança para a condução responsável de cães de grande porte e/ou de raças consideradas perigosas.",
+            "distancia": 0.4545,
+            "fonte": {
+              "id": "F029",
+              "titulo": "Parque da Cidade Dona Sarah Kubitschek (SEL)",
+              "instituicao": "Secretaria de Esporte e Lazer do DF (SEL-DF)",
+              "url": "https://www.esporte.df.gov.br/parque-da-cidade",
+              "paginas": "",
+              "secao": "",
+              "regiao": "",
+              "atualidade": "A página afirma 'Acessibilidade: sim. Possui banheiros acessíveis.'; não detalha trajetos, pistas ou equipamentos. O 'Endereço' que consta (SBN, Quadra 2, Bloco K, Edifício Wagner) é o da administração, não o do parque. Página atualizada em 20/02/2026. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial."
+            },
+            "entidade": "",
+            "metadado_filtro_ausente": false
+          }
+        ],
+        "limiar": 0.6,
+        "descartados": 2,
+        "segundos": 0.03
+      }
+    },
+    {
+      "etapa": "analise_para_validacao",
+      "itens": [
+        {
+          "duvida": "Preciso pagar para entrar?",
+          "estado": "sustentada",
+          "conclusao": "Segundo a Secretaria de Esporte e Lazer do DF, a entrada no Parque da Cidade Dona Sarah Kubitschek é gratuita.",
+          "trechos": [
+            "T1"
+          ],
+          "evidencias": [
+            {
+              "id": "T1",
+              "passagem": "Entrada: gratuita"
+            }
+          ]
+        },
+        {
+          "duvida": "Há banheiros acessíveis?",
+          "estado": "sustentada",
+          "conclusao": "O parque possui banheiros acessíveis.",
+          "trechos": [
+            "T1"
+          ],
+          "evidencias": [
+            {
+              "id": "T1",
+              "passagem": "Acessibilidade: sim. Possui banheiros acessíveis."
+            }
+          ]
+        },
+        {
+          "duvida": "O caminho até eles também é acessível?",
+          "estado": "sustentada",
+          "conclusao": "Sim. O trajeto até os banheiros também é acessível para quem usa cadeira de rodas.",
+          "trechos": [
+            "T1"
+          ],
+          "evidencias": [
+            {
+              "id": "T1",
+              "passagem": "Acessibilidade: sim. Possui banheiros acessíveis."
+            }
+          ]
+        }
+      ],
+      "feedback_recebido": [],
+      "origem": "rascunho preparado à mão com etapa inventada (injetado na 1ª chamada)"
+    },
+    {
+      "etapa": "validacao",
+      "rodada": 1,
+      "parecer": {
+        "agente": "validacao",
+        "aprovado": false,
+        "revisao": "regras_e_modelo",
+        "criterios": {
+          "sustentacao": false,
+          "condicoes": false,
+          "completude": false,
+          "temporalidade": false,
+          "lacunas_conflitos": false
+        },
+        "problemas": [
+          {
+            "item": 3,
+            "trecho_rascunho": "O trajeto até os banheiros também é acessível para quem usa cadeira de rodas",
+            "criterio": "sustentacao",
+            "correcao": "Os trechos citados (T1) não mencionam: cadeira, rodas, trajeto. Remova a afirmação ou marque a dúvida como lacuna, dizendo o que a fonte não informa; use as palavras da fonte."
+          }
+        ],
+        "consulta_complementar": ""
+      }
+    },
+    {
+      "etapa": "validacao_para_analise",
+      "feedback": [
+        "Item 3 (\"O caminho até eles também é acessível?\"): o trecho \"O trajeto até os banheiros também é acessível para quem usa cadeira de rodas\" precisa de correção (sustentacao). Os trechos citados (T1) não mencionam: cadeira, rodas, trajeto. Remova a afirmação ou marque a dúvida como lacuna, dizendo o que a fonte não informa; use as palavras da fonte."
+      ],
+      "trechos_para_corrigir": [
+        {
+          "item": 3,
+          "trecho_rascunho": "O trajeto até os banheiros também é acessível para quem usa cadeira de rodas",
+          "criterio": "sustentacao",
+          "correcao": "Os trechos citados (T1) não mencionam: cadeira, rodas, trajeto. Remova a afirmação ou marque a dúvida como lacuna, dizendo o que a fonte não informa; use as palavras da fonte."
+        }
+      ]
+    },
+    {
+      "etapa": "analise_para_validacao",
+      "itens": [
+        {
+          "duvida": "Preciso pagar para entrar?",
+          "estado": "sustentada",
+          "conclusao": "Segundo a Secretaria de Esporte e Lazer do DF, a entrada no Parque da Cidade Dona Sarah Kubitschek é gratuita.",
+          "evidencias": [
+            {
+              "id": "T1",
+              "passagem": "Entrada: gratuita"
+            }
+          ],
+          "trechos": [
+            "T1"
+          ]
+        },
+        {
+          "duvida": "Há banheiros acessíveis?",
+          "estado": "sustentada",
+          "conclusao": "O parque possui banheiros acessíveis.",
+          "evidencias": [
+            {
+              "id": "T1",
+              "passagem": "Acessibilidade: sim. Possui banheiros acessíveis."
+            }
+          ],
+          "trechos": [
+            "T1"
+          ]
+        },
+        {
+          "duvida": "O caminho até eles também é acessível?",
+          "estado": "lacuna",
+          "conclusao": "A fonte não informa se o trajeto até os banheiros é acessível para quem usa cadeira de rodas.",
+          "evidencias": [
+            {
+              "id": "T1",
+              "passagem": "Acessibilidade: sim. Possui banheiros acessíveis."
+            }
+          ],
+          "trechos": [
+            "T1"
+          ]
+        }
+      ],
+      "feedback_recebido": [
+        "Item 3 (\"O caminho até eles também é acessível?\"): o trecho \"O trajeto até os banheiros também é acessível para quem usa cadeira de rodas\" precisa de correção (sustentacao). Os trechos citados (T1) não mencionam: cadeira, rodas, trajeto. Remova a afirmação ou marque a dúvida como lacuna, dizendo o que a fonte não informa; use as palavras da fonte."
+      ]
+    },
+    {
+      "etapa": "validacao",
+      "rodada": 2,
+      "parecer": {
+        "agente": "validacao",
+        "aprovado": false,
+        "revisao": "regras_e_modelo",
+        "criterios": {
+          "sustentacao": false,
+          "condicoes": false,
+          "completude": false,
+          "temporalidade": false,
+          "lacunas_conflitos": false
+        },
+        "problemas": [
+          {
+            "item": 3,
+            "trecho_rascunho": "A fonte não informa se o trajeto até os banheiros é acessível para quem usa cadeira de rodas.",
+            "criterio": "completude",
+            "correcao": "Adicione uma afirmação que explique a lacuna, por exemplo: 'Não há informações sobre a acessibilidade do caminho até os banheiros.'"
+          },
+          {
+            "item": 2,
+            "trecho_rascunho": "O parque possui banheiros acessíveis.",
+            "criterio": "condicoes",
+            "correcao": "Preserve as condições originais e não transfira atributos entre locais. Por exemplo: 'Os banheiros no Parque da Cidade Dona Sarah Kubitschek são acessíveis.'"
+          },
+          {
+            "item": 1,
+            "trecho_rascunho": "Segundo a Secretaria de Esporte e Lazer do DF, a entrada no Parque da Cidade Dona Sarah Kubitschek é gratuita.",
+            "criterio": "temporalidade",
+            "correcao": "Preserve as datas relevantes e não apresente informações antigas como situação atual confirmada. Por exemplo: 'A entrada no Parque da Cidade Dona Sarah Kubitschek era gratuita em 2026, mas pode ter mudado.'"
+          },
+          {
+            "item": 3,
+            "trecho_rascunho": "A fonte não informa se o trajeto até os banheiros é acessível para quem usa cadeira de rodas.",
+            "criterio": "lacunas_conflitos",
+            "correcao": "Não transforme a ausência de informação em negativa factual. Por exemplo: 'Não há informações sobre a acessibilidade do caminho até os banheiros.'"
+          }
+        ],
+        "consulta_complementar": ""
+      }
+    },
+    {
+      "etapa": "validacao_para_analise",
+      "feedback": [
+        "Item 3 (\"O caminho até eles também é acessível?\"): o trecho \"A fonte não informa se o trajeto até os banheiros é acessível para quem usa cadeira de rodas.\" precisa de correção (completude). Adicione uma afirmação que explique a lacuna, por exemplo: 'Não há informações sobre a acessibilidade do caminho até os banheiros.'",
+        "Item 2 (\"Há banheiros acessíveis?\"): o trecho \"O parque possui banheiros acessíveis.\" precisa de correção (condicoes). Preserve as condições originais e não transfira atributos entre locais. Por exemplo: 'Os banheiros no Parque da Cidade Dona Sarah Kubitschek são acessíveis.'",
+        "Item 1 (\"Preciso pagar para entrar?\"): o trecho \"Segundo a Secretaria de Esporte e Lazer do DF, a entrada no Parque da Cidade Dona Sarah Kubitschek é gratuita.\" precisa de correção (temporalidade). Preserve as datas relevantes e não apresente informações antigas como situação atual confirmada. Por exemplo: 'A entrada no Parque da Cidade Dona Sarah Kubitschek era gratuita em 2026, mas pode ter mudado.'",
+        "Item 3 (\"O caminho até eles também é acessível?\"): o trecho \"A fonte não informa se o trajeto até os banheiros é acessível para quem usa cadeira de rodas.\" precisa de correção (lacunas_conflitos). Não transforme a ausência de informação em negativa factual. Por exemplo: 'Não há informações sobre a acessibilidade do caminho até os banheiros.'"
+      ],
+      "trechos_para_corrigir": [
+        {
+          "item": 3,
+          "trecho_rascunho": "A fonte não informa se o trajeto até os banheiros é acessível para quem usa cadeira de rodas.",
+          "criterio": "completude",
+          "correcao": "Adicione uma afirmação que explique a lacuna, por exemplo: 'Não há informações sobre a acessibilidade do caminho até os banheiros.'"
+        },
+        {
+          "item": 2,
+          "trecho_rascunho": "O parque possui banheiros acessíveis.",
+          "criterio": "condicoes",
+          "correcao": "Preserve as condições originais e não transfira atributos entre locais. Por exemplo: 'Os banheiros no Parque da Cidade Dona Sarah Kubitschek são acessíveis.'"
+        },
+        {
+          "item": 1,
+          "trecho_rascunho": "Segundo a Secretaria de Esporte e Lazer do DF, a entrada no Parque da Cidade Dona Sarah Kubitschek é gratuita.",
+          "criterio": "temporalidade",
+          "correcao": "Preserve as datas relevantes e não apresente informações antigas como situação atual confirmada. Por exemplo: 'A entrada no Parque da Cidade Dona Sarah Kubitschek era gratuita em 2026, mas pode ter mudado.'"
+        },
+        {
+          "item": 3,
+          "trecho_rascunho": "A fonte não informa se o trajeto até os banheiros é acessível para quem usa cadeira de rodas.",
+          "criterio": "lacunas_conflitos",
+          "correcao": "Não transforme a ausência de informação em negativa factual. Por exemplo: 'Não há informações sobre a acessibilidade do caminho até os banheiros.'"
+        }
+      ]
+    },
+    {
+      "etapa": "analise_para_validacao",
+      "itens": [
+        {
+          "duvida": "Preciso pagar para entrar?",
+          "estado": "lacuna",
+          "conclusao": "A entrada no Parque da Cidade Dona Sarah Kubitschek era gratuita em 2026, mas pode ter mudado.",
+          "evidencias": [
+            {
+              "id": "T1",
+              "passagem": "Entrada: gratuita"
+            }
+          ],
+          "trechos": [
+            "T1"
+          ]
+        },
+        {
+          "duvida": "Há banheiros acessíveis?",
+          "estado": "sustentada",
+          "conclusao": "Os banheiros no Parque da Cidade Dona Sarah Kubitschek são acessíveis.",
+          "evidencias": [
+            {
+              "id": "T1",
+              "passagem": "Acessibilidade: sim. Possui banheiros acessíveis."
+            }
+          ],
+          "trechos": [
+            "T1"
+          ]
+        },
+        {
+          "duvida": "O caminho até eles também é acessível?",
+          "estado": "lacuna",
+          "conclusao": "Não há informações sobre a acessibilidade do caminho até os banheiros.",
+          "evidencias": [
+            {
+              "id": "T1",
+              "passagem": "Acessibilidade: sim. Possui banheiros acessíveis."
+            }
+          ],
+          "trechos": [
+            "T1"
+          ]
+        }
+      ],
+      "feedback_recebido": [
+        "Item 3 (\"O caminho até eles também é acessível?\"): o trecho \"A fonte não informa se o trajeto até os banheiros é acessível para quem usa cadeira de rodas.\" precisa de correção (completude). Adicione uma afirmação que explique a lacuna, por exemplo: 'Não há informações sobre a acessibilidade do caminho até os banheiros.'",
+        "Item 2 (\"Há banheiros acessíveis?\"): o trecho \"O parque possui banheiros acessíveis.\" precisa de correção (condicoes). Preserve as condições originais e não transfira atributos entre locais. Por exemplo: 'Os banheiros no Parque da Cidade Dona Sarah Kubitschek são acessíveis.'",
+        "Item 1 (\"Preciso pagar para entrar?\"): o trecho \"Segundo a Secretaria de Esporte e Lazer do DF, a entrada no Parque da Cidade Dona Sarah Kubitschek é gratuita.\" precisa de correção (temporalidade). Preserve as datas relevantes e não apresente informações antigas como situação atual confirmada. Por exemplo: 'A entrada no Parque da Cidade Dona Sarah Kubitschek era gratuita em 2026, mas pode ter mudado.'",
+        "Item 3 (\"O caminho até eles também é acessível?\"): o trecho \"A fonte não informa se o trajeto até os banheiros é acessível para quem usa cadeira de rodas.\" precisa de correção (lacunas_conflitos). Não transforme a ausência de informação em negativa factual. Por exemplo: 'Não há informações sobre a acessibilidade do caminho até os banheiros.'"
+      ]
+    },
+    {
+      "etapa": "validacao",
+      "rodada": 3,
+      "parecer": {
+        "agente": "validacao",
+        "aprovado": false,
+        "revisao": "regras_e_modelo",
+        "criterios": {
+          "sustentacao": true,
+          "condicoes": false,
+          "completude": false,
+          "temporalidade": false,
+          "lacunas_conflitos": false
+        },
+        "problemas": [
+          {
+            "item": 1,
+            "trecho_rascunho": "A entrada no Parque da Cidade Dona Sarah Kubitschek era gratuita em 2026, mas pode ter mudado.",
+            "criterio": "temporalidade",
+            "correcao": "Remover a data de 2026 e substituir por 'atualmente' ou 'pode ter mudado'.\"}, {"
+          }
+        ],
+        "consulta_complementar": ""
+      }
+    }
+  ],
+  "resposta_coordenador": {
+    "question": "Uso cadeira de rodas e quero visitar o Parque da Cidade Dona Sarah Kubitschek. Preciso pagar para entrar? Há banheiros acessíveis? O caminho até eles também é acessível?",
+    "mode": "recuperacao_sem_geracao",
+    "answer": "Não foi possível redigir uma resposta (o rascunho não passou na validação das fontes). Consulte os trechos recuperados.",
+    "model": null,
+    "model_abstained": false,
+    "generation_seconds": 234.38,
+    "generation_attempts": 6,
+    "retrieved": [
+      {
+        "ref": "F1",
+        "chunk_id": "F029-003",
+        "source_id": "F029",
+        "title": "Parque da Cidade Dona Sarah Kubitschek (SEL)",
+        "institution": "Secretaria de Esporte e Lazer do DF (SEL-DF)",
+        "location": "https://www.esporte.df.gov.br/parque-da-cidade",
+        "text": "Em eventos especiais, o público sobe para 80 mil.\nA segurança do Parque da Cidade Sarah Kubitschek orienta que os frequentadores cumpram a Lei Distrital 2095/98 a qual proíbe a permanência de cães soltos nas vias e logradouros públicos ou em locais de livre acesso ao público do Distrito Federal.\nLivre acesso 24 horas por dia; sete dias por semana.\nEntrada: gratuita\nAcessibilidade: sim. Possui banheiros acessíveis.\nEspaço para realização de eventos: possui diversos locais para eventos, como o Pavilhão de Exposições, Praça das Fontes e estacionamentos.\nTambém orienta o cumprimento da Lei Federal n°. 2.140/2011 que dispõe sobre a obrigatoriedade do uso da focinheira e estabelece regras de segurança para a condução responsável de cães de grande porte e/ou de raças consideradas perigosas.",
+        "distance": 0.4545,
+        "matched_segments": 1,
+        "page_number": null,
+        "page_end": null,
+        "section": "",
+        "administrative_region": "",
+        "verification_status": "",
+        "filter_metadata_missing": false,
+        "lexical_overlap": 0.5454545454545454,
+        "freshness_status": "A página afirma 'Acessibilidade: sim. Possui banheiros acessíveis.'; não detalha trajetos, pistas ou equipamentos. O 'Endereço' que consta (SBN, Quadra 2, Bloco K, Edifício Wagner) é o da administração, não o do parque. Página atualizada em 20/02/2026. AVISO: texto da fonte, com limpeza de ruído de interface descrita em AUDITORIA.md. Confira no link antes de usar como informação oficial.",
+        "source_type": "",
+        "entity_key": "",
+        "structure_kind": "",
+        "region_match": false
+      }
+    ],
+    "cited_chunk_ids": [],
+    "invalid_citations": [],
+    "warnings": []
+  },
+  "resposta_comunicacao": "Não foi possível redigir uma resposta (o rascunho não passou na validação das fontes). Consulte os trechos recuperados.",
+  "recuperacao_segundos": 0.03125775000080466
+}
