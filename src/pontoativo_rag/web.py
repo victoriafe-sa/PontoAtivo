@@ -72,6 +72,7 @@ PLACE_TYPES = (
     r"pecs?|ponto de encontro comunitario|academias? ao ar livre|"
     r"quadras?(?: poliesportivas?| de areia| de volei| de basquete| de futsal| de tenis)?|"
     r"campos?(?: de futebol)?(?: sinteticos?| society| de terra(?: batida)?| iluminados?)?|campinhos?|pistas? de skate|skate|"
+    r"parquinhos?|parques? infant(?:il|is)|playgrounds?|"
     r"parques?|pracas?|centros? olimpicos?|cops?|estadios?|ginasios?"
 )
 REGIONS = (

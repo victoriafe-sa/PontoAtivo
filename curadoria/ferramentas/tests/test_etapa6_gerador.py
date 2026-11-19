@@ -20,8 +20,10 @@ ORIGINAL_JS = ROOT.parent / "site" / "data" / "locais.js"
 CURATED_DIR = ROOT / "data" / "curadoria"
 # 1748 na base de 05/11 (pqu-5 duplicado 3x = 1746 únicos), +2 paradesporto, +4 privados = 1752,
 # mais os espaços comunitários da IDE-DF importados em 12/11 (campos, quadras e praças).
+# Também os parquinhos (parques infantis) da IDE-DF importados em 19/11.
 ESPACOS = json.loads((CURATED_DIR / "espacos_comunitarios.json").read_text(encoding="utf-8"))
-EXPECTED_TOTAL = 1752 + len(ESPACOS)
+PARQUINHOS = json.loads((CURATED_DIR / "parquinhos.json").read_text(encoding="utf-8"))
+EXPECTED_TOTAL = 1752 + len(ESPACOS) + len(PARQUINHOS)
 SOURCES = {s["id"]: s for s in json.loads((CURATED_DIR / "fontes.json").read_text())}
 TODAY = date(2026, 11, 10)
 
@@ -63,6 +65,8 @@ class GeneratorOutputIntegrityTest(unittest.TestCase):
 
     def test_total_places_and_ids(self):
         self.assertEqual(len(ESPACOS), 1348)
+        self.assertEqual(len(PARQUINHOS), 798)
+        self.assertEqual(sum(1 for r in self.records if r["t"] == "parquinho"), 798)
         self.assertEqual(len(self.records), EXPECTED_TOTAL)
         self.assertEqual(len(self.by_id), EXPECTED_TOTAL)
 

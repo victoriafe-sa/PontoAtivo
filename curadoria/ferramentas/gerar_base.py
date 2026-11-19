@@ -336,6 +336,18 @@ def generate(input_js: Path | str, curated_dir: Path | str, output_js: Path | st
             rec["evidence"] = legacy_evidence(rec)
             by_id[rec["id"]] = rec
 
+    # 5. Parquinhos (parques infantis) da IDE-DF, gerados por ferramentas/importar_parquinhos.py
+    pin_path = curated_path / "parquinhos.json"
+    if pin_path.exists():
+        for raw in json.loads(pin_path.read_text(encoding="utf-8")):
+            if raw["id"] in by_id:
+                continue
+            rec = deepcopy(raw)
+            rec["ownership"] = "public"
+            rec["reviewed_at"] = raw.get("reviewed_at") or TODAY  # data da importação, quando houver
+            rec["evidence"] = legacy_evidence(rec)
+            by_id[rec["id"]] = rec
+
     result = sorted(by_id.values(), key=lambda r: r["id"])
 
     meta = {

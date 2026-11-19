@@ -18,6 +18,7 @@ const TYPES = {
   tenis:     { label: "Quadra de tênis",              short: "Tênis", color: "#c0392b", ico: "🎾" },
   campo:     { label: "Campo de futebol",             short: "Campo", color: "#5a9e2f", ico: "⚽" },
   skate:     { label: "Pista de skate",               short: "Skate", color: "#8e44ad", ico: "🛹" },
+  parquinho: { label: "Parquinho (parque infantil)",  short: "Parquinho", color: "#e8590c", ico: "🛝" },
 };
 const ORDER = Object.keys(TYPES);
 const ACC_LABELS = { rota: "Rota sem degraus", banheiro: "Banheiro acessível", tatil: "Piso tátil", vaga: "Vaga PcD", adaptado: "Esporte adaptado / PcD" };
@@ -391,9 +392,12 @@ function meetupsHtml(r) {
     <a href="#encontros">Ver todos os encontros</a></div>`;
 }
 
+// Encontros esportivos são para maiores de 18 anos; parquinhos ficam fora da agenda.
+const podeMarcarEncontro = (r) => r.t !== "parquinho";
+
 function popupHtml(r) {
   return `<div class="pop"><div class="pop-head"><div><b>${esc(r.n)}</b><br><small style="color:${TYPES[r.t].color};font-weight:700">${TYPES[r.t].label}</small></div>
-      <button type="button" class="pop-meet-add" data-meeting-place="${esc(r.id)}" title="Marcar um encontro esportivo neste local"><span aria-hidden="true">📅</span> Marcar encontro</button></div>
+      ${podeMarcarEncontro(r) ? `<button type="button" class="pop-meet-add" data-meeting-place="${esc(r.id)}" title="Marcar um encontro esportivo neste local"><span aria-hidden="true">📅</span> Marcar encontro</button>` : ""}</div>
     ${meetupsHtml(r)}
     ${details(r, true)}
     <div class="place-actions">
@@ -606,7 +610,7 @@ function cardHtml(r) {
   return `<li class="place" id="place-${esc(r.id)}">
     <header><h3>${esc(r.n)}</h3><span class="type-badge" style="background:${t.color}">${t.short}</span></header>
     ${details(r, false)}
-    <div class="place-actions"><button type="button" data-meeting-place="${esc(r.id)}">Marcar encontro</button>
+    <div class="place-actions">${podeMarcarEncontro(r) ? `<button type="button" data-meeting-place="${esc(r.id)}">Marcar encontro</button>` : ""}
       ${r.lat != null ? `<button type="button" data-focus="${esc(r.id)}">Ver no mapa</button>${routeLinks(r)}` : ""}
       <button type="button" class="btn-contribute" data-contribute-id="${esc(r.id)}" data-contribute-name="${esc(r.n)}">✍️ Colaborar / verificar</button>
     </div>
@@ -776,6 +780,7 @@ const ASK_TYPES = [
   { re: /futebol|pelada|bola|\bfut\b/, tipos: ["campo", "quadra"], nome: "futebol" },
   { re: /skate|patins|patinete|bmx|roller/, tipos: ["skate"], nome: "pista de skate" },
   { re: /\btenis\b/, tipos: ["tenis"], nome: "tênis" },
+  { re: /parquinhos?|parques? infant(il|is)|playgrounds?|brinquedos?|escorregador|balanco|gangorra/, tipos: ["parquinho"], nome: "parquinho" },
   { re: /parques?|caminhada|caminhar|correr|corrida|trilha|pedalar|bicicleta|ciclovia/, tipos: ["parque", "pec"], nome: "parque / caminhada" },
   { re: /\bpracas?\b/, tipos: ["praca"], nome: "praça" },
   { re: /natacao|piscina|nadar|hidroginastica/, tipos: ["cop", "estadio"], nome: "natação" },
@@ -828,6 +833,11 @@ function parseQuestion(raw) {
   if (/areia/.test(qt) && !/poliesportiva|basquete|futsal/.test(qt)) res.tipos.delete("quadra");
   if (/\bcampos?\b|campinho|gramado|society|sintetico|varzea/.test(qt) && !/quadra|futsal/.test(qt)) res.tipos.delete("quadra");
   if (/\bpecs?\b|ponto de encontro/.test(qt) && !/aparelho|ginastica/.test(qt)) res.tipos.delete("ginastica");
+  // "parque infantil" é parquinho, não parque de caminhada
+  if (/parques? infant(il|is)/.test(qt) && !/caminhada|caminhar|correr|corrida|trilha|parques? (urbano|ecologico|da cidade)/.test(qt)) {
+    res.tipos.delete("parque"); res.tipos.delete("pec");
+    res.nomes = res.nomes.filter((n) => n !== "parque / caminhada");
+  }
   const naoCatalogadas = [
     [/\bringue\b|boxe|boxing|porrada|luta|briga/, "ringue ou espaço para lutas"],
     [/artes marciais|jiu[\s-]?jitsu|jud[oô]|karate|karat[eê]|taekwondo|muay thai/, "artes marciais"],
@@ -1183,7 +1193,7 @@ async function searchMap(raw) {
       <li>
         <div class="ask-item-top"><b>${esc(r.n)}</b><span class="type-badge" style="background:${TYPES[r.t].color}">${TYPES[r.t].short}</span></div>
         <p class="meta">${[r.dist != null ? `${r.dist.toFixed(1).replace(".", ",")} km` : null, r.ra, r.end].filter(Boolean).map(esc).join(" · ")}${r.aprox ? " <em>(posição aproximada)</em>" : ""}</p>
-        <div class="place-actions"><button type="button" data-meeting-place="${esc(r.id)}">Marcar encontro</button><button type="button" data-ask-focus="${esc(r.id)}">Ver no mapa</button>${routeLinks(r, from)}</div>
+        <div class="place-actions">${podeMarcarEncontro(r) ? `<button type="button" data-meeting-place="${esc(r.id)}">Marcar encontro</button>` : ""}<button type="button" data-ask-focus="${esc(r.id)}">Ver no mapa</button>${routeLinks(r, from)}</div>
       </li>`).join("")}
     </ol>
     <p class="src">Distância em linha reta. Dados do levantamento oficial (IDE-DF/SEL-DF): confirme no local antes de ir.</p>`;
