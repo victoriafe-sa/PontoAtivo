@@ -1,0 +1,22 @@
+Pergunta: Uso cadeira de rodas e quero visitar o Parque da Cidade Dona Sarah Kubitschek. Preciso pagar para entrar? Há banheiros acessíveis? O caminho até eles também é acessível?
+
+[Interpretação → Pesquisa] dúvidas: Preciso pagar para entrar? | Há banheiros acessíveis? | O caminho até eles também é acessível?
+[Pesquisa → Análise] encontrado: T1=F029-003 (dist. 0.4545)
+[Análise → Validação] (rascunho preparado à mão com etapa inventada (injetado na 1ª chamada))
+   1. (sustentada) Segundo a Secretaria de Esporte e Lazer do DF, a entrada no Parque da Cidade Dona Sarah Kubitschek é gratuita. ['T1']
+   2. (sustentada) O parque possui banheiros acessíveis. ['T1']
+   3. (sustentada) Sim. O trajeto até os banheiros também é acessível para quem usa cadeira de rodas. ['T1']
+[Validação, rodada 1] aprovado=False revisão=regras
+   - item 3 (sustentacao): "O trajeto até os banheiros também é acessível para quem usa cadeira de rodas"
+[Validação → Análise] trechos para corrigir:
+   - Item 3 ("O caminho até eles também é acessível?"): o trecho "O trajeto até os banheiros também é acessível para quem usa cadeira de rodas" precisa de correção (sustentacao). Os trechos citados (T1) não mencionam: cadeira, rodas, trajeto. Remova a afirmação ou marque a dúvida como lacuna, dizendo o que a fonte não informa; use as palavras da fonte.
+[Análise → Validação]
+   1. (sustentada) Segundo a Secretaria de Esporte e Lazer do DF, a entrada no Parque da Cidade Dona Sarah Kubitschek é gratuita. ['T1']
+   2. (sustentada) O parque possui banheiros acessíveis. ['T1']
+   3. (lacuna) A fonte não informa se o trajeto até os banheiros é acessível para quem usa cadeira de rodas. Não há menção a cadeira de rodas, trajeto ou acessibilidade em relação ao percurso. ['T1']
+[Validação, rodada 2] aprovado=True revisão=regras
+[Validação → Comunicação] itens aprovados
+
+Resposta (Comunicação):
+Segundo a Secretaria de Esporte e Lazer do DF, a entrada no Parque da Cidade Dona Sarah Kubitschek é gratuita. O parque possui banheiros acessíveis. A fonte não informa se o trajeto até os banheiros é acessível para quem usa cadeira de rodas. Não há menção a cadeira de rodas, trajeto ou acessibilidade em relação ao percurso.
+Fonte F029 · SEL-DF · https://www.esporte.df.gov.br/parque-da-cidade · documento da equipe: prototipo/dados/fontes/texto/F029_parque-da-cidade-dona-sarah-kubitschek-sel.txt
