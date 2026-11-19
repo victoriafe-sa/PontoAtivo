@@ -1,0 +1,56 @@
+────────────────────────────────────────────────────────────────────────
+1. PERGUNTA RECEBIDA
+   Quais são as faltas graves nos Centros Olímpicos?
+
+2. TRECHOS RECUPERADOS (4; distância cosseno — menor = mais próximo; recuperação em 3.99 s)
+   [F1] DOC-003 | p. 4 | distância 0.144
+        Manual de Uso dos Centros Olimpicos e Paralimpicos
+        seção: 7. Do descumprimento do Termo de Compromisso e das penalidades > 7.3 Falta Grave
+        chunk a0b771e890ff10c26c011d21
+        7.3 Falta Grave 7. 3.1 Agredir fisicamente funcionários do Centro Olímpico e
+        Paralímpico dentro ou fora da instituição bem comoqualquer usuário; 7. 3.2
+        Pichar as dependências bem como qualquer objetivo pertencente ao Centro Olímpico
+        e Paralímpico; 7. 3.3 Roubar pertences de usuário, professores ou demais
+        colaboradores,…
+   [F2] DOC-001 | p. 57 | distância 0.152
+        Carta de Servicos da Secretaria de Esporte e Lazer do DF (2024)
+        seção: PROGRAMA CENTROS OLÍMPICOS E PARALÍMPICOS
+        chunk 339987d8105855b6bebcd9dc
+        PROGRAMA CENTROS OLÍMPICOS E PARALÍMPICOS Descrição O Programa Centros Olímpicos
+        e Paralímpicos é desenvolvido pela Secretaria de Esporte e Lazer, por intermédio
+        da Subsecretaria dos Centros Olímpicos e Paralímpicos. Regulamentado pela
+        Portaria nº 99, de 02 de junho de 2022, atualmente o Programa conta com 12
+        (doze) Ce…
+   [F3] DOC-012 | distância 0.163
+        Centros Olimpicos e Paralimpicos de portas abertas a comunidade
+        seção: Centros olímpicos e paralímpicos de portas abertas à comunidade
+        chunk e56cc72ac70ba4280cfe29c1
+        # Centros olímpicos e paralímpicos de portas abertas à comunidade Todos os 12
+        COPs passam a operar com a reabertura, nesta terça (30), das unidades de
+        Sobradinho, Parque da Vaquejada e Setor O Por Agência Brasília* I Edição: Débora
+        Cronemberger [Olho texto=”Os interessados podem se inscrever no site da
+        Secretaria de Es…
+   [F4] DOC-001 | p. 61–62 | distância 0.172
+        Carta de Servicos da Secretaria de Esporte e Lazer do DF (2024)
+        seção: PROGRAMA CENTROS OLÍMPICOS E PARALÍMPICOS
+        chunk 28c673c6f6d59d5ea7e0bf07
+        61 Custos Não há custos. Os serviços oferecidos são totalmente gratuitos.
+        Unidades em funcionamento O Programa conta com 12 (doze) Centros Olímpicos e
+        Paralímpicos em funcionamento nas seguintes Regiões Administrativas do Distrito
+        Federal: Brazlândia Endereço: Bairro Vila São José, Quadra 35. Área Especial 22
+        Telefone:…
+
+3. RESPOSTA GERADA (modelo gemma4:12b, 77.7 s)
+   As faltas graves nos Centros Olímpicos e Paralímpicos incluem: agredir fisicamente
+   funcionários ou qualquer usuário (dentro ou fora da instituição); pichar as
+   dependências ou objetos do Centro; roubar pertences de usuários, professores,
+   colaboradores ou material da instituição; assediar sexualmente professor, aluno,
+   usuário ou colaborador; ter mais de 30% de faltas não justificadas por mês; não
+   comparecer consecutivamente a três aulas sem justificativa; e ser reincidente em
+   falta média. [F1]
+
+4. REFERÊNCIAS UTILIZADAS
+   [F1] DOC-003 — Manual de Uso dos Centros Olimpicos e Paralimpicos, p. 4, seção 7. Do descumprimento do Termo de Compromisso e das penalidades > 7.3 Falta Grave — https://www.esporte.df.gov.br/documents/d/esporte/manual-de-uso-do-cop
+
+5. ALERTAS
+────────────────────────────────────────────────────────────────────────

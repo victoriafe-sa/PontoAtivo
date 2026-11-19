@@ -60,6 +60,8 @@ def verificar_pergunta(pergunta: str) -> None:
 def analisar_duvidas(
     pergunta: str, resultados: Sequence[Trecho | TrechoLegado],
     *, cliente: LLMClient | None = None, ao_tentar: Callable[[], None] | None = None,
+    feedback: list[str] | None = None, rascunho_anterior: list[ItemAnalise] | None = None,
+    registrar: Callable[[dict], None] | None = None,
 ) -> list[ItemAnalise]:
     """Analisa evidências da Pesquisa ou do buscador legado do protótipo."""
     verificar_pergunta(pergunta)
@@ -103,69 +105,80 @@ def analisar_duvidas(
         else:
             documento["fonte"] = trecho["metadados"]
         documentos.append(documento)
-    dados = json.dumps({"pergunta": pergunta, "documentos": documentos}, ensure_ascii=False)
-    if ao_tentar is not None:
-        ao_tentar()
-    bruto = cliente.complete(INSTRUCAO, dados, schema=esquema)
-    try:
-        return validar_analise(bruto, resultados)
-    except AnaliseInvalida:
-        revisao = (
-            "\nA resposta anterior falhou na conferência de formato ou citações. "
-            "Gere novamente. Copie passagens literalmente do campo texto. "
-            "Se nenhum documento tratar da solicitação, use lacuna com "
-            "trechos e evidencias vazios. Retorne todos os campos do esquema."
-        )
+    entrada = {"pergunta": pergunta, "documentos": documentos}
+    if feedback:
+        entrada.update(feedback_validacao=feedback, rascunho_anterior=rascunho_anterior)
+    instrucao = INSTRUCAO + "\nUse o feedback de validação para corrigir o rascunho, quando fornecido."
+    for tentativa in range(2):
         if ao_tentar is not None:
             ao_tentar()
-        bruto = cliente.complete(INSTRUCAO + revisao, dados, schema=esquema)
-        return validar_analise(bruto, resultados)
+        bruto = cliente.complete(instrucao, json.dumps(entrada, ensure_ascii=False), schema=esquema)
+        try:
+            itens = validar_analise(bruto, resultados)
+        except AnaliseInvalida as erro:
+            if registrar:
+                registrar({"etapa": "validacao_formato", "aprovado": False,
+                           "erro": str(erro), "saida_bruta": bruto})
+            if tentativa == 1:
+                raise
+            entrada.update(erro_formato=str(erro), saida_anterior=bruto)
+        else:
+            if registrar:
+                registrar({"etapa": "analise_para_validacao", "itens": itens,
+                           "feedback_recebido": feedback or []})
+            return itens
+    raise AssertionError("Laço de análise esgotado")
 
 
 def validar_analise(
     bruto: str, resultados: Sequence[Trecho | TrechoLegado]
 ) -> list[ItemAnalise]:
     """Confere o formato e a existência literal das evidências."""
-    ids = {r["id"] for r in resultados}
+    def exigir(condicao, detalhe):
+        if not condicao:
+            raise AnaliseInvalida("Análise incompleta ou com referência inválida: " + detalhe)
+
     try:
         itens = json.loads(bruto)
-        if not isinstance(itens, list) or not itens:
-            raise ValueError
-        for item in itens:
-            if not isinstance(item, dict) or set(item) != {
-                "duvida", "estado", "conclusao", "trechos", "evidencias"
-            }:
-                raise ValueError
-            if not all(isinstance(item[k], str) and item[k].strip() for k in ("duvida", "conclusao")):
-                raise ValueError
-            refs = item["trechos"]
-            if (not isinstance(refs, list) or any(not isinstance(ref, str) for ref in refs)
-                    or len(refs) != len(set(refs))):
-                raise ValueError
-            if (item["estado"] not in ESTADOS or not isinstance(refs, list)
-                    or not ids.issuperset(refs) or (item["estado"] in ("sustentada", "divergencia") and not refs)):
-                raise ValueError
-            evidencias = item["evidencias"]
-            if not isinstance(evidencias, list):
-                raise ValueError
-            textos = {r["id"]: " ".join(r["texto"].split()) for r in resultados}
-            citados = set()
-            for evidencia in evidencias:
-                if not isinstance(evidencia, dict) or set(evidencia) != {"id", "passagem"}:
-                    raise ValueError
-                fonte = evidencia["id"]
-                passagem = evidencia["passagem"]
-                if (fonte not in refs or not isinstance(passagem, str)
-                        or not passagem.strip()
-                        or " ".join(passagem.split()) not in textos[fonte]):
-                    raise ValueError
-                citados.add(fonte)
-            if citados != set(refs):
-                raise ValueError
-            if item["estado"] == "precisa_esclarecimento" and refs:
-                raise ValueError
-    except (KeyError, TypeError, ValueError) as erro:
-        raise AnaliseInvalida("O modelo retornou uma análise incompleta ou com referência inválida.") from erro
+    except (ValueError, TypeError) as erro:
+        raise AnaliseInvalida("JSON inválido: retorne somente a lista de itens.") from erro
+    exigir(isinstance(itens, list) and bool(itens), "a lista de itens está vazia ou inválida.")
+    por_id = {r["id"]: r for r in resultados}
+    for numero, item in enumerate(itens, 1):
+        prefixo = f"item {numero}: "
+        exigir(isinstance(item, dict) and set(item) == {
+            "duvida", "estado", "conclusao", "trechos", "evidencias"
+        }, prefixo + "campos obrigatórios ausentes ou campos extras.")
+        exigir(all(isinstance(item[k], str) and item[k].strip() for k in ("duvida", "conclusao")),
+               prefixo + "dúvida e conclusão devem ser textos não vazios.")
+        exigir(item["estado"] in ESTADOS, prefixo + "estado desconhecido.")
+        refs = item["trechos"]
+        exigir(isinstance(refs, list) and all(isinstance(r, str) for r in refs),
+               prefixo + "trechos deve ser uma lista de IDs.")
+        exigir(len(refs) == len(set(refs)), prefixo + "IDs duplicados.")
+        exigir(set(refs) <= set(por_id), prefixo + "ID inexistente; use apenas " + ", ".join(por_id))
+        exigir(item["estado"] not in ("sustentada", "divergencia") or bool(refs),
+               prefixo + "conclusão factual sem fonte.")
+        if item["estado"] == "divergencia":
+            # Dois documentos, não dois chunks da mesma fonte.
+            fontes = {por_id[r].get("fonte", por_id[r].get("metadados", {})).get("id") for r in refs}
+            exigir(len(fontes - {None, ""}) >= 2,
+                   prefixo + "divergência exige duas fontes distintas identificadas.")
+        exigir(item["estado"] != "precisa_esclarecimento" or not refs,
+               prefixo + "esclarecimento não deve atribuir um local das fontes.")
+        evidencias = item["evidencias"]
+        exigir(isinstance(evidencias, list), prefixo + "evidências deve ser uma lista.")
+        citados = set()
+        for evidencia in evidencias:
+            exigir(isinstance(evidencia, dict) and set(evidencia) == {"id", "passagem"},
+                   prefixo + "evidência deve conter id e passagem.")
+            ref, passagem = evidencia["id"], evidencia["passagem"]
+            exigir(isinstance(ref, str) and ref in refs, prefixo + "evidência sem ID citado válido.")
+            exigir(isinstance(passagem, str) and bool(passagem.strip()), prefixo + "passagem vazia.")
+            exigir(" ".join(passagem.split()) in " ".join(por_id[ref]["texto"].split()),
+                   prefixo + f"passagem de {ref} não é literal; copie o texto da fonte.")
+            citados.add(ref)
+        exigir(citados == set(refs), prefixo + "cada ID citado precisa de uma passagem literal.")
     return itens
 
 
