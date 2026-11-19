@@ -25,7 +25,7 @@ tempo real.
 | [`dados/rag/`](dados/rag/) | Fontes do assistente, [catálogo](dados/rag/catalogo.csv) e perguntas de avaliação |
 | [`dados/mapa/seduh/`](dados/mapa/seduh/) | Cadastro geográfico da SEDUH usado no mapa |
 | [`tests/`](tests/) | Testes automáticos do sistema principal e dos scripts de experimentos |
-| [`docs/agentes/`](docs/agentes/) | Documentação de cada agente (interpretação, pesquisa e análise) e dos contratos entre eles |
+| [`docs/agentes/`](docs/agentes/) | Documentação de cada agente (interpretação, pesquisa, análise e validação) e dos contratos entre eles |
 | [`docs/rag/`](docs/rag/) | Documentação do assistente: [como rodar](docs/rag/como-rodar.md), pipeline, chunking, embeddings e fontes |
 | [`docs/entregas/`](docs/entregas/) | Entregas das semanas 1 e 2 e [sistema multiagentes — 20/11](docs/entregas/semana-04/README.md) (arquitetura, auditoria e demonstração) |
 | [`docs/index.html`](docs/index.html) | Site de resultados dos experimentos (GitHub Pages) |

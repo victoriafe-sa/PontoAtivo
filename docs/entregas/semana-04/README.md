@@ -4,18 +4,18 @@ Entrega: 20/11/2026 · Verificação: 19/11/2026 · Canal: `4_Second Challenge`,
 
 ## Objetivo e atendimento ao enunciado
 
-O PontoAtivo responde perguntas sobre espaços e práticas esportivas do Distrito Federal usando documentos da base curada. Seu fluxo documental implementa três papéis especializados em sequência, com coordenação central e contratos de dados explícitos.
+O PontoAtivo responde perguntas sobre espaços e práticas esportivas do Distrito Federal usando documentos da base curada. Seu fluxo documental implementa quatro papéis especializados em sequência, com coordenação central e contratos de dados explícitos.
 
 | Requisito | Situação observada |
 |---|---|
-| Pelo menos dois agentes especializados | Implementado: Interpretação, Pesquisa e Análise |
+| Pelo menos dois agentes especializados | Implementado: Interpretação, Pesquisa, Análise e Validação |
 | Responsabilidades claras | Separadas por módulos e descritas abaixo |
-| Colaboração | Implementada: a saída da Interpretação alimenta a Pesquisa; as evidências da Pesquisa alimentam a Análise |
+| Colaboração | Implementada: a saída da Interpretação alimenta a Pesquisa; as evidências da Pesquisa alimentam a Análise; a Validação revisa e pede correções ou uma busca complementar |
 | Diagrama e fluxo | Documentados nesta entrega |
 | Demonstração completa | Roteiro e script com registro das interações em `demonstracao.md` |
 | Qualidade das interações | Há contratos, checagem de citações, uma repetição corretiva e tratamento de falhas; a qualidade semântica exige revisão humana |
 
-São agentes em uma arquitetura de workflow: Interpretação usa regras, Pesquisa usa recuperação documental e Análise usa um LLM. Não são três LLMs independentes, nem uma equipe autônoma que negocia tarefas. O enunciado fornecido não exige essa autonomia; se essa for uma exigência adicional da disciplina, será necessário ampliar a implementação.
+São agentes em uma arquitetura de workflow: Interpretação usa regras, Pesquisa usa recuperação documental, Análise usa um LLM e Validação usa regras com revisão opcional por LLM. A fábrica do fluxo ativa o revisor com o mesmo modelo da Análise. A coordenação é central, com correções e uma busca complementar limitadas.
 
 ## Arquitetura
 
@@ -32,17 +32,18 @@ flowchart TD
     B[(Índice Chroma + embeddings E5)] --> P
     P -->|Sem trechos aceitos| AB[Abstenção sem chamar o LLM]
     P -->|Trechos T1...Tn, fontes e metadados| A[Agente de Análise: Ollama]
-    A -->|Itens, conclusões e passagens literais| V[Função validar_analise]
-    V -->|Inválida: uma nova tentativa| A
-    V -->|Válida| F[Coordenador: formata resposta e referências F1...Fn]
-    V -->|Segunda tentativa inválida| D[Mostra trechos sem resposta gerada]
-    A -->|Modelo indisponível ou orçamento esgotado| D
+    A -->|Contrato e passagens conferidos por validar_analise| V[Agente de Validação: regras e LLM]
+    V -->|Reprovada: feedback e rascunho anterior; 1 correção padrão| A
+    V -->|Até 1 busca complementar, se ainda houver correção| P
+    V -->|Aprovada| F[Coordenador: formata resposta e referências F1...Fn]
+    V -->|Reprovação persistente ou parecer inválido| D[Mostra trechos sem resposta gerada]
+    A -->|Formato inválido após repetição, modelo indisponível ou prazo esgotado| D
     F --> R[Resposta ao usuário]
     AB --> R
     D --> R
 ```
 
-O ciclo corretivo tem no máximo duas chamadas ao modelo, sujeito ao orçamento de execução. A validação é uma função dentro do módulo de Análise; a formatação final pertence ao coordenador. Não há agentes independentes de Validação ou Comunicação no fluxo auditado.
+A Análise tem até duas tentativas por rascunho para conferir formato e passagens. O agente de Validação tem até duas tentativas por parecer. Por padrão, o coordenador permite uma correção do rascunho (`max_correcoes=1`) e no máximo uma busca complementar. Assim, com revisão por modelo, são até oito chamadas ao LLM, todas sob o orçamento compartilhado. Cada chamada, inclusive a repetição do parecer, entra em `generation_attempts`. A formatação final pertence ao coordenador; não há um agente independente de Comunicação.
 
 ## Responsabilidades e contratos
 
@@ -51,10 +52,11 @@ O ciclo corretivo tem no máximo duas chamadas ao modelo, sujeito ao orçamento 
 | Interpretação (`AgenteInterpretacao`) | Pergunta original | Normalizar caixa/acentos para classificar esportes, cadastro ou inclusão; preservar a pergunta e suas condições | `AcaoPesquisa` com `consulta`, `pergunta_original`, `tipo` |
 | Pesquisa (`AgentePesquisa`) | Ação e filtros opcionais | Buscar no índice, selecionar evidências pela regra de relevância e manter a origem dos trechos | `ResultadoPesquisa`: status, trechos com IDs `Tn`, fontes, entidade, distância, descartes e tempo |
 | Análise (`analisar_duvidas`) | Pergunta original e trechos aceitos | Produzir conclusões fundamentadas, distinguir lacuna, divergência e necessidade de esclarecimento | Lista de `ItemAnalise`: `duvida`, `estado`, `conclusao`, `trechos`, `evidencias` |
-| Validação (`validar_analise`) | JSON do LLM e trechos originais | Conferir campos, estados, IDs, duplicatas e presença literal das passagens | Itens aprovados ou `AnaliseInvalida` |
+| Checagem da Análise (`validar_analise`) | JSON do LLM e trechos originais | Conferir campos, estados, IDs, fontes distintas em divergências e passagens literais | Itens válidos ou `AnaliseInvalida` |
+| Validação (`AgenteValidacao`) | Pergunta, rascunho e trechos consolidados | Conferir apoio lexical e, com modelo, sentido, condições, completude, datas e lacunas | `Parecer` com aprovação, problemas e consulta complementar opcional |
 | Coordenação (`FluxoDocumental`) | Pergunta e recursos | Encadear etapas, limitar tentativas, tratar indisponibilidade e mapear `Tn` para referências públicas `Fn` | `GroundedAnswer` e tempo de recuperação |
 
-Arquivos de implementação: [interpretação](../../../src/pontoativo_rag/agentes/interpretacao.py), [pesquisa](../../../src/pontoativo_rag/agentes/pesquisa.py), [análise e validação](../../../src/pontoativo_rag/agentes/analise.py), [coordenador](../../../src/pontoativo_rag/agentes/coordenador.py) e [contratos](../../../src/pontoativo_rag/agentes/contratos.py).
+Arquivos de implementação: [interpretação](../../../src/pontoativo_rag/agentes/interpretacao.py), [pesquisa](../../../src/pontoativo_rag/agentes/pesquisa.py), [análise](../../../src/pontoativo_rag/agentes/analise.py), [validação](../../../src/pontoativo_rag/agentes/validacao.py), [coordenador](../../../src/pontoativo_rag/agentes/coordenador.py) e [contratos](../../../src/pontoativo_rag/agentes/contratos.py).
 
 O campo `tipo` é repassado pela Pesquisa, mas não muda a estratégia de busca. A classificação é uma contribuição básica de interpretação; não existe planejamento dinâmico. O filtro de região é aplicado quando fornecido à Pesquisa, mas a Interpretação não extrai automaticamente uma região da pergunta.
 
@@ -65,16 +67,17 @@ O campo `tipo` é repassado pela Pesquisa, mas não muda a estratégia de busca.
 3. A Pesquisa consulta a base e entrega evidências com origem, IDs e metadados. Ela não redige a resposta.
 4. Sem evidência aceita, o coordenador encerra com abstenção. Com evidência, envia a pergunta e os documentos à Análise.
 5. A Análise recebe instruções para preservar condições e datas, não transferir atributos entre locais e declarar lacunas. Produz JSON com passagens que sustentam suas conclusões.
-6. A validação confere o formato e as passagens. Em caso de falha, a Análise recebe uma instrução corretiva genérica e tenta novamente com os mesmos documentos.
-7. O coordenador apresenta as conclusões e referências ou, em caso de falha persistente, disponibiliza os trechos sem uma resposta redigida.
+6. A Análise confere formato e passagens. O agente de Validação revisa o rascunho e devolve problemas com trechos literais a corrigir. Havendo orçamento de correção, pode pedir uma busca complementar; o coordenador deduplica os chunks e mantém IDs únicos.
+7. A Análise recebe o diagnóstico, o rascunho anterior e os trechos consolidados. A nova versão passa novamente pela Validação.
+8. O coordenador apresenta as conclusões e referências ou, em caso de falha persistente, disponibiliza os trechos sem uma resposta redigida.
 
-A colaboração ocorre por chamadas Python e estruturas compartilhadas em memória. Não há fila de mensagens, execução paralela ou consulta adicional da Análise à Pesquisa. A interface web também possui um roteador para outras funções; o diagrama cobre especificamente o caminho documental.
+A colaboração ocorre por chamadas Python e estruturas compartilhadas em memória. A busca complementar é solicitada pela Validação e executada pelo coordenador. Não há fila de mensagens ou execução paralela. A interface web também possui um roteador para outras funções; o diagrama cobre especificamente o caminho documental.
 
 ## Avaliação da qualidade das interações
 
-**Implementado:** preservação da pergunta, transferência de fontes e entidades, referências rastreáveis, saídas estruturadas, distinção entre ausência de evidência e conclusão sustentada, rejeição de passagens inventadas, correção limitada e fallback quando o modelo falha. O script de demonstração torna visíveis as entradas e saídas dessas etapas sem substituir o modelo ou a busca.
+**Implementado:** preservação da pergunta, fontes rastreáveis, contratos, checagem de passagens literais, regras de apoio lexical, revisão por modelo, feedback específico com o rascunho anterior e busca complementar limitada. Só rascunhos aprovados são publicados quando a Validação está ativada.
 
-**Limites:** uma passagem literal pode ser verdadeira e ainda assim não sustentar a conclusão produzida. A validação atual não verifica implicação semântica, não garante que todas as condições da pergunta foram respondidas e não exige duas fontes diferentes para uma divergência. As instruções ao LLM cobrem parte desses riscos, mas não constituem garantia automática. A correção não recebe um diagnóstico detalhado de cada erro nem o rascunho anterior. Não existe replanejamento ou nova recuperação após uma lacuna.
+**Limites:** a regra lexical pode rejeitar sinônimos corretos e aceitar frases falsas com as mesmas palavras da fonte. O revisor semântico também erra; aprovação não garante verdade nem completude. A [demonstração da Validação](../../agentes/validacao.md) injeta o primeiro rascunho e usa busca lexical no corpus do protótipo; a correção usa um modelo real. As rodadas com modelos de 8B tiveram reprovações indevidas de lacunas honestas. A revisão com `gemma4:12b` ainda precisa ser avaliada. As evidências desta pasta registram o fluxo anterior à integração do novo agente e não comprovam seu comportamento atual.
 
 Os testes em `tests/pontoativo_rag/agentes/` verificam contratos, integração, rejeição de citações, abstenção, falhas do modelo, orçamento e preservação de fontes. Usam busca/LLM simulados: comprovam comportamento do código, não a qualidade geral do modelo real. Resultados históricos de avaliação do gerador anterior não devem ser apresentados como métricas deste coordenador.
 
@@ -86,6 +89,7 @@ Os testes em `tests/pontoativo_rag/agentes/` verificam contratos, integração, 
 - [Diagrama da arquitetura](arquitetura-agentes.png) (PNG para slides; [SVG editável](arquitetura-agentes.svg)).
 - [Roteiro de demonstração](demonstracao.md).
 - Pasta `evidencias/`: execução real e resultados dos testes, quando presentes.
-- [Script reproduzível](../../../scripts/demonstrar_multiagentes.py).
+- [Script do fluxo documental](../../../scripts/demonstrar_multiagentes.py).
+- [Demonstração da Validação](../../../scripts/demonstrar_validacao.py), [documentação e limites](../../agentes/validacao.md) e [registros](../../../experimentos/agentes/).
 
 Enviar esta pasta e o script junto ao código do projeto para a pasta da equipe no Teams. O envio ao Teams não faz parte da verificação local realizada aqui.

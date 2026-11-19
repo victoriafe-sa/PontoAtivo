@@ -135,17 +135,17 @@ class FluxoDocumental:
         revisor = (_ClienteComPrazo(self.validacao.cliente, cliente.prazo)
                    if self.validacao.cliente is not None else None)
         for rodada in range(self.max_correcoes + 1):
-            if revisor is not None:
-                ao_tentar()
             try:
                 parecer = self.validacao.revisar(
                     pergunta, itens, trechos, pode_pesquisar=not pesquisou_de_novo, cliente=revisor,
+                    ao_tentar=ao_tentar,
                 )
             except ParecerInvalido as erro:
                 self._registrar({"etapa": "validacao", "rodada": rodada + 1, "erro": str(erro),
                                  "saida_bruta": erro.bruto})
                 raise
-            self._registrar({"etapa": "validacao", "rodada": rodada + 1, "parecer": parecer})
+            self._registrar({"etapa": "validacao", "rodada": rodada + 1, "parecer": parecer,
+                             "trechos": list(trechos)})
             if parecer["aprovado"]:
                 return itens
             if rodada == self.max_correcoes:

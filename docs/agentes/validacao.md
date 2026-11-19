@@ -72,7 +72,8 @@ modelo da Análise. Para desligar, use `validar=False`. Em `FluxoDocumental`:
 
 - `validacao=AgenteValidacao(cliente)` usa regras e modelo; `AgenteValidacao()` usa só regras;
 - `max_correcoes` (padrão 1) limita as voltas Validação → Análise;
-- `registrar=lista.append` guarda todas as mensagens entre os agentes.
+- `registrar=lista.append` guarda as mensagens entre os agentes; cada parecer inclui os trechos consolidados com os IDs usados na revisão, inclusive após busca complementar.
+- `generation_attempts` conta cada chamada à Análise e ao revisor, incluindo as repetições de formato ou parecer inválido.
 
 A Validação divide o orçamento de tempo da consulta com a Análise. Se o rascunho
 continuar reprovado depois das correções, ou se o revisor falhar, a resposta cai

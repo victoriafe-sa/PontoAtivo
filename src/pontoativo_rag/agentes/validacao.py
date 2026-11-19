@@ -32,7 +32,7 @@ devolve esses trechos à Análise (``feedback_para_analise``).
 import json
 import re
 import unicodedata
-from collections.abc import Sequence
+from collections.abc import Callable, Sequence
 from typing import Literal, TypedDict
 
 from ..geracao import LLMClient
@@ -256,6 +256,7 @@ class AgenteValidacao:
     def revisar(
         self, pergunta: str, itens: list[ItemAnalise], trechos: Sequence[Trecho | TrechoLegado],
         *, pode_pesquisar: bool = False, cliente: LLMClient | None = None,
+        ao_tentar: Callable[[], None] | None = None,
     ) -> Parecer:
         # Mantém a barreira determinística mesmo quando invocado fora do coordenador.
         validar_analise(json.dumps(itens, ensure_ascii=False), trechos)
@@ -270,6 +271,8 @@ class AgenteValidacao:
                      "documentos": list(trechos), "alertas_automaticos": alertas,
                      "pesquisa_complementar_disponivel": pode_pesquisar}
             for tentativa in range(2):
+                if ao_tentar is not None:
+                    ao_tentar()
                 bruto = cliente.complete(INSTRUCAO, json.dumps(dados, ensure_ascii=False), schema=ESQUEMA)
                 try:
                     revisado = ler_parecer(bruto, itens)

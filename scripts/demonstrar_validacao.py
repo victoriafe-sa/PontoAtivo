@@ -128,12 +128,15 @@ def main():
     )
     resposta, segundos = fluxo.responder(PERGUNTA)
 
-    primeira = next(e for e in eventos if e["etapa"] == "analise_para_validacao")
-    primeira["origem"] = "rascunho preparado à mão com etapa inventada (injetado na 1ª chamada)"
-    ultima = [e for e in eventos if e["etapa"] == "validacao"][-1]
+    analises = [e for e in eventos if e["etapa"] == "analise_para_validacao"]
+    if analises:
+        analises[0]["origem"] = "rascunho preparado à mão com etapa inventada (injetado na 1ª chamada)"
+    validacoes = [e for e in eventos if e["etapa"] == "validacao"]
+    ultima = validacoes[-1] if validacoes else {}
     aprovado = ultima.get("parecer", {}).get("aprovado", False)
-    final_itens = [e for e in eventos if e["etapa"] == "analise_para_validacao"][-1]["itens"]
-    trechos = [t for e in eventos if e["etapa"] == "pesquisa_para_analise" for t in e["resultado"]["trechos"]]
+    final_itens = analises[-1]["itens"] if analises else []
+    # IDs consolidados pelo coordenador, incluindo a busca complementar.
+    trechos = ultima.get("trechos", [])
     if aprovado and resposta.mode == "rag":
         comunicacao = comunicar(final_itens, trechos)
         eventos.append({"etapa": "validacao_para_comunicacao", "itens_aprovados": final_itens})
@@ -158,7 +161,7 @@ def main():
     args.saida.with_suffix(".txt").write_text(_resumo(eventos, comunicacao) + "\n", encoding="utf-8")
     print(_resumo(eventos, comunicacao))
     print(f"\nRegistro da troca entre os agentes: {args.saida}")
-    return 0 if aprovado else 1
+    return 0 if aprovado and resposta.mode == "rag" else 1
 
 
 def _resumo(eventos, comunicacao):

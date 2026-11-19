@@ -236,7 +236,8 @@ def test_parecer_invalido_nao_autoriza_publicar():
     assert "validação não conseguiu revisar" in resposta.answer
 
 
-def test_validacao_pede_consulta_complementar_a_pesquisa():
+@pytest.mark.parametrize("repetir_chunk", [True, False])
+def test_validacao_pede_consulta_complementar_a_pesquisa(repetir_chunk, monkeypatch, tmp_path):
     rotas = RetrievedChunk("rotas", "F030", "Rotas", "SEL-DF", "", "Rotas acessíveis até os banheiros.",
                            0.05, 1)
     lacuna = copy.deepcopy(CORRETO["itens"])
@@ -253,7 +254,7 @@ def test_validacao_pede_consulta_complementar_a_pesquisa():
     cliente = Mock(model="teste")
     cliente.complete.side_effect = [json.dumps(lacuna), pede_busca, json.dumps(final), _aprovacao()]
     fluxo, eventos, busca = _fluxo(
-        cliente, validacao=AgenteValidacao(cliente), buscas=[[_chunk_f029()], [_chunk_f029(), rotas]],
+        cliente, validacao=AgenteValidacao(cliente), buscas=[[_chunk_f029()], [_chunk_f029(), rotas] if repetir_chunk else [rotas]],
     )
 
     resposta, _ = fluxo.responder(PERGUNTA)
@@ -266,3 +267,51 @@ def test_validacao_pede_consulta_complementar_a_pesquisa():
     # Depois da busca complementar, o revisor não pode pedir outra.
     assert json.loads(cliente.complete.call_args_list[3].args[1])[
         "pesquisa_complementar_disponivel"] is False
+
+    # A demonstração precisa usar os mesmos IDs que a última revisão recebeu.
+    import runpy
+    demo = runpy.run_path(str(EXEMPLOS.parents[2] / "scripts" / "demonstrar_validacao.py"))
+    revisoes = [e for e in eventos if e["etapa"] == "validacao"]
+    assert [t["id"] for t in revisoes[0]["trechos"]] == ["T1"]
+    assert [(t["id"], t["fonte"]["id"]) for t in revisoes[-1]["trechos"]] == [
+        ("T1", "F029"), ("T2", "F030"),
+    ]
+    texto = demo["comunicar"](final, revisoes[-1]["trechos"])
+    assert "Fonte F029" in texto and "Fonte F030" in texto
+    # Executa o caminho de gravação do script com a consulta já exercitada acima.
+    def criar_fluxo_demo(*args, **kwargs):
+        for evento in eventos:
+            kwargs["registrar"](evento)
+        return Mock(responder=Mock(return_value=(resposta, 0.01)))
+    monkeypatch.setitem(demo["main"].__globals__, "FluxoDocumental", criar_fluxo_demo)
+    saida = tmp_path / "demo.json"
+    monkeypatch.setattr("sys.argv", ["demonstrar_validacao.py", "--saida", str(saida)])
+    assert demo["main"]() == 0
+    registro = json.loads(saida.read_text())
+    assert registro["resposta_comunicacao"] == texto
+
+
+@pytest.mark.parametrize("ultima_saida,modo", [
+    (_aprovacao(), "rag"), ("não é JSON", "recuperacao_sem_geracao"),
+])
+def test_conta_cada_chamada_do_revisor(ultima_saida, modo):
+    cliente = Mock(model="teste")
+    cliente.complete.side_effect = [json.dumps(CORRETO["itens"]), "não é JSON", ultima_saida]
+    fluxo, _, _ = _fluxo(cliente, validacao=AgenteValidacao(cliente))
+    resposta, _ = fluxo.responder(PERGUNTA)
+    assert resposta.mode == modo
+    assert resposta.generation_attempts == cliente.complete.call_count == 3
+
+
+def test_demo_salva_abstencao_sem_eventos_de_validacao(monkeypatch, tmp_path):
+    import runpy
+    from pontoativo_rag.geracao import GroundedAnswer
+
+    demo = runpy.run_path(str(EXEMPLOS.parents[2] / "scripts" / "demonstrar_validacao.py"))
+    resposta = GroundedAnswer(PERGUNTA, "abstencao", "Sem evidências.", [])
+    monkeypatch.setitem(demo["main"].__globals__, "FluxoDocumental",
+                        Mock(return_value=Mock(responder=Mock(return_value=(resposta, 0.01)))))
+    saida = tmp_path / "sem-evidencias.json"
+    monkeypatch.setattr("sys.argv", ["demonstrar_validacao.py", "--saida", str(saida)])
+    assert demo["main"]() == 1
+    assert json.loads(saida.read_text())["resposta_comunicacao"] == "Sem evidências."
