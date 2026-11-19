@@ -4,11 +4,14 @@ import json
 from pathlib import Path
 import sys
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
+if not __package__:
+    raiz = Path(__file__).resolve().parents[2]
+    sys.path.insert(0, str(raiz))
+    sys.path.insert(0, str(raiz / "src"))
 
 from pontoativo_rag.agentes.analise import analisar_duvidas, formatar_rascunho, verificar_pergunta
-from geracao.responder import sintetizar
-from recuperacao.buscar import buscar, formatar_evidencia
+from prototipo.src.geracao.responder import sintetizar
+from prototipo.src.recuperacao.buscar import buscar, formatar_evidencia
 
 
 def consultar(pergunta, k=5, caminho_banco=None, *, rascunho=False):

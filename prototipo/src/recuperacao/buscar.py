@@ -13,9 +13,10 @@ import argparse
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+if not __package__:
+    sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 
-from ingestao.banco import obter_cliente, obter_colecao  # noqa: E402
+from prototipo.src.ingestao.banco import obter_cliente, obter_colecao
 
 
 def buscar(pergunta, k=5, filtro=None, caminho_banco=None, embedding_consulta=None):
@@ -26,7 +27,7 @@ def buscar(pergunta, k=5, filtro=None, caminho_banco=None, embedding_consulta=No
     do Chroma, por exemplo {"id_fonte": "N03"}.
     """
     if embedding_consulta is None:
-        from ingestao.embeddings import embedding_da_consulta as embedding_consulta
+        from prototipo.src.ingestao.embeddings import embedding_da_consulta as embedding_consulta
 
     colecao = obter_colecao(obter_cliente(caminho_banco))
     resposta = colecao.query(
