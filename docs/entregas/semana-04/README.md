@@ -19,6 +19,10 @@ São agentes em uma arquitetura de workflow: Interpretação usa regras, Pesquis
 
 ## Arquitetura
 
+![Arquitetura do sistema multiagentes do PontoAtivo](arquitetura-agentes.png)
+
+Versão editável: [arquitetura-agentes.svg](arquitetura-agentes.svg). O mesmo fluxo em texto (Mermaid):
+
 ```mermaid
 flowchart TD
     U[Usuário: terminal ou fluxo documental web] --> C[Coordenador FluxoDocumental]
@@ -79,6 +83,7 @@ Os testes em `tests/pontoativo_rag/agentes/` verificam contratos, integração, 
 ## Artefatos para a entrega
 
 - Este documento: arquitetura, responsabilidades, fluxo e limites.
+- [Diagrama da arquitetura](arquitetura-agentes.png) (PNG para slides; [SVG editável](arquitetura-agentes.svg)).
 - [Roteiro de demonstração](demonstracao.md).
 - Pasta `evidencias/`: execução real e resultados dos testes, quando presentes.
 - [Script reproduzível](../../../scripts/demonstrar_multiagentes.py).

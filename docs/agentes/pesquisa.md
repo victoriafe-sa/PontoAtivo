@@ -81,7 +81,7 @@ Com o índice pronto (`python -m pontoativo_rag.ingestao`), na raiz do repositó
 
 ```bash
 .venv/bin/python -m pontoativo_rag.agentes.pesquisa "faltas graves nos Centros Olímpicos"
-.venv/bin/python -m pontoativo_rag.agentes.pesquisa --acao docs/agentes/exemplos/acao_faltas_graves.json --saida resultado.json
+.venv/bin/python -m pontoativo_rag.agentes.pesquisa --acao experimentos/agentes/pesquisa/acao_faltas_graves.json --saida resultado.json
 ```
 
 Em Python, para conectar aos outros agentes:
@@ -97,8 +97,8 @@ resultado = pesquisa.executar({"consulta": "faltas graves nos Centros Olímpicos
 
 | Ação | Resultado |
 |---|---|
-| [Faltas graves nos COPs](exemplos/acao_faltas_graves.json) | [encontrado](exemplos/pesquisa_faltas_graves.json): 1 trecho do Manual de Uso dos COPs (DOC-003, p. 4, item 7.3 Falta Grave); 3 trechos descartados |
-| [Previsão do tempo](exemplos/acao_sem_resultado.json) | [sem evidência](exemplos/pesquisa_sem_resultado.json): melhor distância 0,172, acima do limiar 0,12 |
+| [Faltas graves nos COPs](../../experimentos/agentes/pesquisa/acao_faltas_graves.json) | [encontrado](../../experimentos/agentes/pesquisa/pesquisa_faltas_graves.json): 1 trecho do Manual de Uso dos COPs (DOC-003, p. 4, item 7.3 Falta Grave); 3 trechos descartados |
+| [Previsão do tempo](../../experimentos/agentes/pesquisa/acao_sem_resultado.json) | [sem evidência](../../experimentos/agentes/pesquisa/pesquisa_sem_resultado.json): melhor distância 0,172, acima do limiar 0,12 |
 
 ## Integração com a Análise
 
