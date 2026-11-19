@@ -113,7 +113,8 @@ def test_classificacao_invalida_gera_value_error(chat, reply):
     "question",
     ["pec no gama?", "PEC no Gama", "onde tem pec no gama?", "Quadra de areia no Guará!",
      "campo de futebol em Taguatinga", "tem pista de skate em Ceilândia?",
-     "campo sintético no Gama", "campo society em Samambaia", "campo de terra batida no Gama"],
+     "campo sintético no Gama", "campo society em Samambaia", "campo de terra batida no Gama",
+     "parquinho no Gama", "onde tem parque infantil em Taguatinga?", "playground na Asa Norte"],
 )
 def test_tipo_e_regiao_vao_direto_ao_mapa(chat, question):
     chat.model = FakeModel(error=AssertionError("não deveria chamar o modelo"))

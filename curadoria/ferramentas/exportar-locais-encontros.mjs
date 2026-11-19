@@ -5,7 +5,8 @@ const base = new URL("../../site/", import.meta.url);
 const scope = {window: {}};
 vm.runInNewContext(fs.readFileSync(new URL("data/locais.js", base), "utf8"), scope);
 const unique = new Map();
-for (const {id, n, ra} of scope.window.PA_LOCAIS) {
+// Encontros esportivos são para maiores de 18 anos: parquinhos ficam só no mapa.
+for (const {id, n, ra} of scope.window.PA_LOCAIS.filter((p) => p.t !== "parquinho")) {
   const place = {id, nome: n, regiao: ra || ""};
   if (unique.has(id) && JSON.stringify(unique.get(id)) !== JSON.stringify(place)) {
     throw new Error("ID associado a locais diferentes: " + id);
