@@ -4,7 +4,7 @@ Mapa esportivo e inclusivo do Distrito Federal com um assistente que responde
 perguntas a partir de fontes oficiais (RAG). Projeto do **Challenge 2 (CBL),
 Big Idea "Qualidade de Vida"**.
 
-- **Mapa:** 3.100 locais (PECs, quadras, campos, parques, Centros Olímpicos e
+- **Mapa:** 3.898 locais (PECs, quadras, campos, parques, 798 parquinhos, Centros Olímpicos e
   espaços comunitários), com filtros e informações de acessibilidade.
 - **Assistente:** busca em 25 documentos oficiais com embeddings
   multilingual-E5 no Chroma e responde com o Gemma 4 pelo Ollama, citando as

@@ -6,7 +6,7 @@ from pathlib import Path
 
 from ferramentas.curadoria import validate_place
 from ferramentas.gerar_base import generate, legacy_evidence
-from ferramentas.importar_parquinhos import build, eh_parquinho, to_record
+from ferramentas.importar_parquinhos import build, eh_parquinho, endereco, to_record
 
 GAMA = [("Gama", [[[-48.10, -16.05], [-48.10, -15.99], [-48.02, -15.99], [-48.02, -16.05], [-48.10, -16.05]]])]
 SUDOESTE = [("Sudoeste/octogonal", [[[-47.94, -15.80], [-47.94, -15.78], [-47.91, -15.78], [-47.91, -15.80], [-47.94, -15.80]]])]
@@ -32,6 +32,7 @@ class ParquinhosTest(unittest.TestCase):
         self.assertTrue(rec["luz"] and rec["gratis"])
         self.assertEqual(rec["cons"], "Bom")
         self.assertIn("confirme no local", rec["obs"])
+        self.assertRegex(rec["reviewed_at"], r"^\d{4}-\d{2}-\d{2}$")
         self.assertIn("IDE-DF", rec["fonte"])
         rec["evidence"] = legacy_evidence(rec)
         rec["ownership"] = "public"
@@ -46,6 +47,23 @@ class ParquinhosTest(unittest.TestCase):
     def test_registros_repetidos_no_mesmo_ponto_viram_um(self):
         dois = [feature(1), feature(2, x=-48.06005, y=-16.02005), feature(3, x=-48.07, y=-16.03)]
         self.assertEqual([r["id"] for r in build(dois, GAMA, [])], ["pin-1", "pin-3"])
+
+    def test_endereco_padronizado(self):
+        self.assertEqual(endereco("Q2"), "Q 2")
+        self.assertEqual(endereco("QNG 7/ CNG 1"), "QNG 7/CNG 1")
+        self.assertEqual(endereco("BAIRRO AGUAS CLARAS PARQUE URBANO -"), "BAIRRO AGUAS CLARAS PARQUE URBANO")
+        self.assertEqual(endereco("Q 46 LOTE S/N VILA SAO JOSE"), "Q 46 LOTE S/N VILA SAO JOSE")
+        self.assertEqual(endereco("EQ 208/308"), "EQ 208/308")
+
+    def test_mesmo_endereco_ate_30_m_e_o_mesmo_parquinho(self):
+        # ~20 m de distância: com o mesmo endereço vira um; com endereços diferentes, dois.
+        mesmo = [feature(1), feature(2, x=-48.06, y=-16.02018)]
+        self.assertEqual([r["id"] for r in build(mesmo, GAMA, [])], ["pin-1"])
+        outro = [feature(1), feature(2, x=-48.06, y=-16.02018, elm_endereco="QR 829")]
+        self.assertEqual([r["id"] for r in build(outro, GAMA, [])], ["pin-1", "pin-2"])
+
+    def test_conservacao_so_aparece_quando_informada(self):
+        self.assertNotIn("cons", to_record(feature(4, elm_est_conser=None), GAMA, []))
 
     def test_nome_da_ra_sudoeste_fica_com_maiuscula(self):
         rec = to_record(feature(9, x=-47.925, y=-15.79), SUDOESTE, [])

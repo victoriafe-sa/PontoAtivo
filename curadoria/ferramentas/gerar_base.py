@@ -344,7 +344,7 @@ def generate(input_js: Path | str, curated_dir: Path | str, output_js: Path | st
                 continue
             rec = deepcopy(raw)
             rec["ownership"] = "public"
-            rec["reviewed_at"] = TODAY
+            rec["reviewed_at"] = raw.get("reviewed_at") or TODAY  # data da importação, quando houver
             rec["evidence"] = legacy_evidence(rec)
             by_id[rec["id"]] = rec
 

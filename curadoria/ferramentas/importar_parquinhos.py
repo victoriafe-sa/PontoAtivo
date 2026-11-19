@@ -31,6 +31,7 @@ CAMADA = "https://www.geoservicos.ide.df.gov.br/arcgis/rest/services/Publico/EQU
 GRAFIAS = ("PARQUE INFANTIL", "PARQUE INFANTIL ", "PARQUE_INFANTIL", "PARQUE_INFANTIL ")
 TIPO = "parquinho"
 RAIO_DUPLICATA_M = 15  # dois registros do mesmo parquinho no levantamento ficam a poucos metros
+RAIO_MESMO_ENDERECO_M = 30  # com o mesmo endereço, registros até 30 m são o mesmo parquinho
 PREFIXO = "pin-"
 
 
@@ -39,9 +40,12 @@ def eh_parquinho(valor) -> bool:
 
 
 def endereco(raw) -> str:
+    """Padroniza o endereço do cadastro: "QR827" -> "QR 827", "QNG 7/ CNG 1" -> "QNG 7/CNG 1"."""
     texto = clean(raw)
-    # "QR827" -> "QR 827", como no build.py dos outros mobiliários
-    return re.sub(r"\b(QR|QN|QS|QNM|QNN|QNO|QNP|QE|QI|CJ|SQS|SQN|AE)(\d)", r"\1 \2", texto)
+    texto = re.sub(r"\b([A-Z]{1,6})(\d)", r"\1 \2", texto)  # sigla colada no número
+    texto = re.sub(r"\s*/\s*", "/", texto)                  # barra sem espaços, como "EQ 208/308"
+    texto = re.sub(r"\bS/N\b", "S/N", texto)
+    return " ".join(texto.split()).strip(" -–,")
 
 
 def to_record(feature: dict, regions: list, places: list[dict]) -> dict | None:
@@ -57,13 +61,15 @@ def to_record(feature: dict, regions: list, places: list[dict]) -> dict | None:
     regiao = ra_of(lon, lat, regions)
     if regiao and regiao.casefold() == "sudoeste/octogonal":
         regiao = "Sudoeste/Octogonal"  # o título automático deixaria "octogonal" em minúscula
-    if not regiao or is_duplicate(lat, lon, {TIPO}, RAIO_DUPLICATA_M, places):
-        return None
     end = endereco(attrs.get("elm_endereco"))
+    mesmo_endereco = [p for p in places if end and p.get("end") == end]
+    if (not regiao or is_duplicate(lat, lon, {TIPO}, RAIO_DUPLICATA_M, places)
+            or is_duplicate(lat, lon, {TIPO}, RAIO_MESMO_ENDERECO_M, mesmo_endereco)):
+        return None
     quando = attrs.get("elm_data_atual")
     data = datetime.datetime.fromtimestamp(quando / 1000, datetime.timezone.utc).strftime("%m/%Y") if quando else None
     conservacao = clean(attrs.get("elm_est_conser")).title() or None
-    return {
+    record = {
         "id": f"{PREFIXO}{attrs['objectid_12']}",
         "n": f"Parquinho – {end or regiao}",
         "t": TIPO,
@@ -75,17 +81,20 @@ def to_record(feature: dict, regions: list, places: list[dict]) -> dict | None:
         "mods_inferidas": True,
         "custo": "Gratuito (espaço público)",
         "gratis": True,
-        "cons": conservacao,
         "luz": {"SIM": True, "NAO": False}.get(clean(attrs.get("elm_ilum_pub")).upper()),
         "acc": {},
         "fonte": "IDE-DF / SEDUH – camada Mobiliário Esporte e Lazer (levantamento DIEP/SEGETH)",
         "url": CAMADA,
         "data": data,
+        "reviewed_at": datetime.date.today().isoformat(),  # data desta importação
         "obs": (
             f"Parque infantil do cadastro oficial (levantamento de {data[-4:] if data else 'data não informada'}). "
             "Os brinquedos e o estado atual podem ter mudado: confirme no local."
         ),
     }
+    if conservacao:  # como nos PECs, o campo só aparece quando o cadastro informa
+        record["cons"] = conservacao
+    return record
 
 
 def read_places(path: Path) -> list[dict]:

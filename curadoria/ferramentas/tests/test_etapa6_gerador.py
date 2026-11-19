@@ -65,8 +65,8 @@ class GeneratorOutputIntegrityTest(unittest.TestCase):
 
     def test_total_places_and_ids(self):
         self.assertEqual(len(ESPACOS), 1348)
-        self.assertEqual(len(PARQUINHOS), 809)
-        self.assertEqual(sum(1 for r in self.records if r["t"] == "parquinho"), 809)
+        self.assertEqual(len(PARQUINHOS), 798)
+        self.assertEqual(sum(1 for r in self.records if r["t"] == "parquinho"), 798)
         self.assertEqual(len(self.records), EXPECTED_TOTAL)
         self.assertEqual(len(self.by_id), EXPECTED_TOTAL)
 
