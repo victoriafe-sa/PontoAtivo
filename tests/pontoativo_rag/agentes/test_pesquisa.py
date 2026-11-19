@@ -2,6 +2,7 @@ import json
 
 import pytest
 
+
 from pontoativo_rag.agentes.pesquisa import AgentePesquisa, main
 from pontoativo_rag.recuperacao import RetrievedChunk
 

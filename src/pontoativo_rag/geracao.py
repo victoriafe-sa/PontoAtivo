@@ -96,6 +96,7 @@ class OllamaClient:
         *,
         schema: dict | None = None,
         options: dict[str, Any] | None = None,
+        timeout_seconds: float | None = None,
     ) -> str:
         import httpx
 
@@ -125,7 +126,8 @@ class OllamaClient:
             payload["format"] = schema
         try:
             response = httpx.post(
-                f"{self.base_url}/api/chat", json=payload, timeout=self.timeout_seconds
+                f"{self.base_url}/api/chat", json=payload,
+                timeout=min(self.timeout_seconds, timeout_seconds) if timeout_seconds is not None else self.timeout_seconds,
             )
             response.raise_for_status()
             return response.json()["message"]["content"].strip()

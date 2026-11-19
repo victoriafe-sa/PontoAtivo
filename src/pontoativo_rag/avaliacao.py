@@ -536,6 +536,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--top-k", type=int, default=None)
     parser.add_argument("--sem-geracao", action="store_true")
     parser.add_argument(
+        "--fluxo", choices=("anterior", "agentes"), default="anterior",
+        help="seleciona o gerador histórico ou o coordenador usado pela aplicação",
+    )
+    parser.add_argument(
         "--verificar-qualidade",
         action="store_true",
         help="falha se as métricas ficarem fora dos limites mínimos",
@@ -571,17 +575,26 @@ def main(argv: list[str] | None = None) -> int:
     settings = Settings.from_env()
     path = args.perguntas or settings.questions_dir / "avaliacao.jsonl"
     questions = load_questions(path)
-    retriever, generator = build_pipeline(
-        settings, use_llm=not args.sem_geracao, reranker=args.reranker
-    )
+    use_llm = not args.sem_geracao
+    if args.fluxo == "agentes":
+        from .agentes.coordenador import criar_fluxo_documental
+
+        fluxo = criar_fluxo_documental(settings, use_llm=use_llm, reranker=args.reranker)
+        responder = fluxo.responder
+        total_vetores = fluxo.pesquisa.buscador.store.count()
+    else:
+        retriever, generator = build_pipeline(settings, use_llm=use_llm, reranker=args.reranker)
+
+        def responder(pergunta: str, *, top_k: int):
+            return answer_question(settings, retriever, generator, pergunta, top_k=top_k)
+
+        total_vetores = retriever.store.count()
     top_k = args.top_k or settings.top_k
 
     rows = []
     started = time.perf_counter()
     for question in questions:
-        result, retrieval_seconds = answer_question(
-            settings, retriever, generator, question.pergunta, top_k=top_k
-        )
+        result, retrieval_seconds = responder(question.pergunta, top_k=top_k)
         row = score_question(question, result, retrieval_seconds)
         rows.append(row)
         print(
@@ -594,18 +607,19 @@ def main(argv: list[str] | None = None) -> int:
     meta = {
         "executado_em": now.isoformat(timespec="seconds"),
         "perguntas": path.name,
+        "fluxo": args.fluxo,
         "modelo_embeddings": settings.embedding_model,
         "modelo_llm": None if args.sem_geracao else settings.ollama_model,
-        "resposta_estruturada": None if args.sem_geracao else settings.structured_answers,
-        "tentativas_maximas": None if args.sem_geracao else settings.max_generation_attempts,
-        "num_predict": None if args.sem_geracao else settings.ollama_num_predict,
+        "resposta_estruturada": None if not use_llm else args.fluxo == "agentes" or settings.structured_answers,
+        "tentativas_maximas": None if not use_llm else (2 if args.fluxo == "agentes" else settings.max_generation_attempts),
+        "num_predict": None if not use_llm else (max(1600, settings.ollama_num_predict) if args.fluxo == "agentes" else settings.ollama_num_predict),
         "reranker": args.reranker,
         "top_k": top_k,
         "limiar_distancia": settings.max_distance,
         "chunk_pai_palavras": settings.parent_chunk_tokens,
         "sobreposicao_palavras": settings.chunk_overlap_tokens,
         "segmento_embedding_palavras": settings.embedding_segment_tokens,
-        "vetores_no_banco": retriever.store.count(),
+        "vetores_no_banco": total_vetores,
         "duracao_total_s": round(time.perf_counter() - started, 1),
     }
     summary = summarize(rows)

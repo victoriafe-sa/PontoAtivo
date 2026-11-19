@@ -1,0 +1,52 @@
+────────────────────────────────────────────────────────────────────────
+1. PERGUNTA RECEBIDA
+   Qual é a idade mínima para participar dos Centros Olímpicos e Paralímpicos?
+
+2. TRECHOS RECUPERADOS (4; distância cosseno — menor = mais próximo; recuperação em 4.49 s)
+   [F1] DOC-001 | p. 60 | distância 0.117
+        Carta de Servicos da Secretaria de Esporte e Lazer do DF (2024)
+        seção: PROGRAMA CENTROS OLÍMPICOS E PARALÍMPICOS
+        chunk 7049397b331f57ce8dee7b6d
+        60 Documentos obrigatórios para os candidatos a partir de 18 (dezoito) anos,
+        desde que tenham mencionado essa condição no formulário de inscrição: 5)
+        Comprovante de recebimento de programas sociais – caso beneficiário do Bolsa
+        Família, benefício de assistência à pessoa com deficiência – BPC, CAD único e
+        benefício assis…
+   [F2] DOC-001 | p. 59 | distância 0.121
+        Carta de Servicos da Secretaria de Esporte e Lazer do DF (2024)
+        seção: PROGRAMA CENTROS OLÍMPICOS E PARALÍMPICOS
+        chunk 810dc78cdb67393b87c55b86
+        59 Os candidatos às vagas disponibilizadas no Programa Centros Olímpicos e
+        Paralímpicos serão ordenados de acordo com o somatório da pontuação obtida, a
+        partir dos critérios estabelecidos em Edital. O candidato que não se enquadrar
+        em nenhum dos critérios constantes no caput do art. 14 participará normalmente
+        do proces…
+   [F3] DOC-012 | distância 0.124
+        Centros Olimpicos e Paralimpicos de portas abertas a comunidade
+        seção: Centros olímpicos e paralímpicos de portas abertas à comunidade
+        chunk e56cc72ac70ba4280cfe29c1
+        # Centros olímpicos e paralímpicos de portas abertas à comunidade Todos os 12
+        COPs passam a operar com a reabertura, nesta terça (30), das unidades de
+        Sobradinho, Parque da Vaquejada e Setor O Por Agência Brasília* I Edição: Débora
+        Cronemberger [Olho texto=”Os interessados podem se inscrever no site da
+        Secretaria de Es…
+   [F4] DOC-002 | p. 1 | distância 0.098
+        Edital de Matricula dos Centros Olimpicos e Paralimpicos do DF (2025)
+        seção: 4. PUBLICO ALVO
+        chunk e36994477a2a7413642953e5
+        4. PUBLICO ALVO 4.1. A oferta de modalidades esportivas e de lazer do Programa
+        Centros Olímpicos e Paralímpicos visa alcançar um público de faixa etária ampla,
+        a partir de 04 (quatro) anos de idade, contemplando crianças, adolescentes,
+        jovens, adultos, idosos nos termos da Lei nº 10.741, de 1º de outubro de 2003 e
+        pess…
+
+3. RESPOSTA GERADA (modelo gemma4:12b, 117.1 s)
+   A idade mínima para participar do Programa Centros Olímpicos e Paralímpicos é de 4
+   anos. [F3] [F4]
+
+4. REFERÊNCIAS UTILIZADAS
+   [F3] DOC-012 — Centros Olimpicos e Paralimpicos de portas abertas a comunidade, seção Centros olímpicos e paralímpicos de portas abertas à comunidade — https://agenciabrasilia.df.gov.br/w/centros-olimpicos-e-paralimpicos-de-portas-abertas-a-comunidade
+   [F4] DOC-002 — Edital de Matricula dos Centros Olimpicos e Paralimpicos do DF (2025), p. 1, seção 4. PUBLICO ALVO — https://www.esporte.df.gov.br/documents/d/esporte/edital-pdf
+
+5. ALERTAS
+────────────────────────────────────────────────────────────────────────

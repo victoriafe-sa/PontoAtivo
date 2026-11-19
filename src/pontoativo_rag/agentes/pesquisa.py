@@ -38,10 +38,11 @@ import json
 import sys
 import time
 from pathlib import Path
-from typing import Any, Protocol, Sequence
+from typing import Any, Protocol, Sequence, cast
 
 from ..geracao import trecho_relevante
 from ..recuperacao import RetrievedChunk
+from .contratos import AcaoPesquisa, Fonte, ResultadoPesquisa, Trecho
 
 
 class Buscador(Protocol):
@@ -50,7 +51,7 @@ class Buscador(Protocol):
     ) -> list[RetrievedChunk]: ...
 
 
-def _fonte(chunk: RetrievedChunk) -> dict[str, str]:
+def _fonte(chunk: RetrievedChunk) -> Fonte:
     return {
         "id": chunk.source_id,
         "titulo": chunk.title,
@@ -63,8 +64,8 @@ def _fonte(chunk: RetrievedChunk) -> dict[str, str]:
     }
 
 
-def validar_acao(acao: Any) -> dict[str, Any]:
-    """Confere a ação recebida; aceita só os campos do contrato."""
+def validar_acao(acao: Any) -> AcaoPesquisa:
+    """Confere os campos do contrato e preserva os demais na saída."""
     if not isinstance(acao, dict):
         raise ValueError("A ação deve ser um objeto JSON.")
     consulta = acao.get("consulta")
@@ -73,7 +74,7 @@ def validar_acao(acao: Any) -> dict[str, Any]:
     for campo in ("pergunta_original", "tipo", "regiao"):
         if acao.get(campo) is not None and not isinstance(acao[campo], str):
             raise ValueError(f'O campo "{campo}" deve ser texto.')
-    return {**acao, "consulta": consulta.strip()}
+    return cast(AcaoPesquisa, {**acao, "consulta": consulta.strip()})
 
 
 class AgentePesquisa:
@@ -94,24 +95,37 @@ class AgentePesquisa:
         self.distance_scale = distance_scale
         self.top_k = top_k
 
-    def executar(self, acao: dict[str, Any]) -> dict[str, Any]:
+    def executar(self, acao: AcaoPesquisa) -> ResultadoPesquisa:
+        resultado, _ = self.pesquisar(acao)
+        return resultado
+
+    def pesquisar(
+        self, acao: AcaoPesquisa, *, top_k: int | None = None,
+        filtros: dict[str, str] | None = None,
+    ) -> tuple[ResultadoPesquisa, list[RetrievedChunk]]:
+        """Retorna o contrato dos agentes e os trechos originais para diagnóstico."""
         acao = validar_acao(acao)
         inicio = time.perf_counter()
-        filtros = {"administrative_region": acao["regiao"]} if acao.get("regiao") else None
+        filtros = dict(filtros or {})
+        if regiao := acao.get("regiao"):
+            filtros["administrative_region"] = regiao
         recuperados: Sequence[RetrievedChunk] = self.buscador.search(
-            acao["consulta"], top_k=self.top_k, filters=filtros
+            acao["consulta"], top_k=top_k if top_k is not None else self.top_k, filters=filtros or None
         )
         aceitos = [c for c in recuperados if trecho_relevante(c, self.max_distance, self.distance_scale)]
-        trechos = [
+        trechos: list[Trecho] = [
             {
                 "id": f"T{i}",
+                "chunk_id": chunk.chunk_id,
                 "texto": chunk.text,
                 "distancia": round(chunk.distance, 4),
                 "fonte": _fonte(chunk),
+                "entidade": chunk.entity_key,
+                "metadado_filtro_ausente": chunk.filter_metadata_missing,
             }
             for i, chunk in enumerate(aceitos, start=1)
         ]
-        resultado: dict[str, Any] = {
+        resultado: ResultadoPesquisa = {
             "agente": self.nome,
             "acao": acao,
             "status": "encontrado" if trechos else "sem_evidencia",
@@ -129,16 +143,17 @@ class AgentePesquisa:
                 )
             else:
                 resultado["motivo"] = "A busca não retornou nenhum trecho."
-        return resultado
+        return resultado, list(recuperados)
 
 
-def criar_agente(settings=None) -> AgentePesquisa:
+def criar_agente(settings=None, *, buscador: Buscador | None = None) -> AgentePesquisa:
     """Monta o agente com o índice e a configuração do projeto."""
     from ..configuracao import Settings
-    from ..consulta import build_pipeline
+    from ..recursos import criar_recuperador
 
     settings = settings or Settings.from_env()
-    buscador, _ = build_pipeline(settings, use_llm=False)
+    if buscador is None:
+        buscador = criar_recuperador(settings)
     return AgentePesquisa(
         buscador,
         max_distance=settings.max_distance,

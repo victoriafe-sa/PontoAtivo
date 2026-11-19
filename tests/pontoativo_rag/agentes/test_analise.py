@@ -1,26 +1,14 @@
 """Verifica o contrato da Análise sem depender de modelos ou do banco vetorial."""
 
 import json
-from pathlib import Path
-import sys
 from unittest.mock import patch
 
 import unittest
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "prototipo" / "src"))
-
 from pontoativo_rag.agentes.analise import analisar, analisar_duvidas
-from main import consultar
 
 
 class TestAnalise(unittest.TestCase):
-    def test_termo_improprio_interrompe_antes_da_pesquisa(self):
-        for pergunta in ("natacao gratuita e sexo", "quadra para esse idiota"):
-            with self.subTest(pergunta=pergunta), patch("main.buscar") as busca:
-                with self.assertRaisesRegex(ValueError, "impróprio"):
-                    consultar(pergunta, rascunho=True)
-                busca.assert_not_called()
-
     def test_consulta_curta_sem_evidencia(self):
         assert analisar("natacao gratuita", []) == "A Pesquisa não encontrou evidências para analisar."
 

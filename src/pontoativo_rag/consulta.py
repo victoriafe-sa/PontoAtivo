@@ -18,8 +18,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .configuracao import Settings
-from .geracao import AnswerGenerator, GroundedAnswer, OllamaClient
+from .geracao import AnswerGenerator, GroundedAnswer
 from .recuperacao import Retriever
+from .recursos import criar_cliente, criar_recuperador
+from .agentes.coordenador import criar_fluxo_documental
 
 
 EXIT_WORDS = {"sair", "exit", "quit", "fim"}
@@ -30,34 +32,8 @@ def build_pipeline(
     settings: Settings, *, use_llm: bool = True, reranker: str = "hibrido"
 ) -> tuple[Retriever, AnswerGenerator]:
     """Monta recuperador e gerador com a configuração do projeto."""
-    from .armazenamento import ChromaStore
-    from .embeddings import EmbeddingProvider
-
-    store = ChromaStore(
-        settings.vector_db_dir,
-        settings.collection_name,
-        embedding_model=settings.embedding_model,
-    )
-    if store.count() == 0:
-        raise SystemExit(
-            "O banco vetorial está vazio. Execute antes: python -m pontoativo_rag.ingestao"
-        )
-    retriever = Retriever(
-        EmbeddingProvider(settings.embedding_model), store, top_k=settings.top_k,
-        reranker=reranker, distance_scale=settings.distance_scale,
-    )
-    llm = (
-        OllamaClient(
-            settings.ollama_base_url,
-            settings.ollama_model,
-            settings.ollama_timeout_seconds,
-            num_ctx=settings.ollama_num_ctx,
-            num_predict=settings.ollama_num_predict,
-            keep_alive=settings.ollama_keep_alive,
-        )
-        if use_llm
-        else None
-    )
+    retriever = criar_recuperador(settings, reranker=reranker)
+    llm = criar_cliente(settings) if use_llm else None
     return retriever, AnswerGenerator(
         llm,
         max_distance=settings.max_distance,
@@ -169,7 +145,7 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     settings = Settings.from_env()
-    retriever, generator = build_pipeline(
+    fluxo = criar_fluxo_documental(
         settings, use_llm=not args.sem_geracao, reranker=args.reranker
     )
     filters = {
@@ -184,9 +160,7 @@ def main(argv: list[str] | None = None) -> int:
 
     def run(question: str) -> None:
         try:
-            result, seconds = answer_question(
-                settings, retriever, generator, question, top_k=args.top_k, filters=filters
-            )
+            result, seconds = fluxo.responder(question, top_k=args.top_k, filters=filters)
         except ValueError as error:
             print(f"Pergunta inválida: {error}")
             return

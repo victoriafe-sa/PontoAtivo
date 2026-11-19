@@ -152,12 +152,12 @@ class Chat:
         return {"rota": route}
 
     def documents(self, question, route):
-        from .consulta import answer_question, build_pipeline
+        from .agentes.coordenador import criar_fluxo_documental
 
         with self.lock:
             if self.pipeline is None:
-                self.pipeline = build_pipeline(self.settings)
-            answer, _ = answer_question(self.settings, *self.pipeline, question)
+                self.pipeline = criar_fluxo_documental(self.settings)
+            answer, _ = self.pipeline.responder(question)
         sources = answer.cited if answer.mode == "rag" else answer.retrieved
         return {
             "rota": route,

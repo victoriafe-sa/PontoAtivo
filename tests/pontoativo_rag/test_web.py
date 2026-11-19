@@ -8,7 +8,10 @@ from pathlib import Path
 
 import pytest
 
-from pontoativo_rag import consulta, web
+from types import SimpleNamespace
+
+from pontoativo_rag import web
+from pontoativo_rag.agentes import coordenador
 from pontoativo_rag.configuracao import Settings
 from pontoativo_rag.geracao import GroundedAnswer, LLMUnavailable
 from pontoativo_rag.recuperacao import RetrievedChunk
@@ -49,13 +52,14 @@ def chat(tmp_path: Path) -> web.Chat:
 
 def _use_rag(monkeypatch, answer: GroundedAnswer) -> list:
     calls = []
-    monkeypatch.setattr(consulta, "build_pipeline", lambda settings: ("retriever", "generator"))
-
-    def fake_answer(settings, retriever, generator, question):
-        calls.append((retriever, generator, question))
+    def fake_answer(question):
+        calls.append(question)
         return answer, {}
 
-    monkeypatch.setattr(consulta, "answer_question", fake_answer)
+    monkeypatch.setattr(
+        coordenador, "criar_fluxo_documental",
+        lambda settings: SimpleNamespace(responder=fake_answer),
+    )
     return calls
 
 
@@ -146,7 +150,7 @@ def test_foco_duvidas_vai_direto_aos_documentos_sem_classificar(chat, monkeypatc
 
     result = chat.answer("pec no gama?", "duvidas")
 
-    assert calls == [("retriever", "generator", "pec no gama?")]
+    assert calls == ["pec no gama?"]
     assert result["rota"] == "duvidas"
     assert result["resposta"] == "Inscrição pelo SISCOP [F1]."
 
@@ -188,7 +192,7 @@ def test_rota_documentos_com_rag_mostra_apenas_fontes_citadas(chat, monkeypatch)
 
     result = chat.answer("como faço matrícula no COP?")
 
-    assert calls == [("retriever", "generator", "como faço matrícula no COP?")]
+    assert calls == ["como faço matrícula no COP?"]
     assert result == {
         "rota": "documentos",
         "modo": "rag",
@@ -225,14 +229,15 @@ def test_rota_documentos_sem_geracao_mostra_trechos_recuperados(chat, monkeypatc
 
 def test_pipeline_e_montado_uma_unica_vez(chat, monkeypatch):
     builds = []
-    monkeypatch.setattr(
-        consulta, "build_pipeline", lambda settings: builds.append(1) or ("r", "g")
-    )
-    monkeypatch.setattr(
-        consulta,
-        "answer_question",
-        lambda *args: (GroundedAnswer(question="q", mode="abstencao", answer="", retrieved=[]), {}),
-    )
+    def criar_fluxo(settings):
+        builds.append(1)
+        return SimpleNamespace(
+            responder=lambda question: (
+                GroundedAnswer(question, "abstencao", "", []), 0.0,
+            )
+        )
+
+    monkeypatch.setattr(coordenador, "criar_fluxo_documental", criar_fluxo)
     chat.model = FakeModel({"rota": "documentos", "busca": ""})
 
     chat.answer("primeira")

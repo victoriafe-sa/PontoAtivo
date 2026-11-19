@@ -1,7 +1,7 @@
 # Agente de Pesquisa
 
 **Responsável:** Pedro · **Código:** [`src/pontoativo_rag/agentes/pesquisa.py`](../../src/pontoativo_rag/agentes/pesquisa.py)
-· **Testes:** [`tests/pontoativo_rag/test_agente_pesquisa.py`](../../tests/pontoativo_rag/test_agente_pesquisa.py)
+· **Testes:** [`tests/pontoativo_rag/agentes/test_pesquisa.py`](../../tests/pontoativo_rag/agentes/test_pesquisa.py)
 
 ## Responsabilidade
 
@@ -100,11 +100,70 @@ resultado = pesquisa.executar({"consulta": "faltas graves nos Centros Olímpicos
 | [Faltas graves nos COPs](exemplos/acao_faltas_graves.json) | [encontrado](exemplos/pesquisa_faltas_graves.json): 1 trecho do Manual de Uso dos COPs (DOC-003, p. 4, item 7.3 Falta Grave); 3 trechos descartados |
 | [Previsão do tempo](exemplos/acao_sem_resultado.json) | [sem evidência](exemplos/pesquisa_sem_resultado.json): melhor distância 0,172, acima do limiar 0,12 |
 
-## Próximos passos (quarta, 18/11)
+## Integração com a Análise
 
-- Conectar a saída à **Análise** e à **Validação**. O agente de Análise da
-  branch `agente-analise` usa os resultados do protótipo (`prototipo/src/`);
-  para receber esta saída, ele precisa ler `trechos[].texto` e `trechos[].fonte`,
-  ou usar um pequeno adaptador.
-- Testar a busca sem resultado no fluxo completo: com `sem_evidencia`, a Análise
-  não deve montar rascunho, e a Comunicação deve dizer que as fontes não cobrem a pergunta.
+O terminal e o chat documental usam o mesmo coordenador. O [agente de
+Interpretação](interpretacao.md) prepara a ação. A Pesquisa seleciona
+evidências e repassa fonte, entidade, identificador do trecho e avisos à Análise.
+O coordenador mantém as referências de exibição no formato `[F1]`, `[F2]` e
+mostra os trechos em modo diagnóstico quando a geração falha. Sem evidência,
+a consulta termina antes de chamar o modelo.
+
+Os testes dos agentes ficam em `tests/pontoativo_rag/agentes/`.
+Os [JSONs de rodadas anteriores](../../experimentos/agentes/) são registros
+históricos e podem conter o formato de saída do protótipo.
+
+## Comparar a qualidade dos fluxos
+
+Use o mesmo índice, modelo e arquivo de perguntas nas duas rodadas:
+
+```bash
+.venv/bin/python -m pontoativo_rag.avaliacao --fluxo anterior --rotulo referencia
+.venv/bin/python -m pontoativo_rag.avaliacao --fluxo agentes --rotulo agentes
+```
+
+A avaliação registra tempos de recuperação e geração, tentativas e fontes.
+Revise as respostas por entidade e por condição da pergunta. A presença de
+uma citação válida não comprova que ela sustenta a conclusão.
+
+## Limites de execução e validação (19/11/2026)
+
+O coordenador compartilha `PONTOATIVO_OLLAMA_TIMEOUT` entre a busca e as
+até duas tentativas de análise. Antes de cada chamada, verifica o orçamento
+restante e o repassa ao cliente HTTP sem alterar o cliente compartilhado.
+O timeout HTTP limita inatividade de rede: não é um cancelamento rígido da
+consulta inteira, não interrompe a busca e não garante que o Ollama pare uma
+inferência já iniciada.
+
+A validação local rejeita campos inesperados e referências duplicadas, além
+de verificar IDs e passagens literais. Esses controles não comprovam suporte
+semântico nem atribuição correta de entidade; a avaliação humana continua
+necessária. Os testes com modelo simulado verificam o contrato e o fluxo,
+não a qualidade de um modelo real.
+
+A suíte padrão passou em Python 3.13.18: 322 testes e 10 subtestes. Os testes
+HTTP precisam de permissão para abrir portas de loopback. O ambiente `.venv`
+foi preparado com dependências do `pyproject.toml`; o interpretador gerenciado
+está em `/private/tmp/pontoativo-python` e deve ser reinstalado ou substituído
+por uma instalação persistente caso essa pasta temporária seja removida.
+
+### Verificação com índice real
+
+A ingestão local de 19/11/2026 carregou 25 documentos sem erro, gerando 528
+chunks e 1.431 vetores. A avaliação sem geração usou 18 perguntas e `top_k=4`.
+Tanto o fluxo anterior quanto o integrado obtiveram recall médio de 0,94,
+acerto de ao menos uma fonte de 1,00, cinco abstenções corretas e nenhuma
+falsa abstenção. Isso verifica preservação da recuperação neste conjunto,
+sem certificar qualidade da geração nem melhoria de latência.
+
+Registros locais: `experimentos/avaliacao-rag/avaliacao_20261119_095701_integracao_20261119.md`
+e `experimentos/avaliacao-rag/avaliacao_20261119_095731_referencia_integracao_20261119.md`.
+
+A consulta real sobre idade mínima nos COPs respondeu quatro anos, com
+referências `[F3]` e `[F4]`, incluindo o edital DOC-002. Recuperação: 4,49 s;
+geração com `gemma4:12b`: 117,1 s. Saída preservada em
+[consulta-integrada-20261119.txt](../../experimentos/agentes/consulta-integrada-20261119.txt).
+É uma verificação de ponta a ponta, não um benchmark: uma observação não
+estima p95, estabilidade, ganho sobre o gerador anterior ou qualidade geral.
+A calibração de tokens, contexto e concorrência e a comparação completa com
+geração permanecem pendentes.

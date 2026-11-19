@@ -90,8 +90,14 @@ monta o índice em `dados/rag/vetorial/`. Detalhes, avaliação e opções em
 cd curadoria && ../.venv/bin/python -B -m unittest discover -s ferramentas/tests
 ```
 
-O CI roda os dois e confere o JavaScript do mapa. A qualidade das respostas é
-medida à parte, com o Ollama, no [portão de qualidade](experimentos/avaliacao-rag/).
+A suíte padrão inclui os [testes dos agentes](tests/pontoativo_rag/agentes/),
+os [testes automatizados do protótipo](tests/prototipo/) e os
+[testes dos registros de experimentos](tests/experimentos/). A CI também
+executa a suíte da curadoria e confere o JavaScript do mapa.
+
+O [portão de qualidade](experimentos/avaliacao-rag/) usa o gerador anterior
+como referência histórica. Os testes do coordenador usam um modelo simulado.
+A comparação entre os dois fluxos precisa de uma avaliação com Ollama e o índice local.
 
 ## Site de resultados (GitHub Pages)
 
