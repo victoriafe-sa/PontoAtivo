@@ -1,0 +1,24 @@
+{
+  "pergunta": "Uso cadeira de rodas e quero visitar o Parque da Cidade Dona Sarah Kubitschek. Preciso pagar para entrar? Há banheiros acessíveis? O caminho até eles também é acessível?",
+  "trechos": [
+    {
+      "id": "T1",
+      "chunk_id": "F029-003",
+      "texto": "Em eventos especiais, o público sobe para 80 mil.\nA segurança do Parque da Cidade Sarah Kubitschek orienta que os frequentadores cumpram a Lei Distrital 2095/98 a qual proíbe a permanência de cães soltos nas vias e logradouros públicos ou em locais de livre acesso ao público do Distrito Federal.\nLivre acesso 24 horas por dia; sete dias por semana.\nEntrada: gratuita\nAcessibilidade: sim. Possui banheiros acessíveis.\nEspaço para realização de eventos: possui diversos locais para eventos, como o Pavilhão de Exposições, Praça das Fontes e estacionamentos.\nTambém orienta o cumprimento da Lei Federal n°. 2.140/2011 que dispõe sobre a obrigatoriedade do uso da focinheira e estabelece regras de segurança para a condução responsável de cães de grande porte e/ou de raças consideradas perigosas.",
+      "distancia": 0.0,
+      "fonte": {
+        "id": "F029",
+        "titulo": "Parque da Cidade Dona Sarah Kubitschek (SEL)",
+        "instituicao": "Secretaria de Esporte e Lazer do DF (SEL-DF)",
+        "url": "https://www.esporte.df.gov.br/parque-da-cidade",
+        "paginas": "",
+        "secao": "Informações Gerais",
+        "regiao": "Plano Piloto",
+        "atualidade": "Página atualizada em 20/02/2026; coleta em 2026-11-05"
+      },
+      "entidade": "parque-da-cidade-dona-sarah-kubitschek",
+      "metadado_filtro_ausente": false
+    }
+  ],
+  "observacao": "Trecho F029-003 do corpus do protótipo, no formato de saída da Pesquisa. Preparado à mão para os testes."
+}

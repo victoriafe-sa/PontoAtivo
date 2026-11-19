@@ -1,5 +1,10 @@
-"""Fluxo documental compartilhado pelo terminal e pela aplicação web."""
+"""Fluxo documental compartilhado pelo terminal e pela aplicação web.
 
+Interpretação -> Pesquisa -> Análise -> Validação (com volta à Análise e, se pedido,
+à Pesquisa). Só um rascunho aprovado pela Validação é publicado.
+"""
+
+from collections.abc import Callable
 from time import perf_counter
 
 from ..configuracao import Settings
@@ -8,16 +13,34 @@ from ..recursos import criar_cliente, criar_recuperador
 from .analise import AnaliseInvalida, analisar_duvidas, verificar_pergunta
 from .interpretacao import AgenteInterpretacao
 from .pesquisa import AgentePesquisa, criar_agente
+from .validacao import AgenteValidacao, ParecerInvalido, feedback_para_analise
+
+
+class ValidacaoReprovada(RuntimeError):
+    """O rascunho continuou sem apoio nas fontes depois das correções permitidas."""
 
 
 class FluxoDocumental:
-    def __init__(self, pesquisa: AgentePesquisa, cliente: LLMClient | None, *, orcamento_segundos: float = 180):
+    def __init__(
+        self, pesquisa: AgentePesquisa, cliente: LLMClient | None, *,
+        orcamento_segundos: float = 180, validacao: AgenteValidacao | None = None,
+        max_correcoes: int = 1, registrar: Callable[[dict], None] | None = None,
+    ):
         if orcamento_segundos <= 0:
             raise ValueError("O orçamento de execução deve ser positivo.")
+        if max_correcoes < 0:
+            raise ValueError("max_correcoes não pode ser negativo.")
         self.interpretacao = AgenteInterpretacao()
         self.pesquisa = pesquisa
         self.cliente = cliente
         self.orcamento_segundos = orcamento_segundos
+        self.validacao = validacao
+        self.max_correcoes = max_correcoes
+        self.registrar = registrar
+
+    def _registrar(self, evento: dict) -> None:
+        if self.registrar is not None:
+            self.registrar(evento)
 
     def responder(
         self, pergunta: str, *, top_k: int | None = None,
@@ -27,11 +50,16 @@ class FluxoDocumental:
         inicio = perf_counter()
         prazo = inicio + self.orcamento_segundos
         acao = self.interpretacao.preparar_pesquisa(pergunta)
+        self._registrar({"etapa": "interpretacao_para_pesquisa", "acao": acao,
+                         "duvidas": self.interpretacao.identificar_duvidas(pergunta)})
         resultado, recuperados = self.pesquisa.pesquisar(
             acao, top_k=top_k, filtros=filters,
         )
+        self._registrar({"etapa": "pesquisa_para_analise", "resultado": resultado})
         tempo_busca = perf_counter() - inicio
-        trechos = resultado["trechos"]
+        # Cópias: uma busca complementar pedida pela Validação estende estas listas.
+        trechos = list(resultado["trechos"])
+        recuperados = list(recuperados)
         if not trechos:
             return GroundedAnswer(
                 pergunta, "abstencao",
@@ -39,8 +67,6 @@ class FluxoDocumental:
                 recuperados,
             ), tempo_busca
 
-        por_id = {chunk.chunk_id: chunk for chunk in recuperados}
-        relevantes = [por_id[trecho["chunk_id"]] for trecho in trechos]
         inicio = perf_counter()
         motivo = "geração desativada"
         tentativas = 0
@@ -51,16 +77,29 @@ class FluxoDocumental:
                     raise LLMUnavailable("Orçamento de execução esgotado")
                 tentativas += 1
 
+            cliente = _ClienteComPrazo(self.cliente, prazo)
+            pergunta_analise = acao["pergunta_original"] or pergunta
             try:
                 itens = analisar_duvidas(
-                    acao["pergunta_original"] or pergunta, trechos,
-                    cliente=_ClienteComPrazo(self.cliente, prazo), ao_tentar=registrar_tentativa,
+                    pergunta_analise, trechos, cliente=cliente,
+                    ao_tentar=registrar_tentativa, registrar=self._registrar,
                 )
+                if self.validacao is not None:
+                    itens = self._validar(
+                        pergunta_analise, itens, trechos, recuperados, acao, cliente,
+                        registrar_tentativa, top_k=top_k, filters=filters,
+                    )
             except LLMUnavailable:
                 motivo = "modelo indisponível"
             except AnaliseInvalida:
                 motivo = "a análise não passou na validação de citações"
+            except ParecerInvalido:
+                motivo = "a validação não conseguiu revisar o rascunho"
+            except ValidacaoReprovada:
+                motivo = "o rascunho não passou na validação das fontes"
             else:
+                por_id = {chunk.chunk_id: chunk for chunk in recuperados}
+                relevantes = [por_id[trecho["chunk_id"]] for trecho in trechos]
                 indices = {trecho["id"]: i for i, trecho in enumerate(trechos)}
                 citados = {ref for item in itens for ref in item["trechos"]}
                 linhas = [
@@ -75,6 +114,8 @@ class FluxoDocumental:
                     generation_attempts=tentativas,
                 ), tempo_busca
 
+        por_id = {chunk.chunk_id: chunk for chunk in recuperados}
+        relevantes = [por_id[trecho["chunk_id"]] for trecho in trechos]
         return GroundedAnswer(
             pergunta, "recuperacao_sem_geracao",
             f"Não foi possível redigir uma resposta ({motivo}). Consulte os trechos recuperados.",
@@ -82,9 +123,67 @@ class FluxoDocumental:
             generation_attempts=tentativas,
         ), tempo_busca
 
+    def _validar(self, pergunta, itens, trechos, recuperados, acao, cliente, ao_tentar,
+                 *, top_k, filters):
+        """Valida o rascunho; devolve trechos sem apoio à Análise e, se pedido, busca de novo.
+
+        ``trechos`` e ``recuperados`` são estendidos no lugar quando a Validação
+        pede uma consulta complementar à Pesquisa.
+        """
+        pesquisou_de_novo = False
+        # A Validação usa o próprio cliente (ou só regras), sob o mesmo prazo da consulta.
+        revisor = (_ClienteComPrazo(self.validacao.cliente, cliente.prazo)
+                   if self.validacao.cliente is not None else None)
+        for rodada in range(self.max_correcoes + 1):
+            try:
+                parecer = self.validacao.revisar(
+                    pergunta, itens, trechos, pode_pesquisar=not pesquisou_de_novo, cliente=revisor,
+                    ao_tentar=ao_tentar,
+                )
+            except ParecerInvalido as erro:
+                self._registrar({"etapa": "validacao", "rodada": rodada + 1, "erro": str(erro),
+                                 "saida_bruta": erro.bruto})
+                raise
+            self._registrar({"etapa": "validacao", "rodada": rodada + 1, "parecer": parecer,
+                             "trechos": list(trechos)})
+            if parecer["aprovado"]:
+                return itens
+            if rodada == self.max_correcoes:
+                raise ValidacaoReprovada(parecer["problemas"])
+            if consulta := parecer["consulta_complementar"]:
+                pesquisou_de_novo = True
+                nova_acao = {**acao, "consulta": consulta}
+                self._registrar({"etapa": "validacao_para_pesquisa", "acao": nova_acao})
+                resultado, novos = self.pesquisa.pesquisar(nova_acao, top_k=top_k, filtros=filters)
+                self._registrar({"etapa": "pesquisa_para_analise", "resultado": resultado})
+                _acrescentar_trechos(trechos, recuperados, resultado["trechos"], novos)
+            feedback = feedback_para_analise(parecer, itens)
+            self._registrar({"etapa": "validacao_para_analise", "feedback": feedback,
+                             "trechos_para_corrigir": parecer["problemas"]})
+            itens = analisar_duvidas(
+                pergunta, trechos, cliente=cliente, ao_tentar=ao_tentar,
+                feedback=feedback, rascunho_anterior=itens, registrar=self._registrar,
+            )
+        raise AssertionError("Laço de validação esgotado")
+
+
+def _acrescentar_trechos(trechos, recuperados, novos_trechos, novos_chunks) -> None:
+    """Junta a busca complementar sem repetir chunks e mantendo IDs T1, T2... únicos."""
+    vistos = {t["chunk_id"] for t in trechos}
+    ja_recuperados = {c.chunk_id for c in recuperados}
+    chunks = {c.chunk_id: c for c in novos_chunks}
+    for trecho in novos_trechos:
+        if trecho["chunk_id"] in vistos:
+            continue
+        vistos.add(trecho["chunk_id"])
+        trechos.append({**trecho, "id": f"T{len(trechos) + 1}"})
+        if trecho["chunk_id"] not in ja_recuperados:
+            recuperados.append(chunks[trecho["chunk_id"]])
+
 
 def criar_fluxo_documental(
     settings: Settings, *, use_llm: bool = True, reranker: str = "hibrido",
+    validar: bool = True,
 ) -> FluxoDocumental:
     recuperador = criar_recuperador(settings, reranker=reranker)
     cliente = criar_cliente(
@@ -93,6 +192,7 @@ def criar_fluxo_documental(
     return FluxoDocumental(
         criar_agente(settings, buscador=recuperador), cliente,
         orcamento_segundos=settings.ollama_timeout_seconds,
+        validacao=AgenteValidacao(cliente) if validar and cliente is not None else None,
     )
 
 

@@ -44,6 +44,20 @@ class AgenteInterpretacao:
             "status": "interpretado",
         }
 
+    def identificar_duvidas(self, pergunta: str) -> list[str]:
+        """Separa as perguntas explícitas ("...?"); o contexto antes delas não é dúvida.
+
+        Sem ponto de interrogação, a pergunta inteira é uma única dúvida.
+        """
+        if not isinstance(pergunta, str) or not pergunta.strip():
+            raise ValueError("Informe uma pergunta para interpretar.")
+        duvidas = []
+        for parte in re.findall(r"[^?]+\?", pergunta):
+            # Remove o contexto que antecede a pergunta na mesma parte ("Uso cadeira. Preciso...?").
+            frase = re.split(r"(?<=[.!])\s+", parte.strip())[-1]
+            duvidas.append(frase)
+        return duvidas or [pergunta.strip()]
+
     def preparar_pesquisa(self, pergunta: str) -> AcaoPesquisa:
         resultado = self.interpretar(pergunta)
         return {

@@ -1,4 +1,4 @@
-"""Formatos compartilhados pelos agentes de Pesquisa e Análise."""
+"""Formatos compartilhados pelos agentes de Pesquisa, Análise e Validação."""
 
 from typing import Literal, NotRequired, TypedDict
 

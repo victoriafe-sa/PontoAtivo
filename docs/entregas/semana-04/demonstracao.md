@@ -1,5 +1,7 @@
 # Demonstração da colaboração entre agentes
 
+> Roteiro histórico da execução anterior à integração do agente de Validação. Os registros em `evidencias/` correspondem àquela versão. Para demonstrar o novo ciclo de revisão e correção, use o [roteiro da Validação](../../agentes/validacao.md). O script abaixo executa o código atual, mas seu registro legado não detalha todas as mensagens do novo agente.
+
 ## Preparação
 
 Executar os comandos na raiz do repositório. São necessários o ambiente Python instalado, o índice vetorial preenchido, o embedding E5 em cache e o Ollama ativo com o modelo configurado (`gemma4:12b` na verificação). Sem o índice, executar a ingestão conforme o README do projeto.
@@ -12,7 +14,7 @@ O diagnóstico verifica dependências e serviço, mas não comprova uma inferên
 
 ## Apresentação em aproximadamente cinco minutos
 
-1. Abrir o diagrama no README desta entrega e apresentar os três papéis.
+1. Abrir o diagrama no README desta entrega e apresentar os quatro papéis do fluxo atual, distinguindo-os dos três papéis do registro histórico.
 2. Fazer a pergunta: **“Quais são as faltas graves nos Centros Olímpicos?”**
 3. Executar o fluxo real:
 

@@ -1,5 +1,7 @@
 # Registro da verificação — 19/11/2026
 
+> Registro histórico anterior à integração do agente de Validação. Os resultados abaixo não avaliam o novo revisor. Veja os [registros e limites da Validação](../../agentes/validacao.md).
+
 ## Demonstração real concluída
 
 Execução registrada às 10:16:54, horário de São Paulo, usando o índice local, embeddings `intfloat/multilingual-e5-base` e Ollama `gemma4:12b`. Não foram usadas respostas simuladas.
