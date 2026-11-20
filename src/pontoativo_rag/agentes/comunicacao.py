@@ -6,7 +6,7 @@ from typing import Literal, TypedDict
 
 from .analise import validar_analise
 from .contratos import ItemAnalise, Trecho
-from .validacao import Parecer
+from .validacao import Parecer, resumo_da_revisao
 
 
 Status = Literal["respondida", "parcial", "sem_resposta", "precisa_esclarecimento"]
@@ -148,6 +148,8 @@ class AgenteComunicacao:
             )
         # Mesma barreira da Validação: IDs existentes e passagens literais.
         validar_analise(json.dumps(itens, ensure_ascii=False), trechos)
+        if parecer.get("resumo_revisado") != resumo_da_revisao(pergunta, itens, trechos):
+            raise ComunicacaoRecusada("O parecer pertence a outro rascunho ou conjunto de fontes.")
         fontes, ref_do_trecho = numerar_fontes(itens, trechos)
         respostas: list[Resposta] = []
         for item in itens:

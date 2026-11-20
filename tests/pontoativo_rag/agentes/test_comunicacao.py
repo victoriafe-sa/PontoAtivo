@@ -12,7 +12,7 @@ import pytest
 
 from pontoativo_rag.agentes.analise import AnaliseInvalida
 from pontoativo_rag.agentes.comunicacao import AgenteComunicacao, ComunicacaoRecusada
-from pontoativo_rag.agentes.validacao import AgenteValidacao
+from pontoativo_rag.agentes.validacao import AgenteValidacao, resumo_da_revisao
 
 EXEMPLOS = Path(__file__).resolve().parents[3] / "docs" / "agentes" / "exemplos"
 
@@ -27,6 +27,10 @@ INVENTADO = _carregar("validacao_rascunho_etapa_inventada.json")
 PERGUNTA = CORRETO["pergunta"]
 APROVADO = {"agente": "validacao", "aprovado": True, "revisao": "regras", "criterios": {},
             "problemas": [], "consulta_complementar": ""}
+
+
+def _parecer_aprovado(pergunta, itens, trechos):
+    return {**APROVADO, "resumo_revisado": resumo_da_revisao(pergunta, itens, trechos)}
 
 
 def _trecho(id_trecho, id_fonte, texto, instituicao="Órgão de teste"):
@@ -74,6 +78,8 @@ def test_rascunho_reprovado_nao_e_publicado():
         AgenteComunicacao().comunicar(PERGUNTA, INVENTADO["itens"], TRECHOS, parecer)
     with pytest.raises(ComunicacaoRecusada):
         AgenteComunicacao().comunicar(PERGUNTA, CORRETO["itens"], TRECHOS, None)
+    with pytest.raises(ComunicacaoRecusada):
+        AgenteComunicacao().comunicar(PERGUNTA, CORRETO["itens"], TRECHOS, APROVADO)
 
 
 def test_passagem_que_nao_esta_na_fonte_e_barrada():
@@ -81,6 +87,24 @@ def test_passagem_que_nao_esta_na_fonte_e_barrada():
     itens[0]["evidencias"][0]["passagem"] = "Entrada: 20 reais"
     with pytest.raises(AnaliseInvalida):
         AgenteComunicacao().comunicar(PERGUNTA, itens, TRECHOS, APROVADO)
+
+
+@pytest.mark.parametrize("alteracao", ["conclusao", "pergunta", "fonte"])
+def test_parecer_nao_pode_ser_reusado_apos_alteracao(alteracao):
+    itens = copy.deepcopy(CORRETO["itens"])
+    trechos = copy.deepcopy(TRECHOS)
+    pergunta = PERGUNTA
+    parecer = AgenteValidacao().revisar(pergunta, itens, trechos)
+    assert parecer["aprovado"]
+    if alteracao == "conclusao":
+        itens[0]["conclusao"] = "A entrada custa R$ 100."
+    elif alteracao == "pergunta":
+        pergunta = "Qual é o horário?"
+    else:
+        trechos[0]["fonte"]["url"] = "https://exemplo.gov.br/outro"
+
+    with pytest.raises(ComunicacaoRecusada, match="outro rascunho"):
+        AgenteComunicacao().comunicar(pergunta, itens, trechos, parecer)
 
 
 def test_fontes_numeradas_por_documento_na_ordem_de_citacao():
@@ -94,7 +118,10 @@ def test_fontes_numeradas_por_documento_na_ordem_de_citacao():
               [{"id": "T1", "passagem": "Aulas de natação gratuitas."},
                {"id": "T3", "passagem": "Inscrições pelo site."}]),
     ]
-    final = AgenteComunicacao().comunicar("Natação?", itens, trechos, APROVADO)
+    pergunta = "Natação?"
+    final = AgenteComunicacao().comunicar(
+        pergunta, itens, trechos, _parecer_aprovado(pergunta, itens, trechos),
+    )
     assert [(f["ref"], f["id"]) for f in final["fontes"]] == [("F1", "F003"), ("F2", "F010")]
     # T1 e T3 são do mesmo documento: a referência aparece uma vez.
     assert [r["fontes"] for r in final["respostas"]] == [["F1"], ["F2"]]
@@ -105,7 +132,10 @@ def test_fontes_numeradas_por_documento_na_ordem_de_citacao():
 def test_pergunta_ambigua_pede_esclarecimento():
     itens = [_item("É acessível?", "precisa_esclarecimento",
                    "Qual local ou serviço você quer consultar?", [])]
-    final = AgenteComunicacao().comunicar("É acessível?", itens, TRECHOS, APROVADO)
+    pergunta = "É acessível?"
+    final = AgenteComunicacao().comunicar(
+        pergunta, itens, TRECHOS, _parecer_aprovado(pergunta, itens, TRECHOS),
+    )
     assert final["status"] == "precisa_esclarecimento"
     assert final["fontes"] == []
     assert "Precisamos de um detalhe" in final["texto"]
@@ -116,7 +146,10 @@ def test_pergunta_ambigua_pede_esclarecimento():
 def test_lacuna_sem_documento_orienta_procurar_o_orgao():
     itens = [_item("Tem quadribol?", "lacuna",
                    "Os documentos recuperados não permitem confirmar a oferta de quadribol.", [])]
-    final = AgenteComunicacao().comunicar("Tem quadribol?", itens, TRECHOS, APROVADO)
+    pergunta = "Tem quadribol?"
+    final = AgenteComunicacao().comunicar(
+        pergunta, itens, TRECHOS, _parecer_aprovado(pergunta, itens, TRECHOS),
+    )
     assert final["status"] == "sem_resposta"
     assert final["proximos_passos"] == [
         "Os documentos consultados não tratam do que ficou sem resposta; "
@@ -131,7 +164,10 @@ def test_divergencia_mostra_as_duas_fontes_e_pede_confirmacao():
                    "Uma fonte diz terça a domingo; outra, segunda a sexta.",
                    [{"id": "T1", "passagem": "terça a domingo"},
                     {"id": "T2", "passagem": "segunda a sexta"}])]
-    final = AgenteComunicacao().comunicar("Quando funciona?", itens, trechos, APROVADO)
+    pergunta = "Quando funciona?"
+    final = AgenteComunicacao().comunicar(
+        pergunta, itens, trechos, _parecer_aprovado(pergunta, itens, trechos),
+    )
     assert "Onde as fontes não concordam" in final["texto"]
     assert "segunda a sexta. [F1] [F2]" in final["texto"]
     assert any("qual informação está valendo" in p for p in final["proximos_passos"])

@@ -33,6 +33,8 @@ import json
 import re
 import unicodedata
 from collections.abc import Callable, Sequence
+from copy import deepcopy
+from hashlib import sha256
 from typing import Literal, TypedDict
 
 from ..geracao import LLMClient
@@ -65,6 +67,15 @@ class Parecer(TypedDict):
     criterios: dict[str, bool]
     problemas: list[Problema]
     consulta_complementar: str
+    resumo_revisado: str
+
+
+def resumo_da_revisao(
+    pergunta: str, itens: Sequence[ItemAnalise], trechos: Sequence[Trecho | TrechoLegado],
+) -> str:
+    """Identifica a pergunta, o rascunho e os documentos da mesma revisão."""
+    dados = json.dumps([pergunta, itens, list(trechos)], ensure_ascii=False, sort_keys=True)
+    return sha256(dados.encode("utf-8")).hexdigest()
 
 
 INSTRUCAO = """Você é o Agente de Validação do PontoAtivo. Revise criticamente
@@ -258,6 +269,9 @@ class AgenteValidacao:
         *, pode_pesquisar: bool = False, cliente: LLMClient | None = None,
         ao_tentar: Callable[[], None] | None = None,
     ) -> Parecer:
+        itens = deepcopy(itens)
+        trechos = deepcopy(list(trechos))
+        resumo_revisado = resumo_da_revisao(pergunta, itens, trechos)
         # Mantém a barreira determinística mesmo quando invocado fora do coordenador.
         validar_analise(json.dumps(itens, ensure_ascii=False), trechos)
         alertas = conferir_apoio(itens, trechos)
@@ -298,4 +312,5 @@ class AgenteValidacao:
             "criterios": criterios,
             "problemas": problemas,
             "consulta_complementar": consulta,
+            "resumo_revisado": resumo_revisado,
         }

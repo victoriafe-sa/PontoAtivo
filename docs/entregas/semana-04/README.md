@@ -4,11 +4,11 @@ Entrega: 20/11/2026 · Verificação: 19/11/2026 · Canal: `4_Second Challenge`,
 
 ## Objetivo e atendimento ao enunciado
 
-O PontoAtivo responde perguntas sobre espaços e práticas esportivas do Distrito Federal usando documentos da base curada. Seu fluxo documental implementa quatro papéis especializados em sequência, com coordenação central e contratos de dados explícitos.
+O PontoAtivo responde perguntas sobre espaços e práticas esportivas do Distrito Federal usando documentos da base curada. Seu fluxo documental implementa cinco papéis especializados em sequência, com coordenação central e contratos de dados explícitos.
 
 | Requisito | Situação observada |
 |---|---|
-| Pelo menos dois agentes especializados | Implementado: Interpretação, Pesquisa, Análise e Validação |
+| Pelo menos dois agentes especializados | Implementado: Interpretação, Pesquisa, Análise, Validação e Comunicação |
 | Responsabilidades claras | Separadas por módulos e descritas abaixo |
 | Colaboração | Implementada: a saída da Interpretação alimenta a Pesquisa; as evidências da Pesquisa alimentam a Análise; a Validação revisa e pede correções ou uma busca complementar |
 | Diagrama e fluxo | Documentados nesta entrega |
@@ -35,7 +35,7 @@ flowchart TD
     A -->|Contrato e passagens conferidos por validar_analise| V[Agente de Validação: regras e LLM]
     V -->|Reprovada: feedback e rascunho anterior; 1 correção padrão| A
     V -->|Até 1 busca complementar, se ainda houver correção| P
-    V -->|Aprovada| F[Coordenador: formata resposta e referências F1...Fn]
+    V -->|Rascunho e parecer aprovado| F[Agente de Comunicação: formata resposta e referências F1...Fn]
     V -->|Reprovação persistente ou parecer inválido| D[Mostra trechos sem resposta gerada]
     A -->|Formato inválido após repetição, modelo indisponível ou prazo esgotado| D
     F --> R[Resposta ao usuário]
@@ -43,7 +43,7 @@ flowchart TD
     D --> R
 ```
 
-A Análise tem até duas tentativas por rascunho para conferir formato e passagens. O agente de Validação tem até duas tentativas por parecer. Por padrão, o coordenador permite uma correção do rascunho (`max_correcoes=1`) e no máximo uma busca complementar. Assim, com revisão por modelo, são até oito chamadas ao LLM, todas sob o orçamento compartilhado. Cada chamada, inclusive a repetição do parecer, entra em `generation_attempts`. A formatação final pertence ao coordenador; não há um agente independente de Comunicação.
+A Análise tem até duas tentativas por rascunho para conferir formato e passagens. O agente de Validação tem até duas tentativas por parecer. Por padrão, o coordenador permite uma correção do rascunho (`max_correcoes=1`) e no máximo uma busca complementar. Assim, com revisão por modelo, são até oito chamadas ao LLM, todas sob o orçamento compartilhado. Cada chamada, inclusive a repetição do parecer, entra em `generation_attempts`. A Comunicação formata a resposta sem chamadas ao modelo.
 
 ## Responsabilidades e contratos
 
@@ -53,7 +53,8 @@ A Análise tem até duas tentativas por rascunho para conferir formato e passage
 | Pesquisa (`AgentePesquisa`) | Ação e filtros opcionais | Buscar no índice, selecionar evidências pela regra de relevância e manter a origem dos trechos | `ResultadoPesquisa`: status, trechos com IDs `Tn`, fontes, entidade, distância, descartes e tempo |
 | Análise (`analisar_duvidas`) | Pergunta original e trechos aceitos | Produzir conclusões fundamentadas, distinguir lacuna, divergência e necessidade de esclarecimento | Lista de `ItemAnalise`: `duvida`, `estado`, `conclusao`, `trechos`, `evidencias` |
 | Checagem da Análise (`validar_analise`) | JSON do LLM e trechos originais | Conferir campos, estados, IDs, fontes distintas em divergências e passagens literais | Itens válidos ou `AnaliseInvalida` |
-| Validação (`AgenteValidacao`) | Pergunta, rascunho e trechos consolidados | Conferir apoio lexical e, com modelo, sentido, condições, completude, datas e lacunas | `Parecer` com aprovação, problemas e consulta complementar opcional |
+| Validação (`AgenteValidacao`) | Pergunta, rascunho e trechos consolidados | Conferir apoio lexical e, com modelo, sentido, condições, completude, datas e lacunas | `Parecer` vinculado ao conteúdo revisado, com aprovação, problemas e consulta complementar opcional |
+| Comunicação (`AgenteComunicacao`) | Pergunta, rascunho, trechos e parecer aprovado | Conferir o vínculo do parecer e montar a resposta com referências por documento | `Comunicado` com texto, fontes e próximos passos |
 | Coordenação (`FluxoDocumental`) | Pergunta e recursos | Encadear etapas, limitar tentativas, tratar indisponibilidade e mapear `Tn` para referências públicas `Fn` | `GroundedAnswer` e tempo de recuperação |
 
 Arquivos de implementação: [interpretação](../../../src/pontoativo_rag/agentes/interpretacao.py), [pesquisa](../../../src/pontoativo_rag/agentes/pesquisa.py), [análise](../../../src/pontoativo_rag/agentes/analise.py), [validação](../../../src/pontoativo_rag/agentes/validacao.py), [coordenador](../../../src/pontoativo_rag/agentes/coordenador.py) e [contratos](../../../src/pontoativo_rag/agentes/contratos.py).
@@ -69,7 +70,7 @@ O campo `tipo` é repassado pela Pesquisa, mas não muda a estratégia de busca.
 5. A Análise recebe instruções para preservar condições e datas, não transferir atributos entre locais e declarar lacunas. Produz JSON com passagens que sustentam suas conclusões.
 6. A Análise confere formato e passagens. O agente de Validação revisa o rascunho e devolve problemas com trechos literais a corrigir. Havendo orçamento de correção, pode pedir uma busca complementar; o coordenador deduplica os chunks e mantém IDs únicos.
 7. A Análise recebe o diagnóstico, o rascunho anterior e os trechos consolidados. A nova versão passa novamente pela Validação.
-8. O coordenador apresenta as conclusões e referências ou, em caso de falha persistente, disponibiliza os trechos sem uma resposta redigida.
+8. A Comunicação confere se o parecer corresponde à pergunta, aos itens e aos trechos recebidos. Em seguida, formata as conclusões aprovadas, as referências e os próximos passos. Em caso de falha persistente, o coordenador disponibiliza os trechos recuperados.
 
 A colaboração ocorre por chamadas Python e estruturas compartilhadas em memória. A busca complementar é solicitada pela Validação e executada pelo coordenador. Não há fila de mensagens ou execução paralela. A interface web também possui um roteador para outras funções; o diagrama cobre especificamente o caminho documental.
 
