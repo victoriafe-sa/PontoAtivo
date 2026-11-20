@@ -212,7 +212,7 @@ def test_coordenador_devolve_trecho_sem_apoio_e_publica_a_correcao():
     etapas = [e["etapa"] for e in eventos]
     assert etapas == [
         "interpretacao_para_pesquisa", "pesquisa_para_analise", "analise_para_validacao",
-        "validacao", "validacao_para_analise", "analise_para_validacao", "validacao",
+        "validacao", "validacao_para_analise", "analise_para_validacao", "validacao", "comunicacao",
     ]
     assert [e["parecer"]["aprovado"] for e in eventos if e["etapa"] == "validacao"] == [False, True]
 
@@ -276,8 +276,8 @@ def test_validacao_pede_consulta_complementar_a_pesquisa(repetir_chunk, monkeypa
     assert [(t["id"], t["fonte"]["id"]) for t in revisoes[-1]["trechos"]] == [
         ("T1", "F029"), ("T2", "F030"),
     ]
-    texto = demo["comunicar"](final, revisoes[-1]["trechos"])
-    assert "Fonte F029" in texto and "Fonte F030" in texto
+    comunicado = next(e["comunicado"] for e in eventos if e["etapa"] == "comunicacao")
+    assert [(f["ref"], f["id"]) for f in comunicado["fontes"]] == [("F1", "F029"), ("F2", "F030")]
     # Executa o caminho de gravação do script com a consulta já exercitada acima.
     def criar_fluxo_demo(*args, **kwargs):
         for evento in eventos:
@@ -288,7 +288,8 @@ def test_validacao_pede_consulta_complementar_a_pesquisa(repetir_chunk, monkeypa
     monkeypatch.setattr("sys.argv", ["demonstrar_validacao.py", "--saida", str(saida)])
     assert demo["main"]() == 0
     registro = json.loads(saida.read_text())
-    assert registro["resposta_comunicacao"] == texto
+    assert registro["resposta_comunicacao"] == comunicado["texto"] == resposta.answer
+    assert sum(e["etapa"] == "comunicacao" for e in registro["eventos"]) == 1
 
 
 @pytest.mark.parametrize("ultima_saida,modo", [

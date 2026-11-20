@@ -1,7 +1,7 @@
 """Fluxo documental compartilhado pelo terminal e pela aplicação web.
 
-Interpretação -> Pesquisa -> Análise -> Validação (com volta à Análise e, se pedido,
-à Pesquisa). Só um rascunho aprovado pela Validação é publicado.
+Interpretação -> Pesquisa -> Análise -> Validação -> Comunicação.
+A Validação pode devolver o rascunho à Análise e solicitar uma busca complementar.
 """
 
 from collections.abc import Callable
@@ -11,6 +11,7 @@ from ..configuracao import Settings
 from ..geracao import GroundedAnswer, LLMClient, LLMUnavailable
 from ..recursos import criar_cliente, criar_recuperador
 from .analise import AnaliseInvalida, analisar_duvidas, verificar_pergunta
+from .comunicacao import AgenteComunicacao, ComunicacaoRecusada
 from .interpretacao import AgenteInterpretacao
 from .pesquisa import AgentePesquisa, criar_agente
 from .validacao import AgenteValidacao, ParecerInvalido, feedback_para_analise
@@ -35,6 +36,7 @@ class FluxoDocumental:
         self.cliente = cliente
         self.orcamento_segundos = orcamento_segundos
         self.validacao = validacao
+        self.comunicacao = AgenteComunicacao()
         self.max_correcoes = max_correcoes
         self.registrar = registrar
 
@@ -84,11 +86,13 @@ class FluxoDocumental:
                     pergunta_analise, trechos, cliente=cliente,
                     ao_tentar=registrar_tentativa, registrar=self._registrar,
                 )
+                comunicado = None
                 if self.validacao is not None:
-                    itens = self._validar(
+                    itens, parecer = self._validar(
                         pergunta_analise, itens, trechos, recuperados, acao, cliente,
                         registrar_tentativa, top_k=top_k, filters=filters,
                     )
+                    comunicado = self.comunicacao.comunicar(pergunta_analise, itens, trechos, parecer)
             except LLMUnavailable:
                 motivo = "modelo indisponível"
             except AnaliseInvalida:
@@ -97,21 +101,31 @@ class FluxoDocumental:
                 motivo = "a validação não conseguiu revisar o rascunho"
             except ValidacaoReprovada:
                 motivo = "o rascunho não passou na validação das fontes"
+            except ComunicacaoRecusada:
+                motivo = "a comunicação recusou o parecer do rascunho"
             else:
                 por_id = {chunk.chunk_id: chunk for chunk in recuperados}
                 relevantes = [por_id[trecho["chunk_id"]] for trecho in trechos]
                 indices = {trecho["id"]: i for i, trecho in enumerate(trechos)}
                 citados = {ref for item in itens for ref in item["trechos"]}
-                linhas = [
-                    " ".join([item["conclusao"], *(f"[F{indices[ref] + 1}]" for ref in item["trechos"])])
-                    for item in itens
-                ]
+                referencias = None
+                if comunicado is not None:
+                    texto = comunicado["texto"]
+                    referencias = {fonte["id"]: fonte["ref"] for fonte in comunicado["fontes"]}
+                    self._registrar({"etapa": "comunicacao", "comunicado": comunicado})
+                else:
+                    texto = "\n".join(
+                        " ".join([item["conclusao"], *(f"[F{indices[ref] + 1}]"
+                                                      for ref in item["trechos"])])
+                        for item in itens
+                    )
                 return GroundedAnswer(
-                    pergunta, "rag", "\n".join(linhas), relevantes,
+                    pergunta, "rag", texto, relevantes,
                     cited=[chunk for ref, chunk in zip(indices, relevantes) if ref in citados],
                     model_abstained=all(item["estado"] == "lacuna" for item in itens),
                     model=self.cliente.model, generation_seconds=perf_counter() - inicio,
                     generation_attempts=tentativas,
+                    source_refs=referencias,
                 ), tempo_busca
 
         por_id = {chunk.chunk_id: chunk for chunk in recuperados}
@@ -147,7 +161,7 @@ class FluxoDocumental:
             self._registrar({"etapa": "validacao", "rodada": rodada + 1, "parecer": parecer,
                              "trechos": list(trechos)})
             if parecer["aprovado"]:
-                return itens
+                return itens, parecer
             if rodada == self.max_correcoes:
                 raise ValidacaoReprovada(parecer["problemas"])
             if consulta := parecer["consulta_complementar"]:

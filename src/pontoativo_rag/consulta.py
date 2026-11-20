@@ -54,9 +54,11 @@ def format_answer(result: GroundedAnswer, retrieval_seconds: float) -> str:
     )
     if not result.retrieved:
         lines.append("   (nenhum trecho)")
-    for number, chunk in enumerate(result.retrieved, start=1):
+    for chunk in result.retrieved:
         page = f" | p. {chunk.pages}" if chunk.pages else ""
-        lines.append(f"   [F{number}] {chunk.source_id}{page} | distância {chunk.distance:.3f}")
+        lines.append(
+            f"   [{result.reference_for(chunk)}] {chunk.source_id}{page} | distância {chunk.distance:.3f}"
+        )
         lines.append(f"        {chunk.title}")
         if chunk.section:
             lines.append(f"        seção: {chunk.section}")
@@ -77,8 +79,7 @@ def format_answer(result: GroundedAnswer, retrieval_seconds: float) -> str:
     references = result.cited if result.mode == "rag" else []
     if references:
         for chunk in references:
-            ref = result.retrieved.index(chunk) + 1
-            lines.append(f"   [F{ref}] {chunk.reference()}")
+            lines.append(f"   [{result.reference_for(chunk)}] {chunk.reference()}")
     elif result.mode == "recuperacao_sem_geracao":
         lines.append("   Sem resposta redigida; consulte as fontes dos trechos acima.")
     else:

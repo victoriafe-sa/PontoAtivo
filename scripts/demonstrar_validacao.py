@@ -38,7 +38,6 @@ from pontoativo_rag.recuperacao import RetrievedChunk
 
 RAIZ = Path(__file__).resolve().parents[1]
 CORPUS = RAIZ / "prototipo" / "dados" / "chunks.jsonl"
-DOCUMENTO_F029 = "prototipo/dados/fontes/texto/F029_parque-da-cidade-dona-sarah-kubitschek-sel.txt"
 RASCUNHO_INVENTADO = RAIZ / "docs" / "agentes" / "exemplos" / "validacao_rascunho_etapa_inventada.json"
 PERGUNTA = ("Uso cadeira de rodas e quero visitar o Parque da Cidade Dona Sarah Kubitschek. "
             "Preciso pagar para entrar? Há banheiros acessíveis? O caminho até eles também é acessível?")
@@ -86,18 +85,6 @@ class AnaliseComPrimeiroRascunhoPreparado:
         return self.cliente.complete(system, user, **kwargs)
 
 
-def comunicar(itens, trechos):
-    """Comunicação provisória: conclusões aprovadas, na ordem das dúvidas, com a fonte."""
-    fontes = {t["id"]: t["fonte"] for t in trechos}
-    citadas = {fontes[r]["id"]: fontes[r] for item in itens for r in item["trechos"]}
-    linhas = [" ".join(item["conclusao"] for item in itens)]
-    for fonte in citadas.values():
-        orgao = "SEL-DF" if "SEL-DF" in fonte["instituicao"] else fonte["instituicao"]
-        documento = f" · documento da equipe: {DOCUMENTO_F029}" if fonte["id"] == "F029" else ""
-        linhas.append(f"Fonte {fonte['id']} · {orgao} · {fonte['url']}{documento}")
-    return "\n".join(linhas)
-
-
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--modelo", help="modelo do Ollama (padrão: PONTOATIVO_OLLAMA_MODEL)")
@@ -134,15 +121,7 @@ def main():
     validacoes = [e for e in eventos if e["etapa"] == "validacao"]
     ultima = validacoes[-1] if validacoes else {}
     aprovado = ultima.get("parecer", {}).get("aprovado", False)
-    final_itens = analises[-1]["itens"] if analises else []
-    # IDs consolidados pelo coordenador, incluindo a busca complementar.
-    trechos = ultima.get("trechos", [])
-    if aprovado and resposta.mode == "rag":
-        comunicacao = comunicar(final_itens, trechos)
-        eventos.append({"etapa": "validacao_para_comunicacao", "itens_aprovados": final_itens})
-        eventos.append({"etapa": "comunicacao", "resposta": comunicacao})
-    else:
-        comunicacao = resposta.answer
+    comunicacao = resposta.answer
 
     registro = {
         "executado_em": datetime.now(ZoneInfo("America/Sao_Paulo")).isoformat(),

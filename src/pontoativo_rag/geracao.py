@@ -157,6 +157,12 @@ class GroundedAnswer:
     model: str | None = None
     generation_seconds: float = 0.0
     generation_attempts: int = 0
+    source_refs: dict[str, str] | None = None
+
+    def reference_for(self, chunk: RetrievedChunk) -> str:
+        if self.source_refs is None:
+            return f"F{self.retrieved.index(chunk) + 1}"
+        return self.source_refs.get(chunk.source_id) or f"T{self.retrieved.index(chunk) + 1}"
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -168,8 +174,8 @@ class GroundedAnswer:
             "generation_seconds": round(self.generation_seconds, 2),
             "generation_attempts": self.generation_attempts,
             "retrieved": [
-                {"ref": f"F{i}", **chunk.to_dict()}
-                for i, chunk in enumerate(self.retrieved, start=1)
+                {"ref": self.reference_for(chunk), **chunk.to_dict()}
+                for chunk in self.retrieved
             ],
             "cited_chunk_ids": [chunk.chunk_id for chunk in self.cited],
             "invalid_citations": self.invalid_citations,

@@ -166,7 +166,7 @@ class Chat:
             "resposta": answer.answer,
             "fontes": [
                 {
-                    "referencia": f"F{answer.retrieved.index(chunk) + 1}",
+                    "referencia": answer.reference_for(chunk),
                     "titulo": chunk.title,
                     "url": chunk.location,
                     "paginas": chunk.pages,

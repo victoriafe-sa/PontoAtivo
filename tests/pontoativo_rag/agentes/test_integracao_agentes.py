@@ -3,6 +3,7 @@ from unittest.mock import Mock, patch
 
 from pontoativo_rag.agentes.analise import analisar_duvidas
 from pontoativo_rag.agentes.pesquisa import AgentePesquisa
+from pontoativo_rag.agentes.validacao import AgenteValidacao
 from pontoativo_rag.recuperacao import RetrievedChunk
 
 
@@ -65,6 +66,39 @@ def test_coordenador_abstem_sem_chamar_o_modelo():
     resposta, _ = FluxoDocumental(pesquisa, cliente).responder("Qual é o horário?")
     assert resposta.mode == "abstencao"
     cliente.complete.assert_not_called()
+
+
+def test_coordenador_publica_comunicado_com_referencias_na_ordem_da_resposta():
+    from pontoativo_rag.agentes.coordenador import FluxoDocumental
+
+    chunks = [
+        RetrievedChunk("c1", "DOC-001", "Horário", "", "", "Abre às 8h.", 0.03, 1),
+        RetrievedChunk("c2", "DOC-002", "Entrada", "", "", "Entrada gratuita.", 0.04, 1),
+        RetrievedChunk("c3", "DOC-003", "Aulas", "", "", "Há aulas de natação.", 0.05, 1),
+    ]
+    itens = [
+        {"duvida": duvida, "estado": "sustentada", "conclusao": chunk.text,
+         "trechos": [ref], "evidencias": [{"id": ref, "passagem": chunk.text}]}
+        for duvida, chunk, ref in [
+            ("A entrada é gratuita?", chunks[1], "T2"),
+            ("Qual é o horário?", chunks[0], "T1"),
+        ]
+    ]
+    pesquisa = AgentePesquisa(Mock(search=Mock(return_value=chunks)), max_distance=0.12)
+    cliente = Mock(model="teste")
+    cliente.complete.return_value = json.dumps(itens)
+    eventos = []
+    fluxo = FluxoDocumental(pesquisa, cliente, validacao=AgenteValidacao(), registrar=eventos.append)
+
+    resposta, _ = fluxo.responder("Qual é o horário e quanto custa a entrada?")
+
+    assert resposta.mode == "rag"
+    assert "Entrada gratuita. [F1]" in resposta.answer
+    assert "Abre às 8h. [F2]" in resposta.answer
+    assert "O que fazer agora" in resposta.answer
+    assert resposta.retrieved == chunks
+    assert [trecho["ref"] for trecho in resposta.to_dict()["retrieved"]] == ["F2", "F1", "T3"]
+    assert [evento["etapa"] for evento in eventos[-2:]] == ["validacao", "comunicacao"]
 
 
 def test_coordenador_mostra_trecho_se_modelo_estiver_indisponivel():

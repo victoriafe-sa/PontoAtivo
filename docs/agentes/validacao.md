@@ -80,6 +80,10 @@ continuar reprovado depois das correções, ou se o revisor falhar, a resposta c
 em `recuperacao_sem_geracao` e mostra só os trechos. Cada consulta passa a fazer
 ao menos uma chamada a mais ao modelo.
 
+O parecer inclui o campo `resumo_revisado`, calculado a partir da pergunta, do
+rascunho e dos trechos. A Comunicação confere esse resumo antes de formatar a
+resposta. Uma alteração nesses dados exige uma nova revisão.
+
 ## Exemplos preparados à mão
 
 Os dois usam a pergunta da demonstração e o trecho F029-003 (Parque da Cidade, SEL-DF):
