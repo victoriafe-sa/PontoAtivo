@@ -842,3 +842,6 @@ body[data-tela-atual="mapa"] #map { height: max(460px, calc(100vh - 8rem)); bord
 .hero-trust li::before { content: ""; display: inline-block; width: .5rem; height: .5rem; margin-right: .5rem; border-radius: 50%; background: var(--yellow); vertical-align: middle; }
 .stat-dot { display: block; width: .8rem; height: .8rem; border-radius: 50%; margin: 0 auto .5rem; }
 .demo-note-end { margin: 1.5rem 0 0; }
+/* Aviso "Sobre os dados" no fim do mapa: só um texto pequeno e cinza, sem caixa. */
+.demo-note.demo-note-end { background: none; border: 0; border-radius: 0; padding: 0; margin: 1.5rem 0 0; color: var(--gray); font-size: .8rem; line-height: 1.5; }
+.demo-note.demo-note-end strong { color: var(--gray); font-weight: 700; }
