@@ -428,23 +428,42 @@ function popupOverflow(el) {
   };
 }
 
-function fitPopupInMap(popup) {
+// Ao abrir um balão, o mapa desliza até deixá-lo no centro (ou com o topo à
+// vista, se o balão for mais alto que o mapa), sem sair dos limites do DF.
+function shrinkPopupIfNeeded(popup) {
   const el = popup.getElement();
   if (!el || !map) return;
-  // 1. Move o mapa, sem animação e sem sair dos limites do DF, para mostrar o balão.
-  const { x, y } = popupOverflow(el);
-  if (x || y) {
-    const zoom = map.getZoom();
-    const target = map.containerPointToLatLng(map.getSize().divideBy(2).add([x, y]));
-    const center = map.options.maxBounds && map._limitCenter
-      ? map._limitCenter(target, zoom, map.options.maxBounds) : target;
-    map.setView(center, zoom, { animate: false });
-  }
-  // 2. Se ainda faltar espaço acima, o balão encolhe e o resto rola por dentro.
+  // Se ainda faltar espaço acima, o balão encolhe e o resto rola por dentro.
   const rest = popupOverflow(el).y;
   if (rest < 0) {
     popup.options.maxHeight = Math.max(160, popup.options.maxHeight + rest);
     popup.update();
+  }
+}
+
+function fitPopupInMap(popup) {
+  const el = popup.getElement();
+  if (!el || !map) return;
+  const m = map.getContainer().getBoundingClientRect();
+  const p = el.getBoundingClientRect();
+  const dx = p.left + p.width / 2 - (m.left + m.width / 2);
+  const tall = p.height > m.height - 2 * POPUP_PAD;
+  const dy = tall ? p.top - m.top - POPUP_PAD : p.top + p.height / 2 - (m.top + m.height / 2);
+  const zoom = map.getZoom();
+  const target = map.containerPointToLatLng(map.getSize().divideBy(2).add([dx, dy]));
+  const center = map.options.maxBounds && map._limitCenter
+    ? map._limitCenter(target, zoom, map.options.maxBounds) : target;
+  const shift = map.latLngToContainerPoint(center).distanceTo(map.getSize().divideBy(2));
+  const calm = document.body.classList.contains("no-motion") || matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (shift > 4) {
+    map.once("moveend", () => shrinkPopupIfNeeded(popup));
+    map.panTo(center, { animate: !calm, duration: 0.35 });
+  } else {
+    shrinkPopupIfNeeded(popup);
+  }
+  // Se o mapa não estiver inteiro na tela, a página rola até ele.
+  if (m.top < 0 || m.bottom > innerHeight) {
+    map.getContainer().scrollIntoView({ block: "center", behavior: calm ? "auto" : "smooth" });
   }
 }
 
