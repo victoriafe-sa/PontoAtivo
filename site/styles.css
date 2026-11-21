@@ -851,3 +851,16 @@ body[data-tela-atual="mapa"] #map { height: max(460px, calc(100vh - 8rem)); bord
 .meeting-card .meeting-holiday { background: #fff4d6; color: #6b4a00; font-weight: 600; }
 .meeting-card .meeting-weather { background: #eef5fb; color: var(--navy); }
 .meeting-card .meeting-holiday[hidden], .meeting-card .meeting-weather[hidden] { display: none; }
+
+/* Rotas a pé e para cadeira de rodas */
+.map-col { position: relative; }
+.pop-rotas { display: flex; flex-wrap: wrap; gap: .35rem; margin: .5rem 0; }
+.pop-rotas button { font: inherit; font-size: .78rem; font-weight: 700; border: 1px solid var(--navy); background: #fff; color: var(--navy); border-radius: 999px; padding: .35rem .7rem; cursor: pointer; }
+.pop-rotas button:hover { background: var(--navy); color: #fff; }
+.route-info { position: absolute; right: .75rem; top: .75rem; z-index: 600; width: min(340px, calc(100% - 1.5rem)); max-height: 60%; overflow: auto; background: #fff; border-radius: 14px; box-shadow: 0 12px 30px rgba(15, 26, 54, .25); padding: .8rem .95rem; font-size: .88rem; }
+.route-info[hidden] { display: none; }
+.route-info p { margin: .3rem 0; }
+.route-info .route-head { display: flex; justify-content: space-between; align-items: flex-start; gap: .5rem; }
+.route-info .route-head button { border: 0; background: #f1f4f9; border-radius: 50%; width: 1.8rem; height: 1.8rem; cursor: pointer; flex: none; }
+.route-info ol { margin: .4rem 0; padding-left: 1.2rem; }
+.route-info .route-src { color: var(--gray); font-size: .76rem; }

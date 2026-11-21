@@ -19,7 +19,7 @@ from .encontros import Meetings
 from .configuracao import Settings
 from .geracao import LLMUnavailable, OllamaClient
 from .moderacao import termo_improprio
-from .servicos_externos import ServicosExternos, ler_data_hora
+from .servicos_externos import ServicosExternos, ler_data_hora, validar_ponto
 
 
 ROUTES = ("mapa", "documentos", "duvidas", "fora_escopo", "esclarecer")
@@ -347,6 +347,8 @@ class Handler(SimpleHTTPRequestHandler):
         try:
             if path == "/api/me":
                 self.reply(200, {"usuario": self.user(), "admin_local": self.local_access()})
+            elif path == "/api/servicos":
+                self.reply(200, {"rotas": self.services.rotas_disponiveis})
             elif path == "/api/clima":
                 query = parse_qs(urlsplit(self.path).query)
                 try:
@@ -394,6 +396,17 @@ class Handler(SimpleHTTPRequestHandler):
                 if method == "DELETE":
                     self.accounts.logout(self.token())
                     return self.reply(200, {"usuario": None}, self.cookie("", 0))
+            if path == "/api/rota" and method == "POST":
+                # A origem é a localização da pessoa: vem no corpo, nunca na URL.
+                data = self.read_json()
+                origem = data.get("de") or []
+                destino = data.get("para") or []
+                try:
+                    origem = validar_ponto(float(origem[0]), float(origem[1]))
+                    destino = validar_ponto(float(destino[0]), float(destino[1]))
+                except (TypeError, ValueError, IndexError):
+                    raise ApiError(400, "Coordenada inválida.") from None
+                return self.reply(200, self.services.rota(origem, destino, data.get("perfil")))
             if path == "/api/sessao/admin" and method == "POST":
                 if not self.local_access():
                     raise ApiError(403, "O acesso de admin só funciona no computador do servidor.")
@@ -449,7 +462,8 @@ def main():
     handler = partial(
         Handler, chat=Chat(settings), accounts=Accounts(database, regions={place["regiao"] for place in places if place.get("regiao")}),
         meetings=Meetings(database, places), public_origin=os.getenv("PONTOATIVO_PUBLIC_ORIGIN"),
-        services=ServicosExternos(),
+        # Rotas a pé e para cadeira de rodas: chave gratuita do openrouteservice.
+        services=ServicosExternos(ors_key=os.getenv("PONTOATIVO_ORS_API_KEY", "")),
         # Só ative atrás de um proxy HTTPS local que sobrescreva X-Forwarded-For.
         trust_proxy=os.getenv("PONTOATIVO_PROXY_CONFIAVEL", "").strip() in {"1", "sim", "true"},
         directory=static_dir,

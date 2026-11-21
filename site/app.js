@@ -399,11 +399,98 @@ function popupHtml(r) {
       ${podeMarcarEncontro(r) ? `<button type="button" class="pop-meet-add" data-meeting-place="${esc(r.id)}" title="Marcar um encontro esportivo neste local"><span aria-hidden="true">📅</span> Marcar encontro</button>` : ""}</div>
     ${meetupsHtml(r)}
     ${details(r, true)}
+    ${r.lat != null && rotasDisponiveis ? `<div class="pop-rotas" role="group" aria-label="Traçar rota até ${esc(r.n)}">
+      <button type="button" data-rota="${esc(r.id)}" data-perfil="cadeira_de_rodas">♿ Rota para cadeira de rodas</button>
+      <button type="button" data-rota="${esc(r.id)}" data-perfil="a_pe">🚶 Rota a pé</button>
+    </div>` : ""}
     <div class="place-actions">
       ${r.lat != null ? routeLinks(r) : ""}
       <button type="button" class="btn-contribute" data-contribute-id="${esc(r.id)}" data-contribute-name="${esc(r.n)}">✍️ Colaborar</button>
     </div></div>`;
 }
+
+// ---------- Rotas a pé e para cadeira de rodas (openrouteservice, pelo servidor) ----------
+// A origem é a localização da pessoa: só é usada depois que ela permite, e vai
+// para o servidor no corpo da requisição, nunca na URL.
+let rotasDisponiveis = false;
+let routeLayer = null;
+fetch("/api/servicos", { headers: { Accept: "application/json" } })
+  .then((r) => (r.ok ? r.json() : {}))
+  .then((d) => { rotasDisponiveis = Boolean(d.rotas); })
+  .catch(() => {});
+
+function askLocation() {
+  if (userPos && !askSetPos) return Promise.resolve(userPos);
+  return new Promise((resolve, reject) => {
+    if (!navigator.geolocation) { reject(new Error("Seu navegador não informa a localização.")); return; }
+    navigator.geolocation.getCurrentPosition(
+      (pos) => resolve([pos.coords.latitude, pos.coords.longitude]),
+      () => reject(new Error("Sem permissão de localização, não dá para traçar a rota.")),
+      { timeout: 10000 });
+  });
+}
+
+function fmtDist(m) { return m >= 1000 ? `${(m / 1000).toFixed(1).replace(".", ",")} km` : `${m} m`; }
+function fmtTempo(s) { const min = Math.max(1, Math.round(s / 60)); return min >= 60 ? `${Math.floor(min / 60)} h ${min % 60} min` : `${min} min`; }
+
+function showRouteInfo(html) {
+  let box = $("#route-info");
+  if (!box) {
+    box = document.createElement("div");
+    box.id = "route-info";
+    box.className = "route-info";
+    box.setAttribute("role", "status");
+    box.setAttribute("aria-live", "polite");
+    $("#map").parentElement.append(box);
+  }
+  box.innerHTML = html;
+  box.hidden = false;
+}
+
+function clearRoute() {
+  if (routeLayer) { routeLayer.remove(); routeLayer = null; }
+  const box = $("#route-info");
+  if (box) box.hidden = true;
+}
+
+async function traceRoute(placeId, perfil) {
+  const r = LOCAIS.find((x) => x.id === placeId);
+  if (!r || r.lat == null || !map) return;
+  const nome = perfil === "cadeira_de_rodas" ? "para cadeira de rodas" : "a pé";
+  showRouteInfo(`<p>Pedindo sua localização para traçar a rota ${nome}…</p>`);
+  try {
+    const origem = await askLocation();
+    showRouteInfo(`<p>Traçando a rota ${nome} até ${esc(r.n)}…</p>`);
+    const response = await fetch("/api/rota", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({ de: origem, para: [r.lat, r.lon], perfil }),
+    });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.erro || "Não foi possível traçar a rota agora.");
+    clearRoute();
+    routeLayer = L.layerGroup([
+      L.polyline(data.linha, { color: perfil === "cadeira_de_rodas" ? "#1f5fb0" : "#0f6e2b", weight: 6, opacity: .85 }),
+      L.circleMarker(origem, { radius: 8, color: "#fff", fillColor: "#2f78c8", fillOpacity: 1, weight: 3 }).bindTooltip("Você"),
+    ]).addTo(map);
+    map.closePopup();
+    map.fitBounds(L.latLngBounds(data.linha), { padding: [40, 40] });
+    const passos = data.passos.map((p) => `<li>${esc(p.instrucao)} <small>(${fmtDist(p.distancia_m)})</small></li>`).join("");
+    showRouteInfo(`<div class="route-head"><strong>Rota ${nome} até ${esc(r.n)}</strong>
+        <button type="button" data-route-clear aria-label="Apagar a rota">✕</button></div>
+      <p>${fmtDist(data.distancia_m)} · cerca de ${fmtTempo(data.duracao_s)}</p>
+      ${passos ? `<details><summary>Ver o passo a passo</summary><ol>${passos}</ol></details>` : ""}
+      <p class="route-src">Rota calculada pelo openrouteservice com dados do OpenStreetMap. ${perfil === "cadeira_de_rodas" ? "Confira o trajeto: calçadas e rampas podem não estar mapeadas." : ""}</p>`);
+  } catch (error) {
+    showRouteInfo(`<div class="route-head"><strong>Rota ${nome}</strong><button type="button" data-route-clear aria-label="Fechar">✕</button></div><p>${esc(error.message)}</p>`);
+  }
+}
+
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest("[data-rota]");
+  if (btn) { traceRoute(btn.dataset.rota, btn.dataset.perfil); return; }
+  if (e.target.closest("[data-route-clear]")) clearRoute();
+});
 
 // O balão nunca passa da altura do mapa: o que não couber rola por dentro dele.
 // Desconta o pino, a seta do balão e uma folga para o mapa não precisar se mover tanto.
