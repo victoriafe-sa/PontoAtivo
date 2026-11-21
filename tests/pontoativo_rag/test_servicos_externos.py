@@ -92,6 +92,34 @@ def test_falha_do_servico_vira_mensagem_amigavel():
     assert erro.value.status == 503
 
 
+def test_rota_sem_chave_avisa_que_nao_esta_configurada():
+    with pytest.raises(ServicoIndisponivel):
+        ServicosExternos(ors_key="").rota(PARQUE_DA_CIDADE, (-15.79, -47.88), "cadeira_de_rodas")
+
+
+def test_rota_para_cadeira_de_rodas_usa_o_perfil_certo_e_a_chave():
+    geo = {"features": [{"geometry": {"coordinates": [[-47.90, -15.80], [-47.88, -15.79]]},
+                         "properties": {"summary": {"distance": 2310.4, "duration": 1830.2},
+                                        "segments": [{"steps": [{"instruction": "Siga em frente", "distance": 120.3}]}]}}]}
+    fetch = FakeFetch({"openrouteservice": geo})
+    rota = ServicosExternos(ors_key="chave-teste", fetch=fetch).rota(PARQUE_DA_CIDADE, (-15.79, -47.88), "cadeira_de_rodas")
+    url, kwargs = fetch.chamadas[0]
+    assert url.endswith("/wheelchair/geojson")
+    assert kwargs["headers"] == {"Authorization": "chave-teste"}
+    assert kwargs["body"]["coordinates"] == [[-47.90, -15.80], [-47.88, -15.79]]
+    assert rota["distancia_m"] == 2310 and rota["duracao_s"] == 1830
+    assert rota["linha"] == [[-15.80, -47.90], [-15.79, -47.88]]
+    assert rota["passos"] == [{"instrucao": "Siga em frente", "distancia_m": 120}]
+
+
+def test_rota_recusa_perfil_desconhecido_e_ponto_fora_do_df():
+    servicos = ServicosExternos(ors_key="chave", fetch=FakeFetch({}))
+    with pytest.raises(ApiError):
+        servicos.rota(PARQUE_DA_CIDADE, (-15.79, -47.88), "carro")
+    with pytest.raises(ApiError):
+        servicos.rota(PARQUE_DA_CIDADE, (-23.55, -46.63), "a_pe")
+
+
 def test_niveis_em_portugues():
     assert nivel_uv(9) == "muito alto" and nivel_ar(160) == "ruim"
 
@@ -102,9 +130,12 @@ def test_data_com_fuso_vira_horario_de_brasilia():
 
 @pytest.fixture
 def api(tmp_path):
-    servicos = ServicosExternos(fetch=FakeFetch({
+    geo = {"features": [{"geometry": {"coordinates": [[-47.90, -15.80]]},
+                         "properties": {"summary": {"distance": 10, "duration": 9}, "segments": []}}]}
+    servicos = ServicosExternos(ors_key="chave", fetch=FakeFetch({
         "air-quality": ar_fake(), "forecast": tempo_fake(),
         "brasilapi": [{"date": "2026-11-15", "name": "Proclamação da República"}],
+        "openrouteservice": geo,
     }))
 
     class Chat:
@@ -123,10 +154,14 @@ def api(tmp_path):
     thread.join()
 
 
-def test_rotas_http_de_clima_e_feriados(api):
+def test_rotas_http_de_clima_feriados_e_rota(api):
+    assert api.get("/api/servicos").json() == {"rotas": True}
     clima = api.get("/api/clima", params={"lat": -15.80, "lon": -47.90, "inicio": "2026-11-22T18:00"})
     assert clima.status_code == 200 and clima.json()["temperatura"] == 27.4
     assert api.get("/api/clima", params={"lat": 0, "lon": 0, "inicio": "2026-11-22T18:00"}).status_code == 400
     feriados = api.get("/api/feriados", params={"ano": 2026}).json()
     assert feriados["fonte"] == "BrasilAPI" and len(feriados["feriados"]) == 2
     assert api.get("/api/feriados", params={"ano": "x"}).status_code == 400
+    rota = api.post("/api/rota", json={"de": [-15.80, -47.90], "para": [-15.79, -47.88], "perfil": "a_pe"})
+    assert rota.status_code == 200 and rota.json()["distancia_m"] == 10
+    assert api.post("/api/rota", json={"de": "x", "para": [], "perfil": "a_pe"}).status_code == 400

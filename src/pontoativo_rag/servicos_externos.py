@@ -1,10 +1,12 @@
-"""Serviços externos usados pelo site: tempo e feriados.
+"""Serviços externos usados pelo site: tempo, feriados e rotas.
 
 - Open-Meteo: previsão do tempo, índice UV e qualidade do ar (sem chave).
 - BrasilAPI: feriados nacionais (sem chave), mais os feriados distritais do DF.
+- openrouteservice: rotas a pé e para cadeira de rodas (precisa de chave gratuita,
+  em PONTOATIVO_ORS_API_KEY).
 
 O site chama só o servidor do PontoAtivo, que consulta esses serviços com cache.
-As coordenadas consultadas ficam restritas ao DF.
+Assim a chave não vai para o navegador e as coordenadas ficam restritas ao DF.
 """
 
 from __future__ import annotations
@@ -28,6 +30,10 @@ TIMEOUT = 12
 OPEN_METEO = "https://api.open-meteo.com/v1/forecast"
 OPEN_METEO_AR = "https://air-quality-api.open-meteo.com/v1/air-quality"
 BRASILAPI_FERIADOS = "https://brasilapi.com.br/api/feriados/v1/{ano}"
+ORS_DIRECTIONS = "https://api.openrouteservice.org/v2/directions/{perfil}/geojson"
+
+PERFIS_ROTA = {"a_pe": "foot-walking", "cadeira_de_rodas": "wheelchair"}
+MAX_DISTANCIA_ROTA_KM = 30
 
 # Feriados distritais do DF que a BrasilAPI (só nacionais) não traz.
 # Lei Distrital nº 963/1995: Dia do Evangélico, 30 de novembro.
@@ -65,6 +71,12 @@ def validar_ponto(lat, lon):
     return lat, lon
 
 
+def _distancia_km(a, b):
+    lat1, lon1, lat2, lon2 = map(math.radians, (*a, *b))
+    h = math.sin((lat2 - lat1) / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin((lon2 - lon1) / 2) ** 2
+    return 6371 * 2 * math.asin(math.sqrt(h))
+
+
 def nivel_uv(uv):
     if uv is None:
         return None
@@ -81,11 +93,16 @@ def nivel_ar(aqi):
 
 
 class ServicosExternos:
-    def __init__(self, fetch=_http_json, clock=time.time):
+    def __init__(self, ors_key="", fetch=_http_json, clock=time.time):
+        self.ors_key = (ors_key or "").strip()
         self.fetch = fetch
         self.clock = clock
         self._cache = {}
         self._lock = Lock()
+
+    @property
+    def rotas_disponiveis(self):
+        return bool(self.ors_key)
 
     def _cached(self, key, ttl, load):
         now = self.clock()
@@ -174,6 +191,43 @@ class ServicosExternos:
             return sorted(lista, key=lambda f: f["data"])
 
         return self._cached(("feriados", ano), 86400, carregar)
+
+    # ---------- openrouteservice ----------
+    def rota(self, origem, destino, perfil):
+        if perfil not in PERFIS_ROTA:
+            raise ApiError(400, "Escolha a rota a pé ou para cadeira de rodas.")
+        if not self.ors_key:
+            raise ServicoIndisponivel("As rotas ainda não estão configuradas neste servidor.")
+        origem, destino = validar_ponto(*origem), validar_ponto(*destino)
+        if _distancia_km(origem, destino) > MAX_DISTANCIA_ROTA_KM:
+            raise ApiError(400, f"A rota a pé vai até {MAX_DISTANCIA_ROTA_KM} km.")
+        chave = ("rota", perfil, *(round(v, 4) for v in (*origem, *destino)))
+
+        def carregar():
+            dados = self._buscar(
+                "O serviço de rotas",
+                ORS_DIRECTIONS.format(perfil=PERFIS_ROTA[perfil]),
+                headers={"Authorization": self.ors_key},
+                body={"coordinates": [[origem[1], origem[0]], [destino[1], destino[0]]],
+                      "language": "pt", "instructions": True},
+            )
+            try:
+                feature = dados["features"][0]
+                resumo = feature["properties"]["summary"]
+                passos = [p for s in feature["properties"].get("segments", []) for p in s.get("steps", [])]
+                return {
+                    "perfil": perfil,
+                    "distancia_m": round(resumo.get("distance", 0)),
+                    "duracao_s": round(resumo.get("duration", 0)),
+                    "linha": [[lat, lon] for lon, lat, *_ in feature["geometry"]["coordinates"]],
+                    "passos": [{"instrucao": p.get("instruction", ""), "distancia_m": round(p.get("distance", 0))}
+                               for p in passos[:30]],
+                    "fonte": "openrouteservice",
+                }
+            except (KeyError, IndexError, TypeError, ValueError):
+                raise ServicoIndisponivel("Não encontrei uma rota entre esses pontos.") from None
+
+        return self._cached(chave, 86400, carregar)
 
 
 def ler_data_hora(texto):

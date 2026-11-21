@@ -84,15 +84,20 @@ Depois abra http://127.0.0.1:8766/. A primeira ingestão baixa o modelo E5 e
 monta o índice em `dados/rag/vetorial/`. Detalhes, avaliação e opções em
 [docs/rag/como-rodar.md](docs/rag/como-rodar.md).
 
-## Serviços externos
+## Serviços externos do mapa
 
-O servidor consulta serviços públicos com cache, e o site fala só com o servidor.
-Os pontos consultados precisam estar no DF.
+O servidor consulta três serviços públicos, com cache, e o site fala só com o
+servidor. A chave do openrouteservice fica no servidor, e os pontos consultados
+precisam estar no DF.
 
 | Serviço | Para quê | Chave |
 |---|---|---|
 | [Open-Meteo](https://open-meteo.com/) | Previsão do tempo, índice UV e qualidade do ar na hora de cada encontro (até 15 dias antes) | Não precisa |
-| [BrasilAPI](https://brasilapi.com.br/) | Aviso de feriado nos cartões de encontro. A BrasilAPI traz os nacionais; o PontoAtivo soma o feriado distrital de 30/11 | Não precisa |
+| [BrasilAPI](https://brasilapi.com.br/) | Aviso de feriado nacional nos encontros; o feriado distrital de 30/11 é somado pelo PontoAtivo | Não precisa |
+| [openrouteservice](https://openrouteservice.org/) | Rota a pé e para cadeira de rodas a partir da localização da pessoa, nos balões do mapa | Gratuita, em `PONTOATIVO_ORS_API_KEY` |
+
+A localização da pessoa só é usada para a rota, depois que ela permite, e vai
+para o servidor no corpo da requisição, não na URL.
 
 ## Testes
 
