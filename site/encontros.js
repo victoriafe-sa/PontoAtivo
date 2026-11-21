@@ -195,7 +195,7 @@
     item.append(header);
     if (preferences().esportes.includes(event.esporte)) {
       item.classList.add("meeting-card-fav");
-      item.append(node("p", "⭐ Um dos seus esportes", "meeting-fav"));
+      item.append(node("p", "Um dos seus esportes", "meeting-fav"));
     }
     item.append(node("p", event.local.nome, "meeting-place-name"));
     item.append(node("p", event.local.regiao, "meta"));
@@ -232,7 +232,7 @@
         : "Sua presença está confirmada.";
       item.append(node("p", participation, "meeting-confirmed"));
     }
-    const route = node("a", "🗺️ Ver local no mapa", "meeting-map-link");
+    const route = node("a", "Ver local no mapa", "meeting-map-link");
     route.href = "#place-" + event.local.id;
     route.dataset.meetingFocus = event.local.id;
     actions.append(route);
