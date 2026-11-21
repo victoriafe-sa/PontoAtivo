@@ -94,7 +94,7 @@ let fontPx = parseInt(localStorage.getItem("pa-font") || "18", 10);
 const applyFont = () => document.documentElement.style.setProperty("--fs", fontPx + "px");
 applyFont();
 const toggles = { contrast: "high-contrast", motion: "no-motion" };
-// Painel flutuante de acessibilidade: abre no botão ♿, fecha com Esc ou clicando fora.
+// Painel flutuante de acessibilidade: abre no botão flutuante, fecha com Esc ou clicando fora.
 const a11yToggle = $("#a11y-toggle");
 const a11yPanel = $("#a11y-panel");
 const openA11y = (open) => { a11yPanel.hidden = !open; a11yToggle.setAttribute("aria-expanded", String(open)); };
@@ -142,7 +142,6 @@ setInterval(() => {
 function modCard(m, hidden) {
   const [label, cls, bg] = TAG[m.t];
   return `<article class="mod-card"${hidden ? ' aria-hidden="true"' : ""}>
-    <span class="ico" style="background:${bg}" aria-hidden="true">${m.i}</span>
     <h3>${esc(m.n)}</h3><p>${esc(m.d)}</p><span class="tag ${cls}">${label}</span></article>`;
 }
 const half = Math.ceil(MODALIDADES.length / 2);
@@ -169,7 +168,7 @@ $("#gap-pend").textContent = `${pendentes} parques da lista do Ibram ainda estã
 
 // Estatísticas na seção Fontes
 $("#stats").innerHTML = ORDER.filter((t) => counts[t]).map((t) =>
-  `<div class="stat"><span class="stat-ico" style="background:${TYPES[t].color}1a;color:${TYPES[t].color}" aria-hidden="true">${TYPES[t].ico}</span><strong>${fmt(counts[t])}</strong><span>${TYPES[t].label}</span></div>`).join("");
+  `<div class="stat"><span class="stat-dot" style="background:${TYPES[t].color}" aria-hidden="true"></span><strong>${fmt(counts[t])}</strong><span>${TYPES[t].label}</span></div>`).join("");
 
 // ---------- Filtros ----------
 $("#f-tipos").innerHTML = ORDER.filter((t) => counts[t]).map((t) =>
@@ -565,7 +564,7 @@ function renderMeetPanel() {
   const shown = (soon.length ? soon : allMeetups).slice(0, 8);
   $("#map-meet-title").textContent = soon.length || !allMeetups.length ? "Encontros de hoje e amanhã" : "Próximos encontros";
   list.innerHTML = shown.length ? shown.map((e) => meetCard(e, today, tomorrow)).join("")
-    : '<li class="map-meet-empty">Nenhum encontro marcado ainda.<br>Clique em um local do mapa e use <b>📅 Marcar encontro</b>.</li>';
+    : '<li class="map-meet-empty">Nenhum encontro marcado ainda.<br>Clique em um local do mapa e use <b>Marcar encontro</b>.</li>';
 }
 
 document.addEventListener("pa:encontros", (event) => {
@@ -755,7 +754,7 @@ $("#btn-near").addEventListener("click", () => {
     (pos) => {
       userPos = [pos.coords.latitude, pos.coords.longitude];
       askSetPos = false;
-      btn.textContent = "📍 Ordenado por proximidade";
+      btn.textContent = "Ordenado por proximidade";
       if (map) {
         userLayer.clearLayers();
         L.circleMarker(userPos, { radius: 9, color: "#fff", fillColor: "#2f78c8", fillOpacity: 1, weight: 3 }).bindPopup("Você está aqui").addTo(userLayer);
@@ -968,7 +967,7 @@ function suggestDuvidas(question) {
   const button = document.createElement("button");
   button.type = "button";
   button.className = "btn btn-outline ask-go-duvidas";
-  button.textContent = "🔎 Pesquisar nas dúvidas";
+  button.textContent = "Pesquisar nas dúvidas";
   button.addEventListener("click", () => {
     $("#duv-q").value = question;
     window.PontoAtivoTelas.ir("pergunte-duvidas");
@@ -1187,7 +1186,7 @@ async function searchMap(raw) {
   const from = ref && refFrom !== "me" ? ref.pos : null; // "minha localização": o app de rota usa o GPS na hora
   box.innerHTML = `
     <div class="ask-understood">Entendi: ${entendi}</div>
-    <div class="ask-head"><h4>${esc(titulo)}</h4><button type="button" class="ask-speak" id="ask-speak">🔊 Ouvir resposta</button></div>
+    <div class="ask-head"><h4>${esc(titulo)}</h4><button type="button" class="ask-speak" id="ask-speak">Ouvir resposta</button></div>
     ${totalNoDf ? `<p>Mostrando ${list.length} opções. Veja as demais no mapa ou indique uma região para refinar.</p>` : ""}
     <ol class="ask-list">${list.map((r) => `
       <li>
@@ -1256,7 +1255,7 @@ $("#ask-answer").addEventListener("click", (e) => {
     finalText = ""; input.value = "";
     try { rec.start(); } catch { /* já iniciado */ }
   });
-  rec.onstart = () => { setOn(true); status.textContent = "🎙️ Ouvindo… fale sua pergunta. Toque no microfone de novo para parar."; };
+  rec.onstart = () => { setOn(true); status.textContent = "Ouvindo… fale sua pergunta. Toque no microfone de novo para parar."; };
   rec.onresult = (ev) => {
     let interim = "";
     for (let i = ev.resultIndex; i < ev.results.length; i++) {

@@ -12,14 +12,14 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-  <link rel="stylesheet" href="styles.css?v=acc-2" />
+  <link rel="stylesheet" href="styles.css?v=sem-emoji-2" />
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
   <!-- Acessibilidade: botão flutuante no canto inferior esquerdo (o direito tem o "voltar ao topo"). -->
   <div class="a11y-float">
-    <button type="button" class="a11y-toggle" id="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel" aria-label="Opções de acessibilidade" title="Acessibilidade">♿</button>
+    <button type="button" class="a11y-toggle" id="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel" aria-label="Opções de acessibilidade" title="Acessibilidade"><svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><circle cx="12" cy="4" r="2"/><path d="M19 8.5c0 .6-.4 1-1 1.1l-4 .5V13l2.9 6.6a1 1 0 0 1-1.8.8L12.6 15h-1.2l-2.5 5.4a1 1 0 0 1-1.8-.8L10 13v-2.9l-4-.5a1 1 0 0 1 .2-2l5.3.6h1l5.3-.6c.6-.1 1.2.4 1.2.9z"/></svg></button>
     <div class="a11y-panel" id="a11y-panel" role="toolbar" aria-label="Opções de acessibilidade" hidden>
       <p class="a11y-label">Acessibilidade</p>
       <div class="a11y-row">
@@ -94,14 +94,14 @@
           <p class="lead">O mapa esportivo do DF: <strong><span data-count="pec">403</span> PECs</strong>, <strong><span data-count="quadras">880</span> quadras</strong>, <strong><span data-count="campo">141</span> campos de futebol</strong>, parques e os <strong>12 Centros Olímpicos e Paralímpicos</strong>, com a fonte oficial e a data de cada informação.</p>
           <div class="hero-cta">
             <a href="#mapa" class="btn btn-primary">Abrir o mapa</a>
-            <a href="#pergunte" class="btn btn-ghost">💬 Perguntar por voz ou texto</a>
-            <a href="#encontros" class="btn btn-ghost">📅 Encontros esportivos</a>
-            <a href="#duvidas" class="btn btn-ghost">🔎 Pesquisar dúvidas</a>
+            <a href="#pergunte" class="btn btn-ghost">Perguntar por voz ou texto</a>
+            <a href="#encontros" class="btn btn-ghost">Encontros esportivos</a>
+            <a href="#duvidas" class="btn btn-ghost">Pesquisar dúvidas</a>
           </div>
           <ul class="hero-trust" aria-label="Princípios">
-            <li><span aria-hidden="true">✔</span> Fonte e data em cada local</li>
-            <li><span aria-hidden="true">♿</span> Acessibilidade só quando verificada</li>
-            <li><span aria-hidden="true">🔒</span> Localização só com sua permissão</li>
+            <li>Fonte e data em cada local</li>
+            <li>Acessibilidade só quando verificada</li>
+            <li>Localização só com sua permissão</li>
           </ul>
         </div>
 
@@ -140,19 +140,16 @@
         <ol class="steps">
           <li class="step">
             <span class="step-num">01</span>
-            <span class="step-ico" aria-hidden="true">🎯</span>
             <h3>Filtre pelo que importa</h3>
             <p>Tipo de espaço, região administrativa, modalidade, gratuidade, iluminação e programas para pessoas com deficiência.</p>
           </li>
           <li class="step">
             <span class="step-num">02</span>
-            <span class="step-ico" aria-hidden="true">🗺️</span>
             <h3>Veja no mapa ou na lista</h3>
             <p>Os mesmos resultados no mapa e numa lista acessível, ordenados por distância se você autorizar a localização.</p>
           </li>
           <li class="step">
             <span class="step-num">03</span>
-            <span class="step-ico" aria-hidden="true">✅</span>
             <h3>Confira a fonte e vá</h3>
             <p>Cada local mostra fonte, data e o que ainda não foi verificado. Depois, é só abrir a rota.</p>
           </li>
@@ -164,33 +161,29 @@
           <ol class="steps steps-4">
             <li class="step">
               <span class="step-num">01</span>
-              <span class="step-ico" aria-hidden="true">👤</span>
               <h3>Entre na sua conta</h3>
               <p>Crie uma conta com usuário, senha, um apelido público e sua faixa etária. Se quiser, escolha até 5 esportes e uma região preferidos.</p>
             </li>
             <li class="step">
               <span class="step-num">02</span>
-              <span class="step-ico" aria-hidden="true">📅</span>
               <h3>Marque um encontro</h3>
               <p>Em <b>Marcar encontro</b> ou no balão de um local do mapa, escolha o esporte, a data e a hora, o nível, a faixa etária e o formato: dupla, trio ou grupo de 4 a 20 pessoas.</p>
             </li>
             <li class="step">
               <span class="step-num">03</span>
-              <span class="step-ico" aria-hidden="true">🤝</span>
               <h3>Outras pessoas participam</h3>
               <p>O encontro aparece na tela Encontros e no mapa, com um pino destacado. Quem tem a faixa etária certa clica em <b>Participar</b> até as vagas acabarem.</p>
             </li>
             <li class="step">
               <span class="step-num">04</span>
-              <span class="step-ico" aria-hidden="true">🗓️</span>
               <h3>Acompanhe na sua agenda</h3>
               <p>Em <b>Minha agenda</b> ficam os encontros que você marcou ou em que vai. Dá para sair de um encontro ou cancelar o que você organizou.</p>
             </li>
           </ol>
           <ul class="cf-meet-rules">
-            <li>🔒 Os outros só veem seu apelido, nunca seu usuário ou senha.</li>
-            <li>📍 Marcar um encontro não reserva o espaço: confira as condições do local antes de ir.</li>
-            <li>🕒 Os horários são de Brasília.</li>
+            <li>Os outros só veem seu apelido, nunca seu usuário ou senha.</li>
+            <li>Marcar um encontro não reserva o espaço: confira as condições do local antes de ir.</li>
+            <li>Os horários são de Brasília.</li>
           </ul>
           <a href="#encontros" class="btn btn-primary cf-meet-cta">Ver os encontros</a>
         </div>
@@ -206,41 +199,41 @@
 
 
         <div class="ask" id="pergunte" role="search" aria-labelledby="ask-title">
-          <h3 id="ask-title">💬 Pergunte sobre locais</h3>
+          <h3 id="ask-title">Pergunte sobre locais</h3>
           <p class="ask-sub">Locais, mapa, acessibilidade e horários. Escreva ou fale do seu jeito. Ex.: <button type="button" class="ask-ex">onde tem PEC na Ceilândia Norte perto da QNN 12</button> <button type="button" class="ask-ex">quadra de vôlei de areia no Guará</button> <button type="button" class="ask-ex">pista de skate perto de mim</button> <button type="button" class="ask-ex">qual o horário dos Centros Olímpicos?</button></p>
           <p class="ask-hint">Dúvidas sobre matrícula, regras ou programas? Use a <a href="#pergunte-duvidas">pesquisa de dúvidas</a>.</p>
           <form id="ask-form" class="ask-form">
             <label for="ask-q" class="sr-only">Sua pergunta</label>
             <input type="text" id="ask-q" autocomplete="off" placeholder="Ex.: onde tem PEC na Ceilândia Norte, QNN 12?" />
-            <button type="button" class="ask-mic" id="ask-mic" aria-pressed="false" aria-label="Falar a pergunta (gravar áudio)" title="Falar a pergunta">🎤</button>
+            <button type="button" class="ask-mic" id="ask-mic" aria-pressed="false" aria-label="Falar a pergunta (gravar áudio)" title="Falar a pergunta"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 17v4"/><path d="M8 21h8"/></svg></button>
             <button type="submit" class="btn btn-primary">Buscar</button>
             <button type="button" class="btn btn-outline ask-clear" data-clear-search hidden>Limpar</button>
           </form>
           <p class="ask-status" id="ask-status" aria-live="polite"></p>
           <div id="ask-answer" class="ask-answer" hidden></div>
-          <details class="ask-privacy"><summary>🔒 Como tratamos sua voz e endereços</summary><small>O áudio só é captado enquanto o microfone está ligado e é transcrito pelo reconhecimento de voz do próprio navegador (no Chrome, isso passa pelo serviço do Google). Endereços digitados são localizados no OpenStreetMap. Nada é salvo pelo PontoAtivo.</small></details>
+          <details class="ask-privacy"><summary>Como tratamos sua voz e endereços</summary><small>O áudio só é captado enquanto o microfone está ligado e é transcrito pelo reconhecimento de voz do próprio navegador (no Chrome, isso passa pelo serviço do Google). Endereços digitados são localizados no OpenStreetMap. Nada é salvo pelo PontoAtivo.</small></details>
         </div>
 
         <p id="map-pref-note" class="pref-note" hidden></p>
 
         <form class="map-filterbar" id="filters" aria-label="Filtros do mapa">
           <label class="fb-item fb-search">
-            <span class="fb-label">🔍 Buscar</span>
+            <span class="fb-label">Buscar</span>
             <input type="search" id="f-q" placeholder="Nome, endereço ou modalidade" />
           </label>
           <label class="fb-item">
-            <span class="fb-label">📍 Região</span>
+            <span class="fb-label">Região</span>
             <select id="f-ra"><option value="">Todo o DF</option></select>
           </label>
           <details class="fb-item fb-pop">
-            <summary><span class="fb-label">🏟️ Tipo de espaço</span><span class="fb-value" id="f-tipos-resumo">Todos os tipos</span></summary>
+            <summary><span class="fb-label">Tipo de espaço</span><span class="fb-value" id="f-tipos-resumo">Todos os tipos</span></summary>
             <div class="fb-panel">
               <div id="f-tipos" class="type-filters"></div>
               <div class="mini-actions"><button type="button" id="f-all">Marcar todos</button><button type="button" id="f-none">Desmarcar</button></div>
             </div>
           </details>
           <details class="fb-item fb-pop">
-            <summary><span class="fb-label">⚙️ Mais filtros</span><span class="fb-value" id="f-mais-resumo">Origem, evidência e condições</span></summary>
+            <summary><span class="fb-label">Mais filtros</span><span class="fb-value" id="f-mais-resumo">Origem, evidência e condições</span></summary>
             <div class="fb-panel fb-panel-wide">
               <fieldset>
                 <legend>Origem do espaço</legend>
@@ -269,7 +262,7 @@
               </fieldset>
             </div>
           </details>
-          <button type="button" class="btn btn-primary fb-near" id="btn-near" title="Só pedimos sua localização se você clicar. Sem permissão, use a região.">📍 Perto de mim</button>
+          <button type="button" class="btn btn-primary fb-near" id="btn-near" title="Só pedimos sua localização se você clicar. Sem permissão, use a região.">Perto de mim</button>
           <button type="button" class="filters-clear" data-clear-search hidden>✕ Limpar filtros</button>
         </form>
 
@@ -329,7 +322,7 @@
           <label class="mf-sport">Esporte<select name="esporte"><option value="">Todos os esportes</option></select></label>
           <label class="mf-date">Data<input type="date" name="data" /></label>
           <details class="mf-advanced">
-            <summary>⚙️ Filtros avançados</summary>
+            <summary>Filtros avançados</summary>
             <div class="mf-advanced-grid">
           <label>Nível<select name="nivel"><option value="">Todos</option><option value="iniciante">Iniciante</option><option value="intermediario">Intermediário</option><option value="avancado">Avançado</option><option value="todos">Todos os níveis</option></select></label>
           <label>Faixa etária<select name="idade"><option value="">Todas</option><option value="todos">Todos os adultos</option><option>18-24</option><option>25-34</option><option>35-44</option><option>45-59</option><option>60+</option></select></label>
@@ -466,10 +459,10 @@
         <p class="eyebrow">Para quem é</p>
         <h2 id="pq-title">Pensado com quem pratica e com quem cuida dos espaços</h2>
         <div class="audience">
-          <article class="aud-card"><span class="aud-ico" aria-hidden="true">🏃</span><h3>Quero praticar</h3><p>Descubra quadras, campos e PECs perto de casa, quase todos públicos e gratuitos.</p></article>
-          <article class="aud-card"><span class="aud-ico" aria-hidden="true">♿</span><h3>Pessoas com deficiência</h3><p>Encontre os Centros Olímpicos e Paralímpicos e as entidades de paradesporto, sabendo o que já foi confirmado.</p></article>
-          <article class="aud-card"><span class="aud-ico" aria-hidden="true">🌳</span><h3>Pessoas idosas e PECs</h3><p>Os 403 PECs cadastrados, com endereço por quadra, iluminação e estado de conservação.</p></article>
-          <article class="aud-card"><span class="aud-ico" aria-hidden="true">🏟️</span><h3>Gestores e administrações</h3><p>Veja lacunas e informações desatualizadas da sua região e ajude a corrigi-las.</p></article>
+          <article class="aud-card"><h3>Quero praticar</h3><p>Descubra quadras, campos e PECs perto de casa, quase todos públicos e gratuitos.</p></article>
+          <article class="aud-card"><h3>Pessoas com deficiência</h3><p>Encontre os Centros Olímpicos e Paralímpicos e as entidades de paradesporto, sabendo o que já foi confirmado.</p></article>
+          <article class="aud-card"><h3>Pessoas idosas e PECs</h3><p>Os 403 PECs cadastrados, com endereço por quadra, iluminação e estado de conservação.</p></article>
+          <article class="aud-card"><h3>Gestores e administrações</h3><p>Veja lacunas e informações desatualizadas da sua região e ajude a corrigi-las.</p></article>
         </div>
       </div>
     </section>
@@ -497,7 +490,7 @@
         <h2 id="faq-title">Perguntas frequentes</h2>
 
         <div class="ask ask-duvidas" id="pergunte-duvidas" role="search" aria-labelledby="duv-title">
-          <h3 id="duv-title">🔎 Pesquisar dúvidas</h3>
+          <h3 id="duv-title">Pesquisar dúvidas</h3>
           <p class="ask-sub">Para perguntas mais complexas: matrícula, regras, isenções, programas, direitos e paradesporto. Ex.: <button type="button" class="duv-ex">como faço matrícula nos Centros Olímpicos?</button> <button type="button" class="duv-ex">quem é isento da taxa da Escola de Esportes?</button> <button type="button" class="duv-ex">como começar no esporte paralímpico?</button></p>
           <form id="duv-form" class="ask-form">
             <label for="duv-q" class="sr-only">Sua dúvida</label>
@@ -507,7 +500,7 @@
           </form>
           <p class="ask-status" id="duv-status" aria-live="polite"></p>
           <div id="duv-answer" class="ask-answer" hidden></div>
-          <p class="ask-privacy"><small>📄 As respostas vêm só de documentos oficiais e citam a fonte de cada frase. A pesquisa pode levar até 2 minutos. Informações sobre vagas, prazos e horários valem para a data do documento: confirme com a instituição responsável.</small></p>
+          <p class="ask-privacy"><small>As respostas vêm só de documentos oficiais e citam a fonte de cada frase. A pesquisa pode levar até 2 minutos. Informações sobre vagas, prazos e horários valem para a data do documento: confirme com a instituição responsável.</small></p>
         </div>
 
         <div class="faq">
@@ -588,7 +581,7 @@
           <div class="field">
             <label for="c-attachment">Foto ou anexo de comprovação (opcional)</label>
             <input type="file" id="c-attachment" accept="image/*" />
-            <small>⚠️ <strong>Atenção à privacidade:</strong> não fotografe rostos de pessoas, placas de veículos ou documentos pessoais.</small>
+            <small><strong>Atenção à privacidade:</strong> não fotografe rostos de pessoas, placas de veículos ou documentos pessoais.</small>
           </div>
 
           <div class="field-consent">
@@ -599,7 +592,7 @@
           </div>
 
           <p class="modal-alert-note">
-            ℹ️ <strong>Moderação transparente:</strong> as contribuições comunitárias são armazenadas localmente no navegador (<code>localStorage</code>) e aguardam moderação. Nenhuma contribuição comunitária altera automaticamente a base pública como "verificada em campo".
+            <strong>Moderação transparente:</strong> as contribuições comunitárias são armazenadas localmente no navegador (<code>localStorage</code>) e aguardam moderação. Nenhuma contribuição comunitária altera automaticamente a base pública como "verificada em campo".
           </p>
 
           <div class="modal-actions">
@@ -668,7 +661,7 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" defer></script>
   <script src="telas.js?v=telas-4" defer></script>
   <script src="data/locais.js" defer></script>
-  <script src="app.js?v=parq-1" defer></script>
-  <script src="encontros.js?v=enc-7" defer></script>
+  <script src="app.js?v=sem-emoji-2" defer></script>
+  <script src="encontros.js?v=sem-emoji-1" defer></script>
 </body>
 </html>
