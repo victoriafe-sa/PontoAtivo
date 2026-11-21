@@ -19,7 +19,7 @@ from .encontros import Meetings
 from .configuracao import Settings
 from .geracao import LLMUnavailable, OllamaClient
 from .moderacao import termo_improprio
-from .servicos_externos import ServicosExternos
+from .servicos_externos import ServicosExternos, ler_data_hora
 
 
 ROUTES = ("mapa", "documentos", "duvidas", "fora_escopo", "esclarecer")
@@ -347,6 +347,14 @@ class Handler(SimpleHTTPRequestHandler):
         try:
             if path == "/api/me":
                 self.reply(200, {"usuario": self.user(), "admin_local": self.local_access()})
+            elif path == "/api/clima":
+                query = parse_qs(urlsplit(self.path).query)
+                try:
+                    lat, lon = float(query["lat"][0]), float(query["lon"][0])
+                except (KeyError, ValueError):
+                    raise ApiError(400, "Coordenada inválida.") from None
+                quando = ler_data_hora(query.get("inicio", [""])[0])
+                self.reply(200, self.services.clima(lat, lon, quando))
             elif path == "/api/feriados":
                 try:
                     ano = int(parse_qs(urlsplit(self.path).query)["ano"][0])

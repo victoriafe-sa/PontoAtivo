@@ -87,9 +87,11 @@ monta o índice em `dados/rag/vetorial/`. Detalhes, avaliação e opções em
 ## Serviços externos
 
 O servidor consulta serviços públicos com cache, e o site fala só com o servidor.
+Os pontos consultados precisam estar no DF.
 
 | Serviço | Para quê | Chave |
 |---|---|---|
+| [Open-Meteo](https://open-meteo.com/) | Previsão do tempo, índice UV e qualidade do ar na hora de cada encontro (até 15 dias antes) | Não precisa |
 | [BrasilAPI](https://brasilapi.com.br/) | Aviso de feriado nos cartões de encontro. A BrasilAPI traz os nacionais; o PontoAtivo soma o feriado distrital de 30/11 | Não precisa |
 
 ## Testes

@@ -202,12 +202,13 @@
     const time = node("time", dateFormat.format(new Date(event.inicio)) + " · Brasília");
     time.dateTime = event.inicio;
     item.append(time);
-    // O aviso de feriado (BrasilAPI) chega depois, sem atrasar a lista.
+    // Feriado (BrasilAPI) e previsão do tempo (Open-Meteo) chegam depois, sem atrasar a lista.
     if (["aberto", "lotado"].includes(event.estado)) {
       const holiday = node("p", undefined, "meeting-holiday");
-      holiday.hidden = true;
-      item.append(holiday);
-      markHoliday(event, holiday);
+      const weather = node("p", undefined, "meeting-weather");
+      holiday.hidden = weather.hidden = true;
+      item.append(holiday, weather);
+      enrichCard(event, holiday, weather);
     }
     const age = event.idade === "todos" ? "Todos os adultos" : event.idade + " anos";
     item.append(node("p", [labels[event.formato], labels[event.nivel], age].join(" · "), "meta"));
@@ -247,9 +248,11 @@
     return item;
   }
 
-  // ---------- Feriado do encontro (BrasilAPI, pelo servidor) ----------
+  // ---------- Feriado e tempo do encontro (pelo servidor: BrasilAPI e Open-Meteo) ----------
   const dayKey = new Intl.DateTimeFormat("en-CA", {timeZone: "America/Sao_Paulo"});
   const holidaysByYear = new Map();
+  const weatherByKey = new Map();
+  const FORECAST_DAYS = 15;
 
   function holidaysOf(year) {
     if (!holidaysByYear.has(year)) {
@@ -258,12 +261,45 @@
     return holidaysByYear.get(year);
   }
 
-  async function markHoliday(event, holidayEl) {
-    const day = dayKey.format(new Date(event.inicio));
+  function weatherOf(place, inicio) {
+    const key = [place.lat.toFixed(2), place.lon.toFixed(2), inicio.slice(0, 13)].join("|");
+    if (!weatherByKey.has(key)) {
+      const query = new URLSearchParams({lat: place.lat, lon: place.lon, inicio});
+      weatherByKey.set(key, api("/api/clima?" + query).catch(() => null));
+    }
+    return weatherByKey.get(key);
+  }
+
+  function describeWeather(w) {
+    const parts = [`${Math.round(w.temperatura)} °C`];
+    if (w.condicao) parts[0] += ", " + w.condicao;
+    if (w.chance_chuva != null) parts.push(`${w.chance_chuva}% de chance de chuva`);
+    if (w.uv != null && w.uv >= 3) parts.push(`UV ${Math.round(w.uv)} (${w.uv_nivel})`);
+    if (w.qualidade_ar) parts.push(`ar ${w.qualidade_ar.nivel}`);
+    const tips = [];
+    if (w.chance_chuva >= 60) tips.push("pode chover");
+    if (w.uv >= 8) tips.push("use protetor solar");
+    if (w.qualidade_ar && w.qualidade_ar.indice > 100) tips.push("ar ruim para exercício intenso");
+    if (w.temperatura >= 32) tips.push("leve água");
+    return "Previsão: " + parts.join(" · ") + (tips.length ? ". Atenção: " + tips.join(", ") + "." : ".");
+  }
+
+  async function enrichCard(event, holidayEl, weatherEl) {
+    const start = new Date(event.inicio);
+    const day = dayKey.format(start);
     const holiday = (await holidaysOf(Number(day.slice(0, 4)))).find(h => h.data === day);
-    if (!holiday) return;
-    holidayEl.textContent = `Feriado: ${holiday.nome}. Confira se o local abre neste dia.`;
-    holidayEl.hidden = false;
+    if (holiday) {
+      holidayEl.textContent = `Feriado: ${holiday.nome}. Confira se o local abre neste dia.`;
+      holidayEl.hidden = false;
+    }
+    const place = placeMap.get(event.local.id);
+    const daysAhead = (start - Date.now()) / 864e5;
+    if (!place || place.lat == null || daysAhead < -0.1 || daysAhead > FORECAST_DAYS) return;
+    const weather = await weatherOf(place, event.inicio);
+    if (!weather || !weather.disponivel) return;
+    weatherEl.textContent = describeWeather(weather);
+    weatherEl.title = "Fonte: Open-Meteo";
+    weatherEl.hidden = false;
   }
 
   function actionButton(parent, text, action, id) {
