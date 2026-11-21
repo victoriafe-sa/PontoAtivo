@@ -19,6 +19,7 @@ from .encontros import Meetings
 from .configuracao import Settings
 from .geracao import LLMUnavailable, OllamaClient
 from .moderacao import termo_improprio
+from .servicos_externos import ServicosExternos
 
 
 ROUTES = ("mapa", "documentos", "duvidas", "fora_escopo", "esclarecer")
@@ -200,9 +201,10 @@ def is_public(path):
 class Handler(SimpleHTTPRequestHandler):
     def __init__(
         self, *args, chat, accounts=None, meetings=None, public_origin=None,
-        trust_proxy=False, **kwargs,
+        trust_proxy=False, services=None, **kwargs,
     ):
         self.chat = chat
+        self.services = services or ServicosExternos()
         self.accounts = accounts
         self.meetings = meetings
         self.public_origin = public_origin
@@ -345,6 +347,12 @@ class Handler(SimpleHTTPRequestHandler):
         try:
             if path == "/api/me":
                 self.reply(200, {"usuario": self.user(), "admin_local": self.local_access()})
+            elif path == "/api/feriados":
+                try:
+                    ano = int(parse_qs(urlsplit(self.path).query)["ano"][0])
+                except (KeyError, ValueError):
+                    raise ApiError(400, "Ano inválido.") from None
+                self.reply(200, {"feriados": self.services.feriados(ano), "fonte": "BrasilAPI"})
             elif path in ("/api/encontros", "/api/encontros/meus"):
                 user = self.user(required=path.endswith("/meus"))
                 filters = {key: values[0] for key, values in parse_qs(urlsplit(self.path).query).items()
@@ -433,6 +441,7 @@ def main():
     handler = partial(
         Handler, chat=Chat(settings), accounts=Accounts(database, regions={place["regiao"] for place in places if place.get("regiao")}),
         meetings=Meetings(database, places), public_origin=os.getenv("PONTOATIVO_PUBLIC_ORIGIN"),
+        services=ServicosExternos(),
         # Só ative atrás de um proxy HTTPS local que sobrescreva X-Forwarded-For.
         trust_proxy=os.getenv("PONTOATIVO_PROXY_CONFIAVEL", "").strip() in {"1", "sim", "true"},
         directory=static_dir,

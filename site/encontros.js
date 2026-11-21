@@ -202,6 +202,13 @@
     const time = node("time", dateFormat.format(new Date(event.inicio)) + " · Brasília");
     time.dateTime = event.inicio;
     item.append(time);
+    // O aviso de feriado (BrasilAPI) chega depois, sem atrasar a lista.
+    if (["aberto", "lotado"].includes(event.estado)) {
+      const holiday = node("p", undefined, "meeting-holiday");
+      holiday.hidden = true;
+      item.append(holiday);
+      markHoliday(event, holiday);
+    }
     const age = event.idade === "todos" ? "Todos os adultos" : event.idade + " anos";
     item.append(node("p", [labels[event.formato], labels[event.nivel], age].join(" · "), "meta"));
     const bar = node("div", undefined, "meeting-bar meeting-bar-" + event.estado);
@@ -238,6 +245,25 @@
     actions.append(route);
     item.append(actions);
     return item;
+  }
+
+  // ---------- Feriado do encontro (BrasilAPI, pelo servidor) ----------
+  const dayKey = new Intl.DateTimeFormat("en-CA", {timeZone: "America/Sao_Paulo"});
+  const holidaysByYear = new Map();
+
+  function holidaysOf(year) {
+    if (!holidaysByYear.has(year)) {
+      holidaysByYear.set(year, api("/api/feriados?ano=" + year).then(r => r.feriados).catch(() => []));
+    }
+    return holidaysByYear.get(year);
+  }
+
+  async function markHoliday(event, holidayEl) {
+    const day = dayKey.format(new Date(event.inicio));
+    const holiday = (await holidaysOf(Number(day.slice(0, 4)))).find(h => h.data === day);
+    if (!holiday) return;
+    holidayEl.textContent = `Feriado: ${holiday.nome}. Confira se o local abre neste dia.`;
+    holidayEl.hidden = false;
   }
 
   function actionButton(parent, text, action, id) {

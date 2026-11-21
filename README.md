@@ -84,6 +84,14 @@ Depois abra http://127.0.0.1:8766/. A primeira ingestão baixa o modelo E5 e
 monta o índice em `dados/rag/vetorial/`. Detalhes, avaliação e opções em
 [docs/rag/como-rodar.md](docs/rag/como-rodar.md).
 
+## Serviços externos
+
+O servidor consulta serviços públicos com cache, e o site fala só com o servidor.
+
+| Serviço | Para quê | Chave |
+|---|---|---|
+| [BrasilAPI](https://brasilapi.com.br/) | Aviso de feriado nos cartões de encontro. A BrasilAPI traz os nacionais; o PontoAtivo soma o feriado distrital de 30/11 | Não precisa |
+
 ## Testes
 
 ```bash

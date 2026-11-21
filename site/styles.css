@@ -845,3 +845,7 @@ body[data-tela-atual="mapa"] #map { height: max(460px, calc(100vh - 8rem)); bord
 /* Aviso "Sobre os dados" no fim do mapa: só um texto pequeno e cinza, sem caixa. */
 .demo-note.demo-note-end { background: none; border: 0; border-radius: 0; padding: 0; margin: 1.5rem 0 0; color: var(--gray); font-size: .8rem; line-height: 1.5; }
 .demo-note.demo-note-end strong { color: var(--gray); font-weight: 700; }
+
+/* Aviso de feriado nos cartões de encontro */
+.meeting-card .meeting-holiday { margin: .1rem 0 .4rem; font-size: .85rem; line-height: 1.45; border-radius: 10px; padding: .45rem .65rem; background: #fff4d6; color: #6b4a00; font-weight: 600; }
+.meeting-card .meeting-holiday[hidden] { display: none; }
