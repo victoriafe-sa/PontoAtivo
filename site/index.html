@@ -400,7 +400,7 @@
       <div class="container">
         <p class="eyebrow">Fontes e cobertura</p>
         <h2 id="fontes-title">De onde vêm os dados do mapa</h2>
-        <p class="section-sub">Pesquisa feita em 05/11/2026 em bases oficiais do GDF e de outras fontes públicas, com curadoria multifonte em 10/11/2026. Cada local do mapa leva o link da sua fonte.</p>
+        <p class="section-sub">Pesquisa feita em 05/11/2026 em bases oficiais do GDF e de outras fontes públicas, com curadoria multifonte em 10/11/2026; os parquinhos entraram em 19/11/2026. Cada local do mapa leva o link da sua fonte.</p>
         <div class="stats" id="stats"></div>
         <div class="sources">
           <article class="source">
@@ -428,11 +428,32 @@
             <p>CETEFE (Agência Gov, Metrópoles, Jornal de Brasília), Centro Olímpico da UnB e limites das regiões administrativas (IDE-DF). Localização dos locais nomeados via OpenStreetMap, conferida com o limite oficial de cada RA.</p>
             <a href="https://agenciagov.ebc.com.br/noticias/202310/enap-reinaugura-complexo-esportivo-utilizado-por-atletas-paralimpicos-de-alto-nivel" target="_blank" rel="noopener">Agência Gov ↗</a>
           </article>
+          <article class="source">
+            <h3>Clubes e entidades de paradesporto</h3>
+            <p>Quatro clubes privados (AABB Brasília, Clube da Aeronáutica, Clube Naval e Minas Brasília Tênis Clube), com endereço e modalidades dos sites oficiais de cada um. Duas entidades de paradesporto (CECAF/DIREF e Escola Franciscana Nossa Senhora de Fátima), com referência no site do Comitê Paralímpico Brasileiro. Os seis ainda não têm pino no mapa: aparecem só na lista, até as coordenadas serem confirmadas.</p>
+            <p class="source-links">
+              <a href="https://aabbdf.com.br/18648/" target="_blank" rel="noopener">AABB ↗</a>
+              <a href="https://clubedaaeronauticadf.com.br/" target="_blank" rel="noopener">Aeronáutica ↗</a>
+              <a href="https://clubenavaldf.com.br/" target="_blank" rel="noopener">Naval ↗</a>
+              <a href="https://minasbrasilia.com.br/faq" target="_blank" rel="noopener">Minas ↗</a>
+              <a href="https://www.cpb.org.br/" target="_blank" rel="noopener">CPB ↗</a>
+            </p>
+          </article>
+          <article class="source">
+            <h3>Serviços consultados na hora</h3>
+            <p>Não guardam dados no mapa: o site os consulta quando você usa o recurso. Previsão do tempo, índice UV e qualidade do ar dos encontros: <strong>Open-Meteo</strong>. Feriados nacionais: <strong>BrasilAPI</strong>, mais o feriado distrital de 30/11 (Lei Distrital nº 963/1995). Rotas a pé e para cadeira de rodas: <strong>openrouteservice</strong>. Mapa de fundo: © colaboradores do <strong>OpenStreetMap</strong>.</p>
+            <p class="source-links">
+              <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo ↗</a>
+              <a href="https://brasilapi.com.br/" target="_blank" rel="noopener">BrasilAPI ↗</a>
+              <a href="https://openrouteservice.org/" target="_blank" rel="noopener">openrouteservice ↗</a>
+              <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap ↗</a>
+            </p>
+          </article>
         </div>
         <div class="gaps">
           <h3>O que ainda falta (lacunas conhecidas e diagnóstico de cobertura)</h3>
           <ul>
-            <li><strong>PECs do DF:</strong> são <strong>403 PECs georreferenciadas</strong> no cadastro aberto utilizado pelo mapa; em contrapartida, a Novacap informou publicamente em 04/11/2025 que o DF conta com <em>mais de mil PECs</em> instaladas. A minuta de pedido de LAI está disponível em <code>docs/pedido-lai-novacap.md</code> para obtenção da base georreferenciada integral.</li>
+            <li><strong>PECs do DF:</strong> são <strong>403 PECs georreferenciadas</strong> no cadastro aberto utilizado pelo mapa; em contrapartida, a Novacap informou publicamente em 04/11/2025 que o DF conta com <em>mais de mil PECs</em> instaladas. A minuta de pedido de LAI está disponível em <code>curadoria/docs/pedido-lai-novacap.md</code> para obtenção da base georreferenciada integral.</li>
             <li><strong>Acessibilidade física:</strong> rampas, banheiros acessíveis, piso tátil e vagas PcD não constam detalhadas em bases abertas do GDF. Dados informados por instituições são exibidos como declarados, nunca como vistoria técnica presencial.</li>
             <li><strong>Paradesporto:</strong> modalidades e locais confirmados por fontes institucionais (CETEFE, CPB) estão catalogados; entidades como UNIACE e equipes de basquete em cadeira de rodas aguardam confirmação de locais regulares de treino em registro público.</li>
             <li><strong>Clubes e academias privadas:</strong> mapeamento inicial de clubes esportivos com base em seus sites oficiais, sem pino no mapa até comprovação das coordenadas geográficas.</li>

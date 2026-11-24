@@ -360,6 +360,10 @@ body.no-motion .reveal { opacity: 1; transform: none; }
 .source:nth-child(2) { border-left-color: var(--blue); } .source:nth-child(3) { border-left-color: var(--orange); } .source:nth-child(4) { border-left-color: var(--navy); }
 .source p { color: var(--gray); font-size: .92rem; margin: 0 0 .6rem; }
 .source a { font-weight: 700; }
+/* Cartões de clubes/paradesporto e de serviços, com vários links */
+.source:nth-child(6) { border-left-color: var(--purple, #8b5cf6); }
+.source:nth-child(7) { border-left-color: var(--teal, #12b07c); }
+.source .source-links { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: 0; }
 .gaps { margin-top: 2rem; background: #fff7e0; border: 1px solid #ffe08a; border-radius: var(--radius); padding: 1.3rem 1.5rem; }
 .gaps ul { margin: 0; padding-left: 1.2rem; color: #5b4300; }
 .gaps li { margin: .3rem 0; }
