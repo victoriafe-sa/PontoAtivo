@@ -1,0 +1,35 @@
+{
+  "demonstracao": "Processamento de PDF e Markdown",
+  "fontes_processadas": 2,
+  "total_chunks": 22,
+  "total_segments": 43,
+  "fontes": [
+    {
+      "source_id": "DOC-003",
+      "title": "Manual de Uso dos Centros Olimpicos e Paralimpicos",
+      "format": ".pdf",
+      "characters": 7943,
+      "pages_with_text": 4,
+      "pages_without_text": [],
+      "pages_with_images": [],
+      "chunks": 5,
+      "segments": 12,
+      "verification_status": "aprovada",
+      "sample": "MANUAL DE USO DOSCENTROS OLÍMPICOS EPARALÍMPICOS\nBRASÍLIA - 2022\n\nO presente TERMO DE COMPROMISSO E MANUAL DE CONDUTA é de dar ciência aos beneficiários alunos e responsáveissobre as normas de funcionamento dos Centros Olímpicos e Paralímpicos, visando contribuir para o alcance da finalidade,objetiv"
+    },
+    {
+      "source_id": "DOC-025",
+      "title": "Guia dos Espacos Publicos de Lazer do Distrito Federal",
+      "format": ".md",
+      "characters": 18496,
+      "pages_with_text": 0,
+      "pages_without_text": [],
+      "pages_with_images": [],
+      "chunks": 17,
+      "segments": 31,
+      "verification_status": "aprovada_com_ressalvas",
+      "sample": "# Guia dos Espaços Públicos de Lazer do Distrito Federal\n\nAutor: Bruno Lofrano Porto, Programa de Pós-Graduação em Geografia da Universidade de Brasília (PPG-GEA/UnB).\nPublicação: ArcGIS StoryMaps, criada em 16/10/2023 e atualizada em 25/02/2025.\nEndereço: https://storymaps.arcgis.com/stories/1095a2"
+    }
+  ],
+  "observacao": "O processamento extrai texto de PDF e Markdown. A identificação de páginas com imagens não significa interpretação visual ou execução de OCR."
+}
