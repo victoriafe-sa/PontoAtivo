@@ -16,4 +16,5 @@ com o [diagrama da arquitetura](../entregas/semana-04/arquitetura-agentes.png).
 Contratos das mensagens: [contratos.py](../../src/pontoativo_rag/agentes/contratos.py).
 Coordenador: [coordenador.py](../../src/pontoativo_rag/agentes/coordenador.py).
 Testes: [`tests/pontoativo_rag/agentes/`](../../tests/pontoativo_rag/agentes/).
-Execuções registradas: [`experimentos/agentes/`](../../experimentos/agentes/).
+Onde ficam os exemplos: [`exemplos/`](exemplos/) guarda entradas preparadas à mão, usadas nos testes
+e nas demonstrações; [`experimentos/agentes/`](../../experimentos/agentes/) guarda execuções reais.
