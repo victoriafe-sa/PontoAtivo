@@ -166,9 +166,51 @@ $$("[data-count]").forEach((el) => {
 $("#mapa-sub").textContent = `${fmt(LOCAIS.length)} locais em ${RAS.length} regiões administrativas do DF. Filtre por tipo, região e condições; o mapa e a lista mostram os mesmos resultados.`;
 $("#gap-pend").textContent = `${pendentes} parques da lista do Ibram ainda estão sem localização exata e aparecem só na lista.`;
 
-// Estatísticas na seção Fontes
-$("#stats").innerHTML = ORDER.filter((t) => counts[t]).map((t) =>
-  `<div class="stat"><span class="stat-dot" style="background:${TYPES[t].color}" aria-hidden="true"></span><strong>${fmt(counts[t])}</strong><span>${TYPES[t].label}</span></div>`).join("");
+// Cobertura na seção Fontes: tipos agrupados por tema, com o mesmo pino do mapa.
+// Cada tipo abre o mapa já filtrado por ele.
+const COBERTURA = [
+  { titulo: "Esporte organizado", desc: "Centros com aulas, paradesporto e grandes equipamentos", tipos: ["cop", "para", "estadio", "clube"],
+    nota: "Os Centros Olímpicos são gratuitos e têm vagas para pessoas com deficiência." },
+  { titulo: "Exercício ao ar livre", desc: "PECs, aparelhos, parques e praças para treinar e caminhar", tipos: ["pec", "ginastica", "parque", "praca"] },
+  { titulo: "Quadras, campos e pistas", desc: "Espaços para jogar em grupo ou andar de skate", tipos: ["campo", "quadra", "areia", "tenis", "skate"] },
+  { titulo: "Para as crianças", desc: "Parques infantis do cadastro oficial", tipos: ["parquinho"],
+    nota: "Levantamento oficial de 2015 e 2017: os brinquedos e o estado de cada parquinho podem ter mudado. " +
+      "Confirme no local e, se puder, use “Colaborar” no mapa para atualizar." },
+];
+const totalTipos = ORDER.filter((t) => counts[t]).length;
+const totalFontes = document.querySelectorAll("#fontes .source").length;
+$("#stats").innerHTML = `
+  <div class="cov-resumo">
+    <div><strong>${fmt(LOCAIS.length)}</strong><span>locais no mapa</span></div>
+    <div><strong>${RAS.length}</strong><span>regiões administrativas</span></div>
+    <div><strong>${totalTipos}</strong><span>tipos de espaço</span></div>
+    <div><strong>${totalFontes}</strong><span>grupos de fontes</span></div>
+  </div>
+  <div class="cov-grupos">${COBERTURA.map((g) => {
+    const tipos = g.tipos.filter((t) => counts[t]);
+    if (!tipos.length) return "";
+    const soma = tipos.reduce((n, t) => n + counts[t], 0);
+    const maior = Math.max(...tipos.map((t) => counts[t]));
+    return `<section class="cov-grupo" aria-label="${esc(g.titulo)}">
+      <header><h3>${esc(g.titulo)}</h3><span class="cov-soma">${fmt(soma)}</span></header>
+      <p>${esc(g.desc)}</p>
+      <ul>${tipos.map((t) => `<li><button type="button" class="cov-tipo" data-cov-tipo="${t}" title="Ver ${esc(TYPES[t].label)} no mapa">
+        <span class="cov-pino" style="--pin:${TYPES[t].color}" aria-hidden="true"><span></span></span>
+        <span class="cov-nome">${esc(TYPES[t].label)}</span>
+        <strong>${fmt(counts[t])}</strong>
+        <span class="cov-barra" aria-hidden="true"><i style="width:${Math.max(4, Math.round((counts[t] / maior) * 100))}%;background:${TYPES[t].color}"></i></span>
+      </button></li>`).join("")}</ul>
+      ${g.nota ? `<p class="cov-nota">${esc(g.nota)}</p>` : ""}
+    </section>`;
+  }).join("")}</div>
+  <p class="cov-dica">Toque em um tipo para ver só esses locais no mapa.</p>`;
+$("#stats").addEventListener("click", (e) => {
+  const btn = e.target.closest("[data-cov-tipo]");
+  if (!btn) return;
+  document.querySelectorAll("#f-tipos input").forEach((i) => (i.checked = i.value === btn.dataset.covTipo));
+  update();
+  window.PontoAtivoTelas.ir("mapa");
+});
 
 // ---------- Filtros ----------
 $("#f-tipos").innerHTML = ORDER.filter((t) => counts[t]).map((t) =>
