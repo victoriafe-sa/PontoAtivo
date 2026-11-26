@@ -90,8 +90,37 @@ menuBtn.addEventListener("click", () => {
 });
 $$("#menu a").forEach((a) => a.addEventListener("click", () => { $("#menu").classList.remove("open"); menuBtn.setAttribute("aria-expanded", false); }));
 
+// Cabeçalho: com zoom ou letra maior, logo, menu e conta podem não caber lado a lado.
+// Mede o espaço real e, se não couber, usa o menu ☰ (classe "compacto").
+const siteHeader = $(".site-header");
+const navMenu = $("#menu");
+function ajustarCabecalho() {
+  siteHeader.classList.remove("compacto");
+  if (matchMedia("(max-width: 1220px)").matches) return; // abaixo disso o CSS já usa o ☰
+  const marca = $(".brand").getBoundingClientRect();
+  const links = [...navMenu.children].filter((el) => el.getClientRects().length);
+  const conta = [...siteHeader.querySelectorAll(".account-login, .account-menu")]
+    .find((el) => !el.hidden && el.getClientRects().length);
+  const primeiro = links[0] && links[0].getBoundingClientRect();
+  const ultimo = links.length && links[links.length - 1].getBoundingClientRect();
+  const folga = 12;
+  const naoCabe = (primeiro && primeiro.left < marca.right + folga)
+    || (ultimo && conta && ultimo.right > conta.getBoundingClientRect().left - folga);
+  if (naoCabe) siteHeader.classList.add("compacto");
+}
+let ajusteAgendado = 0;
+const agendarAjuste = () => { clearTimeout(ajusteAgendado); ajusteAgendado = setTimeout(ajustarCabecalho, 30); };
+if ("ResizeObserver" in window) {
+  const observador = new ResizeObserver(agendarAjuste);
+  observador.observe($(".header-inner"));
+  siteHeader.querySelectorAll(".account-login, .account-menu").forEach((el) => observador.observe(el));
+}
+new MutationObserver(agendarAjuste).observe(siteHeader, { attributes: true, subtree: true, attributeFilter: ["hidden"] });
+window.addEventListener("resize", agendarAjuste);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(agendarAjuste);
+
 let fontPx = parseInt(localStorage.getItem("pa-font") || "18", 10);
-const applyFont = () => document.documentElement.style.setProperty("--fs", fontPx + "px");
+const applyFont = () => { document.documentElement.style.setProperty("--fs", fontPx + "px"); agendarAjuste(); };
 applyFont();
 const toggles = { contrast: "high-contrast", motion: "no-motion" };
 // Painel flutuante de acessibilidade: abre no botão flutuante, fecha com Esc ou clicando fora.

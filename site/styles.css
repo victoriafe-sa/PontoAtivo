@@ -44,7 +44,7 @@ h3 { font-size: 1.1rem; font-weight: 700; }
 .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 1.1rem 0; }
 .brand { display: flex; gap: .6rem; align-items: center; text-decoration: none; }
-.brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+.brand-text { display: flex; flex-direction: column; line-height: 1.2; gap: .1em; }
 .brand-text strong { font-size: 1.45rem; font-weight: 800; color: var(--navy); }
 .brand-text small { color: var(--gray); font-size: .8rem; }
 .b-navy { color: var(--navy); } .b-green { color: var(--green); }
@@ -122,7 +122,7 @@ h3 { font-size: 1.1rem; font-weight: 700; }
 .section > .container > .eyebrow, .section > .container > h2, .section > .container > .section-sub { text-align: center; margin-left: auto; margin-right: auto; }
 
 .steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
-.step { background: #1e2f57; border: 1px solid #2b3d68; border-radius: var(--radius); padding: 1.8rem; }
+.step { background: #1e2f57; border: 1px solid #2b3d68; border-radius: var(--radius); padding: 1.8rem; min-width: 0; }
 .step-num { display: block; font-size: 2.2rem; font-weight: 800; color: var(--yellow); }
 .step-ico { display: inline-grid; place-items: center; width: 46px; height: 46px; background: rgba(255,196,20,.14); border-radius: 12px; font-size: 1.3rem; margin: .8rem 0; }
 .step p { color: #b8c3d9; margin: 0; }
@@ -792,6 +792,35 @@ body[data-tela-atual="mapa"] #map { height: max(460px, calc(100vh - 8rem)); bord
   .nav.open { display: flex; }
   .account-name { display: none; }
 }
+/* O mesmo menu ☰ quando o cabeçalho não cabe por causa do zoom ou da letra maior
+   (classe posta por app.js, que mede logo, menu e conta). */
+.site-header.compacto .header-inner { grid-template-columns: minmax(0, 1fr) auto auto; column-gap: .75rem; }
+.site-header.compacto .menu-toggle { display: block; order: 3; }
+.site-header.compacto .nav { position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column;
+  align-items: stretch; padding: 1rem 4%; gap: .8rem; border-bottom: 1px solid var(--line); display: none; }
+.site-header.compacto .nav.open { display: flex; }
+.site-header.compacto .header-inner .account-name { display: none; }
+/* Com o menu ☰ a marca pode encolher, e no celular o nome acompanha a largura da tela:
+   com letra maior ele não passa por baixo do botão da conta. */
+@media (max-width: 1220px) { .brand { min-width: 0; } .brand img { flex: none; } }
+.site-header.compacto .brand { min-width: 0; }
+@media (max-width: 600px) {
+  .brand-text strong { font-size: min(1.45rem, 6.4vw); }
+  .brand img { width: min(44px, 11vw); height: auto; }
+}
+@media (max-width: 400px) {
+  .brand-text strong { font-size: min(1.45rem, 5.4vw); }
+  .brand img { width: min(44px, 9vw); }
+}
+/* Com letra grande no celular, cartões com palavras longas não alargam a página. */
+.sources { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 760px) { .sources { grid-template-columns: minmax(0, 1fr); } }
+.source { min-width: 0; overflow-wrap: break-word; hyphens: auto; }
+body { overflow-wrap: break-word; }
+@media (max-width: 400px) {
+  .cov-resumo div { padding: .8rem .9rem; }
+  .cov-resumo strong { font-size: 1.5rem; }
+}
 
 /* ---------- Como funciona: encontros ---------- */
 .cf-meet { margin-top: 4rem; padding-top: 3rem; border-top: 1px solid #2b3d68; text-align: center; }
@@ -802,8 +831,8 @@ body[data-tela-atual="mapa"] #map { height: max(460px, calc(100vh - 8rem)); bord
 .step b { color: #fff; }
 .cf-meet-rules { list-style: none; padding: 0; margin: 2rem auto 1.5rem; display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem 1.6rem; color: #b8c3d9; font-size: .92rem; }
 .cf-meet-cta { background: var(--yellow); color: var(--navy); box-shadow: 0 8px 20px rgba(0, 0, 0, .25); }
-@media (max-width: 1000px) { .steps-4 { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 760px) { .steps-4 { grid-template-columns: 1fr; } }
+@media (max-width: 1000px) { .steps-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 760px) { .steps-4 { grid-template-columns: minmax(0, 1fr); } }
 
 /* Acessibilidade recolhida em "Ver acessibilidade" */
 .acc-more { margin: .5rem 0; }
@@ -867,10 +896,10 @@ body[data-tela-atual="mapa"] #map { height: max(460px, calc(100vh - 8rem)); bord
 
 /* ---------- Cobertura do mapa (seção Fontes) ---------- */
 #stats.stats { display: block; margin-bottom: 2.4rem; }
-.cov-resumo { display: grid; grid-template-columns: repeat(4, 1fr); gap: .9rem; margin-bottom: 1.4rem; }
-.cov-resumo div { background: var(--navy); color: #fff; border-radius: 16px; padding: 1rem 1.2rem; display: grid; gap: .15rem; }
+.cov-resumo { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .9rem; margin-bottom: 1.4rem; }
+.cov-resumo div { background: var(--navy); color: #fff; border-radius: 16px; padding: 1rem 1.2rem; display: grid; gap: .15rem; min-width: 0; }
 .cov-resumo strong { font-size: 1.9rem; line-height: 1.05; font-weight: 800; }
-.cov-resumo span { font-size: .85rem; color: #c9d4ea; }
+.cov-resumo span { font-size: .85rem; color: #c9d4ea; overflow-wrap: break-word; hyphens: auto; }
 .cov-grupos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; }
 .cov-grupo { background: #fff; border-radius: 18px; box-shadow: var(--shadow); padding: 1.2rem 1.2rem .9rem; display: flex; flex-direction: column; }
 .cov-grupo header { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
@@ -887,14 +916,14 @@ body[data-tela-atual="mapa"] #map { height: max(460px, calc(100vh - 8rem)); bord
   border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background-color: var(--pin);
   background-image: linear-gradient(135deg, rgba(255,255,255,.28), rgba(0,0,0,.12)); box-shadow: 0 3px 8px rgba(15, 26, 54, .25); }
 .cov-pino > span { width: 10px; height: 10px; border-radius: 50%; background: #fff; }
-.cov-nome { font-size: .95rem; font-weight: 600; min-width: 0; }
+.cov-nome { font-size: .95rem; font-weight: 600; min-width: 0; overflow-wrap: break-word; hyphens: auto; }
 .cov-tipo strong { font-size: 1.15rem; font-weight: 800; justify-self: end; font-variant-numeric: tabular-nums; }
 .cov-barra { grid-column: 2 / span 2; height: 6px; border-radius: 3px; background: #eef1f6; overflow: hidden; }
 .cov-barra i { display: block; height: 100%; border-radius: 3px; opacity: .85; }
 .cov-dica { margin: .9rem 0 0; text-align: center; font-size: .85rem; color: var(--gray); }
 @media (max-width: 900px) {
-  .cov-resumo { grid-template-columns: repeat(2, 1fr); }
-  .cov-grupos { grid-template-columns: 1fr; }
+  .cov-resumo { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cov-grupos { grid-template-columns: minmax(0, 1fr); }
 }
 .cov-grupo > .cov-nota { margin: auto 0 0; padding: .8rem .6rem .2rem; border-top: 1px solid #eef1f6; font-size: .84rem; color: var(--gray); line-height: 1.45; }
 
