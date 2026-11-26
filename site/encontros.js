@@ -622,6 +622,14 @@
     applyPreferences();
     await refresh();
   }
+  // Campos de data: o calendário abre ao clicar em qualquer parte do campo, não só no ícone.
+  // No teclado, o campo continua aceitando a data digitada.
+  document.addEventListener("click", (event) => {
+    const campo = event.target.closest('input[type="date"], input[type="datetime-local"]');
+    if (!campo || campo.disabled || campo.readOnly || typeof campo.showPicker !== "function") return;
+    try { campo.showPicker(); } catch { /* navegador sem suporte ou calendário já aberto */ }
+  });
+
   initialize();
   setInterval(() => {
     if (!document.hidden && !dialog.open && !authDialog.open && !prefDialog.open) refresh();
