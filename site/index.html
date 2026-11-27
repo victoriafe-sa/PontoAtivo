@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-  <link rel="stylesheet" href="styles.css?v=alertas-1" />
+  <link rel="stylesheet" href="styles.css?v=amigos-alertas-1" />
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -47,8 +47,8 @@
         <a href="#inicio" data-nav-tela="inicio">Início</a>
         <a href="#mapa" data-nav-tela="mapa">Mapa</a>
         <a href="#encontros" data-nav-tela="encontros">Encontros</a>
+        <a href="#amigos" data-nav-tela="amigos">Amigos</a>
         <a href="#duvidas" data-nav-tela="duvidas">Dúvidas</a>
-        <a href="#como-funciona">Como funciona</a>
         <a href="#participe" class="btn btn-small btn-light">Ajude a verificar</a>
       </nav>
       <button type="button" class="account-login" id="header-login" hidden aria-label="Entrar ou criar conta">
@@ -72,6 +72,7 @@
           <hr />
           <button type="button" id="meeting-prefs">Minhas preferências</button>
           <button type="button" id="account-agenda">Minha agenda</button>
+          <button type="button" id="account-friends">Amigos <span class="account-badge" id="account-friends-badge" hidden></span></button>
           <hr />
           <button type="button" id="meeting-logout">Sair da conta</button>
         </div>
@@ -491,6 +492,47 @@
     </section>
 
     <!-- FAQ -->
+    <section id="amigos" data-tela="amigos" class="section friends-section" aria-labelledby="friends-title">
+      <div class="container narrow">
+        <h2 id="friends-title" tabindex="-1">Amigos</h2>
+        <p class="section-sub">Depois de praticar num encontro, adicione as pessoas como amigas, dê de 1 a 5 estrelas para quem praticou com você e bloqueie quem você não quer encontrar de novo. As notas são anônimas: ninguém vê quem deu cada uma.</p>
+        <div id="friends-login" class="friends-login" hidden>
+          <p>Entre na sua conta para ver as pessoas com quem você praticou.</p>
+          <button type="button" class="btn btn-primary" id="friends-login-btn">Entrar</button>
+        </div>
+        <div id="friends-content" hidden>
+          <div class="friends-rep" id="friends-rep"></div>
+          <p id="friends-status" class="meetings-status" role="status" aria-live="polite"></p>
+          <label class="friends-search">
+            <span class="sr-only">Buscar pelo apelido</span>
+            <input type="search" id="friends-search" placeholder="Buscar pelo apelido" autocomplete="off" />
+          </label>
+          <p id="friends-search-empty" class="friend-empty" hidden>Ninguém com esse apelido.</p>
+          <h3 class="friends-h">Pedidos de amizade</h3>
+          <ul class="friends-list" id="friends-requests"></ul>
+          <h3 class="friends-h">Seus amigos</h3>
+          <ul class="friends-list" id="friends-list"></ul>
+          <h3 class="friends-h">Pessoas com quem você praticou</h3>
+          <ul class="friends-list" id="friends-people"></ul>
+          <details class="friends-blocked">
+            <summary>Bloqueados<span id="friends-blocked-count"></span></summary>
+            <ul class="friends-list" id="friends-blocked"></ul>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <dialog id="friend-profile" class="meeting-dialog friend-profile" aria-labelledby="friend-profile-title">
+      <div class="meeting-dialog-heading"><h2 id="friend-profile-title">Perfil</h2><button type="button" data-close-dialog aria-label="Fechar perfil">✕</button></div>
+      <div id="friend-profile-body"></div>
+    </dialog>
+
+    <div class="friend-toast" id="friend-toast" role="status" aria-live="polite" hidden>
+      <span id="friend-toast-text"></span>
+      <button type="button" class="friend-btn friend-btn-main" id="friend-toast-go">Ver pedidos</button>
+      <button type="button" class="friend-toast-close" id="friend-toast-close" aria-label="Fechar aviso">✕</button>
+    </div>
+
     <section id="faq" data-tela="duvidas" class="section" aria-labelledby="faq-title">
       <div class="container narrow">
         <p class="eyebrow">Dúvidas frequentes</p>
@@ -654,7 +696,9 @@
         <a href="#inicio">Início</a>
         <a href="#mapa">Mapa</a>
         <a href="#encontros">Encontros</a>
+        <a href="#amigos">Amigos</a>
         <a href="#duvidas">Dúvidas</a>
+        <a href="#como-funciona">Como funciona</a>
         <a href="#fontes">Fontes</a>
         <a href="#participe">Contato</a>
       </nav>
@@ -669,6 +713,7 @@
   <script src="telas.js?v=telas-4" defer></script>
   <script src="data/locais.js" defer></script>
   <script src="app.js?v=publico-2" defer></script>
-  <script src="encontros.js?v=alertas-3" defer></script>
+  <script src="encontros.js?v=amigos-alertas-1" defer></script>
+  <script src="amigos.js?v=amigos-3" defer></script>
 </body>
 </html>

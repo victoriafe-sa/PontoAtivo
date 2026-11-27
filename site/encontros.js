@@ -78,6 +78,8 @@
     byId("meeting-account").hidden = Boolean(user);
     byId("account-menu").hidden = !user;
     byId("header-login").hidden = Boolean(user);
+    // Outras partes do site (como a tela Amigos) acompanham quem está conectado.
+    document.dispatchEvent(new CustomEvent("pa:conta", {detail: user}));
     if (user) {
       byId("account-name").textContent = user.apelido;
       byId("account-avatar").textContent = (user.apelido || "?").trim().charAt(0).toUpperCase();
@@ -245,6 +247,15 @@
       document.createTextNode("Organizado por " + event.organizador));
     by.firstChild.setAttribute("aria-hidden", "true");
     item.append(by);
+    if (event.organizador_nota) {
+      const nota = event.organizador_nota;
+      item.append(node("p", `★ ${String(nota.media).replace(".", ",")} · ${nota.total} notas de quem já praticou`, "meeting-rating"));
+    }
+    if (event.amigos && event.amigos.length) {
+      item.classList.add("meeting-card-friends");
+      const nomes = event.amigos.length > 2 ? `${event.amigos.slice(0, 2).join(", ")} e mais ${event.amigos.length - 2}` : event.amigos.join(" e ");
+      item.append(node("p", `Amigos neste encontro: ${nomes}`, "meeting-friends"));
+    }
     const actions = node("div", undefined, "place-actions");
     const future = ["aberto", "lotado"].includes(event.estado);
     if (event.meu && future) {
@@ -451,6 +462,8 @@
   document.addEventListener("keydown", e => {
     if (e.key === "Escape" && !accountPop.hidden) { openAccount(false); accountBtn.focus(); }
   });
+  // Bloquear ou desbloquear alguém muda quais encontros aparecem.
+  document.addEventListener("pa:bloqueios", () => refresh());
   byId("account-agenda").addEventListener("click", () => {
     window.PontoAtivoTelas.ir("encontros");
     mine = true;

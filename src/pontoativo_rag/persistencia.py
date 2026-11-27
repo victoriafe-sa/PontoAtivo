@@ -50,6 +50,30 @@ class Database:
                     user_id TEXT PRIMARY KEY REFERENCES users(id),
                     sports TEXT NOT NULL DEFAULT '[]', region TEXT NOT NULL DEFAULT ''
                 );
+                -- Amizade entre duas pessoas: user_a < user_b, uma linha por par.
+                CREATE TABLE IF NOT EXISTS friendships (
+                    user_a TEXT NOT NULL REFERENCES users(id),
+                    user_b TEXT NOT NULL REFERENCES users(id),
+                    requester TEXT NOT NULL REFERENCES users(id),
+                    status TEXT NOT NULL CHECK(status IN ('pendente', 'aceito')),
+                    created TEXT NOT NULL,
+                    PRIMARY KEY(user_a, user_b), CHECK(user_a < user_b)
+                );
+                -- Nota anônima de 1 a 5 estrelas: só a média e o total chegam aos outros.
+                CREATE TABLE IF NOT EXISTS notas (
+                    rater TEXT NOT NULL REFERENCES users(id),
+                    rated TEXT NOT NULL REFERENCES users(id),
+                    value INTEGER NOT NULL CHECK(value BETWEEN 1 AND 5),
+                    updated TEXT NOT NULL,
+                    PRIMARY KEY(rater, rated)
+                );
+                CREATE TABLE IF NOT EXISTS blocks (
+                    blocker TEXT NOT NULL REFERENCES users(id),
+                    blocked TEXT NOT NULL REFERENCES users(id),
+                    created TEXT NOT NULL,
+                    PRIMARY KEY(blocker, blocked)
+                );
+                CREATE INDEX IF NOT EXISTS notas_rated ON notas(rated);
                 CREATE INDEX IF NOT EXISTS events_start ON events(start);
                 CREATE INDEX IF NOT EXISTS members_user ON members(user_id);
             """)

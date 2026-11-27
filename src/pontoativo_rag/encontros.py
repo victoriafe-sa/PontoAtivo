@@ -15,6 +15,17 @@ AUDIENCES = ("misto", "mulheres", "homens")
 AUDIENCE_GENDER = {"mulheres": "mulher", "homens": "homem"}
 AUDIENCE_LABEL = {"mulheres": "só para mulheres", "homens": "só para homens"}
 BRASILIA = timezone(timedelta(hours=-3))
+# A média de estrelas só aparece com pelo menos 3 notas: com menos, daria para
+# adivinhar quem deu cada uma.
+MIN_NOTAS = 3
+
+
+def reputacao(db, user_id):
+    """Média e total de estrelas recebidas, ou None se ainda houver poucas notas."""
+    row = db.execute("SELECT avg(value) AS media, count(*) AS total FROM notas WHERE rated=?", (user_id,)).fetchone()
+    if row["total"] < MIN_NOTAS:
+        return None
+    return {"media": round(row["media"], 1), "total": row["total"]}
 
 
 def _chave_regiao(nome):
@@ -63,6 +74,16 @@ class Meetings:
             raise ApiError(404, "Encontro não encontrado.")
         return row
 
+    def _bloqueado(self, db, user_id, event_id):
+        """True se a pessoa bloqueou, ou foi bloqueada por, alguém deste encontro."""
+        return db.execute(
+            """SELECT 1 FROM members JOIN blocks
+                 ON (blocks.blocker=? AND blocks.blocked=members.user_id)
+                 OR (blocks.blocked=? AND blocks.blocker=members.user_id)
+               WHERE members.event_id=? LIMIT 1""",
+            (user_id, user_id, event_id),
+        ).fetchone() is not None
+
     def _available(self, row):
         if row["cancelled"] or row["start"] <= now():
             raise ApiError(409, "Esse encontro já foi cancelado ou já começou.")
@@ -110,7 +131,17 @@ class Meetings:
             "alerta_regiao": self.seguranca.get(_chave_regiao(place.get("regiao"))),
             "capacidade": row["capacity"], "participantes": count,
             "vagas": row["capacity"] - count, "estado": state, "organizador": nickname,
+            "organizador_nota": reputacao(db, row["organizer"]),
             "meu": row["organizer"] == user_id, "participando": joined,
+            # Amigos de quem está vendo que vão a este encontro (só para quem entrou na conta).
+            "amigos": [r["nickname"] for r in db.execute(
+                """SELECT users.nickname FROM members
+                   JOIN friendships ON friendships.status = 'aceito'
+                    AND ((friendships.user_a = ? AND friendships.user_b = members.user_id)
+                      OR (friendships.user_b = ? AND friendships.user_a = members.user_id))
+                   JOIN users ON users.id = members.user_id
+                   WHERE members.event_id = ? ORDER BY users.nickname""",
+                (user_id, user_id, row["id"]))] if user_id else [],
         }
 
     def criar_encontro(self, usuario_id, dados):
@@ -174,6 +205,7 @@ class Meetings:
             else:
                 rows = db.execute("SELECT * FROM events WHERE cancelled=0 AND start>? ORDER BY start", (now(),)).fetchall()
                 if usuario_id:
+                    rows = [row for row in rows if not self._bloqueado(db, usuario_id, row["id"])]
                     # Encontros só para mulheres ou só para homens somem para quem não pode entrar.
                     # Sem conta, todos aparecem: o gênero só é conferido na hora de entrar.
                     gender = self._user(db, usuario_id)["gender"]
@@ -201,6 +233,8 @@ class Meetings:
                 raise ApiError(403, f"Este encontro é {AUDIENCE_LABEL[row['audience']]}. Se for o seu caso, "
                                     "informe o gênero em Minhas preferências.")
             current = self._view(db, row, usuario_id)
+            if not current["participando"] and self._bloqueado(db, usuario_id, encontro_id):
+                raise ApiError(403, "Não é possível participar deste encontro.")
             if not current["participando"]:
                 if current["vagas"] <= 0:
                     raise ApiError(409, "Esse encontro está lotado.")
