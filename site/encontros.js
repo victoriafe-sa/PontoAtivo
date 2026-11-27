@@ -222,6 +222,11 @@
     const alerts = node("ul", undefined, "meeting-alerts");
     alerts.setAttribute("aria-label", "Alertas deste encontro");
     for (const text of timeAlerts(event)) alerts.append(node("li", text));
+    if (event.alerta_regiao) {
+      const r = event.alerta_regiao;
+      const vezes = r.vezes_media_df.toFixed(1).replace(".", ",");
+      alerts.append(node("li", `${r.regiao} teve em ${r.ano} cerca de ${vezes} vezes a média do DF em homicídios, roubos a pedestres e estupros por morador (SSP-DF). Prefira horários de movimento e vá acompanhado.`));
+    }
     if (event.alerta_grupo) {
       alerts.append(node("li", "Grupo com mais homens que mulheres e com pessoas com quem você ainda não praticou. Se quiser, chame alguém de confiança ou combine em local movimentado."));
     }

@@ -3,6 +3,7 @@ from datetime import datetime, timezone, timedelta
 from uuid import uuid4
 import json
 import re
+import unicodedata
 
 from .contas import AGES
 from .persistencia import ApiError
@@ -14,6 +15,13 @@ AUDIENCES = ("misto", "mulheres", "homens")
 AUDIENCE_GENDER = {"mulheres": "mulher", "homens": "homem"}
 AUDIENCE_LABEL = {"mulheres": "só para mulheres", "homens": "só para homens"}
 BRASILIA = timezone(timedelta(hours=-3))
+
+
+def _chave_regiao(nome):
+    """Nome de RA comparável: sem acento, minúsculo, com apelidos unificados."""
+    texto = unicodedata.normalize("NFD", str(nome or "")).casefold()
+    texto = " ".join("".join(c for c in texto if not unicodedata.combining(c)).split())
+    return {"sol nascente": "sol nascente/por do sol", "estrutural": "scia/estrutural"}.get(texto, texto)
 
 
 def now():
@@ -30,11 +38,18 @@ def _matches(key, wanted, value):
 
 
 class Meetings:
-    def __init__(self, db, places):
+    def __init__(self, db, places, seguranca=None):
         self.db = db
         self.places = {place["id"]: place for place in places}
         if len(self.places) != len(places):
             raise ValueError("Identificadores de locais duplicados.")
+        # Tabela da SSP-DF por RA (scripts/gerar_seguranca_ras.py). Só as RAs com alerta interessam.
+        seguranca = seguranca or {}
+        self.seguranca_ano = seguranca.get("ano")
+        self.seguranca = {
+            _chave_regiao(nome): {"vezes_media_df": dados["vezes_media_df"], "ano": seguranca.get("ano"), "regiao": nome}
+            for nome, dados in seguranca.get("regioes", {}).items() if dados.get("alerta")
+        }
 
     def _user(self, db, user_id):
         row = db.execute("SELECT * FROM users WHERE id=?", (user_id,)).fetchone()
@@ -92,6 +107,7 @@ class Meetings:
             "nivel": row["level"], "idade": row["age"], "formato": row["format"],
             "publico": row["audience"] if "audience" in row.keys() else "misto",
             "alerta_grupo": self._alerta_grupo(db, row, user_id),
+            "alerta_regiao": self.seguranca.get(_chave_regiao(place.get("regiao"))),
             "capacidade": row["capacity"], "participantes": count,
             "vagas": row["capacity"] - count, "estado": state, "organizador": nickname,
             "meu": row["organizer"] == user_id, "participando": joined,
