@@ -422,8 +422,9 @@ function meetupsHtml(r) {
       : e.participando ? '<span class="pop-meet-mine">Você vai</span>'
       : e.estado === "aberto" ? `<button type="button" data-event-action="participacao" data-event-id="${esc(e.id)}">Participar</button>`
       : "";
+    const publico = AUDIENCE_LABEL[e.publico] ? ` · <span class="pop-audience">${AUDIENCE_LABEL[e.publico]}</span>` : "";
     return `<li><span><b>${esc(e.esporte)}</b> · ${esc(meetupDate.format(new Date(e.inicio)))}<br>
-      <small>${esc(vagas)} · ${e.participantes}/${e.capacidade} pessoas</small></span>${action}</li>`;
+      <small>${esc(vagas)} · ${e.participantes}/${e.capacidade} pessoas${publico}</small></span>${action}</li>`;
   }).join("");
   const more = events.length > shown.length ? `<p class="meta">+ ${events.length - shown.length} no mesmo local</p>` : "";
   const notice = meetupNotice && meetupNotice.until > Date.now() && events.some((e) => e.id === meetupNotice.eventId)
@@ -670,6 +671,9 @@ const meetDayName = new Intl.DateTimeFormat("pt-BR", { timeZone: "America/Sao_Pa
 const meetHour = new Intl.DateTimeFormat("pt-BR", { timeZone: "America/Sao_Paulo", hour: "2-digit", minute: "2-digit" });
 let allMeetups = [];
 
+// Selo dos encontros exclusivos (os mistos não têm selo).
+const AUDIENCE_LABEL = { mulheres: "Só para mulheres", homens: "Só para homens" };
+
 function meetCard(e, today, tomorrow) {
   const start = new Date(e.inicio);
   const key = meetDayKey.format(start);
@@ -686,7 +690,7 @@ function meetCard(e, today, tomorrow) {
     ? `<button type="button" class="mm-see" data-meet-focus="${esc(e.local.id)}">Ver no mapa</button>` : "";
   const organizer = e.organizador || "?";
   return `<li class="mm-card">
-    <div class="mm-chips"><span class="mm-sport">${esc(e.esporte)}</span><span class="mm-state mm-${tone}">${chip}</span></div>
+    <div class="mm-chips"><span class="mm-sport">${esc(e.esporte)}</span><span class="mm-state mm-${tone}">${chip}</span>${AUDIENCE_LABEL[e.publico] ? `<span class="mm-audience">${AUDIENCE_LABEL[e.publico]}</span>` : ""}</div>
     <h4>${esc(e.local.nome)}</h4>
     <p class="mm-where">${esc(e.local.regiao || "Distrito Federal")}</p>
     <div class="mm-row">

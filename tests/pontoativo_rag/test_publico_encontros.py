@@ -114,3 +114,17 @@ def test_banco_antigo_ganha_as_colunas_novas(tmp_path):
     with db.transaction() as conn:
         assert conn.execute("SELECT gender FROM users").fetchone()[0] == ""
         assert conn.execute("SELECT audience FROM events").fetchone()[0] == "misto"
+
+
+def test_exclusivos_somem_para_quem_nao_pode_entrar(mundo):
+    db, accounts, meetings, ids = mundo
+    mulheres = encontro(meetings, ids["ana"], "mulheres")["id"]
+    homens = encontro(meetings, ids["beto"], "homens")["id"]
+    misto = encontro(meetings, ids["cris"])["id"]
+    ver = lambda quem: {e["id"] for e in meetings.listar_encontros({}, ids[quem] if quem else None)}
+    assert ver("ana") == {mulheres, misto}
+    assert ver("beto") == {homens, misto}
+    assert ver("cris") == {misto} and ver("dani") == {misto}
+    assert ver(None) == {mulheres, homens, misto}  # sem conta, todos aparecem
+    # Na própria agenda, quem organizou continua vendo o seu.
+    assert {e["id"] for e in meetings.listar_encontros({"meus": True}, ids["ana"])} == {mulheres}

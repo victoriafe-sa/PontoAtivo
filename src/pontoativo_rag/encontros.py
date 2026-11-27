@@ -127,6 +127,12 @@ class Meetings:
                                      WHERE members.user_id=? ORDER BY start""", (usuario_id,)).fetchall()
             else:
                 rows = db.execute("SELECT * FROM events WHERE cancelled=0 AND start>? ORDER BY start", (now(),)).fetchall()
+                if usuario_id:
+                    # Encontros só para mulheres ou só para homens somem para quem não pode entrar.
+                    # Sem conta, todos aparecem: o gênero só é conferido na hora de entrar.
+                    gender = self._user(db, usuario_id)["gender"]
+                    rows = [row for row in rows
+                            if row["audience"] not in AUDIENCE_GENDER or AUDIENCE_GENDER[row["audience"]] == gender]
             result = []
             for row in rows:
                 place = self.places.get(row["place_id"], {})
