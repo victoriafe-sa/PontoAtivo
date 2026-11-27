@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-  <link rel="stylesheet" href="styles.css?v=amigos-3" />
+  <link rel="stylesheet" href="styles.css?v=amigos-alertas-1" />
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -185,6 +185,7 @@
             <li>Os outros só veem seu apelido, nunca seu usuário ou senha.</li>
             <li>Marcar um encontro não reserva o espaço: confira as condições do local antes de ir.</li>
             <li>Os horários são de Brasília.</li>
+            <li>Quem marca pode deixar o encontro misto, só para mulheres ou só para homens. Para os exclusivos, informe o gênero em Minhas preferências: ele não aparece para ninguém.</li>
           </ul>
           <a href="#encontros" class="btn btn-primary cf-meet-cta">Ver os encontros</a>
         </div>
@@ -328,6 +329,7 @@
           <label>Nível<select name="nivel"><option value="">Todos</option><option value="iniciante">Iniciante</option><option value="intermediario">Intermediário</option><option value="avancado">Avançado</option><option value="todos">Todos os níveis</option></select></label>
           <label>Faixa etária<select name="idade"><option value="">Todas</option><option value="todos">Todos os adultos</option><option>18-24</option><option>25-34</option><option>35-44</option><option>45-59</option><option>60+</option></select></label>
           <label>Formato<select name="formato"><option value="">Todos</option><option value="dupla">Dupla</option><option value="trio">Trio</option><option value="grupo">Grupo</option></select></label>
+          <label>Público<select name="publico"><option value="">Todos</option><option value="misto">Misto</option><option value="mulheres">Só mulheres</option><option value="homens">Só homens</option></select></label>
             </div>
           </details>
           <button type="reset" class="mf-clear">Limpar filtros</button>
@@ -353,6 +355,7 @@
           <label>Formato<select name="formato"><option value="dupla">Dupla</option><option value="trio">Trio</option><option value="grupo">Grupo</option></select></label>
           <label id="meeting-capacity-label" hidden>Total de pessoas, incluindo você<input type="number" name="capacidade" value="4" min="4" max="20" /></label>
         </div>
+        <label>Quem pode participar<select name="publico"><option value="misto">Misto (todas as pessoas)</option><option value="mulheres">Só mulheres</option><option value="homens">Só homens</option></select></label>
         <p id="meeting-form-status" class="meetings-status" role="status"></p>
         <button type="submit" class="btn btn-primary">Publicar encontro</button>
       </form>
@@ -372,6 +375,8 @@
             <p class="pref-help">Servem só para abrir os encontros e o mapa já filtrados. Você pode mudar ou apagar depois.</p>
             <div class="pref-sports" data-pref-sports role="group" aria-label="Esportes favoritos (até 5)"></div>
             <label>Região preferida<select name="regiao" data-pref-region><option value="">Nenhuma</option></select></label>
+            <label>Gênero (opcional)<select name="genero" data-pref-gender><option value="">Não informar</option><option value="mulher">Mulher</option><option value="homem">Homem</option><option value="outro">Outro</option></select></label>
+            <p class="pref-help">Não aparece para ninguém. Só serve para ver e entrar em encontros só para mulheres ou só para homens.</p>
           </fieldset>
         </div>
         <p id="meeting-auth-status" class="meetings-status" role="status"></p>
@@ -389,6 +394,8 @@
           <p class="pref-help">Os encontros e o mapa abrem com esses filtros. Nada some: você pode limpar os filtros a qualquer momento.</p>
           <div class="pref-sports" data-pref-sports role="group" aria-label="Esportes favoritos (até 5)"></div>
           <label>Região preferida<select name="regiao" data-pref-region><option value="">Nenhuma</option></select></label>
+          <label>Gênero (opcional)<select name="genero" data-pref-gender><option value="">Não informar</option><option value="mulher">Mulher</option><option value="homem">Homem</option><option value="outro">Outro</option></select></label>
+          <p class="pref-help">Não aparece para ninguém. Só serve para ver e entrar em encontros só para mulheres ou só para homens.</p>
         </fieldset>
         <p id="pref-status" class="meetings-status" role="status"></p>
         <button type="submit" class="btn btn-primary">Salvar</button>
@@ -705,8 +712,8 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" defer></script>
   <script src="telas.js?v=telas-4" defer></script>
   <script src="data/locais.js" defer></script>
-  <script src="app.js?v=cob-2" defer></script>
-  <script src="encontros.js?v=amigos-4" defer></script>
+  <script src="app.js?v=publico-2" defer></script>
+  <script src="encontros.js?v=amigos-alertas-1" defer></script>
   <script src="amigos.js?v=amigos-3" defer></script>
 </body>
 </html>

@@ -89,7 +89,11 @@ condições; não transfere atributos entre locais, entre instalações (por exe
 de banheiros para trajetos) ou de entrada para aulas;
 completude: responde a cada parte da pergunta ou explicita precisamente a lacuna;
 temporalidade: não apresenta datas antigas, preços ou horários documentados como
-situação atual confirmada; preserva ressalvas e datas relevantes;
+situação atual confirmada; preserva ressalvas e datas relevantes. Uma data
+futura explicitamente vinculada ao evento é a programação anunciada pela
+fonte, não uma afirmação de que o evento já ocorreu ou acontece hoje. Não
+reprove só por ser futura: exija indicação concreta de recorrência indevida,
+confirmação externa inventada ou omissão da data;
 lacunas_conflitos: ausência de informação não vira negativa factual, pergunta
 ambígua pede esclarecimento e fontes incompatíveis são apresentadas como conflito.
 Marque aprovado somente se todos os critérios forem verdadeiros. Uma resposta

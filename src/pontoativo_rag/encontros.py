@@ -3,12 +3,17 @@ from datetime import datetime, timezone, timedelta
 from uuid import uuid4
 import json
 import re
+import unicodedata
 
 from .contas import AGES
 from .persistencia import ApiError
 
 LEVELS = ("iniciante", "intermediario", "avancado", "todos")
 FORMATS = ("dupla", "trio", "grupo")
+# Quem pode participar. "mulheres" e "homens" conferem o gênero informado na conta.
+AUDIENCES = ("misto", "mulheres", "homens")
+AUDIENCE_GENDER = {"mulheres": "mulher", "homens": "homem"}
+AUDIENCE_LABEL = {"mulheres": "só para mulheres", "homens": "só para homens"}
 BRASILIA = timezone(timedelta(hours=-3))
 # A média de estrelas só aparece com pelo menos 3 notas: com menos, daria para
 # adivinhar quem deu cada uma.
@@ -21,6 +26,13 @@ def reputacao(db, user_id):
     if row["total"] < MIN_NOTAS:
         return None
     return {"media": round(row["media"], 1), "total": row["total"]}
+
+
+def _chave_regiao(nome):
+    """Nome de RA comparável: sem acento, minúsculo, com apelidos unificados."""
+    texto = unicodedata.normalize("NFD", str(nome or "")).casefold()
+    texto = " ".join("".join(c for c in texto if not unicodedata.combining(c)).split())
+    return {"sol nascente": "sol nascente/por do sol", "estrutural": "scia/estrutural"}.get(texto, texto)
 
 
 def now():
@@ -37,11 +49,18 @@ def _matches(key, wanted, value):
 
 
 class Meetings:
-    def __init__(self, db, places):
+    def __init__(self, db, places, seguranca=None):
         self.db = db
         self.places = {place["id"]: place for place in places}
         if len(self.places) != len(places):
             raise ValueError("Identificadores de locais duplicados.")
+        # Tabela da SSP-DF por RA (scripts/gerar_seguranca_ras.py). Só as RAs com alerta interessam.
+        seguranca = seguranca or {}
+        self.seguranca_ano = seguranca.get("ano")
+        self.seguranca = {
+            _chave_regiao(nome): {"vezes_media_df": dados["vezes_media_df"], "ano": seguranca.get("ano"), "regiao": nome}
+            for nome, dados in seguranca.get("regioes", {}).items() if dados.get("alerta")
+        }
 
     def _user(self, db, user_id):
         row = db.execute("SELECT * FROM users WHERE id=?", (user_id,)).fetchone()
@@ -69,6 +88,35 @@ class Meetings:
         if row["cancelled"] or row["start"] <= now():
             raise ApiError(409, "Esse encontro já foi cancelado ou já começou.")
 
+    def _alerta_grupo(self, db, row, user_id):
+        """Alerta só para mulheres: grupo de 5+ pessoas, mais homens que mulheres
+        e ninguém com quem ela já praticou. Só o alerta sai daqui, nunca os gêneros."""
+        if not user_id or row["capacity"] < 5:
+            return False
+        viewer = db.execute("SELECT gender FROM users WHERE id=?", (user_id,)).fetchone()
+        if viewer is None or viewer["gender"] != "mulher":
+            return False
+        outros = db.execute(
+            """SELECT users.id, users.gender FROM members JOIN users ON users.id = members.user_id
+               WHERE members.event_id = ? AND members.user_id <> ?""",
+            (row["id"], user_id),
+        ).fetchall()
+        homens = sum(o["gender"] == "homem" for o in outros)
+        mulheres = sum(o["gender"] == "mulher" for o in outros) + 1  # conta ela também
+        if homens <= mulheres:
+            return False
+        # "Não se conhecem": ela nunca participou de um encontro realizado com ninguém do grupo.
+        conhecidos = db.execute(
+            """SELECT 1 FROM members AS dela
+               JOIN members AS outro ON outro.event_id = dela.event_id
+               JOIN events ON events.id = dela.event_id
+               WHERE dela.user_id = ? AND events.cancelled = 0 AND events.start <= ?
+                 AND outro.user_id IN (SELECT user_id FROM members WHERE event_id = ? AND user_id <> ?)
+               LIMIT 1""",
+            (user_id, now(), row["id"], user_id),
+        ).fetchone()
+        return conhecidos is None
+
     def _view(self, db, row, user_id=None):
         place = self.places.get(row["place_id"], {"id": row["place_id"], "nome": "Local fora do cadastro", "regiao": ""})
         count = db.execute("SELECT count(*) FROM members WHERE event_id=?", (row["id"],)).fetchone()[0]
@@ -78,6 +126,9 @@ class Meetings:
         return {
             "id": row["id"], "local": place, "esporte": row["sport"], "inicio": row["start"],
             "nivel": row["level"], "idade": row["age"], "formato": row["format"],
+            "publico": row["audience"] if "audience" in row.keys() else "misto",
+            "alerta_grupo": self._alerta_grupo(db, row, user_id),
+            "alerta_regiao": self.seguranca.get(_chave_regiao(place.get("regiao"))),
             "capacidade": row["capacity"], "participantes": count,
             "vagas": row["capacity"] - count, "estado": state, "organizador": nickname,
             "organizador_nota": reputacao(db, row["organizer"]),
@@ -101,6 +152,9 @@ class Meetings:
         place = dados.get("local_id")
         sport = dados.get("esporte", "")
         level, age, form = dados.get("nivel"), dados.get("idade"), dados.get("formato")
+        audience = dados.get("publico", "misto")
+        if audience not in AUDIENCES:
+            raise ApiError(400, "Escolha se o encontro é misto, só para mulheres ou só para homens.")
         if not isinstance(place, str) or place not in self.places:
             raise ApiError(400, "Selecione um local do mapa.")
         if not isinstance(sport, str) or not 2 <= len(sport.strip()) <= 60:
@@ -131,8 +185,12 @@ class Meetings:
                 raise ApiError(400, "Escolha uma data e hora futuras, no horário de Brasília.")
             if age != "todos" and age != user["age"]:
                 raise ApiError(400, "Escolha uma faixa etária que inclua você.")
-            db.execute("INSERT INTO events VALUES(?,?,?,?,?,?,?,?,?,0)",
-                       (event_id, usuario_id, place, sport.strip(), start, level, age, form, capacity))
+            if audience in AUDIENCE_GENDER and user["gender"] != AUDIENCE_GENDER[audience]:
+                raise ApiError(400, f"Para marcar um encontro {AUDIENCE_LABEL[audience]}, informe o gênero "
+                                    f"\"{AUDIENCE_GENDER[audience]}\" em Minhas preferências.")
+            db.execute("""INSERT INTO events(id, organizer, place_id, sport, start, level, age, format,
+                                             capacity, cancelled, audience) VALUES(?,?,?,?,?,?,?,?,?,0,?)""",
+                       (event_id, usuario_id, place, sport.strip(), start, level, age, form, capacity, audience))
             db.execute("INSERT INTO members VALUES(?,?)", (event_id, usuario_id))
             if request_id:
                 db.execute("INSERT INTO event_requests VALUES(?,?,?,?)", (usuario_id, request_id, event_id, payload))
@@ -148,11 +206,16 @@ class Meetings:
                 rows = db.execute("SELECT * FROM events WHERE cancelled=0 AND start>? ORDER BY start", (now(),)).fetchall()
                 if usuario_id:
                     rows = [row for row in rows if not self._bloqueado(db, usuario_id, row["id"])]
+                    # Encontros só para mulheres ou só para homens somem para quem não pode entrar.
+                    # Sem conta, todos aparecem: o gênero só é conferido na hora de entrar.
+                    gender = self._user(db, usuario_id)["gender"]
+                    rows = [row for row in rows
+                            if row["audience"] not in AUDIENCE_GENDER or AUDIENCE_GENDER[row["audience"]] == gender]
             result = []
             for row in rows:
                 place = self.places.get(row["place_id"], {})
                 values = {"regiao": place.get("regiao"), "esporte": row["sport"],
-                          "nivel": row["level"], "formato": row["format"],
+                          "nivel": row["level"], "formato": row["format"], "publico": row["audience"],
                           "idade": row["age"],
                           "data": datetime.fromisoformat(row["start"]).astimezone(BRASILIA).date().isoformat()}
                 if all(_matches(key, filtros.get(key), value) for key, value in values.items()):
@@ -166,6 +229,9 @@ class Meetings:
             self._available(row)
             if row["age"] != "todos" and row["age"] != user["age"]:
                 raise ApiError(403, "Sua faixa etária não corresponde à deste encontro.")
+            if row["audience"] in AUDIENCE_GENDER and user["gender"] != AUDIENCE_GENDER[row["audience"]]:
+                raise ApiError(403, f"Este encontro é {AUDIENCE_LABEL[row['audience']]}. Se for o seu caso, "
+                                    "informe o gênero em Minhas preferências.")
             current = self._view(db, row, usuario_id)
             if not current["participando"] and self._bloqueado(db, usuario_id, encontro_id):
                 raise ApiError(403, "Não é possível participar deste encontro.")
