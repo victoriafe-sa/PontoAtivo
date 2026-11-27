@@ -233,7 +233,7 @@
     if (event.amigos && event.amigos.length) {
       item.classList.add("meeting-card-friends");
       const nomes = event.amigos.length > 2 ? `${event.amigos.slice(0, 2).join(", ")} e mais ${event.amigos.length - 2}` : event.amigos.join(" e ");
-      item.append(node("p", `${event.amigos.length === 1 ? "Seu amigo" : "Seus amigos"} ${nomes} ${event.amigos.length === 1 ? "vai" : "vão"}`, "meeting-friends"));
+      item.append(node("p", `Amigos neste encontro: ${nomes}`, "meeting-friends"));
     }
     const actions = node("div", undefined, "place-actions");
     const future = ["aberto", "lotado"].includes(event.estado);
