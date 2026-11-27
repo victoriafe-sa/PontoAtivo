@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-  <link rel="stylesheet" href="styles.css?v=amigos-alertas-1" />
+  <link rel="stylesheet" href="styles.css?v=fontes-1" />
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -408,45 +408,108 @@
       <div class="container">
         <p class="eyebrow">Fontes e cobertura</p>
         <h2 id="fontes-title">De onde vêm os dados do mapa</h2>
-        <p class="section-sub">Pesquisa feita em 05/11/2026 em bases oficiais do GDF e de outras fontes públicas, com curadoria multifonte em 10/11/2026. Cada local do mapa leva o link da sua fonte.</p>
+        <p class="section-sub">Pesquisa feita em 05/11/2026 em bases oficiais do GDF e de outras fontes públicas, com curadoria multifonte em 10/11/2026; os parquinhos entraram em 19/11/2026. Cada local do mapa leva o link da sua fonte.</p>
         <div class="stats" id="stats"></div>
-        <div class="sources">
-          <article class="source">
-            <h3>IDE-DF – Infraestrutura de Dados Espaciais do DF</h3>
-            <p>Camada <em>Mobiliário Esporte e Lazer</em> (SEDUH): PECs, quadras poliesportivas e de areia, campos, pistas de skate, aparelhos de ginástica e 798 parquinhos (parques infantis), com endereço, estado de conservação e iluminação. Camada <em>Parques Urbanos</em>: 37 parques no mapa. Camada <em>Espaços comunitários</em>: 981 campos, 184 quadras e 183 praças que não constavam do mobiliário, quase todos sem endereço (a região vem do limite oficial da RA).</p>
-            <a href="https://www.geoservicos.ide.df.gov.br/arcgis/rest/services/Publico/EQUIPAMENTOS_URBANOS/MapServer" target="_blank" rel="noopener">Abrir serviço oficial ↗</a>
-          </article>
-          <article class="source">
-            <h3>Secretaria de Esporte e Lazer do DF</h3>
-            <p>Endereços e telefones dos 12 Centros Olímpicos e Paralímpicos (gratuitos, com vagas para pessoas com deficiência) e lista dos espaços esportivos administrados pela SEL.</p>
-            <a href="https://www.esporte.df.gov.br/cops" target="_blank" rel="noopener">esporte.df.gov.br/cops ↗</a>
-          </article>
-          <article class="source">
-            <h3>Brasília Ambiental (Ibram)</h3>
-            <p>Tabela oficial de Unidades de Conservação (ago/2026): parques ecológicos e distritais por região administrativa.</p>
-            <a href="https://www.ibram.df.gov.br/unidades-de-conservacao" target="_blank" rel="noopener">ibram.df.gov.br ↗</a>
-          </article>
-          <article class="source">
-            <h3>Guia dos Espaços Públicos de Lazer do DF (UnB)</h3>
-            <p>Pesquisa de mestrado de Bruno Lofrano Porto (PPG-GEA/UnB, 2022–2023) que mapeia os espaços públicos de lazer do DF. Usada para confirmar os tipos da camada de espaços comunitários e como documento consultado pela pesquisa de dúvidas.</p>
-            <a href="https://storymaps.arcgis.com/stories/1095a2734eec4b61be03431a19a54364" target="_blank" rel="noopener">Abrir o guia ↗</a>
-          </article>
-          <article class="source">
-            <h3>Paradesporto e outras fontes</h3>
-            <p>CETEFE (Agência Gov, Metrópoles, Jornal de Brasília), Centro Olímpico da UnB e limites das regiões administrativas (IDE-DF). Localização dos locais nomeados via OpenStreetMap, conferida com o limite oficial de cada RA.</p>
-            <a href="https://agenciagov.ebc.com.br/noticias/202310/enap-reinaugura-complexo-esportivo-utilizado-por-atletas-paralimpicos-de-alto-nivel" target="_blank" rel="noopener">Agência Gov ↗</a>
-          </article>
+        <div class="sources fontes-lista">
+          <details class="source">
+            <summary>
+              <span class="fonte-marca" style="background:var(--green)" aria-hidden="true"></span>
+              <span class="fonte-titulo">IDE-DF – Infraestrutura de Dados Espaciais do DF</span>
+              <span class="fonte-resumo">Base principal: PECs, quadras, campos, parquinhos, praças e parques</span>
+            </summary>
+            <div class="fonte-corpo">
+              <p>Camada <em>Mobiliário Esporte e Lazer</em> (SEDUH): PECs, quadras poliesportivas e de areia, campos, pistas de skate, aparelhos de ginástica e 798 parquinhos (parques infantis), com endereço, estado de conservação e iluminação. Camada <em>Parques Urbanos</em>: 37 parques no mapa. Camada <em>Espaços comunitários</em>: 981 campos, 184 quadras e 183 praças que não constavam do mobiliário, quase todos sem endereço (a região vem do limite oficial da RA).</p>
+              <a href="https://www.geoservicos.ide.df.gov.br/arcgis/rest/services/Publico/EQUIPAMENTOS_URBANOS/MapServer" target="_blank" rel="noopener">Abrir serviço oficial ↗</a>
+            </div>
+          </details>
+          <details class="source">
+            <summary>
+              <span class="fonte-marca" style="background:var(--blue)" aria-hidden="true"></span>
+              <span class="fonte-titulo">Secretaria de Esporte e Lazer do DF</span>
+              <span class="fonte-resumo">Centros Olímpicos e espaços esportivos da Secretaria</span>
+            </summary>
+            <div class="fonte-corpo">
+              <p>Endereços e telefones dos 12 Centros Olímpicos e Paralímpicos (gratuitos, com vagas para pessoas com deficiência) e lista dos espaços esportivos administrados pela SEL.</p>
+              <a href="https://www.esporte.df.gov.br/cops" target="_blank" rel="noopener">esporte.df.gov.br/cops ↗</a>
+            </div>
+          </details>
+          <details class="source">
+            <summary>
+              <span class="fonte-marca" style="background:var(--orange)" aria-hidden="true"></span>
+              <span class="fonte-titulo">Brasília Ambiental (Ibram)</span>
+              <span class="fonte-resumo">Parques ecológicos e distritais</span>
+            </summary>
+            <div class="fonte-corpo">
+              <p>Tabela oficial de Unidades de Conservação (ago/2026): parques ecológicos e distritais por região administrativa.</p>
+              <a href="https://www.ibram.df.gov.br/unidades-de-conservacao" target="_blank" rel="noopener">ibram.df.gov.br ↗</a>
+            </div>
+          </details>
+          <details class="source">
+            <summary>
+              <span class="fonte-marca" style="background:var(--navy)" aria-hidden="true"></span>
+              <span class="fonte-titulo">Guia dos Espaços Públicos de Lazer do DF (UnB)</span>
+              <span class="fonte-resumo">Confirma os tipos dos espaços comunitários</span>
+            </summary>
+            <div class="fonte-corpo">
+              <p>Pesquisa de mestrado de Bruno Lofrano Porto (PPG-GEA/UnB, 2022–2023) que mapeia os espaços públicos de lazer do DF. Usada para confirmar os tipos da camada de espaços comunitários e como documento consultado pela pesquisa de dúvidas.</p>
+              <a href="https://storymaps.arcgis.com/stories/1095a2734eec4b61be03431a19a54364" target="_blank" rel="noopener">Abrir o guia ↗</a>
+            </div>
+          </details>
+          <details class="source">
+            <summary>
+              <span class="fonte-marca" style="background:var(--green)" aria-hidden="true"></span>
+              <span class="fonte-titulo">Paradesporto e outras fontes</span>
+              <span class="fonte-resumo">CETEFE, Centro Olímpico da UnB e limites das regiões</span>
+            </summary>
+            <div class="fonte-corpo">
+              <p>CETEFE (Agência Gov, Metrópoles, Jornal de Brasília), Centro Olímpico da UnB e limites das regiões administrativas (IDE-DF). Localização dos locais nomeados via OpenStreetMap, conferida com o limite oficial de cada RA.</p>
+              <a href="https://agenciagov.ebc.com.br/noticias/202310/enap-reinaugura-complexo-esportivo-utilizado-por-atletas-paralimpicos-de-alto-nivel" target="_blank" rel="noopener">Agência Gov ↗</a>
+            </div>
+          </details>
+          <details class="source">
+            <summary>
+              <span class="fonte-marca" style="background:#8b5cf6" aria-hidden="true"></span>
+              <span class="fonte-titulo">Clubes e entidades de paradesporto</span>
+              <span class="fonte-resumo">4 clubes privados e 2 entidades, ainda sem pino no mapa</span>
+            </summary>
+            <div class="fonte-corpo">
+              <p>Quatro clubes privados (AABB Brasília, Clube da Aeronáutica, Clube Naval e Minas Brasília Tênis Clube), com endereço e modalidades dos sites oficiais de cada um. Duas entidades de paradesporto (CECAF/DIREF e Escola Franciscana Nossa Senhora de Fátima), com referência no site do Comitê Paralímpico Brasileiro. Os seis ainda não têm pino no mapa: aparecem só na lista, até as coordenadas serem confirmadas.</p>
+              <p class="source-links">
+                <a href="https://aabbdf.com.br/18648/" target="_blank" rel="noopener">AABB ↗</a>
+                <a href="https://clubedaaeronauticadf.com.br/" target="_blank" rel="noopener">Aeronáutica ↗</a>
+                <a href="https://clubenavaldf.com.br/" target="_blank" rel="noopener">Naval ↗</a>
+                <a href="https://minasbrasilia.com.br/faq" target="_blank" rel="noopener">Minas ↗</a>
+                <a href="https://www.cpb.org.br/" target="_blank" rel="noopener">CPB ↗</a>
+              </p>
+            </div>
+          </details>
+          <details class="source">
+            <summary>
+              <span class="fonte-marca" style="background:#12b07c" aria-hidden="true"></span>
+              <span class="fonte-titulo">Serviços consultados na hora</span>
+              <span class="fonte-resumo">Tempo, feriados, rotas e mapa de fundo</span>
+            </summary>
+            <div class="fonte-corpo">
+              <p>Não guardam dados no mapa: o site os consulta quando você usa o recurso. Previsão do tempo, índice UV e qualidade do ar dos encontros: <strong>Open-Meteo</strong>. Feriados nacionais: <strong>BrasilAPI</strong>, mais o feriado distrital de 30/11 (Lei Distrital nº 963/1995). Rotas a pé e para cadeira de rodas: <strong>openrouteservice</strong>. Mapa de fundo: © colaboradores do <strong>OpenStreetMap</strong>.</p>
+              <p class="source-links">
+                <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo ↗</a>
+                <a href="https://brasilapi.com.br/" target="_blank" rel="noopener">BrasilAPI ↗</a>
+                <a href="https://openrouteservice.org/" target="_blank" rel="noopener">openrouteservice ↗</a>
+                <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap ↗</a>
+              </p>
+            </div>
+          </details>
         </div>
-        <div class="gaps">
-          <h3>O que ainda falta (lacunas conhecidas e diagnóstico de cobertura)</h3>
+        <details class="gaps">
+          <summary><h3>O que ainda falta (lacunas conhecidas e diagnóstico de cobertura)</h3></summary>
           <ul>
-            <li><strong>PECs do DF:</strong> são <strong>403 PECs georreferenciadas</strong> no cadastro aberto utilizado pelo mapa; em contrapartida, a Novacap informou publicamente em 04/11/2025 que o DF conta com <em>mais de mil PECs</em> instaladas. A minuta de pedido de LAI está disponível em <code>docs/pedido-lai-novacap.md</code> para obtenção da base georreferenciada integral.</li>
+            <li><strong>PECs do DF:</strong> são <strong>403 PECs georreferenciadas</strong> no cadastro aberto utilizado pelo mapa; em contrapartida, a Novacap informou publicamente em 04/11/2025 que o DF conta com <em>mais de mil PECs</em> instaladas. A minuta de pedido de LAI está disponível em <code>curadoria/docs/pedido-lai-novacap.md</code> para obtenção da base georreferenciada integral.</li>
             <li><strong>Acessibilidade física:</strong> rampas, banheiros acessíveis, piso tátil e vagas PcD não constam detalhadas em bases abertas do GDF. Dados informados por instituições são exibidos como declarados, nunca como vistoria técnica presencial.</li>
             <li><strong>Paradesporto:</strong> modalidades e locais confirmados por fontes institucionais (CETEFE, CPB) estão catalogados; entidades como UNIACE e equipes de basquete em cadeira de rodas aguardam confirmação de locais regulares de treino em registro público.</li>
             <li><strong>Clubes e academias privadas:</strong> mapeamento inicial de clubes esportivos com base em seus sites oficiais, sem pino no mapa até comprovação das coordenadas geográficas.</li>
             <li id="gap-pend">12 dos 14 parques pendentes foram resolvidos via poligonal oficial do Ibram/ONDA (com indicação de ponto representativo da área). Dois parques (Lobo Guará e Lagoinha) e o Ginásio de Esportes de Samambaia permanecem como pendências geográficas em revisão.</li>
           </ul>
-        </div>
+        </details>
       </div>
     </section>
 
