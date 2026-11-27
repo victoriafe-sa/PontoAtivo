@@ -218,6 +218,16 @@
     if (event.publico && event.publico !== "misto") {
       item.append(node("p", event.publico === "mulheres" ? "Só para mulheres" : "Só para homens", "meeting-audience"));
     }
+    // Alertas: horário e grupo agora; sol e chuva chegam com a previsão do tempo.
+    const alerts = node("ul", undefined, "meeting-alerts");
+    alerts.setAttribute("aria-label", "Alertas deste encontro");
+    for (const text of timeAlerts(event)) alerts.append(node("li", text));
+    if (event.alerta_grupo) {
+      alerts.append(node("li", "Grupo com mais homens que mulheres e com pessoas com quem você ainda não praticou. Se quiser, chame alguém de confiança ou combine em local movimentado."));
+    }
+    alerts.hidden = !alerts.children.length;
+    item.append(alerts);
+    item._alerts = alerts;
     const bar = node("div", undefined, "meeting-bar meeting-bar-" + event.estado);
     bar.setAttribute("aria-hidden", "true");
     const fill = node("i");
@@ -276,6 +286,34 @@
     return weatherByKey.get(key);
   }
 
+  // Hora do encontro em Brasília (0 a 23).
+  const hourFormat = new Intl.DateTimeFormat("pt-BR", {timeZone: "America/Sao_Paulo", hour: "2-digit", hourCycle: "h23"});
+  const hourOf = (date) => Number(hourFormat.format(date));
+
+  function timeAlerts(event) {
+    if (!["aberto", "lotado"].includes(event.estado)) return [];
+    const hour = hourOf(new Date(event.inicio));
+    if (hour >= 20 || hour < 6) {
+      return ["Encontro à noite: prefira locais iluminados e movimentados e combine com alguém a ida e a volta."];
+    }
+    return [];
+  }
+
+  function weatherAlerts(w, start) {
+    const out = [];
+    const hour = hourOf(start);
+    const peak = hour >= 10 && hour < 16;
+    if ((w.uv != null && w.uv >= 6) || (w.temperatura != null && w.temperatura >= 30)) {
+      out.push(peak
+        ? `Sol forte nesse horário (UV ${Math.round(w.uv ?? 0)}, ${Math.round(w.temperatura)} °C). Se puder, marque antes das 10h ou depois das 16h; use protetor e leve água.`
+        : "Dia de sol forte: evite exercícios entre 10h e 16h, use protetor e leve água.");
+    }
+    if (w.chance_chuva != null && w.chance_chuva >= 50) {
+      out.push(`Chance de chuva de ${w.chance_chuva}% nesse horário: combine com o grupo um plano B ou outra data.`);
+    }
+    return out;
+  }
+
   function describeWeather(w) {
     const parts = [`${Math.round(w.temperatura)} °C`];
     if (w.condicao) parts[0] += ", " + w.condicao;
@@ -306,6 +344,11 @@
     weatherEl.textContent = describeWeather(weather);
     weatherEl.title = "Fonte: Open-Meteo";
     weatherEl.hidden = false;
+    const alerts = weatherEl.closest(".meeting-card")?._alerts;
+    if (alerts) {
+      for (const text of weatherAlerts(weather, start)) alerts.append(node("li", text));
+      alerts.hidden = !alerts.children.length;
+    }
   }
 
   function actionButton(parent, text, action, id) {

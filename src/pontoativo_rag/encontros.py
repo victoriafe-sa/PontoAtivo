@@ -52,6 +52,35 @@ class Meetings:
         if row["cancelled"] or row["start"] <= now():
             raise ApiError(409, "Esse encontro já foi cancelado ou já começou.")
 
+    def _alerta_grupo(self, db, row, user_id):
+        """Alerta só para mulheres: grupo de 5+ pessoas, mais homens que mulheres
+        e ninguém com quem ela já praticou. Só o alerta sai daqui, nunca os gêneros."""
+        if not user_id or row["capacity"] < 5:
+            return False
+        viewer = db.execute("SELECT gender FROM users WHERE id=?", (user_id,)).fetchone()
+        if viewer is None or viewer["gender"] != "mulher":
+            return False
+        outros = db.execute(
+            """SELECT users.id, users.gender FROM members JOIN users ON users.id = members.user_id
+               WHERE members.event_id = ? AND members.user_id <> ?""",
+            (row["id"], user_id),
+        ).fetchall()
+        homens = sum(o["gender"] == "homem" for o in outros)
+        mulheres = sum(o["gender"] == "mulher" for o in outros) + 1  # conta ela também
+        if homens <= mulheres:
+            return False
+        # "Não se conhecem": ela nunca participou de um encontro realizado com ninguém do grupo.
+        conhecidos = db.execute(
+            """SELECT 1 FROM members AS dela
+               JOIN members AS outro ON outro.event_id = dela.event_id
+               JOIN events ON events.id = dela.event_id
+               WHERE dela.user_id = ? AND events.cancelled = 0 AND events.start <= ?
+                 AND outro.user_id IN (SELECT user_id FROM members WHERE event_id = ? AND user_id <> ?)
+               LIMIT 1""",
+            (user_id, now(), row["id"], user_id),
+        ).fetchone()
+        return conhecidos is None
+
     def _view(self, db, row, user_id=None):
         place = self.places.get(row["place_id"], {"id": row["place_id"], "nome": "Local fora do cadastro", "regiao": ""})
         count = db.execute("SELECT count(*) FROM members WHERE event_id=?", (row["id"],)).fetchone()[0]
@@ -62,6 +91,7 @@ class Meetings:
             "id": row["id"], "local": place, "esporte": row["sport"], "inicio": row["start"],
             "nivel": row["level"], "idade": row["age"], "formato": row["format"],
             "publico": row["audience"] if "audience" in row.keys() else "misto",
+            "alerta_grupo": self._alerta_grupo(db, row, user_id),
             "capacidade": row["capacity"], "participantes": count,
             "vagas": row["capacity"] - count, "estado": state, "organizador": nickname,
             "meu": row["organizer"] == user_id, "participando": joined,
