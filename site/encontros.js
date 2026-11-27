@@ -78,6 +78,8 @@
     byId("meeting-account").hidden = Boolean(user);
     byId("account-menu").hidden = !user;
     byId("header-login").hidden = Boolean(user);
+    // Outras partes do site (como a tela Amigos) acompanham quem está conectado.
+    document.dispatchEvent(new CustomEvent("pa:conta", {detail: user}));
     if (user) {
       byId("account-name").textContent = user.apelido;
       byId("account-avatar").textContent = (user.apelido || "?").trim().charAt(0).toUpperCase();
@@ -107,6 +109,8 @@
     const chosen = new Set(prefs.esportes);
     fieldset.querySelectorAll("[data-pref-sports] input").forEach(input => { input.checked = chosen.has(input.value); });
     fieldset.querySelector("[data-pref-region]").value = prefs.regiao || "";
+    const gender = fieldset.querySelector("[data-pref-gender]");
+    if (gender) gender.value = (user && user.genero) || "";
     limitSports(fieldset);
   }
 
@@ -114,6 +118,7 @@
     return {
       esportes: [...fieldset.querySelectorAll("[data-pref-sports] input:checked")].map(input => input.value),
       regiao: fieldset.querySelector("[data-pref-region]").value,
+      genero: fieldset.querySelector("[data-pref-gender]")?.value || "",
     };
   }
 
@@ -212,6 +217,24 @@
     }
     const age = event.idade === "todos" ? "Todos os adultos" : event.idade + " anos";
     item.append(node("p", [labels[event.formato], labels[event.nivel], age].join(" · "), "meta"));
+    if (event.publico && event.publico !== "misto") {
+      item.append(node("p", event.publico === "mulheres" ? "Só para mulheres" : "Só para homens", "meeting-audience"));
+    }
+    // Alertas: horário e grupo agora; sol e chuva chegam com a previsão do tempo.
+    const alerts = node("ul", undefined, "meeting-alerts");
+    alerts.setAttribute("aria-label", "Alertas deste encontro");
+    for (const text of timeAlerts(event)) alerts.append(node("li", text));
+    if (event.alerta_regiao) {
+      const r = event.alerta_regiao;
+      const vezes = r.vezes_media_df.toFixed(1).replace(".", ",");
+      alerts.append(node("li", `${r.regiao} teve em ${r.ano} cerca de ${vezes} vezes a média do DF em homicídios, roubos a pedestres e estupros por morador (SSP-DF). Prefira horários de movimento e vá acompanhado.`));
+    }
+    if (event.alerta_grupo) {
+      alerts.append(node("li", "Grupo com mais homens que mulheres e com pessoas com quem você ainda não praticou. Se quiser, chame alguém de confiança ou combine em local movimentado."));
+    }
+    alerts.hidden = !alerts.children.length;
+    item.append(alerts);
+    item._alerts = alerts;
     const bar = node("div", undefined, "meeting-bar meeting-bar-" + event.estado);
     bar.setAttribute("aria-hidden", "true");
     const fill = node("i");
@@ -224,6 +247,15 @@
       document.createTextNode("Organizado por " + event.organizador));
     by.firstChild.setAttribute("aria-hidden", "true");
     item.append(by);
+    if (event.organizador_nota) {
+      const nota = event.organizador_nota;
+      item.append(node("p", `★ ${String(nota.media).replace(".", ",")} · ${nota.total} notas de quem já praticou`, "meeting-rating"));
+    }
+    if (event.amigos && event.amigos.length) {
+      item.classList.add("meeting-card-friends");
+      const nomes = event.amigos.length > 2 ? `${event.amigos.slice(0, 2).join(", ")} e mais ${event.amigos.length - 2}` : event.amigos.join(" e ");
+      item.append(node("p", `Amigos neste encontro: ${nomes}`, "meeting-friends"));
+    }
     const actions = node("div", undefined, "place-actions");
     const future = ["aberto", "lotado"].includes(event.estado);
     if (event.meu && future) {
@@ -270,6 +302,34 @@
     return weatherByKey.get(key);
   }
 
+  // Hora do encontro em Brasília (0 a 23).
+  const hourFormat = new Intl.DateTimeFormat("pt-BR", {timeZone: "America/Sao_Paulo", hour: "2-digit", hourCycle: "h23"});
+  const hourOf = (date) => Number(hourFormat.format(date));
+
+  function timeAlerts(event) {
+    if (!["aberto", "lotado"].includes(event.estado)) return [];
+    const hour = hourOf(new Date(event.inicio));
+    if (hour >= 20 || hour < 6) {
+      return ["Encontro à noite: prefira locais iluminados e movimentados e combine com alguém a ida e a volta."];
+    }
+    return [];
+  }
+
+  function weatherAlerts(w, start) {
+    const out = [];
+    const hour = hourOf(start);
+    const peak = hour >= 10 && hour < 16;
+    if ((w.uv != null && w.uv >= 6) || (w.temperatura != null && w.temperatura >= 30)) {
+      out.push(peak
+        ? `Sol forte nesse horário (UV ${Math.round(w.uv ?? 0)}, ${Math.round(w.temperatura)} °C). Se puder, marque antes das 10h ou depois das 16h; use protetor e leve água.`
+        : "Dia de sol forte: evite exercícios entre 10h e 16h, use protetor e leve água.");
+    }
+    if (w.chance_chuva != null && w.chance_chuva >= 50) {
+      out.push(`Chance de chuva de ${w.chance_chuva}% nesse horário: combine com o grupo um plano B ou outra data.`);
+    }
+    return out;
+  }
+
   function describeWeather(w) {
     const parts = [`${Math.round(w.temperatura)} °C`];
     if (w.condicao) parts[0] += ", " + w.condicao;
@@ -300,6 +360,11 @@
     weatherEl.textContent = describeWeather(weather);
     weatherEl.title = "Fonte: Open-Meteo";
     weatherEl.hidden = false;
+    const alerts = weatherEl.closest(".meeting-card")?._alerts;
+    if (alerts) {
+      for (const text of weatherAlerts(weather, start)) alerts.append(node("li", text));
+      alerts.hidden = !alerts.children.length;
+    }
   }
 
   function actionButton(parent, text, action, id) {
@@ -397,6 +462,8 @@
   document.addEventListener("keydown", e => {
     if (e.key === "Escape" && !accountPop.hidden) { openAccount(false); accountBtn.focus(); }
   });
+  // Bloquear ou desbloquear alguém muda quais encontros aparecem.
+  document.addEventListener("pa:bloqueios", () => refresh());
   byId("account-agenda").addEventListener("click", () => {
     window.PontoAtivoTelas.ir("encontros");
     mine = true;
@@ -587,7 +654,8 @@
     byId("pref-status").textContent = "Salvando…";
     try {
       const result = await api("/api/conta/preferencias", {method: "PUT", body: prefs});
-      user = {...user, preferencias: result.preferencias};
+      const {genero, ...preferencias} = result.preferencias;
+      user = {...user, preferencias, ...(genero !== undefined ? {genero} : {})};
       appliedPrefsFor = null;
       filters.reset();
       prefDialog.close();

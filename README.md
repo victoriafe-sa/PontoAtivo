@@ -144,3 +144,10 @@ pesquisa. Mantenha esses materiais fora do repositório.
 - Cibelly Lourenço
 - Marcos Bittar
 - Rebeca Vitória
+
+## Leitura de cartazes (texto + imagem)
+
+O fluxo experimental recebe uma imagem e uma pergunta, extrai as informações
+visíveis e usa os agentes de Análise e Validação para responder com evidências.
+Veja [execução, contratos e limitações](docs/entregas/semana-06/multimodalidade-imagem-texto/README.md).
+Nesta etapa a execução é pelo terminal; o upload na interface ainda não está integrado.

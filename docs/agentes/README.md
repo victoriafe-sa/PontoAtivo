@@ -18,3 +18,9 @@ Coordenador: [coordenador.py](../../src/pontoativo_rag/agentes/coordenador.py).
 Testes: [`tests/pontoativo_rag/agentes/`](../../tests/pontoativo_rag/agentes/).
 Onde ficam os exemplos: [`exemplos/`](exemplos/) guarda entradas preparadas à mão, usadas nos testes
 e nas demonstrações; [`experimentos/agentes/`](../../experimentos/agentes/) guarda execuções reais.
+
+## Texto e imagem
+
+O [agente de imagem e fluxo multimodal](../entregas/semana-06/multimodalidade-imagem-texto/README.md)
+leem cartazes e reutilizam a Análise e a Validação sobre a transcrição visual.
+A execução inicial é pelo terminal, separada da busca documental e do mapa.

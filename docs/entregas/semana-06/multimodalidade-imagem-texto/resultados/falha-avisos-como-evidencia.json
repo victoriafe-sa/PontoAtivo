@@ -1,0 +1,67 @@
+{
+  "modalidades": [
+    "texto",
+    "imagem"
+  ],
+  "pergunta": "Quais atividades acontecem pela manhã e onde?",
+  "extracao": {
+    "agente": "imagem",
+    "fonte": "I1",
+    "modelo": "gemma4:12b",
+    "sha256": "f17d11153dee0afd1039eacb6da446a90204ebbd6af7d856c63dbad3306926e4",
+    "legibilidade": "legivel",
+    "texto": "CARTAZ FICTICIO TESTE ACADEMICO\nPontoAtivo: encontro esportivo\nFutsal: sabado, 9h\nVolei: sabado, 15h\nLocal: Quadra Exemplo, Brasilia\nData: 12/12/2026\nInscricao: na recepcao\nEvento inventado para testar leitura de imagem.",
+    "campos": {
+      "atividades": [
+        "Futsal",
+        "Volei"
+      ],
+      "horarios": [
+        "9h",
+        "15h"
+      ],
+      "local": [
+        "Quadra Exemplo, Brasilia"
+      ],
+      "datas": [
+        "12/12/2026"
+      ],
+      "contato": []
+    },
+    "alertas": []
+  },
+  "avisos": [
+    "A fonte I1 é uma transcrição automática da imagem enviada, não uma fonte oficial verificada. Pode conter erros de leitura. Datas, horários e vagas não têm atualidade confirmada; confirme com a organização. A imagem não comprova condições de acessibilidade no local."
+  ],
+  "modo": "falha_validacao",
+  "itens": [],
+  "parecer": {
+    "agente": "validacao",
+    "aprovado": false,
+    "revisao": "regras_e_modelo",
+    "criterios": {
+      "sustentacao": false,
+      "condicoes": true,
+      "completude": true,
+      "temporalidade": true,
+      "lacunas_conflitos": true
+    },
+    "problemas": [
+      {
+        "item": 1,
+        "trecho_rascunho": "A informação provém de uma transcrição automática da imagem enviada e pode conter erros de leitura",
+        "criterio": "sustentacao",
+        "correcao": "Os trechos citados (I1) não mencionam: automatica, conter, erros, provem, transcricao. Remova a afirmação ou marque a dúvida como lacuna, dizendo o que a fonte não informa; use as palavras da fonte."
+      },
+      {
+        "item": 1,
+        "trecho_rascunho": "as datas e horários não têm atualidade confirmada",
+        "criterio": "sustentacao",
+        "correcao": "Os trechos citados (I1) não mencionam: atualidade, confirmada, datas, horarios. Remova a afirmação ou marque a dúvida como lacuna, dizendo o que a fonte não informa; use as palavras da fonte."
+      }
+    ],
+    "consulta_complementar": "",
+    "resumo_revisado": "6290a05bcb73f26324dfd8993b3d06072f90342b48b0f9aab294f2708cab92f0"
+  },
+  "resposta": "A resposta não passou na validação das evidências do cartaz."
+}

@@ -95,6 +95,7 @@ class OllamaClient:
         user: str,
         *,
         schema: dict | None = None,
+        images: Sequence[str] | None = None,
         options: dict[str, Any] | None = None,
         timeout_seconds: float | None = None,
     ) -> str:
@@ -122,6 +123,8 @@ class OllamaClient:
                 **(options or {}),
             },
         }
+        if images:
+            payload["messages"][1]["images"] = list(images)
         if schema is not None:
             payload["format"] = schema
         try:
