@@ -366,7 +366,7 @@ class Handler(SimpleHTTPRequestHandler):
             elif path in ("/api/encontros", "/api/encontros/meus"):
                 user = self.user(required=path.endswith("/meus"))
                 filters = {key: values[0] for key, values in parse_qs(urlsplit(self.path).query).items()
-                           if key in ("regiao", "esporte", "data", "nivel", "idade", "formato")}
+                           if key in ("regiao", "esporte", "data", "nivel", "idade", "formato", "publico")}
                 filters["meus"] = path.endswith("/meus")
                 self.reply(200, {"encontros": self.meetings.listar_encontros(filters, user["id"] if user else None)})
             else:
@@ -448,6 +448,14 @@ class Handler(SimpleHTTPRequestHandler):
     def do_DELETE(self):
         self.mutate("DELETE")
 
+def carregar_seguranca(root):
+    """Tabela de segurança por RA (SSP-DF), se existir; sem ela, os encontros não têm esse alerta."""
+    caminho = Path(root) / "dados" / "mapa" / "seguranca" / "seguranca_ras_2025.json"
+    if not caminho.exists():
+        return {}
+    return json.loads(caminho.read_text(encoding="utf-8"))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--porta", type=int, default=8766)
@@ -461,7 +469,8 @@ def main():
     places = json.loads((static_dir / "data/locais-encontros.json").read_text(encoding="utf-8"))
     handler = partial(
         Handler, chat=Chat(settings), accounts=Accounts(database, regions={place["regiao"] for place in places if place.get("regiao")}),
-        meetings=Meetings(database, places), public_origin=os.getenv("PONTOATIVO_PUBLIC_ORIGIN"),
+        meetings=Meetings(database, places, seguranca=carregar_seguranca(settings.root)),
+        public_origin=os.getenv("PONTOATIVO_PUBLIC_ORIGIN"),
         # Rotas a pé e para cadeira de rodas: chave gratuita do openrouteservice.
         services=ServicosExternos(ors_key=os.getenv("PONTOATIVO_ORS_API_KEY", "")),
         # Só ative atrás de um proxy HTTPS local que sobrescreva X-Forwarded-For.

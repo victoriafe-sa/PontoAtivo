@@ -53,6 +53,14 @@ class Database:
                 CREATE INDEX IF NOT EXISTS events_start ON events(start);
                 CREATE INDEX IF NOT EXISTS members_user ON members(user_id);
             """)
+            # Colunas criadas depois da primeira versão: bancos antigos ganham a
+            # coluna com o valor padrão (contas sem gênero, encontros mistos).
+            def ensure_column(table, column, ddl):
+                names = {row["name"] for row in db.execute(f"PRAGMA table_info({table})")}
+                if column not in names:
+                    db.execute(f"ALTER TABLE {table} ADD COLUMN {ddl}")
+            ensure_column("users", "gender", "gender TEXT NOT NULL DEFAULT ''")
+            ensure_column("events", "audience", "audience TEXT NOT NULL DEFAULT 'misto'")
 
     @contextmanager
     def transaction(self):
