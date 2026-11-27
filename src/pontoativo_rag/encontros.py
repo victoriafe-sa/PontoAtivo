@@ -44,6 +44,16 @@ class Meetings:
             raise ApiError(404, "Encontro não encontrado.")
         return row
 
+    def _bloqueado(self, db, user_id, event_id):
+        """True se a pessoa bloqueou, ou foi bloqueada por, alguém deste encontro."""
+        return db.execute(
+            """SELECT 1 FROM members JOIN blocks
+                 ON (blocks.blocker=? AND blocks.blocked=members.user_id)
+                 OR (blocks.blocked=? AND blocks.blocker=members.user_id)
+               WHERE members.event_id=? LIMIT 1""",
+            (user_id, user_id, event_id),
+        ).fetchone() is not None
+
     def _available(self, row):
         if row["cancelled"] or row["start"] <= now():
             raise ApiError(409, "Esse encontro já foi cancelado ou já começou.")
@@ -115,6 +125,8 @@ class Meetings:
                                      WHERE members.user_id=? ORDER BY start""", (usuario_id,)).fetchall()
             else:
                 rows = db.execute("SELECT * FROM events WHERE cancelled=0 AND start>? ORDER BY start", (now(),)).fetchall()
+                if usuario_id:
+                    rows = [row for row in rows if not self._bloqueado(db, usuario_id, row["id"])]
             result = []
             for row in rows:
                 place = self.places.get(row["place_id"], {})
@@ -134,6 +146,8 @@ class Meetings:
             if row["age"] != "todos" and row["age"] != user["age"]:
                 raise ApiError(403, "Sua faixa etária não corresponde à deste encontro.")
             current = self._view(db, row, usuario_id)
+            if not current["participando"] and self._bloqueado(db, usuario_id, encontro_id):
+                raise ApiError(403, "Não é possível participar deste encontro.")
             if not current["participando"]:
                 if current["vagas"] <= 0:
                     raise ApiError(409, "Esse encontro está lotado.")

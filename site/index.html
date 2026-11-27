@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-  <link rel="stylesheet" href="styles.css?v=cob-3" />
+  <link rel="stylesheet" href="styles.css?v=amigos-1" />
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -72,6 +72,7 @@
           <hr />
           <button type="button" id="meeting-prefs">Minhas preferências</button>
           <button type="button" id="account-agenda">Minha agenda</button>
+          <button type="button" id="account-friends">Amigos <span class="account-badge" id="account-friends-badge" hidden></span></button>
           <hr />
           <button type="button" id="meeting-logout">Sair da conta</button>
         </div>
@@ -484,6 +485,31 @@
     </section>
 
     <!-- FAQ -->
+    <section id="amigos" data-tela="amigos" class="section friends-section" aria-labelledby="friends-title">
+      <div class="container narrow">
+        <h2 id="friends-title" tabindex="-1">Amigos</h2>
+        <p class="section-sub">Depois de praticar num encontro, adicione as pessoas como amigas, diga se gostou ou não de praticar com elas e bloqueie quem você não quer encontrar de novo. As notas são anônimas: ninguém vê quem deu cada uma.</p>
+        <div id="friends-login" class="friends-login" hidden>
+          <p>Entre na sua conta para ver as pessoas com quem você praticou.</p>
+          <button type="button" class="btn btn-primary" id="friends-login-btn">Entrar</button>
+        </div>
+        <div id="friends-content" hidden>
+          <div class="friends-rep" id="friends-rep"></div>
+          <p id="friends-status" class="meetings-status" role="status" aria-live="polite"></p>
+          <h3 class="friends-h">Pedidos de amizade</h3>
+          <ul class="friends-list" id="friends-requests"></ul>
+          <h3 class="friends-h">Seus amigos</h3>
+          <ul class="friends-list" id="friends-list"></ul>
+          <h3 class="friends-h">Pessoas com quem você praticou</h3>
+          <ul class="friends-list" id="friends-people"></ul>
+          <details class="friends-blocked">
+            <summary>Bloqueados<span id="friends-blocked-count"></span></summary>
+            <ul class="friends-list" id="friends-blocked"></ul>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section id="faq" data-tela="duvidas" class="section" aria-labelledby="faq-title">
       <div class="container narrow">
         <p class="eyebrow">Dúvidas frequentes</p>
@@ -662,6 +688,7 @@
   <script src="telas.js?v=telas-4" defer></script>
   <script src="data/locais.js" defer></script>
   <script src="app.js?v=cob-2" defer></script>
-  <script src="encontros.js?v=apis-1" defer></script>
+  <script src="encontros.js?v=amigos-1" defer></script>
+  <script src="amigos.js?v=amigos-1" defer></script>
 </body>
 </html>

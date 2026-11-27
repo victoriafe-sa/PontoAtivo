@@ -16,6 +16,7 @@ from threading import Lock
 from .persistencia import Database, ApiError
 from .contas import Accounts, SESSION_SECONDS
 from .encontros import Meetings
+from .amigos import Amigos
 from .configuracao import Settings
 from .geracao import LLMUnavailable, OllamaClient
 from .moderacao import termo_improprio
@@ -179,9 +180,10 @@ class Chat:
 
 
 # Só o site é público; ferramentas, documentos internos e pastas ocultas não.
-PUBLIC_FILES = {"/", "/index.html", "/styles.css", "/app.js", "/encontros.js", "/telas.js"}
+PUBLIC_FILES = {"/", "/index.html", "/styles.css", "/app.js", "/encontros.js", "/telas.js", "/amigos.js"}
 PUBLIC_DIRS = ("/assets/", "/data/")
 EVENT_ROUTE = re.compile(r"/api/encontros/([a-f0-9]{32})/(participacao|cancelamento)")
+FRIEND_ROUTE = re.compile(r"/api/amigos/([a-f0-9]{32})(?:/(pedido|aceite|nota|bloqueio))?")
 
 
 def is_public(path):
@@ -201,12 +203,13 @@ def is_public(path):
 class Handler(SimpleHTTPRequestHandler):
     def __init__(
         self, *args, chat, accounts=None, meetings=None, public_origin=None,
-        trust_proxy=False, services=None, **kwargs,
+        trust_proxy=False, services=None, friends=None, **kwargs,
     ):
         self.chat = chat
         self.services = services or ServicosExternos()
         self.accounts = accounts
         self.meetings = meetings
+        self.friends = friends
         self.public_origin = public_origin
         self.trust_proxy = trust_proxy
         super().__init__(*args, **kwargs)
@@ -363,6 +366,8 @@ class Handler(SimpleHTTPRequestHandler):
                 except (KeyError, ValueError):
                     raise ApiError(400, "Ano inválido.") from None
                 self.reply(200, {"feriados": self.services.feriados(ano), "fonte": "BrasilAPI"})
+            elif path == "/api/amigos" and self.friends:
+                self.reply(200, self.friends.resumo(self.user(required=True)["id"]))
             elif path in ("/api/encontros", "/api/encontros/meus"):
                 user = self.user(required=path.endswith("/meus"))
                 filters = {key: values[0] for key, values in parse_qs(urlsplit(self.path).query).items()
@@ -415,6 +420,24 @@ class Handler(SimpleHTTPRequestHandler):
             if path == "/api/conta/preferencias" and method == "PUT":
                 user = self.user(required=True)
                 return self.reply(200, {"preferencias": self.accounts.update_preferences(user["id"], self.read_json())})
+            friend = FRIEND_ROUTE.fullmatch(path) if self.friends else None
+            if friend:
+                user = self.user(required=True)
+                other, action = friend.groups()
+                if action == "nota" and method == "PUT":
+                    return self.reply(200, self.friends.avaliar(user["id"], other, self.read_json().get("nota")))
+                operation = {
+                    ("pedido", "POST"): self.friends.pedir,
+                    ("aceite", "POST"): self.friends.aceitar,
+                    (None, "DELETE"): self.friends.remover,
+                    ("bloqueio", "PUT"): self.friends.bloquear,
+                    ("bloqueio", "DELETE"): self.friends.desbloquear,
+                }.get((action, method))
+                if operation is None:
+                    raise ApiError(404, "Rota inexistente.")
+                if method != "DELETE":
+                    self.read_json()
+                return self.reply(200, operation(user["id"], other))
             match = EVENT_ROUTE.fullmatch(path)
             if not (path == "/api/encontros" or match):
                 raise ApiError(404, "Rota inexistente.")
@@ -461,7 +484,8 @@ def main():
     places = json.loads((static_dir / "data/locais-encontros.json").read_text(encoding="utf-8"))
     handler = partial(
         Handler, chat=Chat(settings), accounts=Accounts(database, regions={place["regiao"] for place in places if place.get("regiao")}),
-        meetings=Meetings(database, places), public_origin=os.getenv("PONTOATIVO_PUBLIC_ORIGIN"),
+        meetings=Meetings(database, places), friends=Amigos(database),
+        public_origin=os.getenv("PONTOATIVO_PUBLIC_ORIGIN"),
         # Rotas a pé e para cadeira de rodas: chave gratuita do openrouteservice.
         services=ServicosExternos(ors_key=os.getenv("PONTOATIVO_ORS_API_KEY", "")),
         # Só ative atrás de um proxy HTTPS local que sobrescreva X-Forwarded-For.
