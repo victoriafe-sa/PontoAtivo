@@ -5,6 +5,8 @@ amizade ou dar nota (1 a 5 estrelas) à outra pessoa. A nota é anônima: só a
 média e o total aparecem, e apenas depois de 3 notas, nunca quem deu cada uma. Bloquear desfaz
 a amizade e impede que as duas pessoas entrem nos encontros uma da outra.
 """
+import json
+
 from .encontros import MIN_NOTAS, now, reputacao
 from .persistencia import ApiError
 
@@ -101,6 +103,42 @@ class Amigos:
                 "bloqueados": [{"id": i, "apelido": apelido(i)} for i in sorted(bloqueei)],
                 # Só a média e o total, e só a partir de MIN_NOTAS: quem deu cada nota nunca é revelado.
                 "reputacao": {"nota": reputacao(db, eu), "total": total, "minimo": MIN_NOTAS},
+            }
+
+    def perfil(self, eu, outro):
+        """Perfil curto de quem praticou com você ou é seu amigo."""
+        with self.db.transaction() as db:
+            pessoa = db.execute("SELECT id, nickname, age FROM users WHERE id=?", (outro,)).fetchone()
+            if pessoa is None or outro == eu or bloqueio_entre(db, eu, outro):
+                raise ApiError(404, "Pessoa não encontrada.")
+            a, b = _par(eu, outro)
+            amizade = db.execute("SELECT * FROM friendships WHERE user_a=? AND user_b=?", (a, b)).fetchone()
+            comum = db.execute(
+                """SELECT events.sport, events.start, events.place_id FROM events
+                   JOIN members AS meu ON meu.event_id = events.id AND meu.user_id = ?
+                   JOIN members AS dele ON dele.event_id = events.id AND dele.user_id = ?
+                   WHERE events.cancelled = 0 AND events.start <= ?
+                   ORDER BY events.start DESC LIMIT 10""",
+                (eu, outro, now()),
+            ).fetchall()
+            if not comum and not (amizade and amizade["status"] == "aceito"):
+                raise ApiError(404, "Pessoa não encontrada.")
+            prefs = db.execute("SELECT sports, region FROM preferences WHERE user_id=?", (outro,)).fetchone()
+            if amizade is None:
+                estado = "nenhuma"
+            elif amizade["status"] == "aceito":
+                estado = "amigos"
+            else:
+                estado = "pedido_enviado" if amizade["requester"] == eu else "pedido_recebido"
+            return {
+                "id": outro, "apelido": pessoa["nickname"], "idade": pessoa["age"],
+                "esportes": json.loads(prefs["sports"]) if prefs else [],
+                "regiao": prefs["region"] if prefs else "",
+                "nota": reputacao(db, outro),
+                "amizade": estado,
+                "encontros_em_comum": [
+                    {"esporte": r["sport"], "inicio": r["start"], "local_id": r["place_id"]} for r in comum
+                ],
             }
 
     # ---------- ações ----------

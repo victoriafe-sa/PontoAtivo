@@ -50,7 +50,11 @@
     const who = node("div", undefined, "friend-who");
     who.append(avatar(pessoa.apelido));
     const text = node("div");
-    text.append(node("strong", pessoa.apelido));
+    const nome = node("button", pessoa.apelido, "friend-name");
+    nome.type = "button";
+    nome.dataset.friendProfile = pessoa.id;
+    nome.setAttribute("aria-label", `Ver o perfil de ${pessoa.apelido}`);
+    text.append(nome);
     if (detail) text.append(node("small", detail));
     who.append(text);
     const box = node("div", undefined, "friend-actions");
@@ -114,6 +118,9 @@
     ])), "Ninguém bloqueado.");
     byId("friends-blocked-count").textContent = data.bloqueados.length ? ` (${data.bloqueados.length})` : "";
 
+    applySearch();
+    notifyRequests(data.pedidos);
+
     // Número de pedidos no menu da conta.
     const badge = byId("account-friends-badge");
     if (badge) {
@@ -121,6 +128,89 @@
       badge.hidden = !data.pedidos.length;
     }
   }
+
+  // ---------- Busca pelo apelido ----------
+  const search = byId("friends-search");
+  const norm = (t) => t.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();
+  function applySearch() {
+    const q = norm(search.value.trim());
+    let shown = 0;
+    content.querySelectorAll(".friend-row").forEach((row) => {
+      const hit = !q || norm(row.querySelector(".friend-name").textContent).includes(q);
+      row.hidden = !hit;
+      if (hit) shown += 1;
+    });
+    content.querySelectorAll(".friend-empty").forEach((el) => { if (el.id !== "friends-search-empty") el.hidden = Boolean(q); });
+    byId("friends-search-empty").hidden = !q || shown > 0;
+  }
+  search.addEventListener("input", applySearch);
+
+  // ---------- Perfil ----------
+  const profile = byId("friend-profile");
+  const AMIZADE = { amigos: "Vocês são amigos", pedido_enviado: "Você pediu amizade", pedido_recebido: "Quer ser seu amigo", nenhuma: "" };
+  async function openProfile(id) {
+    const body = byId("friend-profile-body");
+    byId("friend-profile-title").textContent = "Perfil";
+    body.replaceChildren(node("p", "Carregando…", "friend-muted"));
+    profile.showModal();
+    try {
+      const p = await api(`/api/amigos/${id}/perfil`);
+      byId("friend-profile-title").textContent = p.apelido;
+      const head = node("div", undefined, "friend-profile-head");
+      head.append(avatar(p.apelido));
+      const info = node("div");
+      info.append(node("strong", p.apelido));
+      const linha = [p.idade ? `${p.idade} anos` : "", p.regiao].filter(Boolean).join(" · ");
+      if (linha) info.append(node("small", linha));
+      if (AMIZADE[p.amizade]) info.append(node("span", AMIZADE[p.amizade], "friend-tag"));
+      head.append(info);
+      const nota = p.nota
+        ? node("p", `★ ${String(p.nota.media).replace(".", ",")} · ${p.nota.total} notas de quem praticou`, "meeting-rating")
+        : node("p", "Ainda sem média de estrelas (aparece a partir de 3 notas).", "friend-muted");
+      const esportes = node("p", p.esportes.length ? "Esportes favoritos: " + p.esportes.join(", ") : "Sem esportes favoritos informados.", "friend-muted");
+      const lista = node("ul", undefined, "friend-common");
+      for (const e of p.encontros_em_comum) lista.append(node("li", `${e.esporte} · ${dateFormat.format(new Date(e.inicio))}`));
+      body.replaceChildren(head, nota, esportes,
+        node("h3", p.encontros_em_comum.length ? "Encontros juntos" : "Vocês ainda não praticaram juntos", "friends-h"),
+        ...(p.encontros_em_comum.length ? [lista] : []));
+    } catch (error) {
+      body.replaceChildren(node("p", error.message, "friend-muted"));
+    }
+  }
+  byId("amigos").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-friend-profile]");
+    if (b) openProfile(b.dataset.friendProfile);
+  });
+
+  // ---------- Aviso de pedidos novos ----------
+  // Só avisa pedidos de amizade. Notas novas não geram aviso: logo depois de um
+  // encontro, o aviso entregaria quem deu a nota.
+  let userId = null;
+  const toast = byId("friend-toast");
+  const seenKey = () => "pa-pedidos-vistos-" + userId;
+  function readSeen() {
+    try { return new Set(JSON.parse(localStorage.getItem(seenKey()) || "[]")); } catch { return new Set(); }
+  }
+  function saveSeen(ids) {
+    try { localStorage.setItem(seenKey(), JSON.stringify([...ids])); } catch { /* sem armazenamento */ }
+  }
+  function notifyRequests(pedidos) {
+    if (!userId) return;
+    if (window.PontoAtivoTelas && window.PontoAtivoTelas.atual === "amigos") {
+      saveSeen(pedidos.map((p) => p.id));
+      toast.hidden = true;
+      return;
+    }
+    const seen = readSeen();
+    const novos = pedidos.filter((p) => !seen.has(p.id));
+    if (!novos.length) return;
+    byId("friend-toast-text").textContent = novos.length === 1
+      ? `${novos[0].apelido} quer ser seu amigo.`
+      : `${novos.length} pessoas querem ser suas amigas.`;
+    toast.hidden = false;
+  }
+  byId("friend-toast-go").addEventListener("click", () => { toast.hidden = true; window.PontoAtivoTelas.ir("amigos"); });
+  byId("friend-toast-close").addEventListener("click", () => { toast.hidden = true; });
 
   async function load() {
     try {
@@ -177,6 +267,8 @@
   // A tela carrega ao ser aberta e sempre que a pessoa entra ou sai da conta.
   document.addEventListener("pa:tela", (e) => { if (e.detail === "amigos") load(); });
   document.addEventListener("pa:conta", (e) => {
+    userId = e.detail ? e.detail.id : null;
+    if (!userId) toast.hidden = true;
     if (Boolean(e.detail) !== logged || window.PontoAtivoTelas.atual === "amigos") load();
   });
   if (window.PontoAtivoTelas && window.PontoAtivoTelas.atual === "amigos") load();

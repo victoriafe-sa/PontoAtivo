@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-  <link rel="stylesheet" href="styles.css?v=amigos-2" />
+  <link rel="stylesheet" href="styles.css?v=amigos-3" />
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -496,6 +496,11 @@
         <div id="friends-content" hidden>
           <div class="friends-rep" id="friends-rep"></div>
           <p id="friends-status" class="meetings-status" role="status" aria-live="polite"></p>
+          <label class="friends-search">
+            <span class="sr-only">Buscar pelo apelido</span>
+            <input type="search" id="friends-search" placeholder="Buscar pelo apelido" autocomplete="off" />
+          </label>
+          <p id="friends-search-empty" class="friend-empty" hidden>Ninguém com esse apelido.</p>
           <h3 class="friends-h">Pedidos de amizade</h3>
           <ul class="friends-list" id="friends-requests"></ul>
           <h3 class="friends-h">Seus amigos</h3>
@@ -509,6 +514,17 @@
         </div>
       </div>
     </section>
+
+    <dialog id="friend-profile" class="meeting-dialog friend-profile" aria-labelledby="friend-profile-title">
+      <div class="meeting-dialog-heading"><h2 id="friend-profile-title">Perfil</h2><button type="button" data-close-dialog aria-label="Fechar perfil">✕</button></div>
+      <div id="friend-profile-body"></div>
+    </dialog>
+
+    <div class="friend-toast" id="friend-toast" role="status" aria-live="polite" hidden>
+      <span id="friend-toast-text"></span>
+      <button type="button" class="friend-btn friend-btn-main" id="friend-toast-go">Ver pedidos</button>
+      <button type="button" class="friend-toast-close" id="friend-toast-close" aria-label="Fechar aviso">✕</button>
+    </div>
 
     <section id="faq" data-tela="duvidas" class="section" aria-labelledby="faq-title">
       <div class="container narrow">
@@ -691,6 +707,6 @@
   <script src="data/locais.js" defer></script>
   <script src="app.js?v=cob-2" defer></script>
   <script src="encontros.js?v=amigos-2" defer></script>
-  <script src="amigos.js?v=amigos-2" defer></script>
+  <script src="amigos.js?v=amigos-3" defer></script>
 </body>
 </html>

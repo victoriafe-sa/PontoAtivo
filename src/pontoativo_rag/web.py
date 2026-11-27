@@ -184,6 +184,7 @@ PUBLIC_FILES = {"/", "/index.html", "/styles.css", "/app.js", "/encontros.js", "
 PUBLIC_DIRS = ("/assets/", "/data/")
 EVENT_ROUTE = re.compile(r"/api/encontros/([a-f0-9]{32})/(participacao|cancelamento)")
 FRIEND_ROUTE = re.compile(r"/api/amigos/([a-f0-9]{32})(?:/(pedido|aceite|nota|bloqueio))?")
+PROFILE_ROUTE = re.compile(r"/api/amigos/([a-f0-9]{32})/perfil")
 
 
 def is_public(path):
@@ -368,6 +369,9 @@ class Handler(SimpleHTTPRequestHandler):
                 self.reply(200, {"feriados": self.services.feriados(ano), "fonte": "BrasilAPI"})
             elif path == "/api/amigos" and self.friends:
                 self.reply(200, self.friends.resumo(self.user(required=True)["id"]))
+            elif self.friends and PROFILE_ROUTE.fullmatch(path):
+                other = PROFILE_ROUTE.fullmatch(path).group(1)
+                self.reply(200, self.friends.perfil(self.user(required=True)["id"], other))
             elif path in ("/api/encontros", "/api/encontros/meus"):
                 user = self.user(required=path.endswith("/meus"))
                 filters = {key: values[0] for key, values in parse_qs(urlsplit(self.path).query).items()

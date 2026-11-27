@@ -234,3 +234,37 @@ def test_api_de_amigos_exige_login(api, tmp_path):
     with httpx.Client(base_url=url, headers={"Origin": url}, trust_env=False) as anonimo:
         assert anonimo.get("/api/amigos").status_code == 401
         assert anonimo.post("/api/amigos/" + "a" * 32 + "/pedido", json={}).status_code == 401
+
+
+def test_perfil_mostra_preferencias_nota_e_encontros_em_comum(mundo):
+    db, meetings, amigos, ids = mundo
+    Accounts(db).update_preferences(ids["beto"], {"esportes": ["Futebol", "Corrida"], "regiao": "Ceilândia"})
+    praticaram(db, meetings, ids["ana"], ids["beto"])
+    perfil = amigos.perfil(ids["ana"], ids["beto"])
+    assert perfil["apelido"] == "Beto" and perfil["idade"] == "25-34"
+    assert perfil["esportes"] == ["Futebol", "Corrida"] and perfil["regiao"] == "Ceilândia"
+    assert perfil["nota"] is None and perfil["amizade"] == "nenhuma"
+    assert [e["esporte"] for e in perfil["encontros_em_comum"]] == ["Futebol"]
+    assert "login" not in perfil and "password" not in perfil
+
+
+def test_perfil_so_para_quem_praticou_junto_e_sem_bloqueio(mundo):
+    db, meetings, amigos, ids = mundo
+    with pytest.raises(ApiError) as erro:
+        amigos.perfil(ids["ana"], ids["caio"])  # nunca praticaram
+    assert erro.value.status == 404
+    praticaram(db, meetings, ids["ana"], ids["caio"])
+    assert amigos.perfil(ids["ana"], ids["caio"])["apelido"] == "Caio"
+    amigos.bloquear(ids["caio"], ids["ana"])
+    with pytest.raises(ApiError):
+        amigos.perfil(ids["ana"], ids["caio"])
+    with pytest.raises(ApiError):
+        amigos.perfil(ids["ana"], ids["ana"])
+
+
+def test_api_de_perfil(api):
+    clients, db, meetings, ids = api
+    praticaram(db, meetings, ids["ana"], ids["beto"])
+    resposta = clients["ana"].get(f"/api/amigos/{ids['beto']}/perfil")
+    assert resposta.status_code == 200 and resposta.json()["apelido"] == "Beto"
+    assert clients["ana"].get(f"/api/amigos/{ids['caio']}/perfil").status_code == 404
