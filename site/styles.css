@@ -365,10 +365,10 @@ body.no-motion .reveal { opacity: 1; transform: none; }
 .source:nth-child(7) { border-left-color: var(--teal, #12b07c); }
 .source .source-links { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: 0; }
 /* Fontes em lista que abre e fecha: uma linha por fonte, detalhes só quando a pessoa quer */
-.fontes-lista { display: block; background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+.fontes-lista { display: block; background: #fff; border-radius: var(--radius); border: 1px solid var(--line, #e6eaf2); overflow: hidden; }
 .fontes-lista .source { background: none; box-shadow: none; border: 0; border-radius: 0; padding: 0; border-top: 1px solid var(--line, #e6eaf2); }
 .fontes-lista .source:first-child { border-top: 0; }
-.fontes-lista summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 10px minmax(12rem, auto) 1fr 1.2rem;
+.fontes-lista summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 10px minmax(0, 16.5rem) 1fr 1.2rem;
   align-items: center; gap: .9rem; padding: .95rem 1.3rem; }
 .fontes-lista summary::-webkit-details-marker { display: none; }
 .fontes-lista summary::after { content: ""; width: .55rem; height: .55rem; justify-self: end; border-right: 2px solid var(--gray);
@@ -1004,3 +1004,11 @@ body[data-tela-atual="mapa"] #map { height: max(460px, calc(100vh - 8rem)); bord
 .meeting-alerts[hidden] { display: none; }
 .meeting-alerts li { position: relative; font-size: .85rem; line-height: 1.4; color: #6b4a00; background: #fff4d6; border: 1px solid #f1d58a; border-radius: 10px; padding: .45rem .7rem .45rem 1.9rem; }
 .meeting-alerts li::before { content: "!"; position: absolute; left: .6rem; top: .45rem; width: .95rem; height: .95rem; border-radius: 50%; background: #d48806; color: #fff; font-size: .7rem; font-weight: 800; display: grid; place-items: center; }
+
+/* Fontes e lacunas: títulos de bloco discretos e lacunas no mesmo formato da lista */
+.fontes-h { margin: 2.2rem 0 .7rem; font-size: .8rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--gray); }
+#stats + .fontes-h { margin-top: 0; }
+.fontes-lista .lacuna { border-top: 1px solid var(--line, #e6eaf2); }
+.fontes-lista .lacuna:first-child { border-top: 0; }
+.lacuna-marca { background: none; border: 2px solid #d48806; width: 10px; height: 10px; box-sizing: border-box; }
+.fonte-corpo code { font-size: .85em; background: #f2f4f8; border-radius: 4px; padding: .05rem .3rem; }
