@@ -10,6 +10,17 @@ from .persistencia import ApiError
 LEVELS = ("iniciante", "intermediario", "avancado", "todos")
 FORMATS = ("dupla", "trio", "grupo")
 BRASILIA = timezone(timedelta(hours=-3))
+# A média de estrelas só aparece com pelo menos 3 notas: com menos, daria para
+# adivinhar quem deu cada uma.
+MIN_NOTAS = 3
+
+
+def reputacao(db, user_id):
+    """Média e total de estrelas recebidas, ou None se ainda houver poucas notas."""
+    row = db.execute("SELECT avg(value) AS media, count(*) AS total FROM notas WHERE rated=?", (user_id,)).fetchone()
+    if row["total"] < MIN_NOTAS:
+        return None
+    return {"media": round(row["media"], 1), "total": row["total"]}
 
 
 def now():
@@ -69,7 +80,17 @@ class Meetings:
             "nivel": row["level"], "idade": row["age"], "formato": row["format"],
             "capacidade": row["capacity"], "participantes": count,
             "vagas": row["capacity"] - count, "estado": state, "organizador": nickname,
+            "organizador_nota": reputacao(db, row["organizer"]),
             "meu": row["organizer"] == user_id, "participando": joined,
+            # Amigos de quem está vendo que vão a este encontro (só para quem entrou na conta).
+            "amigos": [r["nickname"] for r in db.execute(
+                """SELECT users.nickname FROM members
+                   JOIN friendships ON friendships.status = 'aceito'
+                    AND ((friendships.user_a = ? AND friendships.user_b = members.user_id)
+                      OR (friendships.user_b = ? AND friendships.user_a = members.user_id))
+                   JOIN users ON users.id = members.user_id
+                   WHERE members.event_id = ? ORDER BY users.nickname""",
+                (user_id, user_id, row["id"]))] if user_id else [],
         }
 
     def criar_encontro(self, usuario_id, dados):

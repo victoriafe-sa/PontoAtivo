@@ -928,3 +928,15 @@ body[data-tela-atual="mapa"] #map { height: max(460px, calc(100vh - 8rem)); bord
 .account-badge { display: inline-grid; place-items: center; min-width: 1.3rem; height: 1.3rem; padding: 0 .35rem; margin-left: .3rem; border-radius: 999px; background: #c2412d; color: #fff; font-size: .72rem; font-weight: 800; }
 .account-badge[hidden] { display: none; }
 @media (max-width: 600px) { .friend-actions { width: 100%; } }
+
+/* Estrelas da nota */
+.friend-stars { display: inline-flex; gap: .1rem; align-items: center; }
+.friend-star { font: inherit; font-size: 1.35rem; line-height: 1; background: none; border: 0; padding: .15rem; color: #c9d0db; cursor: pointer; }
+.friend-star.on { color: #f5a623; }
+.friend-star:hover, .friend-star:focus-visible { color: #f5a623; }
+.friend-stars:hover .friend-star { color: #f5a623; }
+.friend-stars .friend-star:hover ~ .friend-star { color: #c9d0db; }
+/* Encontros: nota de quem organiza e amigos que vão */
+.meeting-rating { margin: 0 0 .3rem; font-size: .88rem; font-weight: 700; color: #b7791f; }
+.meeting-friends { margin: .2rem 0 .4rem; font-size: .88rem; font-weight: 700; color: var(--green-d); background: #dcf5e3; border-radius: 10px; padding: .4rem .7rem; }
+.meeting-card.meeting-card-friends { box-shadow: 0 0 0 3px #b9e8c7, 0 10px 28px rgba(23, 38, 73, .1); }

@@ -65,10 +65,13 @@
 
   function render(data) {
     const rep = data.reputacao;
+    const faltam = rep.minimo - rep.total;
     byId("friends-rep").replaceChildren(
-      node("strong", "Como as pessoas avaliaram praticar com você"),
-      node("span", `${rep.positivas} ${rep.positivas === 1 ? "gostou" : "gostaram"} · ${rep.negativas} ${rep.negativas === 1 ? "não gostou" : "não gostaram"}`),
-      node("small", "Ninguém vê quem deu cada nota, nem você."),
+      node("strong", "Sua nota de quem praticou com você"),
+      rep.nota
+        ? node("span", `${String(rep.nota.media).replace(".", ",")} ★ · ${rep.nota.total} notas`)
+        : node("span", rep.total ? `Faltam ${faltam} ${faltam === 1 ? "nota" : "notas"} para mostrar sua média` : "Você ainda não recebeu notas"),
+      node("small", `A média só aparece a partir de ${rep.minimo} notas, para ninguém descobrir quem deu cada uma. Ela aparece também para quem vê seus encontros.`),
     );
 
     fill(byId("friends-requests"), data.pedidos.map((p) => personRow(p, [
@@ -89,13 +92,21 @@
         pedido_recebido: button("Aceitar pedido", "aceitar", p.id, { className: "friend-btn friend-btn-main" }),
         amigos: node("span", "Amigos", "friend-tag"),
       }[p.amizade];
-      const gostei = button("Gostei", "nota", p.id, { pressed: p.minha_nota === 1, className: "friend-btn friend-rate friend-rate-up", label: `Gostei de praticar com ${p.apelido}` });
-      gostei.dataset.nota = p.minha_nota === 1 ? "0" : "1";
-      const naoGostei = button("Não gostei", "nota", p.id, { pressed: p.minha_nota === -1, className: "friend-btn friend-rate friend-rate-down", label: `Não gostei de praticar com ${p.apelido}` });
-      naoGostei.dataset.nota = p.minha_nota === -1 ? "0" : "-1";
+      const estrelas = node("span", undefined, "friend-stars");
+      estrelas.setAttribute("role", "group");
+      estrelas.setAttribute("aria-label", `Sua nota para ${p.apelido}`);
+      for (let n = 1; n <= 5; n += 1) {
+        const estrela = button("★", "nota", p.id, {
+          pressed: p.minha_nota === n, className: "friend-star" + (n <= p.minha_nota ? " on" : ""),
+          label: `${n} ${n === 1 ? "estrela" : "estrelas"} para ${p.apelido}`,
+        });
+        // Clicar de novo na nota atual tira a nota.
+        estrela.dataset.nota = p.minha_nota === n ? "0" : String(n);
+        estrelas.append(estrela);
+      }
       const bloquear = button("Bloquear", "bloquear", p.id, { className: "friend-btn friend-btn-danger" });
       bloquear.dataset.friendName = p.apelido;
-      return personRow(p, [amizade, gostei, naoGostei, bloquear], `Praticaram: ${quando}${vezes}`);
+      return personRow(p, [amizade, estrelas, bloquear], `Praticaram: ${quando}${vezes}`);
     }), "Quando você participar de um encontro que já aconteceu, as pessoas que estavam lá aparecem aqui.");
 
     fill(byId("friends-blocked"), data.bloqueados.map((p) => personRow(p, [

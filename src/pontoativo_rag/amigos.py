@@ -1,14 +1,14 @@
 """Amigos, notas e bloqueios entre pessoas que já praticaram juntas.
 
 Só quem participou do mesmo encontro, já realizado e não cancelado, pode pedir
-amizade ou dar nota à outra pessoa. A nota é anônima: cada pessoa vê apenas
-quantas notas positivas e negativas recebeu, nunca quem as deu. Bloquear desfaz
+amizade ou dar nota (1 a 5 estrelas) à outra pessoa. A nota é anônima: só a
+média e o total aparecem, e apenas depois de 3 notas, nunca quem deu cada uma. Bloquear desfaz
 a amizade e impede que as duas pessoas entrem nos encontros uma da outra.
 """
-from .encontros import now
+from .encontros import MIN_NOTAS, now, reputacao
 from .persistencia import ApiError
 
-NOTAS = (-1, 0, 1)  # 0 apaga a nota dada
+NOTAS = (0, 1, 2, 3, 4, 5)  # estrelas; 0 apaga a nota dada
 
 
 def _par(a, b):
@@ -79,7 +79,7 @@ class Amigos:
                     amizades[outro] = "amigos"
                 else:
                     amizades[outro] = "pedido_enviado" if row["requester"] == eu else "pedido_recebido"
-            notas = {r["rated"]: r["value"] for r in db.execute("SELECT rated, value FROM ratings WHERE rater=?", (eu,))}
+            notas = {r["rated"]: r["value"] for r in db.execute("SELECT rated, value FROM notas WHERE rater=?", (eu,))}
 
             def apelido(user_id):
                 row = db.execute("SELECT nickname FROM users WHERE id=?", (user_id,)).fetchone()
@@ -91,10 +91,7 @@ class Amigos:
                     continue
                 pessoas.append({**pessoa, "amizade": amizades.get(pessoa["id"], "nenhuma"),
                                 "minha_nota": notas.get(pessoa["id"], 0)})
-            recebidas = db.execute(
-                "SELECT sum(value > 0) AS positivas, sum(value < 0) AS negativas FROM ratings WHERE rated=?",
-                (eu,),
-            ).fetchone()
+            total = db.execute("SELECT count(*) FROM notas WHERE rated=?", (eu,)).fetchone()[0]
             return {
                 "pessoas": pessoas,
                 "amigos": [{"id": i, "apelido": apelido(i)} for i, s in amizades.items()
@@ -102,8 +99,8 @@ class Amigos:
                 "pedidos": [{"id": i, "apelido": apelido(i)} for i, s in amizades.items()
                             if s == "pedido_recebido" and i not in escondidos],
                 "bloqueados": [{"id": i, "apelido": apelido(i)} for i in sorted(bloqueei)],
-                # Só os totais: quem deu cada nota nunca é revelado.
-                "reputacao": {"positivas": recebidas["positivas"] or 0, "negativas": recebidas["negativas"] or 0},
+                # Só a média e o total, e só a partir de MIN_NOTAS: quem deu cada nota nunca é revelado.
+                "reputacao": {"nota": reputacao(db, eu), "total": total, "minimo": MIN_NOTAS},
             }
 
     # ---------- ações ----------
@@ -144,14 +141,14 @@ class Amigos:
 
     def avaliar(self, eu, outro, nota):
         if nota not in NOTAS or isinstance(nota, bool):
-            raise ApiError(400, "A nota deve ser 1 (gostei), -1 (não gostei) ou 0 (sem nota).")
+            raise ApiError(400, "A nota deve ser de 1 a 5 estrelas, ou 0 para tirar a nota.")
         with self.db.transaction() as db:
             self._exigir_pratica(db, eu, outro)
             if nota == 0:
-                db.execute("DELETE FROM ratings WHERE rater=? AND rated=?", (eu, outro))
+                db.execute("DELETE FROM notas WHERE rater=? AND rated=?", (eu, outro))
             else:
                 db.execute(
-                    """INSERT INTO ratings VALUES(?,?,?,?)
+                    """INSERT INTO notas VALUES(?,?,?,?)
                        ON CONFLICT(rater, rated) DO UPDATE SET value=excluded.value, updated=excluded.updated""",
                     (eu, outro, nota, now()),
                 )

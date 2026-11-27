@@ -104,33 +104,58 @@ def test_quem_pediu_nao_pode_aceitar_o_proprio_pedido(mundo):
     assert erro.value.status == 404
 
 
-def test_nota_e_anonima_e_so_mostra_totais(mundo):
+def test_nota_em_estrelas_e_anonima_e_so_aparece_com_3_notas(mundo):
     db, meetings, amigos, ids = mundo
     praticaram(db, meetings, ids["ana"], ids["beto"], ids["caio"])
-    amigos.avaliar(ids["beto"], ids["ana"], 1)
-    amigos.avaliar(ids["caio"], ids["ana"], -1)
+    amigos.avaliar(ids["beto"], ids["ana"], 5)
+    amigos.avaliar(ids["caio"], ids["ana"], 2)
     ana = amigos.resumo(ids["ana"])
-    assert ana["reputacao"] == {"positivas": 1, "negativas": 1}
-    # A reputação traz só os totais; nada nela identifica quem deu cada nota.
-    assert set(ana["reputacao"]) == {"positivas", "negativas"}
+    # Com 2 notas a média ainda não aparece: daria para adivinhar quem deu cada uma.
+    assert ana["reputacao"] == {"nota": None, "total": 2, "minimo": 3}
     for pessoa in ana["pessoas"]:
         assert pessoa["minha_nota"] == 0  # a Ana não avaliou ninguém
-        assert "nota_recebida" not in pessoa
     # Mudar e apagar a própria nota.
-    amigos.avaliar(ids["caio"], ids["ana"], 1)
-    assert amigos.resumo(ids["ana"])["reputacao"] == {"positivas": 2, "negativas": 0}
+    amigos.avaliar(ids["caio"], ids["ana"], 4)
     amigos.avaliar(ids["caio"], ids["ana"], 0)
-    assert amigos.resumo(ids["ana"])["reputacao"] == {"positivas": 1, "negativas": 0}
-    assert {p["apelido"]: p["minha_nota"] for p in amigos.resumo(ids["beto"])["pessoas"]}["Ana"] == 1
+    assert amigos.resumo(ids["ana"])["reputacao"]["total"] == 1
+    assert {p["apelido"]: p["minha_nota"] for p in amigos.resumo(ids["beto"])["pessoas"]}["Ana"] == 5
 
 
-@pytest.mark.parametrize("nota", [2, -5, "1", None, True])
+def test_media_aparece_com_3_notas_e_nunca_diz_quem_deu(mundo):
+    db, meetings, amigos, ids = mundo
+    dani = Accounts(db).register({"login": "dani", "senha": "senha-segura-123", "apelido": "Dani", "idade": "25-34"})["id"]
+    praticaram(db, meetings, ids["ana"], ids["beto"], ids["caio"], dani)
+    for quem, nota in ((ids["beto"], 5), (ids["caio"], 4), (dani, 3)):
+        amigos.avaliar(quem, ids["ana"], nota)
+    rep = amigos.resumo(ids["ana"])["reputacao"]
+    assert rep == {"nota": {"media": 4.0, "total": 3}, "total": 3, "minimo": 3}
+    # A média aparece no cartão do encontro que a Ana organiza.
+    novo = encontro(meetings, ids["ana"])
+    cartao = next(e for e in meetings.listar_encontros({}, ids["beto"]) if e["id"] == novo)
+    assert cartao["organizador_nota"] == {"media": 4.0, "total": 3}
+    assert all(i not in str(cartao) for i in (ids["beto"], ids["caio"], dani))
+
+
+@pytest.mark.parametrize("nota", [6, -1, "3", None, True, 2.5])
 def test_nota_invalida_e_recusada(mundo, nota):
     db, meetings, amigos, ids = mundo
     praticaram(db, meetings, ids["ana"], ids["beto"])
     with pytest.raises(ApiError) as erro:
         amigos.avaliar(ids["ana"], ids["beto"], nota)
     assert erro.value.status == 400
+
+
+def test_encontro_mostra_os_amigos_que_vao(mundo):
+    db, meetings, amigos, ids = mundo
+    praticaram(db, meetings, ids["ana"], ids["beto"])
+    amigos.pedir(ids["ana"], ids["beto"])
+    amigos.aceitar(ids["beto"], ids["ana"])
+    novo = encontro(meetings, ids["caio"])
+    meetings.entrar(novo, ids["beto"])
+    ver = lambda quem: next(e for e in meetings.listar_encontros({}, quem) if e["id"] == novo)
+    assert ver(ids["ana"])["amigos"] == ["Beto"]
+    assert ver(ids["caio"])["amigos"] == []  # Caio não é amigo do Beto
+    assert next(e for e in meetings.listar_encontros({}) if e["id"] == novo)["amigos"] == []
 
 
 def test_bloqueio_desfaz_amizade_esconde_e_impede_encontros(mundo):
@@ -194,10 +219,10 @@ def test_api_de_amigos_ponta_a_ponta(api):
     assert [p["apelido"] for p in pessoas] == ["Beto"]
     assert ana.post(f"/api/amigos/{ids['beto']}/pedido", json={}).json() == {"amizade": "pedido_enviado"}
     assert beto.post(f"/api/amigos/{ids['ana']}/aceite", json={}).json() == {"amizade": "amigos"}
-    assert beto.put(f"/api/amigos/{ids['ana']}/nota", json={"nota": -1}).status_code == 200
+    assert beto.put(f"/api/amigos/{ids['ana']}/nota", json={"nota": 4}).json() == {"minha_nota": 4}
+    assert beto.put(f"/api/amigos/{ids['ana']}/nota", json={"nota": 9}).status_code == 400
     resumo = ana.get("/api/amigos").json()
-    assert resumo["reputacao"] == {"positivas": 0, "negativas": 1}
-    assert ids["beto"] not in str(resumo["reputacao"])
+    assert resumo["reputacao"] == {"nota": None, "total": 1, "minimo": 3}
     assert ana.put(f"/api/amigos/{ids['beto']}/bloqueio", json={}).json() == {"bloqueado": True}
     assert ana.delete(f"/api/amigos/{ids['beto']}/bloqueio").json() == {"bloqueado": False}
     assert ana.delete(f"/api/amigos/{ids['beto']}").json() == {"amizade": "nenhuma"}
