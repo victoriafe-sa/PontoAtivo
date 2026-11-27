@@ -107,6 +107,8 @@
     const chosen = new Set(prefs.esportes);
     fieldset.querySelectorAll("[data-pref-sports] input").forEach(input => { input.checked = chosen.has(input.value); });
     fieldset.querySelector("[data-pref-region]").value = prefs.regiao || "";
+    const gender = fieldset.querySelector("[data-pref-gender]");
+    if (gender) gender.value = (user && user.genero) || "";
     limitSports(fieldset);
   }
 
@@ -114,6 +116,7 @@
     return {
       esportes: [...fieldset.querySelectorAll("[data-pref-sports] input:checked")].map(input => input.value),
       regiao: fieldset.querySelector("[data-pref-region]").value,
+      genero: fieldset.querySelector("[data-pref-gender]")?.value || "",
     };
   }
 
@@ -212,6 +215,9 @@
     }
     const age = event.idade === "todos" ? "Todos os adultos" : event.idade + " anos";
     item.append(node("p", [labels[event.formato], labels[event.nivel], age].join(" · "), "meta"));
+    if (event.publico && event.publico !== "misto") {
+      item.append(node("p", event.publico === "mulheres" ? "Só para mulheres" : "Só para homens", "meeting-audience"));
+    }
     const bar = node("div", undefined, "meeting-bar meeting-bar-" + event.estado);
     bar.setAttribute("aria-hidden", "true");
     const fill = node("i");
@@ -587,7 +593,8 @@
     byId("pref-status").textContent = "Salvando…";
     try {
       const result = await api("/api/conta/preferencias", {method: "PUT", body: prefs});
-      user = {...user, preferencias: result.preferencias};
+      const {genero, ...preferencias} = result.preferencias;
+      user = {...user, preferencias, ...(genero !== undefined ? {genero} : {})};
       appliedPrefsFor = null;
       filters.reset();
       prefDialog.close();

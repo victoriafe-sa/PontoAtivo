@@ -9,6 +9,10 @@ from .persistencia import ApiError
 
 LEVELS = ("iniciante", "intermediario", "avancado", "todos")
 FORMATS = ("dupla", "trio", "grupo")
+# Quem pode participar. "mulheres" e "homens" conferem o gênero informado na conta.
+AUDIENCES = ("misto", "mulheres", "homens")
+AUDIENCE_GENDER = {"mulheres": "mulher", "homens": "homem"}
+AUDIENCE_LABEL = {"mulheres": "só para mulheres", "homens": "só para homens"}
 BRASILIA = timezone(timedelta(hours=-3))
 
 
@@ -57,6 +61,7 @@ class Meetings:
         return {
             "id": row["id"], "local": place, "esporte": row["sport"], "inicio": row["start"],
             "nivel": row["level"], "idade": row["age"], "formato": row["format"],
+            "publico": row["audience"] if "audience" in row.keys() else "misto",
             "capacidade": row["capacity"], "participantes": count,
             "vagas": row["capacity"] - count, "estado": state, "organizador": nickname,
             "meu": row["organizer"] == user_id, "participando": joined,
@@ -70,6 +75,9 @@ class Meetings:
         place = dados.get("local_id")
         sport = dados.get("esporte", "")
         level, age, form = dados.get("nivel"), dados.get("idade"), dados.get("formato")
+        audience = dados.get("publico", "misto")
+        if audience not in AUDIENCES:
+            raise ApiError(400, "Escolha se o encontro é misto, só para mulheres ou só para homens.")
         if not isinstance(place, str) or place not in self.places:
             raise ApiError(400, "Selecione um local do mapa.")
         if not isinstance(sport, str) or not 2 <= len(sport.strip()) <= 60:
@@ -100,8 +108,12 @@ class Meetings:
                 raise ApiError(400, "Escolha uma data e hora futuras, no horário de Brasília.")
             if age != "todos" and age != user["age"]:
                 raise ApiError(400, "Escolha uma faixa etária que inclua você.")
-            db.execute("INSERT INTO events VALUES(?,?,?,?,?,?,?,?,?,0)",
-                       (event_id, usuario_id, place, sport.strip(), start, level, age, form, capacity))
+            if audience in AUDIENCE_GENDER and user["gender"] != AUDIENCE_GENDER[audience]:
+                raise ApiError(400, f"Para marcar um encontro {AUDIENCE_LABEL[audience]}, informe o gênero "
+                                    f"\"{AUDIENCE_GENDER[audience]}\" em Minhas preferências.")
+            db.execute("""INSERT INTO events(id, organizer, place_id, sport, start, level, age, format,
+                                             capacity, cancelled, audience) VALUES(?,?,?,?,?,?,?,?,?,0,?)""",
+                       (event_id, usuario_id, place, sport.strip(), start, level, age, form, capacity, audience))
             db.execute("INSERT INTO members VALUES(?,?)", (event_id, usuario_id))
             if request_id:
                 db.execute("INSERT INTO event_requests VALUES(?,?,?,?)", (usuario_id, request_id, event_id, payload))
@@ -119,7 +131,7 @@ class Meetings:
             for row in rows:
                 place = self.places.get(row["place_id"], {})
                 values = {"regiao": place.get("regiao"), "esporte": row["sport"],
-                          "nivel": row["level"], "formato": row["format"],
+                          "nivel": row["level"], "formato": row["format"], "publico": row["audience"],
                           "idade": row["age"],
                           "data": datetime.fromisoformat(row["start"]).astimezone(BRASILIA).date().isoformat()}
                 if all(_matches(key, filtros.get(key), value) for key, value in values.items()):
@@ -133,6 +145,9 @@ class Meetings:
             self._available(row)
             if row["age"] != "todos" and row["age"] != user["age"]:
                 raise ApiError(403, "Sua faixa etária não corresponde à deste encontro.")
+            if row["audience"] in AUDIENCE_GENDER and user["gender"] != AUDIENCE_GENDER[row["audience"]]:
+                raise ApiError(403, f"Este encontro é {AUDIENCE_LABEL[row['audience']]}. Se for o seu caso, "
+                                    "informe o gênero em Minhas preferências.")
             current = self._view(db, row, usuario_id)
             if not current["participando"]:
                 if current["vagas"] <= 0:

@@ -366,7 +366,7 @@ class Handler(SimpleHTTPRequestHandler):
             elif path in ("/api/encontros", "/api/encontros/meus"):
                 user = self.user(required=path.endswith("/meus"))
                 filters = {key: values[0] for key, values in parse_qs(urlsplit(self.path).query).items()
-                           if key in ("regiao", "esporte", "data", "nivel", "idade", "formato")}
+                           if key in ("regiao", "esporte", "data", "nivel", "idade", "formato", "publico")}
                 filters["meus"] = path.endswith("/meus")
                 self.reply(200, {"encontros": self.meetings.listar_encontros(filters, user["id"] if user else None)})
             else:

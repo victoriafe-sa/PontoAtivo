@@ -12,6 +12,9 @@ from .moderacao import termo_improprio
 from .persistencia import ApiError
 
 AGES = ("18-24", "25-34", "35-44", "45-59", "60+")
+# Gênero é opcional e nunca aparece para outras pessoas. Serve só para conferir
+# quem pode entrar em encontros só para mulheres ou só para homens.
+GENDERS = ("", "mulher", "homem", "outro", "nao_informar")
 SESSION_SECONDS = 7 * 24 * 60 * 60
 # Mesma lista de esportes dos encontros (encontros.js). Preferências são
 # opcionais e só pré-selecionam filtros; nunca escondem resultados.
@@ -38,6 +41,7 @@ def password_hash(password, salt=None):
 def public_user(row, preferences=None):
     return {
         "id": row["id"], "apelido": row["nickname"], "idade": row["age"],
+        "genero": row["gender"] if "gender" in row.keys() else "",
         "preferencias": preferences or {"esportes": [], "regiao": ""},
     }
 
@@ -88,11 +92,23 @@ class Accounts:
             (user_id, json.dumps(preferences["esportes"], ensure_ascii=False), preferences["regiao"]),
         )
 
+    @staticmethod
+    def clean_gender(data):
+        gender = data.get("genero", "")
+        if gender is None:
+            gender = ""
+        if not isinstance(gender, str) or gender not in GENDERS:
+            raise ApiError(400, "Escolha o gênero da lista ou deixe em branco.")
+        return gender
+
     def update_preferences(self, user_id, data):
         preferences = self.clean_preferences(data)
+        gender = self.clean_gender(data) if "genero" in data else None
         with self.db.transaction() as db:
             self._save_preferences(db, user_id, preferences)
-        return preferences
+            if gender is not None:
+                db.execute("UPDATE users SET gender=? WHERE id=?", (gender, user_id))
+        return {**preferences, **({"genero": gender} if gender is not None else {})}
 
     def register(self, data):
         login = str(data.get("login", "")).strip().casefold()
@@ -115,16 +131,18 @@ class Accounts:
         if termo:
             raise ApiError(400, f'O usuário tem um termo impróprio ("{termo}"). Escolha outro.')
         preferences = self.clean_preferences(data)
+        gender = self.clean_gender(data)
         user_id = uuid4().hex
         hashed = password_hash(password)
         try:
             with self.db.transaction() as db:
-                db.execute("INSERT INTO users VALUES(?,?,?,?,?)", (user_id, login, nickname, age, hashed))
+                db.execute("INSERT INTO users(id, login, nickname, age, password, gender) VALUES(?,?,?,?,?,?)",
+                           (user_id, login, nickname, age, hashed, gender))
                 if preferences["esportes"] or preferences["regiao"]:
                     self._save_preferences(db, user_id, preferences)
         except sqlite3.IntegrityError:
             raise ApiError(409, "Esse usuário já está cadastrado.") from None
-        return {"id": user_id, "apelido": nickname, "idade": age, "preferencias": preferences}
+        return {"id": user_id, "apelido": nickname, "idade": age, "genero": gender, "preferencias": preferences}
 
     def login(self, login, password, address):
         if not isinstance(login, str) or not isinstance(password, str) or len(password) > 128:
@@ -161,7 +179,7 @@ class Accounts:
         with self.db.transaction() as db:
             row = db.execute("SELECT * FROM users WHERE login=?", (ADMIN_LOGIN,)).fetchone()
             if row is None:
-                db.execute("INSERT INTO users VALUES(?,?,?,?,?)", (
+                db.execute("INSERT INTO users(id, login, nickname, age, password) VALUES(?,?,?,?,?)", (
                     uuid4().hex, ADMIN_LOGIN, ADMIN_NICKNAME, ADMIN_AGE,
                     password_hash(secrets.token_urlsafe(32)),
                 ))
