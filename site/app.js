@@ -743,9 +743,11 @@ document.addEventListener("pa:aviso-encontro", (event) => {
 });
 
 // ---------- Lista ----------
-// A lista começa curta para não empurrar o resto da página; "Mostrar mais" amplia.
-const FIRST_PAGE = 2;
-const PAGE = 24;
+// A lista só aparece depois que a pessoa autoriza a localização, com os locais mais
+// próximos dela; sem isso, mostra só o convite para usar a localização.
+const FIRST_PAGE = 3;
+const PAGE = 6;
+const temLocalizacao = () => Boolean(userPos) && !askSetPos;
 let current = [], shown = 0;
 
 function sortList(list) {
@@ -756,26 +758,55 @@ function sortList(list) {
   return list.slice().sort((a, b) => rank(a) - rank(b) || ORDER.indexOf(a.t) - ORDER.indexOf(b.t) || (a.ra || "").localeCompare(b.ra || "", "pt-BR"));
 }
 
+// Cartão da lista: nome, região, custo e endereço à vista; o resto fica em "Detalhes".
 function cardHtml(r) {
   const t = TYPES[r.t] || { short: r.t, color: "#172649" };
+  const orig = r.ownership || (r.t === "para" ? "social" : "public");
+  const origInfo = OWNERSHIP_LABELS[orig] || { label: orig, cls: "ownership-public" };
+  const meta = [r.dist != null && r.dist !== Infinity ? `${r.dist.toFixed(1).replace(".", ",")} km` : null, r.ra, r.custo].filter(Boolean).map(esc).join(" · ");
+  const isRep = r.geo && r.geo.includes("representativo");
+  const onde = r.end
+    ? `${esc(r.end)}${isRep ? " <em>(ponto representativo da área)</em>" : r.aprox ? " <em>(posição aproximada)</em>" : ""}`
+    : r.lat == null ? "<em>Localização exata pendente</em>" : "";
+  const cond = [
+    r.cons ? `Conservação: ${esc(r.cons)}` : null,
+    r.luz === true ? "Iluminação pública" : r.luz === false ? "Sem iluminação pública" : null,
+  ].filter(Boolean).join(" · ");
+  const extra = [
+    r.mods ? `<p><b>Modalidades:</b> ${esc(r.mods.join(", "))}${r.mods_inferidas ? " <em>(pelo tipo de equipamento)</em>" : ""}</p>` : "",
+    cond ? `<p>${cond}</p>` : "",
+    r.tel ? `<p><b>Telefone:</b> ${esc(r.tel)}</p>` : "",
+    r.obs ? `<p>${esc(r.obs)}</p>` : "",
+    renderAccessibilityMatrix(r),
+    `<p class="src">Fonte: <a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.fonte)}</a>${r.data ? ` · dados de ${esc(r.data)}` : ""}${r.reviewed_at ? ` · revisado em ${esc(r.reviewed_at)}` : ""}</p>`,
+  ].join("");
   return `<li class="place" id="place-${esc(r.id)}">
     <header><h3>${esc(r.n)}</h3><span class="type-badge" style="background:${t.color}">${t.short}</span></header>
-    ${details(r, false)}
-    <div class="place-actions">${podeMarcarEncontro(r) ? `<button type="button" data-meeting-place="${esc(r.id)}">Marcar encontro</button>` : ""}
-      ${r.lat != null ? `<button type="button" data-focus="${esc(r.id)}">Ver no mapa</button>${routeLinks(r)}` : ""}
-      <button type="button" class="btn-contribute" data-contribute-id="${esc(r.id)}" data-contribute-name="${esc(r.n)}">✍️ Colaborar / verificar</button>
+    <p class="meta">${meta} <span class="ownership-badge ${origInfo.cls}">${origInfo.label}</span></p>
+    ${onde ? `<p class="meta place-onde">${onde}</p>` : ""}
+    <details class="place-more"><summary>Detalhes</summary><div class="place-more-body">${extra}</div></details>
+    <div class="place-actions">${podeMarcarEncontro(r) ? `<button type="button" class="place-main" data-meeting-place="${esc(r.id)}">Marcar encontro</button>` : ""}
+      ${r.lat != null ? `<button type="button" data-focus="${esc(r.id)}">Ver no mapa</button>
+      <a href="${routeUrl(r)}" target="_blank" rel="noopener" aria-label="Abrir rota no Google Maps para ${esc(r.n)}">Google Maps</a>
+      <a href="${wazeUrl(r)}" target="_blank" rel="noopener" aria-label="Abrir rota no Waze para ${esc(r.n)}">Waze</a>` : ""}
+      <button type="button" class="place-contribute" data-contribute-id="${esc(r.id)}" data-contribute-name="${esc(r.n)}">Colaborar</button>
     </div>
   </li>`;
 }
 
 function renderList(reset) {
+  const perto = temLocalizacao();
+  $("#near-prompt").hidden = perto;
+  $("#place-list").hidden = !perto;
+  $("#near-title").hidden = !perto;
+  if (!perto) { shown = 0; $("#place-list").innerHTML = ""; $("#btn-more").hidden = true; return; }
   if (reset) { shown = 0; $("#place-list").innerHTML = ""; }
   const next = current.slice(shown, shown + (shown === 0 ? FIRST_PAGE : PAGE));
   $("#place-list").insertAdjacentHTML("beforeend", next.map(cardHtml).join(""));
   shown += next.length;
   const more = $("#btn-more");
   more.hidden = shown >= current.length;
-  more.textContent = `Mostrar mais (${fmt(current.length - shown)} restantes)`;
+  more.textContent = "Mostrar mais locais próximos";
   if (!current.length) {
     $("#place-list").innerHTML = '<li class="place">Nenhum local atende a todos os filtros. Tente remover algum critério ou escolher outra região.</li>';
   }
@@ -787,7 +818,7 @@ function update() {
   current = sortList(applyFilters(f));
   const semPino = current.filter((r) => r.lat == null).length;
   $("#results-count").textContent = `${fmt(current.length)} ${current.length === 1 ? "local encontrado" : "locais encontrados"}` +
-    (userPos ? " · ordenados por distância" : "") + (semPino ? ` · ${semPino} sem localização exata (só na lista)` : "");
+    "";
   drawMarkers(current);
   renderList(true);
   if (map && f.ra) {
@@ -896,6 +927,7 @@ function focusPlace(id) {
   if (cluster.zoomToShowLayer) cluster.zoomToShowLayer(m, open); else { map.setView(m.getLatLng(), 16); open(); }
 }
 $("#place-list").addEventListener("click", (e) => focusPlace(e.target.dataset && e.target.dataset.focus));
+$("#near-use").addEventListener("click", () => $("#btn-near").click());
 
 // Localização só após ação do usuário (RNF09)
 $("#btn-near").addEventListener("click", () => {
@@ -914,7 +946,10 @@ $("#btn-near").addEventListener("click", () => {
       }
       update();
     },
-    () => { btn.textContent = "Permissão negada – use a região"; },
+    () => {
+      btn.textContent = "Permissão negada – use a região";
+      $("#near-status").textContent = "A localização não foi autorizada. Você ainda pode usar o mapa e os filtros acima.";
+    },
     { timeout: 10000 });
 });
 

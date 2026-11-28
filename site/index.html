@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-  <link rel="stylesheet" href="styles.css?v=fontes-1" />
+  <link rel="stylesheet" href="styles.css?v=lista-2" />
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -281,20 +281,30 @@
         </div>
 
         <p class="results-count" id="results-count" aria-live="polite"></p>
-        <ul class="place-list" id="place-list" aria-label="Lista de espaços (equivalente acessível ao mapa)"></ul>
+        <div class="near-prompt" id="near-prompt">
+          <div>
+            <strong>Locais perto de você</strong>
+            <p>Autorize a localização para ver aqui os locais mais próximos. Ela fica só no seu navegador.</p>
+            <p class="near-status" id="near-status" role="status" aria-live="polite"></p>
+          </div>
+          <button type="button" class="btn btn-primary" id="near-use">Usar minha localização</button>
+        </div>
+        <h3 class="near-title" id="near-title" hidden>Mais perto de você</h3>
+        <ul class="place-list" id="place-list" aria-label="Locais mais perto de você" hidden></ul>
         <button type="button" class="btn btn-outline btn-block" id="btn-more" hidden>Mostrar mais</button>
 
-        <div class="legend" aria-label="Legenda de evidência e acessibilidade">
-          <span><i class="dot ok"></i> Verificado em campo</span>
-          <span><i class="dot info"></i> Informado pela fonte / declarado</span>
-          <span><i class="dot unk"></i> Desconhecido / pendente</span>
-          <span><span class="badge-ev ev-oficial">oficial</span> Fonte governamental</span>
-          <span><span class="badge-ev ev-organizacao">organização</span> Site oficial</span>
-          <span><span class="badge-ev ev-colaborativo">colaborativo</span> Comunidade/OSM</span>
-        </div>
-        <div class="demo-note demo-note-end" role="note">
-          <strong>Sobre os dados:</strong> quadras, PECs, campos, pistas e parquinhos vêm do cadastro oficial do GDF (IDE-DF), feito entre 2015 e 2017. Equipamentos podem ter sido reformados, removidos ou criados depois disso. <strong>Nenhum local tem ainda acessibilidade física verificada em campo</strong>: essa é a próxima etapa da pesquisa.
-        </div>
+        <details class="list-notes">
+          <summary>Legenda e sobre os dados</summary>
+          <div class="legend" aria-label="Legenda de evidência e acessibilidade">
+            <span><i class="dot ok"></i> Verificado em campo</span>
+            <span><i class="dot info"></i> Informado pela fonte / declarado</span>
+            <span><i class="dot unk"></i> Desconhecido / pendente</span>
+            <span><span class="badge-ev ev-oficial">oficial</span> Fonte governamental</span>
+            <span><span class="badge-ev ev-organizacao">organização</span> Site oficial</span>
+            <span><span class="badge-ev ev-colaborativo">colaborativo</span> Comunidade/OSM</span>
+          </div>
+          <p class="list-note"><strong>Sobre os dados:</strong> quadras, PECs, campos, pistas e parquinhos vêm do cadastro oficial do GDF (IDE-DF), feito entre 2015 e 2017. Equipamentos podem ter sido reformados, removidos ou criados depois disso. <strong>Nenhum local tem ainda acessibilidade física verificada em campo</strong>: essa é a próxima etapa da pesquisa.</p>
+        </details>
       </div>
     </section>
 
@@ -410,12 +420,13 @@
         <h2 id="fontes-title">De onde vêm os dados do mapa</h2>
         <p class="section-sub">Pesquisa feita em 05/11/2026 em bases oficiais do GDF e de outras fontes públicas, com curadoria multifonte em 10/11/2026; os parquinhos entraram em 19/11/2026. Cada local do mapa leva o link da sua fonte.</p>
         <div class="stats" id="stats"></div>
+        <h3 class="fontes-h">Fontes usadas</h3>
         <div class="sources fontes-lista">
           <details class="source">
             <summary>
               <span class="fonte-marca" style="background:var(--green)" aria-hidden="true"></span>
-              <span class="fonte-titulo">IDE-DF – Infraestrutura de Dados Espaciais do DF</span>
-              <span class="fonte-resumo">Base principal: PECs, quadras, campos, parquinhos, praças e parques</span>
+              <span class="fonte-titulo" title="Infraestrutura de Dados Espaciais do DF">IDE-DF</span>
+              <span class="fonte-resumo">Base principal: PECs, quadras, campos, parquinhos e parques</span>
             </summary>
             <div class="fonte-corpo">
               <p>Camada <em>Mobiliário Esporte e Lazer</em> (SEDUH): PECs, quadras poliesportivas e de areia, campos, pistas de skate, aparelhos de ginástica e 798 parquinhos (parques infantis), com endereço, estado de conservação e iluminação. Camada <em>Parques Urbanos</em>: 37 parques no mapa. Camada <em>Espaços comunitários</em>: 981 campos, 184 quadras e 183 praças que não constavam do mobiliário, quase todos sem endereço (a região vem do limite oficial da RA).</p>
@@ -425,8 +436,8 @@
           <details class="source">
             <summary>
               <span class="fonte-marca" style="background:var(--blue)" aria-hidden="true"></span>
-              <span class="fonte-titulo">Secretaria de Esporte e Lazer do DF</span>
-              <span class="fonte-resumo">Centros Olímpicos e espaços esportivos da Secretaria</span>
+              <span class="fonte-titulo">Secretaria de Esporte e Lazer</span>
+              <span class="fonte-resumo">Centros Olímpicos e espaços esportivos</span>
             </summary>
             <div class="fonte-corpo">
               <p>Endereços e telefones dos 12 Centros Olímpicos e Paralímpicos (gratuitos, com vagas para pessoas com deficiência) e lista dos espaços esportivos administrados pela SEL.</p>
@@ -447,7 +458,7 @@
           <details class="source">
             <summary>
               <span class="fonte-marca" style="background:var(--navy)" aria-hidden="true"></span>
-              <span class="fonte-titulo">Guia dos Espaços Públicos de Lazer do DF (UnB)</span>
+              <span class="fonte-titulo">Guia de Lazer do DF (UnB)</span>
               <span class="fonte-resumo">Confirma os tipos dos espaços comunitários</span>
             </summary>
             <div class="fonte-corpo">
@@ -459,7 +470,7 @@
             <summary>
               <span class="fonte-marca" style="background:var(--green)" aria-hidden="true"></span>
               <span class="fonte-titulo">Paradesporto e outras fontes</span>
-              <span class="fonte-resumo">CETEFE, Centro Olímpico da UnB e limites das regiões</span>
+              <span class="fonte-resumo">CETEFE, Centro Olímpico da UnB e limites das RAs</span>
             </summary>
             <div class="fonte-corpo">
               <p>CETEFE (Agência Gov, Metrópoles, Jornal de Brasília), Centro Olímpico da UnB e limites das regiões administrativas (IDE-DF). Localização dos locais nomeados via OpenStreetMap, conferida com o limite oficial de cada RA.</p>
@@ -469,8 +480,8 @@
           <details class="source">
             <summary>
               <span class="fonte-marca" style="background:#8b5cf6" aria-hidden="true"></span>
-              <span class="fonte-titulo">Clubes e entidades de paradesporto</span>
-              <span class="fonte-resumo">4 clubes privados e 2 entidades, ainda sem pino no mapa</span>
+              <span class="fonte-titulo">Clubes e paradesporto</span>
+              <span class="fonte-resumo">4 clubes e 2 entidades, ainda sem pino</span>
             </summary>
             <div class="fonte-corpo">
               <p>Quatro clubes privados (AABB Brasília, Clube da Aeronáutica, Clube Naval e Minas Brasília Tênis Clube), com endereço e modalidades dos sites oficiais de cada um. Duas entidades de paradesporto (CECAF/DIREF e Escola Franciscana Nossa Senhora de Fátima), com referência no site do Comitê Paralímpico Brasileiro. Os seis ainda não têm pino no mapa: aparecem só na lista, até as coordenadas serem confirmadas.</p>
@@ -500,16 +511,49 @@
             </div>
           </details>
         </div>
-        <details class="gaps">
-          <summary><h3>O que ainda falta (lacunas conhecidas e diagnóstico de cobertura)</h3></summary>
-          <ul>
-            <li><strong>PECs do DF:</strong> são <strong>403 PECs georreferenciadas</strong> no cadastro aberto utilizado pelo mapa; em contrapartida, a Novacap informou publicamente em 04/11/2025 que o DF conta com <em>mais de mil PECs</em> instaladas. A minuta de pedido de LAI está disponível em <code>curadoria/docs/pedido-lai-novacap.md</code> para obtenção da base georreferenciada integral.</li>
-            <li><strong>Acessibilidade física:</strong> rampas, banheiros acessíveis, piso tátil e vagas PcD não constam detalhadas em bases abertas do GDF. Dados informados por instituições são exibidos como declarados, nunca como vistoria técnica presencial.</li>
-            <li><strong>Paradesporto:</strong> modalidades e locais confirmados por fontes institucionais (CETEFE, CPB) estão catalogados; entidades como UNIACE e equipes de basquete em cadeira de rodas aguardam confirmação de locais regulares de treino em registro público.</li>
-            <li><strong>Clubes e academias privadas:</strong> mapeamento inicial de clubes esportivos com base em seus sites oficiais, sem pino no mapa até comprovação das coordenadas geográficas.</li>
-            <li id="gap-pend">12 dos 14 parques pendentes foram resolvidos via poligonal oficial do Ibram/ONDA (com indicação de ponto representativo da área). Dois parques (Lobo Guará e Lagoinha) e o Ginásio de Esportes de Samambaia permanecem como pendências geográficas em revisão.</li>
-          </ul>
-        </details>
+        <h3 class="fontes-h">O que ainda falta</h3>
+        <div class="fontes-lista lacunas">
+            <details class="lacuna">
+              <summary>
+                <span class="fonte-marca lacuna-marca" aria-hidden="true"></span>
+                <span class="fonte-titulo">PECs do DF</span>
+                <span class="fonte-resumo">403 no mapa; a Novacap fala em mais de mil</span>
+              </summary>
+              <div class="fonte-corpo"><p>O cadastro aberto usado pelo mapa tem 403 PECs com localização. Em 04/11/2025 a Novacap informou que o DF tem <em>mais de mil</em>. Há uma minuta de pedido via LAI em <code>curadoria/docs/pedido-lai-novacap.md</code> para obter a base completa.</p></div>
+            </details>
+            <details class="lacuna">
+              <summary>
+                <span class="fonte-marca lacuna-marca" aria-hidden="true"></span>
+                <span class="fonte-titulo">Acessibilidade física</span>
+                <span class="fonte-resumo">Rampas, banheiros e piso tátil sem base aberta</span>
+              </summary>
+              <div class="fonte-corpo"><p>Rampas, banheiros acessíveis, piso tátil e vagas PcD não aparecem detalhados nas bases abertas do GDF. O que as instituições informam é mostrado como declarado, nunca como vistoria presencial.</p></div>
+            </details>
+            <details class="lacuna">
+              <summary>
+                <span class="fonte-marca lacuna-marca" aria-hidden="true"></span>
+                <span class="fonte-titulo">Paradesporto</span>
+                <span class="fonte-resumo">Alguns locais de treino ainda sem confirmação</span>
+              </summary>
+              <div class="fonte-corpo"><p>Modalidades e locais confirmados por fontes institucionais (CETEFE, CPB) já estão no mapa. UNIACE e equipes de basquete em cadeira de rodas esperam confirmação pública de onde treinam.</p></div>
+            </details>
+            <details class="lacuna">
+              <summary>
+                <span class="fonte-marca lacuna-marca" aria-hidden="true"></span>
+                <span class="fonte-titulo">Clubes e academias privadas</span>
+                <span class="fonte-resumo">Na lista, sem pino até confirmar a localização</span>
+              </summary>
+              <div class="fonte-corpo"><p>Os clubes vêm dos sites oficiais de cada um e só ganham pino no mapa quando a localização for confirmada.</p></div>
+            </details>
+            <details class="lacuna">
+              <summary>
+                <span class="fonte-marca lacuna-marca" aria-hidden="true"></span>
+                <span class="fonte-titulo">Parques sem localização exata</span>
+                <span class="fonte-resumo">Aparecem só na lista</span>
+              </summary>
+              <div class="fonte-corpo"><p id="gap-pend">12 dos 14 parques pendentes foram resolvidos com a poligonal oficial do Ibram/ONDA. Lobo Guará, Lagoinha e o Ginásio de Esportes de Samambaia continuam em revisão.</p></div>
+            </details>
+        </div>
       </div>
     </section>
 
@@ -775,7 +819,7 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" defer></script>
   <script src="telas.js?v=telas-4" defer></script>
   <script src="data/locais.js" defer></script>
-  <script src="app.js?v=publico-2" defer></script>
+  <script src="app.js?v=lista-3" defer></script>
   <script src="encontros.js?v=amigos-alertas-1" defer></script>
   <script src="amigos.js?v=amigos-3" defer></script>
 </body>
