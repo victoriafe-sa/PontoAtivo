@@ -1035,3 +1035,18 @@ body[data-tela-atual="mapa"] #map { height: max(460px, calc(100vh - 8rem)); bord
 .list-notes > summary { cursor: pointer; font-weight: 700; color: var(--navy); width: fit-content; }
 .list-notes .legend { margin-top: .8rem; }
 .list-note { margin: .8rem 0 0; line-height: 1.5; }
+
+/* Locais perto de você: convite sem localização, cartões menores com ela */
+.near-prompt { display: flex; align-items: center; justify-content: space-between; gap: 1rem 1.5rem; flex-wrap: wrap; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 1rem 1.2rem; }
+.near-prompt[hidden], .near-title[hidden], .place-list[hidden] { display: none; }
+.near-prompt strong { color: var(--navy); }
+.near-prompt p { margin: .2rem 0 0; color: var(--gray); font-size: .88rem; }
+.near-prompt .near-status:empty { display: none; }
+.near-title { margin: 0 0 .6rem; font-size: .8rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--gray); }
+.place-list { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .7rem; }
+.place-list .place { padding: .8rem .9rem; gap: .3rem; border-radius: 12px; }
+.place-list .place h3 { font-size: .95rem; }
+.place-list .place .type-badge { font-size: .65rem; padding: .15rem .45rem; }
+.place-list .place .meta { font-size: .78rem; }
+.place-list .place-actions { padding-top: .55rem; margin-top: .2rem; gap: .3rem; }
+.place-list .place-actions a, .place-list .place-actions button { font-size: .74rem; padding: .3rem .65rem; }

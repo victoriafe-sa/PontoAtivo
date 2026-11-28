@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-  <link rel="stylesheet" href="styles.css?v=lista-1" />
+  <link rel="stylesheet" href="styles.css?v=lista-2" />
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -281,7 +281,16 @@
         </div>
 
         <p class="results-count" id="results-count" aria-live="polite"></p>
-        <ul class="place-list" id="place-list" aria-label="Lista de espaços (equivalente acessível ao mapa)"></ul>
+        <div class="near-prompt" id="near-prompt">
+          <div>
+            <strong>Locais perto de você</strong>
+            <p>Autorize a localização para ver aqui os locais mais próximos. Ela fica só no seu navegador.</p>
+            <p class="near-status" id="near-status" role="status" aria-live="polite"></p>
+          </div>
+          <button type="button" class="btn btn-primary" id="near-use">Usar minha localização</button>
+        </div>
+        <h3 class="near-title" id="near-title" hidden>Mais perto de você</h3>
+        <ul class="place-list" id="place-list" aria-label="Locais mais perto de você" hidden></ul>
         <button type="button" class="btn btn-outline btn-block" id="btn-more" hidden>Mostrar mais</button>
 
         <details class="list-notes">
@@ -810,7 +819,7 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" defer></script>
   <script src="telas.js?v=telas-4" defer></script>
   <script src="data/locais.js" defer></script>
-  <script src="app.js?v=lista-1" defer></script>
+  <script src="app.js?v=lista-3" defer></script>
   <script src="encontros.js?v=amigos-alertas-1" defer></script>
   <script src="amigos.js?v=amigos-3" defer></script>
 </body>
